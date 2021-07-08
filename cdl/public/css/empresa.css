@@ -1,0 +1,85 @@
+#logo{
+    
+    width: 150px;
+    height: 60px;
+    
+  }
+
+    #menu{
+      padding: 30px;
+      background-color: #284D92;
+  }
+  .folder{
+    padding: 60px 0px 60px 50px;
+    background: url('/img/Login_empresa.jpg');
+    background-size: cover; 
+    background-attachment: fixed, scroll;
+  }
+  @media only screen and (max-width: 500px) {
+    .folder{
+      margin: 7px 7px 7px 7px;
+      background: url();
+      padding: 0px;
+    }
+  }
+
+    .form-signin {
+      max-width: 480px;
+      padding: 35px 35px 45px 35px;
+      margin:  auto;
+      margin-top: 50px;
+      margin-left: 60px;
+      margin-right: 60px;
+      background-color: #fff;
+      box-shadow: 3px 3px 4px 2px rgba(0, 0, 0, 0.342);
+      border-radius: 17px;
+    
+    }
+    @media only screen and (max-width: 1200px) {
+      .form-signin{
+        margin: 60px 10px 10px 10px;
+      }
+    }
+    
+  
+   #link1{
+        color: #242966;
+    }
+  
+    a:link{
+      
+      color: black;
+    }
+    a:hover {
+      text-decoration: none;
+      color: black;
+    }
+    hr{
+      color: #242966;
+    }
+    h2{
+      color: #242966;
+    }
+    .nav-link{
+        color: #242966;
+    }
+    .nav-link:hover{
+      color: #242966;
+    }
+  
+    .photo{
+     /* background: url('/img/man2-candidato1.png'); */
+      position:relative;
+      margin-top: -370px;
+      float: right;
+      width:500px;
+      height: 500px;
+      background-color: #fff;
+      background-size: cover;
+      border: 0px solid rgb(22, 22, 22);
+  }
+    @media only screen and (max-width: 1200px) {
+      .photo{
+          display:none;
+      }
+    }

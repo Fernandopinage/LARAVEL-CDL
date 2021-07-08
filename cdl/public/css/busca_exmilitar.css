@@ -1,0 +1,78 @@
+body{
+    background: repeat-y url('/img/Login_OMS.png') ;
+    background-size: cover; 
+    background-attachment: fixed, scroll;
+    background-repeat: no-repeat, repeat-y;
+    
+}
+#menu{
+  padding: 30px;
+ 
+}
+
+
+#logo{
+
+  width: 150px;
+  height: 60px;
+}
+
+.form-signin {
+    max-width: 480px;
+    padding: 35px 35px 45px 35px;
+    margin:  auto;
+    margin-top: 50px;
+    margin-left: 10px;
+    background-color: #fff;
+    box-shadow: 3px 3px 4px 1px rgba(0, 0, 0, 0.342);
+    border-radius: 17px;
+  
+  }
+
+  .btn{
+    color: #fff;
+    background-color: #2d831ebb;
+  }
+  .btn:hover{
+
+    color: #f0ede9;
+    background-color: #1e5513bb;
+    border-color: #0a0a0a;
+  }
+
+  a:link{
+    
+    color: #523617;
+  }
+  a:hover {
+    text-decoration: none;
+    color: black;
+  }
+  hr{
+    color: #523617;
+  }
+
+  #menu{
+
+    padding: 30px;
+    background-color: #525961cb;
+  }
+
+  .photo{
+   /* background: url('/img/busca-militar.png'); */
+    position:relative;
+    margin-top: -420px;
+    
+    background-repeat: no-repeat, repeat-y;
+    float: right;
+   /* width:500px;
+    height: 600px;*/
+    /*background-color: #fff;*/
+    background-size: cover;
+    border: 0px solid rgb(22, 22, 22);
+}
+  @media only screen and (max-width: 1200px) {
+    .photo{
+        display:none;
+    }
+}
