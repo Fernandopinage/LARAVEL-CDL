@@ -48,6 +48,7 @@ Route::get('login/empresa',[EmpresaController::class,'index'])->name('login/empr
     Route::post('/insert/empresa',[EmpresaController::class, 'store']); // submetendo formulario de empresa cadastro
     Route::get('redefinir/empresa',[EmpresaController::class,'redefinirSenha']); // chamando tela de redefinir senha
     Route::get('/alterar/senha/empresa',[EmpresaController::class,'alterarSenha']); // redefinir senha da empresa
+    Route::POST('/update/senha/empresa',[EmpresaController::class,'updateSenha']);   // Update Senha 
     Route::get('filtra/candidato/empresa',[EmpresaController::class,'filtroEmpresa']); // chamando tela de filtro candidato
     Route::get('anucio/empresa',[EmpresaController::class,'anuciarVagas']); // chamndo tela de anucio
     Route::post('/filtra/candidato/empresa',[EmpresaController::class,'filtrarCandidato']); // filtrando candidato 

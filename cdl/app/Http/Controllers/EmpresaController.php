@@ -29,6 +29,7 @@ class EmpresaController extends Controller
             if(!empty($empresa)){                                               //  caso tenha valor dentro da variavel empresa
 
                 if (Hash::check($request->password, $empresa->emp_senha)) {     //  decodificando senha hash 
+                    $request->session()->put('empresa',$request->email);
                     return redirect('home/empresa');                                  // redirecinanmento se estiver tudo certo
 
                     
@@ -150,9 +151,34 @@ class EmpresaController extends Controller
         return view('redefinir_empresa');
     }
 
-    public function alterarSenha(){
+    public function alterarSenha(){                             //  view alterar Senha
 
-        return view('alterar_senha_empresa');                       //  Alterar Senha
+        return view('alterar_senha_empresa');                       
+    }
+
+    public function updateSenha(Request $request){              //  Update Senha 
+
+        $this->validate($request,[
+
+            'password'=>'required',
+            'newsenha'=>'required',
+            'confsenha'=>'required',
+            
+        ]);
+
+      $empresa =  Empresa::where('emp_email',$request->empresa)->first(); // select empresa vindo de uma session hidder input
+      $id =  Empresa::where('emp_email',$request->empresa)->value('emp_id'); // ID 
+      
+       
+      if(!empty($empresa)){
+
+        $empresa = Empresa::find($id);
+
+        $empresa->emp_senha = Hash::make($request->newsenha);
+        $empresa->save(); 
+        return redirect('home/empresa'); 
+       }
+                              
     }
 
     public function filtroEmpresa(){                            // chamando tela de filtro candidato
