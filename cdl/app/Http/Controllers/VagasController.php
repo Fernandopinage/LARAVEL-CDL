@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Vagas;
 use Illuminate\Http\Request;
 
 class VagasController extends Controller
