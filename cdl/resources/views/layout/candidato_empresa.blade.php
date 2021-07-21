@@ -44,6 +44,7 @@
                 Opções
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="/edita/empresa">Editar Empresa</a></li>
                 <li><a class="dropdown-item" href="/alterar/senha/empresa">Redefinir Senha</a></li>
                 <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item" href="#">Logout</a></li>

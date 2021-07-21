@@ -129,12 +129,19 @@ class EmpresaController extends Controller
         //
     }
 
+
+
     
     public function update(Request $request, $id)
     {
-        //
+      
     }
 
+    public function editaEmpresa(){                             //  edita empresa
+
+        return view('update_empresa');
+
+    }
    
     public function destroy($id)                                // "deletar" registro ou ocultar
     {

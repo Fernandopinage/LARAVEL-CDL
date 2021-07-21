@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <link href="/css/anucie_empresa.css" rel="stylesheet">
-    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <link href="/css/add_candidato.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="/css/add_empresa.css" rel="stylesheet">
     <title>CDL</title>
 </head>
 <body>
@@ -63,70 +63,78 @@
 
     <div class="container">
 
-        @yield('anuncio')
+        @yield('updade_empresa')
         
     </div>
-    <div id="footer-cadastro">
-
-    </div>
 </body>
-<footer>
-
-  <nav class="navbar fixed-bottom navbar-expand-sm navbar-dark bg-dark">
-  </nav>
-</footer>
-
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
 <!-- Adicionando Javascript -->
 <script>
     $(document).ready(function() {
 
-
-      $('#descPCD').hide();
-      $('#idioma').hide();
-      
-        $('#idioma_necessario').change(function(){
-
-        if($("#idioma_necessario:checked").val() == undefined){
-            $("#idioma_necessario").prop('checked', false);
-            $('#idioma').hide(); 
-            
-        }else{
-          $("#idioma_necessario").prop('checked', true);
-          $('#idioma').show();  
-          $
+        function limpa_formulário_cep() {
+            // Limpa valores do formulário de cep.
+            $("#rua").val("");
+            $("#bairro").val("");
+            $("#cidade").val("");
+            $("#uf").val("");
+            $("#ibge").val("");
         }
 
+        //Quando o campo cep perde o foco.
+        $("#cep").blur(function() {
 
-      });
+            //Nova variável "cep" somente com dígitos.
+            var cep = $(this).val().replace(/\D/g, '');
 
+            //Verifica se campo cep possui valor informado.
+            if (cep != "") {
 
+                //Expressão regular para validar o CEP.
+                var validacep = /^[0-9]{8}$/;
 
-      $('#pcd').change(function(){
+                //Valida o formato do CEP.
+                if (validacep.test(cep)) {
 
-        if($("#pcd:checked").val() == undefined){
-            $("#pcd").prop('checked', false);
-            $('#descPCD').hide(); 
-            
-        }else{
-          $("#pcd").prop('checked', true);
-          $('#descPCD').show();  
-          $
-        }
+                    //Preenche os campos com "..." enquanto consulta webservice.
+                    $("#rua").val("...");
+                    $("#bairro").val("...");
+                    $("#cidade").val("...");
+                    $("#uf").val("...");
+                    $("#ibge").val("...");
 
+                    //Consulta o webservice viacep.com.br/
+                    $.getJSON("https://viacep.com.br/ws/" + cep + "/json/?callback=?", function(dados) {
 
-      });
-
-
+                        if (!("erro" in dados)) {
+                            //Atualiza os campos com os valores da consulta.
+                            $("#rua").val(dados.logradouro);
+                            $("#bairro").val(dados.bairro);
+                            $("#cidade").val(dados.localidade);
+                            $("#uf").val(dados.uf);
+                            $("#ibge").val(dados.ibge);
+                        } //end if.
+                        else {
+                            //CEP pesquisado não foi encontrado.
+                            limpa_formulário_cep();
+                            alert("CEP não encontrado.");
+                        }
+                    });
+                } //end if.
+                else {
+                    //cep é inválido.
+                    limpa_formulário_cep();
+                    alert("Formato de CEP inválido.");
+                }
+            } //end if.
+            else {
+                //cep sem valor, limpa formulário.
+                limpa_formulário_cep();
+            }
+        });
     });
-
 </script>
-
-   <!-- jquery -->
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-   <!-- ***** -->
-
 
 <!-- Mensagem de cadastro com sucesso -->
 @if(session('mensagem'))
@@ -142,14 +150,69 @@
 @endif
 
 <!-- Mesagem de validação de campos  -->
+
 @if ($errors->any())
 <script>
 Swal.fire({  position: 'center',  icon: 'warning',  title: 'Preencha os campos obrigatório',  showConfirmButton: false,  timer: 1500  })
 </script>
 @endif
 
-<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script src="/js/checkbox.js"></script>
+<script>
+
+  $(document).ready(function() {
+
+    $('#pessoais').change(function(){
+      if($("#pessoais:checked").val() == undefined){
+        $("#pessoais").prop('checked', false);
+        $('.pessoais').hide(); 
+      }else{
+        $("#pessoais").prop('checked', true);
+        $('.pessoais').show(); 
+      }
+
+    });
+
+    $('#endereco').change(function(){
+      if($("#endereco:checked").val() == undefined){
+        $("#endereco").prop('checked', false);
+        $('.endereco').hide(); 
+      }else{
+        $("#endereco").prop('checked', true);
+        $('.endereco').show(); 
+      }
+
+    });
+
+    $('#adcinais').change(function(){
+      if($("#adcinais:checked").val() == undefined){
+        $("#adcinais").prop('checked', false);
+        $('.adcinais').hide(); 
+      }else{
+        $("#adcinais").prop('checked', true);
+        $('.adcinais').show(); 
+      }
+
+    });
+    $('#termo').change(function(){
+      if($("#termo:checked").val() == undefined){
+        $("#termo").prop('checked', false);
+        $('.termo').hide(); 
+      }else{
+        $("#termo").prop('checked', true);
+        $('.termo').show(); 
+      }
+
+    });
+
+  });
+    
+
+</script>
+
+   <!-- jquery -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <!-- ***** -->
+
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> <!-- jquery CDN  -->
