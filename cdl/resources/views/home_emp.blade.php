@@ -1,6 +1,7 @@
 @extends('layout.home_emp')
-        @section('conteudo')
+ @section('conteudo')
 
  
-        @endsection
+ 
+@endsection
         

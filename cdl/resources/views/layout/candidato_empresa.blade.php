@@ -39,7 +39,16 @@
             <li class="nav-item">
                   <a class="nav-link"  href="/filtra/candidato/empresa">Busca Candidatos</a>
             </li>
-
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Opções
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="/alterar/senha/empresa">Redefinir Senha</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Logout</a></li>
+              </ul>
+          </li>
             </ul>
           </div>
         </div>

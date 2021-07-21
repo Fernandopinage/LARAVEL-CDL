@@ -150,6 +150,11 @@ class EmpresaController extends Controller
         return view('redefinir_empresa');
     }
 
+    public function alterarSenha(){
+
+        return view('alterar_senha_empresa');                       //  Alterar Senha
+    }
+
     public function filtroEmpresa(){                            // chamando tela de filtro candidato
 
         return view('candidato_empresa');
