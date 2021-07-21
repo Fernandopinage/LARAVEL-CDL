@@ -29,7 +29,7 @@ class EmpresaController extends Controller
             if(!empty($empresa)){                                               //  caso tenha valor dentro da variavel empresa
 
                 if (Hash::check($request->password, $empresa->emp_senha)) {     //  decodificando senha hash 
-                    //return redirect('home/empresa');                                  // redirecinanmento se estiver tudo certo
+                    return redirect('home/empresa');                                  // redirecinanmento se estiver tudo certo
 
                     
                 }else{
