@@ -139,7 +139,9 @@ class EmpresaController extends Controller
 
     public function editaEmpresa(){                             //  edita empresa
 
-        return view('update_empresa');
+       
+        //return view('update_empresa');
+        echo session('empresa');
 
     }
    
