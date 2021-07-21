@@ -61,7 +61,7 @@
     </div>
 </body>
 <footer>
-  @include('sweetalert::alert')
+
   <nav class="navbar fixed-bottom navbar-expand-sm navbar-dark bg-dark">
   </nav>
 </footer>
