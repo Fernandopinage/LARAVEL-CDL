@@ -48,7 +48,7 @@
                 </div>
                 <div class="col-md-2">
                     <label class="form-check-label" for="flexCheckIndeterminate">Salario Oferecido</label>
-                    <input type="text" class="form-control form-control-sm" name="salario" placeholder="R$">
+                    <input type="text" class="form-control form-control-sm" name="salario" placeholder="R$"onKeyPress="return(moeda(this,'.',',',event))" >
                     
                 </div>
                
