@@ -107,6 +107,9 @@ class EmpresaController extends Controller
             $empresa->emp_senha = Hash::make($request->senha);
             $empresa->emp_termo = $request->termo;
             $empresa->emp_status = $request->status;
+            $empresa->emp_funcao = $request->funcao;
+            $empresa->emp_setor = $request->setor;
+
             $empresa->save();
         
             //return View('add_empresa')->with('success','teste');
@@ -140,8 +143,8 @@ class EmpresaController extends Controller
     public function editaEmpresa(){                             //  edita empresa
 
        
-        //return view('update_empresa');
-        echo session('empresa');
+        return view('update_empresa');
+        //echo session('empresa');
 
     }
    
