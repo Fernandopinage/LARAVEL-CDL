@@ -2,7 +2,7 @@
 
 @section('login')
 
-<form class="form-signin" method="POST" action="/validar/empresa">
+<form class="form-signin" method="POST" action="{{('/validar/empresa')}}"> 
 
     @csrf
     <div class="text-center" >

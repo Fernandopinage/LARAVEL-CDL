@@ -2,7 +2,7 @@
 
 @section('cadastro')
 
-<form method="post" action="/insert/empresa" >
+<form method="post" action="{{('/insert/empresa')}}" >
 
     @csrf
 
