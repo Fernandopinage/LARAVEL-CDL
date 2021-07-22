@@ -55,24 +55,32 @@
                     <label class="form-check-label" for="flexCheckIndeterminate">Confirmar Senha <span><strong>*</strong></span></label>
                     <input type="password" class="form-control form-control-sm" name="confirmar" placeholder="">
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <label class="form-check-label" for="flexCheckIndeterminate">Nome do Técnico </label>
                     <input type="text" class="form-control form-control-sm" name="tecnico" placeholder="">
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <label class="form-check-label" for="flexCheckIndeterminate">Email do Técnico </label>
                     <input type="text" class="form-control form-control-sm" name="emailtecnico" placeholder="EXEMPLO@EMAIL.COM">
                 </div>
-
                 <div class="col-md-4">
+                    <label class="form-check-label" for="flexCheckIndeterminate">Função/Cargo </label>
+                    <input type="text" class="form-control form-control-sm" name="funcao" placeholder="">
+                </div>
+                <div class="col-md-3">
+                    <label class="form-check-label" for="flexCheckIndeterminate">Setor </label>
+                    <input type="text" class="form-control form-control-sm" name="setor" placeholder="">
+                </div>
+
+                <div class="col-md-3">
                     <label class="form-check-label" for="flexCheckIndeterminate">Ramo de Atividade <span><strong>*</strong></span></label>
                     <input type="text" class="form-control form-control-sm" name="ramo" placeholder="">
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-3">
                     <label class="form-check-label" for="flexCheckIndeterminate">Telefone</label>
                     <input type="tel" class="form-control form-control-sm" name="telefone" placeholder="(99) 99999-9999" onkeypress="mask(this, mphone);" onblur="mask(this, mphone);" />
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-3">
                     <label class="form-check-label" for="flexCheckIndeterminate">Telefone</label>
                     <input type="tel" class="form-control form-control-sm" name="telefone2" placeholder="(99) 99999-9999" onkeypress="mask(this, mphone);" onblur="mask(this, mphone);" />
                 </div>
