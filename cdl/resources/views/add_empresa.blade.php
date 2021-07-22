@@ -68,7 +68,7 @@
                     <input type="text" class="form-control form-control-sm" name="funcao" placeholder="">
                 </div>
                 <div class="col-md-3">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Setor </label>
+                    <label class="form-check-label" for="flexCheckIndeterminate">Setor/Departamento </label>
                     <input type="text" class="form-control form-control-sm" name="setor" placeholder="">
                 </div>
 
@@ -156,13 +156,13 @@
             <div class="col-md-2">
                 <input type="hidden" value="1" name="status"> <!-- campo responsavel por ativar empresa -->
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                    <label class="form-check-label" name="associado" for="flexCheckIndeterminate">Associado CDL manaus?</label>
+                    <input class="form-check-input" type="checkbox" value="" id="asscdl">
+                    <label class="form-check-label" name="associado" id="associado"  for="flexCheckIndeterminate">Associado CDL manaus?</label>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4" id="divcod">
                 <label class="form-check-label" for="flexCheckIndeterminate">Preenchar com o códiogo</label>
-                <input type="text" class="form-control form-control-sm" name="cod" placeholder="">
+                <input type="text" class="form-control form-control-sm" name="cod" id="cod" placeholder="">
             </div>
             <div class="col-md-6">
             </div>
@@ -252,3 +252,5 @@ function mphone(v) {
 </script>
 
     <!-- ----------------------------------------------------------------- -->
+
+   
