@@ -1,6 +1,13 @@
 @extends('layout.home_emp')
- @section('conteudo')
 
+@section('home_empresa')
+
+<form class="row g-3">
+
+    <input type="text" class="form-control" id="text" placeholder="Cargo, experiência ou Palavra Chave">
+    <button type="button" class="btn btn-primary">Primary</button>
+
+    </form>
  
  
 @endsection
