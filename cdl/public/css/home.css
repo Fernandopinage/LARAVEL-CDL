@@ -1,3 +1,5 @@
+/* CSS Document */
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:300,400,500,600,700&display=swap');	
 #menu{
     padding: 30px;
     background-color: #284D92;
@@ -58,9 +60,32 @@ option{
  
 }
 #container{
-
+    font-family: 'Fira Sans Condensed', Arial, Helvetica, sans-serif;
     margin-top: 50px;
     margin-bottom: 50px;
+    
+}
+#container h6{
+    color: #242427;
+    text-align: left;
+    margin: 0;
+    padding: 0px 0;
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1em;
+    letter-spacing: 0px;
+    text-decoration: none;
+}
+#container span{
+    color: #999;
+    text-align: left;
+    margin: 5px 0 0 0;
+    padding: 5px 0 0 0;
+    font-size: .85em;
+    font-weight: 400;
+    line-height: 1.4em;
+    letter-spacing: 0px;
+    text-decoration: none;
 }
 
 #p-1{
