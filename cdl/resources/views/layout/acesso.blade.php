@@ -10,9 +10,64 @@
 </head>
 <body>
     
-    <ul class="nav justify-content-end navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/"><img id="logo" src="/img/cdl_logo.png"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Candidatos
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="/login/candidato">Entrar</a></li>
+                      <li><a class="dropdown-item" href="/busca/candidato">Buscar</a></li>
+                      <!--<li><hr class="dropdown-divider"></li>-->
+                      
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Empresas
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="/login/empresa">Entrar</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      UTV
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="/login/utv">Entrar</a></li>
+                      <li><a class="dropdown-item" href="/busca/candidato">Buscar</a></li>
+                     <!-- <li><hr class="dropdown-divider"></li> -->
+                      
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      OM's
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="/login/militar">Entrar</a></li>
+                      <li><a class="dropdown-item" href="/busca/militar">Ex Militares</a></li>
+                     <!-- <li><hr class="dropdown-divider"></li> -->
+                      
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+        
+      </div>
+      <ul class="nav justify-content-end">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href=""><img  src="/icons/facebook.png"></a>
+          <a class="nav-link active" aria-current="page" href="#"><img  src="/icons/facebook.png"></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#"><img  src="/icons/instagram.png"></a>
@@ -22,69 +77,15 @@
         </li>
 
       </ul>
+    </div>
+    
+  </nav>
 
-    <!--<nav class="navbar navbar-expand-lg navbar-primary bg-primary">-->
-      <nav class="navbar navbar-expand-lg navbar-dark bg"  style="background-color: #092c6e">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="/"><img id="logo" src="/img/cdl-logo.png"></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: #fff;">
-                          Candidatos
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <li><a class="dropdown-item" href="/login/candidato">Entrar</a></li>
-                          <li><a class="dropdown-item" href="/busca/candidato">Buscar</a></li>
-                          <li><hr class="dropdown-divider"></li>
-                         <!-- <li><a class="dropdown-item" href="#">Something else here</a></li> -->
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: #fff;">
-                          Empresas
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <li><a class="dropdown-item" href="/login/empresa">Entrar</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: #fff;">
-                          UTV
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <li><a class="dropdown-item" href="/login/utv">Entrar</a></li>
-                          <li><a class="dropdown-item" href="#">Buscar</a></li>
-                         <!-- <li><hr class="dropdown-divider"></li>-->
-                          
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: #fff;">
-                          OM's
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <li><a class="dropdown-item" href="/login/militar">Entrar</a></li>
-                          <li><a class="dropdown-item" href="/busca/militar">Ex Militares</a></li>
-                          <!-- <li><hr class="dropdown-divider"></li> -->
-                          
-                        </ul>
-                    </li>
-                </ul>
+  <!--
+  <div id="menu">
 
-            </div>
-            
-          </div>
-        </div>
-      </nav>
-      
-      <div id="menu">
-
-      </div>
+  </div>
+-->
 
     <div class="container">
 

@@ -11,18 +11,6 @@
 </head>
 <body>
     
-    <ul class="nav justify-content-end navbar-light bg-light">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#"><img  src="/icons/facebook.png"></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#"><img  src="/icons/instagram.png"></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#"><img  src="/icons/youtube.png"></a>
-        </li>
-
-      </ul>
       <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
           <a class="navbar-brand" href="/"><img id="logo" src="/img/cdl_logo.png"></a>
@@ -78,13 +66,27 @@
             </div>
             
           </div>
+          <ul class="nav justify-content-end">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#"><img  src="/icons/facebook.png"></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><img  src="/icons/instagram.png"></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><img  src="/icons/youtube.png"></a>
+            </li>
+    
+          </ul>
         </div>
+        
       </nav>
 
-      
+      <!--
       <div id="menu">
 
       </div>
+    -->
    
       <div class="container-fluid">
             <div class="banner-principal">
