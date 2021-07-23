@@ -1,3 +1,5 @@
+/* CSS Document */
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:300,400,500,600,700&display=swap');	
 .banner-principal{
  
     background: url('/img/bgEMPRESAS.jpg'); 
@@ -11,7 +13,7 @@
 
   
 #menu{
-    padding: 30px;
+    padding: 12px;
     background-color: #284D92;
 }
 
@@ -99,8 +101,6 @@ option{
 }
 
 
-/* CSS Document */
-@import url('https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:300,400,500,600,700&display=swap');
 
 /************************************************************************************
 RESET

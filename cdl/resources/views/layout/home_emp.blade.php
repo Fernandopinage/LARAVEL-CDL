@@ -13,31 +13,15 @@
 
 <body>
 
-  <ul class="nav justify-content-end navbar-light bg-light">
-    <li class="nav-item">
-      <a class="nav-link active" aria-current="page" href="#"><img src="/icons/facebook.png"></a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#"><img src="/icons/instagram.png"></a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#"><img src="/icons/youtube.png"></a>
-    </li>
-
-  </ul>
-
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="/"><img id="logo" src="/img/cdl_logo.png"></a>
+      <a class="navbar-brand" href="/home/empresa"><img id="logo" src="/img/cdl_logo.png"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="/home/empresa">Inicio</a>
-          </li>
           <li class="nav-item">
             <a class="nav-link" href="/anucio/empresa">Anúncio de vaga </a>
           </li>
@@ -60,43 +44,25 @@
           </li>
         </ul>
       </div>
+      <ul class="nav justify-content-end navbar-light bg-light">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#"><img src="/icons/facebook.png"></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><img src="/icons/instagram.png"></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><img src="/icons/youtube.png"></a>
+        </li>
+    
+      </ul>
     </div>
   </nav>
-  <!-- 
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="/"><img id="logo" src="/img/cdl_logo.png"></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          Empresas
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="/login/empresa">Entrar</a></li>
-                        <li><a class="dropdown-item" href="/filtra/candidato/empresa">Busca Candidatos</a></li>
-                        <li><a class="dropdown-item" href="/anucio/empresa">Anúncio de vaga </a></li>
-                          <li><hr class="dropdown-divider"></li>
-                          <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                    </li>
-
-                </ul>
-
-            </div>
-            
-          </div>
-        </div>
-      </nav>
-    -->
+  
   <div id="menu">
 
   </div>
+
   <div class="container-fluid">
 
     <div class="banner-principal">
@@ -177,7 +143,7 @@
           
         <aside id="footer-slice">
           <aside id="feet_text">
-            <h2><i class="demo-icon icon-angle-right"></i>CDL MANAUS - DJALMA BATISTA</h2>
+            <h2><i class="demo-icon icon-angle-right"></i> > CDL MANAUS - DJALMA BATISTA</h2>
             <p>
               Cond. Amazonas Flat Service, 3000<br>
               Loja A, Torre Sul<br>Av. Djalma Batista&nbsp;&nbsp;|&nbsp;&nbsp;Chapada&nbsp;&nbsp;|&nbsp;&nbsp;69.050-010<br>
@@ -189,7 +155,7 @@
         
         <aside id="footer-slice">
           <aside id="feet_text">
-            <h2><i class="demo-icon icon-angle-right"></i>CDL MANAUS - CENTRO</h2>
+            <h2><i class="demo-icon icon-angle-right"></i> > CDL MANAUS - CENTRO</h2>
             <p>
               Rua Rui Barbosa, 156<br>
               Centro&nbsp;&nbsp;|&nbsp;&nbsp;69.010-220<br>
@@ -201,7 +167,7 @@
         
         <aside id="footer-slice">
           <aside id="feet_text">
-            <h2><i class="demo-icon icon-angle-right"></i>UTV - RAIZ</h2>
+            <h2><i class="demo-icon icon-angle-right"></i> > UTV - RAIZ</h2>
             <p>
               Rua Delfim de Souza, 125<br>
               Raiz&nbsp;&nbsp;|&nbsp;&nbsp;69.068-020<br>
@@ -213,7 +179,7 @@
         
         <aside id="footer-slice">
           <aside id="feet_text">
-            <h2><i class="demo-icon icon-angle-right"></i>ATENDIMENTO</h2>
+            <h2><i class="demo-icon icon-angle-right"></i> > ATENDIMENTO</h2>
             <p>
               Dúvidas<br>
               + 55 92 3627-2867<br>
@@ -226,40 +192,7 @@
       </article><!--/REDES-SOCIAIS-->
     </footer><!--/#main-->
     
-    <footer id="footer" style="border-top: .5px solid #DDD; border-width: thin; background: #FFF;">	
-      <article id="footer-container" class="onflex-r">
-        <aside id="footer-slice-2">
-          <aside id="feet_text">
-            <p><i class="demo-icon icon-ok"></i> Este site não utiliza cookies. Não armazenamos nenhum de seus dados de navegação.</p>
-          </aside>
-        </aside><!--/footer-slice-->
-        
-        <aside id="footer-slice-2" style="padding: 0;">
-          <figure class="feet_image"><img src="/icons/google-safe.png"></figure>
-          <!--<figure class="feet_image"><img src="images/comuns/Logo_PagSeguro.png"></figure>-->
-          <figure class="feet_image"><img src="/icons/comodo-logo.png"></figure>
-        </aside><!--/footer-slice-->
-        
-      </article><!--/REDES-SOCIAIS-->
-    </footer><!--/#main-->	
     
-    <footer id="footer" style="border-top: .5px solid #DDD; border-width: thin; background: #CCC;">	
-      <article id="footer-container" class="onflex-r">
-    
-        <aside id="footer-slice-2">
-          <aside id="feet_text">
-          <p>Câmara de Dirigentes Lojistas de Manaus<br> Copyright 2020, CDL Manaus. Todos os direitos reservados.</p>
-          </aside>
-        </aside><!--/footer-slice-->
-        
-        <aside id="footer-slice-2">
-          <aside id="feet_text">
-            <p>Desenvolvido por Alysson Leite.<br> Powered by QUEST MÍDIA .</p>
-          </aside>
-        </aside><!--/footer-slice-->
-    
-      </article><!--/REDES-SOCIAIS-->
-    </footer><!--/#main-->	
    
   </div>
 

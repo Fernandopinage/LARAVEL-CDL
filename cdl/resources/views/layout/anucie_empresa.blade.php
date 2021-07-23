@@ -12,54 +12,55 @@
 </head>
 <body>
     
-    <ul class="nav justify-content-end navbar-light bg-light">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href=""><img  src="/icons/facebook.png"></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#"><img  src="/icons/instagram.png"></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#"><img  src="/icons/youtube.png"></a>
-        </li>
-
-      </ul>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/"><img id="logo" src="/img/cdl_logo.png"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-            <li class="nav-item">
-                    <a class="nav-link" href="/home/empresa">Inicio</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/anucio/empresa">Anúncio de vaga </a>
-            </li>
-            <li class="nav-item">
-                  <a class="nav-link"  href="/filtra/candidato/empresa">Busca Candidatos</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Opções
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="/edita/empresa">Editar Empresa</a></li>
-                <li><a class="dropdown-item" href="/alterar/senha/empresa">Redefinir Senha</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Logout</a></li>
-              </ul>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/home/empresa"><img id="logo" src="/img/cdl_logo.png"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/anucio/empresa">Anúncio de vaga </a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/filtra/candidato/empresa">Busca Candidatos</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Opções
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="/edita/empresa">Editar Empresa</a></li>
+              <li><a class="dropdown-item" href="/alterar/senha/empresa">Redefinir Senha</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Logout</a></li>
             </ul>
-          </div>
-        </div>
-      </nav>
-      
-      <div id="menu">
-
+          </li>
+        </ul>
       </div>
+      <ul class="nav justify-content-end navbar-light bg-light">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#"><img src="/icons/facebook.png"></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><img src="/icons/instagram.png"></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><img src="/icons/youtube.png"></a>
+        </li>
+    
+      </ul>
+    </div>
+  </nav>
+  
+  <div id="menu">
+
+  </div>
 
     <div class="container">
 

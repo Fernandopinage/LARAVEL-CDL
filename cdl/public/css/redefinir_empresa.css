@@ -5,10 +5,10 @@
     
   }
 
-    #menu{
-      padding: 30px;
-      background-color: #284D92;
-  }
+  #menu{
+    padding: 12px;
+    background-color: #284D92;
+}
   
     .form-signin {
       max-width: 480px;
