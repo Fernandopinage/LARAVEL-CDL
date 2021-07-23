@@ -70,11 +70,22 @@
     <div id="footer-cadastro">
 
     </div>
+    <footer style="margin-top: 150px">
+      <nav class="navbar fixed-bottom navbar-expand-sm navbar bg" style="background-color: #284D92">
+          <div class="container" style="margin-top: 8px">
+              <div class="col-6 input-group-sm">
+                  <p class="text-start" style="color:#fff">Progride® é uma marca registrada © <?php echo date('Y')?>
+                  </p>
+              </div>
+              <div class="col-6 input-group-sm">
+                  <p class="text-end" style="color:#fff">Desenvolvido por <img src="/icons/progride.png" width="25">
+                      Progride </p>
+              </div>
+    
+          </div>
+      </nav>
+    </footer>
 </body>
-<footer>
-  <nav class="navbar fixed-bottom navbar-expand-sm navbar-dark bg-dark">
-  </nav>
-</footer>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
 <!-- Adicionando Javascript -->
