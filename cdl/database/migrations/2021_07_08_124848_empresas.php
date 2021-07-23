@@ -15,7 +15,7 @@ class Empresas extends Migration
     {
                     // tabela empresa 
 
-        Schema::create('TBL_EMPRESAS', function (Blueprint $table) {
+        Schema::create('tbl_empresas', function (Blueprint $table) {  // TBL_EMPRESAS
             $table->increments('emp_id');
             $table->string('emp_logo',255)->nullable();             // logo da empresa 
             $table->string('emp_fantasia',50)->nullable();          // nome fantasia da empresa
