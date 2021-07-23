@@ -9,6 +9,7 @@
     <title>Busca Militar</title>
 </head>
 <body>
+  <!--
   <ul class="nav justify-content-end navbar-light bg-light">
     <li class="nav-item">
       <a class="nav-link active" aria-current="page" href=""><img  src="/icons/facebook.png"></a>
@@ -21,6 +22,7 @@
     </li>
 
   </ul>
+-->
  
   
   <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> -->
