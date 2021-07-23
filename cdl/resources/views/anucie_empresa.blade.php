@@ -189,7 +189,7 @@
                       </div>
                 </div>
                 <div class="mb-3" id="descPCD">
-                    <label for="exampleFormControlTextarea1" class="form-label">Descreva a deficiêmcia</label>
+                    <label for="exampleFormControlTextarea1" class="form-label">Descreva a deficiência</label>
                     <textarea class="form-control" id="exampleFormControlTextarea1"  name="descricao_pcd" rows="4"></textarea>
                   </div>
                 
