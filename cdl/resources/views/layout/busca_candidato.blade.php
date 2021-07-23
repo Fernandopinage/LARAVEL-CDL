@@ -86,7 +86,6 @@
 
   </div>
 -->
-
     <div class="container">
 
         @yield('busca')
