@@ -98,11 +98,15 @@
             <div class="col-sm-4">
                 <div class="card">
                     <img class="card-img-top" src="/img/index-1.jpg" alt="Imagem de capa do card">
-                    <div class="card-body">
+                    <div class="card-body" style="text-align: center">
                         <h5 class="card-title">ÚLTIMOS PROFISSIONAIS CADASTRADOS</h5>
-                        <p class="card-text">Aqui você encontra o candidato que precisa onde sua empresa estiver, no perfil que você desejar.</p>
-                        <a href="#" class="btn btn-outline-primary btn-lg btn-block">BUSCAR CANDIDATO</a>
+                        <hr>
+                        <p class="card-text" style="text-align: justify">Aqui você encontra o candidato que precisa onde sua empresa estiver, no perfil que você desejar.</p>
+                        
                     </div>
+                    <ul class="list-group list-group-flush">
+                        <a href="#" class="btn btn-outline-primary btn-lg btn-block">BUSCAR CANDIDATO</a>
+                    </ul>
                 </div>
             </div>
             <div class="col-sm-4">
@@ -111,8 +115,10 @@
                     <div class="card-body">
                         <h5 class="card-title">OPORTUNIDADES RECENTES EM DESTAQUE</h5>
                         <p class="card-text">Conecte-se ao mercado de trabalho com essa ferramenta ligada a grandes empresas. Cadastra-se. É GRÁTIS!</p>
-                        <a href="#" class="btn btn-outline-primary btn-lg btn-block">BUSCAR OPORTUNIDADE</a>
                     </div>
+                    <ul class="list-group list-group-flush">
+                        <a href="#" class="btn btn-outline-primary btn-lg btn-block">BUSCAR CANDIDATO</a>
+                    </ul>
                 </div>
             </div>
             <div class="col-sm-4">
@@ -121,8 +127,10 @@
                     <div class="card-body">
                         <h5 class="card-title">PROGRAMAS DE CAPACITAÇÃO DISPONÍVEIS</h5>
                         <p class="card-text">Venha conhecer a forma mais rápida, pratica e segura de ampliar seus horizontes.</p>
-                        <a href="#" class="btn btn-outline-primary btn-lg btn-block">SAIBA MAIS</a>
                     </div>
+                    <ul class="list-group list-group-flush">
+                        <a href="#" class="btn btn-outline-primary btn-lg btn-block">BUSCAR CANDIDATO</a>
+                    </ul>
                 </div>
             </div>
         </div>
