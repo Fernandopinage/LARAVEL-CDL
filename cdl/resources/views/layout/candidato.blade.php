@@ -38,8 +38,8 @@
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                           <li><a class="dropdown-item" href="/login/candidato">Entrar</a></li>
                           <li><a class="dropdown-item" href="/busca/candidato">Buscar</a></li>
-                          <li><hr class="dropdown-divider"></li>
-                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                         <!-- <li><hr class="dropdown-divider"></li> -->
+                          
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -57,8 +57,8 @@
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                           <li><a class="dropdown-item" href="/login/utv">Entrar</a></li>
                           <li><a class="dropdown-item" href="/busca/candidato">Buscar</a></li>
-                          <li><hr class="dropdown-divider"></li>
-                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                          <!--<li><hr class="dropdown-divider"></li>-->
+                          
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -68,8 +68,8 @@
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                           <li><a class="dropdown-item" href="/login/militar">Entrar</a></li>
                           <li><a class="dropdown-item" href="/busca/militar">Ex Militares</a></li>
-                          <li><hr class="dropdown-divider"></li>
-                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                         <!-- <li><hr class="dropdown-divider"></li> -->
+                        
                         </ul>
                     </li>
                 </ul>
