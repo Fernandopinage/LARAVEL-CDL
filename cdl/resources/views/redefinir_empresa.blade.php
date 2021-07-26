@@ -2,7 +2,7 @@
 
 @section('redefinir')
 
-<form class="form-signin" method="POST" action="/validar/empresa">
+<form class="form-signin" method="POST" action="{{('/redefinir/senha/empresa')}}">
 
     @csrf
     <div class="text-center">

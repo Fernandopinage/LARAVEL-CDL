@@ -8,7 +8,7 @@
     <link href="/css/empresa.css" rel="stylesheet">
     
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-    <title>Empresa</title>
+    <title>Empregabilidade | CDL Manaus</title>
 </head>
 <body>
     

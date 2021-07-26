@@ -166,8 +166,10 @@ class EmpresaController extends Controller
         return view('redefinir_empresa');
     }
 
-    public function redefinir()
+    public function redefinir(Request $Request)
     {
+
+            
     }
 
     public function alterarSenha()

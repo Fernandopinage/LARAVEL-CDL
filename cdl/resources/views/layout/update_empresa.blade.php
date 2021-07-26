@@ -8,7 +8,7 @@
     <link href="/css/add_candidato.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link href="/css/update_empresa.css" rel="stylesheet">
-    <title>CDL</title>
+    <title>Empregabilidade | CDL Manaus</title>
 </head>
 <body>
     
