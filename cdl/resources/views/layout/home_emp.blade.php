@@ -2,14 +2,15 @@
 <html lang="pt-br">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-  <link href="/css/home_empresa.css" rel="stylesheet">
-  <title>Empregabilidade | CDL Manaus</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="/css/home.css" rel="stylesheet">
+    <title>Empregabilidade | CDL Manaus</title>
 </head>
+
 
 <body>
 
@@ -54,11 +55,11 @@
         <li class="nav-item">
           <a class="nav-link" href="#"><img src="/icons/youtube.png"></a>
         </li>
-    
+
       </ul>
     </div>
   </nav>
-  
+
   <div id="menu">
 
   </div>
@@ -139,38 +140,38 @@
     <!--/col-max-->
     <hr>
     <div class="container" id="container">
-        <div class="row">
-            <div class="col-sm-3">
-                <h6>> CDL MANAUS - DJALMA BATISTA</h6>
-                <span>Cond. Amazonas Flat Service, 3000<br>
-                    Loja A, Torre Sul<br>
-                    Av. Djalma Batista  |  Chapada  |  69.050-010<br>
-                    Segunda a Quinta-feira das 08h às 18h<br>
-                    Sexta-feira das 08h às 17h</span>
-            </div>
-            <div class="col-sm-3">
-                <h6>> CDL MANAUS - CENTRO</h6>
-                <span>Rua Rui Barbosa, 156<br>
-                    Centro  |  69.010-220<br>
-                    Segunda a Quinta-feira das 08h às 18h<br>
-                    Sexta-feira das 08h às 17h</span>
-            </div>
-            <div class="col-sm-3">
-                <h6>>
-                    UTV - RAIZ</h6>
-                <span>Rua Delfim de Souza, 125<br>
-                    Raiz  |  69.068-020<br>
-                    Segunda a Quinta-feira das 08h às 18h<br>
-                    Sexta-feira das 08h às 17h</span>
-            </div>
-            <div class="col-sm-3">
-                <h6>> ATENDIMENTO</h6>
-                <span>Dúvidas<br>
-                    + 55 92 3627-2867<br>
-                    + 55 92 3627-2868<br>
-                    suporte@cdlmanaus.org.br</span>
-            </div>
+      <div class="row">
+        <div class="col-sm-3">
+          <h6>> CDL MANAUS - DJALMA BATISTA</h6>
+          <span>Cond. Amazonas Flat Service, 3000<br>
+            Loja A, Torre Sul<br>
+            Av. Djalma Batista | Chapada | 69.050-010<br>
+            Segunda a Quinta-feira das 08h às 18h<br>
+            Sexta-feira das 08h às 17h</span>
         </div>
+        <div class="col-sm-3">
+          <h6>> CDL MANAUS - CENTRO</h6>
+          <span>Rua Rui Barbosa, 156<br>
+            Centro | 69.010-220<br>
+            Segunda a Quinta-feira das 08h às 18h<br>
+            Sexta-feira das 08h às 17h</span>
+        </div>
+        <div class="col-sm-3">
+          <h6>>
+            UTV - RAIZ</h6>
+          <span>Rua Delfim de Souza, 125<br>
+            Raiz | 69.068-020<br>
+            Segunda a Quinta-feira das 08h às 18h<br>
+            Sexta-feira das 08h às 17h</span>
+        </div>
+        <div class="col-sm-3">
+          <h6>> ATENDIMENTO</h6>
+          <span>Dúvidas<br>
+            + 55 92 3627-2867<br>
+            + 55 92 3627-2868<br>
+            suporte@cdlmanaus.org.br</span>
+        </div>
+      </div>
     </div>
     <hr>
     <!---- ------>
@@ -178,24 +179,26 @@
   </div>
   <footer style="margin-top: 150px">
     <nav class="navbar fixed-bottom navbar-expand-sm navbar bg" style="background-color: #284D92">
-        <div class="container" style="margin-top: 8px">
-            <div class="col-6 input-group-sm">
-                <p class="text-start" style="color:#fff">Progride® é uma marca registrada © <?php echo date('Y')?>
-                </p>
-            </div>
-            <div class="col-6 input-group-sm">
-                <p class="text-end" style="color:#fff">Desenvolvido por <img src="/icons/progride.png" width="25">
-                    Progride </p>
-            </div>
-
+      <div class="container" style="margin-top: 8px">
+        <div class="col-6 input-group-sm">
+          <p class="text-start" style="color:#fff">Progride® é uma marca registrada © <?php echo date('Y')?>
+          </p>
         </div>
+        <div class="col-6 input-group-sm">
+          <p class="text-end" style="color:#fff">Desenvolvido por <img src="/icons/progride.png" width="25">
+            Progride </p>
+        </div>
+
+      </div>
     </nav>
-</footer>
+  </footer>
 </body>
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-  integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+  integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
+</script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
-  integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+  integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous">
+</script>
 
 </html>
