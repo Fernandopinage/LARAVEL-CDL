@@ -5,17 +5,22 @@
 <form class="form-signin" method="POST" action="/validar/empresa">
 
     @csrf
-    <div class="text-center" >
-        <h2 class="form-signin-heading">Insira seu e-mail de acesso</h2>
+    <div class="text-center">
+        <h2 class="form-signin-heading">ESQUECEU SUA SENHA?</h2>
         <hr>
     </div>
     <div class="mb-3">
-    <input type="mail" class="form-control form-control" name="email" placeholder="E-mail" required="" autofocus="" />
+        <input type="mail" class="form-control form-control" name="email" placeholder="E-mail" required=""
+            autofocus="" />
     </div>
     <div class="d-grid gap-2">
-    <input type="submit" class="btn-primary btn-lg" name="loginentrar" value="Entrar">
+        <input type="submit" class="btn-primary btn-lg" name="loginentrar" value="Entrar">
     </div>
-
+    <div class="mensagem">
+        
+    <span>* Informe o e-mail, utilizado no seu cadastro.<br>
+   * As instruções para alterarção da senha serão enviadas para o seu e-mail</span>
+    </div>
 </form>
 
 @endsection

@@ -1,5 +1,5 @@
 /* CSS Document */
-@import url('https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:300,400,500,600,700&display=swap');	
+
 .banner-principal{
  
     background: url('/img/bgEMPRESAS.jpg'); 
@@ -100,20 +100,57 @@ option{
     
 }
 
+#container{
+    font-family: 'Fira Sans Condensed', Arial, Helvetica, sans-serif;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    
+}
+#container h6{
+    color: #242427;
+    text-align: left;
+    margin: 0;
+    padding: 0px 0;
+    font-size: 1.2em;
+    font-weight: 400;
+    line-height: 1em;
+    letter-spacing: 0px;
+    text-decoration: none;
+}
+#container span{
+
+    color: #999;
+    text-align: left;
+    margin: 5px 0 0 0;
+    padding: 5px 0 0 0;
+    font-size: .95em;
+    font-weight: 400;
+    line-height: 1.4em;
+    letter-spacing: 0px;
+    text-decoration: none;
+
+
+}
+
+span{
+    color: rgb(163, 157, 157);  
+    font-size: 11px;
+    font-family: 'Cairo', sans-serif;
+    font-family: 'Roboto Slab', serif;
+  }
 
 
 /************************************************************************************
 RESET
 *************************************************************************************/
 
-html, body, address, blockquote, div, dl, form, h1, h2, h3, h4, h5, h6, ol, p, pre, table, ul,
-dd, dt, li, tbody, td, tfoot, th, thead, tr, button, del, ins, map, object,
-a, abbr, acronym, b, bdo, big, br, cite, code, dfn, em, i, img, kbd, q, samp, small, span,
-strong, sub, sup, tt, var, legend, fieldset {
-	margin: 0;
-	padding: 0;
-	font-family: 'Fira Sans Condensed', Arial, Helvetica, sans-serif;
-}
+span{
+    color: rgb(163, 157, 157);  
+    font-size: 11px;
+    font-family: 'Cairo', sans-serif;
+    font-family: 'Roboto Slab', serif;
+  }
+
 
 img, fieldset {
 	border: 0;

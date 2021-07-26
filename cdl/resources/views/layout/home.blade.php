@@ -160,9 +160,6 @@
                     Av. Djalma Batista  |  Chapada  |  69.050-010<br>
                     Segunda a Quinta-feira das 08h às 18h<br>
                     Sexta-feira das 08h às 17h</span>
-                <span>
-                    Segunda a Quinta-feira das 08h às 18h
-                    Sexta-feira das 08h às 17h</span>
             </div>
             <div class="col-sm-3">
                 <h6>> CDL MANAUS - CENTRO</h6>
@@ -183,7 +180,7 @@
                 <h6>> ATENDIMENTO</h6>
                 <span>Dúvidas<br>
                     + 55 92 3627-2867<br>
-                    + 55 92 3627-2868
+                    + 55 92 3627-2868<br>
                     suporte@cdlmanaus.org.br</span>
             </div>
         </div>

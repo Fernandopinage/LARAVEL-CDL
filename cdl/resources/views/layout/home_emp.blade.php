@@ -137,63 +137,44 @@
 
     </section>
     <!--/col-max-->
+    <hr>
+    <div class="container" id="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <h6>> CDL MANAUS - DJALMA BATISTA</h6>
+                <span>Cond. Amazonas Flat Service, 3000<br>
+                    Loja A, Torre Sul<br>
+                    Av. Djalma Batista  |  Chapada  |  69.050-010<br>
+                    Segunda a Quinta-feira das 08h às 18h<br>
+                    Sexta-feira das 08h às 17h</span>
+            </div>
+            <div class="col-sm-3">
+                <h6>> CDL MANAUS - CENTRO</h6>
+                <span>Rua Rui Barbosa, 156<br>
+                    Centro  |  69.010-220<br>
+                    Segunda a Quinta-feira das 08h às 18h<br>
+                    Sexta-feira das 08h às 17h</span>
+            </div>
+            <div class="col-sm-3">
+                <h6>>
+                    UTV - RAIZ</h6>
+                <span>Rua Delfim de Souza, 125<br>
+                    Raiz  |  69.068-020<br>
+                    Segunda a Quinta-feira das 08h às 18h<br>
+                    Sexta-feira das 08h às 17h</span>
+            </div>
+            <div class="col-sm-3">
+                <h6>> ATENDIMENTO</h6>
+                <span>Dúvidas<br>
+                    + 55 92 3627-2867<br>
+                    + 55 92 3627-2868<br>
+                    suporte@cdlmanaus.org.br</span>
+            </div>
+        </div>
+    </div>
+    <hr>
     <!---- ------>
-    <footer id="footer" style="border-top: .5px solid #DDD; border-width: thin; background: #FFF;">	
-      <article id="footer-container" class="onflex-r" style="background: #FFF;">
-          
-        <aside id="footer-slice">
-          <aside id="feet_text">
-            <h2><i class="demo-icon icon-angle-right"></i> > CDL MANAUS - DJALMA BATISTA</h2>
-            <p>
-              Cond. Amazonas Flat Service, 3000<br>
-              Loja A, Torre Sul<br>Av. Djalma Batista&nbsp;&nbsp;|&nbsp;&nbsp;Chapada&nbsp;&nbsp;|&nbsp;&nbsp;69.050-010<br>
-              Segunda a Quinta-feira das 08h às 18h<br>
-              Sexta-feira das 08h às 17h
-            </p>
-          </aside>
-        </aside><!--/footer-slice-->
-        
-        <aside id="footer-slice">
-          <aside id="feet_text">
-            <h2><i class="demo-icon icon-angle-right"></i> > CDL MANAUS - CENTRO</h2>
-            <p>
-              Rua Rui Barbosa, 156<br>
-              Centro&nbsp;&nbsp;|&nbsp;&nbsp;69.010-220<br>
-              Segunda a Quinta-feira das 08h às 18h<br>
-              Sexta-feira das 08h às 17h
-            </p>
-          </aside>
-        </aside><!--/footer-slice-->		
-        
-        <aside id="footer-slice">
-          <aside id="feet_text">
-            <h2><i class="demo-icon icon-angle-right"></i> > UTV - RAIZ</h2>
-            <p>
-              Rua Delfim de Souza, 125<br>
-              Raiz&nbsp;&nbsp;|&nbsp;&nbsp;69.068-020<br>
-              Segunda a Quinta-feira das 08h às 18h<br>
-              Sexta-feira das 08h às 17h
-            </p>
-          </aside>
-        </aside><!--/footer-slice-->
-        
-        <aside id="footer-slice">
-          <aside id="feet_text">
-            <h2><i class="demo-icon icon-angle-right"></i> > ATENDIMENTO</h2>
-            <p>
-              Dúvidas<br>
-              + 55 92 3627-2867<br>
-              + 55 92 3627-2868<br>
-              suporte@cdlmanaus.org.br
-            </p>
-          </aside>
-        </aside><!--/footer-slice-->
-    
-      </article><!--/REDES-SOCIAIS-->
-    </footer><!--/#main-->
-    
-    
-   
+
   </div>
   <footer style="margin-top: 150px">
     <nav class="navbar fixed-bottom navbar-expand-sm navbar bg" style="background-color: #284D92">
