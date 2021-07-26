@@ -6,13 +6,11 @@
 
     @csrf
     <div class="text-center">
-        <h2 class="form-signin-heading">Alterar Senha</h2>
+        <h2 class="form-signin-heading">RECUPERAR SENHA</h2>
         <hr>
+        <span>Preencha os campos abaixo para cadastrar uma nova senha</span>
     </div>
-    <div class="mb-3">
-        <input type="hidden" name="empresa" value="<?php echo session('empresa'); ?>">
-        <input type="password" class="form-control form-control" name="password" placeholder="Digite senha atual"  />
-    </div>
+
     <div class="mb-3">
         <input type="password" class="form-control form-control" name="newsenha" placeholder="Digite sua nova senha" />
     </div>
