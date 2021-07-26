@@ -7,7 +7,7 @@
 $empresa;
 @endphp
 
-<form method="post" action="/insert/empresa">
+<form method="post" action="/update/empresa/{{$empresa->emp_id}}">
 
     @csrf
 
@@ -25,9 +25,7 @@ $empresa;
             </div>
             <hr>
         </div>
-        <input type="hidden" name="id" value="{{$empresa->emp_id}}">
-
-
+        
         <div class="pessoais">
 
             <div class="row">
@@ -231,7 +229,7 @@ $empresa;
         </div>
         <hr>
         <div class="text-end">
-            <input type="submit" class="btn btn-primary" value="Salvar Registros">
+            <input type="submit" class="btn btn-primary" value="Atualizar Registros">
         </div>
         <span> Campos Obrigatórios <strong>*</strong></span>
     </div>
