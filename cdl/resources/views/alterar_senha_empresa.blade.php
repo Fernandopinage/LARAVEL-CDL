@@ -2,14 +2,14 @@
 
 @section('alterar_senha')
 
-<form class="form-signin" method="POST" action="/update/senha/empresa">
+<form class="form-signin" method="post" action="{{('/modificar/senha/empresa')}}">
 
-    @csrf
     <div class="text-center">
         <h2 class="form-signin-heading">RECUPERAR SENHA</h2>
         <hr>
         <span>Preencha os campos abaixo para cadastrar uma nova senha</span>
     </div>
+    @csrf
     <div class="mb-3">
         <label for="formGroupExampleInput" class="form-label">*Nova senha</label>
         <input type="password" class="form-control form-control" name="newsenha" placeholder="Digite sua nova senha" />

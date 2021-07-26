@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\indexController; // necessario instancia 
 use App\Http\Controllers\utvController;
 use App\Http\Controllers\VagasController;
-
+use App\Models\Empresa;
 use RealRashid\SweetAlert\Facades\Alert; // sweetAlert
 /*
 |--------------------------------------------------------------------------
@@ -50,7 +50,11 @@ Route::get('login/empresa',[EmpresaController::class,'index'])->name('login/empr
     Route::get('/edita/empresa',[EmpresaController::class,'editaEmpresa']);  //tela de update de empresa
 
     Route::get('redefinir/empresa',[EmpresaController::class,'redefinirSenha']); // chamando tela de redefinir senha
+    Route::post('/senha',function(){
+        echo "ok";
+    }); //[EmpresaController::class,'redefinir']
     Route::get('/alterar/senha/empresa',[EmpresaController::class,'alterarSenha']); // redefinir senha da empresa
+    Route::post('/modificar/senha/empresa',[EmpresaController::class,'modificarSenha']); // alterando senha da empresa
     Route::POST('/update/senha/empresa',[EmpresaController::class,'updateSenha']);   // Update Senha 
     Route::get('filtra/candidato/empresa',[EmpresaController::class,'filtroEmpresa']); // chamando tela de filtro candidato
     Route::get('anucio/empresa',[EmpresaController::class,'anuciarVagas']); // chamndo tela de anucio

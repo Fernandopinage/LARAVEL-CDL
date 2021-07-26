@@ -2,7 +2,7 @@
 
 @section('cadastro')
 
-<form method="post" action="{{('/insert/empresa')}}" >
+<form method="post" action={{('/insert/empresa')}} >
 
     @csrf
 
@@ -60,15 +60,15 @@
                     <input type="text" class="form-control form-control-sm" name="tecnico" placeholder="">
                 </div>
                 <div class="col-md-4">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Email do Técnico </label>
+                    <label class="form-check-label" for="flexCheckIndeterminate">Email do Técnico <span><strong>*</strong></span></label>
                     <input type="text" class="form-control form-control-sm" name="emailtecnico" placeholder="EXEMPLO@EMAIL.COM">
                 </div>
                 <div class="col-md-4">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Função/Cargo </label>
+                    <label class="form-check-label" for="flexCheckIndeterminate">Função/Cargo<span><strong>*</strong></span> </label>
                     <input type="text" class="form-control form-control-sm" name="funcao" placeholder="">
                 </div>
                 <div class="col-md-3">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Setor/Departamento </label>
+                    <label class="form-check-label" for="flexCheckIndeterminate">Setor/Departamento <span><strong>*</strong></span></label>
                     <input type="text" class="form-control form-control-sm" name="setor" placeholder="">
                 </div>
 

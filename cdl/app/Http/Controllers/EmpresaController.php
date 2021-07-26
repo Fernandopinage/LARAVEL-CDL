@@ -76,7 +76,9 @@ class EmpresaController extends Controller
                     'ramo'=>'required',
                     'email' => 'required',
                     'cep'=>'required',
-                    'termo'=>'required'
+                    'termo'=>'required',
+                    'funcao'=>'required',
+                    'setor'=>'required'
                 ]);
 
                 $vowels = array("(", ")", "-", " ");
@@ -163,9 +165,38 @@ class EmpresaController extends Controller
         return view('redefinir_empresa');
     }
 
+    public function redefinir(){
+
+        
+    }
+
     public function alterarSenha(){                             //  view alterar Senha
 
         return view('alterar_senha_empresa');                       
+    }
+
+    public function modificarSenha(request $request){
+
+        $this->validate($request,[
+
+            'newsenha'=>'required',
+            'confsenha'=>'required'
+        ]);
+
+        //dd($request);
+
+echo $request->newsenha."<br>";
+echo $request->confsenha."<br>";
+
+        
+        if($request->newsenha === $request->confsenha){
+          
+            return redirect('add/empresa')->with('mensagem', 'Sua senha foi alterado com sucesso!');
+
+        }else{
+            return redirect('/alterar/senha/empresa')->with('mensagem', 'Senhas estão erradas');
+        }
+        
     }
 
     public function updateSenha(Request $request){              //  Update Senha 

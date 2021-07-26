@@ -86,6 +86,43 @@
       </nav>
     </footer>
 </body>
+
+
+@if(session('mensagem'))
+<script>
+  Swal.fire({
+  position: 'center',
+  icon: 'success',
+  title: 'Registro cadastrado com sucesso!',
+  showConfirmButton: false,
+  timer: 1500
+})
+</script>
+@endif
+
+
+@if(session('mensagem'))
+<script>
+Swal.fire({
+  position: 'center',
+  icon: 'error',
+  title: 'Senha invalidas',
+  showConfirmButton: false,
+  timer: 1500
+})
+</script>
+@endif
+
+<!-- Mesagem de validação de campos  -->
+
+@if ($errors->any())
+<script>
+Swal.fire({  position: 'center',  icon: 'warning',  title: 'Preencher todos os campos',  showConfirmButton: false,  timer: 1500  })
+</script>
+@endif
+
+
+
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
 <!-- Adicionando Javascript -->
