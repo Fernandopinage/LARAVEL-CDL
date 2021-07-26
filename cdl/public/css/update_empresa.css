@@ -21,9 +21,15 @@
       border-radius: 17px;
     
     }
-  
-  
-  
+
+    .btn {
+      color: #fff;
+      background-color: #0d6efd;
+  }
+  .btn:hover {
+      color: #fff;
+      background-color: #0653c7;
+  }
     a:link{
       
       color: #523617;
