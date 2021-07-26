@@ -2,6 +2,11 @@
 
 @section('updade_empresa')
 
+
+@php
+$empresa;
+@endphp
+
 <form method="post" action="/insert/empresa">
 
     @csrf
@@ -20,6 +25,7 @@
             </div>
             <hr>
         </div>
+        <input type="hidden" name="id" value="{{$empresa->emp_id}}">
 
 
         <div class="pessoais">
@@ -46,73 +52,68 @@
 
                 <div class="col-md-4">
                     <label class="form-check-label" for="flexCheckIndeterminate">Nome Fantasia </label>
-                    <input type="text" name="fantasia" class="form-control form-control-sm" placeholder="">
+                    <input type="text" name="fantasia" value="{{$empresa->emp_fantasia}}" class="form-control form-control-sm" placeholder="">
                 </div>
 
                 <div class="col-md-4">
                     <label class="form-check-label" for="flexCheckIndeterminate">Razão Social
                         <span><strong>*</strong></span></label>
-                    <input type="text" name="razao" class="form-control form-control-sm" placeholder="">
+                    <input type="text" name="razao" value="{{$empresa->emp_razao}}" class="form-control form-control-sm" placeholder="">
                 </div>
 
                 <div class="col-md-4">
                     <label class="form-check-label" for="flexCheckIndeterminate">Logo Empresa</label>
-                    <input class="form-control form-control-sm" name="logo" type="file" id="formFile">
+                    <input class="form-control form-control-sm" value="{{$empresa->logo}}" name="logo" type="file" id="formFile">
                 </div>
 
                 <div class="col-md-3">
                     <label class="form-check-label" for="flexCheckIndeterminate">CNPJ
                         <span><strong>*</strong></span></label>
-                    <input type="text" class="form-control form-control-sm"
+                    <input type="text" class="form-control form-control-sm" value="{{$empresa->emp_cnpj}}"
                         onfocus="javascript: retirarFormatacao(this);" onblur="javascript: formatarCampo(this);"
                         name="cnpj" id="cnpj" placeholder="99.999.999/9999-99">
                 </div>
                 <div class="col-md-5">
                     <label class="form-check-label" for="flexCheckIndeterminate">Email da empresa
                         <span><strong>*</strong></span></label>
-                    <input type="text" class="form-control form-control-sm" name="email" placeholder="">
+                    <input type="text" class="form-control form-control-sm" value="{{$empresa->emp_email}}" name="email" placeholder="">
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-4">
                     <label class="form-check-label" for="flexCheckIndeterminate">Senha
                         <span><strong>*</strong></span></label>
-                    <input type="password" class="form-control form-control-sm" name="senha" placeholder="">
-                </div>
-                <div class="col-md-2">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Confirmar Senha
-                        <span><strong>*</strong></span></label>
-                    <input type="password" class="form-control form-control-sm" name="confirmar" placeholder="">
+                    <input type="password" class="form-control form-control-sm" name="senha" value="{{$empresa->emp_senha}}" placeholder="">
                 </div>
                 <div class="col-md-4">
                     <label class="form-check-label" for="flexCheckIndeterminate">Nome do Técnico </label>
-                    <input type="text" class="form-control form-control-sm" name="tecnico" placeholder="">
+                    <input type="text" class="form-control form-control-sm" name="tecnico" value="{{$empresa->emp_nome_contato}}" placeholder="">
                 </div>
                 <div class="col-md-4">
                     <label class="form-check-label" for="flexCheckIndeterminate">Email do Técnico </label>
-                    <input type="text" class="form-control form-control-sm" name="emailtecnico"
+                    <input type="text" class="form-control form-control-sm" name="emailtecnico" value="{{$empresa->emp_email_contato}}"
                         placeholder="EXEMPLO@EMAIL.COM">
                 </div>
                 <div class="col-md-4">
                     <label class="form-check-label" for="flexCheckIndeterminate">Função/Cargo </label>
-                    <input type="text" class="form-control form-control-sm" name="funcao" placeholder="">
+                    <input type="text" class="form-control form-control-sm" name="funcao" value="{{$empresa->emp_funcao}}" placeholder="">
                 </div>
                 <div class="col-md-3">
                     <label class="form-check-label" for="flexCheckIndeterminate">Setor/Departamento </label>
-                    <input type="text" class="form-control form-control-sm" name="setor" placeholder="">
+                    <input type="text" class="form-control form-control-sm" name="setor" value="{{$empresa->emp_setor}}" placeholder="">
                 </div>
 
                 <div class="col-md-3">
                     <label class="form-check-label" for="flexCheckIndeterminate">Ramo de Atividade
                         <span><strong>*</strong></span></label>
-                    <input type="text" class="form-control form-control-sm" name="ramo" placeholder="">
+                    <input type="text" class="form-control form-control-sm" name="ramo" value="{{$empresa->emp_atividade}}" placeholder="">
                 </div>
                 <div class="col-md-3">
                     <label class="form-check-label" for="flexCheckIndeterminate">Telefone</label>
-                    <input type="tel" class="form-control form-control-sm" name="telefone" placeholder="(99) 99999-9999"
+                    <input type="tel" class="form-control form-control-sm" name="telefone" value="{{$empresa->emp_telefone}}" placeholder="(99) 99999-9999"
                         onkeypress="mask(this, mphone);" onblur="mask(this, mphone);" />
                 </div>
                 <div class="col-md-3">
                     <label class="form-check-label" for="flexCheckIndeterminate">Telefone</label>
-                    <input type="tel" class="form-control form-control-sm" name="telefone2"
+                    <input type="tel" class="form-control form-control-sm" name="telefone2" value="{{$empresa->emp_celular}}"
                         placeholder="(99) 99999-9999" onkeypress="mask(this, mphone);" onblur="mask(this, mphone);" />
                 </div>
             </div>
@@ -141,30 +142,30 @@
                 <div class="col-md-2">
                     <label class="form-check-label" for="flexCheckIndeterminate">CEP
                         <span><strong>*</strong></span></label>
-                    <input type="text" class="form-control form-control-sm" name="cep" id="cep" placeholder="">
+                    <input type="text" class="form-control form-control-sm" name="cep" value="{{$empresa->emp_cep}}" id="cep" placeholder="">
                 </div>
                 <div class="col-md-1">
                     <label class="form-check-label" for="flexCheckIndeterminate">UF
                         <span><strong>*</strong></span></label>
-                    <input type="text" class="form-control form-control-sm" name="uf" id="uf" placeholder="">
+                    <input type="text" class="form-control form-control-sm" name="uf" value="{{$empresa->emp_uf}}" id="uf" placeholder="">
                 </div>
                 <div class="col-md-2">
                     <label class="form-check-label" for="flexCheckIndeterminate">Cidade
                         <span><strong>*</strong></span></label>
-                    <input type="text" class="form-control form-control-sm" name="cidade" id="cidade" placeholder="">
+                    <input type="text" class="form-control form-control-sm" name="cidade" value="{{$empresa->emp_cidade}}" id="cidade" placeholder="">
                 </div>
                 <div class="col-md-7">
                     <label class="form-check-label" for="flexCheckIndeterminate">Bairro
                         <span><strong>*</strong></span></label>
-                    <input type="text" class="form-control form-control-sm" name="bairro" id="bairro" placeholder="">
+                    <input type="text" class="form-control form-control-sm" name="bairro" id="bairro" value="{{$empresa->emp_bairro}}" placeholder="">
                 </div>
                 <div class="col-md-2">
                     <label class="form-check-label" for="flexCheckIndeterminate">Nº</label>
-                    <input type="text" class="form-control form-control-sm" name="numero" id="numero" placeholder="">
+                    <input type="text" class="form-control form-control-sm" name="numero" id="numero" value="{{$empresa->emp_numero}}" placeholder="">
                 </div>
                 <div class="col-md-10">
                     <label class="form-check-label" for="flexCheckIndeterminate">Complemento</label>
-                    <input type="text" class="form-control form-control-sm" name="rua" id="rua" placeholder="">
+                    <input type="text" class="form-control form-control-sm" name="rua" id="rua" value="{{$empresa->emp_rua}}" placeholder="">
                 </div>
             </div>
 
@@ -198,7 +199,7 @@
                 </div>
                 <div class="col-md-4" id="divcod">
                     <label class="form-check-label" for="flexCheckIndeterminate">Preenchar com o códiogo</label>
-                    <input type="text" class="form-control form-control-sm" name="cod" id="cod" placeholder="">
+                    <input type="text" class="form-control form-control-sm" name="cod" value="{{$empresa->emp_cod_assoc}}" id="cod" placeholder="">
                 </div>
                 <div class="col-md-6">
                 </div>
@@ -223,7 +224,7 @@
                     <label class="form-check-label" for="flexCheckIndeterminate">Termo de política
                         <span><strong>*</strong></span></label>
                     <div class="form-check">
-                        <input class="form-check-inpu" type="checkbox" value="S" name="termo" id="">
+                        <input class="form-check-inpu" type="checkbox" value="S" name="termo" id="" value="{{$empresa->emp_termo}}">
                     </div>
                 </div>
             </div>

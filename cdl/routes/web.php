@@ -46,7 +46,9 @@ Route::get('login/empresa',[EmpresaController::class,'index'])->name('login/empr
     Route::post('/validar/empresa',[EmpresaController::class,'validarLogin']); // tela de login da empresa 
     Route::get('add/empresa',[EmpresaController::class,'formularioEmpresa']); // tela de formulario cadastro de empresa
     Route::post('/insert/empresa',[EmpresaController::class, 'store']); // submetendo formulario de empresa cadastro
-    Route::get('/edita/empresa',[EmpresaController::class,'editaEmpresa']);  //tela de update de empresa
+    
+    Route::get('/edita/empresa/{id}',[EmpresaController::class,'editaEmpresa']);  //tela de update de empresa
+
     Route::get('redefinir/empresa',[EmpresaController::class,'redefinirSenha']); // chamando tela de redefinir senha
     Route::post('/redefinir/senha/empresa',[EmpresaController::class,'redefinir']); // redefinir senha
     Route::get('/alterar/senha/empresa',[EmpresaController::class,'alterarSenha']); // redefinir senha da empresa

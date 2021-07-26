@@ -29,6 +29,9 @@ class EmpresaController extends Controller
         if (!empty($empresa)) {                                               //  caso tenha valor dentro da variavel empresa
 
             if (Hash::check($request->password, $empresa->emp_senha)) {     //  decodificando senha hash 
+
+                $id = $empresa['emp_id'];
+                $request->session()->put('empresa_id', $id);
                 $request->session()->put('empresa', $request->email);
                 return redirect('home/empresa');                                  // redirecinanmento se estiver tudo certo
 
@@ -140,13 +143,12 @@ class EmpresaController extends Controller
     {
     }
 
-    public function editaEmpresa()
-    {                             //  edita empresa
-
-
-        return view('update_empresa');
-        //echo session('empresa');
-
+    public function editaEmpresa($id) //  edita empresa
+    {                             
+        
+        $empresa = Empresa::find($id);
+        return view('update_empresa',compact('empresa'));
+        
     }
 
     public function destroy($id)                                // "deletar" registro ou ocultar
@@ -169,7 +171,7 @@ class EmpresaController extends Controller
     public function redefinir(Request $Request)
     {
 
-            
+        
     }
 
     public function alterarSenha()
