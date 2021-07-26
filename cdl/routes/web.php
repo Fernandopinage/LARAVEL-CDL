@@ -57,6 +57,7 @@ Route::get('login/empresa',[EmpresaController::class,'index'])->name('login/empr
     Route::get('anucio/empresa',[EmpresaController::class,'anuciarVagas']); // chamndo tela de anucio
     Route::post('/filtra/candidato/empresa',[EmpresaController::class,'filtrarCandidato']); // filtrando candidato 
     Route::post('/anucie/vaga/empresa',[VagasController::class,'anucieVagas']); // anucio de vaga
+    
 //});
 
 Route::get('login/acesso',[acessoController::class,'index']);   // tela de acesso area administrativa
