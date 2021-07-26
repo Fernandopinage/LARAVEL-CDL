@@ -10,6 +10,7 @@
         <hr>
     </div>
     <div class="mb-3">
+        <label for="formGroupExampleInput" class="form-label">E-mail</label>
         <input type="mail" class="form-control form-control" name="email" placeholder="E-mail" required=""
             autofocus="" />
     </div>

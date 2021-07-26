@@ -10,15 +10,16 @@
         <hr>
         <span>Preencha os campos abaixo para cadastrar uma nova senha</span>
     </div>
-
     <div class="mb-3">
+        <label for="formGroupExampleInput" class="form-label">*Nova senha</label>
         <input type="password" class="form-control form-control" name="newsenha" placeholder="Digite sua nova senha" />
     </div>
     <div class="mb-3">
+        <label for="formGroupExampleInput" class="form-label">*Confirmar nova senha</label>
         <input type="password" class="form-control form-control" name="confsenha" placeholder="Digite confirme sua senha"  />
     </div>
     <div class="d-grid gap-2">
-        <input type="submit" class="btn-primary btn-lg" name="alterarsenha" value="Entrar">
+        <input type="submit" class="btn-primary btn-lg" name="alterarsenha" value="Alterar Senha">
     </div>
 
 </form>
