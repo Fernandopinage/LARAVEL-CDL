@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link href="/css/alterar_senha.css" rel="stylesheet">
     <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
-    
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <title>CDL</title>
 </head>
 <body>
@@ -88,6 +88,7 @@
 </body>
 
 
+<!-- Mensagem de cadastro com sucesso -->
 @if(session('mensagem'))
 <script>
   Swal.fire({
@@ -101,12 +102,12 @@
 @endif
 
 
-@if(session('mensagem'))
+@if(session('diferente'))
 <script>
-Swal.fire({
+  Swal.fire({
   position: 'center',
   icon: 'error',
-  title: 'Senha invalidas',
+  title: 'Senha incorretas',
   showConfirmButton: false,
   timer: 1500
 })
@@ -121,6 +122,7 @@ Swal.fire({
 </script>
 @endif
 
+<!-- *****************************  -->
 
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>

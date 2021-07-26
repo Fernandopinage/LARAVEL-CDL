@@ -11,6 +11,7 @@
     </div>
     @csrf
     <div class="mb-3">
+        <input type="text" name="email" value="<?php echo session('empresa') ?>" >
         <label for="formGroupExampleInput" class="form-label">*Nova senha</label>
         <input type="password" class="form-control form-control" name="newsenha" placeholder="Digite sua nova senha" />
     </div>

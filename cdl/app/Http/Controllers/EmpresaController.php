@@ -12,35 +12,34 @@ use Session;
 
 class EmpresaController extends Controller
 {
-    
 
-        
+
+
     public function validarLogin(Request $request)
     {
-      
+
 
         $request->validate([
             'email' => 'required',     //request de email do formulario 
             'password' => 'required',  //request de senha do formulario 
         ]);
-   
-        $empresa =  Empresa::where('emp_email',$request->email)->first();       // selecionando o usuario 
-        
-            if(!empty($empresa)){                                               //  caso tenha valor dentro da variavel empresa
 
-                if (Hash::check($request->password, $empresa->emp_senha)) {     //  decodificando senha hash 
-                    $request->session()->put('empresa',$request->email);
-                    return redirect('home/empresa');                                  // redirecinanmento se estiver tudo certo
+        $empresa =  Empresa::where('emp_email', $request->email)->first();       // selecionando o usuario 
 
-                    
-                }else{
-                    return redirect('/login/empresa')->with('mensagem', 'Email ou Senha incorretos!'); // redirecinamento caso senha nao seja valida
-                }
-            }else{
+        if (!empty($empresa)) {                                               //  caso tenha valor dentro da variavel empresa
 
-                return redirect('/login/empresa')->with('mensagem', 'Email ou Senha incorretos!');   // caso não existe o email
+            if (Hash::check($request->password, $empresa->emp_senha)) {     //  decodificando senha hash 
+                $request->session()->put('empresa', $request->email);
+                return redirect('home/empresa');                                  // redirecinanmento se estiver tudo certo
+
+
+            } else {
+                return redirect('/login/empresa')->with('mensagem', 'Email ou Senha incorretos!'); // redirecinamento caso senha nao seja valida
             }
-           
+        } else {
+
+            return redirect('/login/empresa')->with('mensagem', 'Email ou Senha incorretos!');   // caso não existe o email
+        }
     }
 
     public function index()
@@ -48,44 +47,46 @@ class EmpresaController extends Controller
         return view('empresa');
     }
 
-    public function home(){
+    public function home()
+    {
 
         return view('home_emp');
     }
-    public function formularioEmpresa(){
+    public function formularioEmpresa()
+    {
 
         return view('add_empresa');
     }
 
-   
+
     public function create()
     {
         //
     }
 
-   
+
     public function store(Request $request)
     {
-        
-        
-                // validando campos obrigatorios caso um dos campos esteja em banco nao inserir no banco de dados 
-                $this->validate($request,[
-
-                    'razao'=>'required',
-                    'cnpj'=>'required',
-                    'ramo'=>'required',
-                    'email' => 'required',
-                    'cep'=>'required',
-                    'termo'=>'required',
-                    'funcao'=>'required',
-                    'setor'=>'required'
-                ]);
-
-                $vowels = array("(", ")", "-", " ");
 
 
-                // Verificando se os campos de senhas são iguais     
-        if($request->senha === $request->confirmar){
+        // validando campos obrigatorios caso um dos campos esteja em banco nao inserir no banco de dados 
+        $this->validate($request, [
+
+            'razao' => 'required',
+            'cnpj' => 'required',
+            'ramo' => 'required',
+            'email' => 'required',
+            'cep' => 'required',
+            'termo' => 'required',
+            'funcao' => 'required',
+            'setor' => 'required'
+        ]);
+
+        $vowels = array("(", ")", "-", " ");
+
+
+        // Verificando se os campos de senhas são iguais     
+        if ($request->senha === $request->confirmar) {
 
             $empresa = new Empresa();
             $empresa->emp_logo = $request->logo;
@@ -113,22 +114,20 @@ class EmpresaController extends Controller
             $empresa->emp_setor = $request->setor;
 
             $empresa->save();
-        
+
             //return View('add_empresa')->with('success','teste');
             return redirect('add/empresa')->with('mensagem', 'Produto cadastrado com sucesso!');
-            
-        }else{
+        } else {
             return redirect('add/empresa');
-        }   
+        }
     }
 
-  
+
     public function show($id)
     {
-        
     }
 
-    
+
     public function edit($id)
     {
         //
@@ -136,101 +135,107 @@ class EmpresaController extends Controller
 
 
 
-    
+
     public function update(Request $request, $id)
     {
-      
     }
 
-    public function editaEmpresa(){                             //  edita empresa
+    public function editaEmpresa()
+    {                             //  edita empresa
 
-       
+
         return view('update_empresa');
         //echo session('empresa');
 
     }
-   
+
     public function destroy($id)                                // "deletar" registro ou ocultar
     {
         //
     }
 
-    public function anuciarVagas(){                             //  chamndo tela de anucio
+    public function anuciarVagas()
+    {                             //  chamndo tela de anucio
 
         return view('anucie_empresa');
     }
 
-    public function redefinirSenha(){                           //  redefinir senha da empresa
+    public function redefinirSenha()
+    {                           //  redefinir senha da empresa
 
         return view('redefinir_empresa');
     }
 
-    public function redefinir(){
-
-        
+    public function redefinir()
+    {
     }
 
-    public function alterarSenha(){                             //  view alterar Senha
+    public function alterarSenha()
+    {                             //  view alterar Senha
 
-        return view('alterar_senha_empresa');                       
+        return view('alterar_senha_empresa');
     }
 
-    public function modificarSenha(request $request){
+    public function modificarSenha(request $request)
+    {
 
-        $this->validate($request,[
+        $this->validate($request, [
 
-            'newsenha'=>'required',
-            'confsenha'=>'required'
+            'newsenha' => 'required',
+            'confsenha' => 'required'
         ]);
+        $empresa =  Empresa::where('emp_email', $request->email)->first(); // select empresa vindo de uma session hidder input
 
-        //dd($request);
+       $id = $empresa['emp_id'];
 
-echo $request->newsenha."<br>";
-echo $request->confsenha."<br>";
+        if ($request->newsenha === $request->confsenha) {
 
-        
-        if($request->newsenha === $request->confsenha){
-          
-            return redirect('add/empresa')->with('mensagem', 'Sua senha foi alterado com sucesso!');
+            $empresa = Empresa:: find($id);
+            $empresa->emp_senha = Hash::make($request->confsenha);
+            $empresa->save();
+            return redirect('home/empresa')->with('mensagem', 'Sua senha foi alterado com sucesso!');
+        } elseif ($request->newsenha != $request->confsenha) {
 
-        }else{
+            return redirect('/alterar/senha/empresa')->with('diferente', 'Senha incorretas');
+        } else {
             return redirect('/alterar/senha/empresa')->with('mensagem', 'Senhas estão erradas');
         }
-        
     }
 
-    public function updateSenha(Request $request){              //  Update Senha 
+    public function updateSenha(Request $request)
+    {              //  Update Senha 
 
-        $this->validate($request,[
+        $this->validate($request, [
 
-            'password'=>'required',
-            'newsenha'=>'required',
-            'confsenha'=>'required',
-            
+            'password' => 'required',
+            'newsenha' => 'required',
+            'confsenha' => 'required',
+
         ]);
 
-      $empresa =  Empresa::where('emp_email',$request->empresa)->first(); // select empresa vindo de uma session hidder input
-      $id =  Empresa::where('emp_email',$request->empresa)->value('emp_id'); // ID 
-      
-       
-      if(!empty($empresa)){
+        $empresa =  Empresa::where('emp_email', $request->empresa)->first(); // select empresa vindo de uma session hidder input
+        $id =  Empresa::where('emp_email', $request->empresa)->value('emp_id'); // ID 
 
-        $empresa = Empresa::find($id);
 
-        $empresa->emp_senha = Hash::make($request->newsenha);
-        $empresa->save(); 
-        return redirect('home/empresa'); 
-       }
-                              
+        if (!empty($empresa)) {
+
+            $empresa = Empresa::find($id);
+
+            $empresa->emp_senha = Hash::make($request->newsenha);
+            $empresa->save();
+            return redirect('home/empresa');
+        }
     }
 
-    public function filtroEmpresa(){                            // chamando tela de filtro candidato
+    public function filtroEmpresa()
+    {                            // chamando tela de filtro candidato
 
         return view('candidato_empresa');
     }
 
-    public function filtrarCandidato(Request $request){         //  filtrando candidato na base de dados
+    public function filtrarCandidato(Request $request)
+    {         //  filtrando candidato na base de dados
 
-        
+
     }
 }
