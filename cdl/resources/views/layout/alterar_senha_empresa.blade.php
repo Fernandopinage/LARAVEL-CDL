@@ -117,7 +117,7 @@ Swal.fire({
 
 @if ($errors->any())
 <script>
-Swal.fire({  position: 'center',  icon: 'warning',  title: 'Preencher todos os campos',  showConfirmButton: false,  timer: 1500  })
+  Swal.fire({  position: 'center',  icon: 'warning',  title: 'Preencha os campos obrigatório',  showConfirmButton: false,  timer: 1500  })
 </script>
 @endif
 

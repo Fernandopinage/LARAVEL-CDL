@@ -5,7 +5,7 @@
 <form class="form-signin" method="post" action="{{('/modificar/senha/empresa')}}">
 
     <div class="text-center">
-        <h2 class="form-signin-heading">RECUPERAR SENHA</h2>
+        <h2 class="form-signin-heading">ALTERAR SENHA</h2>
         <hr>
         <span>Preencha os campos abaixo para cadastrar uma nova senha</span>
     </div>
