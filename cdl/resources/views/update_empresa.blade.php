@@ -27,10 +27,10 @@ $empresa;
         </div>
         <div class="text-end">
             <!-- checked -->
-            <h6 class="form-signin-heading" >
+            <label for="floatingInput">
                 <input class="form-check-input mt-0" type="checkbox" name="desativar" id="desativar" value="">
                <span id="des_empresa"> DESATIVAR EMPRESA <span>
-            </h6>
+            </label>
         </div>
 
         <div class="pessoais">
