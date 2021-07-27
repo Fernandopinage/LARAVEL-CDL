@@ -225,6 +225,34 @@ Swal.fire({  position: 'center',  icon: 'warning',  title: 'Preencha os campos o
 
 </script>
 
+<script>
+
+  $(document).ready(function(){
+
+    document.getElementById('des_empresa').style.color = 'red'
+    
+    $('#desativar').change(function(){
+
+      if($("#desativar:checked").val() == undefined){
+          document.getElementById('desativar').value ='N';
+          document.getElementById('des_empresa').style.color = 'red'
+          document.getElementById('des_empresa').innerHTML="DESATIVAR EMPRESA";
+          
+      }else{
+        $("#desativar").prop('checked', true);
+        document.getElementById('desativar').value ='S';
+          document.getElementById('des_empresa').style.color = 'green';
+          document.getElementById('des_empresa').innerHTML="ATIVAR EMPRESA";
+      }
+
+
+  });
+
+  
+
+  });
+</script>
+
    <!-- jquery -->
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
    <!-- ***** -->

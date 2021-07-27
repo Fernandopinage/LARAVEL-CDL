@@ -140,7 +140,13 @@ class EmpresaController extends Controller
 
     public function update(Request $request, $id)
     {
+
         $empresa = Empresa::find($id);
+        echo "<pre>";
+        var_dump($empresa);
+        echo "</pre>";
+
+        /*
         $empresa->emp_logo = $request->logo;
         $empresa->emp_fantasia = $request->fantasia;
         $empresa->emp_email = $request->email;
@@ -164,9 +170,12 @@ class EmpresaController extends Controller
         $empresa->emp_status = $request->status;
         $empresa->emp_funcao = $request->funcao;
         $empresa->emp_setor = $request->setor;
-        $empresa->emp_desativar = 'N';
+        $empresa->emp_desativar = $request->desativar;
         $empresa->save();
+
+
         return redirect('home/empresa')->with('mensagem', 'Produto cadastrado com sucesso!');
+        */
     }
 
     public function editaEmpresa($id) //  edita empresa
