@@ -19,7 +19,7 @@
         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <ul class="navbar-nav">
           <li class="nav-item">
             <a class="nav-link" href="/anucio/empresa">Anúncio de vaga </a>
@@ -33,7 +33,7 @@
               Opções
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="/edita/empresa/{{session('empresa')}}">Editar Empresa</a></li>
+              <li><a class="dropdown-item" href="/edita/empresa/{{session('empresa_id')}}">Editar Empresa</a></li>
               <li><a class="dropdown-item" href="/alterar/senha/empresa">Redefinir Senha</a></li>
               <li>
                 <hr class="dropdown-divider">
@@ -42,8 +42,9 @@
             </ul>
           </li>
         </ul>
+
       </div>
-      <ul class="nav justify-content-end navbar-light bg-light">
+      <ul class="nav justify-content-end">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#"><img src="/icons/facebook.png"></a>
         </li>
@@ -53,9 +54,10 @@
         <li class="nav-item">
           <a class="nav-link" href="#"><img src="/icons/youtube.png"></a>
         </li>
-    
+
       </ul>
     </div>
+
   </nav>
   
   <div id="menu">
