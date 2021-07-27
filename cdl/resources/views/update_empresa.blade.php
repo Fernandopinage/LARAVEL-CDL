@@ -91,7 +91,7 @@ $empresa;
                     <label class="form-check-label" for="flexCheckIndeterminate">Senha
                         <span><strong>*</strong></span></label>
                     <input type="password" class="form-control form-control-sm" name="senha"
-                        value="{{$empresa->emp_senha}}" placeholder="">
+                        value="{{Hash::make($empresa->emp_senha)}}" placeholder="">
                 </div>
                 <div class="col-md-4">
                     <label class="form-check-label" for="flexCheckIndeterminate">Nome do Técnico </label>

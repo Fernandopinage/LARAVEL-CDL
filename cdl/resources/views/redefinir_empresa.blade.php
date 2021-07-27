@@ -2,7 +2,7 @@
 
 @section('redefinir')
 
-<form class="form-signin" method="POST" action="{{('/redefinir/senha/empresa')}}">
+<form class="form-signin" method="POST" action="/redefinir/senha/empresa">
 
     @csrf
     <div class="text-center">
@@ -11,8 +11,7 @@
     </div>
     <div class="mb-3">
         <label for="formGroupExampleInput" class="form-label">E-mail</label>
-        <input type="mail" class="form-control form-control" name="email" placeholder="E-mail" required=""
-            autofocus="" />
+        <input type="mail" class="form-control form-control" name="email" placeholder="email" required="" autofocus="" />
     </div>
     <div class="d-grid gap-2">
         <input type="submit" class="btn-primary btn-lg" name="loginentrar" value="Entrar">

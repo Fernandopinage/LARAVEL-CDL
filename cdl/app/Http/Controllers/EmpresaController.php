@@ -141,6 +141,19 @@ class EmpresaController extends Controller
     public function update(Request $request, $id)
     {
 
+
+        $this->validate($request, [
+
+            'razao' => 'required',
+            'cnpj' => 'required',
+            'ramo' => 'required',
+            'email' => 'required',
+            'cep' => 'required',
+            'termo' => 'required',
+            'funcao' => 'required',
+            'setor' => 'required'
+        ]);
+
         $empresa = Empresa::find($id);    
         $empresa->emp_logo = $request->logo;
         $empresa->emp_fantasia = $request->fantasia;
@@ -199,6 +212,10 @@ class EmpresaController extends Controller
 
     public function redefinir(Request $Request)
     {
+
+            echo $Request->email; // email enviado pelo formulario 
+
+            
     }
 
     public function alterarSenha()
