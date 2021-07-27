@@ -115,7 +115,7 @@ class EmpresaController extends Controller
             $empresa->emp_status = $request->status;
             $empresa->emp_funcao = $request->funcao;
             $empresa->emp_setor = $request->setor;
-
+            $empresa->emp_desativar = 'N';
             $empresa->save();
 
             //return View('add_empresa')->with('success','teste');
@@ -164,7 +164,7 @@ class EmpresaController extends Controller
         $empresa->emp_status = $request->status;
         $empresa->emp_funcao = $request->funcao;
         $empresa->emp_setor = $request->setor;
-
+        $empresa->emp_desativar = 'N';
         $empresa->save();
         return redirect('home/empresa')->with('mensagem', 'Produto cadastrado com sucesso!');
     }

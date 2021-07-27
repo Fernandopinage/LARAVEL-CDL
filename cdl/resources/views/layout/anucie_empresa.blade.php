@@ -53,11 +53,10 @@
         <li class="nav-item">
           <a class="nav-link" href="#"><img src="/icons/youtube.png"></a>
         </li>
-    
+
       </ul>
     </div>
   </nav>
-  
   <div id="menu">
 
   </div>
