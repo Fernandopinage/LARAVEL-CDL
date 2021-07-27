@@ -141,12 +141,7 @@ class EmpresaController extends Controller
     public function update(Request $request, $id)
     {
 
-        $empresa = Empresa::find($id);
-        echo "<pre>";
-        var_dump($empresa);
-        echo "</pre>";
-
-        /*
+        $empresa = Empresa::find($id);    
         $empresa->emp_logo = $request->logo;
         $empresa->emp_fantasia = $request->fantasia;
         $empresa->emp_email = $request->email;
@@ -175,7 +170,7 @@ class EmpresaController extends Controller
 
 
         return redirect('home/empresa')->with('mensagem', 'Produto cadastrado com sucesso!');
-        */
+        
     }
 
     public function editaEmpresa($id) //  edita empresa
@@ -273,5 +268,11 @@ class EmpresaController extends Controller
     {         //  filtrando candidato na base de dados
 
 
+    }
+
+    public function logout(Request $request){
+
+        $request->session()->pull('empresa');
+        return redirect('login/empresa');
     }
 }

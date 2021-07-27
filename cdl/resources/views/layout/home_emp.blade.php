@@ -40,7 +40,7 @@
               <li>
                 <hr class="dropdown-divider">
               </li>
-              <li><a class="dropdown-item" href="#">Logout</a></li>
+              <li><a class="dropdown-item" href="/logout/empresa/{{session('empresa_id')}}">Logout</a></li>
             </ul>
           </li>
         </ul>
