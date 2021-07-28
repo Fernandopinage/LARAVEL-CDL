@@ -29,9 +29,13 @@ Route::get('/', function () {
 
 Route::get('/',[homeController::class, 'index']); // home do projeto
 
+/****************************************************************************************** */
+
 Route::get('login/militar',[indexController::class, 'index']); // chamando tela de index login
+Route::get('/add/militar/', [exmilitarController::class, 'formularioMilitar']); // add militar
 Route::get('busca/militar', [exmilitarController::class, 'index']); // chamando tela busca 
 
+/****************************************************************************************** */
 
 Route::get('login/candidato',[CandidatoController::class, 'index']); // chamando tela de candidatos
 Route::get('busca/candidato', [CandidatoController::class, 'selectCandidato']); // chamando tela  busca candidato 

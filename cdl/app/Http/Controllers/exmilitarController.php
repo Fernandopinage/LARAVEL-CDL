@@ -16,14 +16,19 @@ class exmilitarController extends Controller
         return view('exmilitar');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    public function formularioMilitar(){
+
+        return view('add_militar');
+
+    }
+
     public function create()
     {
         //
+
+
+
+
     }
 
     /**

@@ -2,7 +2,7 @@
 
 @section('login')
     
-<form class="form-signin" method="POST">
+<form class="form-signin" method="POST" action="">
     <div class="text-center">
         <h2 class="form-signin-heading">OM's</h2>
         <hr>
@@ -18,7 +18,7 @@
             <a class="nav-link" href="#">Esqueci minha senha</a>
         </div>
         <div class="col">
-            <a class="nav-link" href="#">Criar uma conta</a>
+            <a class="nav-link" href="{{('/add/militar/')}}">Criar uma conta</a>
         </div>
     </div>
 

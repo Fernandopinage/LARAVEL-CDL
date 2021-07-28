@@ -82,17 +82,18 @@
         </div>
       </div>
     </nav>
+    <!--
     <div id="menu">
 
     </div>
-
+  -->
     <div class="container">
 
         @yield('login')
 
     </div>
     <footer style="margin-top: 150px">
-      <nav class="navbar fixed-bottom navbar-expand-sm navbar bg" style="background-color: #284D92">
+      <nav class="navbar fixed-bottom navbar-expand-sm navbar bg" style="background-color: #2D2C31">
           <div class="container" style="margin-top: 8px">
               <div class="col-6 input-group-sm">
                   <p class="text-start" style="color:#fff">Progride® é uma marca registrada © <?php echo date('Y')?>
