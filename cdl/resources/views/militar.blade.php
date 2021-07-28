@@ -23,7 +23,7 @@
     </div>
 
     <div class="d-grid gap-2">
-    <input type="submit" class="btn btn-lg" name="loginentrar" value="Entrar">
+    <input type="submit" class="btn btn-success btn-lg" name="loginentrar" value="Entrar">
     </div>
 
 </form>

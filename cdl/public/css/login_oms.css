@@ -31,17 +31,6 @@ body{
 }
 
 
-  .btn{
-    color: #fff;
-    background-color: #2d831ebb;
-  }
-  .btn:hover{
-
-    color: #f0ede9;
-    background-color: #1e5513bb;
-    border-color: #0a0a0a;
-  }
-
   a:link{
     
     color: #523617;
