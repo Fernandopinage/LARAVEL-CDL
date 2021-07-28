@@ -24,7 +24,7 @@
                       </a>
                       <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="/login/candidato">Entrar</a></li>
-                        <li><a class="dropdown-item" href="/busca/candidato">Buscar</a></li>
+                        <li><a class="dropdown-item" href="/busca/candidato">Buscar Vagas</a></li>
                        <!-- <li><hr class="dropdown-divider"></li> -->
                         
                       </ul>
