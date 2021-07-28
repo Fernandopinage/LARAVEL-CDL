@@ -47,18 +47,6 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
-                                UTV
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="/login/utv">Entrar</a></li>
-                                <li><a class="dropdown-item" href="/busca/candidato">Buscar</a></li>
-                                <!-- <li><hr class="dropdown-divider"></li> -->
-
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
                                 OM's
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">

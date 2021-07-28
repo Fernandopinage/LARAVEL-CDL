@@ -36,37 +36,41 @@
                     <label class="form-check-label" for="flexCheckIndeterminate">Telefone  <span><strong>*</strong></span></label>
                     <input type="tel" class="form-control form-control-sm" name="telefone2" placeholder="(99) 99999-9999" onkeypress="mask(this, mphone);" onblur="mask(this, mphone);" />
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <label class="form-check-label" for="flexCheckIndeterminate">Contato Tecnico  <span><strong>*</strong></span></label>
                     <input type="text" name="tecnico" class="form-control form-control-sm" placeholder="">
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <label class="form-check-label" for="flexCheckIndeterminate">E-mail Tecnico  <span><strong>*</strong></span> </label>
                     <input type="text" name="email" class="form-control form-control-sm" placeholder="">
                 </div>
+                <div class="col-md-4">
+                    <label class="form-check-label" for="flexCheckIndeterminate">Função Tecnico  <span><strong>*</strong></span> </label>
+                    <input type="text" name="funcao" class="form-control form-control-sm" placeholder="">
+                </div>
                 <div class="col-md-2">
                     <label class="form-check-label" for="flexCheckIndeterminate">CEP <span><strong>*</strong></span></label>
-                    <input type="text" class="form-control form-control-sm" placeholder="">
+                    <input type="text" class="form-control form-control-sm" name="cep" placeholder="">
                 </div>
                 <div class="col-md-1">
                     <label class="form-check-label" for="flexCheckIndeterminate">UF <span><strong>*</strong></span></label>
-                    <input type="text" class="form-control form-control-sm" placeholder="">
+                    <input type="text" class="form-control form-control-sm" name="uf" placeholder="">
                 </div>
                 <div class="col-md-2">
                     <label class="form-check-label" for="flexCheckIndeterminate">Cidade <span><strong>*</strong></span></label>
-                    <input type="text" class="form-control form-control-sm" placeholder="">
+                    <input type="text" class="form-control form-control-sm" name="cidade" placeholder="">
                 </div>
                 <div class="col-md-7">
                     <label class="form-check-label" for="flexCheckIndeterminate">Bairro <span><strong>*</strong></span></label>
-                    <input type="text" class="form-control form-control-sm" placeholder="">
+                    <input type="text" class="form-control form-control-sm" name="bairro" placeholder="">
                 </div>
                 <div class="col-md-2">
                     <label class="form-check-label" for="flexCheckIndeterminate">Nº <span><strong>*</strong></span></label>
-                    <input type="text" class="form-control form-control-sm" placeholder="">
+                    <input type="text" class="form-control form-control-sm" name="numero" placeholder="">
                 </div>
                 <div class="col-md-10">
                     <label class="form-check-label" for="flexCheckIndeterminate">Complemento</label>
-                    <input type="text" class="form-control form-control-sm" placeholder="">
+                    <input type="text" class="form-control form-control-sm" name="complemento" placeholder="">
                 </div>
             </div>  
         </div> 

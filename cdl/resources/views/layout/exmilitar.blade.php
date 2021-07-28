@@ -9,23 +9,6 @@
     <title>Empregabilidade | CDL Manaus</title>
 </head>
 <body>
-  <!--
-  <ul class="nav justify-content-end navbar-light bg-light">
-    <li class="nav-item">
-      <a class="nav-link active" aria-current="page" href=""><img  src="/icons/facebook.png"></a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#"><img  src="/icons/instagram.png"></a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#"><img  src="/icons/youtube.png"></a>
-    </li>
-
-  </ul>
--->
- 
-  
-  <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="/"><img id="logo" src="/img/cdl-logo.png" alt="" ></a>
@@ -52,17 +35,6 @@
                       </a>
                       <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="/login/empresa">Entrar</a></li>
-                      </ul>
-                  </li>
-                  <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        UTV
-                      </a>
-                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="/login/utv">Entrar</a></li>
-                        
-                        <!--<li><hr class="dropdown-divider"></li>-->
-                        
                       </ul>
                   </li>
                   <li class="nav-item dropdown">
