@@ -75,8 +75,8 @@ class EmpresaController extends Controller
         // validando campos obrigatorios caso um dos campos esteja em banco nao inserir no banco de dados 
         $this->validate($request, [
 
-            'razao' => 'required',
-            'cnpj' => 'required',
+            'razao' => 'required',              //tabel  //campo
+            'cnpj' => ['required', 'unique:tbl_empresas,emp_cnpj'],
             'ramo' => 'required',
             'email' => 'required',
             'cep' => 'required',
@@ -145,7 +145,7 @@ class EmpresaController extends Controller
         $this->validate($request, [
 
             'razao' => 'required',
-            'cnpj' => 'required',
+            'cnpj' => ['required', 'unique:tbl_empresas,emp_cnpj'],
             'ramo' => 'required',
             'email' => 'required',
             'cep' => 'required',

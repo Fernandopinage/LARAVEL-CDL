@@ -21,7 +21,7 @@ class Empresas extends Migration
             $table->string('emp_fantasia',50)->nullable();          // nome fantasia da empresa
             $table->string('emp_email',100)->nullable();            // email da empresa (Obrigadorio)
             $table->string('emp_razao',100)->nullable();            // razao da empresa (obrigatorio)
-            $table->string('emp_cnpj',20)->nullable();    // cnpj da empresa (obrigatorio)
+            $table->string('emp_cnpj',20)->nullable()->unique();    // cnpj da empresa (obrigatorio)
             $table->string('emp_atividade',100)->nullable();        // Área de atividade (obrigatorio)
             $table->string('emp_telefone',20)->nullable();          // Telefone da empresa
             $table->string('emp_celular',20)->nullable();           // Celular da empresa
