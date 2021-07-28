@@ -56,7 +56,7 @@
                     <input type="password" class="form-control form-control-sm" name="confirmar" placeholder="">
                 </div>
                 <div class="col-md-4">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Nome do Técnico </label>
+                    <label class="form-check-label" for="flexCheckIndeterminate">Nome do Técnico <span><strong>*</strong></span></label>
                     <input type="text" class="form-control form-control-sm" name="tecnico" placeholder="">
                 </div>
                 <div class="col-md-4">

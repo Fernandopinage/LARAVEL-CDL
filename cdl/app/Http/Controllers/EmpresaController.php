@@ -79,6 +79,7 @@ class EmpresaController extends Controller
             'cnpj' => ['required', 'unique:tbl_empresas,emp_cnpj'],
             'ramo' => 'required',
             'email' => 'required',
+            'tecnico' => 'required',
             'cep' => 'required',
             'termo' => 'required',
             'funcao' => 'required',
@@ -119,7 +120,7 @@ class EmpresaController extends Controller
             $empresa->save();
 
             //return View('add_empresa')->with('success','teste');
-            return redirect('add/empresa')->with('mensagem', 'Produto cadastrado com sucesso!');
+            return redirect('/login/empresa')->with('mensagem', 'Produto cadastrado com sucesso!');
         } else {
             return redirect('add/empresa');
         }
@@ -148,6 +149,7 @@ class EmpresaController extends Controller
             'cnpj' => ['required', 'unique:tbl_empresas,emp_cnpj'],
             'ramo' => 'required',
             'email' => 'required',
+            'tecnico' => 'required',
             'cep' => 'required',
             'termo' => 'required',
             'funcao' => 'required',
