@@ -161,7 +161,7 @@
                 </div>
             </div>
             <div class="col-md-4" id="divcod">
-                <label class="form-check-label" for="flexCheckIndeterminate">Preenchar com o códiogo</label>
+                <label class="form-check-label" for="flexCheckIndeterminate">Preenchar com o código</label>
                 <input type="text" class="form-control form-control-sm" name="cod" id="cod" placeholder="">
             </div>
             <div class="col-md-6">
