@@ -20,7 +20,7 @@ class Vagas extends Migration
             $table->date('vag_data_inicio')->nullable();            // data de inicio da publicação vaga
             $table->date('vag_data_final')->nullable();             // data final da publicação vaga  
             $table->string('vag_cargo',100)->nullable();            // cargo ou função da vaga 
-            $table->string('vag_descricao',100)->nullable();        // descrição da vaga 
+            $table->longText('vag_descricao')->nullable();      // descrição da vaga 
             $table->string('vag_tipo',100)->nullable();             // tipo de vaga se é temporario ,menor aprediz, estágio ou trainee
             $table->double('vag_salario',8,2)->nullable();          // salario  da vaga
             $table->string('vag_formacao',50)->nullable();          // possui formação necessaria [ensino fundamental completo]

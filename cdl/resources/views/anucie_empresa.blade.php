@@ -17,22 +17,19 @@
 
             <div class="row g-3">
 
-                <div class="col-md-2">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Data de inicio </label>
+                <div class="col-md-3">
+                    <label class="form-check-label" for="flexCheckIndeterminate">Data de início da  divulgação </label>
                     <input type="date" name="datainicio" class="form-control form-control-sm" placeholder="">
                 </div>
 
-                <div class="col-md-2">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Data termino</label>
+                <div class="col-md-3">
+                    <label class="form-check-label" for="flexCheckIndeterminate">Data de térmno da
+                        publicação</label>
                     <input type="date" name="datafim" class="form-control form-control-sm" placeholder="">
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-2">
                     <label class="form-check-label" for="flexCheckIndeterminate">Cargo/Função <span><strong>*</strong></span></label>
                     <input type="text" name="cargo" class="form-control form-control-sm" placeholder="">
-                </div>
-                <div class="col-md-5">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Descrição da Vaga </label>
-                    <input type="text" class="form-control form-control-sm" name="descricao" placeholder="">
                 </div>
                 <div class="col-md-3">
                     <label class="form-check-label" for="flexCheckIndeterminate">Tipo de Vaga  <span><strong>*</strong></span></label>
@@ -40,18 +37,18 @@
                         <option selected></option>
                         <option value="1">CLT</option>
                         <option value="2">PJ</option>
-                        <option value="3">Témporario</option>
+                        <option value="3">Temporário</option>
                         <option value="4">Menor Aprendiz</option>
                         <option value="5">Estágio</option>
                         <option value="5">Trainee</option>
-                      </select>
+                    </select>
                 </div>
                 <div class="col-md-2">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Salario Oferecido</label>
+                    <label class="form-check-label" for="flexCheckIndeterminate">Salário Oferecido</label>
                     <input type="text" class="form-control form-control-sm" name="salario" placeholder="R$"onKeyPress="return(moeda(this,'.',',',event))" >
                     
                 </div>
-               
+                
                 <div class="col-md-4">
                     <label class="form-check-label" for="flexCheckIndeterminate">Formação  <span><strong>*</strong></span></label>
                     <select class="form-select form-select-sm" name="formacao" aria-label="Default select example">
@@ -66,14 +63,14 @@
                         <option value="7">Superior Completo</option>
                         <option value="7">Pós-Graduação Cursando</option>
                         <option value="7">Pós-Graduação Completo</option>
-                      </select>
+                    </select>
                 </div>
                 <div class="col-md-3">
                     <label class="form-check-label" for="flexCheckIndeterminate">Nome do curso </label>
                     <input type="text" class="form-control form-control-sm" name="curso" placeholder="">
                 </div>
                 <div class="col-md-2">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Ano de termino </label>
+                    <label class="form-check-label" for="flexCheckIndeterminate">Ano de término </label>
                     <input type="month"  class="form-control form-select-sm" name="termino" placeholder="">
                 </div>
                 <div class="col-md-2">
@@ -82,24 +79,24 @@
                         <option selected></option>
                         <option value="1">1º Semestre</option>
                         <option value="2">2º Semestre</option>
-                  
+                        
                     </select>
                 </div>
                 <div class="col-md-3">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Périodo em Curso </label>
+                    <label class="form-check-label" for="flexCheckIndeterminate">Período em Curso </label>
                     <select class="form-select form-select-sm" name="periodo" aria-label="Default select example">
                         <option selected></option>
-                        <option value="1">1º Périodo</option>
-                        <option value="2">2º Périodo</option>
-                        <option value="3">3º Périodo</option>
-                        <option value="4">4º Périodo</option>
-                        <option value="5">5º Périodo</option>
-                        <option value="6">6º Périodo</option>
-                        <option value="7">7º Périodo</option>
-                        <option value="8">8º Périodo</option>
+                        <option value="1">1º Período</option>
+                        <option value="2">2º Período</option>
+                        <option value="3">3º Período</option>
+                        <option value="4">4º Período</option>
+                        <option value="5">5º Período</option>
+                        <option value="6">6º Período</option>
+                        <option value="7">7º Período</option>
+                        <option value="8">8º Período</option>
                         <option value="9">Ou Mais</option>
                         
-                      </select>
+                    </select>
                 </div>
                 <div class="col-md-3">
                     <label class="form-check-label" for="flexCheckIndeterminate">Experiência <span><strong>*</strong></span></label>
@@ -125,12 +122,12 @@
                         <option value="9">30+ anos</option>
                     </select>
                 </div>
-
+                
                 <div class="col-md-1">
                     <label class="form-check-label" for="flexCheckIndeterminate">UF <span>*</span></label>
                     <input type="text" class="form-control form-control-sm" name="uf" id="uf" placeholder="">
                 </div>
-
+                
                 <div class="col-md-3">
                     <label class="form-check-label" for="flexCheckIndeterminate">Cidade <span><strong>*</strong></span></label>
                     <input type="text" class="form-control form-control-sm" name="cidade" id="cidade" placeholder="">
@@ -145,7 +142,7 @@
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="" name="idioma_necessario" id="idioma_necessario">
                         <label class="form-check-label" for="flexCheckDefault">
-                          
+                            
                         </label>
                     </div>
                 </div>
@@ -160,15 +157,15 @@
                       
                     </select>
                 </div>
-
+                
                 <div class="col-md-2">
                     <label class="form-check-label" for="flexCheckIndeterminate"> Vaga remota</label>
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="S" name="vaga" id="flexCheckDefault">
                         <label class="form-check-label" for="flexCheckDefault">
-      
+                            
                         </label>
-                      </div>
+                    </div>
                 </div>
                 <div class="col-md-2">
                     <label class="form-check-label" for="flexCheckIndeterminate"> Exibir nome da Empresa </span></label>
@@ -177,30 +174,34 @@
                         <label class="form-check-label" for="flexCheckDefault">
                         
                         </label>
-                      </div>
+                    </div>
                 </div>
                 <div class="col-md-2">
                     <label class="form-check-label" for="flexCheckIndeterminate"> PCD?</label>
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="S" id="pcd" name="pcd" id="flexCheckDefault">
                         <label class="form-check-label" for="flexCheckDefault">
-                        
+                            
                         </label>
-                      </div>
+                    </div>
                 </div>
                 <div class="mb-3" id="descPCD">
                     <label for="exampleFormControlTextarea1" class="form-label">Descreva a deficiência</label>
                     <textarea class="form-control" id="exampleFormControlTextarea1"  name="descricao_pcd" rows="4"></textarea>
-                  </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-check-label" for="flexCheckIndeterminate">Descrição da Vaga </label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1"  name="descricao" rows="4"></textarea>
+                </div>
                 
-        </div> 
-        <hr>
-        <span>Campos Obrigatórios<strong>*</strong></span>
-        <div class="text-end">
-            <input type="submit" class="btn btn-primary" value="Anunciar">
+            </div> 
+            <hr>
+            <span>Campos Obrigatórios<strong>*</strong></span>
+            <div class="text-end">
+                <input type="submit" class="btn btn-primary" value="Anunciar">
+            </div>
         </div>
     </div>
-</div>
-
+    
 </form>
 @endsection
