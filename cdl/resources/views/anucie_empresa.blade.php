@@ -17,17 +17,17 @@
 
             <div class="row g-3">
 
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <label class="form-check-label" for="flexCheckIndeterminate">Data de início da  divulgação </label>
                     <input type="date" name="datainicio" class="form-control form-control-sm" placeholder="">
                 </div>
 
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <label class="form-check-label" for="flexCheckIndeterminate">Data de término da
                         publicação</label>
                     <input type="date" name="datafim" class="form-control form-control-sm" placeholder="">
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-4">
                     <label class="form-check-label" for="flexCheckIndeterminate">Cargo/Função <span><strong>*</strong></span></label>
                     <input type="text" name="cargo" class="form-control form-control-sm" placeholder="">
                 </div>
@@ -51,29 +51,29 @@
                 
                 <div class="col-md-4">
                     <label class="form-check-label" for="flexCheckIndeterminate">Formação  <span><strong>*</strong></span></label>
-                    <select class="form-select form-select-sm" name="formacao" aria-label="Default select example">
+                    <select class="form-select form-select-sm" name="formacao" id="formacao" aria-label="Default select example">
                         <option selected></option>
-                        <option value="1">Ensino fundamental completo</option>
-                        <option value="2">Ensino fundamental incompleto</option>
-                        <option value="3">Ensino Médio completo</option>
-                        <option value="4">Ensino Médio cursando</option>
-                        <option value="5">Ensino Técnico cursando</option>
-                        <option value="6">Ensino Técnico completo</option>
-                        <option value="7">Superior Cursando</option>
-                        <option value="7">Superior Completo</option>
-                        <option value="7">Pós-Graduação Cursando</option>
-                        <option value="7">Pós-Graduação Completo</option>
+                        <option value="Ensino fundamental completo">Ensino fundamental completo</option>
+                        <option value="Ensino fundamental incompleto">Ensino fundamental incompleto</option>
+                        <option value="Ensino Médio completo">Ensino Médio completo</option>
+                        <option value="Ensino Médio cursando">Ensino Médio cursando</option>
+                        <option value="Ensino Técnico cursando">Ensino Técnico cursando</option>
+                        <option value="Ensino Técnico completo">Ensino Técnico completo</option>
+                        <option value="Superior Cursando">Superior Cursando</option>
+                        <option value="Superior Completo">Superior Completo</option>
+                        <option value="Pós-Graduação Cursando">Pós-Graduação Cursando</option>
+                        <option value="Pós-Graduação Completo">Pós-Graduação Completo</option>
                     </select>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3" id="curso_div">
                     <label class="form-check-label" for="flexCheckIndeterminate">Nome do curso </label>
                     <input type="text" class="form-control form-control-sm" name="curso" placeholder="">
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-2" id="termino_div">
                     <label class="form-check-label" for="flexCheckIndeterminate">Ano de término </label>
                     <input type="month"  class="form-control form-select-sm" name="termino" placeholder="">
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-2" id="semestre_div">
                     <label class="form-check-label" for="flexCheckIndeterminate">Semestre em Curso </label>
                     <select class="form-select form-select-sm" name="semestre" aria-label="Default select example">
                         <option selected></option>
@@ -82,7 +82,7 @@
                         
                     </select>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3" id="periodo_div">
                     <label class="form-check-label" for="flexCheckIndeterminate">Período em Curso </label>
                     <select class="form-select form-select-sm" name="periodo" aria-label="Default select example">
                         <option selected></option>

@@ -112,9 +112,26 @@
 
 </script>
 
+<script>
+$('#formacao').change(function(){
+  var valor =  document.getElementById('formacao').value;
+  console.log(valor)
+  if(valor === 'Ensino fundamental completo'){
 
+    $('#curso_div').hide();
+    $('#termino_div').hide();
+    $('#semestre_div').hide();
+    $('#periodo_div').hide();
+    }else{
 
+    $('#curso_div').show();
+    $('#termino_div').show();
+    $('#semestre_div').show();
+    $('#periodo_div').show();
+  }
+});
 
+</script>
 
 <script>
 
