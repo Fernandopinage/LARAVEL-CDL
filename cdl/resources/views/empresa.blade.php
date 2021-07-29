@@ -15,6 +15,9 @@
     <div class="mb-3">
     <input type="password" class="form-control form-control" name="password" placeholder="Senha"  />
     </div>
+    <div class="d-grid gap-2">
+    <input type="submit" class="btn-primary btn-lg" name="loginentrar" value="Entrar">
+    </div>
     <div class="row g-3">
         <div class="col">
             <a class="nav-link" id="link1" href="/redefinir/empresa">Esqueci minha senha</a>
@@ -24,9 +27,6 @@
         </div>
     </div>
 
-    <div class="d-grid gap-2">
-    <input type="submit" class="btn-primary btn-lg" name="loginentrar" value="Entrar">
-    </div>
 
 </form>
 

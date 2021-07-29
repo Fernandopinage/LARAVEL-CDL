@@ -93,7 +93,7 @@
     <div class="container" id="container">
         <div class="row">
             <div class="col-sm-4">
-                <div class="card" style="width: 25rem;">
+                <div class="card" style="width: 25rem;  margin-right: 50px;">
                     <img class="card-img-top" src="/img/index-1.jpg" alt="Imagem de capa do card">
                     <div class="card-body" style="text-align: center">
                         <h5 class="card-title">ÚLTIMOS PROFISSIONAIS CADASTRADOS</h5>
@@ -141,11 +141,11 @@
     <hr>
     <div class="container" id="container">
         <div class="row">
-            <div class="col-sm-3">
+            <div class="col-sm-4">
                 <h6>> CDL MANAUS - DJALMA BATISTA</h6>
                 <span>Cond. Amazonas Flat Service, 3000<br>
                     Loja A, Torre Sul<br>
-                    Av. Djalma Batista  |  Chapada  |  69.050-010<br>
+                    Av. Djalma Batista | Chapada | 69.050-010<br>
                     Segunda a Quinta-feira das 08h às 18h<br>
                     Sexta-feira das 08h às 17h</span>
             </div>
@@ -164,7 +164,7 @@
                     Segunda a Quinta-feira das 08h às 18h<br>
                     Sexta-feira das 08h às 17h</span>
             </div>
-            <div class="col-sm-3">
+            <div class="col-sm-2">
                 <h6>> ATENDIMENTO</h6>
                 <span>Dúvidas<br>
                     + 55 92 3627-2867<br>
