@@ -109,6 +109,22 @@
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
+
+
+  @if(session('empresa_cadastro_erro'))
+  <script>
+  Swal.fire({
+    position: 'center',
+    icon: 'error',
+    title: 'O campo senha e campo Confirmar Senha estão diferentes',
+    showConfirmButton: false,
+    timer: 1500
+  })
+  </script>
+  @endif
+
+
+
 <!-- Adicionando Javascript -->
 <script>
   $(document).ready(function() {

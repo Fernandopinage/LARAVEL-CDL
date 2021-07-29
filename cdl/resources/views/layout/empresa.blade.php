@@ -117,6 +117,19 @@ Swal.fire({
 Swal.fire({  position: 'center',  icon: 'warning',  title: 'Preencher todos os campos',  showConfirmButton: false,  timer: 1500  })
 </script>
 @endif
+<!-- se cadastra ok -->
+@if(session('empresa_cadastro'))
+<script>
+Swal.fire({
+  position: 'center',
+  icon: 'success',
+  title: 'Empresa cadastrado com sucesso',
+  showConfirmButton: false,
+  timer: 2500
+})
+</script>
+@endif
+
 
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>

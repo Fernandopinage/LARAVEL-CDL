@@ -73,7 +73,7 @@ class EmpresaController extends Controller
 
 
         // validando campos obrigatorios caso um dos campos esteja em banco nao inserir no banco de dados 
-        $this->validate($request, [
+       $this->validate($request, [
 
             'razao' => 'required',              //tabel  //campo
             'cnpj' => ['required', 'unique:tbl_empresas,emp_cnpj'],
@@ -85,10 +85,8 @@ class EmpresaController extends Controller
             'funcao' => 'required',
             'setor' => 'required'
         ]);
-
-        $vowels = array("(", ")", "-", " ");
-
-
+        
+        
         // Verificando se os campos de senhas são iguais     
         if ($request->senha === $request->confirmar) {
 
@@ -120,9 +118,9 @@ class EmpresaController extends Controller
             $empresa->save();
 
             //return View('add_empresa')->with('success','teste');
-            return redirect('/login/empresa')->with('mensagem', 'Produto cadastrado com sucesso!');
+            return redirect('/login/empresa')->with('empresa_cadastro', 'Produto cadastrado com sucesso!');
         } else {
-            return redirect('add/empresa');
+            return redirect('add/empresa')->with('empresa_cadastro_erro', 'Erro');
         }
     }
 
