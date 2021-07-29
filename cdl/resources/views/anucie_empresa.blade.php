@@ -55,14 +55,14 @@
                         <option selected></option>
                         <option value="Ensino fundamental completo">Ensino fundamental completo</option>
                         <option value="Ensino fundamental incompleto">Ensino fundamental incompleto</option>
-                        <option value="Ensino Médio completo">Ensino Médio completo</option>
-                        <option value="Ensino Médio cursando">Ensino Médio cursando</option>
-                        <option value="Ensino Técnico cursando">Ensino Técnico cursando</option>
+                        <option value="Ensino Medio completo">Ensino Médio completo</option>
+                        <option value="Ensino Medio cursando">Ensino Médio cursando</option>
+                        <option value="Ensino Tecnico cursando">Ensino Técnico cursando</option>
                         <option value="Ensino Técnico completo">Ensino Técnico completo</option>
                         <option value="Superior Cursando">Superior Cursando</option>
                         <option value="Superior Completo">Superior Completo</option>
-                        <option value="Pós-Graduação Cursando">Pós-Graduação Cursando</option>
-                        <option value="Pós-Graduação Completo">Pós-Graduação Completo</option>
+                        <option value="Pos-Graduacao Cursando">Pós-Graduação Cursando</option>
+                        <option value="Pos-Graduacao Completo">Pós-Graduação Completo</option>
                     </select>
                 </div>
                 <div class="col-md-3" id="curso_div">
@@ -146,14 +146,30 @@
                         </label>
                     </div>
                 </div>
-                <div class="col-md-2" id="idioma">
+                <div class="col-md-2" id="idioma_div">
                     <label class="form-check-label" for="flexCheckIndeterminate">Idioma</label>
-                    <select class="form-select form-select-sm" name="idioma" aria-label="Default select example">
+                    <select class="form-select form-select-sm" name="idioma" id="idioma" aria-label="Default select example">
                         <option selected></option>
                         <option value="ingles">Inglês</option>
                         <option value="espanhol">Espanhol</option>
                         <option value="frances">Francês</option>
                         <option value="italiano">Itália</option>
+                        <option value="outros">Outros</option>
+                      
+                    </select>
+                </div>
+                <div class="col-md-3" id="outro_idioma_div">
+                    <label class="form-check-label" for="flexCheckIndeterminate">Descreva qual idioma</label>
+                    <input type="text" class="form-control form-control-sm" name="outro_idioma" id="outro_idioma" placeholder="">
+                </div>
+                <div class="col-md-2" id="nivel_idioma_div">
+                    <label class="form-check-label" for="flexCheckIndeterminate">Nivel do Idioma</label>
+                    <select class="form-select form-select-sm" name="nivel_idioma" id="nivel_idioma" aria-label="Default select example">
+                        <option selected></option>
+                        <option value="basico">Basico</option>
+                        <option value="intermediario">Intermediario</option>
+                        <option value="avançado">Avançado</option>
+                        
                       
                     </select>
                 </div>

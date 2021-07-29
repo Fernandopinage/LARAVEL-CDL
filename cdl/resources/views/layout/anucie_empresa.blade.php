@@ -113,25 +113,92 @@
 </script>
 
 <script>
+
 $('#formacao').change(function(){
-  var valor =  document.getElementById('formacao').value;
-  console.log(valor)
-  if(valor === 'Ensino fundamental completo'){
+  
+  if(document.getElementById('formacao').value === 'Ensino fundamental completo' || document.getElementById('formacao').value === 'Ensino fundamental incompleto'){
+   
+    $('#curso_div').hide();
+    $('#termino_div').hide();
+    $('#semestre_div').hide();
+    $('#periodo_div').hide();
+
+  }
+
+  if(document.getElementById('formacao').value === 'Ensino Medio completo'){
+    $('#curso_div').hide();
+    $('#semestre_div').hide();
+    $('#periodo_div').hide();
+    $('#termino_div').show();
+  }
+
+  if(document.getElementById('formacao').value  === 'Ensino Medio cursando'){
+    $('#curso_div').hide();
+    $('#termino_div').hide();
+    $('#semestre_div').hide();
+    $('#periodo_div').hide();
+  }
+
+  if(document.getElementById('formacao').value  === 'Ensino Tecnico completo'){
 
     $('#curso_div').hide();
     $('#termino_div').hide();
     $('#semestre_div').hide();
     $('#periodo_div').hide();
-    }else{
+
+  }
+
+  if(document.getElementById('formacao').value  === 'Ensino Tecnico cursando'){
+
+  $('#curso_div').show();
+  $('#termino_div').hide();
+  $('#semestre_div').hide();
+  $('#periodo_div').show();
+
+  }
+
+  if(document.getElementById('formacao').value  === 'Superior Completo'){
+
+  $('#curso_div').show();
+  $('#termino_div').hide();
+  $('#semestre_div').hide();
+  $('#periodo_div').show();
+
+  }
+
+
+  if(document.getElementById('formacao').value  === 'Superior Cursando'){
+
+  $('#curso_div').show();
+  $('#termino_div').hide();
+  $('#semestre_div').hide();
+  $('#periodo_div').show();
+
+  }
+
+  if(document.getElementById('formacao').value  === 'Pos-Graduacao Completo'){
+
+  $('#curso_div').show();
+  $('#termino_div').hide();
+  $('#semestre_div').hide();
+  $('#periodo_div').hide();
+
+  }
+
+  if(document.getElementById('formacao').value  === 'Pos-Graduacao Cursando'){
 
     $('#curso_div').show();
-    $('#termino_div').show();
-    $('#semestre_div').show();
-    $('#periodo_div').show();
+    $('#termino_div').hide();
+    $('#semestre_div').hide();
+    $('#periodo_div').hide();
+
   }
+
 });
 
 </script>
+
+
 
 <script>
 
@@ -177,25 +244,39 @@ function moeda(a, e, r, t) {
 <script>
     $(document).ready(function() {
 
-
+      $('#outro_idioma_div').hide();
+      $('#nivel_idioma_div').hide();
       $('#descPCD').hide();
-      $('#idioma').hide();
+      $('#idioma_div').hide();
       
         $('#idioma_necessario').change(function(){
 
         if($("#idioma_necessario:checked").val() == undefined){
             $("#idioma_necessario").prop('checked', false);
-            $('#idioma').hide(); 
+            $('#idioma_div').hide(); 
+            $('#nivel_idioma_div').hide();
+            $('#outro_idioma_div').hide();
             
         }else{
           $("#idioma_necessario").prop('checked', true);
-          $('#idioma').show();  
-          $
+          $('#idioma_div').show();  
+          $('#nivel_idioma_div').show(); 
+          $('#outro_idioma_div').show();
+          
         }
 
 
       });
 
+      $('#idioma').change(function(){
+
+        if(document.getElementById('idioma').value === 'outros'){
+          $('#outro_idioma_div').show();
+        }else{
+          $('#outro_idioma_div').hide();
+        }
+
+      });
 
 
       $('#pcd').change(function(){
