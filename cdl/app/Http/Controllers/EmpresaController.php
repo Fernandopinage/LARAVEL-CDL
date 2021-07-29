@@ -282,9 +282,9 @@ class EmpresaController extends Controller
     }
 
     public function filtrarCandidato(Request $request)
-    {         //  filtrando candidato na base de dados
+    {        
 
-
+        
     }
 
     public function logout(Request $request){

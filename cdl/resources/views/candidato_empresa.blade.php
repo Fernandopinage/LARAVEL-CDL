@@ -2,17 +2,17 @@
 
 @section('filtrocandidato')
 
-<form method="post" action="/filtra/candidato/empresa" >
+<form method="post" action="/add/candidato/empresa">
 
     @csrf
 
     <div class="form-signin">
 
-        <div class="text" >          
+        <div class="text">
             <h2 class="form-signin-heading"> ENCONTRE CANDIDATO IDEAL </h2>
             <hr>
         </div>
-        
+
         <div class="pessoais">
 
             <div class="row g-3">
@@ -21,10 +21,26 @@
                     <label class="form-check-label" for="flexCheckIndeterminate">Área de Atuação </label>
                     <select class="form-select form-select-sm" aria-label="Default select example">
                         <option selected></option>
-                        <option value="1">Financeiro</option>
-                        <option value="2">Vendas</option>
-                        <option value="3">Administrativa</option>
-                      </select>
+                        <option value="Recursos Humanos">Recursos Humanos</option>
+                        <option value="Área Comercial">Área Comercial</option>
+                        <option value="Almoxarifado">Almoxarifado</option>
+                        <option value="Produção">Produção</option>
+                        <option value="Estoque">Estoque</option>
+                        <option value="Compras">Compras</option>
+                        <option value="Tecnologia da Informação">Tecnologia da Informação</option>
+                        <option value="Qualidade">Qualidade</option>
+                        <option value="Planejamento">Planejamento</option>
+                        <option value="Secretariado">Secretariado</option>
+                        <option value="Designer">Designer</option>
+                        <option value="Comunicação">Comunicação</option>
+                        <option value="Jurídico">Jurídico</option>
+                        <option value="Serviço Social">Serviço Social</option>
+                        <option value="Segurança do Trabalho">Segurança do Trabalho</option>
+                        <option value="Telemarketing">Telemarketing</option>
+                        <option value="Cobrança">Cobrança</option>
+                        <option value="Área da Saúde">Área da Saúde</option>
+                        <option value="Vigilância">Vigilância</option>
+                    </select>
                 </div>
                 <div class="col-md-3">
                     <div class="text-left">
@@ -41,7 +57,8 @@
                 </div>
                 <div class="col-md-4">
                     <label class="form-check-label" for="flexCheckIndeterminate">Formação</label>
-                    <select class="form-select form-select-sm" name="formacao" id="formacao" aria-label="Default select example">
+                    <select class="form-select form-select-sm" name="formacao" id="formacao"
+                        aria-label="Default select example">
                         <option selected></option>
                         <option value="fundamental incompleto">Ensino fundamental incompleto</option>
                         <option value="fundamental completo">Ensino fundamental completo</option>
@@ -53,12 +70,12 @@
                         <option value="superior completo">Superior Completo</option>
                         <option value="pos cursando">Pós-Graduação Cursando</option>
                         <option value="pos completo">Pós-Graduação Completo</option>
-                      </select>
+                    </select>
                 </div>
-<!--*************************************** ensino medio ***********************************************-->
+                <!--*************************************** ensino medio ***********************************************-->
                 <div class="col-md-2" id="letivo_medio">
                     <label class="form-check-label" for="flexCheckIndeterminate">Ano Letivo</label>
-                    <select class="form-select form-select-sm" name="letivo"  aria-label="Default select example">
+                    <select class="form-select form-select-sm" name="letivo" aria-label="Default select example">
                         <option selected></option>
                         <option value="1">1º Ano</option>
                         <option value="2">2º Ano</option>
@@ -68,35 +85,35 @@
 
                 <div class="col-md-2" id="termino_medeio">
                     <label class="form-check-label" for="flexCheckIndeterminate">Ano de Conclusão </label>
-                    <input type="date"  class="form-control form-select-sm" name="termino_medio" placeholder="">
+                    <input type="date" class="form-control form-select-sm" name="termino_medio" placeholder="">
                 </div>
 
-<!--*************************************** ----------- ***********************************************-->
+                <!--*************************************** ----------- ***********************************************-->
 
-<!--*************************************** ensino tecnico ***********************************************-->
+                <!--*************************************** ensino tecnico ***********************************************-->
                 <div class="col-md-3" id="curso_tecnico">
                     <label class="form-check-label" for="flexCheckIndeterminate">Nome do Curso </label>
-                    <input type="text" class="form-control form-control-sm"  name="curso" placeholder="">
+                    <input type="text" class="form-control form-control-sm" name="curso" placeholder="">
                 </div>
                 <div class="col-md-2" id="semetre">
                     <label class="form-check-label" for="flexCheckIndeterminate">Semestre em Curso </label>
-                    <select class="form-select form-select-sm" name="semetre"  aria-label="Default select example">
+                    <select class="form-select form-select-sm" name="semetre" aria-label="Default select example">
                         <option selected></option>
                         <option value="1">1º Semestre</option>
                         <option value="2">2º Semestre</option>
-                  
+
                     </select>
                 </div>
-<!--*************************************** ----------- ***********************************************-->
+                <!--*************************************** ----------- ***********************************************-->
 
-<!--*************************************** ensino superior ***********************************************-->
+                <!--*************************************** ensino superior ***********************************************-->
                 <div class="col-md-3" id="curso_superior">
                     <label class="form-check-label" for="flexCheckIndeterminate">Nome do Curso </label>
-                    <input type="text" class="form-control form-control-sm"  name="superior" placeholder="">
+                    <input type="text" class="form-control form-control-sm" name="superior" placeholder="">
                 </div>
                 <div class="col-md-2" id="periodo_superior">
                     <label class="form-check-label" for="flexCheckIndeterminate">Périodo em Curso </label>
-                    <select class="form-select form-select-sm" name="periodo"  aria-label="Default select example">
+                    <select class="form-select form-select-sm" name="periodo" aria-label="Default select example">
                         <option selected></option>
                         <option value="1">1º Périodo</option>
                         <option value="2">2º Périodo</option>
@@ -107,20 +124,20 @@
                         <option value="7">7º Périodo</option>
                         <option value="8">8º Périodo</option>
                         <option value="9">Ou Mais</option>
-                        
-                      </select>
+
+                    </select>
                 </div>
 
- <!--*************************************** ----------- ***********************************************-->
+                <!--*************************************** ----------- ***********************************************-->
 
- <!--*************************************** Pós graduação ***********************************************-->
+                <!--*************************************** Pós graduação ***********************************************-->
                 <div class="col-md-3" id="curso_pos">
                     <label class="form-check-label" for="flexCheckIndeterminate">Nome do Curso </label>
-                    <input type="text" class="form-control form-control-sm"  name="pos" placeholder="">
+                    <input type="text" class="form-control form-control-sm" name="pos" placeholder="">
                 </div>
                 <div class="col-md-2" id="modulo_pos">
                     <label class="form-check-label" for="flexCheckIndeterminate">Modulo da Pós </label>
-                    <select class="form-select form-select-sm" name="periodo"  aria-label="Default select example">
+                    <select class="form-select form-select-sm" name="periodo" aria-label="Default select example">
                         <option selected></option>
                         <option value="1">1º Modulo</option>
                         <option value="2">2º Modulo</option>
@@ -131,60 +148,63 @@
                         <option value="7">7º Modulo</option>
                         <option value="8">8º Modulo</option>
                         <option value="9">Ou Modulo</option>
-                        
-                      </select>
+
+                    </select>
                 </div>
- <!--*************************************** ----------- ***********************************************-->   
- 
- 
+                <!--*************************************** ----------- ***********************************************-->
+
+
                 <div class="col-md-3">
                     <label class="form-check-label" for="flexCheckIndeterminate">Bairro </label>
-                    <input type="text"class="form-control form-select-sm" name="bairro" placeholder="">
+                    <input type="text" class="form-control form-select-sm" name="bairro" placeholder="">
                 </div>
                 <div class="col-md-2">
                     <label class="form-check-label" for="flexCheckIndeterminate">Idioma</label>
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="" id="ingle">
                         <label class="form-check-label" for="flexCheckDefault">
-                          Inglês
+                            Inglês
                         </label>
-                      </div>
-                      <div class="form-check">
+                    </div>
+                    <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="" id="espanhol">
                         <label class="form-check-label" for="flexCheckChecked">
-                          Espanhol
+                            Espanhol
                         </label>
-                      </div>
-                      <div class="form-check">
+                    </div>
+                    <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="" id="frances">
                         <label class="form-check-label" for="flexCheckChecked">
-                          Francês
+                            Francês
                         </label>
-                      </div>
-                      <div class="form-check">
+                    </div>
+                    <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="" id="outros">
                         <label class="form-check-label" for="flexCheckChecked">
-                          Outros
+                            Outros
                         </label>
-                      </div>
+                    </div>
                 </div>
 
                 <div class="col-md-2" id="leitura_ingles">
                     <label class="form-check-label" for="flexCheckIndeterminate">Nivel de Leitura (Inglês)</label>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="leitura_ingles" id="leitura_ingles" value="option1" checked>
+                        <input class="form-check-input" type="radio" name="leitura_ingles" id="leitura_ingles"
+                            value="option1" checked>
                         <label class="form-check-label" for="leitura_ingles">
                             Basico
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="leitura_ingles" id="leitura_ingles" value="option2">
+                        <input class="form-check-input" type="radio" name="leitura_ingles" id="leitura_ingles"
+                            value="option2">
                         <label class="form-check-label" for="leitura_ingles">
                             Intermediario
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="leitura_ingles" id="leitura_ingles" value="option3">
+                        <input class="form-check-input" type="radio" name="leitura_ingles" id="leitura_ingles"
+                            value="option3">
                         <label class="form-check-label" for="leitura_ingles">
                             Avançado
                         </label>
@@ -194,41 +214,47 @@
                 <div class="col-md-2" id="escrita_ingles">
                     <label class="form-check-label" for="flexCheckIndeterminate">Nivel de Escrita (Inglês)</label>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="escrita_ingles" id="escrita_ingles" value="option1" checked>
+                        <input class="form-check-input" type="radio" name="escrita_ingles" id="escrita_ingles"
+                            value="option1" checked>
                         <label class="form-check-label" for="escrita_ingles">
                             Basico
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="escrita_ingles" id="escrita_ingles" value="option2">
+                        <input class="form-check-input" type="radio" name="escrita_ingles" id="escrita_ingles"
+                            value="option2">
                         <label class="form-check-label" for="escrita_ingles">
                             Intermediario
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="escrita_ingles" id="escrita_ingles" value="option3">
+                        <input class="form-check-input" type="radio" name="escrita_ingles" id="escrita_ingles"
+                            value="option3">
                         <label class="form-check-label" for="escrita_ingles">
                             Avançado
                         </label>
                     </div>
                 </div>
-                
+
                 <div class="col-md-2" id="leitura_espanhol">
                     <label class="form-check-label" for="flexCheckIndeterminate">Nivel de Leitura (Espanhol)</label>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="leitura_espanhol" id="leitura_espanhol" value="option1" checked>
+                        <input class="form-check-input" type="radio" name="leitura_espanhol" id="leitura_espanhol"
+                            value="option1" checked>
                         <label class="form-check-label" for="leitura_espanhol">
                             Basico
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="leitura_espanhol" id="leitura_espanhol" value="option2">
+                        <input class="form-check-input" type="radio" name="leitura_espanhol" id="leitura_espanhol"
+                            value="option2">
                         <label class="form-check-label" for="leitura_espanhol">
                             Intermediario
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="leitura_espanhol" id="leitura_espanhol" value="option3">
+                        <input class="form-check-input" type="radio" name="leitura_espanhol" id="leitura_espanhol"
+                            value="option3">
                         <label class="form-check-label" for="leitura_espanhol">
                             Avançado
                         </label>
@@ -238,42 +264,48 @@
                 <div class="col-md-2" id="escrita_espanhol">
                     <label class="form-check-label" for="flexCheckIndeterminate">Nivel de Escrita (Espanhol)</label>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="escrita_espanhol" id="escrita_espanhol" value="option1" checked>
+                        <input class="form-check-input" type="radio" name="escrita_espanhol" id="escrita_espanhol"
+                            value="option1" checked>
                         <label class="form-check-label" for="escrita_espanhol">
                             Basico
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="escrita_espanhol" id="escrita_espanhol" value="option2">
+                        <input class="form-check-input" type="radio" name="escrita_espanhol" id="escrita_espanhol"
+                            value="option2">
                         <label class="form-check-label" for="escrita_espanhol">
                             Intermediario
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="escrita_espanhol" id="escrita_espanhol" value="option3">
+                        <input class="form-check-input" type="radio" name="escrita_espanhol" id="escrita_espanhol"
+                            value="option3">
                         <label class="form-check-label" for="escrita_espanhol">
                             Avançado
                         </label>
                     </div>
                 </div>
 
-                
+
                 <div class="col-md-2" id="leitura_frances">
                     <label class="form-check-label" for="flexCheckIndeterminate">Nivel de Leitura (Francês)</label>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="leitura_frances" id="leitura_frances" value="option1" checked>
+                        <input class="form-check-input" type="radio" name="leitura_frances" id="leitura_frances"
+                            value="option1" checked>
                         <label class="form-check-label" for="leitura_frances">
                             Basico
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="leitura_frances" id="leitura_frances" value="option2">
+                        <input class="form-check-input" type="radio" name="leitura_frances" id="leitura_frances"
+                            value="option2">
                         <label class="form-check-label" for="leitura_frances">
                             Intermediario
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="leitura_frances" id="leitura_frances" value="option3">
+                        <input class="form-check-input" type="radio" name="leitura_frances" id="leitura_frances"
+                            value="option3">
                         <label class="form-check-label" for="leitura_frances">
                             Avançado
                         </label>
@@ -283,19 +315,22 @@
                 <div class="col-md-2" id="escrita_frances">
                     <label class="form-check-label" for="flexCheckIndeterminate">Nivel de Escrita (Francês)</label>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="escrita_frances" id="escrita_frances" value="option1" checked>
+                        <input class="form-check-input" type="radio" name="escrita_frances" id="escrita_frances"
+                            value="option1" checked>
                         <label class="form-check-label" for="escrita_frances">
                             Basico
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="escrita_frances" id="escrita_frances" value="option2">
+                        <input class="form-check-input" type="radio" name="escrita_frances" id="escrita_frances"
+                            value="option2">
                         <label class="form-check-label" for="escrita_frances">
                             Intermediario
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="escrita_frances" id="escrita_frances" value="option3">
+                        <input class="form-check-input" type="radio" name="escrita_frances" id="escrita_frances"
+                            value="option3">
                         <label class="form-check-label" for="escrita_frances">
                             Avançado
                         </label>
@@ -303,23 +338,26 @@
                 </div>
 
 
-                
+
                 <div class="col-md-2" id="leitura_outros">
                     <label class="form-check-label" for="flexCheckIndeterminate">Nivel de Leitura</label>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="leitura_outros" id="leitura_outros" value="option1" checked>
+                        <input class="form-check-input" type="radio" name="leitura_outros" id="leitura_outros"
+                            value="option1" checked>
                         <label class="form-check-label" for="leitura_outros">
                             Basico
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="leitura_outros" id="leitura_outros" value="option2">
+                        <input class="form-check-input" type="radio" name="leitura_outros" id="leitura_outros"
+                            value="option2">
                         <label class="form-check-label" for="leitura_outros">
                             Intermediario
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="leitura_outros" id="leitura_outros" value="option3">
+                        <input class="form-check-input" type="radio" name="leitura_outros" id="leitura_outros"
+                            value="option3">
                         <label class="form-check-label" for="leitura_outros">
                             Avançado
                         </label>
@@ -329,19 +367,22 @@
                 <div class="col-md-2" id="escrita_outros">
                     <label class="form-check-label" for="flexCheckIndeterminate">Nivel de Escrita</label>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="escrita_outros" id="leitura_outros" value="option1" checked>
+                        <input class="form-check-input" type="radio" name="escrita_outros" id="leitura_outros"
+                            value="option1" checked>
                         <label class="form-check-label" for="leitura_outros">
                             Basico
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="escrita_outros" id="leitura_outros" value="option2">
+                        <input class="form-check-input" type="radio" name="escrita_outros" id="leitura_outros"
+                            value="option2">
                         <label class="form-check-label" for="leitura_outros">
                             Intermediario
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="escrita_outros" id="leitura_outros" value="option3">
+                        <input class="form-check-input" type="radio" name="escrita_outros" id="leitura_outros"
+                            value="option3">
                         <label class="form-check-label" for="leitura_outros">
                             Avançado
                         </label>
@@ -359,7 +400,7 @@
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="pcd" id="exampleRadios3" value="n" >
+                        <input class="form-check-input" type="radio" name="pcd" id="exampleRadios3" value="n">
                         <label class="form-check-label" for="exampleRadios3">
                             Não
                         </label>
@@ -367,14 +408,14 @@
                 </div>
 
 
-            </div>  
-        </div> 
+            </div>
+        </div>
         <hr>
         <div class="text-end">
             <input type="submit" class="btn btn-primary" value="Buscar Candidatos">
         </div>
     </div>
-    
+
 
 </form>
 @endsection
