@@ -94,6 +94,30 @@
 
 <script>
 
+ $('#experiencia').change(function(){
+
+    var valor =  document.getElementById('experiencia').value;
+    if(valor === 'Sem Experiência'){
+
+      $('#tempoexperiencia_div').hide();
+      
+    }else{
+
+      $('#tempoexperiencia_div').show();
+      
+    }
+
+ });
+
+
+</script>
+
+
+
+
+
+<script>
+
 function moeda(a, e, r, t) {
     let n = ""
       , h = j = 0

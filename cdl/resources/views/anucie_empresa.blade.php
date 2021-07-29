@@ -23,7 +23,7 @@
                 </div>
 
                 <div class="col-md-3">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Data de térmno da
+                    <label class="form-check-label" for="flexCheckIndeterminate">Data de término da
                         publicação</label>
                     <input type="date" name="datafim" class="form-control form-control-sm" placeholder="">
                 </div>
@@ -100,17 +100,17 @@
                 </div>
                 <div class="col-md-3">
                     <label class="form-check-label" for="flexCheckIndeterminate">Experiência <span><strong>*</strong></span></label>
-                    <select class="form-select form-select-sm" name="experiencia" aria-label="Default select example">
+                    <select class="form-select form-select-sm" name="experiencia" id="experiencia" aria-label="Default select example">
                         <option selected></option>
-                        <option value="1">Sem Experiência</option>
-                        <option value="2">Com Experiência</option>
-                        <option value="3">Primeiro Emprego</option>
+                        <option value="Sem Experiência">Sem Experiência</option>
+                        <option value="Com Experiência">Com Experiência</option>
+                        <option value="Primeiro Emprego">Primeiro Emprego</option>
                     </select>
                 </div>
-                <div class="col-md-2">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Tempo de Experiência  <span><strong>*</strong></span></label>
-                    <select class="form-select form-select-sm" name="tempoexperiencia" aria-label="Default select example">
-                        <option selected></option>
+                <div class="col-md-2" id="tempoexperiencia_div">
+                    <label class="form-check-label" for="flexCheckIndeterminate" >Tempo de Experiência  <span><strong>*</strong></span></label>
+                    <select class="form-select form-select-sm" name="tempoexperiencia" id="tempoexperiencia" aria-label="Default select example">
+                        <option selected value="0"></option>
                         <option value="1">Não informado</option>
                         <option value="2">3 meses</option>
                         <option value="3">6 meses</option>
