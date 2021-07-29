@@ -78,19 +78,18 @@ class VagasController extends Controller
         $anucio->vag_periodo = $request->periodo;
         $anucio->vag_experiencia = $request->experiencia;
         $anucio->vag_tempo = $request->tempoexperiencia;
-        //$anucio->vag_cidade = $request->cidade;
-        //$anucio->vag_cep = $request->cep;
         $anucio->vag_uf = $request->uf;
         $anucio->vag_bairro = $request->bairro;
         $anucio->vag_descricao = $request->descricao;
         $anucio->vag_idioma_necessario = $request->idioma_necessario;
         $anucio->vag_idioma = $request->idioma;
-
+        $anucio->vag_idioma_nivel = $request->nivel_idioma;
+        $anucio->vag_idioma_outro = $request->outro_idioma;
         $anucio->vag_salario = $request->salario;
         $anucio->vag_pcd = $request->pcd;
         $anucio->vag_pcd_descricao = $request->descricao_pcd;
         $anucio->save();
-       return redirect('/anucio/empresa')->with('mensagem','Registro cadastrado com sucesso!'); // redirecionar para tela de anuncio
+       return redirect('home/empresa')->with('mensagem','Registro cadastrado com sucesso!'); // redirecionar para tela de anuncio
         
     }
 }

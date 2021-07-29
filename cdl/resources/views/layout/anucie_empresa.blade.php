@@ -304,18 +304,6 @@ function moeda(a, e, r, t) {
    <!-- ***** -->
 
 
-<!-- Mensagem de cadastro com sucesso -->
-@if(session('mensagem'))
-  <script>
-  Swal.fire({
-  position: 'center',
-  icon: 'success',
-  title: 'Registro cadastrado com sucesso!',
-  showConfirmButton: false,
-  timer: 1500
-})
-</script>
-@endif
 
 <!-- Mesagem de validação de campos  -->
 @if ($errors->any())

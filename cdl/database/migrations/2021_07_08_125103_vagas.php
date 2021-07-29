@@ -22,7 +22,7 @@ class Vagas extends Migration
             $table->string('vag_cargo',100)->nullable();            // cargo ou função da vaga 
             $table->longText('vag_descricao')->nullable();      // descrição da vaga 
             $table->string('vag_tipo',100)->nullable();             // tipo de vaga se é temporario ,menor aprediz, estágio ou trainee
-            $table->double('vag_salario',8,2)->nullable();          // salario  da vaga
+            $table->string('vag_salario',100)->nullable();          // salario  da vaga
             $table->string('vag_formacao',50)->nullable();          // possui formação necessaria [ensino fundamental completo]
             $table->string('vag_curso',50)->nullable();             // nome do curso 
             $table->string('vag_termino',50)->nullable();           // termino do curso
