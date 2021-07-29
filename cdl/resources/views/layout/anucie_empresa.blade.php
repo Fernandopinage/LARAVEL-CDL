@@ -255,13 +255,13 @@ function moeda(a, e, r, t) {
             $("#idioma_necessario").prop('checked', false);
             $('#idioma_div').hide(); 
             $('#nivel_idioma_div').hide();
-            $('#outro_idioma_div').hide();
+           // $('#outro_idioma_div').hide();
             
         }else{
           $("#idioma_necessario").prop('checked', true);
           $('#idioma_div').show();  
           $('#nivel_idioma_div').show(); 
-          $('#outro_idioma_div').show();
+         // $('#outro_idioma_div').show();
           
         }
 
