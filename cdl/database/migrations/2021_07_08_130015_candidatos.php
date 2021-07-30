@@ -15,7 +15,7 @@ class Candidatos extends Migration
     {
             // candidato
 
-        Schema::create('TBL_CANDIDATOS', function (Blueprint $table) {
+        Schema::create('tbl_candidatos', function (Blueprint $table) {
 
               /*
               $table->string('can_descricao',100);        

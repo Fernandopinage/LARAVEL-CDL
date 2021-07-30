@@ -284,7 +284,9 @@ class EmpresaController extends Controller
     public function filtrarCandidato(Request $request)
     {        
 
-        
+            //dd($request);
+
+            //$buscar =
     }
 
     public function logout(Request $request){
