@@ -17,7 +17,7 @@
 
             <div class="row g-3">
 
-                <div class="col-md-5">
+                <div class="col-md-7">
                     <label class="form-check-label" for="flexCheckIndeterminate">Área de Atuação </label>
                     <select class="form-select form-select-sm" aria-label="Default select example">
                         <option selected></option>
@@ -42,11 +42,18 @@
                         <option value="Vigilância">Vigilância</option>
                     </select>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-2">
                     <div class="text-left">
                         <label class="form-check-label" for="flexCheckIndeterminate">Experiência</label>
+                        <select class="form-select form-select-sm" aria-label="Default select example">
+                            <option value="Sem Experiência">Sem Experiência</option>
+                            <option value="Com Experiência">Com Experiência</option>
+                            <option value="Primeiro Emprego">Primeiro Emprego</option>
+                        </select>
                     </div>
-                    <div class="form-check form-check-inline">
+                </div>
+                <div class="col-md-3" style="margin-top: 25px">
+                    <div class="form-check form-check">
                         <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
                         <label class="form-check-label" for="inlineCheckbox1">Ex-Militar</label>
                     </div>
@@ -187,19 +194,19 @@
                 </div>
 
                 <div class="col-md-2" id="leitura_ingles">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Nivel de Leitura (Inglês)</label>
+                    <label class="form-check-label" for="flexCheckIndeterminate">Nível de Leitura (Inglês)</label>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="leitura_ingles" id="leitura_ingles"
                             value="option1" checked>
                         <label class="form-check-label" for="leitura_ingles">
-                            Basico
+                            Básico
                         </label>
                     </div>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="leitura_ingles" id="leitura_ingles"
                             value="option2">
                         <label class="form-check-label" for="leitura_ingles">
-                            Intermediario
+                            Intermediário
                         </label>
                     </div>
                     <div class="form-check">
@@ -217,14 +224,14 @@
                         <input class="form-check-input" type="radio" name="escrita_ingles" id="escrita_ingles"
                             value="option1" checked>
                         <label class="form-check-label" for="escrita_ingles">
-                            Basico
+                            Básico
                         </label>
                     </div>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="escrita_ingles" id="escrita_ingles"
                             value="option2">
                         <label class="form-check-label" for="escrita_ingles">
-                            Intermediario
+                            Intermediário
                         </label>
                     </div>
                     <div class="form-check">
@@ -237,19 +244,19 @@
                 </div>
 
                 <div class="col-md-2" id="leitura_espanhol">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Nivel de Leitura (Espanhol)</label>
+                    <label class="form-check-label" for="flexCheckIndeterminate">Nível de Leitura (Espanhol)</label>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="leitura_espanhol" id="leitura_espanhol"
                             value="option1" checked>
                         <label class="form-check-label" for="leitura_espanhol">
-                            Basico
+                            Básico
                         </label>
                     </div>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="leitura_espanhol" id="leitura_espanhol"
                             value="option2">
                         <label class="form-check-label" for="leitura_espanhol">
-                            Intermediario
+                            Intermediário
                         </label>
                     </div>
                     <div class="form-check">
@@ -267,14 +274,14 @@
                         <input class="form-check-input" type="radio" name="escrita_espanhol" id="escrita_espanhol"
                             value="option1" checked>
                         <label class="form-check-label" for="escrita_espanhol">
-                            Basico
+                            Básico
                         </label>
                     </div>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="escrita_espanhol" id="escrita_espanhol"
                             value="option2">
                         <label class="form-check-label" for="escrita_espanhol">
-                            Intermediario
+                            Intermediário
                         </label>
                     </div>
                     <div class="form-check">
@@ -288,19 +295,19 @@
 
 
                 <div class="col-md-2" id="leitura_frances">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Nivel de Leitura (Francês)</label>
+                    <label class="form-check-label" for="flexCheckIndeterminate">Nível de Leitura (Francês)</label>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="leitura_frances" id="leitura_frances"
                             value="option1" checked>
                         <label class="form-check-label" for="leitura_frances">
-                            Basico
+                            Básico
                         </label>
                     </div>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="leitura_frances" id="leitura_frances"
                             value="option2">
                         <label class="form-check-label" for="leitura_frances">
-                            Intermediario
+                            Intermediário
                         </label>
                     </div>
                     <div class="form-check">
@@ -318,14 +325,14 @@
                         <input class="form-check-input" type="radio" name="escrita_frances" id="escrita_frances"
                             value="option1" checked>
                         <label class="form-check-label" for="escrita_frances">
-                            Basico
+                            Básico
                         </label>
                     </div>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="escrita_frances" id="escrita_frances"
                             value="option2">
                         <label class="form-check-label" for="escrita_frances">
-                            Intermediario
+                            Intermediário
                         </label>
                     </div>
                     <div class="form-check">
@@ -340,19 +347,19 @@
 
 
                 <div class="col-md-2" id="leitura_outros">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Nivel de Leitura</label>
+                    <label class="form-check-label" for="flexCheckIndeterminate">Nível de Leitura</label>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="leitura_outros" id="leitura_outros"
                             value="option1" checked>
                         <label class="form-check-label" for="leitura_outros">
-                            Basico
+                            Básico
                         </label>
                     </div>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="leitura_outros" id="leitura_outros"
                             value="option2">
                         <label class="form-check-label" for="leitura_outros">
-                            Intermediario
+                            Intermediário
                         </label>
                     </div>
                     <div class="form-check">
@@ -370,14 +377,14 @@
                         <input class="form-check-input" type="radio" name="escrita_outros" id="leitura_outros"
                             value="option1" checked>
                         <label class="form-check-label" for="leitura_outros">
-                            Basico
+                            Básico
                         </label>
                     </div>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="escrita_outros" id="leitura_outros"
                             value="option2">
                         <label class="form-check-label" for="leitura_outros">
-                            Intermediario
+                            Intermediário
                         </label>
                     </div>
                     <div class="form-check">

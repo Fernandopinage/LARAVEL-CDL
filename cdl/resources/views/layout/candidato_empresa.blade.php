@@ -186,7 +186,7 @@
         }else if(document.getElementById('formacao').value == 'medio completo' ){
 
               $('#letivo_medio').hide();
-              $('#termino_medeio').show();
+              $('#termino_medeio').hide();
               $('#curso_tecnico').hide();
               $('#semetre').hide();
               $('#curso_superior').hide();
