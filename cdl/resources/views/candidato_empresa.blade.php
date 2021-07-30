@@ -19,7 +19,7 @@
 
                 <div class="col-md-7">
                     <label class="form-check-label" for="flexCheckIndeterminate">Área de Atuação </label>
-                    <select class="form-select form-select-sm" aria-label="Default select example">
+                    <select class="form-select form-select-sm" name="area" id="area" aria-label="Default select example">
                         <option selected></option>
                         <option value="Recursos Humanos">Recursos Humanos</option>
                         <option value="Área Comercial">Área Comercial</option>
@@ -45,7 +45,7 @@
                 <div class="col-md-2">
                     <div class="text-left">
                         <label class="form-check-label" for="flexCheckIndeterminate">Experiência</label>
-                        <select class="form-select form-select-sm" aria-label="Default select example">
+                        <select class="form-select form-select-sm" name="experiencia" id="experiencia" aria-label="Default select example">
                             <option value="Sem Experiência">Sem Experiência</option>
                             <option value="Com Experiência">Com Experiência</option>
                             <option value="Primeiro Emprego">Primeiro Emprego</option>
@@ -55,11 +55,11 @@
                 <div class="col-md-3" style="margin-top: 25px">
                     <div class="form-check form-check">
                         <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                        <label class="form-check-label" for="inlineCheckbox1">Ex-Militar</label>
+                        <label class="form-check-label" for="inlineCheckbox1" name="militar" id="militar" >Ex-Militar</label>
                     </div>
                     <div class="form-check form-check-inline">
                         <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                        <label class="form-check-label" for="inlineCheckbox2">Ex-Aluno UTV</label>
+                        <label class="form-check-label" for="inlineCheckbox2" name="aluno" id="aluno" >Ex-Aluno UTV</label>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -82,7 +82,7 @@
                 <!--*************************************** ensino medio ***********************************************-->
                 <div class="col-md-2" id="letivo_medio">
                     <label class="form-check-label" for="flexCheckIndeterminate">Ano Letivo</label>
-                    <select class="form-select form-select-sm" name="letivo" aria-label="Default select example">
+                    <select class="form-select form-select-sm" name="letivo" id="letivo" aria-label="Default select example">
                         <option selected></option>
                         <option value="1">1º Ano</option>
                         <option value="2">2º Ano</option>
@@ -92,7 +92,7 @@
 
                 <div class="col-md-2" id="termino_medeio">
                     <label class="form-check-label" for="flexCheckIndeterminate">Ano de Conclusão </label>
-                    <input type="date" class="form-control form-select-sm" name="termino_medio" placeholder="">
+                    <input type="date" class="form-control form-select-sm" name="termino_medio" id="termino_medio" placeholder="">
                 </div>
 
                 <!--*************************************** ----------- ***********************************************-->
@@ -100,11 +100,11 @@
                 <!--*************************************** ensino tecnico ***********************************************-->
                 <div class="col-md-3" id="curso_tecnico">
                     <label class="form-check-label" for="flexCheckIndeterminate">Nome do Curso </label>
-                    <input type="text" class="form-control form-control-sm" name="curso" placeholder="">
+                    <input type="text" class="form-control form-control-sm" name="curso" id="curso" placeholder="">
                 </div>
                 <div class="col-md-2" id="semetre">
                     <label class="form-check-label" for="flexCheckIndeterminate">Semestre em Curso </label>
-                    <select class="form-select form-select-sm" name="semetre" aria-label="Default select example">
+                    <select class="form-select form-select-sm" name="semetre" id="semetre" aria-label="Default select example">
                         <option selected></option>
                         <option value="1">1º Semestre</option>
                         <option value="2">2º Semestre</option>
@@ -116,11 +116,11 @@
                 <!--*************************************** ensino superior ***********************************************-->
                 <div class="col-md-3" id="curso_superior">
                     <label class="form-check-label" for="flexCheckIndeterminate">Nome do Curso </label>
-                    <input type="text" class="form-control form-control-sm" name="superior" placeholder="">
+                    <input type="text" class="form-control form-control-sm" name="superior" id="superior" placeholder="">
                 </div>
                 <div class="col-md-2" id="periodo_superior">
                     <label class="form-check-label" for="flexCheckIndeterminate">Périodo em Curso </label>
-                    <select class="form-select form-select-sm" name="periodo" aria-label="Default select example">
+                    <select class="form-select form-select-sm" name="periodo_curso" id="periodo_curso" aria-label="Default select example">
                         <option selected></option>
                         <option value="1">1º Périodo</option>
                         <option value="2">2º Périodo</option>
@@ -140,11 +140,11 @@
                 <!--*************************************** Pós graduação ***********************************************-->
                 <div class="col-md-3" id="curso_pos">
                     <label class="form-check-label" for="flexCheckIndeterminate">Nome do Curso </label>
-                    <input type="text" class="form-control form-control-sm" name="pos" placeholder="">
+                    <input type="text" class="form-control form-control-sm" name="pos" id="pos" placeholder="">
                 </div>
                 <div class="col-md-2" id="modulo_pos">
                     <label class="form-check-label" for="flexCheckIndeterminate">Modulo da Pós </label>
-                    <select class="form-select form-select-sm" name="periodo" aria-label="Default select example">
+                    <select class="form-select form-select-sm" name="periodo_pos" id="periodo_pos" aria-label="Default select example">
                         <option selected></option>
                         <option value="1">1º Modulo</option>
                         <option value="2">2º Modulo</option>
@@ -163,30 +163,30 @@
 
                 <div class="col-md-3">
                     <label class="form-check-label" for="flexCheckIndeterminate">Bairro </label>
-                    <input type="text" class="form-control form-select-sm" name="bairro" placeholder="">
+                    <input type="text" class="form-control form-select-sm" name="bairro" id="bairro" placeholder="">
                 </div>
                 <div class="col-md-2">
                     <label class="form-check-label" for="flexCheckIndeterminate">Idioma</label>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="ingle">
+                        <input class="form-check-input" type="checkbox" value="" id="ingle" name="ingle">
                         <label class="form-check-label" for="flexCheckDefault">
                             Inglês
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="espanhol">
+                        <input class="form-check-input" type="checkbox" value="" id="espanhol" name="espanhol">
                         <label class="form-check-label" for="flexCheckChecked">
                             Espanhol
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="frances">
+                        <input class="form-check-input" type="checkbox" value="" id="frances" name="frances">
                         <label class="form-check-label" for="flexCheckChecked">
                             Francês
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="outros">
+                        <input class="form-check-input" type="checkbox" value="" id="outros" name="outros">
                         <label class="form-check-label" for="flexCheckChecked">
                             Outros
                         </label>
@@ -401,7 +401,7 @@
                 <div class="col-md-2">
                     <label class="form-check-label" for="flexCheckIndeterminate">PCD</label>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="pcd" id="exampleRadios2" value="s" checked>
+                        <input class="form-check-input" type="radio" name="pcd" id="exampleRadios2" value="s">
                         <label class="form-check-label" for="exampleRadios2">
                             Sim
                         </label>
