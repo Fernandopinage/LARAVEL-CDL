@@ -15,7 +15,7 @@ class Vagas extends Migration
     {
                     // Anuncio de Vagas 
 
-        Schema::create('TBL_VAGAS', function (Blueprint $table) {
+        Schema::create('tbl_vagas', function (Blueprint $table) {
             $table->increments('vag_id');      // id auto increment
             $table->date('vag_data_inicio')->nullable();            // data de inicio da publicação vaga
             $table->date('vag_data_final')->nullable();             // data final da publicação vaga  

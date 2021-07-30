@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Empresa;
+use App\Models\Vagas;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -283,10 +284,9 @@ class EmpresaController extends Controller
 
     public function filtrarCandidato(Request $request)
     {        
-
-            //dd($request);
-
-            //$buscar =
+            // filtra candidados 
+            $buscar = Vagas::where('vag_cargo',$request->area ,'vag_experiencia',$request->experiencia);
+            
     }
 
     public function logout(Request $request){

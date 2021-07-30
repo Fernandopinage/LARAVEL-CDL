@@ -10,7 +10,7 @@ class Vagas extends Model
     use HasFactory;
 
         // definindo a tabela 
-        protected $table = 'TBL_VAGAS';
+        protected $table = 'tbl_vagas';
 
         //  definindo chave primaria
         protected $primaryKey = 'vag_id';
