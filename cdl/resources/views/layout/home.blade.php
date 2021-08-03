@@ -91,8 +91,8 @@
         </div>
     </div>
     <div class="container" id="container">
-        <div class="row">
-            <div class="col-sm-4">
+        <div class="row gx-6">
+            <div class="col-lg-4">
                 <div class="card" style="width: 25rem;  margin-right: 50px;">
                     <img class="card-img-top" src="/img/index-1.jpg" alt="Imagem de capa do card">
                     <div class="card-body" style="text-align: center">
@@ -107,7 +107,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-sm-4">
+            <div class="col-lg-4">
                 <div class="card" style="width: 25rem;">
                     <img class="card-img-top" src="/img/index-2.jpg" alt="Imagem de capa do card">
                     <div class="card-body">
@@ -121,7 +121,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-sm-4">
+            <div class="col-lg-4">
                 <div class="card" style="width: 25rem;">
                     <img class="card-img-top" src="/img/index-3.jpg" alt="Imagem de capa do card">
                     <div class="card-body">
