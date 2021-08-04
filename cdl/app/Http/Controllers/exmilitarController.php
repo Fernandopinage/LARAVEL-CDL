@@ -16,19 +16,9 @@ class exmilitarController extends Controller
         return view('exmilitar');
     }
 
-    public function formularioMilitar(){
-
-        return view('add_militar');
-
-    }
-
     public function create()
     {
         //
-
-
-
-
     }
 
     /**

@@ -15,7 +15,7 @@ class Oms extends Migration
     {
         // cadastro de OMS
 
-        Schema::create('TBL_OMS', function (Blueprint $table) {
+        Schema::create('tbl_oms', function (Blueprint $table) {
             $table->integer('oms_id')->unsigned();      //  chave primaria auto incremento
             $table->string('oms_nome',100);             //  Nome da unidade
             $table->string('oms_razao',100);            //  razao social

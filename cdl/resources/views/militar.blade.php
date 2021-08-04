@@ -4,7 +4,7 @@
     
 <form class="form-signin" method="POST" action="">
     <div class="text-center">
-        <h2 class="form-signin-heading">OM's</h2>
+        <h2 class="form-signin-heading">OM'S</h2>
         <hr>
     </div>
     <div class="mb-3">
@@ -18,7 +18,7 @@
             <a class="nav-link" href="#">Esqueci minha senha</a>
         </div>
         <div class="col">
-            <a class="nav-link" href="{{('/add/militar/')}}">Criar uma conta</a>
+            <a class="nav-link" href="{{('/add/oms/')}}">Criar uma conta</a>
         </div>
     </div>
 
