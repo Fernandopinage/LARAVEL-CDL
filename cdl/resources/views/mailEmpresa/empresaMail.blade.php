@@ -12,39 +12,8 @@
 </head>
 
 <body>
-    <style>
-        .body {
-
-            width: 800px;
-            margin: auto;
-            margin-top: 150px;
-            width: 50%;
-            border: 0px solid;
-            padding: 10px;
-
-        }
-
-        .body #chamado {
-            font-size: 70px;
-            padding: 5px;
-            color: #284D92;
-            font-family: fantasy;
-        }
-
-
-        .body #empresa {
-
-            font-size: 50px;
-            font-family: Georgia, Verdana, sans-serif;
-        }
-
-        .body #recuperar {
-            font-size: 30px;
-            font-family: Monospace;
-            color: rgba(0, 0, 0, 0.671);
-            font-family: Georgia, Verdana, sans-serif;
-        }
-    </style>
+    
+    
     <div>
         <nav class="navbar navbar " style="background-color: #284D92">
             <div class="container-fluid">
@@ -53,8 +22,8 @@
         </nav>
     </div>
     <div class="body">
-        <p class="text-start"><span id="chamado" style="font-size: 70px;padding: 5px;color: #284D92;font-family: fantasy;">Olá</span><span id="empresa" style="font-size: 50px;font-family: Georgia, Verdana, sans-serif;">,{{$inputs->emp_fantasia}}.<span></p>
-        <p class="text-start"><span id="recuperar">Recuperar senha</span></p>
+        <p class="text-start"><span>Olá</span><span>,{{$inputs->emp_fantasia}}.<span></p>
+        <p class="text-start"><span>Recuperar senha</span></p>
         <p>Não lembra sua senha?</p>
         <p>Por Favor, <a href="">Clique aqui</a> é cadastre uma nova senha. </p>
     </div>
