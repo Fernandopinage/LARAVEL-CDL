@@ -2,14 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\empresaMail;
 use App\Models\Empresa;
 use App\Models\Vagas;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Redirect;
 use phpDocumentor\Reflection\Types\Void_;
 use Session;
+use stdClass;
 
 class EmpresaController extends Controller
 {
@@ -214,9 +217,18 @@ class EmpresaController extends Controller
     public function redefinir(Request $Request)
     {
 
-            echo $Request->email; // email enviado pelo formulario 
+                $this->validate($Request,[
+                    'email' => 'required'
+                ]);
 
+                $empresa = Empresa::where('emp_email', $Request->email)->first();  // pegando os dados da empresa EMAIL NOME
+                $email = $empresa->emp_email;
+                $nome = $empresa->emp_fantasia;
+               // dd($empresa->emp_email);
+           
+               Mail::to($Request->email)->send(new empresaMail(Empresa::where('emp_email', $Request->email)->first()));
             
+                
     }
 
     public function alterarSenha()
