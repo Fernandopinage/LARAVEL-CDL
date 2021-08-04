@@ -37,6 +37,10 @@ class empresaMail extends Mailable
         $this->subject(subject:'Sua senha foi redefinida');
         $this->to(address: $this->inputs->emp_email ,name: $this->inputs->emp_fantasia);
         
-        return $this->view('mailEmpresa.empresaMail');
+        return $this->view('mailEmpresa.empresaMail',[
+
+            'inputs' => $this->inputs
+
+        ]);
     }
 }
