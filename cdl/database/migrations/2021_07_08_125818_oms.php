@@ -19,7 +19,7 @@ class Oms extends Migration
             $table->integer('oms_id')->unsigned();      //  chave primaria auto incremento
             $table->string('oms_nome',100);             //  Nome da unidade
             $table->string('oms_razao',100);            //  razao social
-            $table->string('oms_cnpj',14);              //  cnpj 
+           // $table->string('oms_cnpj',14);              //  cnpj 
             $table->string('oms_tecnico',100);          //  nome do contato tecnico
             $table->string('oms_email',100);            //  e-mail do contato tecnico
             $table->string('oms_telefone',14);          //  telefone
