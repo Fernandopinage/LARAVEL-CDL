@@ -1,0 +1,72 @@
+#logo{
+    
+    width: 150px;
+    height: 60px;
+    
+  }
+  
+    #menu{
+      padding: 12px;
+      background-color: #284D92;
+  }
+  
+    .form-signin {
+      /*max-width: 1280px;*/
+      padding: 15px 5px 45px 15px;
+      margin:  auto;
+      margin-top: 50px;
+      /*margin-left: 10px;*/
+      /*background-color: #242966;*/
+      box-shadow: 3px 3px 4px 2px rgba(0, 0, 0, 0.342);
+      border-radius: 0px;
+    
+    }
+  
+  
+  
+    a:link{
+      
+      color: #523617;
+    }
+    a:hover {
+      text-decoration: none;
+      color: black;
+    }
+    hr{
+      color: #284D92;
+    }
+    h2{
+      color: #284D92;
+    }
+    .nav-link{
+        color: #fff;
+    }
+    .nav-link:hover{
+  
+      color: #fff;
+    }
+  
+    .photo{
+     /* background: url('/img/man2-candidato1.png'); */
+      position:relative;
+      margin-top: -370px;
+      float: right;
+      width:500px;
+      height: 500px;
+      background-color: #fff;
+      background-size: cover;
+      border: 0px solid rgb(22, 22, 22);
+  }
+    @media only screen and (max-width: 1200px) {
+      .photo{
+          display:none;
+      }
+  }
+
+  span{
+
+    color: red;
+  }
+
+
+  

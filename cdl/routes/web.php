@@ -49,6 +49,9 @@ Route::get('/empresa/redefinir',function(){
 
     return view("mailEmpresa.empresaMail");
 });
+Route::get('/vagas/disponivel/',function (){
+    return view('vagas_disponivel');
+});
 Route::post('/redefinir/senha/empresa', [EmpresaController::class, 'redefinir']);
 Route::get('/alterar/senha/empresa', [EmpresaController::class, 'alterarSenha']); // redefinir senha da empresa
 Route::post('/modificar/senha/empresa', [EmpresaController::class, 'modificarSenha']); // alterando senha da empresa
