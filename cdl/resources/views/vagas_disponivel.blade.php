@@ -21,11 +21,11 @@
                             <p>
                                 <hr>
                                 <h6> 
-                                    <span style="color: #157347; margin-right:132px">Data de inicio</span><span>{{\Carbon\Carbon::parse($vagas->vag_data_inicio)->format('d/m/Y')}}</span>
+                                    <span style="color: #157347; margin-right:132px">Data de inicio</span><span  style="color: #696969;">{{\Carbon\Carbon::parse($vagas->vag_data_inicio)->format('d/m/Y')}}</span>
                                     <br>
-                                    <span style="color: #97212d; margin-right:110px">Data do Termino</span><span>{{\Carbon\Carbon::parse($vagas->vag_data_final)->format('d/m/Y')}}</span>
+                                    <span style="color: #97212d; margin-right:110px">Data do Termino</span><span   style="color: #696969">{{\Carbon\Carbon::parse($vagas->vag_data_final)->format('d/m/Y')}}</span>
                                     <br>
-                                    <span style="color: #97212d; margin-right:185px">Tipo de vaga:</span> <span>{{$vagas->vag_tipo}}<span>
+                                    <span style="color: #22427c; margin-right:185px">Tipo de vaga:</span> <span   style="color: #696969;">{{$vagas->vag_tipo}}<span>
                                 </h6>
 
                                 <div class="text-center" style="margin-top: 20px;">
