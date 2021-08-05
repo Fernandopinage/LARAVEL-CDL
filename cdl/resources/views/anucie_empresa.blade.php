@@ -29,7 +29,28 @@
                 </div>
                 <div class="col-md-4">
                     <label class="form-check-label" for="flexCheckIndeterminate">Cargo/Função <span><strong>*</strong></span></label>
-                    <input type="text" name="cargo" class="form-control form-control-sm" placeholder="">
+                    <select class="form-select form-select-sm" name="cargo" id="cargo" aria-label="Default select example">
+                        <option selected></option>
+                        <option value="Recursos Humanos">Recursos Humanos</option>
+                        <option value="Área Comercial">Área Comercial</option>
+                        <option value="Almoxarifado">Almoxarifado</option>
+                        <option value="Produção">Produção</option>
+                        <option value="Estoque">Estoque</option>
+                        <option value="Compras">Compras</option>
+                        <option value="Tecnologia da Informação">Tecnologia da Informação</option>
+                        <option value="Qualidade">Qualidade</option>
+                        <option value="Planejamento">Planejamento</option>
+                        <option value="Secretariado">Secretariado</option>
+                        <option value="Designer">Designer</option>
+                        <option value="Comunicação">Comunicação</option>
+                        <option value="Jurídico">Jurídico</option>
+                        <option value="Serviço Social">Serviço Social</option>
+                        <option value="Segurança do Trabalho">Segurança do Trabalho</option>
+                        <option value="Telemarketing">Telemarketing</option>
+                        <option value="Cobrança">Cobrança</option>
+                        <option value="Área da Saúde">Área da Saúde</option>
+                        <option value="Vigilância">Vigilância</option>
+                    </select>
                 </div>
                 <div class="col-md-3">
                     <label class="form-check-label" for="flexCheckIndeterminate">Tipo de Vaga  <span><strong>*</strong></span></label>
