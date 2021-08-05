@@ -38,6 +38,7 @@ Route::get('add/candidato', [CandidatoController::class, 'formularioCandidato'])
 Route::get('login/empresa', [EmpresaController::class, 'index'])->name('login/empresa'); // chamando tela de login da empresa
 
 //Route::middleware(['empresaGrupo'])->group(function () {
+Route::get('/vagas/disponivel/',[EmpresaController::class, 'vagasDisponiveis']);
 Route::get('home/empresa', [EmpresaController::class, 'home']);   //  redirecinando para tela home   
 Route::post('/validar/empresa', [EmpresaController::class, 'validarLogin']); // tela de login da empresa 
 Route::get('add/empresa', [EmpresaController::class, 'formularioEmpresa']); // tela de formulario cadastro de empresa
@@ -48,9 +49,6 @@ Route::get('/redefinir/empresa', [EmpresaController::class, 'redefinirSenha']); 
 Route::get('/empresa/redefinir',function(){
 
     return view("mailEmpresa.empresaMail");
-});
-Route::get('/vagas/disponivel/',function (){
-    return view('vagas_disponivel');
 });
 Route::post('/redefinir/senha/empresa', [EmpresaController::class, 'redefinir']);
 Route::get('/alterar/senha/empresa', [EmpresaController::class, 'alterarSenha']); // redefinir senha da empresa

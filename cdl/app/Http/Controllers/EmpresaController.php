@@ -55,6 +55,15 @@ class EmpresaController extends Controller
         return view('empresa');
     }
 
+    public function vagasDisponiveis(){
+
+        $vagas = Vagas::where('vag_oculta','N')->get();
+        //dd($vagas);
+
+        return view('vagas_disponivel',compact('vagas'));
+
+    }
+
     public function home()
     {
 
@@ -132,6 +141,8 @@ class EmpresaController extends Controller
 
     public function show($id)
     {
+
+
     }
 
 

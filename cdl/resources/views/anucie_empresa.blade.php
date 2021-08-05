@@ -56,12 +56,12 @@
                     <label class="form-check-label" for="flexCheckIndeterminate">Tipo de Vaga  <span><strong>*</strong></span></label>
                     <select class="form-select form-select-sm" name="tipo" aria-label="Default select example">
                         <option selected></option>
-                        <option value="1">CLT</option>
-                        <option value="2">PJ</option>
-                        <option value="3">Temporário</option>
-                        <option value="4">Menor Aprendiz</option>
-                        <option value="5">Estágio</option>
-                        <option value="5">Trainee</option>
+                        <option value="CLT">CLT</option>
+                        <option value="PJ">PJ</option>
+                        <option value="Temporário">Temporário</option>
+                        <option value="Menor Aprendiz">Menor Aprendiz</option>
+                        <option value="Estágio">Estágio</option>
+                        <option value="Trainee">Trainee</option>
                     </select>
                 </div>
                 <div class="col-md-2">
