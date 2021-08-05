@@ -207,7 +207,7 @@
                 <div class="col-md-2">
                     <label class="form-check-label" for="flexCheckIndeterminate"> Exibir nome da Empresa </span></label>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="N" name="exibir_empresa" id="flexCheckDefault">
+                        <input class="form-check-input" type="checkbox" value="S" name="exibir_empresa" id="flexCheckDefault">
                         <label class="form-check-label" for="flexCheckDefault">
                         
                         </label>

@@ -46,6 +46,13 @@
 
       </div>
       <ul class="nav justify-content-end">
+        <button type="button" class="btn btn position-relative" style="background-color:#F8F9FA; margin-right:10px">
+          <img src="/icons/outline_notifications_black_24dp.png"> 
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+            99+
+            <span class="visually-hidden">unread messages</span>
+          </span>
+        </button>
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#"><img src="/icons/facebook.png"></a>
         </li>

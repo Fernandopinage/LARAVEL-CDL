@@ -26,11 +26,29 @@ $empresa;
             <hr>
         </div>
         <div class="text-end">
-            <!-- checked -->
-            <label for="floatingInput">
+            <!-- checked <img src="/icons/outline_help_outline_black_24dp.png">  -->
+            <label for="floatingInput" style="padding-right:5px; ">
                 <input class="form-check-input mt-0" type="checkbox" name="desativar" id="desativar" value="">
-               <span id="des_empresa"> DESATIVAR EMPRESA <span>
+                <span id="des_empresa"> DESATIVAR EMPRESA <span>
             </label>
+            <img data-bs-toggle="modal" data-bs-target="#exampleModal" id="help"
+                src="/icons/photo4927315340036254278.jpg"
+                title="Inativando sua conta, você está declarando em não ter interesse em receber mais propostas de empregos e nem anunciar vagas, ou seja, sua conta será apta somente à visualizar vagas e candidatos">
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Inativando sua conta, você está declarando em não ter interesse em receber mais propostas de empregos e nem anunciar vagas, ou seja, sua conta será apta somente à visualizar vagas e candidatos
+                    </div>
+
+                </div>
+            </div>
         </div>
 
         <div class="pessoais">
@@ -94,7 +112,8 @@ $empresa;
                         value="{{Hash::make($empresa->emp_senha)}}" placeholder="">
                 </div>
                 <div class="col-md-4">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Nome do Técnico <span><strong>*</strong></span></label>
+                    <label class="form-check-label" for="flexCheckIndeterminate">Nome do Técnico
+                        <span><strong>*</strong></span></label>
                     <input type="text" class="form-control form-control-sm" name="tecnico"
                         value="{{$empresa->emp_nome_contato}}" placeholder="">
                 </div>
@@ -255,7 +274,7 @@ $empresa;
         </div>
         <hr>
         <div class="text-end">
-            <input type="submit" class="btn btn-primary" value="Atualizar Registros">
+            <input type="submit" class="btn btn-primary" value="Atualizar Registros" style="background-color: #0d6efd;">
         </div>
         <span> Campos Obrigatórios <strong>*</strong></span>
     </div>
@@ -314,4 +333,3 @@ function mphone(v) {
 </script>
 
 <!-- ----------------------------------------------------------------- -->
-
