@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Mail\empresaMail;
+use App\Models\Candidato;
 use App\Models\Empresa;
 use App\Models\Vagas;
 use Illuminate\Http\Request;
@@ -288,17 +289,17 @@ class EmpresaController extends Controller
         }
     }
 
-    public function filtroEmpresa()
-    {                            // chamando tela de filtro candidato
-
+    public function filtroEmpresa() // chamando tela de filtro candidato
+    {                            
         return view('candidato_empresa');
     }
 
     public function filtrarCandidato(Request $request)
     {        
             // filtra candidados 
-            $buscar = Vagas::where('vag_cargo',$request->area ,'vag_experiencia',$request->experiencia);
-            
+            //$buscar = Candidato::where('vag_cargo',$request->area ,'vag_experiencia',$request->experiencia);
+            //dd($buscar);
+
     }
 
     public function logout(Request $request){

@@ -374,21 +374,21 @@
                 <div class="col-md-2" id="escrita_outros">
                     <label class="form-check-label" for="flexCheckIndeterminate">Nivel de Escrita</label>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="escrita_outros" id="leitura_outros"
+                        <input class="form-check-input" type="radio" name="escrita_outros" id="escrita_outros"
                             value="option1" checked>
                         <label class="form-check-label" for="leitura_outros">
                             Básico
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="escrita_outros" id="leitura_outros"
+                        <input class="form-check-input" type="radio" name="escrita_outros" id="escrita_outros"
                             value="option2">
                         <label class="form-check-label" for="leitura_outros">
                             Intermediário
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="escrita_outros" id="leitura_outros"
+                        <input class="form-check-input" type="radio" name="escrita_outros" id="escrita_outros"
                             value="option3">
                         <label class="form-check-label" for="leitura_outros">
                             Avançado
