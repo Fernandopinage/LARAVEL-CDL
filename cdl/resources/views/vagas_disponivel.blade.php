@@ -20,7 +20,7 @@
                             <span style="color: #284D92">{{$vagas->vag_cargo}}</span>
                             <p>
                                 <hr>
-                                <h6>
+                                <h6> 
                                     <span style="color: #157347; margin-right:132px">Data de inicio</span><span>{{\Carbon\Carbon::parse($vagas->vag_data_inicio)->format('d/m/Y')}}</span>
                                     <br>
                                     <span style="color: #97212d; margin-right:110px">Data do Termino</span><span>{{\Carbon\Carbon::parse($vagas->vag_data_final)->format('d/m/Y')}}</span>
