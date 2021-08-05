@@ -184,7 +184,7 @@
             </div>
             <div class="col-md-12" style="padding-top: 50px ">
                 <div class="text-center">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Termo de política <span><strong>*</strong></span></label>
+                    <label class="form-check-label" data-bs-toggle="modal" data-bs-target="#exampleModal" onmousedown="mouseDown()" onmouseup="mouseUp()" id="termo_politica">Termo de política <span><strong>*</strong></span></label>
                     <div class="form-check">
                         <input class="form-check-inpu" type="checkbox" value="S" name="termo" id="" value="{{old('termo')}}">
                     </div>
@@ -199,10 +199,42 @@
     </div>
 
 </form>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Termo de política </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          TERMO 
+        </div>
+
+      </div>
+    </div>
+  </div>
 @endsection
 
 
 <!-- *************************validando telefone ************** -->
+
+<script>
+function mouseDown() {
+  document.getElementById("termo_politica").style.color = "red";
+}
+
+function mouseUp() {
+  document.getElementById("termo_politica").style.color = "green";
+}
+
+
+</script>
+
+
 <script type="text/javascript">
 function mask(o, f) {
   setTimeout(function() {
