@@ -50,9 +50,9 @@ Route::get('/empresa/redefinir',function(){
 
     return view("mailEmpresa.empresaMail");
 });
-Route::get('/redefinir/password/{id}',function(){
+Route::get('/redefinir/password/{id}',function($id){
 
-    return view('redefinir_password');
+    return view('redefinir_password',['id'=> $id]);
 });
 
 Route::post('/redefinir/senha/empresa', [EmpresaController::class, 'redefinir']);
