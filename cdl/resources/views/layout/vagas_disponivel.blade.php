@@ -55,13 +55,13 @@
           </span>
         </button>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="https://pt-br.facebook.com/cdlmanausoficial/"><img src="/icons/facebook.png"></a>
+          <a class="nav-link active" aria-current="page" href="https://pt-br.facebook.com/cdlmanausoficial/"><img src="/icons/face.png" width="25px"></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="https://www.instagram.com/cdlmanaus/?hl=en"><img src="/icons/instagram.png"></a>
+          <a class="nav-link" href="https://www.instagram.com/cdlmanaus/?hl=en"><img src="/icons/insta.png" width="25px"></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="https://www.youtube.com/channel/UCyjD5GbQuRrztgyRxlVAZdQ"><img src="/icons/youtube.png"></a>
+          <a class="nav-link" href="https://www.youtube.com/channel/UCyjD5GbQuRrztgyRxlVAZdQ"><img src="/icons/yout.png" width="25px"></a>
         </li>
 
       </ul>

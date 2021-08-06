@@ -31,6 +31,7 @@ class Empresas extends Migration
             $table->string('emp_bairro',100)->nullable();           // Bairro da empresa
             $table->string('emp_cidade',30)->nullable();           // Cidade da empresa
             $table->string('emp_uf',2)->nullable();                 // UF da empresa 
+            $table->string('emp_complemento',200)->nullable();      //  complemento 
             $table->string('emp_nome_contato',100)->nullable();     // Nome do contato da empresa (obrigatorio)
             $table->string('emp_email_contato',100)->nullable();    // email do contato da empresa (obrigatorio)
             $table->string('emp_funcao',100)->nullable();           // chave estrangeira  de função/cargo

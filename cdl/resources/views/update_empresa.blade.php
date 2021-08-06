@@ -203,10 +203,13 @@ $empresa;
                     <input type="text" class="form-control form-control-sm" name="numero" id="numero"
                         value="{{$empresa->emp_numero}}" placeholder="">
                 </div>
-                <div class="col-md-10">
+                <div class="col-md-4">
+                    <label class="form-check-label" for="flexCheckIndeterminate">Logradouro</label>
+                    <input type="text" class="form-control form-control-sm" value="{{$empresa->emp_logrador}}" name="rua" id="rua" placeholder="" value="{{old('rua')}}">
+                </div>
+                <div class="col-md-6">
                     <label class="form-check-label" for="flexCheckIndeterminate">Complemento</label>
-                    <input type="text" class="form-control form-control-sm" name="rua" id="rua"
-                        value="{{$empresa->emp_rua}}" placeholder="">
+                    <input type="text" class="form-control form-control-sm" value="{{$empresa->emp_complemento}}" name="complemento" id="complemento" placeholder="" value="{{old('complemento')}}">
                 </div>
             </div>
 

@@ -120,6 +120,7 @@ class EmpresaController extends Controller
             $empresa->emp_bairro = $request->bairro;
             $empresa->emp_cidade = $request->cidade;
             $empresa->emp_uf = $request->uf;
+            $empresa->emp_complemento = $request->complemento;
             $empresa->emp_nome_contato = $request->tecnico;
             $empresa->emp_email_contato = $request->emailtecnico;
             $empresa->emp_chack_assoc = $request->associado;
@@ -186,6 +187,7 @@ class EmpresaController extends Controller
         $empresa->emp_bairro = $request->bairro;
         $empresa->emp_cidade = $request->cidade;
         $empresa->emp_uf = $request->uf;
+        $empresa->emp_complemento = $request->complemento;
         $empresa->emp_nome_contato = $request->tecnico;
         $empresa->emp_email_contato = $request->emailtecnico;
         $empresa->emp_chack_assoc = $request->associado;

@@ -127,9 +127,13 @@
                 <label class="form-check-label" for="flexCheckIndeterminate">Nº</label>
                 <input type="text" class="form-control form-control-sm" name="numero" id="numero" placeholder="" value="{{old('numero')}}">
             </div>
-            <div class="col-md-10">
-                <label class="form-check-label" for="flexCheckIndeterminate">Complemento</label>
+            <div class="col-md-4">
+                <label class="form-check-label" for="flexCheckIndeterminate">Logradouro</label>
                 <input type="text" class="form-control form-control-sm" name="rua" id="rua" placeholder="" value="{{old('rua')}}">
+            </div>
+            <div class="col-md-6">
+                <label class="form-check-label" for="flexCheckIndeterminate">Complemento</label>
+                <input type="text" class="form-control form-control-sm" name="complemento" id="complemento" placeholder="" value="{{old('complemento')}}">
             </div>
         </div>
         
