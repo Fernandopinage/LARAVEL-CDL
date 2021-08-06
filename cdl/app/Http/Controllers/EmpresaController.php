@@ -239,12 +239,14 @@ class EmpresaController extends Controller
                 ]);
 
                 $empresa = Empresa::where('emp_email', $Request->email)->first();  // pegando os dados da empresa EMAIL NOME
+                $id = $empresa->emp_id;
+                
                 $email = $empresa->emp_email;
                 $nome = $empresa->emp_fantasia;
                // dd($empresa->emp_email);
            
                Mail::to($Request->email)->send(new empresaMail(Empresa::where('emp_email', $Request->email)->first()));
-            
+                
                 
     }
 
@@ -315,6 +317,29 @@ class EmpresaController extends Controller
             // filtra candidados 
             //$buscar = Candidato::where('vag_cargo',$request->area ,'vag_experiencia',$request->experiencia);
             //dd($buscar);
+
+    }
+
+    public function recuperarSenha(Request $request){
+
+        $this->validate($request, [
+
+            'id' => 'required',
+            'newsenha' => 'required',
+            'confsenha' => 'required',
+
+        ]);
+
+        if($request->newsenha === $request->confsenha){
+
+            $empresa = Empresa::find($request->id);
+            $empresa->emp_senha = Hash::make($request->newsenha);
+            $empresa->save();
+            return redirect('/redefinir/password/'.$request->id)->with('mensagem', 'Sua senha foi alterado com sucesso!');
+            
+        }else{
+            echo "off";
+        }
 
     }
 
