@@ -4,7 +4,11 @@
 
 <form class="form-signin " action="empresa" method="POST">
 
-    <h1>Minhas Vagas</h1>
+
+    <div class="text">          
+        <h2 class="form-signin-heading">MINHAS VAGAS</h2>
+        <hr>
+    </div>
 
     @foreach($vagas as $vagas)
 

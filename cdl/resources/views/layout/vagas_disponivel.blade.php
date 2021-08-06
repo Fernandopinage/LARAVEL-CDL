@@ -21,7 +21,7 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="/anucio/empresa">Vagas disponivel</a>
+            <a class="nav-link" href="/anucio/empresa">Vagas disponíveis</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/anucio/empresa">Anúncio de vaga </a>
@@ -40,7 +40,7 @@
               <li>
                 <hr class="dropdown-divider">
               </li>
-              <li><a class="dropdown-item" href="#">Logout</a></li>
+              <li><a class="dropdown-item" href="/">Logout</a></li>
             </ul>
           </li>
         </ul>
