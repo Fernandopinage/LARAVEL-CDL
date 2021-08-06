@@ -14,7 +14,7 @@
         <input type="mail" class="form-control form-control" name="email" placeholder="email" required="" autofocus="" />
     </div>
     <div class="d-grid gap-2">
-        <input type="submit" class="btn-primary btn-lg" name="loginentrar" value="Entrar">
+        <input type="submit" class="btn-primary btn-lg" name="loginentrar" value="Enviar">
     </div>
     <div class="mensagem">
         

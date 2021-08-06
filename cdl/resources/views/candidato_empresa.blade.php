@@ -2,7 +2,7 @@
 
 @section('filtrocandidato')
 
-<form method="post" action="/add/candidato/empresa">
+<form method="get" action=""> <!-- /add/candidato/empresa -->
 
     @csrf
 
@@ -419,7 +419,9 @@
         </div>
         <hr>
         <div class="text-end">
-            <input type="submit" class="btn btn-primary" value="Buscar Candidatos">
+            <a href="" class="btn btn-secondary">Limpar Filtro</a>
+            <a href="" class="btn btn-success">Salvar Filtro</a>
+            <input type="submit" class="btn btn-primary" onclick="alert('Ainda não possui candidatos cadastrados')" value="Buscar Candidatos">
         </div>
     </div>
 
