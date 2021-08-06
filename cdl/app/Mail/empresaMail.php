@@ -34,8 +34,8 @@ class empresaMail extends Mailable
         
         // definir parametros do e-mail
       
-        $this->subject(subject:'Sua senha foi redefinida');
-        $this->to(address: $this->inputs->emp_email ,name: $this->inputs->emp_fantasia);
+        $this->subject('Sua senha foi redefinida');
+        $this->to($this->inputs->emp_email , $this->inputs->emp_fantasia);
 
 
         
