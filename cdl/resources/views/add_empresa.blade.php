@@ -124,7 +124,7 @@
                 <input type="text" class="form-control form-control-sm" name="bairro" id="bairro" placeholder="" value="{{old('bairro')}}">
             </div>
             <div class="col-md-2">
-                <label class="form-check-label" for="flexCheckIndeterminate">Nº</label>
+                <label class="form-check-label" for="flexCheckIndeterminate">Nº</label></label><span><strong>*</strong></span></label>
                 <input type="text" class="form-control form-control-sm" name="numero" id="numero" placeholder="" value="{{old('numero')}}">
             </div>
             <div class="col-md-4">

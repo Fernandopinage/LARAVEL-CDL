@@ -199,12 +199,12 @@ $empresa;
                         value="{{$empresa->emp_bairro}}" placeholder="">
                 </div>
                 <div class="col-md-2">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Nº</label>
+                    <label class="form-check-label" for="flexCheckIndeterminate">Nº</label></label><span><strong>*</strong></span></label>
                     <input type="text" class="form-control form-control-sm" name="numero" id="numero"
                         value="{{$empresa->emp_numero}}" placeholder="">
                 </div>
                 <div class="col-md-4">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Logradouro</label>
+                    <label class="form-check-label" for="flexCheckIndeterminate">Logradouro</label><span><strong>*</strong></span></label>
                     <input type="text" class="form-control form-control-sm" value="{{$empresa->emp_logrador}}" name="rua" id="rua" placeholder="" value="{{old('rua')}}">
                 </div>
                 <div class="col-md-6">

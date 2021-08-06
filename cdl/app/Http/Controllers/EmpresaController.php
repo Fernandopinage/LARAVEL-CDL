@@ -98,7 +98,8 @@ class EmpresaController extends Controller
             'cep' => 'required',
             'termo' => 'required',
             'funcao' => 'required',
-            'setor' => 'required'
+            'setor' => 'required',
+            'complemento' =>'required'
         ]);
         
         
@@ -169,7 +170,8 @@ class EmpresaController extends Controller
             'cep' => 'required',
             'termo' => 'required',
             'funcao' => 'required',
-            'setor' => 'required'
+            'setor' => 'required',
+            'complemento' => 'required'
         ]);
 
         $empresa = Empresa::find($id);    
