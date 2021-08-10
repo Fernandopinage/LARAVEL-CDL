@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link href="/css/add_militar.css" rel="stylesheet">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <title>Empregabilidade | CDL Manaus</title>
 </head>
 <body>
@@ -67,7 +68,13 @@
         @yield('add_militar')
 
     </div>
+  <!-- Mesagem de validação de campos  -->
 
+  @if ($errors->any())
+  <script>
+    Swal.fire({  position: 'center',  icon: 'warning',  title: 'Preencher todos os campos',  showConfirmButton: false,  timer: 1500  })
+  </script>
+  @endif
 
     <footer style="margin-top: 150px">
       <nav class="navbar fixed-bottom navbar-expand-sm navbar bg" style="background-color: #2D2C31">

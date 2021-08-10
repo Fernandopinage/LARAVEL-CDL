@@ -52,8 +52,6 @@ Route::get('/redefinir/password/{id}',function($id){
     return view('redefinir_password',['id'=> $id]);
 });
 Route::post('/recuperar/senha/',[EmpresaController::class, 'recuperarSenha']);
-
-
 Route::post('/redefinir/senha/empresa', [EmpresaController::class, 'redefinir']);
 Route::get('/alterar/senha/empresa', [EmpresaController::class, 'alterarSenha']); // redefinir senha da empresa
 Route::post('/modificar/senha/empresa', [EmpresaController::class, 'modificarSenha']); // alterando senha da empresa
@@ -68,6 +66,7 @@ Route::get('/logout/empresa/{id}', [EmpresaController::class, 'logout']);
 
 //Route::middleware(['oms'])->group(function () {
 Route::get('login/militar', [OmsController::class, 'index']); // chamando tela de index login OMS
+Route::post('/validar/oms',[OmsController::class,'validarOms']);
 Route::get('/add/oms/', [OmsController::class, 'formularioOms']); // add OMS
 Route::POST('/insert/oms/',[OmsController::class, 'store']);
 //});

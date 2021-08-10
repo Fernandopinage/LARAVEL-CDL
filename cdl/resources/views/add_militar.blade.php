@@ -1,7 +1,7 @@
 @extends('layout.add_militar')
 @section('add_militar')
 
-<form method="post" action={{('/insert/oms/')}} >
+<form method="post" action="/insert/oms/" >
 
     @csrf
 
@@ -60,9 +60,13 @@
                     <label class="form-check-label" for="flexCheckIndeterminate">Cidade <span><strong>*</strong></span></label>
                     <input type="text" class="form-control form-control-sm" name="cidade" placeholder="" value="{{old('cidade')}}">
                 </div>
-                <div class="col-md-7">
+                <div class="col-md-3">
                     <label class="form-check-label" for="flexCheckIndeterminate">Bairro <span><strong>*</strong></span></label>
                     <input type="text" class="form-control form-control-sm" name="bairro" placeholder="" value="{{old('bairro')}}">
+                </div>
+                <div class="col-md-4">
+                    <label class="form-check-label" for="flexCheckIndeterminate">Logradouro <span><strong>*</strong></span></label>
+                    <input type="text" class="form-control form-control-sm" name="logradouro" placeholder="" value="{{old('logradouro')}}">
                 </div>
                 <div class="col-md-2">
                     <label class="form-check-label" for="flexCheckIndeterminate">Nº <span><strong>*</strong></span></label>
