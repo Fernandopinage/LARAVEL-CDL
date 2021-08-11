@@ -43,7 +43,7 @@
                       </a>
                       <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="/login/militar">Entrar</a></li>
-                        <li><a class="dropdown-item" href="/busca/militar">Ex Militares</a></li>
+                        <li><a class="dropdown-item" href="/busca/militar">Buscar ex militares</a></li>
                        <!-- <li><hr class="dropdown-divider"></li> -->
                        
                       </ul>
@@ -64,15 +64,15 @@
         @yield('busca')
 
     </div>
-    <footer style="margin-top: 150px">
-      <nav class="navbar fixed-bottom navbar-expand-sm navbar bg" style="background-color: #284D92">
-          <div class="container" style="margin-top: 8px">
+    <footer>
+      <nav class="navbar fixed-bottom navbar-expand-sm navbar bg" style="background-color: #2D2C31">
+          <div class="container">
               <div class="col-6 input-group-sm">
                   <p class="text-start" style="color:#fff">Progride® é uma marca registrada © <?php echo date('Y')?>
                   </p>
               </div>
               <div class="col-6 input-group-sm">
-                  <p class="text-end" style="color:#fff">Desenvolvido por <img src="/icons/progride.png" width="25">
+                  <p class="text-end" style="color:#fff">Desenvolvido por <img src="/icons/progride.png" width="18">
                       Progride </p>
               </div>
 

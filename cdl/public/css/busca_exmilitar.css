@@ -1,5 +1,5 @@
 body{
-    background: repeat-y url('/img/Login_OMS.png') ;
+    background: repeat-y url('/img/login_m.jpg');
     background-size: cover; 
     background-attachment: fixed, scroll;
     background-repeat: no-repeat, repeat-y;
@@ -16,7 +16,7 @@ body{
   width: 150px;
   height: 60px;
 }
-
+/*
 .form-signin {
     max-width: 480px;
     padding: 35px 35px 45px 35px;
@@ -28,7 +28,17 @@ body{
     border-radius: 0px;
   
   }
+*/
+.form-signin{
 
+  background-color: #fff;
+  max-width: 1280px;
+  padding: 35px 35px 45px 35px;
+  margin:  auto;
+  box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.342);
+  border-radius: 8px;
+  
+}
   a:link{
     
     color: #523617;
@@ -40,13 +50,13 @@ body{
   hr{
     color: #523617;
   }
-
+/*
   #menu{
 
     padding: 30px;
     background-color: #525961cb;
   }
-
+*/
   .photo{
    /* background: url('/img/busca-militar.png'); */
     position:relative;

@@ -25,7 +25,6 @@ Route::get('/', [homeController::class, 'index']); // home do projeto
 
 /****************************************************************************************** */
 
-Route::get('busca/militar', [exmilitarController::class, 'index']); // chamando tela busca 
 
 /****************************************************************************************** */
 
@@ -38,7 +37,7 @@ Route::get('add/candidato', [CandidatoController::class, 'formularioCandidato'])
 Route::get('login/empresa', [EmpresaController::class, 'index'])->name('login/empresa'); // chamando tela de login da empresa
 
 //Route::middleware(['empresaGrupo'])->group(function () {
-Route::get('/vagas/disponivel/',[EmpresaController::class, 'vagasDisponiveis']);
+Route::get('/vagas/disponivel/', [EmpresaController::class, 'vagasDisponiveis']);
 Route::get('home/empresa', [EmpresaController::class, 'home']);   //  redirecinando para tela home   
 Route::post('/validar/empresa', [EmpresaController::class, 'validarLogin']); // tela de login da empresa 
 Route::get('add/empresa', [EmpresaController::class, 'formularioEmpresa']); // tela de formulario cadastro de empresa
@@ -46,12 +45,14 @@ Route::post('/insert/empresa', [EmpresaController::class, 'store']); // submeten
 Route::get('/edita/empresa/{id}', [EmpresaController::class, 'editaEmpresa']);  //tela de update de empresa
 Route::post('/update/empresa/{id}', [EmpresaController::class, 'update']);
 Route::get('/redefinir/empresa', [EmpresaController::class, 'redefinirSenha']); // chamando tela de redefinir senha
-Route::get('/empresa/redefinir',function(){   return view("mailEmpresa.empresaMail");});
-Route::get('/redefinir/password/{id}',function($id){
-
-    return view('redefinir_password',['id'=> $id]);
+Route::get('/empresa/redefinir', function () {
+    return view("mailEmpresa.empresaMail");
 });
-Route::post('/recuperar/senha/',[EmpresaController::class, 'recuperarSenha']);
+Route::get('/redefinir/password/{id}', function ($id) {
+
+    return view('redefinir_password', ['id' => $id]);
+});
+Route::post('/recuperar/senha/', [EmpresaController::class, 'recuperarSenha']);
 Route::post('/redefinir/senha/empresa', [EmpresaController::class, 'redefinir']);
 Route::get('/alterar/senha/empresa', [EmpresaController::class, 'alterarSenha']); // redefinir senha da empresa
 Route::post('/modificar/senha/empresa', [EmpresaController::class, 'modificarSenha']); // alterando senha da empresa
@@ -66,10 +67,11 @@ Route::get('/logout/empresa/{id}', [EmpresaController::class, 'logout']);
 
 //Route::middleware(['oms'])->group(function () {
 Route::get('login/militar', [OmsController::class, 'index']); // chamando tela de index login OMS
-Route::post('/validar/oms',[OmsController::class,'validarOms']);
+Route::post('/validar/oms', [OmsController::class, 'validarOms']);
 Route::get('/add/oms/', [OmsController::class, 'formularioOms']); // add OMS
-Route::POST('/insert/oms/',[OmsController::class, 'store']);
+Route::POST('/insert/oms/', [OmsController::class, 'store']);
 //});
+Route::get('busca/militar', [exmilitarController::class, 'index']); // chamando tela busca 
 
 
 
