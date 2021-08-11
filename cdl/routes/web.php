@@ -66,7 +66,8 @@ Route::get('/logout/empresa/{id}', [EmpresaController::class, 'logout']);
 //});
 
 //Route::middleware(['oms'])->group(function () {
-Route::get('login/militar', [OmsController::class, 'index']); // chamando tela de index login OMS
+Route::get('login/militar', [OmsController::class, 'login']); // chamando tela de index login OMS
+Route::get('/home/militar', [OmsController::class, 'home']);
 Route::post('/validar/oms', [OmsController::class, 'validarOms']);
 Route::get('/add/oms/', [OmsController::class, 'formularioOms']); // add OMS
 Route::POST('/insert/oms/', [OmsController::class, 'store']);

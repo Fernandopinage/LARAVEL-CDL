@@ -36,6 +36,12 @@ class OmsController extends Controller
         }
     }
 
+    public function home(){
+
+        return view('home_militar');
+    }
+
+
     public function store(Request $request)
     {
         $this->validate($request, [
@@ -78,7 +84,7 @@ class OmsController extends Controller
     }
 
 
-    public function index()
+    public function login()
     {
         return view('militar');
     }
