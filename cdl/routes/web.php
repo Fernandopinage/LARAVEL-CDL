@@ -70,9 +70,10 @@ Route::get('login/militar', [OmsController::class, 'index']); // chamando tela d
 Route::post('/validar/oms', [OmsController::class, 'validarOms']);
 Route::get('/add/oms/', [OmsController::class, 'formularioOms']); // add OMS
 Route::POST('/insert/oms/', [OmsController::class, 'store']);
-//});
 Route::get('busca/militar', [exmilitarController::class, 'index']); // chamando tela busca 
-
+Route::get('busca/militar/filtro/',[exmilitarController::class, 'buscarExmilitar']); // buscando candidato
+Route::get('busca/militar/filtro/{id}');
+//});
 
 
 Route::get('login/acesso', [acessoController::class, 'index']);   // tela de acesso area administrativa

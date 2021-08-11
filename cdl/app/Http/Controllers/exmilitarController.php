@@ -16,6 +16,14 @@ class exmilitarController extends Controller
         return view('exmilitar');
     }
 
+    public function buscarExmilitar(Request $request){
+
+        $request->buscar;
+        
+        return view('exmilitar_buscar', compact('request'));
+
+    }
+
     public function create()
     {
         //
