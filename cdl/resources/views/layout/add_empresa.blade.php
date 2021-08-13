@@ -131,10 +131,10 @@
   Swal.fire({
     position: 'center',
     icon: 'error',
-    title: 'Erro de Duplicidade',
-    text: 'Verifique se o CNPJ ou E-mail já foram cadastrados',
+    title: 'Erro',
+    text: 'CNPJ ou E-MAIL já cadastrado',
     showConfirmButton: false,
-    timer: 1500
+    timer: 3500
   })
   </script>
   @endif

@@ -144,7 +144,7 @@ class EmpresaController extends Controller
                 return redirect('add/empresa')->with('empresa_cadastro_erro', 'Erro');
             }
         } catch (\Throwable $th) {
-            return redirect('add/empresa')->with('duplicado','empresa_cadastro_erro', 'Erro');
+            return redirect('add/empresa')->with('duplicado','empresa_cadastro_erro');
         }
     }
 

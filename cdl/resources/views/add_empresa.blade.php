@@ -35,7 +35,7 @@
                         <span><strong>*</strong></span></label>
                     <input type="text" name="razao" id="razao" onchange="Razao()"
                         class="form-control form-control-sm is-invalid" placeholder="" value="{{old('razao')}}"
-                        required>
+                        required autofocus>
                 </div>
 
                 <div class="col-md-4">
@@ -359,6 +359,7 @@ if (document.getElementById('razao').value != null) {
 
 }
 if (document.getElementById('razao').value == '') {
+    document.getElementsByTagName('span').innerHTML= "Preenchar o campo obrigatorio"
     document.getElementById('razao').classList.remove('is-valid')
     document.getElementById('razao').classList.add('is-invalid')
 }
