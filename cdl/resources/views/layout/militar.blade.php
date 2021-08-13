@@ -31,8 +31,8 @@
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li><a class="dropdown-item" href="/login/candidato">Entrar</a></li>
-                <li><a class="dropdown-item" href="/busca/candidato">Buscar Vagas</a></li>
-
+                <li><a class="dropdown-item" href="">Buscar Vagas</a></li> <!-- "/busca/candidato"  remover quando for implementar -->
+                <!--<li><hr class="dropdown-divider"></li>-->
 
               </ul>
             </li>

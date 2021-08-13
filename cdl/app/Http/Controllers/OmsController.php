@@ -86,7 +86,7 @@ class OmsController extends Controller
 
     public function login()
     {
-        return view('militar');
+        return view('home');
     }
 
 
