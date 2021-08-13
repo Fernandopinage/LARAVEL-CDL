@@ -81,7 +81,7 @@
                     <label class="form-check-label" for="flexCheckIndeterminate">E-mail do Técnico
                         <span><strong>*</strong></span></label>
                     <input type="email" class="form-control form-control-sm is-invalid" name="emailtecnico"
-                        id="emailtecnico" onchange="mudar()" onchange="TecnicoMail()" placeholder=""
+                        id="emailtecnico" onchange="TecnicoMail()" onchange="TecnicoMail()" placeholder=""
                         value="{{old('email')}}" required>
                 </div>
                 <div class="col-md-4">
