@@ -55,14 +55,14 @@ class EmpresaController extends Controller
         return view('empresa');
     }
 
-    public function vagasDisponiveis(){
+    public function vagasDisponiveis()
+    {
 
-       //$vagas = Vagas::where('vag_oculta','N')->get();
+        //$vagas = Vagas::where('vag_oculta','N')->get();
         $vagas = Vagas::select('*')->get();
         //dd($vagas);
 
-        return view('vagas_disponivel',compact('vagas'));
-
+        return view('vagas_disponivel', compact('vagas'));
     }
 
     public function home()
@@ -88,6 +88,7 @@ class EmpresaController extends Controller
 
 
         // validando campos obrigatorios caso um dos campos esteja em banco nao inserir no banco de dados 
+        /*
        $this->validate($request, [
 
             'razao' => 'required',              //tabel  //campo
@@ -101,53 +102,57 @@ class EmpresaController extends Controller
             'setor' => 'required',
             'complemento' =>'required'
         ]);
-        
-       
+        */
+
         // Verificando se os campos de senhas são iguais     
-        if ($request->senha === $request->confirmar) {
 
-            
+        try {
 
-            $empresa = new Empresa();
-            $empresa->emp_logo = $request->logo;
-            $empresa->emp_fantasia = $request->fantasia;
-            $empresa->emp_email = $request->email;
-            $empresa->emp_razao = $request->razao;
-            $empresa->emp_cnpj = $request->cnpj;
-            $empresa->emp_atividade = $request->ramo;
-            $empresa->emp_telefone = $request->telefone;
-            $empresa->emp_celular = $request->telefone2;
-            $empresa->emp_cep = $request->cep;
-            $empresa->emp_logrador = $request->rua;
-            $empresa->emp_numero = $request->numero;
-            $empresa->emp_bairro = $request->bairro;
-            $empresa->emp_cidade = $request->cidade;
-            $empresa->emp_uf = $request->uf;
-            $empresa->emp_complemento = $request->complemento;
-            $empresa->emp_nome_contato = $request->tecnico;
-            $empresa->emp_email_contato = $request->emailtecnico;
-            $empresa->emp_chack_assoc = $request->associado;
-            $empresa->emp_cod_assoc = $request->cod;
-            $empresa->emp_senha = Hash::make($request->senha);
-            $empresa->emp_termo = $request->termo;
-            $empresa->emp_status = $request->status;
-            $empresa->emp_funcao = $request->funcao;
-            $empresa->emp_setor = $request->setor;
-            $empresa->emp_desativar = 'N';
-            $empresa->save();
 
-            //return View('add_empresa')->with('success','teste');
-            return redirect('/login/empresa')->with('empresa_cadastro', 'Produto cadastrado com sucesso!');
-        } else {
-            return redirect('add/empresa')->with('empresa_cadastro_erro', 'Erro');
+
+            if ($request->senha === $request->confirmar) {
+
+                $empresa = new Empresa();
+                $empresa->emp_logo = $request->logo;
+                $empresa->emp_fantasia = $request->fantasia;
+                $empresa->emp_email = $request->email;
+                $empresa->emp_razao = $request->razao;
+                $empresa->emp_cnpj = $request->cnpj;
+                $empresa->emp_atividade = $request->ramo;
+                $empresa->emp_telefone = $request->telefone;
+                $empresa->emp_celular = $request->telefone2;
+                $empresa->emp_cep = $request->cep;
+                $empresa->emp_logrador = $request->rua;
+                $empresa->emp_numero = $request->numero;
+                $empresa->emp_bairro = $request->bairro;
+                $empresa->emp_cidade = $request->cidade;
+                $empresa->emp_uf = $request->uf;
+                $empresa->emp_complemento = $request->complemento;
+                $empresa->emp_nome_contato = $request->tecnico;
+                $empresa->emp_email_contato = $request->emailtecnico;
+                $empresa->emp_chack_assoc = $request->associado;
+                $empresa->emp_cod_assoc = $request->cod;
+                $empresa->emp_senha = Hash::make($request->senha);
+                $empresa->emp_termo = $request->termo;
+                $empresa->emp_status = $request->status;
+                $empresa->emp_funcao = $request->funcao;
+                $empresa->emp_setor = $request->setor;
+                $empresa->emp_desativar = 'N';
+                $empresa->save();
+
+                //return View('add_empresa')->with('success','teste');
+                return redirect('/login/empresa')->with('empresa_cadastro', 'Produto cadastrado com sucesso!');
+            } else {
+                return redirect('add/empresa')->with('empresa_cadastro_erro', 'Erro');
+            }
+        } catch (\Throwable $th) {
+            echo $th;
         }
     }
 
 
     public function show($id)
     {
-
-
     }
 
 
@@ -176,7 +181,7 @@ class EmpresaController extends Controller
             'complemento' => 'required'
         ]);
 
-        $empresa = Empresa::find($id);    
+        $empresa = Empresa::find($id);
         $empresa->emp_logo = $request->logo;
         $empresa->emp_fantasia = $request->fantasia;
         $empresa->emp_email = $request->email;
@@ -206,7 +211,6 @@ class EmpresaController extends Controller
 
 
         return redirect('home/empresa')->with('mensagem', 'Produto cadastrado com sucesso!');
-        
     }
 
     public function editaEmpresa($id) //  edita empresa
@@ -236,20 +240,18 @@ class EmpresaController extends Controller
     public function redefinir(Request $Request)
     {
 
-                $this->validate($Request,[
-                    'email' => 'required'
-                ]);
+        $this->validate($Request, [
+            'email' => 'required'
+        ]);
 
-                $empresa = Empresa::where('emp_email', $Request->email)->first();  // pegando os dados da empresa EMAIL NOME
-                $id = $empresa->emp_id;
-                
-                $email = $empresa->emp_email;
-                $nome = $empresa->emp_fantasia;
-               // dd($empresa->emp_email);
-           
-               Mail::to($Request->email)->send(new empresaMail(Empresa::where('emp_email', $Request->email)->first()));
-                
-                
+        $empresa = Empresa::where('emp_email', $Request->email)->first();  // pegando os dados da empresa EMAIL NOME
+        $id = $empresa->emp_id;
+
+        $email = $empresa->emp_email;
+        $nome = $empresa->emp_fantasia;
+        // dd($empresa->emp_email);
+
+        Mail::to($Request->email)->send(new empresaMail(Empresa::where('emp_email', $Request->email)->first()));
     }
 
     public function alterarSenha()
@@ -310,19 +312,20 @@ class EmpresaController extends Controller
     }
 
     public function filtroEmpresa() // chamando tela de filtro candidato
-    {                            
+    {
         return view('candidato_empresa');
     }
 
     public function filtrarCandidato(Request $request)
-    {        
-            // filtra candidados 
-            //$buscar = Candidato::where('vag_cargo',$request->area ,'vag_experiencia',$request->experiencia);
-            //dd($buscar);
+    {
+        // filtra candidados 
+        //$buscar = Candidato::where('vag_cargo',$request->area ,'vag_experiencia',$request->experiencia);
+        //dd($buscar);
 
     }
 
-    public function recuperarSenha(Request $request){
+    public function recuperarSenha(Request $request)
+    {
 
         $this->validate($request, [
 
@@ -332,20 +335,19 @@ class EmpresaController extends Controller
 
         ]);
 
-        if($request->newsenha === $request->confsenha){
+        if ($request->newsenha === $request->confsenha) {
 
             $empresa = Empresa::find($request->id);
             $empresa->emp_senha = Hash::make($request->newsenha);
             $empresa->save();
-            return redirect('/redefinir/password/'.$request->id)->with('mensagem', 'Sua senha foi alterado com sucesso!');
-            
-        }else{
+            return redirect('/redefinir/password/' . $request->id)->with('mensagem', 'Sua senha foi alterado com sucesso!');
+        } else {
             echo "off";
         }
-
     }
 
-    public function logout(Request $request){
+    public function logout(Request $request)
+    {
 
         $request->session()->pull('empresa');
         return redirect('login/empresa');
