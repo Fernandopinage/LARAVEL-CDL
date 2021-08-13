@@ -106,6 +106,8 @@ class EmpresaController extends Controller
         // Verificando se os campos de senhas são iguais     
         if ($request->senha === $request->confirmar) {
 
+            
+
             $empresa = new Empresa();
             $empresa->emp_logo = $request->logo;
             $empresa->emp_fantasia = $request->fantasia;

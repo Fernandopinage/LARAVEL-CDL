@@ -31,7 +31,7 @@
 
                 <div class="col-md-4">
                     <label class="form-check-label" for="flexCheckIndeterminate">Razão Social <span><strong>*</strong></span></label>
-                    <input type="text" name="razao" class="form-control form-control-sm" placeholder="" value="{{old('razao')}}">
+                    <input type="text" name="razao" class="form-control form-control-sm" placeholder="" value="{{old('razao')}}" required>
                 </div>
 
                 <div class="col-md-4">
@@ -41,40 +41,40 @@
 
                 <div class="col-md-3">
                     <label class="form-check-label" for="flexCheckIndeterminate">CNPJ <span><strong>*</strong></span></label>
-                    <input type="text" class="form-control form-control-sm" onkeypress="return somenteNumeros(event)" onfocus="javascript: retirarFormatacao(this);" onblur="javascript: formatarCampo(this);" name="cnpj" id="cnpj" placeholder="99.999.999/9999-99" value="{{old('cnpj')}}">
+                    <input type="text" min="0" max="18" class="form-control form-control-sm" onkeypress="return somenteNumeros(event)" onfocus="javascript: retirarFormatacao(this);" onblur="javascript: formatarCampo(this);" name="cnpj" id="cnpj" placeholder="99.999.999/9999-99" value="{{old('cnpj')}}" required>
                 </div>
                 <div class="col-md-5">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Email da empresa <span><strong>*</strong></span></label>
-                    <input type="text" class="form-control form-control-sm" name="email" placeholder="" value="{{old('email')}}">
+                    <label class="form-check-label" for="flexCheckIndeterminate">E-mail da empresa <span><strong>*</strong></span></label>
+                    <input type="text" class="form-control form-control-sm" name="email" placeholder="" value="{{old('email')}}" required>
                 </div>
                 <div class="col-md-2">
                     <label class="form-check-label" for="flexCheckIndeterminate">Senha <span><strong>*</strong></span></label>
-                    <input type="password" class="form-control form-control-sm" name="senha" placeholder="" value="{{old('senha')}}">
+                    <input type="password" class="form-control form-control-sm" name="senha" placeholder="" value="{{old('senha')}}" required>
                 </div>
                 <div class="col-md-2">
                     <label class="form-check-label" for="flexCheckIndeterminate">Confirmar Senha <span><strong>*</strong></span></label>
-                    <input type="password" class="form-control form-control-sm" name="confirmar" placeholder="" value="{{old('confirmar')}}">
+                    <input type="password" class="form-control form-control-sm" name="confirmar" placeholder="" value="{{old('confirmar')}}" required>
                 </div>
                 <div class="col-md-4">
                     <label class="form-check-label" for="flexCheckIndeterminate">Nome do Técnico <span><strong>*</strong></span></label>
-                    <input type="text" class="form-control form-control-sm" name="tecnico" placeholder="" value="{{old('tecnico')}}">
+                    <input type="text" class="form-control form-control-sm" name="tecnico" placeholder="" value="{{old('tecnico')}}" required>
                 </div>
                 <div class="col-md-4">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Email do Técnico <span><strong>*</strong></span></label>
-                    <input type="text" class="form-control form-control-sm" name="emailtecnico" placeholder="EXEMPLO@EMAIL.COM" value="{{old('emailtecnico')}}">
+                    <label class="form-check-label" for="flexCheckIndeterminate">E-mail do Técnico <span><strong>*</strong></span></label>
+                    <input type="text" class="form-control form-control-sm" name="emailtecnico" placeholder="EXEMPLO@EMAIL.COM" value="{{old('emailtecnico')}}" required>
                 </div>
                 <div class="col-md-4">
                     <label class="form-check-label" for="flexCheckIndeterminate">Função/Cargo<span><strong>*</strong></span> </label>
-                    <input type="text" class="form-control form-control-sm" name="funcao" placeholder="" value="{{old('funcao')}}">
+                    <input type="text" class="form-control form-control-sm" name="funcao" placeholder="" value="{{old('funcao')}}" required>
                 </div>
                 <div class="col-md-3">
                     <label class="form-check-label" for="flexCheckIndeterminate">Setor/Departamento <span><strong>*</strong></span></label>
-                    <input type="text" class="form-control form-control-sm" name="setor" placeholder="" value="{{old('setor')}}">
+                    <input type="text" class="form-control form-control-sm" name="setor" placeholder="" value="{{old('setor')}}" required>
                 </div>
 
                 <div class="col-md-3">
                     <label class="form-check-label" for="flexCheckIndeterminate">Ramo de Atividade <span><strong>*</strong></span></label>
-                    <input type="text" class="form-control form-control-sm" name="ramo" placeholder="" value="{{old('ramo')}}">
+                    <input type="text" class="form-control form-control-sm" name="ramo" placeholder="" value="{{old('ramo')}}" required>
                 </div>
                 <div class="col-md-3">
                     <label class="form-check-label" for="flexCheckIndeterminate">Telefone</label>
@@ -109,23 +109,23 @@
         <div class="row g-3">
             <div class="col-md-2">
                 <label class="form-check-label" for="flexCheckIndeterminate">CEP <span><strong>*</strong></span></label>
-                <input type="text" class="form-control form-control-sm" name="cep" id="cep" placeholder="" value="{{old('cep')}}">
+                <input type="text" class="form-control form-control-sm" name="cep" id="cep" placeholder="" value="{{old('cep')}}" required>
             </div>
             <div class="col-md-1">
                 <label class="form-check-label" for="flexCheckIndeterminate">UF <span><strong>*</strong></span></label>
-                <input type="text" class="form-control form-control-sm" name="uf" id="uf" placeholder="" value="{{old('uf')}}">
+                <input type="text" class="form-control form-control-sm" name="uf" id="uf" placeholder="" value="{{old('uf')}}" required>
             </div>
             <div class="col-md-2">
                 <label class="form-check-label" for="flexCheckIndeterminate">Cidade <span><strong>*</strong></span></label>
-                <input type="text" class="form-control form-control-sm" name="cidade" id="cidade" placeholder="" value="{{old('cidade')}}">
+                <input type="text" class="form-control form-control-sm" name="cidade" id="cidade" placeholder="" value="{{old('cidade')}}" required>
             </div>
             <div class="col-md-7">
                 <label class="form-check-label" for="flexCheckIndeterminate">Bairro <span><strong>*</strong></span></label>
-                <input type="text" class="form-control form-control-sm" name="bairro" id="bairro" placeholder="" value="{{old('bairro')}}">
+                <input type="text" class="form-control form-control-sm" name="bairro" id="bairro" placeholder="" value="{{old('bairro')}}" required>
             </div>
             <div class="col-md-2">
                 <label class="form-check-label" for="flexCheckIndeterminate">Nº</label></label><span><strong>*</strong></span></label>
-                <input type="text" class="form-control form-control-sm" name="numero" id="numero" placeholder="" value="{{old('numero')}}">
+                <input type="text" class="form-control form-control-sm" name="numero" id="numero" placeholder="" value="{{old('numero')}}" required>
             </div>
             <div class="col-md-4">
                 <label class="form-check-label" for="flexCheckIndeterminate">Logradouro</label>
@@ -161,7 +161,7 @@
                 <input type="hidden" value="1" name="status"> <!-- campo responsavel por ativar empresa -->
                 <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="" id="asscdl" value="{{old('razao')}}">
-                    <label class="form-check-label" name="associado" id="associado"  for="flexCheckIndeterminate">Associado CDL manaus?</label>
+                    <label class="form-check-label" name="associado" id="associado"  for="flexCheckIndeterminate">Associado CDL Manaus?</label>
                 </div>
             </div>
             <div class="col-md-4" id="divcod">
@@ -190,7 +190,7 @@
                 <div class="text-center">
                     <label class="form-check-label" data-bs-toggle="modal" data-bs-target="#exampleModal" onmousedown="mouseDown()" onmouseup="mouseUp()" id="termo_politica">Termo de política <span><strong>*</strong></span></label>
                     <div class="form-check">
-                        <input class="form-check-inpu" type="checkbox" value="S" name="termo" id="" value="{{old('termo')}}">
+                        <input class="form-check-inpu" type="checkbox" value="S" name="termo" id="" value="{{old('termo')}}"required>
                     </div>
                 </div>
             </div> 
