@@ -93,7 +93,7 @@ class EmpresaController extends Controller
             'razao' => 'required',              //tabel  //campo
             'cnpj' => ['required', 'unique:tbl_empresas,emp_cnpj'],
             'ramo' => 'required',
-            'email' => 'required',
+            'email' => 'required|email|unique:users,email',
             'tecnico' => 'required',
             'cep' => 'required',
             'termo' => 'required',
@@ -102,7 +102,7 @@ class EmpresaController extends Controller
             'complemento' =>'required'
         ]);
         
-        
+       
         // Verificando se os campos de senhas são iguais     
         if ($request->senha === $request->confirmar) {
 
