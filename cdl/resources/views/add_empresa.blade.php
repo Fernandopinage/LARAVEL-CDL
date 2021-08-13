@@ -46,8 +46,8 @@
 
                 <div class="col-md-3">
                     <label class="form-check-label" for="flexCheckIndeterminate">CNPJ
-                        <span><strong>*</strong></span></label>
-                    <input type="text" min="0" max="18" onchange="Cnpj()"
+                        <span><strong>*</strong></span> <a style="font-size: 12px;color:red;">Digite sem os caracteres especiais</a></label>
+                    <input type="text" maxlength="14" onchange="Cnpj()"
                         class="form-control form-control-sm is-invalid" onkeypress="return somenteNumeros(event)"
                         onfocus="javascript: retirarFormatacao(this);" onblur="javascript: formatarCampo(this);"
                         name="cnpj" id="cnpj" placeholder="99.999.999/9999-99" value="{{old('cnpj')}}" required>
