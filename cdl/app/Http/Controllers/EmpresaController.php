@@ -108,8 +108,6 @@ class EmpresaController extends Controller
 
         try {
 
-
-
             if ($request->senha === $request->confirmar) {
 
                 $empresa = new Empresa();
@@ -146,7 +144,7 @@ class EmpresaController extends Controller
                 return redirect('add/empresa')->with('empresa_cadastro_erro', 'Erro');
             }
         } catch (\Throwable $th) {
-            echo $th;
+            return redirect('add/empresa')->with('duplicado','empresa_cadastro_erro', 'Erro');
         }
     }
 

@@ -44,7 +44,9 @@ $empresa;
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        Inativando sua conta, você está declarando em não ter interesse em receber mais propostas de empregos e nem anunciar vagas, ou seja, sua conta será apta somente à visualizar vagas e candidatos
+                        Inativando sua conta, você está declarando em não ter interesse em receber mais propostas de
+                        empregos e nem anunciar vagas, ou seja, sua conta será apta somente à visualizar vagas e
+                        candidatos
                     </div>
 
                 </div>
@@ -82,8 +84,8 @@ $empresa;
                 <div class="col-md-4">
                     <label class="form-check-label" for="flexCheckIndeterminate">Razão Social
                         <span><strong>*</strong></span></label>
-                    <input type="text" name="razao" value="{{$empresa->emp_razao}}" class="form-control form-control-sm"
-                        placeholder="">
+                    <input type="text" name="razao" onchange="Razao()" value="{{$empresa->emp_razao}}"
+                        class="form-control form-control-sm is-valid" placeholder="">
                 </div>
 
                 <div class="col-md-4">
@@ -95,26 +97,21 @@ $empresa;
                 <div class="col-md-3">
                     <label class="form-check-label" for="flexCheckIndeterminate">CNPJ
                         <span><strong>*</strong></span></label>
-                    <input type="text" class="form-control form-control-sm" value="{{$empresa->emp_cnpj}}"
-                        onfocus="javascript: retirarFormatacao(this);" onblur="javascript: formatarCampo(this);"
-                        name="cnpj" id="cnpj" placeholder="99.999.999/9999-99">
+                    <input type="text" maxlength="14" onchange="Cnpj()" class="form-control form-control-sm is-valid"
+                        onkeypress="return somenteNumeros(event)" onfocus="javascript: retirarFormatacao(this);"
+                        onblur="javascript: formatarCampo(this);" name="cnpj" id="cnpj" value="{{$empresa->emp_cnpj}}"
+                        placeholder="99.999.999/9999-99" value="{{old('cnpj')}}" required>
                 </div>
                 <div class="col-md-5">
                     <label class="form-check-label" for="flexCheckIndeterminate">Email da empresa
                         <span><strong>*</strong></span></label>
-                    <input type="text" class="form-control form-control-sm" value="{{$empresa->emp_email}}" name="email"
-                        placeholder="">
-                </div>
-                <div class="col-md-4">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Senha
-                        <span><strong>*</strong></span></label>
-                    <input type="password" class="form-control form-control-sm" name="senha"
-                        value="{{Hash::make($empresa->emp_senha)}}" placeholder="">
+                    <input type="text" onchange="Email()" class="form-control form-control-sm is-valid"
+                        value="{{$empresa->emp_email}}" name="email" placeholder="">
                 </div>
                 <div class="col-md-4">
                     <label class="form-check-label" for="flexCheckIndeterminate">Nome do Técnico
                         <span><strong>*</strong></span></label>
-                    <input type="text" class="form-control form-control-sm" name="tecnico"
+                    <input type="text" onchange="Tecnico()" class="form-control form-control-sm is-valid" name="tecnico"
                         value="{{$empresa->emp_nome_contato}}" placeholder="">
                 </div>
                 <div class="col-md-4">
@@ -127,7 +124,7 @@ $empresa;
                     <input type="text" class="form-control form-control-sm" name="funcao"
                         value="{{$empresa->emp_funcao}}" placeholder="">
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <label class="form-check-label" for="flexCheckIndeterminate">Setor/Departamento </label>
                     <input type="text" class="form-control form-control-sm" name="setor" value="{{$empresa->emp_setor}}"
                         placeholder="">
@@ -136,7 +133,7 @@ $empresa;
                 <div class="col-md-3">
                     <label class="form-check-label" for="flexCheckIndeterminate">Ramo de Atividade
                         <span><strong>*</strong></span></label>
-                    <input type="text" class="form-control form-control-sm" name="ramo"
+                    <input type="text" onchange="Ramo()" class="form-control form-control-sm is-valid" name="ramo"
                         value="{{$empresa->emp_atividade}}" placeholder="">
                 </div>
                 <div class="col-md-3">
@@ -177,39 +174,42 @@ $empresa;
                 <div class="col-md-2">
                     <label class="form-check-label" for="flexCheckIndeterminate">CEP
                         <span><strong>*</strong></span></label>
-                    <input type="text" class="form-control form-control-sm" name="cep" value="{{$empresa->emp_cep}}"
-                        id="cep" placeholder="">
+                    <input type="text" onchange="Cep()" class="form-control form-control-sm is-valid" name="cep"
+                        value="{{$empresa->emp_cep}}" id="cep" placeholder="">
                 </div>
                 <div class="col-md-1">
                     <label class="form-check-label" for="flexCheckIndeterminate">UF
                         <span><strong>*</strong></span></label>
-                    <input type="text" class="form-control form-control-sm" name="uf" value="{{$empresa->emp_uf}}"
-                        id="uf" placeholder="">
+                    <input type="text" onchange="Uf()" class="form-control form-control-sm is-valid" name="uf"
+                        value="{{$empresa->emp_uf}}" id="uf" placeholder="">
                 </div>
                 <div class="col-md-2">
                     <label class="form-check-label" for="flexCheckIndeterminate">Cidade
                         <span><strong>*</strong></span></label>
-                    <input type="text" class="form-control form-control-sm" name="cidade"
+                    <input type="text" onchange="Cidade()" class="form-control form-control-sm is-valid" name="cidade"
                         value="{{$empresa->emp_cidade}}" id="cidade" placeholder="">
                 </div>
                 <div class="col-md-7">
                     <label class="form-check-label" for="flexCheckIndeterminate">Bairro
                         <span><strong>*</strong></span></label>
-                    <input type="text" class="form-control form-control-sm" name="bairro" id="bairro"
-                        value="{{$empresa->emp_bairro}}" placeholder="">
+                    <input type="text" onchange="Bairo()" class="form-control form-control-sm is-valid" name="bairro"
+                        id="bairro" value="{{$empresa->emp_bairro}}" placeholder="">
                 </div>
                 <div class="col-md-2">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Nº</label></label><span><strong>*</strong></span></label>
-                    <input type="text" class="form-control form-control-sm" name="numero" id="numero"
-                        value="{{$empresa->emp_numero}}" placeholder="">
+                    <label class="form-check-label"
+                        for="flexCheckIndeterminate">Nº</label></label><span><strong>*</strong></span></label>
+                    <input type="text" onchange="Numero()" class="form-control form-control-sm is-valid" name="numero"
+                        id="numero" value="{{$empresa->emp_numero}}" placeholder="">
                 </div>
                 <div class="col-md-4">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Logradouro</label><span><strong>*</strong></span></label>
-                    <input type="text" class="form-control form-control-sm" value="{{$empresa->emp_logrador}}" name="rua" id="rua" placeholder="" value="{{old('rua')}}">
+                    <label class="form-check-label" for="flexCheckIndeterminate">Logradouro</label></label>
+                    <input type="text" class="form-control form-control-sm" value="{{$empresa->emp_logrador}}"
+                        name="rua" id="rua" placeholder="" value="{{old('rua')}}">
                 </div>
                 <div class="col-md-6">
                     <label class="form-check-label" for="flexCheckIndeterminate">Complemento</label>
-                    <input type="text" class="form-control form-control-sm" value="{{$empresa->emp_complemento}}" name="complemento" id="complemento" placeholder="" value="{{old('complemento')}}">
+                    <input type="text" class="form-control form-control-sm" value="{{$empresa->emp_complemento}}"
+                        name="complemento" id="complemento" placeholder="" value="{{old('complemento')}}">
                 </div>
             </div>
 
@@ -333,6 +333,233 @@ function mphone(v) {
     function mascaraCnpj(valor) {
         return valor.replace(/(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/g,"\$1.\$2.\$3\/\$4\-\$5");
     }
+
+    function somenteNumeros(e) {
+        var charCode = e.charCode ? e.charCode : e.keyCode;
+        // charCode 8 = backspace   
+        // charCode 9 = tab
+        if (charCode != 8 && charCode != 9) {
+            // charCode 48 equivale a 0   
+            // charCode 57 equivale a 9
+            if (charCode < 48 || charCode > 57) {
+                return false;
+            }
+        }
+    }
 </script>
 
 <!-- ----------------------------------------------------------------- -->
+
+<!-- -------------------------Validando campos obrigatorios--------------------------- -->
+
+
+<script>
+    function Razao() {
+
+if (document.getElementById('razao').value != null) {
+    document.getElementById('razao').classList.remove('is-invalid')
+    document.getElementById('razao').classList.add('is-valid')
+
+}
+if (document.getElementById('razao').value == '') {
+    document.getElementById('razao').classList.remove('is-valid')
+    document.getElementById('razao').classList.add('is-invalid')
+}
+
+}
+
+function Cnpj() {
+
+if (document.getElementById('cnpj').value != null) {
+    document.getElementById('cnpj').classList.remove('is-invalid')
+    document.getElementById('cnpj').classList.add('is-valid')
+
+}
+if (document.getElementById('cnpj').value == '') {
+    document.getElementById('cnpj').classList.remove('is-valid')
+    document.getElementById('cnpj').classList.add('is-invalid')
+}
+
+}
+
+
+function Email() {
+
+if (document.getElementById('email').value != null) {
+    document.getElementById('email').classList.remove('is-invalid')
+    document.getElementById('email').classList.add('is-valid')
+
+}
+if (document.getElementById('email').value == '') {
+    document.getElementById('email').classList.remove('is-valid')
+    document.getElementById('email').classList.add('is-invalid')
+}
+
+}
+
+function Senha() {
+
+if (document.getElementById('senha').value != null) {
+    document.getElementById('senha').classList.remove('is-invalid')
+    document.getElementById('senha').classList.add('is-valid')
+
+}
+if (document.getElementById('senha').value == '') {
+    document.getElementById('senha').classList.remove('is-valid')
+    document.getElementById('senha').classList.add('is-invalid')
+}
+
+}
+
+function Confirmar() {
+
+if (document.getElementById('confirmar').value != null) {
+    document.getElementById('confirmar').classList.remove('is-invalid')
+    document.getElementById('confirmar').classList.add('is-valid')
+
+}
+if (document.getElementById('confirmar').value == '') {
+    document.getElementById('confirmar').classList.remove('is-valid')
+    document.getElementById('confirmar').classList.add('is-invalid')
+}
+
+}
+
+
+function Tecnico() {
+
+if (document.getElementById('tecnico').value != null) {
+    document.getElementById('tecnico').classList.remove('is-invalid')
+    document.getElementById('tecnico').classList.add('is-valid')
+
+}
+if (document.getElementById('tecnico').value == '') {
+    document.getElementById('tecnico').classList.remove('is-valid')
+    document.getElementById('tecnico').classList.add('is-invalid')
+}
+}
+
+
+function Funcao() {
+
+if (document.getElementById('funcao').value != null) {
+    document.getElementById('funcao').classList.remove('is-invalid')
+    document.getElementById('funcao').classList.add('is-valid')
+
+}
+if (document.getElementById('funcao').value == '') {
+    document.getElementById('funcao').classList.remove('is-valid')
+    document.getElementById('funcao').classList.add('is-invalid')
+}
+}
+
+
+function Setor() {
+
+if (document.getElementById('setor').value != null) {
+    document.getElementById('setor').classList.remove('is-invalid')
+    document.getElementById('setor').classList.add('is-valid')
+
+}
+if (document.getElementById('setor').value == '') {
+    document.getElementById('setor').classList.remove('is-valid')
+    document.getElementById('setor').classList.add('is-invalid')
+}
+}
+
+function Ramo() {
+
+if (document.getElementById('ramo').value != null) {
+    document.getElementById('ramo').classList.remove('is-invalid')
+    document.getElementById('ramo').classList.add('is-valid')
+
+}
+if (document.getElementById('ramo').value == '') {
+    document.getElementById('ramo').classList.remove('is-valid')
+    document.getElementById('ramo').classList.add('is-invalid')
+}
+}
+
+function Cep() {
+
+if (document.getElementById('cep').value != null) {
+    document.getElementById('cep').classList.remove('is-invalid')
+    document.getElementById('cep').classList.add('is-valid')
+
+}
+if (document.getElementById('cep').value == '') {
+    document.getElementById('cep').classList.remove('is-valid')
+    document.getElementById('cep').classList.add('is-invalid')
+}
+}
+
+function Uf() {
+
+if (document.getElementById('uf').value != null) {
+    document.getElementById('uf').classList.remove('is-invalid')
+    document.getElementById('uf').classList.add('is-valid')
+
+}
+if (document.getElementById('uf').value == '') {
+    document.getElementById('uf').classList.remove('is-valid')
+    document.getElementById('uf').classList.add('is-invalid')
+}
+
+}
+
+function Cidade() {
+
+if (document.getElementById('cidade').value != null) {
+    document.getElementById('cidade').classList.remove('is-invalid')
+    document.getElementById('cidade').classList.add('is-valid')
+
+}
+if (document.getElementById('cidade').value == '') {
+    document.getElementById('cidade').classList.remove('is-valid')
+    document.getElementById('cidade').classList.add('is-invalid')
+}
+
+}
+
+function Bairro() {
+
+if (document.getElementById('bairro').value != null) {
+    document.getElementById('bairro').classList.remove('is-invalid')
+    document.getElementById('bairro').classList.add('is-valid')
+
+}
+if (document.getElementById('bairro').value == '') {
+    document.getElementById('bairro').classList.remove('is-valid')
+    document.getElementById('bairro').classList.add('is-invalid')
+}
+
+}
+
+
+function Numero() {
+
+if (document.getElementById('numero').value != null) {
+    document.getElementById('numero').classList.remove('is-invalid')
+    document.getElementById('numero').classList.add('is-valid')
+
+}
+if (document.getElementById('numero').value == '') {
+    document.getElementById('numero').classList.remove('is-valid')
+    document.getElementById('numero').classList.add('is-invalid')
+}
+
+}
+
+function TecnicoMail() {
+if (document.getElementById('emailtecnico').value != null) {
+    document.getElementById('emailtecnico').classList.remove('is-invalid')
+    document.getElementById('emailtecnico').classList.add('is-valid')
+
+}
+if (document.getElementById('emailtecnico').value == '') {
+    document.getElementById('emailtecnico').classList.remove('is-valid')
+    document.getElementById('emailtecnico').classList.add('is-invalid')
+}
+}
+
+</script>

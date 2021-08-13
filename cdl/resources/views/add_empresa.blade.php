@@ -57,7 +57,7 @@
                     <label class="form-check-label" for="flexCheckIndeterminate">E-mail da empresa
                         <span><strong>*</strong></span></label>
                     <input type="email" class="form-control form-control-sm is-invalid" name="email" id="email"
-                        onchange="Email()" placeholder="" value="{{old('email')}}" required>
+                    onfocusout="ValidandoEmail()"  onchange="Email()" placeholder="" value="{{old('email')}}" required>
                 </div>
                 <div class="col-md-2">
                     <label class="form-check-label" for="flexCheckIndeterminate">Senha

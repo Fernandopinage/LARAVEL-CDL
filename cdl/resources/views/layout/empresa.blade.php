@@ -126,7 +126,7 @@ Swal.fire({  position: 'center',  icon: 'warning',  title: 'Preencher todos os c
 Swal.fire({
   position: 'center',
   icon: 'success',
-  title: 'Empresa cadastrado com sucesso',
+  title: 'Empresa cadastrada com sucesso',
   showConfirmButton: false,
   timer: 2500
 })

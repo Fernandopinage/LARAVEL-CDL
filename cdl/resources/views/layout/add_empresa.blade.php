@@ -126,6 +126,18 @@
   </script>
   @endif
 
+  @if(session('duplicado'))
+  <script>
+  Swal.fire({
+    position: 'center',
+    icon: 'error',
+    title: 'Erro de Duplicidade',
+    text: 'Verifique se o CNPJ ou E-mail já foram cadastrados',
+    showConfirmButton: false,
+    timer: 1500
+  })
+  </script>
+  @endif
 
 
 <!-- Adicionando Javascript -->

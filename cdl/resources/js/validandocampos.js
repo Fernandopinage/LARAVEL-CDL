@@ -1,3 +1,4 @@
+
 function Razao() {
 
     if (document.getElementById('razao').value != null) {
