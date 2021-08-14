@@ -33,9 +33,9 @@
                 <div class="col-md-4">
                     <label class="form-check-label" for="flexCheckIndeterminate">Razão Social
                         <span><strong>*</strong></span></label>
-                    <input type="text" name="razao" id="razao" onchange="Razao()"
-                        class="form-control form-control-sm is-invalid" placeholder="" value="{{old('razao')}}" required
-                        autofocus>
+                    <input type="text" name="razao" id="razao" 
+                        class="form-control form-control-sm" placeholder="" value="{{old('razao')}}" required
+                        >
                 </div>
 
                 <div class="col-md-4">
@@ -48,7 +48,7 @@
                     <label class="form-check-label" for="flexCheckIndeterminate">CNPJ
                         <span><strong>*</strong></span> <a style="font-size: 12px;color:red;">Digite sem os caracteres
                             especiais</a></label>
-                    <input type="text" maxlength="14" onchange="Cnpj()" class="form-control form-control-sm is-invalid"
+                    <input type="text" maxlength="14"  class="form-control form-control-sm"
                         onkeypress="return somenteNumeros(event)" onfocus="javascript: retirarFormatacao(this);"
                         onblur="javascript: formatarCampo(this);" name="cnpj" id="cnpj" placeholder="99.999.999/9999-99"
                         value="{{old('cnpj')}}" required>
@@ -56,53 +56,53 @@
                 <div class="col-md-5">
                     <label class="form-check-label" for="flexCheckIndeterminate">E-mail da empresa
                         <span><strong>*</strong></span></label>
-                    <input type="email" class="form-control form-control-sm is-invalid" name="email" id="email"
-                        onfocusout="ValidandoEmail()" onchange="Email()" placeholder="" value="{{old('email')}}"
+                    <input type="email" class="form-control form-control-sm" name="email" id="email"
+                        onfocusout="ValidandoEmail()"  placeholder="" value="{{old('email')}}"
                         required>
                 </div>
                 <div class="col-md-2">
                     <label class="form-check-label" for="flexCheckIndeterminate">Senha
                         <span><strong>*</strong></span></label>
-                    <input type="password" class="form-control form-control-sm is-invalid" name="senha" id="senha"
-                        onchange="Senha()" placeholder="" value="{{old('senha')}}" required>
+                    <input type="password" class="form-control form-control-sm" name="senha" id="senha"
+                         placeholder="" value="{{old('senha')}}" required>
                 </div>
                 <div class="col-md-2">
                     <label class="form-check-label" for="flexCheckIndeterminate">Confirmar Senha
                         <span><strong>*</strong></span></label>
-                    <input type="password" class="form-control form-control-sm is-invalid" name="confirmar"
-                        id="confirmar" onchange="Confirmar()" placeholder="" value="{{old('confirmar')}}" required>
+                    <input type="password" class="form-control form-control-sm" name="confirmar"
+                        id="confirmar"  placeholder="" value="{{old('confirmar')}}" required>
                 </div>
                 <div class="col-md-4">
                     <label class="form-check-label" for="flexCheckIndeterminate">Nome do Técnico
                         <span><strong>*</strong></span></label>
-                    <input type="text" class="form-control form-control-sm is-invalid" name="tecnico" id="tecnico"
-                        onchange="Tecnico()" placeholder="" value="{{old('tecnico')}}" required>
+                    <input type="text" class="form-control form-control-sm" name="tecnico" id="tecnico"
+                         placeholder="" value="{{old('tecnico')}}" required>
                 </div>
                 <div class="col-md-4">
                     <label class="form-check-label" for="flexCheckIndeterminate">E-mail do Técnico
                         <span><strong>*</strong></span></label>
-                    <input type="email" class="form-control form-control-sm is-invalid" name="emailtecnico"
-                        id="emailtecnico" onchange="TecnicoMail()" onchange="TecnicoMail()" placeholder=""
+                    <input type="email" class="form-control form-control-sm" name="emailtecnico"
+                        id="emailtecnico"  placeholder=""
                         value="{{old('email')}}" required>
                 </div>
                 <div class="col-md-4">
                     <label class="form-check-label"
                         for="flexCheckIndeterminate">Função/Cargo<span><strong>*</strong></span> </label>
-                    <input type="text" class="form-control form-control-sm is-invalid" name="funcao" id="funcao"
-                        onchange="Funcao()" placeholder="" value="{{old('funcao')}}" required>
+                    <input type="text" class="form-control form-control-sm" name="funcao" id="funcao"
+                         placeholder="" value="{{old('funcao')}}" required>
                 </div>
                 <div class="col-md-3">
                     <label class="form-check-label" for="flexCheckIndeterminate">Setor/Departamento
                         <span><strong>*</strong></span></label>
-                    <input type="text" class="form-control form-control-sm is-invalid" name="setor" id="setor"
-                        onchange="Setor()" placeholder="" value="{{old('setor')}}" required>
+                    <input type="text" class="form-control form-control-sm" name="setor" id="setor"
+                         placeholder="" value="{{old('setor')}}" required>
                 </div>
 
                 <div class="col-md-3">
                     <label class="form-check-label" for="flexCheckIndeterminate">Ramo de Atividade
                         <span><strong>*</strong></span></label>
-                    <input type="text" class="form-control form-control-sm is-invalid" name="ramo" id="ramo"
-                        onchange="Ramo()" placeholder="" value="{{old('ramo')}}" required>
+                    <input type="text" class="form-control form-control-sm" name="ramo" id="ramo"
+                         placeholder="" value="{{old('ramo')}}" required>
                 </div>
                 <div class="col-md-3">
                     <label class="form-check-label" for="flexCheckIndeterminate">Telefone</label>
@@ -141,32 +141,32 @@
                 <div class="col-md-2">
                     <label class="form-check-label" for="flexCheckIndeterminate">CEP
                         <span><strong>*</strong></span></label>
-                    <input type="text" class="form-control form-control-sm is-invalid" name="cep" id="cep"
-                        onchange="Cep()" placeholder="" value="{{old('cep')}}" required>
+                    <input type="text" class="form-control form-control-sm" name="cep" id="cep"
+                         placeholder="" value="{{old('cep')}}" required>
                 </div>
                 <div class="col-md-1">
                     <label class="form-check-label" for="flexCheckIndeterminate">UF
                         <span><strong>*</strong></span></label>
-                    <input type="text" class="form-control form-control-sm is-invalid" name="uf" id="uf" onchange="Uf()"
+                    <input type="text" class="form-control form-control-sm" name="uf" id="uf" 
                         placeholder="" value="{{old('uf')}}" required>
                 </div>
                 <div class="col-md-2">
                     <label class="form-check-label" for="flexCheckIndeterminate">Cidade
                         <span><strong>*</strong></span></label>
-                    <input type="text" class="form-control form-control-sm is-invalid" name="cidade" id="cidade"
-                        onchange="Cidade()" placeholder="" value="{{old('cidade')}}" required>
+                    <input type="text" class="form-control form-control-sm" name="cidade" id="cidade"
+                         placeholder="" value="{{old('cidade')}}" required>
                 </div>
                 <div class="col-md-7">
                     <label class="form-check-label" for="flexCheckIndeterminate">Bairro
                         <span><strong>*</strong></span></label>
-                    <input type="text" class="form-control form-control-sm is-invalid" name="bairro" id="bairro"
-                        onchange="Bairro()" placeholder="" value="{{old('bairro')}}" required>
+                    <input type="text" class="form-control form-control-sm" name="bairro" id="bairro"
+                         placeholder="" value="{{old('bairro')}}" required>
                 </div>
                 <div class="col-md-2">
                     <label class="form-check-label"
                         for="flexCheckIndeterminate">Nº</label></label><span><strong>*</strong></span></label>
-                    <input type="text" class="form-control form-control-sm is-invalid" name="numero" id="numero"
-                        onchange="Numero()" placeholder="" value="{{old('numero')}}" required>
+                    <input type="text" class="form-control form-control-sm" name="numero" id="numero"
+                         placeholder="" value="{{old('numero')}}" required>
                 </div>
                 <div class="col-md-4">
                     <label class="form-check-label" for="flexCheckIndeterminate">Logradouro</label>
@@ -255,6 +255,9 @@
 
     -->
         <span> Campos Obrigatórios <strong>*</strong></span>
+        <div class="text-end">
+            <input type="submit" class="btn btn-primary" value="Salvar Registros">
+        </div>
     </div>
 
 </form>
@@ -277,6 +280,7 @@
     </div>
 </div>
 @endsection
+
 
 
 <!-- *************************validando telefone ************** -->
@@ -356,7 +360,7 @@ function mphone(v) {
 </script>
 
 <!-- -------------------------Validando campos obrigatorios--------------------------- -->
-
+<!--
 
 <script>
     function Razao() {
@@ -569,3 +573,4 @@ if (document.getElementById('emailtecnico').value == '') {
 }
 
 </script>
+-->

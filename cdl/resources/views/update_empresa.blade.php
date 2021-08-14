@@ -82,10 +82,10 @@ $empresa;
                 </div>
 
                 <div class="col-md-4">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Razão Social
+                    <label class="formGroupExampleInput" for="flexCheckIndeterminate">Razão Social
                         <span><strong>*</strong></span></label>
-                    <input type="text" name="razao" onchange="Razao()" value="{{$empresa->emp_razao}}"
-                        class="form-control form-control-sm is-valid" placeholder="">
+                    <input type="text" name="razao" value="{{$empresa->emp_razao}}"
+                        class="form-control form-control-sm" placeholder="" required>
                 </div>
 
                 <div class="col-md-4">
@@ -95,24 +95,24 @@ $empresa;
                 </div>
 
                 <div class="col-md-3">
-                    <label class="form-check-label" for="flexCheckIndeterminate">CNPJ
+                    <label class="formGroupExampleInput" for="flexCheckIndeterminate">CNPJ
                         <span><strong>*</strong></span></label>
-                    <input type="text" maxlength="14" onchange="Cnpj()" class="form-control form-control-sm is-valid"
+                    <input type="text" maxlength="14" class="form-control form-control-sm"
                         onkeypress="return somenteNumeros(event)" onfocus="javascript: retirarFormatacao(this);"
                         onblur="javascript: formatarCampo(this);" name="cnpj" id="cnpj" value="{{$empresa->emp_cnpj}}"
                         placeholder="99.999.999/9999-99" value="{{old('cnpj')}}" required>
                 </div>
                 <div class="col-md-5">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Email da empresa
+                    <label class="formGroupExampleInput" for="flexCheckIndeterminate">Email da empresa
                         <span><strong>*</strong></span></label>
-                    <input type="text" onchange="Email()" class="form-control form-control-sm is-valid"
-                        value="{{$empresa->emp_email}}" name="email" placeholder="">
+                    <input type="text"  class="form-control form-control-sm"
+                        value="{{$empresa->emp_email}}" name="email" placeholder="" required>
                 </div>
                 <div class="col-md-4">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Nome do Técnico
+                    <label class="formGroupExampleInput" for="flexCheckIndeterminate">Nome do Técnico
                         <span><strong>*</strong></span></label>
-                    <input type="text" onchange="Tecnico()" class="form-control form-control-sm is-valid" name="tecnico"
-                        value="{{$empresa->emp_nome_contato}}" placeholder="">
+                    <input type="text" class="form-control form-control-sm" name="tecnico"
+                        value="{{$empresa->emp_nome_contato}}" placeholder="" required>
                 </div>
                 <div class="col-md-4">
                     <label class="form-check-label" for="flexCheckIndeterminate">Email do Técnico </label>
@@ -131,10 +131,10 @@ $empresa;
                 </div>
 
                 <div class="col-md-3">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Ramo de Atividade
+                    <label class="formGroupExampleInput" for="flexCheckIndeterminate">Ramo de Atividade
                         <span><strong>*</strong></span></label>
-                    <input type="text" onchange="Ramo()" class="form-control form-control-sm is-valid" name="ramo"
-                        value="{{$empresa->emp_atividade}}" placeholder="">
+                    <input type="text" class="form-control form-control-sm" name="ramo"
+                        value="{{$empresa->emp_atividade}}" placeholder="" required>
                 </div>
                 <div class="col-md-3">
                     <label class="form-check-label" for="flexCheckIndeterminate">Telefone</label>
@@ -172,34 +172,34 @@ $empresa;
         <div class="endereco">
             <div class="row g-3">
                 <div class="col-md-2">
-                    <label class="form-check-label" for="flexCheckIndeterminate">CEP
+                    <label class="formGroupExampleInput" for="flexCheckIndeterminate">CEP
                         <span><strong>*</strong></span></label>
-                    <input type="text" onchange="Cep()" class="form-control form-control-sm is-valid" name="cep"
-                        value="{{$empresa->emp_cep}}" id="cep" placeholder="">
+                    <input type="text"  class="form-control form-control-sm" name="cep"
+                        value="{{$empresa->emp_cep}}" id="cep" placeholder="" required>
                 </div>
                 <div class="col-md-1">
-                    <label class="form-check-label" for="flexCheckIndeterminate">UF
+                    <label class="formGroupExampleInput" for="flexCheckIndeterminate">UF
                         <span><strong>*</strong></span></label>
-                    <input type="text" onchange="Uf()" class="form-control form-control-sm is-valid" name="uf"
-                        value="{{$empresa->emp_uf}}" id="uf" placeholder="">
+                    <input type="text" class="form-control form-control-sm" name="uf"
+                        value="{{$empresa->emp_uf}}" id="uf" placeholder="" required>
                 </div>
                 <div class="col-md-2">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Cidade
+                    <label class="formGroupExampleInput" for="flexCheckIndeterminate">Cidade
                         <span><strong>*</strong></span></label>
-                    <input type="text" onchange="Cidade()" class="form-control form-control-sm is-valid" name="cidade"
-                        value="{{$empresa->emp_cidade}}" id="cidade" placeholder="">
+                    <input type="text" class="form-control form-control-sm" name="cidade"
+                        value="{{$empresa->emp_cidade}}" id="cidade" placeholder="" required>
                 </div>
                 <div class="col-md-7">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Bairro
+                    <label class="form-formGroupExampleInput-label" for="flexCheckIndeterminate">Bairro
                         <span><strong>*</strong></span></label>
-                    <input type="text" onchange="Bairo()" class="form-control form-control-sm is-valid" name="bairro"
-                        id="bairro" value="{{$empresa->emp_bairro}}" placeholder="">
+                    <input type="text" class="form-control form-control-sm" name="bairro"
+                        id="bairro" value="{{$empresa->emp_bairro}}" placeholder="" required='true'>
                 </div>
                 <div class="col-md-2">
                     <label class="form-check-label"
                         for="flexCheckIndeterminate">Nº</label></label><span><strong>*</strong></span></label>
-                    <input type="text" onchange="Numero()" class="form-control form-control-sm is-valid" name="numero"
-                        id="numero" value="{{$empresa->emp_numero}}" placeholder="">
+                    <input type="text" class="form-control form-control-sm" name="numero"
+                        id="numero" value="{{$empresa->emp_numero}}" placeholder="" required>
                 </div>
                 <div class="col-md-4">
                     <label class="form-check-label" for="flexCheckIndeterminate">Logradouro</label></label>
@@ -272,24 +272,35 @@ $empresa;
         </style>
 
         <div class="texto">
-            <p>É um fato conhecido de todos que um leitor se distrairá com o conteúdo de texto legível de uma página quando estiver examinando sua diagramação. A vantagem de usar Lorem Ipsum é que ele tem uma distribuição normal de letras, ao contrário de "Conteúdo aqui, conteúdo aqui", fazendo com que ele tenha uma aparência similar a de um texto legível. Muitos softwares de publicação e editores de páginas na internet agora usam Lorem Ipsum como texto-modelo padrão, e uma rápida busca por 'lorem ipsum' mostra vários websites ainda em sua fase de construção. Várias versões novas surgiram ao longo dos anos, eventualmente por acidente, e às vezes de propósito (injetando humor, e coisas do gênero).</p>
-            <p>Existem muitas variações disponíveis de passagens de Lorem Ipsum, mas a maioria sofreu algum tipo de alteração, seja por inserção de passagens com humor, ou palavras aleatórias que não parecem nem um pouco convincentes. Se você pretende usar uma passagem de Lorem Ipsum, precisa ter certeza de que não há algo embaraçoso escrito escondido no meio do texto. Todos os geradores de Lorem Ipsum na internet tendem a repetir pedaços predefinidos conforme necessário, fazendo deste o primeiro gerador de Lorem Ipsum autêntico da internet. Ele usa um dicionário com mais de 200 palavras em Latim combinado com um punhado de modelos de estrutura de frases para gerar um Lorem Ipsum com aparência razoável, livre de repetições, inserções de humor, palavras não características, etc.</p>
+            <p>É um fato conhecido de todos que um leitor se distrairá com o conteúdo de texto legível de uma página
+                quando estiver examinando sua diagramação. A vantagem de usar Lorem Ipsum é que ele tem uma distribuição
+                normal de letras, ao contrário de "Conteúdo aqui, conteúdo aqui", fazendo com que ele tenha uma
+                aparência similar a de um texto legível. Muitos softwares de publicação e editores de páginas na
+                internet agora usam Lorem Ipsum como texto-modelo padrão, e uma rápida busca por 'lorem ipsum' mostra
+                vários websites ainda em sua fase de construção. Várias versões novas surgiram ao longo dos anos,
+                eventualmente por acidente, e às vezes de propósito (injetando humor, e coisas do gênero).</p>
+            <p>Existem muitas variações disponíveis de passagens de Lorem Ipsum, mas a maioria sofreu algum tipo de
+                alteração, seja por inserção de passagens com humor, ou palavras aleatórias que não parecem nem um pouco
+                convincentes. Se você pretende usar uma passagem de Lorem Ipsum, precisa ter certeza de que não há algo
+                embaraçoso escrito escondido no meio do texto. Todos os geradores de Lorem Ipsum na internet tendem a
+                repetir pedaços predefinidos conforme necessário, fazendo deste o primeiro gerador de Lorem Ipsum
+                autêntico da internet. Ele usa um dicionário com mais de 200 palavras em Latim combinado com um punhado
+                de modelos de estrutura de frases para gerar um Lorem Ipsum com aparência razoável, livre de repetições,
+                inserções de humor, palavras não características, etc.</p>
         </div>
 
         <div class="form-check" style="margin-top: 50px">
-            <input class="form-check-input" type="checkbox" value="{{$empresa->emp_termo}}" name="termo" id="termo" required>
+            <input class="form-check-input" type="checkbox" value="{{$empresa->emp_termo}}" name="termo" id="termo"
+                required>
             <label class="form-check-label" for="flexCheckChecked">
                 Termo de política<span><strong>*</strong></span></label>
             </label>
         </div>
         <hr>
-        <!--
+        <span> Campos Obrigatórios <strong>*</strong></span>
         <div class="text-end">
             <input type="submit" class="btn btn-primary" value="Salvar Registros">
         </div>
-
-    -->
-        <span> Campos Obrigatórios <strong>*</strong></span>
     </div>
 
 
@@ -364,7 +375,7 @@ function mphone(v) {
 
 <!-- -------------------------Validando campos obrigatorios--------------------------- -->
 
-
+<!--
 <script>
     function Razao() {
 
@@ -575,3 +586,4 @@ if (document.getElementById('emailtecnico').value == '') {
 }
 
 </script>
+-->
