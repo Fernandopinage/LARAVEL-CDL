@@ -21,10 +21,10 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="/vagas/disponivel/">Vagas disponíveis</a>
+            <a class="nav-link" href="/anucio/empresa">Vagas Disponíveis</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/anucio/empresa">Anúncio de vaga </a>
+            <a class="nav-link" href="/anucio/empresa">Anúncio de Vaga </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/filtra/candidato/empresa">Busca Candidatos</a>
