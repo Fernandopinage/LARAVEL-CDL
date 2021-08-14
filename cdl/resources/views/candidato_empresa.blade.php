@@ -21,25 +21,26 @@
                     <label class="form-check-label" for="flexCheckIndeterminate">Área de Atuação </label>
                     <select class="form-select form-select-sm" name="area" id="area" aria-label="Default select example">
                         <option selected></option>
-                        <option value="Recursos Humanos">Recursos Humanos</option>
-                        <option value="Área Comercial">Área Comercial</option>
                         <option value="Almoxarifado">Almoxarifado</option>
-                        <option value="Produção">Produção</option>
-                        <option value="Estoque">Estoque</option>
-                        <option value="Compras">Compras</option>
-                        <option value="Tecnologia da Informação">Tecnologia da Informação</option>
-                        <option value="Qualidade">Qualidade</option>
-                        <option value="Planejamento">Planejamento</option>
-                        <option value="Secretariado">Secretariado</option>
-                        <option value="Designer">Designer</option>
+                        <option value="Área Comercial">Área Comercial</option>
+                        <option value="Área da Saúde">Área da Saúde</option>
+                        <option value="Cobrança">Cobrança</option>
                         <option value="Comunicação">Comunicação</option>
+                        <option value="Compras">Compras</option>
+                        <option value="Designer">Designer</option>
+                        <option value="Estoque">Estoque</option>
                         <option value="Jurídico">Jurídico</option>
+                        <option value="Planejamento">Planejamento</option>
+                        <option value="Produção">Produção</option>
+                        <option value="Qualidade">Qualidade</option>
+                        <option value="Recursos Humanos">Recursos Humanos</option>
+                        <option value="Secretariado">Secretariado</option>
                         <option value="Serviço Social">Serviço Social</option>
                         <option value="Segurança do Trabalho">Segurança do Trabalho</option>
+                        <option value="Tecnologia da Informação">Tecnologia da Informação</option>
                         <option value="Telemarketing">Telemarketing</option>
-                        <option value="Cobrança">Cobrança</option>
-                        <option value="Área da Saúde">Área da Saúde</option>
                         <option value="Vigilância">Vigilância</option>
+                        <option value="Outros">Outros</option>
                     </select>
                 </div>
                 <div class="col-md-2">

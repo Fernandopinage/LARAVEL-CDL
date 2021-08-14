@@ -300,7 +300,7 @@ function moeda(a, e, r, t) {
             
         }else{
           $("#pcd").prop('checked', true);
-          $('#descPCD').show();  
+          $('#descPCD').hide();  
           $
         }
 
