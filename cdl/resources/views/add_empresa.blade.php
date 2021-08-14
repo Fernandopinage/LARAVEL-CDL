@@ -34,8 +34,8 @@
                     <label class="form-check-label" for="flexCheckIndeterminate">Razão Social
                         <span><strong>*</strong></span></label>
                     <input type="text" name="razao" id="razao" onchange="Razao()"
-                        class="form-control form-control-sm is-invalid" placeholder="" value="{{old('razao')}}"
-                        required autofocus>
+                        class="form-control form-control-sm is-invalid" placeholder="" value="{{old('razao')}}" required
+                        autofocus>
                 </div>
 
                 <div class="col-md-4">
@@ -57,7 +57,8 @@
                     <label class="form-check-label" for="flexCheckIndeterminate">E-mail da empresa
                         <span><strong>*</strong></span></label>
                     <input type="email" class="form-control form-control-sm is-invalid" name="email" id="email"
-                    onfocusout="ValidandoEmail()"  onchange="Email()" placeholder="" value="{{old('email')}}" required>
+                        onfocusout="ValidandoEmail()" onchange="Email()" placeholder="" value="{{old('email')}}"
+                        required>
                 </div>
                 <div class="col-md-2">
                     <label class="form-check-label" for="flexCheckIndeterminate">Senha
@@ -227,25 +228,32 @@
             <hr>
         </div>
 
-        <div class="row g-3">
-            <div class="col-md-6">
-            </div>
-            <div class="col-md-12" style="padding-top: 50px ">
-                <div class="text-center">
-                    <label class="form-check-label" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                        onmousedown="mouseDown()" onmouseup="mouseUp()" id="termo_politica">Termo de política
-                        <span><strong>*</strong></span></label>
-                    <div class="form-check">
-                        <input class="form-check-inpu" type="checkbox" value="S" name="termo" id="termo"
-                            onchange="Termo()" value="{{old('termo')}}" required>
-                    </div>
-                </div>
-            </div>
+        <style>
+            .texto {
+                max-height: 250px;
+                overflow-y: auto;
+                justify-content: center;
+            }
+        </style>
+
+        <div class="texto">
+            <p>É um fato conhecido de todos que um leitor se distrairá com o conteúdo de texto legível de uma página quando estiver examinando sua diagramação. A vantagem de usar Lorem Ipsum é que ele tem uma distribuição normal de letras, ao contrário de "Conteúdo aqui, conteúdo aqui", fazendo com que ele tenha uma aparência similar a de um texto legível. Muitos softwares de publicação e editores de páginas na internet agora usam Lorem Ipsum como texto-modelo padrão, e uma rápida busca por 'lorem ipsum' mostra vários websites ainda em sua fase de construção. Várias versões novas surgiram ao longo dos anos, eventualmente por acidente, e às vezes de propósito (injetando humor, e coisas do gênero).</p>
+            <p>Existem muitas variações disponíveis de passagens de Lorem Ipsum, mas a maioria sofreu algum tipo de alteração, seja por inserção de passagens com humor, ou palavras aleatórias que não parecem nem um pouco convincentes. Se você pretende usar uma passagem de Lorem Ipsum, precisa ter certeza de que não há algo embaraçoso escrito escondido no meio do texto. Todos os geradores de Lorem Ipsum na internet tendem a repetir pedaços predefinidos conforme necessário, fazendo deste o primeiro gerador de Lorem Ipsum autêntico da internet. Ele usa um dicionário com mais de 200 palavras em Latim combinado com um punhado de modelos de estrutura de frases para gerar um Lorem Ipsum com aparência razoável, livre de repetições, inserções de humor, palavras não características, etc.</p>
+        </div>
+
+        <div class="form-check" style="margin-top: 50px">
+            <input class="form-check-input" type="checkbox" value="{{old('termo')}}" name="termo" id="termo" required>
+            <label class="form-check-label" for="flexCheckChecked">
+                Termo de política<span><strong>*</strong></span></label>
+            </label>
         </div>
         <hr>
+        <!--
         <div class="text-end">
             <input type="submit" class="btn btn-primary" value="Salvar Registros">
         </div>
+
+    -->
         <span> Campos Obrigatórios <strong>*</strong></span>
     </div>
 

@@ -163,8 +163,8 @@ class EmpresaController extends Controller
 
     public function update(Request $request, $id)
     {
-
-
+        
+        /*
         $this->validate($request, [
 
             'razao' => 'required',
@@ -178,8 +178,10 @@ class EmpresaController extends Controller
             'setor' => 'required',
             'complemento' => 'required'
         ]);
-
+        */
         $empresa = Empresa::find($id);
+        //dd($empresa);
+        
         $empresa->emp_logo = $request->logo;
         $empresa->emp_fantasia = $request->fantasia;
         $empresa->emp_email = $request->email;
@@ -199,7 +201,7 @@ class EmpresaController extends Controller
         $empresa->emp_email_contato = $request->emailtecnico;
         $empresa->emp_chack_assoc = $request->associado;
         $empresa->emp_cod_assoc = $request->cod;
-        $empresa->emp_senha = Hash::make($request->senha);
+        //$empresa->emp_senha = Hash::make($request->senha);
         $empresa->emp_termo = $request->termo;
         $empresa->emp_status = $request->status;
         $empresa->emp_funcao = $request->funcao;
@@ -209,6 +211,7 @@ class EmpresaController extends Controller
 
 
         return redirect('home/empresa')->with('mensagem', 'Produto cadastrado com sucesso!');
+        
     }
 
     public function editaEmpresa($id) //  edita empresa
