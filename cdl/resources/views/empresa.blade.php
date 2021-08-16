@@ -10,10 +10,10 @@
         <hr>
     </div>
     <div class="mb-3">
-    <input type="mail" class="form-control form-control" name="email" placeholder="E-mail"  autofocus="" />
+    <input type="mail" class="form-control form-control" name="email" placeholder="E-mail"  autofocus="" required />
     </div>
     <div class="mb-3">
-    <input type="password" class="form-control form-control" name="password" placeholder="Senha"  />
+    <input type="password" class="form-control form-control" name="password" placeholder="Senha" required />
     </div>
     <div class="d-grid gap-2">
     <input type="submit" class="btn-primary btn-lg" name="loginentrar" value="Entrar">

@@ -113,13 +113,6 @@ Swal.fire({
 </script>
 @endif
 
-<!-- Mesagem de validação de campos  -->
-
-@if ($errors->any())
-<script>
-Swal.fire({  position: 'center',  icon: 'warning',  title: 'Preencher todos os campos',  showConfirmButton: false,  timer: 1500  })
-</script>
-@endif
 <!-- se cadastra ok -->
 @if(session('empresa_cadastro'))
 <script>

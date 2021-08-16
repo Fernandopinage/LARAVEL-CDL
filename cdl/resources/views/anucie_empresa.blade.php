@@ -29,7 +29,7 @@
                 </div>
                 <div class="col-md-4">
                     <label class="form-check-label" for="flexCheckIndeterminate">Cargo/Função <span><strong>*</strong></span></label>
-                    <select class="form-select form-select-sm" name="cargo" id="cargo" aria-label="Default select example">
+                    <select class="form-select form-select-sm" name="cargo" id="cargo"  required >
                         <option selected></option>
                         <option value="Recursos Humanos">Recursos Humanos</option>
                         <option value="Área Comercial">Área Comercial</option>
@@ -54,7 +54,7 @@
                 </div>
                 <div class="col-md-3">
                     <label class="form-check-label" for="flexCheckIndeterminate">Tipo de Vaga  <span><strong>*</strong></span></label>
-                    <select class="form-select form-select-sm" name="tipo" aria-label="Default select example">
+                    <select class="form-select form-select-sm" name="tipo" aria-label="Default select example" required>
                         <option selected></option>
                         <option value="CLT">CLT</option>
                         <option value="PJ">PJ</option>
@@ -72,7 +72,7 @@
                 
                 <div class="col-md-4">
                     <label class="form-check-label" for="flexCheckIndeterminate">Formação  <span><strong>*</strong></span></label>
-                    <select class="form-select form-select-sm" name="formacao" id="formacao" aria-label="Default select example">
+                    <select class="form-select form-select-sm" name="formacao" id="formacao" aria-label="Default select example" required>
                         <option selected></option>
                         <option value="Ensino fundamental completo">Ensino fundamental completo</option>
                         <option value="Ensino fundamental incompleto">Ensino fundamental incompleto</option>
@@ -121,7 +121,7 @@
                 </div>
                 <div class="col-md-3">
                     <label class="form-check-label" for="flexCheckIndeterminate">Experiência <span><strong>*</strong></span></label>
-                    <select class="form-select form-select-sm" name="experiencia" id="experiencia" aria-label="Default select example">
+                    <select class="form-select form-select-sm" name="experiencia" id="experiencia" aria-label="Default select example" required>
                         <option selected></option>
                         <option value="Sem Experiência">Sem Experiência</option>
                         <option value="Com Experiência">Com Experiência</option>
@@ -130,7 +130,7 @@
                 </div>
                 <div class="col-md-2" id="tempoexperiencia_div">
                     <label class="form-check-label" for="flexCheckIndeterminate" >Tempo de Experiência  <span><strong>*</strong></span></label>
-                    <select class="form-select form-select-sm" name="tempoexperiencia" id="tempoexperiencia" aria-label="Default select example">
+                    <select class="form-select form-select-sm" name="tempoexperiencia" id="tempoexperiencia" aria-label="Default select example" required>
                         <option selected value="0"></option>
                         <option value="1">Não informado</option>
                         <option value="2">3 meses</option>
@@ -146,12 +146,12 @@
                 
                 <div class="col-md-1">
                     <label class="form-check-label" for="flexCheckIndeterminate">UF <span>*</span></label>
-                    <input type="text" class="form-control form-control-sm" name="uf" id="uf" placeholder="">
+                    <input type="text" class="form-control form-control-sm" name="uf" id="uf" placeholder="" required>
                 </div>
                 
                 <div class="col-md-3">
                     <label class="form-check-label" for="flexCheckIndeterminate">Cidade <span><strong>*</strong></span></label>
-                    <input type="text" class="form-control form-control-sm" name="cidade" id="cidade" placeholder="">
+                    <input type="text" class="form-control form-control-sm" name="cidade" id="cidade" placeholder="" required>
                 </div>
                 <div class="col-md-8">
                     <label class="form-check-label" for="flexCheckIndeterminate">Bairro</label>
@@ -235,7 +235,7 @@
             <hr>
             <span>Campos Obrigatórios<strong>*</strong></span>
             <div class="text-end">
-                <input type="submit" class="btn btn-primary" value="Anunciar">
+                <input type="submit" class="btn btn-primary" value="Anunciar" required>
             </div>
         </div>
     </div>

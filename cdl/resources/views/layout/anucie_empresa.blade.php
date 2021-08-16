@@ -22,7 +22,7 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="/anucio/empresa">Vagas Disponíveis</a>
+            <a class="nav-link" href="/vagas/disponivel/">Vagas Disponíveis</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/anucio/empresa">Anúncio de Vaga </a>
@@ -319,11 +319,7 @@ function moeda(a, e, r, t) {
 
 
 <!-- Mesagem de validação de campos  -->
-@if ($errors->any())
-<script>
-Swal.fire({  position: 'center',  icon: 'warning',  title: 'Preencha os campos obrigatório',  showConfirmButton: false,  timer: 1500  })
-</script>
-@endif
+
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script src="/js/checkbox.js"></script>
