@@ -68,10 +68,8 @@ Route::POST('/insert/oms/', [OmsController::class, 'store']);
 Route::get('busca/militar', [exmilitarController::class, 'index']); // chamando tela busca 
 Route::get('busca/militar/filtro/',[exmilitarController::class, 'buscarExmilitar']); // buscando candidato
 Route::get('busca/militar/filtro/{id}');
-Route::get('/oms/redefinir',function(){
-
-    return view('redefinir_oms');
-});
+Route::get('/oms/redefinir', [OmsController::class, 'redefinir']); // tela de redefinir senha
+Route::post('/redefinir/senha/oms',[OmsController::class, 'redefinirSenha']); // chamndo a logica para redefinir
 //});
 
 

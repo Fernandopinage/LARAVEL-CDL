@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Oms;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Oms as GlobalOms;
 
 class OmsController extends Controller
 {
@@ -106,7 +107,20 @@ class OmsController extends Controller
 
     public function redefinir(){
 
+      
         return view('redefinir_oms');
+    }
+
+    public function redefinirSenha(Request $request){
+
+   
+
+        $oms = Oms::where('oms_email', $request->email)->first();
+        if(empty($oms)){
+
+        }else{
+            return redirect('/oms/redefinir')->with('mensagem', 'Produto cadastrado com sucesso!');
+        }
     }
         
 

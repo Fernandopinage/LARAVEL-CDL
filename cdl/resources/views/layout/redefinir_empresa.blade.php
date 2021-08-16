@@ -139,7 +139,7 @@ Swal.fire({
   position: 'center',
  // icon: 'error',
   //title: 'E-mail invalido',
-  text: 'O E-mail com as intruções para redefinir a senha foi enviado com sucesso!',
+  text: 'O E-mail com as instruções para redefinir a senha foi enviado com sucesso!',
   showConfirmButton: false,
   timer: 5500
 })

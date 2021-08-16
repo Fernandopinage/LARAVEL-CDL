@@ -2,7 +2,7 @@
 
 @section('redefinir_oms')
 
-<form class="form-signin" method="POST" action="/redefinir/senha/empresa">
+<form class="form-signin" method="POST" action="/redefinir/senha/oms">
 
     @csrf
     <div class="text-center">
