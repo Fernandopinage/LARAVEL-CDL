@@ -2,7 +2,7 @@
 
 @section('filtrocandidato')
 
-<form method="get" action=""> <!-- /add/candidato/empresa -->
+<form method="get" action="/buscar/candidato/empresa"> <!-- /add/candidato/empresa -->
 
     @csrf
 
@@ -17,7 +17,7 @@
 
             <div class="row g-3">
 
-                <div class="col-md-7">
+                <div class="col-md-4">
                     <label class="form-check-label" for="flexCheckIndeterminate">Área de Atuação </label>
                     <select class="form-select form-select-sm" name="area" id="area" aria-label="Default select example">
                         <option selected></option>
@@ -53,7 +53,7 @@
                         </select>
                     </div>
                 </div>
-                <div class="col-md-3" style="margin-top: 25px">
+                <div class="col-md-2" style="margin-top: 25px">
                     <div class="form-check form-check">
                         <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
                         <label class="form-check-label" for="inlineCheckbox1" name="militar" id="militar" >Ex-Militar</label>
@@ -422,10 +422,12 @@
         <div class="text-end">
             <a href="" class="btn btn-secondary">Limpar Filtro</a>
             <a href="" class="btn btn-success">Salvar Filtro</a>
-            <input type="submit" class="btn btn-primary" onclick="alert('Ainda não possui candidatos cadastrados')" value="Buscar Candidatos">
+            <input type="submit" class="btn btn-primary" value="Buscar Candidatos"> <!-- onclick="alert('Ainda não possui candidatos cadastrados')"-->
         </div>
     </div>
 
 
 </form>
 @endsection
+
+

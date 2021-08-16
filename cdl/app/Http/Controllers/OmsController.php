@@ -14,26 +14,33 @@ class OmsController extends Controller
 
     public function validarOms(Request $request)
     {
-
+        /*
         $this->validate($request, [
 
             'email' => 'required',
             'password' => 'required'
         ]);
+        */
 
         $oms =  Oms::where('oms_email', $request->email)->first();
-
+      
         if (!empty($oms)) {                                               //  caso tenha valor dentro da variavel empresa
-            /*
-             if(Hash::check($request->password, $oms->emp_senha)){
-
+       
+             if(Hash::check($request->password, $oms->oms_senha)){
+                $id = $oms['emp_id'];
+                $request->session()->put('oms_id', $id);
+                $request->session()->put('oms', $request->email);
+                return redirect('/home/militar');     
+             }else{
+                 return redirect('login/militar');
              }
-             */
+            
             return redirect('/login/empresa')->with('mensagem', 'Email ou Senha incorretos!');
         } else {
 
             return redirect('login/militar')->with('mensagem', 'Email ou Senha incorretos!');   // caso não existe o email
         }
+      
     }
 
     public function home(){

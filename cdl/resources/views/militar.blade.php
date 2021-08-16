@@ -2,7 +2,9 @@
 
 @section('login')
     
-<form class="form-signin" method="POST" action="/validar/oms">
+<form class="form-signin" method="POST" action="{{('/validar/oms')}}">
+
+    @csrf
     <div class="text-center">
         <h2 class="form-signin-heading">OM'S</h2>
         <hr>

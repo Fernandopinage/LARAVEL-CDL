@@ -333,6 +333,18 @@ class EmpresaController extends Controller
         //$buscar = Candidato::where('vag_cargo',$request->area ,'vag_experiencia',$request->experiencia);
         //dd($buscar);
 
+       // dd($request->query);
+
+       
+        if(empty($request->area) or empty($request->experiencia) or empty($request->formacao) or empty($request->letivo)){
+
+            return redirect('/filtra/candidato/empresa')->with('vazio','vazio');
+
+        }else{
+            return redirect('/filtra/candidato/empresa')->with('result','resultado');
+        }
+
+       
     }
 
     public function recuperarSenha(Request $request)
