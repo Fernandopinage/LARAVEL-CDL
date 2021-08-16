@@ -246,13 +246,23 @@ class EmpresaController extends Controller
         ]);
 
         $empresa = Empresa::where('emp_email', $Request->email)->first();  // pegando os dados da empresa EMAIL NOME
-        $id = $empresa->emp_id;
 
-        $email = $empresa->emp_email;
-        $nome = $empresa->emp_fantasia;
-        // dd($empresa->emp_email);
 
-        Mail::to($Request->email)->send(new empresaMail(Empresa::where('emp_email', $Request->email)->first()));
+        if(empty($empresa)){
+            return redirect('/redefinir/empresa')->with('mensagem', 'Produto cadastrado com sucesso!');
+        }else{
+            
+            $id = $empresa->emp_id;
+            
+            $email = $empresa->emp_email;
+            $nome = $empresa->emp_fantasia;
+            // dd($empresa->emp_email);
+            
+            Mail::to($Request->email)->send(new empresaMail(Empresa::where('emp_email', $Request->email)->first()));
+
+            return redirect('/redefinir/empresa')->with('sucesso', 'Produto cadastrado com sucesso!');;
+        }
+        
     }
 
     public function alterarSenha()
