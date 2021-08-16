@@ -17,7 +17,7 @@
     </div>
     <div class="row g-3">
         <div class="col">
-            <a class="nav-link" href="#">Esqueci minha senha</a>
+            <a class="nav-link" href="{{'/oms/redefinir'}}">Esqueci minha senha</a>
         </div>
         <div class="col">
             <a class="nav-link" href="{{('/add/oms/')}}">Criar uma conta</a>

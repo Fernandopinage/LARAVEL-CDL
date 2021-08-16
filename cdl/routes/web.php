@@ -35,7 +35,6 @@ Route::get('add/candidato', [CandidatoController::class, 'formularioCandidato'])
 
 
 Route::get('login/empresa', [EmpresaController::class, 'index'])->name('login/empresa'); // chamando tela de login da empresa
-
 //Route::middleware(['empresaGrupo'])->group(function () {
 Route::get('/vagas/disponivel/', [EmpresaController::class, 'vagasDisponiveis']);
 Route::get('home/empresa', [EmpresaController::class, 'home']);   //  redirecinando para tela home   
@@ -57,8 +56,8 @@ Route::get('/buscar/candidato/empresa', [EmpresaController::class, 'filtrarCandi
 Route::get('anucio/empresa', [EmpresaController::class, 'anuciarVagas']); // chamndo tela de anucio
 Route::post('/anucie/vaga/empresa', [VagasController::class, 'anucieVagas']); // anucio de vaga
 Route::get('/logout/empresa/{id}', [EmpresaController::class, 'logout']);
-
 //});
+
 
 //Route::middleware(['oms'])->group(function () {
 Route::get('/login/militar', [OmsController::class, 'login']); // chamando tela de index login OMS
@@ -69,6 +68,10 @@ Route::POST('/insert/oms/', [OmsController::class, 'store']);
 Route::get('busca/militar', [exmilitarController::class, 'index']); // chamando tela busca 
 Route::get('busca/militar/filtro/',[exmilitarController::class, 'buscarExmilitar']); // buscando candidato
 Route::get('busca/militar/filtro/{id}');
+Route::get('/oms/redefinir',function(){
+
+    return view('redefinir_oms');
+});
 //});
 
 

@@ -103,6 +103,11 @@ class OmsController extends Controller
         
 
     }
+
+    public function redefinir(){
+
+        return view('redefinir_oms');
+    }
         
 
     public function login()
