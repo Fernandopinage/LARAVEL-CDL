@@ -336,7 +336,7 @@ class EmpresaController extends Controller
        // dd($request->query);
 
        
-        if(empty($request->area) or empty($request->experiencia) or empty($request->formacao) or empty($request->letivo)){
+        if($request->query == ""){
 
             return redirect('/filtra/candidato/empresa')->with('vazio','vazio');
 
