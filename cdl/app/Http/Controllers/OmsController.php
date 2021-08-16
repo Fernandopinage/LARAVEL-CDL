@@ -44,6 +44,11 @@ class OmsController extends Controller
 
     public function store(Request $request)
     {
+
+       //dd($request);
+
+
+        /*
         $this->validate($request, [
 
             'unidade' => 'required',
@@ -51,38 +56,47 @@ class OmsController extends Controller
             'telefone2' => 'required',
             'tecnico' => 'required',
             'email' => 'required',
+            'senha' => 'required',
             'funcao' => 'required',
             'cep' => 'required',
             'uf' => 'required',
             'cidade' => 'required',
             'bairro' => 'required',
-            'numero' => 'required'
+            'numero' => 'required',
+            'email_tecnico' => 'required'
 
 
         ]);
+        */
 
+        if($request->senha === $request->confirma){
 
-        $oms = new Oms();
-        $oms->oms_nome = $request->unidade;
-        $oms->oms_telefone = $request->telefone;
-        $oms->oms_celular = $request->oms_celular;
-        $oms->oms_tecnico = $request->tecnico;
-        $oms->oms_email = $request->email;
-        $oms->oms_funcao = $request->funcao;
-        $oms->oms_cep = $request->cep;
-        $oms->oms_uf = $request->uf;
-        $oms->oms_cidade = $request->cidade;
-        $oms->oms_bairro = $request->bairro;
-        $oms->oms_logradouro = $request->logradouro;
-        $oms->oms_numero = $request->numero;
-        $oms->oms_complemento = $request->complemento;
-        $oms->oms_status = 'S';
+            $oms = new Oms();
+            $oms->oms_nome = $request->unidade;
+            $oms->oms_telefone = $request->telefone;
+            $oms->oms_email = $request->email;
+            $oms->oms_senha = $request->senha;
+            $oms->oms_celular = $request->oms_celular;
+            $oms->oms_tecnico = $request->tecnico;
+            $oms->oms_email_tecnico = $request->email_tecnico;
+            $oms->oms_funcao = $request->funcao;
+            $oms->oms_cep = $request->cep;
+            $oms->oms_uf = $request->uf;
+            $oms->oms_cidade = $request->cidade;
+            $oms->oms_bairro = $request->bairro;
+            $oms->oms_logradouro = $request->logradouro;
+            $oms->oms_numero = $request->numero;
+            $oms->oms_complemento = $request->complemento;
+            $oms->oms_status = 'S';
+            $oms->save();
+            return redirect('login/militar')->with('empresa_cadastro', 'Produto cadastrado com sucesso!');
+        }else{
+            return redirect('/add/oms/');
+        }
+        
 
-        echo Model::get();
-        $oms->save();
-        return redirect('login/militar')->with('empresa_cadastro', 'Produto cadastrado com sucesso!');
     }
-
+        
 
     public function login()
     {
