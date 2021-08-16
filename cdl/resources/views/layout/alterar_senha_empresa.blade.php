@@ -129,15 +129,7 @@
 </script>
 @endif
 
-<!-- Mesagem de validação de campos  -->
 
-@if ($errors->any())
-<script>
-  Swal.fire({  position: 'center',  icon: 'warning',  title: 'Preencha os campos obrigatório',  showConfirmButton: false,  timer: 1500  })
-</script>
-@endif
-
-<!-- *****************************  -->
 
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
