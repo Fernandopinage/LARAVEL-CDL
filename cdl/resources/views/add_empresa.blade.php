@@ -233,8 +233,8 @@
         </style>
 
         <div class="texto">
-            <p style="text-align: center;margin-top:10px"><b>SISTEMA DE EMPREGABILIDADE CDL MANAUS</b></p>
-            <p style="text-align: center"><b>Termo de Política para Uso do Sistema</b></p>
+            <p style="text-align: center;margin-top:10px"><b style="font-size: 20px">SISTEMA DE EMPREGABILIDADE CDL MANAUS</b></p>
+            <p style="text-align: center"><b style="font-size: 18px">Termo de Política para Uso do Sistema</b></p>
             <p><b>1. SERVIÇO</b></p>
             <p style="margin-left: 30px">1.1 <b>Objetivo do Serviço:</b>facilitar pessoas interessadas em buscar
                 colocação ou recolocação no
@@ -288,35 +288,42 @@
             </p>
             <p><b>6. POLÍTICA DE PRIVACIDADE</b></p>
             <p style="margin-left: 30px">6.1.<b> O que fazemos com as suas informações?</b></p>
-            <p style="margin-left: 45px"><span style="margin-right: 20px; color:#000;font-size:20px;"><b>a</b></span>. Quando
+            <p style="margin-left: 45px"><span style="margin-right: 20px; color:#000;font-size:20px;"><b>a</b></span>.
+                Quando
                 você realiza seu cadastro em nossa plataforma, coletamos as informações pessoais
                 que você nos fornece, tais como seu nome, CPF, RG, e-mail, número de telefone e/ou telefone
                 celular, morada, data de nascimento, grau de escolaridade, cursos de aprimoramento,
                 informações profissionais e últimas experiências relacionadas a emprego.</p>
 
-            <p style="margin-left: 45px"><span style="margin-right: 20px; color:#000;font-size:20px;"><b>b</b></span>. De posse
+            <p style="margin-left: 45px"><span style="margin-right: 20px; color:#000;font-size:20px;"><b>b</b></span>.
+                De posse
                 dessas informações, partes delas serão distribuídas em nossa página para facilitar a
                 ligação entre você e uma empresa e vice-versa, através de um algoritmo criado
                 especificamente para essa função. Sendo assim, uma empresa ou uma instituição, seja ela
                 pública ou privada terá acesso a seus dados.</p>
-            <p style="margin-left: 45px"><span style="margin-right: 20px; color:#000;font-size:20px;"><b>c</b></span>. A CDL
+            <p style="margin-left: 45px"><span style="margin-right: 20px; color:#000;font-size:20px;"><b>c</b></span>. A
+                CDL
                 Manaus se compromete a não usar seus dados para outros fins que não sejam única e
                 exclusivamente para intermediar contatos de trabalho entre você e uma empresa e/ou
                 instituição. No entanto a CDL não tem responsabilidade por qualquer vínculo empregatício
                 ou acordo firmado entre as partes.</p>
 
-            <p style="margin-left: 45px"><span style="margin-right: 20px; color:#000;font-size:20px;"><b>d</b></span>. É vedado
+            <p style="margin-left: 45px"><span style="margin-right: 20px; color:#000;font-size:20px;"><b>d</b></span>. É
+                vedado
                 o acesso total de empresas não cadastradas aos seus dados.</p>
-            <p style="margin-left: 45px"><span style="margin-right: 20px; color:#000;font-size:20px;"><b>e</b></span>. Se faz
+            <p style="margin-left: 45px"><span style="margin-right: 20px; color:#000;font-size:20px;"><b>e</b></span>.
+                Se faz
                 necessário ressaltar, que ao aceitar nossa política de privacidade, você nos autoriza a
                 informá-lo sobre nossos serviços, produtos e outras atualizações por e-mail, sms ou outro
                 meio eletrônico.
             </p>
-            <p style="margin-left: 45px"><span style="margin-right: 20px; color:#000;font-size:20px;"><b>f</b></span>. Todas as
+            <p style="margin-left: 45px"><span style="margin-right: 20px; color:#000;font-size:20px;"><b>f</b></span>.
+                Todas as
                 informações pessoais relativas a membros, assinantes, clientes ou visitantes que
                 usem o portal de empregabilidade serão tratadas em concordância com a Lei da Proteção de
                 Dados Pessoais (Lei nº 13.709/18).</p>
-            <p style="margin-left: 45px"><span style="margin-right: 20px; color:#000;font-size:20px;"><b>g</b></span>. O uso do
+            <p style="margin-left: 45px"><span style="margin-right: 20px; color:#000;font-size:20px;"><b>g</b></span>. O
+                uso do
                 sistema de empregabilidade CDL MANAUS pressupõe a aceitação deste acordo de
                 privacidade. A CDL MANAUS reserva-se ao direito de alterar este acordo sem aviso prévio.
                 Deste modo, recomendamos que consulte a nossa política de privacidade com regularidade
@@ -328,21 +335,25 @@
                 política de anúncios do sistema de Empregabilidade CDL Manaus, restringe sua publicidade
                 de anúncios ao tempo da sua visita e as páginas que visitou dentro do nosso website. </p>
             <p><b>6.3. Cookies</b></p>
-            <p style="margin-left: 45px"><span style="margin-right: 20px; color:#000;font-size:20px;"><b>a</b></span>. A CDL
+            <p style="margin-left: 45px"><span style="margin-right: 20px; color:#000;font-size:20px;"><b>a</b></span>. A
+                CDL
                 MANAUS, não utiliza cookies muito menos armazena dados de clientes para
                 comercializar ou exibir anúncios. </p>
-            <p style="margin-left: 45px"><span style="margin-right: 20px; color:#000;font-size:20px;"><b>b</b></span>. Os
+            <p style="margin-left: 45px"><span style="margin-right: 20px; color:#000;font-size:20px;"><b>b</b></span>.
+                Os
                 cookies rastreáveis são ou pode ser partes referentes as ligações de uso dos sites das redes
                 sociais. (Facebook, Instagram, Youtube e outros)</p>
 
             <p><b>6.4. Ligações a sites de terceiros</b></p>
 
-            <p style="margin-left: 45px"><span style="margin-right: 20px; color:#000;font-size:20px;"><b>a</b></span>. O CDL
+            <p style="margin-left: 45px"><span style="margin-right: 20px; color:#000;font-size:20px;"><b>a</b></span>. O
+                CDL
                 MANAUS possui ligações para outros sites, os quais, ao nosso ver, podem conter
                 informações / ferramentas úteis para os nossos visitantes. A nossa política de privacidade não
                 é aplicada a sites de terceiros, pelo que, caso visite outro site a partir do nosso deverá ler a
                 política de privacidade do mesmo. </p>
-            <p style="margin-left: 45px"><span style="margin-right: 20px; color:#000;font-size:20px;"><b>b</b></span>. A CDL
+            <p style="margin-left: 45px"><span style="margin-right: 20px; color:#000;font-size:20px;"><b>b</b></span>. A
+                CDL
                 MANAUS não se responsabiliza pela política de privacidade ou conteúdo presente nos
                 sites de terceiros.</p>
 
@@ -353,7 +364,8 @@
                 para esses fins específicos.
             </p>
             <p style="margin-left: 30px">7.2 <b>Como posso retirar os meus dados da lista de marketing?</b> </p>
-            <p style="margin-left: 45px"><span style="margin-right: 20px; color:#000;font-size:20px;"><b>a</b></span>. Podemos
+            <p style="margin-left: 45px"><span style="margin-right: 20px; color:#000;font-size:20px;"><b>a</b></span>.
+                Podemos
                 divulgar suas informações pessoais se formos obrigados por lei a fazê-lo (para
                 autoridades competentes) ou se você violar nossos Termos de Serviço. </p>
 
@@ -398,10 +410,16 @@
 
         </div>
 
-        <div class="form-check" style="margin-top: 50px">
+        <div class="form-check" style="margin-top: 80px">
+
+            <p class="text-center"  style="font-size: 15px;">Ao clicar em <span style="color: #0d6efd">CONTINUAR</span>, você concorda com nossos
+                Termos e que leu nossa <span style="color: #0d6efd">Política de Dados.</span></p>
+            <p class="text-center" style="font-size: 15px;"> Você pode receber notificações via E-mail e pode cancelar o recebimento a quelquer
+                momento.</p>
+
             <input class="form-check-input" type="checkbox" value="{{old('termo')}}" name="termo" id="termo" required>
-            <label class="form-check-label" for="flexCheckChecked">
-                Termo de política<span><strong>*</strong></span></label>
+            <label class="form-check-label" for="flexCheckChecked" style="color: #0d6efd">
+                Li e aceito os Termos da Política de Dados do Site<span><strong>*</strong></span></label>
             </label>
         </div>
         <hr>

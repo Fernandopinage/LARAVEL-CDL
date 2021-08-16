@@ -272,8 +272,8 @@ $empresa;
         </style>
 
 <div class="texto">
-    <p style="text-align: center;margin-top:10px"><b>SISTEMA DE EMPREGABILIDADE CDL MANAUS</b></p>
-    <p style="text-align: center"><b>Termo de Política para Uso do Sistema</b></p>
+    <p style="text-align: center;margin-top:10px"><b style="font-size: 20px">SISTEMA DE EMPREGABILIDADE CDL MANAUS</b></p>
+    <p style="text-align: center"><b style="font-size: 18px">Termo de Política para Uso do Sistema</b></p>
     <p><b>1. SERVIÇO</b></p>
     <p style="margin-left: 30px">1.1 <b>Objetivo do Serviço:</b>facilitar pessoas interessadas em buscar
         colocação ou recolocação no
@@ -437,12 +437,17 @@ $empresa;
 
 </div>
 
-        <div class="form-check" style="margin-top: 50px">
+        <div class="form-check" style="margin-top: 80px">
+
+            <p class="text-center"  style="font-size: 15px;">Ao clicar em <span style="color: #0d6efd">CONTINUAR</span>, você concorda com nossos
+                Termos e que leu nossa <span style="color: #0d6efd">Política de Dados.</span></p>
+            <p class="text-center" style="font-size: 15px;"> Você pode receber notificações via E-mail e pode cancelar o recebimento a quelquer
+                momento.</p>
             <input class="form-check-input" type="checkbox" value="{{$empresa->emp_termo}}" name="termo" id="termo"
                 required>
-            <label class="form-check-label" for="flexCheckChecked">
-                Termo de política<span><strong>*</strong></span></label>
-            </label>
+                <label class="form-check-label" for="flexCheckChecked" style="color: #0d6efd">
+                    Li e aceito os Termos da Política de Dados do Site<span><strong>*</strong></span></label>
+                </label>
         </div>
         <hr>
         <span> Campos Obrigatórios <strong>*</strong></span>
