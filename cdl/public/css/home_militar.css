@@ -1,5 +1,9 @@
 /* CSS Document */
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:300,400,500,600,700&display=swap');	
+title{
+    background: url('/img/title.png');
+    width: 10px;
+  }
 #menu{
     padding: 30px;
     background-color: #284D92;

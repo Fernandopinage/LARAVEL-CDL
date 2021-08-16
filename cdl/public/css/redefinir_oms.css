@@ -1,4 +1,8 @@
 /* CSS Document */
+title{
+    background: url('/img/title.png');
+    width: 10px;
+  }
 body{
     background: repeat-y url('/img/login_m.jpg') ;
     position: relative;

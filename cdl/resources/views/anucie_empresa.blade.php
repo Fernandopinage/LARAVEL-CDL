@@ -187,9 +187,9 @@
                     <label class="form-check-label" for="flexCheckIndeterminate">Nivel do Idioma</label>
                     <select class="form-select form-select-sm" name="nivel_idioma" id="nivel_idioma" aria-label="Default select example">
                         <option selected></option>
-                        <option value="basico">Basico</option>
-                        <option value="intermediario">Intermediario</option>
-                        <option value="avançado">Avançado</option>
+                        <option value="Básico">Básico</option>
+                        <option value="Intermediário">Intermediário</option>
+                        <option value="Avançado">Avançado</option>
                         
                       
                     </select>

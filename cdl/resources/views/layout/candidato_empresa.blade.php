@@ -311,7 +311,7 @@
 <script>
 Swal.fire({
   position: 'center',
-  //icon: 'success',
+  icon: 'warning',
   text: 'Informe pelo menos um campo',
   showConfirmButton: false,
   timer: 5500
@@ -323,7 +323,7 @@ Swal.fire({
 <script>
 Swal.fire({
   position: 'center',
-  //icon: 'success',
+  icon: 'warning',
   text: 'Ainda não possui nenhum registro candidato!',
   showConfirmButton: false,
   timer: 5500
