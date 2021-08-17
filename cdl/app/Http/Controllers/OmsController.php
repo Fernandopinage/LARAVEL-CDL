@@ -180,6 +180,11 @@ class OmsController extends Controller
         }
     }
 
+    public function alterarPassword(){
+
+        return view('alterar_senha _oms');
+    }
+
 
     public function login()
     {

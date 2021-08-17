@@ -74,6 +74,7 @@ Route::get('/redefinir/password/oms/{id}', function ($id) {return view('redefini
 Route::post('/recuperar/senha/oms', [OmsController::class, 'alterarSenha']);
 Route::get('/edita/oms/{id}', [OmsController::class, 'editaEmpresa']);  //tela de update de empresa
 Route::post('/update/oms/{id}', [OmsController::class, 'Update']);
+Route::get('/alterar/senha/oms', [OmsController::class, 'alterarPassword']);
 //});
 
 

@@ -34,7 +34,7 @@
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li><a class="dropdown-item" href="/edita/oms/{{session('oms_id')}}">Editar Organização Militar</a></li>
-              <li><a class="dropdown-item" href="/alterar/senha/empresa">Redefinir Senha</a></li>
+              <li><a class="dropdown-item" href="/alterar/senha/oms">Redefinir Senha</a></li>
               <li>
                 <hr class="dropdown-divider">
               </li>
