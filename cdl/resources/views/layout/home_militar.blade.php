@@ -98,6 +98,19 @@
   </script>
   @endif
 
+  <!-- Mensagem de Alteração com sucesso -->
+  @if(session('alterar'))
+  <script>
+  Swal.fire({
+  position: 'center',
+  icon: 'success',
+  title: 'Alteração',
+  text:'Realizada com sucesso!"',
+  showConfirmButton: false,
+  timer: 3500
+})
+</script>
+@endif
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"

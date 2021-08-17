@@ -91,7 +91,7 @@
     </nav>
   </footer>
 
-  @if(session('mensagem'))
+  @if(session('erro'))
   <script>
     Swal.fire({
     position: 'center',

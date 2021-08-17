@@ -35,13 +35,13 @@ class OmsController extends Controller
                 $request->session()->put('oms_email', $request->email);
                 return redirect('/home/militar');
             } else {
-                return redirect('login/militar');
+                return redirect('login/militar')->with('erro', 'Email ou Senha incorretos!');
             }
 
-            return redirect('/login/empresa')->with('mensagem', 'Email ou Senha incorretos!');
+            return redirect('/login/empresa')->with('erro', 'Email ou Senha incorretos!');
         } else {
 
-            return redirect('login/militar')->with('mensagem', 'Email ou Senha incorretos!');   // caso não existe o email
+            return redirect('login/militar')->with('erro', 'Email ou Senha incorretos!');   // caso não existe o email
         }
     }
 
