@@ -114,7 +114,7 @@ class OmsController extends Controller
             $oms->oms_nome = $request->unidade;
             $oms->oms_telefone = $request->telefone;
             $oms->oms_email = $request->email;
-            $oms->oms_senha = Hash::make($request->senha);
+            //$oms->oms_senha = Hash::make($request->senha);
             $oms->oms_celular = $request->telefone2;
             $oms->oms_tecnico = $request->tecnico;
             $oms->oms_email_tecnico = $request->email_tecnico;
