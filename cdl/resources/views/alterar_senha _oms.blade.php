@@ -2,7 +2,7 @@
 
 @section('alterar_senha')
 
-<form class="form-signin" method="post" action="{{('/modificar/senha/empresa')}}">
+<form class="form-signin" method="post" action="{{('/modificar/senha/oms')}}">
 
     <div class="text-center">
         <h2 class="form-signin-heading">ALTERAR SENHA</h2>
@@ -11,7 +11,7 @@
     </div>
     @csrf
     <div class="mb-3">
-        <input type="hidden" name="email" value="<?php echo session('empresa') ?>" >
+        <input type="hidden" name="id" value="<?php echo session('oms_id') ?>" >
         <label for="formGroupExampleInput" class="form-label">*Nova senha</label>
         <input type="password" class="form-control form-control" name="newsenha" placeholder="Digite sua nova senha" required/>
     </div>

@@ -184,7 +184,27 @@ class OmsController extends Controller
 
         return view('alterar_senha _oms');
     }
+    public function modificarSenha(request $request)
+    {
 
+    
+        $oms =  Oms::where('oms_id', $request->id)->first(); // select empresa vindo de uma session hidder input
+
+        $id = $oms['oms_id'];
+
+        if ($request->newsenha === $request->confsenha) {
+
+            $oms = Oms::find($id);
+            $oms->oms_senha = Hash::make($request->confsenha);
+            $oms->save();
+            return redirect('home/militar')->with('alterar', 'Sua senha foi alterado com sucesso!');
+        } elseif ($request->newsenha != $request->confsenha) {
+
+            return redirect('/alterar/senha/oms')->with('diferente', 'Senha incorretas');
+        } else {
+            return redirect('/alterar/senha/oms')->with('mensagem', 'Senhas estão erradas');
+        }
+    }
 
     public function login()
     {
