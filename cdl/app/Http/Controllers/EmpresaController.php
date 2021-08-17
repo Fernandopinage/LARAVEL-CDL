@@ -210,7 +210,7 @@ class EmpresaController extends Controller
         $empresa->save();
 
 
-        return redirect('home/empresa')->with('mensagem', 'Produto cadastrado com sucesso!');
+        return redirect('home/empresa')->with('alterar', 'Produto cadastrado com sucesso!');
         
     }
 
