@@ -17,7 +17,7 @@
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="/home/empresa"><img id="logo" src="/img/cdl_logo.png"></a>
+      <a class="navbar-brand" href="/home/militar"><img id="logo" src="/img/cdl_logo.png"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -27,24 +27,18 @@
           <li class="nav-item">
             <a class="nav-link" href="/busca/militar">Buscar Candidatos</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/anucio/empresa">Anúncio de vaga </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/filtra/candidato/empresa">Buscar Candidatos</a>
-          </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
               aria-expanded="false">
               Opções
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="/edita/empresa/{{session('empresa_id')}}">Editar Empresa</a></li>
+              <li><a class="dropdown-item" href="/edita/empresa/{{session('empresa_id')}}">Editar oms</a></li>
               <li><a class="dropdown-item" href="/alterar/senha/empresa">Redefinir Senha</a></li>
               <li>
                 <hr class="dropdown-divider">
               </li>
-              <li><a class="dropdown-item" href="/">Sair</a></li>
+              <li><a class="dropdown-item" href="/login/militar">Sair</a></li>
             </ul>
           </li>
         </ul>

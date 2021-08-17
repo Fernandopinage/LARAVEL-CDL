@@ -113,7 +113,9 @@ Swal.fire({
 </script>
 @endif
 
-@if(session('sucesso'))
+
+
+@if(session('redefinir'))
 <script>
 Swal.fire({
   position: 'center',

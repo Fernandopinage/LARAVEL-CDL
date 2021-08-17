@@ -260,7 +260,7 @@ class EmpresaController extends Controller
             
             Mail::to($Request->email)->send(new empresaMail(Empresa::where('emp_email', $Request->email)->first()));
 
-            return redirect('/redefinir/empresa')->with('sucesso', 'Produto cadastrado com sucesso!');;
+            return redirect('/redefinir/empresa')->with('sucesso', 'Produto cadastrado com sucesso!');
         }
         
     }

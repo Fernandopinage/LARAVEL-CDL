@@ -28,6 +28,17 @@ title{
     
    
 }
+.carousel-control-next-icon{
+    
+    background-color: rgba(0, 0, 0, 0.411);
+    border-radius: 8px;
+}
+.carousel-control-prev-icon{
+    
+    background-color: rgba(0, 0, 0, 0.411);
+    border-radius: 8px;
+}
+
 
 .form-signin{
 

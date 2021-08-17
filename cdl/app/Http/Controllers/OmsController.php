@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\omsMail;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 use App\Models\Oms;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
 use Oms as GlobalOms;
 
 class OmsController extends Controller
@@ -117,9 +119,17 @@ class OmsController extends Controller
 
         $oms = Oms::where('oms_email', $request->email)->first();
         if(empty($oms)){
-
+            return redirect('/oms/redefinir')->with('redefinir', 'Produto cadastrado com sucesso!');
         }else{
-            return redirect('/oms/redefinir')->with('mensagem', 'Produto cadastrado com sucesso!');
+                        
+            $id = $oms->oms_id;
+            
+            $nome = $oms->oms_nome;
+            $email = $oms->oms_email;
+            
+           
+            Mail::to($oms->email)->send(new omsMail(Oms::where('oms_email', $request->email)->first()));
+           return redirect('/oms/redefinir')->with('sucesso', 'Produto cadastrado com sucesso!');
         }
     }
         
