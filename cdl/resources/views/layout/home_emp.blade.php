@@ -9,6 +9,7 @@
     integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
   <link href="/css/home_empresa.css" rel="stylesheet">
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  <link rel="icon" href="/img/title.png">
   <title>Empregabilidade | CDL Manaus</title>
 </head>
 
@@ -211,12 +212,12 @@
 </body>
 
 <!-- Mensagem de cadastro com sucesso -->
-@if(session('mensagem'))
+@if(session('alterar'))
   <script>
   Swal.fire({
   position: 'center',
   icon: 'success',
-  title: 'Registro cadastrado com sucesso!',
+  title: 'Senha alterada com sucesso!',
   showConfirmButton: false,
   timer: 1500
 })

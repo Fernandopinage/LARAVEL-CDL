@@ -8,6 +8,7 @@
     <link href="/css/anucie_empresa.css" rel="stylesheet">
     <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <link rel="icon" href="/img/title.png">
     <title>Empregabilidade | CDL Manaus</title>
 </head>
 <body>

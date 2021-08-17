@@ -32,6 +32,7 @@
                                     <span style="color: #22427c; margin-right:185px">Tipo de Vaga:</span> <span   style="color: #696969;">{{$vagas->vag_tipo}}<span>
                                 </h6>
 
+                                <!--
                                 <div class="text-center" style="margin-top: 20px;">
                                     <button type="button" class="btn btn-danger" data-toggle="modal"
                                         data-target="#visualizar{{$vagas->vag_id}}">
@@ -42,6 +43,7 @@
                                         VISUALIZAR
                                     </button>
                                 </div>
+                            -->
                     </div>
                 </div>
             </div>

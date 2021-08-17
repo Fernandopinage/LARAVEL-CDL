@@ -288,7 +288,7 @@ class EmpresaController extends Controller
             $empresa = Empresa::find($id);
             $empresa->emp_senha = Hash::make($request->confsenha);
             $empresa->save();
-            return redirect('home/empresa')->with('mensagem', 'Sua senha foi alterado com sucesso!');
+            return redirect('home/empresa')->with('alterar', 'Sua senha foi alterado com sucesso!');
         } elseif ($request->newsenha != $request->confsenha) {
 
             return redirect('/alterar/senha/empresa')->with('diferente', 'Senha incorretas');

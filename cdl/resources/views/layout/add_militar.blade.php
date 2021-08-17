@@ -9,6 +9,7 @@
     crossorigin="anonymous"></script>
     <link href="/css/add_militar.css" rel="stylesheet">
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <link rel="icon" href="/img/title.png">
     <title>Empregabilidade | CDL Manaus</title>
 </head>
 <body>
@@ -28,7 +29,7 @@
                         Candidatos
                       </a>
                       <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="/login/candidato">Entrar</a></li>
+                       <!--  <li><a class="dropdown-item" href="/login/candidato">Entrar</a></li>
                         <li><a class="dropdown-item" href="">Buscar Vagas</a></li> <!-- "/busca/candidato"  remover quando for implementar -->
                       <!--<li><hr class="dropdown-divider"></li>-->
                         
