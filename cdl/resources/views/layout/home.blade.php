@@ -94,7 +94,7 @@
             </div>
         </div>
     </div>
-    <div class="container" id="container">
+    <div class="container" id="container" style="">
         <div class="row gx-6">
             <div class="col-lg-4">
                 <div class="card" style="width: 25rem;  margin-right: 50px;">

@@ -49,15 +49,15 @@
                     <input type="password" class="form-control form-control-sm" name="confirma" placeholder="" value="{{old('senha')}}" required>
                 </div>
                 <div class="col-md-4">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Contato Tecnico  <span><strong>*</strong></span></label>
+                    <label class="form-check-label" for="flexCheckIndeterminate">Contato Técnico  <span><strong>*</strong></span></label>
                     <input type="text" name="tecnico" class="form-control form-control-sm" placeholder="" value="{{old('tecnico')}}" required>
                 </div>
                 <div class="col-md-4">
-                    <label class="form-check-label" for="flexCheckIndeterminate">E-mail Tecnico  <span><strong>*</strong></span> </label>
+                    <label class="form-check-label" for="flexCheckIndeterminate">E-mail Técnico  <span><strong>*</strong></span> </label>
                     <input type="text" name="email_tecnico" class="form-control form-control-sm" placeholder="" value="{{old('email_tecnico')}}" required>
                 </div>
                 <div class="col-md-4">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Função Tecnico  <span><strong>*</strong></span> </label>
+                    <label class="form-check-label" for="flexCheckIndeterminate">Função Técnico  <span><strong>*</strong></span> </label>
                     <input type="text" name="funcao" class="form-control form-control-sm" placeholder="" value="{{old('funcao')}}" required>
                 </div>
                 <div class="col-md-2">

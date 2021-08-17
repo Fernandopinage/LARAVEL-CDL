@@ -106,7 +106,7 @@
 Swal.fire({
   position: 'center',
   icon: 'error',
-  title: 'Email ou senha invalidas',
+  title: 'Dados de login não conferem',
   showConfirmButton: false,
   timer: 1500
 })

@@ -105,7 +105,7 @@
 Swal.fire({
   position: 'center',
  // icon: 'error',
-  title: 'E-mail invalido',
+  title: 'E-MAIL INVÁLIDO',
   text: 'Informe um e-mail valido',
   showConfirmButton: false,
   timer: 1500
@@ -120,7 +120,7 @@ Swal.fire({
 Swal.fire({
   position: 'center',
  // icon: 'error',
-  //title: 'E-mail invalido',
+  //title: 'E-MAIL INVÁLIDO',
   text: 'O E-mail com as intruções para redefinir a senha foi enviado com sucesso!',
   showConfirmButton: false,
   timer: 5500

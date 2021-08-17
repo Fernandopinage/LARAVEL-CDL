@@ -91,7 +91,7 @@
                     <input type="text" class="form-control form-control-sm" name="curso" placeholder="">
                 </div>
                 <div class="col-md-2" id="termino_div">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Ano de término </label>
+                    <label class="form-check-label" for="flexCheckIndeterminate">Ano de Términio </label>
                     <input type="month"  class="form-control form-select-sm" name="termino" placeholder="">
                 </div>
                 <div class="col-md-2" id="semestre_div">

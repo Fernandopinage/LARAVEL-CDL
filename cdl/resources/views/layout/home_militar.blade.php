@@ -25,7 +25,7 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="/busca/militar">Buscar Candidatos</a>
+            <a class="nav-link" href="/busca/militar">Buscar por Ex-Militares</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
@@ -33,7 +33,7 @@
               Opções
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="/edita/empresa/{{session('empresa_id')}}">Editar oms</a></li>
+              <li><a class="dropdown-item" href="/edita/empresa/{{session('empresa_id')}}">Editar Organização Militar</a></li>
               <li><a class="dropdown-item" href="/alterar/senha/empresa">Redefinir Senha</a></li>
               <li>
                 <hr class="dropdown-divider">
