@@ -82,7 +82,7 @@ $oms;
                     <label class="form-check-label" for="flexCheckIndeterminate">Nº <span><strong>*</strong></span></label>
                     <input type="text" class="form-control form-control-sm" name="numero"  placeholder="" value="{{$oms->oms_numero}}" required>
                 </div>
-                <div class="col-md-10">
+                <div class="col-md-6">
                     <label class="form-check-label" for="flexCheckIndeterminate">Complemento</label>
                     <input type="text" class="form-control form-control-sm" name="complemento" id="complemento" placeholder="" value="{{$oms->oms_complemento}}">
                 </div>
