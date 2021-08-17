@@ -28,14 +28,20 @@ class omsMail extends Mailable
      */
     public function build()
     {
+        
+        // definir parametros do e-mail
+      
         $this->subject('Sua senha foi redefinida');
         $this->to($this->inputs->oms_email , $this->inputs->oms_nome);
 
-        return $this->markdown('mailEmpresa.omsMail',[
+        $this->inputs->oms_email;
+        
+         return $this->markdown('mailEmpresa.omsMail',[
 
             'inputs' => $this->inputs
 
         ]);
-
+        
+      
     }
 }

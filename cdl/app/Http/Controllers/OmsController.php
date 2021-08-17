@@ -26,27 +26,27 @@ class OmsController extends Controller
         */
 
         $oms =  Oms::where('oms_email', $request->email)->first();
-      
+
         if (!empty($oms)) {                                               //  caso tenha valor dentro da variavel empresa
-       
-             if(Hash::check($request->password, $oms->oms_senha)){
+
+            if (Hash::check($request->password, $oms->oms_senha)) {
                 $id = $oms['emp_id'];
                 $request->session()->put('oms_id', $id);
                 $request->session()->put('oms', $request->email);
-                return redirect('/home/militar');     
-             }else{
-                 return redirect('login/militar');
-             }
-            
+                return redirect('/home/militar');
+            } else {
+                return redirect('login/militar');
+            }
+
             return redirect('/login/empresa')->with('mensagem', 'Email ou Senha incorretos!');
         } else {
 
             return redirect('login/militar')->with('mensagem', 'Email ou Senha incorretos!');   // caso não existe o email
         }
-      
     }
 
-    public function home(){
+    public function home()
+    {
 
         return view('home_militar');
     }
@@ -55,7 +55,7 @@ class OmsController extends Controller
     public function store(Request $request)
     {
 
-       //dd($request);
+        //dd($request);
 
 
         /*
@@ -79,7 +79,7 @@ class OmsController extends Controller
         ]);
         */
 
-        if($request->senha === $request->confirma){
+        if ($request->senha === $request->confirma) {
 
             $oms = new Oms();
             $oms->oms_nome = $request->unidade;
@@ -100,39 +100,58 @@ class OmsController extends Controller
             $oms->oms_status = 'S';
             $oms->save();
             return redirect('login/militar')->with('empresa_cadastro', 'Produto cadastrado com sucesso!');
-        }else{
+        } else {
             return redirect('/add/oms/');
         }
-        
-
     }
 
-    public function redefinir(){
-
-      
+    public function redefinir()
+    {
         return view('redefinir_oms');
     }
 
-    public function redefinirSenha(Request $request){
 
-   
+
+    public function redefinirSenha(Request $request)
+    {
 
         $oms = Oms::where('oms_email', $request->email)->first();
-        if(empty($oms)){
+
+
+        if (empty($oms)) {
             return redirect('/oms/redefinir')->with('redefinir', 'Produto cadastrado com sucesso!');
-        }else{
-                        
-            $id = $oms->oms_id;
-            
-            $nome = $oms->oms_nome;
-            $email = $oms->oms_email;
-            
-           
-            Mail::to($oms->email)->send(new omsMail(Oms::where('oms_email', $request->email)->first()));
-           return redirect('/oms/redefinir')->with('sucesso', 'Produto cadastrado com sucesso!');
+        } else {
+
+            Mail::to($oms->oms_email)->send(new omsMail(Oms::where('oms_email', $request->email)->first()));
+
+            return redirect('/oms/redefinir')->with('sucesso', 'Produto cadastrado com sucesso!');
         }
     }
-        
+
+    public function alterarSenha(Request $request)
+    {
+
+
+        $oms =  Oms::where('oms_id', $request->id)->first(); // select empresa vindo de uma session hidder input
+
+
+
+        if ($request->newsenha === $request->confsenha) {
+
+            $oms = Oms::find($request->id);
+
+
+            $oms->oms_senha = Hash::make($request->confsenha);
+            $oms->save();
+            return redirect('/home/militar')->with('alterar', 'Sua senha foi alterado com sucesso!');
+        } elseif ($request->newsenha != $request->confsenha) {
+
+            return redirect('/oms/redefinir')->with('diferente', 'Senha incorretas');
+        } else {
+            return redirect('/oms/redefinir')->with('mensagem', 'Senhas estão erradas');
+        }
+    }
+
 
     public function login()
     {
