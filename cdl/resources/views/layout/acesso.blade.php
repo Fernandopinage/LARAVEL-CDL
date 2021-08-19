@@ -45,7 +45,7 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                       <li><a class="dropdown-item" href="/login/militar">Entrar</a></li>
-                      <li><a class="dropdown-item" href="/busca/militar">Buscar por Ex-Militares</a></li>
+                     <!-- <li><a class="dropdown-item" href="/busca/militar">Buscar por Ex-Militares</a></li> -->
                      <!-- <li><hr class="dropdown-divider"></li> -->
                       
                     </ul>

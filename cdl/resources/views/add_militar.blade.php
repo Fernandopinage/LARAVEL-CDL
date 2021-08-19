@@ -30,11 +30,11 @@
                 </div>
                 <div class="col-md-3">
                     <label class="form-check-label" for="flexCheckIndeterminate">Telefone  <span><strong>*</strong></span></label>
-                    <input type="tel" class="form-control form-control-sm" name="telefone" placeholder="(99) 99999-9999" onkeypress="mask(this, mphone);" onblur="mask(this, mphone);" value="{{old('telefone')}}" required>
+                    <input type="tel" class="form-control form-control-sm" onkeypress="mask(this, mphone);" onblur="mask(this, mphone);" name="telefone" placeholder="(99) 99999-9999" onkeypress="mask(this, mphone);" onblur="mask(this, mphone);" value="{{old('telefone')}}" required>
                 </div>
                 <div class="col-md-3">
                     <label class="form-check-label" for="flexCheckIndeterminate">Telefone  <span><strong>*</strong></span></label>
-                    <input type="tel" class="form-control form-control-sm" name="telefone2" placeholder="(99) 99999-9999" onkeypress="mask(this, mphone);" onblur="mask(this, mphone);" value="{{old('telefone2')}}" required>
+                    <input type="tel" class="form-control form-control-sm" onkeypress="mask(this, mphone);" onblur="mask(this, mphone);" name="telefone2" placeholder="(99) 99999-9999" onkeypress="mask(this, mphone);" onblur="mask(this, mphone);" value="{{old('telefone2')}}" required>
                 </div>
                 <div class="col-md-4">
                     <label class="form-check-label" for="flexCheckIndeterminate">E-mail  <span><strong>*</strong></span></label>
@@ -62,7 +62,7 @@
                 </div>
                 <div class="col-md-2">
                     <label class="form-check-label" for="flexCheckIndeterminate">CEP <span><strong>*</strong></span></label>
-                    <input type="text" class="form-control form-control-sm" name="cep" id="cep" placeholder="" value="{{old('cep')}}" required>
+                    <input type="text" maxlength="8" class="form-control form-control-sm" name="cep" id="cep" placeholder="" value="{{old('cep')}}" required>
                 </div>
                 <div class="col-md-1">
                     <label class="form-check-label" for="flexCheckIndeterminate">UF <span><strong>*</strong></span></label>
@@ -101,3 +101,65 @@
 </form>
 
 @endsection
+
+
+<script type="text/javascript">
+    function mask(o, f) {
+  setTimeout(function() {
+    var v = mphone(o.value);
+    if (v != o.value) {
+      o.value = v;
+    }
+  }, 1);
+}
+
+function mphone(v) {
+    var r = v.replace(/\D/g, "");
+    r = r.replace(/^0/, "");
+    if (r.length > 10) {
+        r = r.replace(/^(\d\d)(\d{5})(\d{4}).*/, "($1) $2-$3");
+    } else if (r.length > 5) {
+        r = r.replace(/^(\d\d)(\d{4})(\d{0,4}).*/, "($1) $2-$3");
+    } else if (r.length > 2) {
+        r = r.replace(/^(\d\d)(\d{0,5})/, "($1) $2");
+    } else {
+        r = r.replace(/^(\d*)/, "($1");
+    }
+    return r;
+    }
+</script>
+
+<!-- ----------------------------------------------------------------- -->
+
+<!-- *************************validando cnpj ************************* -->
+<script>
+    function formatarCampo(campoTexto) {
+        if (campoTexto.value.length <= 11) {
+            campoTexto.value = mascaraCpf(campoTexto.value);
+        } else {
+            campoTexto.value = mascaraCnpj(campoTexto.value);
+        }
+    }
+    function retirarFormatacao(campoTexto) {
+        campoTexto.value = campoTexto.value.replace(/(\.|\/|\-)/g,"");
+    }
+    function mascaraCpf(valor) {
+        return valor.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/g,"\$1.\$2.\$3\-\$4");
+    }
+    function mascaraCnpj(valor) {
+        return valor.replace(/(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/g,"\$1.\$2.\$3\/\$4\-\$5");
+    }
+
+    function somenteNumeros(e) {
+        var charCode = e.charCode ? e.charCode : e.keyCode;
+        // charCode 8 = backspace   
+        // charCode 9 = tab
+        if (charCode != 8 && charCode != 9) {
+            // charCode 48 equivale a 0   
+            // charCode 57 equivale a 9
+            if (charCode < 48 || charCode > 57) {
+                return false;
+            }
+        }
+    }
+</script>
