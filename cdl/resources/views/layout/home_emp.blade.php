@@ -211,7 +211,7 @@
   </footer>
 </body>
 
-<!-- Mensagem de cadastro com sucesso -->
+<!-- Mensagem de cadastro com  -->
 @if(session('alterar'))
   <script>
   Swal.fire({

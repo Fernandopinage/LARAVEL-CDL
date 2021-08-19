@@ -64,7 +64,7 @@ Route::get('/login/militar', [OmsController::class, 'login']); // chamando tela 
 Route::post('/validar/oms', [OmsController::class, 'validarOms']); // validando login
 Route::get('/home/militar', [OmsController::class, 'home']);
 Route::get('/add/oms/', [OmsController::class, 'formularioOms']); // add OMS
-Route::POST('/insert/oms/', [OmsController::class, 'store']);
+Route::get('/insert/oms/', [OmsController::class, 'store']);
 Route::get('busca/militar', [exmilitarController::class, 'index']); // chamando tela busca 
 Route::get('busca/militar/filtro/',[exmilitarController::class, 'buscarExmilitar']); // buscando candidato
 Route::get('busca/militar/filtro/{id}');

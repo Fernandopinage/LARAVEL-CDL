@@ -1,7 +1,7 @@
 @extends('layout.add_militar')
 @section('add_militar')
 
-<form method="post" action="/insert/oms/" >
+<form method="get" action="/insert/oms/" >
 
     @csrf
 

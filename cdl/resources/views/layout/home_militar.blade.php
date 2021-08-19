@@ -90,8 +90,8 @@
     Swal.fire({
     position: 'center',
     icon: 'success',
-    title: 'Organização militares',
-    text: ' cadastrado com sucesso',
+    title: 'Organização Militar cadastrada com sucesso ',
+    //text: 'Organização Militar cadastrada com sucesso',
     showConfirmButton: false,
     timer: 2500
   })
