@@ -6,7 +6,7 @@
 
     @csrf
 
-    <div class="form-signin">
+    <div class="form-signin shadow p-3 mb-5 bg-body rounded">
         <div class="text-end">
             <label class="switch">
                 <input type="checkbox" id="pessoais" checked>
@@ -119,7 +119,7 @@
     </div>
 
 
-    <div class="form-signin">
+    <div class="form-signin shadow p-3 mb-5 bg-body rounded">
         <div class="text-end">
             <label class="switch">
                 <input type="checkbox" id="endereco" checked>
@@ -183,7 +183,7 @@
     </div>
 
 
-    <div class="form-signin">
+    <div class="form-signin shadow p-3 mb-5 bg-body rounded">
         <div class="text-end">
             <label class="switch">
                 <input type="checkbox" id="adcinais" checked>
@@ -217,7 +217,7 @@
         <hr>
     </div>
 
-    <div class="form-signin">
+    <div class="form-signin shadow p-3 mb-5 bg-body rounded">
 
         <div class="">
             <h2 class="form-signin-heading">TERMO</h2>
