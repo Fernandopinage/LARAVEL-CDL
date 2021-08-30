@@ -44,8 +44,12 @@ Route::post('/insert/empresa', [EmpresaController::class, 'store']); // submeten
 Route::get('/edita/empresa/{id}', [EmpresaController::class, 'editaEmpresa']);  //tela de update de empresa
 Route::post('/update/empresa/{id}', [EmpresaController::class, 'update']);
 Route::get('/redefinir/empresa', [EmpresaController::class, 'redefinirSenha']); // chamando tela de redefinir senha
-Route::get('/empresa/redefinir', function () {return view("mailEmpresa.empresaMail");});
-Route::get('/redefinir/password/{id}', function ($id) {return view('redefinir_password', ['id' => $id]);});
+Route::get('/empresa/redefinir', function () {
+    return view("mailEmpresa.empresaMail");
+});
+Route::get('/redefinir/password/{id}', function ($id) {
+    return view('redefinir_password', ['id' => $id]);
+});
 Route::post('/recuperar/senha/', [EmpresaController::class, 'recuperarSenha']);
 Route::post('/redefinir/senha/empresa', [EmpresaController::class, 'redefinir']);
 Route::get('/alterar/senha/empresa', [EmpresaController::class, 'alterarSenha']); // redefinir senha da empresa
@@ -66,18 +70,26 @@ Route::get('/home/militar', [OmsController::class, 'home']);
 Route::get('/add/oms/', [OmsController::class, 'formularioOms']); // add OMS
 Route::get('/insert/oms/', [OmsController::class, 'store']);
 Route::get('busca/militar', [exmilitarController::class, 'index']); // chamando tela busca 
-Route::get('busca/militar/filtro/',[exmilitarController::class, 'buscarExmilitar']); // buscando candidato
+Route::get('busca/militar/filtro/', [exmilitarController::class, 'buscarExmilitar']); // buscando candidato
 Route::get('busca/militar/filtro/{id}');
 Route::get('/oms/redefinir', [OmsController::class, 'redefinir']); // tela de redefinir senha
-Route::post('/redefinir/senha/oms',[OmsController::class, 'redefinirSenha']); // chamndo a logica para redefinir
-Route::get('/redefinir/password/oms/{id}', function ($id) {return view('redefinir_password_oms', ['id' => $id]);});
+Route::post('/redefinir/senha/oms', [OmsController::class, 'redefinirSenha']); // chamndo a logica para redefinir
+Route::get('/redefinir/password/oms/{id}', function ($id) {
+    return view('redefinir_password_oms', ['id' => $id]);
+});
 Route::post('/recuperar/senha/oms', [OmsController::class, 'alterarSenha']);
 Route::get('/edita/oms/{id}', [OmsController::class, 'editaEmpresa']);  //tela de update de empresa
 Route::post('/update/oms/{id}', [OmsController::class, 'Update']);
 Route::get('/alterar/senha/oms', [OmsController::class, 'alterarPassword']);
-Route::post('/modificar/senha/oms',[OmsController::class, 'modificarSenha']);
+Route::post('/modificar/senha/oms', [OmsController::class, 'modificarSenha']);
 //});
 
 
-Route::get('login/acesso', [acessoController::class, 'index']);   // tela de acesso area administrativa
+//Route::middleware(['oms'])->group(function () {
 Route::get('login/utv', [utvController::class, 'index']);  // tela de acesso a utv
+Route::get('home/utv',[utvController::class, 'home']);
+Route::get('add/utv',[utvController::class, 'formularioUtv']);
+//}
+
+
+Route::get('login/acesso', [acessoController::class, 'index']);   // tela de acesso area administrativa

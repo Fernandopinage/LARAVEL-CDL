@@ -16,6 +16,11 @@ class utvController extends Controller
         return view('utv');
     }
 
+    public function home()
+    {
+        return view('home_utv');
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -23,7 +28,13 @@ class utvController extends Controller
      */
     public function create()
     {
-        //
+        
+    }
+
+    public function formularioUtv(){
+
+        return view('add_utv');
+
     }
 
     /**

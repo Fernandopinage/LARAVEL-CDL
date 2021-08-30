@@ -17,6 +17,9 @@
         <div class="col">
             <a class="nav-link" href="#">Esqueci minha senha</a>
         </div>
+        <div class="col">
+            <a class="nav-link" id="link1" href="/add/utv">Criar uma conta</a>
+        </div>
     </div>
 
     <div class="d-grid gap-2">
