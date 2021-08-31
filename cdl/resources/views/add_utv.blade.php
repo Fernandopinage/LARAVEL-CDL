@@ -1,19 +1,12 @@
 @extends('layout.add_utv')
 @section('add_utv')
 
-<form method="get" action="/insert/oms/" >
+<form method="POST" action="/insert/utv/" >
 
     @csrf
 
     <div class="form-signin">
-        <!--
-        <div class="text-end">
-            <label class="switch">
-                <input type="checkbox" id="pessoais" checked>
-                <span class="slider round"></span>
-            </label>
-        </div>
-    -->
+
         <div class="text">          
             <h2 class="form-signin-heading">DADOS DO UTV </h2>
             <hr>
@@ -58,7 +51,7 @@
                 </div>
                 <div class="col-md-2">
                     <label class="form-check-label" for="flexCheckIndeterminate">CEP <span><strong>*</strong></span></label>
-                    <input type="text" maxlength="8" class="form-control form-control-sm" name="cep" id="cep" placeholder="" value="{{old('cep')}}" required>
+                    <input type="text" maxlength="9" class="form-control form-control-sm" name="cep" id="cep" placeholder="" value="{{old('cep')}}" required>
                 </div>
                 <div class="col-md-1">
                     <label class="form-check-label" for="flexCheckIndeterminate">UF <span><strong>*</strong></span></label>

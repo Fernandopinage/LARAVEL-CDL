@@ -89,6 +89,7 @@ Route::post('/modificar/senha/oms', [OmsController::class, 'modificarSenha']);
 Route::get('login/utv', [utvController::class, 'index']);  // tela de acesso a utv
 Route::get('home/utv',[utvController::class, 'home']);
 Route::get('add/utv',[utvController::class, 'formularioUtv']);
+Route::POST('/insert/utv/',[utvController::class, 'store']);
 //}
 
 

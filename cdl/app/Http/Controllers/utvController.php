@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\UTV;
 
 class utvController extends Controller
 {
@@ -45,7 +46,33 @@ class utvController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //dd($request);
+        $Status = 'S';
+        
+        if($request->senha === $request->confirma){
+            
+            $UTV = new UtV();
+            $UTV->utv_unidade = $request->unidade;
+           //$UTV->utv_periodo = $request->"";
+            $UTV->utv_telefone = $request->telefone;
+            $UTV->utv_telefone2 = $request->telefone2;
+            $UTV->utv_cep = $request->cep;
+            $UTV->utv_cidade = $request->cidade;
+            $UTV->utv_bairro = $request->bairro;
+            $UTV->utv_logradouro = $request->logradouro;
+            $UTV->utv_numero = $request->numero;
+            $UTV->utv_complemento = $request->complemento;
+            $UTV->utv_contato_tec = $request->tecnico;
+            $UTV->utv_email_tec = $request->email_tecnico;
+            $UTV->utv_funcao_tec = $request->funcao;
+            $UTV->utv_status = $request->$Status;
+            $UTV->save();
+
+            return redirect('/login/utv')->with('');
+        }else{
+            return redirect('/add/utv')->with('');
+        }
+        
     }
 
     /**

@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="/css/add_empresa.css" rel="stylesheet">
+  <link href="/css/add_utv.css" rel="stylesheet">
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
   <link rel="icon" href="/img/title.png">
   <title>  Empregabilidade | CDL Manaus</title>
