@@ -36,7 +36,7 @@
                       Cursos
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="/login/empresa">Entrar</a></li>
+                      <li><a class="dropdown-item" href="/cursos/utv/">Cadastro de Cursos</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">

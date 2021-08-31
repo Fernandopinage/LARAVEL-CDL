@@ -95,18 +95,17 @@ class utvController extends Controller
         
     }
 
+    public function cursosAdd(){
+
+       return view('add_cursoutv');
+    }
   
     public function show($id)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+ 
     public function edit($id)
     {
             echo $id;
@@ -119,13 +118,7 @@ class utvController extends Controller
         return view('update_utv', compact('utv'));
     }
     
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function update(Request $request, $id)
     {
 
@@ -158,12 +151,7 @@ class utvController extends Controller
         
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+ 
     public function destroy($id)
     {
         return redirect('login/utv'); 
