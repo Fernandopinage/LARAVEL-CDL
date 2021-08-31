@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\UTV;
+use Illuminate\Support\Facades\Hash;
 
 class utvController extends Controller
 {
@@ -22,11 +23,6 @@ class utvController extends Controller
         return view('home_utv');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
         
@@ -49,35 +45,41 @@ class utvController extends Controller
             //dd($request);
             $Status = 'S';
         
-            $UTV = new UtV();
-            $UTV->utv_unidade = $request->unidade;
-           //$UTV->utv_periodo = $request->"";
-            $UTV->utv_telefone = $request->telefone;
-            $UTV->utv_telefone2 = $request->telefone2;
-            $UTV->utv_cep = $request->cep;
-            $UTV->utv_cidade = $request->cidade;
-            $UTV->utv_bairro = $request->bairro;
-            $UTV->utv_logradouro = $request->logradouro;
-            $UTV->utv_numero = $request->numero;
-            $UTV->utv_complemento = $request->complemento;
-            $UTV->utv_contato_tec = $request->tecnico;
-            $UTV->utv_email_tec = $request->email_tecnico;
-            $UTV->utv_funcao_tec = $request->funcao;
-            $UTV->utv_status = $request->$Status;
-            $UTV->save();
+            if($request->senha === $request->confirma){
 
-            return redirect('/login/utv')->with('');
+                
+                $UTV = new UtV();
+                $UTV->utv_unidade = $request->unidade;
+                $UTV->utv_email = $request->email;
+                $UTV->utv_senha = Hash::make($request->senha);
+                $UTV->utv_telefone = $request->telefone;
+                $UTV->utv_telefone2 = $request->telefone2;
+                $UTV->utv_cep = $request->cep;
+                $UTV->utv_cidade = $request->cidade;
+                $UTV->utv_bairro = $request->bairro;
+                $UTV->utv_logradouro = $request->logradouro;
+                $UTV->utv_numero = $request->numero;
+                $UTV->utv_complemento = $request->complemento;
+                $UTV->utv_contato_tec = $request->tecnico;
+                $UTV->utv_email_tec = $request->email_tecnico;
+                $UTV->utv_funcao_tec = $request->funcao;
+                $UTV->utv_status = $request->$Status;
+                $UTV->save();
+                
+                return redirect('/login/utv')->with('');
+            }
         
         
         
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+    public function validarLogin($request){
+
+        $empresa =  UTV::where('emp_email', $request->email)->first();
+
+    }
+
+
     public function show($id)
     {
         //

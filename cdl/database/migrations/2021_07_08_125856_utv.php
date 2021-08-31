@@ -18,6 +18,8 @@ class Utv extends Migration
         Schema::create('TBL_UTV', function (Blueprint $table) {
             $table->increments('utv_id');          //  id auto incremento primary key
             $table->string('utv_unidade',100)->nullable();             // nome da unidade
+            $table->string('utv_email',100)->nullable();               // email da utv (Obrigadorio)
+            $table->string('utv_senha',255)->nullable();                // senha (Obrigadorio)
             $table->string('utv_periodo',100)->nullable();              // campo onde fornece periodo exmplo: 15 as 18/06/2021
             $table->string('utv_telefone',20)->nullable();              // telefone da unidade
             $table->string('utv_telefone2',20)->nullable();              // telefone da unidade

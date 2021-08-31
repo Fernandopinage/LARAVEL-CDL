@@ -30,6 +30,18 @@
                     <input type="tel" class="form-control form-control-sm" onkeypress="mask(this, mphone);" onblur="mask(this, mphone);" name="telefone2" placeholder="(99) 99999-9999" onkeypress="mask(this, mphone);" onblur="mask(this, mphone);" value="{{old('telefone2')}}" required>
                 </div>
                 <div class="col-md-4">
+                    <label class="form-check-label" for="flexCheckIndeterminate">Senha  <span><strong>*</strong></span></label>
+                    <input type="password" class="form-control form-control-sm" name="senha" placeholder="" value="{{old('senha')}}" required>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-check-label" for="flexCheckIndeterminate">Confirma Senha  <span><strong>*</strong></span></label>
+                    <input type="password" class="form-control form-control-sm" name="confirma" placeholder="" value="{{old('senha')}}" required>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-check-label" for="flexCheckIndeterminate">E-mail  <span><strong>*</strong></span></label>
+                    <input type="email" class="form-control form-control-sm" name="email" placeholder="" value="{{old('senha')}}" required>
+                </div>
+                <div class="col-md-4">
                     <label class="form-check-label" for="flexCheckIndeterminate">Contato Técnico  <span><strong>*</strong></span></label>
                     <input type="text" name="tecnico" class="form-control form-control-sm" placeholder="" value="{{old('tecnico')}}" required>
                 </div>

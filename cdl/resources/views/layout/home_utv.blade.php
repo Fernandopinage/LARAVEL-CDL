@@ -45,7 +45,7 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                       <li><a class="dropdown-item" href="/busca/militar">Editar UTV</a></li>
-                      <li><a class="dropdown-item" href="/busca/militar">Redefinir Senha</a></li>
+                      <!--<li><a class="dropdown-item" href="/busca/militar">Redefinir Senha</a></li>--->
                       <hr class="dropdown-divider"></li>
                       <li><a class="dropdown-item" href="/login/militar">Sair</a></li>
                      <!-- <li><hr class="dropdown-divider"></li> -->
