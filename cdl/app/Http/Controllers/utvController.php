@@ -46,11 +46,9 @@ class utvController extends Controller
      */
     public function store(Request $request)
     {
-        //dd($request);
-        $Status = 'S';
+            //dd($request);
+            $Status = 'S';
         
-        if($request->senha === $request->confirma){
-            
             $UTV = new UtV();
             $UTV->utv_unidade = $request->unidade;
            //$UTV->utv_periodo = $request->"";
@@ -69,9 +67,8 @@ class utvController extends Controller
             $UTV->save();
 
             return redirect('/login/utv')->with('');
-        }else{
-            return redirect('/add/utv')->with('');
-        }
+        
+        
         
     }
 
@@ -94,7 +91,7 @@ class utvController extends Controller
      */
     public function edit($id)
     {
-        //
+        
     }
 
     /**
@@ -106,7 +103,7 @@ class utvController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+    
     }
 
     /**

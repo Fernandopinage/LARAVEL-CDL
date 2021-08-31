@@ -25,7 +25,7 @@
                       Candidatos
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <!--<li><a class="dropdown-item" href="/login/candidato">Entrar</a></li>-->
+                      <li><a class="dropdown-item" href="/login/candidato">Buscar Ex-Alunos</a></li>
                       <!--<li><a class="dropdown-item" href="">Buscar Vagas</a></li> <!-- "/busca/candidato"  remover quando for implementar -->
                       <!--<li><hr class="dropdown-divider"></li>-->
                       
@@ -33,7 +33,7 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Empresas
+                      Cursos
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                       <li><a class="dropdown-item" href="/login/empresa">Entrar</a></li>
@@ -41,11 +41,13 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Organizações Militares
+                     Opções
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="/login/militar">Entrar</a></li>
-                      <li><a class="dropdown-item" href="/busca/militar">Buscar por Ex-Militares</a></li>
+                      <li><a class="dropdown-item" href="/busca/militar">Editar UTV</a></li>
+                      <li><a class="dropdown-item" href="/busca/militar">Redefinir Senha</a></li>
+                      <hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="/login/militar">Sair</a></li>
                      <!-- <li><hr class="dropdown-divider"></li> -->
                       
                     </ul>
