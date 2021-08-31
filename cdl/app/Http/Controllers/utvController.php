@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\UTV;
 use Illuminate\Support\Facades\Hash;
+use PDOException;
 
 class utvController extends Controller
 {
@@ -55,6 +56,7 @@ class utvController extends Controller
                 $UTV->utv_telefone = $request->telefone;
                 $UTV->utv_telefone2 = $request->telefone2;
                 $UTV->utv_cep = $request->cep;
+                $UTV->utv_uf = $request->uf;
                 $UTV->utv_cidade = $request->cidade;
                 $UTV->utv_bairro = $request->bairro;
                 $UTV->utv_logradouro = $request->logradouro;
@@ -73,13 +75,27 @@ class utvController extends Controller
         
     }
 
-    public function validarLogin($request){
+    public function validarLogin(Request $request){
 
-        $empresa =  UTV::where('emp_email', $request->email)->first();
+        echo "aqui";
+      
+        $utv =  UTV::where('utv_email', $request->email)->first();
 
+        if(!empty($utv)){
+
+            if(Hash::check($request->password, $utv->utv_senha)){
+
+                $id = $utv['utv_id'];
+                $request->session()->put('utv_id', $id);
+                $request->session()->put('utv_email', $request->email);
+                return redirect('home/utv');  
+            }
+
+        }
+        
     }
 
-
+  
     public function show($id)
     {
         //
@@ -93,9 +109,16 @@ class utvController extends Controller
      */
     public function edit($id)
     {
-        
+            echo $id;
     }
 
+    public function editaUtv($id) //  edita empresa
+    {
+
+        $utv = UTV::find($id);
+        return view('update_utv', compact('utv'));
+    }
+    
     /**
      * Update the specified resource in storage.
      *
@@ -105,7 +128,34 @@ class utvController extends Controller
      */
     public function update(Request $request, $id)
     {
-    
+
+        $UTV = UTV::find($id);
+        $UTV->utv_unidade = $request->unidade;
+        $UTV->utv_email = $request->email;
+        $UTV->utv_telefone = $request->telefone;
+        $UTV->utv_telefone2 = $request->telefone2;
+        $UTV->utv_cep = $request->cep;
+        $UTV->utv_uf = $request->uf;
+        $UTV->utv_cidade = $request->cidade;
+        $UTV->utv_bairro = $request->bairro;
+        $UTV->utv_logradouro = $request->logradouro;
+        $UTV->utv_numero = $request->numero;
+        $UTV->utv_complemento = $request->complemento;
+        $UTV->utv_contato_tec = $request->tecnico;
+        $UTV->utv_email_tec = $request->email_tecnico;
+        $UTV->utv_funcao_tec = $request->funcao;
+        $UTV->utv_status = $request->status;
+        
+        try {
+
+            $UTV->save();
+            return redirect('/home/utv');  
+
+        } catch (PDOException $e) {
+            
+            echo $e->getMessage();
+        }
+        
     }
 
     /**
@@ -116,6 +166,6 @@ class utvController extends Controller
      */
     public function destroy($id)
     {
-        //
+        return redirect('login/utv'); 
     }
 }

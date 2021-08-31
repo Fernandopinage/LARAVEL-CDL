@@ -2,13 +2,14 @@
 
 @section('login')
 
-<form class="form-signin" method="POST">
+<form class="form-signin" method="post" action="/validar/utv">
+    @csrf
     <div class="text-center" >
         <h2 class="form-signin-heading">UTV</h2>
         <hr>
     </div>
     <div class="mb-3">
-    <input type="text" class="form-control form-control" name="login" placeholder="E-mail" required="" autofocus="" />
+    <input type="text" class="form-control form-control" name="email" placeholder="E-mail" required="" autofocus="" />
     </div>
     <div class="mb-3">
     <input type="password" class="form-control form-control" name="password" placeholder="Senha" required="" />

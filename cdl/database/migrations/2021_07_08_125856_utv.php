@@ -24,6 +24,7 @@ class Utv extends Migration
             $table->string('utv_telefone',20)->nullable();              // telefone da unidade
             $table->string('utv_telefone2',20)->nullable();              // telefone da unidade
             $table->string('utv_cep')->nullable();                    // cep (Obrigatorio)
+            $table->string('utv_uf',2)->nullable();
             $table->string('utv_cidade',20)->nullable();                // cidade
             $table->string('utv_bairro',100)->nullable();               // bairro   
             $table->string('utv_logradouro',100)->nullable();           // logradouro

@@ -87,8 +87,10 @@ Route::post('/modificar/senha/oms', [OmsController::class, 'modificarSenha']);
 
 //Route::middleware(['oms'])->group(function () {
 Route::get('login/utv', [utvController::class, 'index']);  // tela de acesso a utv
+Route::post('/validar/utv', [utvController::class, 'validarLogin']);
+Route::get('/edita/utv/{id}',[utvController::class, 'editaUtv']);
 Route::get('home/utv',[utvController::class, 'home']);
-Route::get('update/utv/{id}',[utvController::class, 'update']);
+Route::POST('/update/utv/{id}',[utvController::class, 'update']);
 Route::get('add/utv',[utvController::class, 'formularioUtv']);
 Route::POST('/insert/utv/',[utvController::class, 'store']);
 //}

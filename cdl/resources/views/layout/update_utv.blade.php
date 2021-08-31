@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <link href="/css/home_utv.css" rel="stylesheet">
+    <link href="/css/add_utv.css" rel="stylesheet">
     <link rel="icon" href="/img/title.png">
     <title>Empregabilidade | CDL Manaus</title>
 </head>
@@ -44,7 +44,7 @@
                      Opções
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="/edita/utv/{{session('utv_id')}}">Editar UTV</a></li>
+                      <li><a class="dropdown-item" href="/edita/militar/{{session('utv_id')}}">Editar UTV</a></li>
                       <!--<li><a class="dropdown-item" href="/busca/militar">Redefinir Senha</a></li>--->
                       <hr class="dropdown-divider"></li>
                       <li><a class="dropdown-item" href="/login/utv">Sair</a></li>
@@ -82,9 +82,9 @@
   </div>
 -->
 
-    <div class="container-fluid">
+    <div class="container">
 
-        @yield('home')
+        @yield('update')
 
     </div>
     <footer style="margin-top: 150px">
