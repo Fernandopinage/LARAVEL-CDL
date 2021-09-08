@@ -119,7 +119,7 @@ class utvController extends Controller
 
                         Mail::to($request->email)->send(new utvcursoMail(UTV::where('utv_email', $request->email)->first()));
 
-                        return redirect('/redefinir/empresa')->with('sucesso', 'Produto cadastrado com sucesso!');
+                        return redirect('/redefinir/senha/utv')->with('sucesso', 'Produto cadastrado com sucesso!');
                     }
                
     }
