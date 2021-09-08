@@ -16,7 +16,7 @@
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="/"><img id="logo" src="/img/cdl_logo.png"></a>
+      <a class="navbar-brand" href="/home/utv/"><img id="logo" src="/img/cdl_logo.png"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -28,27 +28,29 @@
                       Candidatos
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                     <!--  <li><a class="dropdown-item" href="/login/candidato">Entrar</a></li>
-                      <li><a class="dropdown-item" href="">Buscar Vagas</a></li> <!-- "/busca/candidato"  remover quando for implementar -->
+                      <li><a class="dropdown-item" href="/login/candidato">Buscar Ex-Alunos</a></li>
+                      <!--<li><a class="dropdown-item" href="">Buscar Vagas</a></li> <!-- "/busca/candidato"  remover quando for implementar -->
                       <!--<li><hr class="dropdown-divider"></li>-->
                       
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Empresas
+                      Cursos
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="/login/empresa">Entrar</a></li>
+                      <li><a class="dropdown-item" href="/cursos/utv/">Cadastro de Cursos</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Organizações Militares
+                     Opções
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="/login/militar">Entrar</a></li>
-                     <!-- <li><a class="dropdown-item" href="/busca/militar">Buscar por Ex-Militares</a></li> -->
+                      <li><a class="dropdown-item" href="/edita/utv/{{session('utv_id')}}">Editar UTV</a></li>
+                      <!--<li><a class="dropdown-item" href="/busca/militar">Redefinir Senha</a></li>--->
+                      <hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="/login/utv">Sair</a></li>
                      <!-- <li><hr class="dropdown-divider"></li> -->
                       
                     </ul>

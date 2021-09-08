@@ -65,7 +65,7 @@ class utvController extends Controller
                 $UTV->utv_contato_tec = $request->tecnico;
                 $UTV->utv_email_tec = $request->email_tecnico;
                 $UTV->utv_funcao_tec = $request->funcao;
-                $UTV->utv_status = $request->$Status;
+                $UTV->utv_status = $Status;
                 $UTV->save();
                 
                 return redirect('/login/utv')->with('');
