@@ -6,7 +6,7 @@
 
     @csrf
     <div class="text-center">
-        <h2 class="form-signin-heading">OM'S</h2>
+        <h2 class="form-signin-heading">Organizações Militares</h2>
         <hr>
     </div>
     <div class="mb-3">
