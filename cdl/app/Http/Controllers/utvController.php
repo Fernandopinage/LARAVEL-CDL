@@ -78,7 +78,7 @@ class utvController extends Controller
 
     public function addCurso(Request $request){
 
-        //dd($request);
+       
        
         $UTV = new UTVCURSOS();
         $UTV->utvcurso_folder  = $request->logo;
@@ -90,8 +90,17 @@ class utvController extends Controller
         $UTV->utvcurso_valor_geral = $request->investimento;
         $UTV->utvcurso_valor_estudante = $request->estudantes;
         $UTV->utvcurso_informacoes = $request->informacoes;
-        $UTV->save();
         
+        try {
+
+            $UTV->save();
+            
+            return redirect('/cursos/utv/');
+
+        } catch (PDOException $e) {
+
+            echo $e->getMessage();
+        }
 
     }
 
