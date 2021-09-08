@@ -137,7 +137,7 @@
                 <div class="col-md-2">
                     <label class="form-check-label" for="flexCheckIndeterminate">CEP
                         <span><strong>*</strong></span></label>
-                    <input type="text"  maxlength="8"  class="form-control form-control-sm" name="cep" id="cep" placeholder=""
+                    <input type="text"  maxlength="9"  class="form-control form-control-sm" name="cep" id="cep" placeholder=""
                         value="{{old('cep')}}" required>
                 </div>
                 <div class="col-md-1">
