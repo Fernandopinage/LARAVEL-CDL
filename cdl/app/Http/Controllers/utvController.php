@@ -104,7 +104,10 @@ class utvController extends Controller
 
     }
 
+    public function redefinirUtvCurso(){
 
+        return view('redefinir_curso');
+    }
 
     public function validarLogin(Request $request){
 

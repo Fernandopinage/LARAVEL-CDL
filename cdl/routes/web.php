@@ -95,6 +95,7 @@ Route::get('add/utv',[utvController::class, 'formularioUtv']);
 Route::POST('/insert/utv/',[utvController::class, 'store']);
 Route::POST('/insert/cursoutv',[utvController::class,'addCurso']);
 Route::get('/cursos/utv/',[utvController::class, 'cursosAdd']);
+Route::get('/redefinir/senha/utv',[utvController::class, 'redefinirUtvCurso']);
 //}
 
 
