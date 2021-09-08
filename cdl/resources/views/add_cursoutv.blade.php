@@ -1,7 +1,7 @@
 @extends('layout.add_cursoutv')
 @section('curso')
 
-<form method="POST" action="/insert/utv/" >
+<form method="POST" action="/insert/cursoutv" >
 
     @csrf
 

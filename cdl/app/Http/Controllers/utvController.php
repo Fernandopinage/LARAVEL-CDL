@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\UTV;
+use App\Models\UTVCURSOS;
 use Illuminate\Support\Facades\Hash;
 use PDOException;
 
@@ -65,7 +66,7 @@ class utvController extends Controller
                 $UTV->utv_contato_tec = $request->tecnico;
                 $UTV->utv_email_tec = $request->email_tecnico;
                 $UTV->utv_funcao_tec = $request->funcao;
-                $UTV->utv_status = $Status;
+                $UTV->utv_status = $request->$Status;
                 $UTV->save();
                 
                 return redirect('/login/utv')->with('');
@@ -74,6 +75,27 @@ class utvController extends Controller
         
         
     }
+
+    public function addCurso(Request $request){
+
+        //dd($request);
+       
+        $UTV = new UTVCURSOS();
+        $UTV->utvcurso_folder  = $request->logo;
+        $UTV->utvcurso_titulo = $request->curso;
+        $UTV->utvcurso_desc = $request->detalhe;
+        $UTV->utvcurso_carga_hora = $request->horario;
+        $UTV->utvcurso_data_inicio = $request->datainicio;
+        $UTV->utvcurso_data_final = $request->datafim;
+        $UTV->utvcurso_valor_geral = $request->investimento;
+        $UTV->utvcurso_valor_estudante = $request->estudantes;
+        $UTV->utvcurso_informacoes = $request->informacoes;
+        $UTV->save();
+        
+
+    }
+
+
 
     public function validarLogin(Request $request){
 

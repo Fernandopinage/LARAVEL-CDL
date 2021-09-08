@@ -15,5 +15,5 @@ class UTVCURSOS extends Model
     protected $table = 'tbl_utvcurso';
 
     //  definindo chave primaria
-    protected $primaryKey = 'utv_id';
+    protected $primaryKey = 'utvcurso_id';
 }
