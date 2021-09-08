@@ -15,10 +15,10 @@ class UtvCursos extends Migration
     {
 
 
-        Schema::create('TBL_UTVCURSO', function (Blueprint $table) {
+        Schema::create('tbl_utvcurso', function (Blueprint $table) {
             
             $table->integer('utv_id')->unsigned();              //  id auto incremento
-            $table->string('can_folder',250);                     //  folder do curso
+            $table->string('utv_folder',250);                     //  folder do curso
             $table->string('utv_titulo',100);                   // titulo do curso 
             $table->string('utv_desc',255);                     // descrição do curso 
             $table->string('utv_carga_hora',3);                 // carga hora 
