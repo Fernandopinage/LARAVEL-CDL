@@ -2,7 +2,7 @@
 
 @section('redefinir')
 
-<form class="form-signin" method="POST" action="/redefinir/senha/empresa">
+<form class="form-signin" method="POST" action="/recuperar/senha/">
 
     @csrf
     <div class="text-center">

@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\utvcursoMail;
 use Illuminate\Http\Request;
 use App\Models\UTV;
 use App\Models\UTVCURSOS;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
 use PDOException;
 
 class utvController extends Controller
@@ -78,7 +80,6 @@ class utvController extends Controller
 
     public function addCurso(Request $request){
 
-    
         $UTV = new UTVCURSOS();
         $UTV->utvcurso_folder  = $request->logo;
         $UTV->utvcurso_titulo = $request->curso;
@@ -101,6 +102,26 @@ class utvController extends Controller
             echo $e->getMessage();
         }
 
+    }
+
+    public function recuperarSenha(Request $request){
+
+               
+
+                    $curso = UTV::where('utv_email', $request->email)->first();  // pegando os dados da empresa EMAIL NOME
+                    
+                    if(!empty($curso)){
+
+                                                
+                        $id = $curso->utv_id;
+                        $email = $curso->utv_email;
+                        $nome = $curso->utv_unidade;
+
+                        Mail::to($request->email)->send(new utvcursoMail(UTV::where('utv_email', $request->email)->first()));
+
+                        return redirect('/redefinir/empresa')->with('sucesso', 'Produto cadastrado com sucesso!');
+                    }
+               
     }
 
     public function redefinirUtvCurso(){
