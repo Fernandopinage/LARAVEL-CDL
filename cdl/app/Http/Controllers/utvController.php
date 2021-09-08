@@ -78,8 +78,7 @@ class utvController extends Controller
 
     public function addCurso(Request $request){
 
-       
-       
+    
         $UTV = new UTVCURSOS();
         $UTV->utvcurso_folder  = $request->logo;
         $UTV->utvcurso_titulo = $request->curso;
@@ -111,7 +110,7 @@ class utvController extends Controller
 
     public function validarLogin(Request $request){
 
-        echo "aqui";
+        
       
         $utv =  UTV::where('utv_email', $request->email)->first();
 
@@ -125,6 +124,9 @@ class utvController extends Controller
                 return redirect('home/utv');  
             }
 
+        }else{
+
+            return view('utv');
         }
         
     }
