@@ -78,6 +78,12 @@ class utvController extends Controller
         
     }
 
+    public function atualizarCurso(){
+
+        return view('update_cursoutv');
+
+    }
+
     public function addCurso(Request $request){
 
         $UTV = new UTVCURSOS();
