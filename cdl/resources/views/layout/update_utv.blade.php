@@ -36,7 +36,7 @@
                       Cursos
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="/login/empresa">Entrar</a></li>
+                      <li><a class="dropdown-item" href="/cursos/utv/">Cadastro de Cursos</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -44,7 +44,7 @@
                      Opções
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="/edita/militar/{{session('utv_id')}}">Editar UTV</a></li>
+                      <li><a class="dropdown-item" href="/edita/utv/{{session('utv_id')}}">Editar UTV</a></li>
                       <!--<li><a class="dropdown-item" href="/busca/militar">Redefinir Senha</a></li>--->
                       <hr class="dropdown-divider"></li>
                       <li><a class="dropdown-item" href="/login/utv">Sair</a></li>
