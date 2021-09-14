@@ -30,11 +30,15 @@
                     <textarea class="form-control" name="detalhe" id="exampleFormControlTextarea1" rows="3"></textarea>
                 </div>
                 <div class="col-md-2">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Horário  <span><strong>*</strong></span></label>
+                    <label class="form-check-label" for="flexCheckIndeterminate">Horário Início  <span><strong>*</strong></span></label>
                     <input type="time" name="horario" class="form-control form-control-sm"  placeholder="" value="{{old('senha')}}" required>
                 </div>
                 <div class="col-md-2">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Data de Inicio <span><strong>*</strong></span></label>
+                    <label class="form-check-label" for="flexCheckIndeterminate">Horário Fim <span><strong>*</strong></span></label>
+                    <input type="time" name="horario_fim" class="form-control form-control-sm"  placeholder="" value="{{old('senha')}}" required>
+                </div>
+                <div class="col-md-2">
+                    <label class="form-check-label" for="flexCheckIndeterminate">Data de Início <span><strong>*</strong></span></label>
                     <input type="date" name="datainicio" class="form-control form-control-sm"  placeholder="" value="{{old('senha')}}" required>
                 </div>
                 <div class="col-md-2">
@@ -49,7 +53,7 @@
                     <label class="form-check-label" for="flexCheckIndeterminate">Associado e Estudante  <span><strong>*</strong></span></label>
                     <input type="text" name="estudantes" class="form-control form-control-sm" onKeyPress="return(moeda(this,'.',',',event))" placeholder="" value="{{old('tecnico')}}" required>
                 </div>
-                <div class="col-md-10">
+                <div class="col-md-8">
                     <label class="form-check-label" for="flexCheckIndeterminate">Mais Informações  <span><strong>*</strong></span> </label>
                     <input type="text" name="informacoes" class="form-control form-control-sm" placeholder="" value="{{old('email_tecnico')}}" required>
                 </div>

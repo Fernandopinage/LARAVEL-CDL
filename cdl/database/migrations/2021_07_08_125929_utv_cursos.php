@@ -21,7 +21,8 @@ class UtvCursos extends Migration
             $table->string('utvcurso_folder',250)->nullable();                     //  folder do curso
             $table->string('utvcurso_titulo',100)->nullable();                   // titulo do curso 
             $table->string('utvcurso_desc',255)->nullable();                     // descrição do curso 
-            $table->timeTz('utvcurso_carga_hora')->nullable();                 // carga hora 
+            $table->timeTz('utvcurso_hora_inicio')->nullable();                 // carga hora 
+            $table->timeTz('utvcurso_hora_fim')->nullable();                 // carga hora 
             $table->date('utvcurso_data_inicio')->nullable();                    // data de inicio do curso
             $table->date('utvcurso_data_final')->nullable();                     // data de final do curso
             $table->string('utvcurso_valor_geral')->nullable();                  // campo para informa o valor do curso para publico em geral

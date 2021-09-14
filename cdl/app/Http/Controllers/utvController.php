@@ -6,6 +6,7 @@ use App\Mail\utvcursoMail;
 use Illuminate\Http\Request;
 use App\Models\UTV;
 use App\Models\UTVCURSOS;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
 use PDOException;
@@ -24,7 +25,11 @@ class utvController extends Controller
 
     public function home()
     {
-        return view('home_utv');
+        $cursos = DB::table('tbl_utvcurso')->get();
+
+    
+
+        return view('home_utv', compact('cursos'));
     }
 
     public function create()
@@ -90,7 +95,8 @@ class utvController extends Controller
         $UTV->utvcurso_folder  = $request->logo;
         $UTV->utvcurso_titulo = $request->curso;
         $UTV->utvcurso_desc = $request->detalhe;
-        $UTV->utvcurso_carga_hora = $request->horario;
+        $UTV->utvcurso_hora_inicio = $request->horario;
+        $UTV->utvcurso_hora_fim = $request->horario_fim;
         $UTV->utvcurso_data_inicio = $request->datainicio;
         $UTV->utvcurso_data_final = $request->datafim;
         $UTV->utvcurso_valor_geral = $request->investimento;

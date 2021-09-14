@@ -102,7 +102,15 @@
         <h1>Veja os Cursos que a <b> UTV </b> tem para você!</h1>
     
     </div>
-    @for($i = 0; $i < 3; $i++)
+
+    @php
+     $tamanho = count($cursos);
+       
+    @endphp
+
+   @foreach($cursos as $cursos)
+       
+
     
     <div class=" d-inline-block" style="margin-top: 20px;">
 
@@ -120,11 +128,9 @@
             </div>
             <div class="col-sm-9">
                 <div class="card" style="padding: 15px">
-                    <h5 class="card-title"><b style="color:#006CDE;">Curso: INGLÊS NÍVEL 1</b></h5>
+                    <h5 class="card-title"><b style="color:#006CDE;">Curso: {{$cursos->utvcurso_titulo}}</b></h5>
                     <h6 class="card-title">Sobre Curso:</h6>
-                    <p class="card-text">A CDL Manaus em parceria com o IMD Centro de Educação, apresentam o Curso
-                        de Inglês – Presencial Nível 1.Associados da CDL Manaus tem 15% de desconto nas
-                        mensalidades.Por que o inglês é....</p>
+                    <p class="card-text">{{$cursos->utvcurso_desc}}</p>
 
                     <div class="card-body">
                         <table class="table">
@@ -134,28 +140,28 @@
                                     <th scope="col">Dias:</th>
                                     <th scope="col">Período:</th>
                                     <th scope="col">Investimento:</th>
-                                    <th scope="col">Estudante:</th>
+                                    <th scope="col">Associado e Estudante:</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><b style="color:#006CDE;">19h à 20h</b></td>
-                                    <td><b style="color:#006CDE;">Terça- Feira e Quinta - Feira</b></td>
-                                    <td><b style="color:#006CDE;">10/08 a 27/01/2022</b></td>
-                                    <td><b style="color:#006CDE;">190.00</b></td>
-                                    <td><b style="color:#006CDE;">0.00</b></td>
+                                    <td><b style="color:#006CDE;">{{$cursos->utvcurso_hora_inicio}} às  {{$cursos->utvcurso_hora_fim}}</b></td>
+                                    <td><b style="color:#006CDE;"></b></td>
+                                    <td><b style="color:#006CDE;">{{$cursos->utvcurso_data_inicio}} até {{$cursos->utvcurso_data_final}}</b></td>
+                                    <td><b style="color:#006CDE;">{{$cursos->utvcurso_valor_geral}}</b></td>
+                                    <td><b style="color:#006CDE;">{{$cursos->utvcurso_valor_estudante}}</b></td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                     <div class="card-footer text-left">
-                        <p><b style="color:#006CDE;"> Mais Informações:</b></p><p style="color:#006CDE;">(92) 98409-0481/ 98480-9998, ou acesse o site: imd-ce.com.br </p>
+                        <p><b style="color:#006CDE;"> Mais Informações:</b></p><p style="color:#006CDE;">{{$cursos->utvcurso_informacoes}} </p>
                     </div>
                 </div>
             </div>
         </div>
 </div>
-@endfor
+@endforeach
 </div>
 
 @endsection
