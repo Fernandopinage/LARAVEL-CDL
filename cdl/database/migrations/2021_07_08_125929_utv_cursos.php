@@ -24,8 +24,8 @@ class UtvCursos extends Migration
             $table->timeTz('utvcurso_carga_hora')->nullable();                 // carga hora 
             $table->date('utvcurso_data_inicio')->nullable();                    // data de inicio do curso
             $table->date('utvcurso_data_final')->nullable();                     // data de final do curso
-            $table->double('utvcurso_valor_geral')->nullable();                  // campo para informa o valor do curso para publico em geral
-            $table->double('utvcurso_valor_estudante')->nullable();              // campo para informa o valor do curso para estudante
+            $table->string('utvcurso_valor_geral')->nullable();                  // campo para informa o valor do curso para publico em geral
+            $table->string('utvcurso_valor_estudante')->nullable();              // campo para informa o valor do curso para estudante
             $table->string('utvcurso_informacoes')->nullable();                  // informações do curso 
             $table->timestamps();
         });

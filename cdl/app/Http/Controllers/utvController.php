@@ -91,6 +91,9 @@ class utvController extends Controller
         $UTV->utvcurso_valor_estudante = $request->estudantes;
         $UTV->utvcurso_informacoes = $request->informacoes;
         
+       
+
+        
         try {
 
             $UTV->save();
@@ -101,6 +104,7 @@ class utvController extends Controller
 
             echo $e->getMessage();
         }
+        
 
     }
 

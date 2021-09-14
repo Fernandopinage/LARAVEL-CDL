@@ -15,7 +15,7 @@
         </div>
     -->
         <div class="text">          
-            <h2 class="form-signin-heading"> DADOS DA OM'S </h2>
+            <h2 class="form-signin-heading"> DADOS DA ORGANIZAÇÃO MILITAR </h2>
             <hr>
         </div>
         
