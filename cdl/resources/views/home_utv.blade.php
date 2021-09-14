@@ -51,7 +51,7 @@
 
 <div class="container shadow-lg p-3 mb-5 bg-body rounded" id="canditados">
     <div class="visualizar">
-    
+
         <h1>ÚLTIMOS <b> EX ALUNOS </b> EM DESTAQUE</h1>
         <h5>5330 profissionais cadastrados na última semana</h5>
     </div>
@@ -98,21 +98,22 @@
 
 <div class="container shadow-lg p-3 mb-5 bg-body rounded" id="curso">
     <div class="visualizar">
-    
+
         <h1>Veja os Cursos que a <b> UTV </b> tem para você!</h1>
-    
+
     </div>
 
     @php
-     $tamanho = count($cursos);
-       
+    $tamanho = count($cursos);
+
     @endphp
 
-   @foreach($cursos as $cursos)
-       
+    @foreach($cursos as $cursos)
 
-    
-    <div class=" d-inline-block" style="margin-top: 20px;">
+
+
+    <div class=" d-inline-block" style="margin-top: 20px;" data-bs-toggle="modal"
+        data-bs-target="#edit{{$cursos->utvcurso_id}}">
 
         <div class="row">
             <div class="col-sm-3">
@@ -145,9 +146,11 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><b style="color:#006CDE;">{{$cursos->utvcurso_hora_inicio}} às  {{$cursos->utvcurso_hora_fim}}</b></td>
+                                    <td><b style="color:#006CDE;">{{$cursos->utvcurso_hora_inicio}} às
+                                            {{$cursos->utvcurso_hora_fim}}</b></td>
                                     <td><b style="color:#006CDE;"></b></td>
-                                    <td><b style="color:#006CDE;">{{$cursos->utvcurso_data_inicio}} até {{$cursos->utvcurso_data_final}}</b></td>
+                                    <td><b style="color:#006CDE;">{{$cursos->utvcurso_data_inicio}} até
+                                            {{$cursos->utvcurso_data_final}}</b></td>
                                     <td><b style="color:#006CDE;">{{$cursos->utvcurso_valor_geral}}</b></td>
                                     <td><b style="color:#006CDE;">{{$cursos->utvcurso_valor_estudante}}</b></td>
                                 </tr>
@@ -155,13 +158,122 @@
                         </table>
                     </div>
                     <div class="card-footer text-left">
-                        <p><b style="color:#006CDE;"> Mais Informações:</b></p><p style="color:#006CDE;">{{$cursos->utvcurso_informacoes}} </p>
+                        <p><b style="color:#006CDE;"> Mais Informações:</b></p>
+                        <p style="color:#006CDE;">{{$cursos->utvcurso_informacoes}} </p>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+    @endforeach
 </div>
-@endforeach
+
+
+<div class="modal fade" id="edit{{$cursos->utvcurso_id}}" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog  modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">EDITAR CURSO</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+                <form method="POST" action="/insert/cursoutv">
+
+                    @csrf
+
+                    <div class="">
+
+                        <div class="text">
+                            <h2 class="form-signin-heading">{{$cursos->utvcurso_titulo}}</h2>
+                            <hr>
+                        </div>
+
+
+                        <div class="pessoais">
+
+                            <div class="row g-3">
+
+                                <div class="col-md-6">
+                                    <label class="form-check-label" for="flexCheckIndeterminate">Imagem do Curso
+                                        <span><strong>*</strong></span></label>
+                                    <input class="form-control form-control-sm" name="logo" type="file" id="formFile"
+                                        value="{{$cursos->utvcurso_folder}}">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-check-label" for="flexCheckIndeterminate">Nome do Curso
+                                        <span><strong>*</strong></span></label>
+                                    <input type="text" name="curso" class="form-control form-control-sm"
+                                        value="{{$cursos->utvcurso_titulo}}" required>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-check-label" for="flexCheckIndeterminate">Detalhe
+                                        <span><strong>*</strong></span></label>
+                                    <textarea class="form-control" name="detalhe" id="exampleFormControlTextarea1"
+                                        rows="3" value="{{$cursos->utvcurso_desc}}"></textarea>
+                                </div>
+                                <div class="col-md-2">
+                                    <label class="form-check-label" for="flexCheckIndeterminate">Horário Início
+                                        <span><strong>*</strong></span></label>
+                                    <input type="time" name="horario" class="form-control form-control-sm"
+                                        placeholder="" value="{{$cursos->utvcurso_hora_inicio}}" required>
+                                </div>
+                                <div class="col-md-2">
+                                    <label class="form-check-label" for="flexCheckIndeterminate">Horário Fim
+                                        <span><strong>*</strong></span></label>
+                                    <input type="time" name="horario_fim" class="form-control form-control-sm"
+                                        placeholder="" value="{{$cursos->utvcurso_hora_fim}}" required>
+                                </div>
+                                <div class="col-md-2">
+                                    <label class="form-check-label" for="flexCheckIndeterminate">Data de Início
+                                        <span><strong>*</strong></span></label>
+                                    <input type="date" name="datainicio" class="form-control form-control-sm"
+                                        placeholder="" value="{{$cursos->utvcurso_data_inicio}}" required>
+                                </div>
+                                <div class="col-md-2">
+                                    <label class="form-check-label" for="flexCheckIndeterminate">Data de Fim
+                                        <span><strong>*</strong></span></label>
+                                    <input type="date" name="datafim" class="form-control form-control-sm"
+                                        placeholder="" value="{{$cursos->utvcurso_data_fim}}" required>
+                                </div>
+                                <div class="col-md-2">
+                                    <label class="form-check-label" for="flexCheckIndeterminate">Investimento
+                                        <span><strong>*</strong></span></label>
+                                    <input type="text" class="form-control form-control-sm" name="investimento"
+                                        onKeyPress="return(moeda(this,'.',',',event))" placeholder=""
+                                        value="{{$cursos->utvcurso_valor_geral}}" required>
+                                </div>
+                                <div class="col-md-2">
+                                    <label class="form-check-label" for="flexCheckIndeterminate">Associado e Estudante
+                                        <span><strong>*</strong></span></label>
+                                    <input type="text" name="estudantes" class="form-control form-control-sm"
+                                        onKeyPress="return(moeda(this,'.',',',event))" placeholder=""
+                                        value="{{$cursos->utvcurso_valor_estudante}}" required>
+                                </div>
+                                <div class="col-md-8">
+                                    <label class="form-check-label" for="flexCheckIndeterminate">Mais Informações
+                                        <span><strong>*</strong></span> </label>
+                                    <input type="text" name="informacoes" class="form-control form-control-sm"
+                                        placeholder="" value="{{$cursos->utvcurso_informacoes}}" required>
+                                </div>
+
+                            </div>
+                        </div>
+                        <hr>
+
+
+                        <span> Campos Obrigatórios <strong>*</strong></span>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-secondary" data-bs-dismiss="modal">Cancela</button>
+                        <button type="submit" class="btn btn-primary">Alterar</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
 </div>
 
 @endsection
