@@ -1,7 +1,7 @@
 @extends('layout.add_utv')
 @section('add_utv')
 
-<form method="post" action="/insert/utv/" >
+<form method="get" action="/insert/utv/" >
 
     @csrf
 
