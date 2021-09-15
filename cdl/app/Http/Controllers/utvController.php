@@ -46,7 +46,7 @@ class utvController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function insertUTV(Request $request)
     {
             //dd($request);
             $Status = 'S';
@@ -75,8 +75,6 @@ class utvController extends Controller
                 
                 return redirect('/login/utv')->with('');
             }
-        
-        
         
     }
 
