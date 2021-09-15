@@ -98,7 +98,13 @@ Route::get('/insert/utv/',[utvController::class, 'insertUTV']);
 Route::post('/insert/cursoutv',[utvController::class,'addCurso']);
 Route::get('/cursos/utv/',[utvController::class, 'cursosAdd']);
 Route::get('/redefinir/senha/utv',[utvController::class, 'redefinirUtvCurso']);
-Route::get('/recuperar/senha/',[utvController::class, 'recuperarSenha']);
+Route::get('/recuperar/senha/',[utvController::class, 'redefinirSenha']);
+Route::get('/redefinir/password/utv/{id}', function ($id) {
+    return view('update_password_utv', ['id' => $id]);
+   echo $id;
+});
+Route::get('/recuperar/senha/utv/',[utvController::class, 'recuperarSenha']);
+
 //}
 
 

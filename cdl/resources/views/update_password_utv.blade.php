@@ -1,0 +1,30 @@
+@extends('layout.update_password_utv')
+
+@section('redefinir_password')
+
+
+
+<form class="form-signin" method="get" action="/recuperar/senha/utv/">
+
+    <div class="text-center">
+        <h2 class="form-signin-heading">RECUPERAR SENHA</h2>
+        <hr>
+        <span>Preencha os campos abaixo para cadastrar uma nova senha</span>
+    </div>
+    @csrf
+    <div class="mb-3">
+        <input type="hidden" name="id" value="{{$id}}" >
+        <label for="formGroupExampleInput" class="form-label">Nova senha <span style="color: red"><strong>*</strong></span></label>
+        <input type="password" class="form-control form-control" name="newsenha" placeholder="Digite sua nova senha" />
+    </div>
+    <div class="mb-3">
+        <label for="formGroupExampleInput" class="form-label">Confirmar nova senha<span style="color: red"><strong>*</strong></span></label>
+        <input type="password" class="form-control form-control" name="confsenha" placeholder="Digite confirme sua senha"  />
+    </div>
+    <div class="d-grid gap-2">
+        <input type="submit" class="btn-primary btn-lg" name="alterarsenha" value="Alterar Senha">
+    </div>
+
+</form>
+
+@endsection

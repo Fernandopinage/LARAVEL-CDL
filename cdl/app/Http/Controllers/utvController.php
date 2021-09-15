@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
 use PDOException;
+use Utv as GlobalUtv;
 
 class utvController extends Controller
 {
@@ -114,7 +115,7 @@ class utvController extends Controller
 
     }
 
-    public function recuperarSenha(Request $request){
+    public function redefinirSenha(Request $request){
 
                
 
@@ -135,6 +136,32 @@ class utvController extends Controller
                         return redirect('/redefinir/senha/utv')->with('mensagem', 'Produto cadastrado com sucesso!');
                     }
                
+    }
+
+    public function recuperarSenha(Request $request){
+
+
+        $UTV = UTV::Where('utv_id', $request->id)->first();
+        if(!empty($UTV)){
+
+            if($request->newsenha === $request->confsenha){
+
+                    
+                $UTV = UTV::find($request->id);
+                $UTV->utv_senha = Hash::make($request->confsenha);
+                $UTV->save();
+
+                return redirect('/home/utv')->with('alterar', 'Sua senha foi alterado com sucesso!');
+            }else{
+                return redirect('/redefinir/password/utv/'.$request->id)->with('erro', 'Sua senha foi alterado com sucesso!');
+            }
+
+        }else{
+
+            return redirect('/redefinir/senha/utv')->with('erro', 'Sua senha foi alterado com sucesso!');
+        }
+
+
     }
 
     public function redefinirUtvCurso(){
