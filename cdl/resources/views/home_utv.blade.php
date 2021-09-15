@@ -49,51 +49,7 @@
 </div>
 
 
-<div class="container shadow-lg p-3 mb-5 bg-body rounded" id="canditados">
-    <div class="visualizar">
 
-        <h1>ÚLTIMOS <b> EX ALUNOS </b> EM DESTAQUE</h1>
-        <h5>5330 profissionais cadastrados na última semana</h5>
-    </div>
-    @for($i = 0; $i < 6; $i++) <div class=" d-inline-block" style="padding: 8px;">
-
-        <div class="form-row" style="border: 0px;">
-            <div class="form-group col-md-4">
-                <div class="card" style="width: 25rem;">
-                    <div class="card-body">
-
-                        <span style="color: #284D92"></span>
-                        <p>
-                            <h1>
-                                <span style="color: #157347; margin-right:132px"><img src="/img/index-1.jpg"
-                                        height="250px" width="150px" class="img-thumbnail" alt="..."></span><span
-                                    style="color: #696969;"></span>
-                            </h1>
-                            <hr>
-                            <br>
-                            <span style="color: #97212d; margin-right:110px">Nome:</span><span
-                                style="color: #696969"></span>
-                            <br>
-                            <span style="color: #22427c; margin-right:185px">Formação:</span>
-
-                            <br>
-                            <span style="color: #22427c; margin-right:185px">Trabalhando Atualmente:</span>
-                            <span style="color: #696969;"></span>
-
-                            <div class="text-center d-grid" style="margin-top: 20px;">
-                                <button type="button" class="btn btn-primary" data-toggle="modal"
-                                    data-target="#visualizar">
-                                    VISUALIZAR PERFIL
-                                </button>
-
-                            </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-</div>
-@endfor
-</div>
 
 
 <div class="container shadow-lg p-3 mb-5 bg-body rounded" id="curso">
@@ -146,11 +102,9 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><b style="color:#006CDE;">{{$cursos->utvcurso_hora_inicio}} às
-                                            {{$cursos->utvcurso_hora_fim}}</b></td>
-                                    <td><b style="color:#006CDE;"></b></td>
-                                    <td><b style="color:#006CDE;">{{$cursos->utvcurso_data_inicio}} até
-                                            {{$cursos->utvcurso_data_final}}</b></td>
+                                    <td><b style="color:#006CDE;">{{$cursos->utvcurso_hora}}</b></td>
+                                    <td><b style="color:#006CDE;">{{$cursos->utvcurso_dias}}</b></td>
+                                    <td><b style="color:#006CDE;">{{$cursos->utvcurso_data}}</b></td>
                                     <td><b style="color:#006CDE;">{{$cursos->utvcurso_valor_geral}}</b></td>
                                     <td><b style="color:#006CDE;">{{$cursos->utvcurso_valor_estudante}}</b></td>
                                 </tr>
@@ -168,7 +122,7 @@
     @endforeach
 </div>
 
-
+<!--
 <div class="modal fade" id="edit{{$cursos->utvcurso_id}}" tabindex="-1" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
     <div class="modal-dialog  modal-xl">
@@ -217,25 +171,25 @@
                                     <label class="form-check-label" for="flexCheckIndeterminate">Horário Início
                                         <span><strong>*</strong></span></label>
                                     <input type="time" name="horario" class="form-control form-control-sm"
-                                        placeholder="" value="{{$cursos->utvcurso_hora_inicio}}" required>
+                                        placeholder="" value="{{$cursos->utvcurso_hora}}" required>
                                 </div>
                                 <div class="col-md-2">
                                     <label class="form-check-label" for="flexCheckIndeterminate">Horário Fim
                                         <span><strong>*</strong></span></label>
                                     <input type="time" name="horario_fim" class="form-control form-control-sm"
-                                        placeholder="" value="{{$cursos->utvcurso_hora_fim}}" required>
+                                        placeholder="" value="{{$cursos->utvcurso_dias}}" required>
                                 </div>
                                 <div class="col-md-2">
                                     <label class="form-check-label" for="flexCheckIndeterminate">Data de Início
                                         <span><strong>*</strong></span></label>
                                     <input type="date" name="datainicio" class="form-control form-control-sm"
-                                        placeholder="" value="{{$cursos->utvcurso_data_inicio}}" required>
+                                        placeholder="" value="{{$cursos->utvcurso_data}}" required>
                                 </div>
                                 <div class="col-md-2">
                                     <label class="form-check-label" for="flexCheckIndeterminate">Data de Fim
                                         <span><strong>*</strong></span></label>
                                     <input type="date" name="datafim" class="form-control form-control-sm"
-                                        placeholder="" value="{{$cursos->utvcurso_data_fim}}" required>
+                                        placeholder="" value="{{$cursos->utvcurso_dias}}" required>
                                 </div>
                                 <div class="col-md-2">
                                     <label class="form-check-label" for="flexCheckIndeterminate">Investimento
@@ -275,5 +229,6 @@
         </div>
     </div>
 </div>
+-->
 
 @endsection

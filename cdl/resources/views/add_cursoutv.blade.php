@@ -23,39 +23,35 @@
                 </div>
                 <div class="col-md-6">
                     <label class="form-check-label" for="flexCheckIndeterminate">Nome do Curso  <span><strong>*</strong></span></label>
-                    <input type="text" name="curso" class="form-control form-control-sm"  value="{{old('telefone')}}" required>
+                    <input type="text" name="curso" class="form-control form-control-sm"  value="{{old('curso')}}" required>
                 </div>
                 <div class="col-md-4">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Detalhe <span><strong>*</strong></span></label>
-                    <textarea class="form-control" name="detalhe" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <label class="form-check-label" for="flexCheckIndeterminate">Sobre o Curso <span><strong>*</strong></span></label>
+                    <textarea class="form-control" name="detalhe" value="{{old('detalhe')}}" id="exampleFormControlTextarea1" rows="3"></textarea>
                 </div>
                 <div class="col-md-2">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Horário Início  <span><strong>*</strong></span></label>
-                    <input type="time" name="horario" class="form-control form-control-sm"  placeholder="" value="{{old('senha')}}" required>
+                    <label class="form-check-label" for="flexCheckIndeterminate">Horário<span><strong>*</strong></span></label>
+                    <input type="text" name="horario" class="form-control form-control-sm"  placeholder="" value="{{old('horario')}}" required>
                 </div>
                 <div class="col-md-2">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Horário Fim <span><strong>*</strong></span></label>
-                    <input type="time" name="horario_fim" class="form-control form-control-sm"  placeholder="" value="{{old('senha')}}" required>
+                    <label class="form-check-label" for="flexCheckIndeterminate">Dias<span><strong>*</strong></span></label>
+                    <input type="text" name="dias" class="form-control form-control-sm"  placeholder="" value="{{old('dias')}}" required>
                 </div>
                 <div class="col-md-2">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Data de Início <span><strong>*</strong></span></label>
-                    <input type="date" name="datainicio" class="form-control form-control-sm"  placeholder="" value="{{old('senha')}}" required>
-                </div>
-                <div class="col-md-2">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Data de Fim <span><strong>*</strong></span></label>
-                    <input type="date" name="datafim" class="form-control form-control-sm"  placeholder="" value="{{old('senha')}}" required>
+                    <label class="form-check-label" for="flexCheckIndeterminate">Período <span><strong>*</strong></span></label>
+                    <input type="text" name="periodo" class="form-control form-control-sm"  placeholder="" value="{{old('periodo')}}" required>
                 </div>
                 <div class="col-md-2">
                     <label class="form-check-label" for="flexCheckIndeterminate">Investimento  <span><strong>*</strong></span></label>
-                    <input type="text" class="form-control form-control-sm" name="investimento" onKeyPress="return(moeda(this,'.',',',event))"  placeholder="" value="{{old('senha')}}" required>
+                    <input type="text" class="form-control form-control-sm" name="investimento" onKeyPress="return(moeda(this,'.',',',event))"  placeholder="" value="{{old('investimento')}}" required>
                 </div>
                 <div class="col-md-2">
                     <label class="form-check-label" for="flexCheckIndeterminate">Associado e Estudante  <span><strong>*</strong></span></label>
-                    <input type="text" name="estudantes" class="form-control form-control-sm" onKeyPress="return(moeda(this,'.',',',event))" placeholder="" value="{{old('tecnico')}}" required>
+                    <input type="text" name="estudantes" class="form-control form-control-sm" onKeyPress="return(moeda(this,'.',',',event))" placeholder="" value="{{old('estudantes')}}" required>
                 </div>
                 <div class="col-md-8">
                     <label class="form-check-label" for="flexCheckIndeterminate">Mais Informações  <span><strong>*</strong></span> </label>
-                    <input type="text" name="informacoes" class="form-control form-control-sm" placeholder="" value="{{old('email_tecnico')}}" required>
+                    <input type="text" name="informacoes" class="form-control form-control-sm" placeholder="" value="{{old('informacoes')}}" required>
                 </div>
                 
             </div>  
