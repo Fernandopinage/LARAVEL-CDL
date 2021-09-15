@@ -183,11 +183,13 @@ class utvController extends Controller
                 $request->session()->put('utv_id', $id);
                 $request->session()->put('utv_email', $request->email);
                 return redirect('home/utv');  
+            }else{
+                return redirect('login/utv');
             }
 
         }else{
 
-            return view('utv');
+            return redirect('login/utv');
         }
         
     }

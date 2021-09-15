@@ -36,7 +36,7 @@ class utvcursoMail extends Mailable
 
 
         
-       return $this->markdown('mailEmpresa.empresaMail',[
+       return $this->markdown('mailEmpresa.utvcursoMail',[
 
             'inputs' => $this->inputs
 
