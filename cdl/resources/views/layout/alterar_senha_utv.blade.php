@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <link href="/css/home_utv.css" rel="stylesheet">
+    <link href="/css/alterar_senha.css" rel="stylesheet">
     <link rel="icon" href="/img/title.png">
     <title>Empregabilidade | CDL Manaus</title>
 </head>
@@ -45,7 +45,7 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                       <li><a class="dropdown-item" href="/edita/utv/{{session('utv_id')}}">Editar UTV</a></li>
-                      <li><a class="dropdown-item" href="/alterar/senha/">Redefinir Senha</a></li>
+                      <li><a class="dropdown-item" href="/redefinir/senha/">Redefinir Senha</a></li>
                       <hr class="dropdown-divider"></li>
                       <li><a class="dropdown-item" href="/login/utv">Sair</a></li>
                      <!-- <li><hr class="dropdown-divider"></li> -->
@@ -75,16 +75,17 @@
     </div>
     
   </nav>
-
-  <!--
+  
   <div id="menu">
 
   </div>
--->
 
-    <div class="container-fluid">
+    <div class="container">
 
-        @yield('home')
+        @yield('alterar_senha')
+        
+    </div>
+    <div id="footer-cadastro">
 
     </div>
     <footer style="margin-top: 150px">
@@ -98,11 +99,48 @@
                   <p class="text-end" style="color:#fff">Desenvolvido por <img src="/icons/progride.png" width="25">
                       Progride </p>
               </div>
-
+    
           </div>
       </nav>
-  </footer>
+    </footer>
 </body>
+
+
+<!-- Mensagem de cadastro com sucesso -->
+@if(session('mensagem'))
+<script>
+  Swal.fire({
+  position: 'center',
+  icon: 'success',
+  title: 'Registro cadastrado com sucesso!',
+  showConfirmButton: false,
+  timer: 1500
+})
+</script>
+@endif
+
+
+@if(session('diferente'))
+<script>
+  Swal.fire({
+  position: 'center',
+  icon: 'error',
+  title: 'Senha incorretas',
+  showConfirmButton: false,
+  timer: 1500
+})
+</script>
+@endif
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+<!-- Adicionando Javascript -->
+
+<script src="/js/checkbox.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> <!-- jquery CDN  -->
 </html>
