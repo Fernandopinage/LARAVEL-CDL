@@ -91,7 +91,6 @@ Route::post('/validar/utv', [utvController::class, 'validarLogin']);
 Route::get('/edita/utv/{id}',[utvController::class, 'editaUtv']);
 Route::get('home/utv',[utvController::class, 'home']);
 Route::get('/atualizar/cursos/utv/',[utvController::class,'atualizarCurso']); // atualizando cursos
-
 Route::POST('/update/utv/{id}',[utvController::class, 'update']);
 Route::get('add/utv',[utvController::class, 'formularioUtv']);
 Route::get('/insert/utv/',[utvController::class, 'insertUTV']);
@@ -106,6 +105,7 @@ Route::get('/redefinir/password/utv/{id}', function ($id) {
    echo $id;
 });
 Route::get('/recuperar/senha/utv/',[utvController::class, 'recuperarSenha']);
+Route::get('/buscar/candidato/utv/',[utvController::class,'buscarCandidato']);
 
 //}
 

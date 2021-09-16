@@ -14,11 +14,7 @@ use Utv as GlobalUtv;
 
 class utvController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index()
     {
         return view('utv');
@@ -32,60 +28,54 @@ class utvController extends Controller
 
     public function create()
     {
-        
     }
 
-    public function formularioUtv(){
+    public function formularioUtv()
+    {
 
         return view('add_utv');
-
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+
     public function insertUTV(Request $request)
     {
-            //dd($request);
-            $Status = 'S';
-        
-            if($request->senha === $request->confirma){
+        //dd($request);
+        $Status = 'S';
 
-                
-                $UTV = new UtV();
-                $UTV->utv_unidade = $request->unidade;
-                $UTV->utv_email = $request->email;
-                $UTV->utv_senha = Hash::make($request->senha);
-                $UTV->utv_telefone = $request->telefone;
-                $UTV->utv_telefone2 = $request->telefone2;
-                $UTV->utv_cep = $request->cep;
-                $UTV->utv_uf = $request->uf;
-                $UTV->utv_cidade = $request->cidade;
-                $UTV->utv_bairro = $request->bairro;
-                $UTV->utv_logradouro = $request->logradouro;
-                $UTV->utv_numero = $request->numero;
-                $UTV->utv_complemento = $request->complemento;
-                $UTV->utv_contato_tec = $request->tecnico;
-                $UTV->utv_email_tec = $request->email_tecnico;
-                $UTV->utv_funcao_tec = $request->funcao;
-                $UTV->utv_status = $request->$Status;
-                $UTV->save();
-                
-                return redirect('/login/utv')->with('');
-            }
-        
+        if ($request->senha === $request->confirma) {
+
+
+            $UTV = new UtV();
+            $UTV->utv_unidade = $request->unidade;
+            $UTV->utv_email = $request->email;
+            $UTV->utv_senha = Hash::make($request->senha);
+            $UTV->utv_telefone = $request->telefone;
+            $UTV->utv_telefone2 = $request->telefone2;
+            $UTV->utv_cep = $request->cep;
+            $UTV->utv_uf = $request->uf;
+            $UTV->utv_cidade = $request->cidade;
+            $UTV->utv_bairro = $request->bairro;
+            $UTV->utv_logradouro = $request->logradouro;
+            $UTV->utv_numero = $request->numero;
+            $UTV->utv_complemento = $request->complemento;
+            $UTV->utv_contato_tec = $request->tecnico;
+            $UTV->utv_email_tec = $request->email_tecnico;
+            $UTV->utv_funcao_tec = $request->funcao;
+            $UTV->utv_status = $request->$Status;
+            $UTV->save();
+
+            return redirect('/login/utv')->with('');
+        }
     }
 
-    public function atualizarCurso(){
+    public function atualizarCurso()
+    {
 
         return view('update_cursoutv');
-
     }
 
-    public function addCurso(Request $request){
+    public function addCurso(Request $request)
+    {
 
         $UTV = new UTVCURSOS();
         $UTV->utvcurso_folder  = $request->logo;
@@ -97,149 +87,142 @@ class utvController extends Controller
         $UTV->utvcurso_valor_geral = $request->investimento;
         $UTV->utvcurso_valor_estudante = $request->estudantes;
         $UTV->utvcurso_informacoes = $request->informacoes;
-        
-      //dd($UTV);
-        
-        
+
+        //dd($UTV);
+
+
         try {
 
             $UTV->save();
-            
-            return redirect('/cursos/utv/');
 
+            return redirect('/cursos/utv/');
         } catch (PDOException $e) {
 
             echo $e->getMessage();
         }
-        
-
     }
 
-    public function redefinirSenha(Request $request){
+    public function redefinirSenha(Request $request)
+    {
 
-               
+        $curso = UTV::where('utv_email', $request->email)->first();  // pegando os dados da empresa EMAIL NOME
 
-                    $curso = UTV::where('utv_email', $request->email)->first();  // pegando os dados da empresa EMAIL NOME
-                    
-                    if(!empty($curso)){
+        if (!empty($curso)) {
 
-                                                
-                        $id = $curso->utv_id;
-                        $email = $curso->utv_email;
-                        $nome = $curso->utv_unidade;
 
-                        Mail::to($request->email)->send(new utvcursoMail(UTV::where('utv_email', $request->email)->first()));
+            $id = $curso->utv_id;
+            $email = $curso->utv_email;
+            $nome = $curso->utv_unidade;
 
-                        return redirect('/redefinir/senha/utv')->with('sucesso', 'Produto cadastrado com sucesso!');
-                    }else{
+            Mail::to($request->email)->send(new utvcursoMail(UTV::where('utv_email', $request->email)->first()));
 
-                        return redirect('/redefinir/senha/utv')->with('mensagem', 'Produto cadastrado com sucesso!');
-                    }
-               
+            return redirect('/redefinir/senha/utv')->with('sucesso', 'Produto cadastrado com sucesso!');
+        } else {
+
+            return redirect('/redefinir/senha/utv')->with('mensagem', 'Produto cadastrado com sucesso!');
+        }
     }
 
-    public function recuperarSenha(Request $request){
+    public function recuperarSenha(Request $request)
+    {
 
 
         $UTV = UTV::Where('utv_id', $request->id)->first();
-        if(!empty($UTV)){
+        if (!empty($UTV)) {
 
-            if($request->newsenha === $request->confsenha){
+            if ($request->newsenha === $request->confsenha) {
 
-                    
+
                 $UTV = UTV::find($request->id);
                 $UTV->utv_senha = Hash::make($request->confsenha);
                 $UTV->save();
 
                 return redirect('/home/utv')->with('alterar', 'Sua senha foi alterado com sucesso!');
-            }else{
-                return redirect('/redefinir/password/utv/'.$request->id)->with('erro', 'Sua senha foi alterado com sucesso!');
+            } else {
+                return redirect('/redefinir/password/utv/' . $request->id)->with('erro', 'Sua senha foi alterado com sucesso!');
             }
-
-        }else{
+        } else {
 
             return redirect('/redefinir/senha/utv')->with('erro', 'Sua senha foi alterado com sucesso!');
         }
-
-
     }
 
-    public function atualizarSenha(){
-        
+    public function atualizarSenha()
+    {
+
         return view('alterar_senha_utv');
     }
 
-    public function updateSenha(Request $request){
+    public function updateSenha(Request $request)
+    {
 
-    
+
 
         $UTV = UTV::Where('utv_id', $request->id)->first();
-        if(!empty($UTV)){
+        if (!empty($UTV)) {
 
-            if($request->newsenha === $request->confsenha){
+            if ($request->newsenha === $request->confsenha) {
 
-                    
+
                 $UTV = UTV::find($request->id);
                 $UTV->utv_senha = Hash::make($request->confsenha);
                 $UTV->save();
 
                 return redirect('/login/utv')->with('alterar', 'Sua senha foi alterado com sucesso!');
-            }else{
+            } else {
                 return redirect('/alterar/senha/')->with('erro', 'Sua senha foi alterado com sucesso!');
             }
-
-        }else{
+        } else {
 
             return redirect('/alterar/senha/')->with('erro', 'Sua senha foi alterado com sucesso!');
         }
-
-
     }
 
-    public function redefinirUtvCurso(){
+    public function redefinirUtvCurso()
+    {
 
         return view('redefinir_curso');
     }
 
-    public function validarLogin(Request $request){
+    public function validarLogin(Request $request)
+    {
 
-        
-      
+
+
         $utv =  UTV::where('utv_email', $request->email)->first();
 
-        if(!empty($utv)){
+        if (!empty($utv)) {
 
-            if(Hash::check($request->password, $utv->utv_senha)){
+            if (Hash::check($request->password, $utv->utv_senha)) {
 
                 $id = $utv['utv_id'];
                 $request->session()->put('utv_id', $id);
                 $request->session()->put('utv_email', $request->email);
-                return redirect('home/utv');  
-            }else{
+                return redirect('home/utv');
+            } else {
                 return redirect('login/utv');
             }
-
-        }else{
+        } else {
 
             return redirect('login/utv');
         }
-        
     }
 
-    public function cursosAdd(){
+    public function cursosAdd()
+    {
 
-       return view('add_cursoutv');
+        return view('add_cursoutv');
     }
-  
+
     public function show($id)
     {
         //
     }
 
- 
+
     public function edit($id)
     {
-            echo $id;
+        echo $id;
     }
 
     public function editaUtv($id) //  edita empresa
@@ -248,7 +231,11 @@ class utvController extends Controller
         $utv = UTV::find($id);
         return view('update_utv', compact('utv'));
     }
-    
+
+    public function buscarCandidato(){
+
+        return view('buscar_candidados_utv');
+    }
 
     public function update(Request $request, $id)
     {
@@ -269,22 +256,20 @@ class utvController extends Controller
         $UTV->utv_email_tec = $request->email_tecnico;
         $UTV->utv_funcao_tec = $request->funcao;
         $UTV->utv_status = $request->status;
-        
+
         try {
 
             $UTV->save();
-            return redirect('/home/utv');  
-
+            return redirect('/home/utv');
         } catch (PDOException $e) {
-            
+
             echo $e->getMessage();
         }
-        
     }
 
- 
+
     public function destroy($id)
     {
-        return redirect('login/utv'); 
+        return redirect('login/utv');
     }
 }
