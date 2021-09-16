@@ -185,7 +185,7 @@ class utvController extends Controller
 
                 return redirect('/login/utv')->with('alterar', 'Sua senha foi alterado com sucesso!');
             }else{
-                return redirect('/alterar/senha/'.$request->id)->with('erro', 'Sua senha foi alterado com sucesso!');
+                return redirect('/alterar/senha/')->with('erro', 'Sua senha foi alterado com sucesso!');
             }
 
         }else{
