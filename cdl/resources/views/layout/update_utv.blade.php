@@ -25,7 +25,7 @@
                       Candidatos
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="/login/candidato">Buscar Ex-Alunos</a></li>
+                      <li><a class="dropdown-item" href="/buscar/candidato/utv/">Buscar Ex-Alunos</a></li>
                       <!--<li><a class="dropdown-item" href="">Buscar Vagas</a></li> <!-- "/busca/candidato"  remover quando for implementar -->
                       <!--<li><hr class="dropdown-divider"></li>-->
                       

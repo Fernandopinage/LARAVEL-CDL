@@ -10,15 +10,15 @@
 
         <div class="col-md-2">
             <label for="inputEmail4" class="form-label">CPF</label>
-            <input type="email" class="form-control form-control-sm" id="inputEmail4">
+            <input type="text" class="form-control form-control-sm" id="inputEmail4">
         </div>
         <div class="col-md-5">
             <label for="inputPassword4" class="form-label">Nome</label>
-            <input type="password" class="form-control form-control-sm" id="inputPassword4">
+            <input type="text" class="form-control form-control-sm" id="inputPassword4">
         </div>
         <div class="col-md-5">
             <label for="inputPassword4" class="form-label">Curso</label>
-            <input type="password" class="form-control form-control-sm" id="inputPassword4">
+            <input type="text" class="form-control form-control-sm" id="inputPassword4">
         </div>
         <div class="text-end">
             <input type="submit" class="btn btn-primary" onclick="alert('Buscar em desenvolvimento')" value="Pesquisar">
