@@ -2,6 +2,10 @@ title{
     background: url('/img/title.png');
     width: 10px;
   }
+
+  label{
+    color:#186CDE;
+  }
   #logo{
       
       width: 150px;
