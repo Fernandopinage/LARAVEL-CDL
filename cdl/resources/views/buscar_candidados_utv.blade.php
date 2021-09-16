@@ -24,7 +24,6 @@
             <input type="submit" class="btn btn-primary" onclick="alert('Buscar em desenvolvimento')" value="Pesquisar">
         </div>
     </div>
- 
-    
+
 </form>
 @endsection
