@@ -18,7 +18,7 @@
             <a class="nav-link" href="#">Esqueci minha senha</a>
         </div>
         <div class="col">
-            <a class="nav-link" href="#">Criar uma conta</a>
+            <a class="nav-link" href="/add/candidato/">Criar uma conta</a>
         </div>
     </div>
 

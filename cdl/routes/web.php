@@ -27,11 +27,11 @@ Route::get('/', [homeController::class, 'index']); // home do projeto
 
 
 /****************************************************************************************** */
-
+//Route::middleware(['candidado'])->group(function () {
 Route::get('login/candidato', [CandidatoController::class, 'index']); // chamando tela de candidatos
 Route::get('busca/candidato', [CandidatoController::class, 'selectCandidato']); // chamando tela  busca candidato 
-Route::get('add/candidato', [CandidatoController::class, 'formularioCandidato']); // chamando tela de formulario do candidato
-
+Route::get('/add/candidato', [CandidatoController::class, 'formularioCandidato']); // chamando tela de formulario do candidato
+//});
 
 
 Route::get('login/empresa', [EmpresaController::class, 'index'])->name('login/empresa'); // chamando tela de login da empresa
