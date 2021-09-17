@@ -44,13 +44,11 @@ class Candidatos extends Migration
             $table->string('can_localnascimento',10);   //  campo resposnsavel por descrever local do nascimento
             $table->string('can_cpf',14);               //  CPF
             $table->string('can_rg',10);                //  RG
-
             $table->char('can_experiencia',1);          //  campo responsavel por pergunta se possui experiencia proficinal
             $table->char('can_ex_militar',1);           //  perguntar se o candidado e militar
             $table->string('can_matricula_militar',14); //  Matricula do ex militar
             $table->string('can_unidade_militar',14);   //  unidade militar 
             $table->string('can_preferencia',250);      //  campo referente a preferência de vagas do candidato
-
             $table->string('can_cep',8);                //  cep (Obrigatorio)
             $table->string('can_uf',2);                 //  uf (Obrigatorio)
             $table->string('can_cidade',30);            //  cidade
@@ -58,13 +56,10 @@ class Candidatos extends Migration
             $table->string('can_logradouro',100);       //  logradouro
             $table->string('can_numero',10);            //  nuemro da residencia
             $table->string('can_complemento',100);      //  complemento 
-            
             $table->char('can_termo',1);                //  LGPD
             $table->char('can_filhos',1);               //   campo responsavel por pergunta se candidado possui filhos
             $table->double('can_salarial',8,2);         //   campo responsavel por prentençao salarial
             $table->char('can_status',1);               //  ativo ou inativo
-
-
             $table->string('can_descricao',100);        //  campo referente a linguagem   campo formado select
             $table->string('can_leitura',100);          //  campo referente ao nivel de leitura    campo formado select
             $table->string('can_escrita',100);          //  campo referente ao nivel de escrita    campo formado select
