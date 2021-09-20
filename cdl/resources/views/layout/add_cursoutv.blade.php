@@ -114,6 +114,20 @@
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
 
+  @if(session('add_cursos'))
+  <script>
+    Swal.fire({
+    position: 'center',
+    icon: 'success',
+    title: 'Curso cadastrado com sucesso!',
+    showConfirmButton: false,
+    timer: 1500
+  })
+  </script>
+  @endif
+
+
+
 
   @if(session('empresa_cadastro_erro'))
   <script>

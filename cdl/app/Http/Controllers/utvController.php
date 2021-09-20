@@ -64,7 +64,7 @@ class utvController extends Controller
             $UTV->utv_status = $request->$Status;
             $UTV->save();
 
-            return redirect('/login/utv')->with('');
+            return redirect('/login/utv')->with('utv_cadastro', 'Produto cadastrado com sucesso!');
         }
     }
 
@@ -88,14 +88,12 @@ class utvController extends Controller
         $UTV->utvcurso_valor_estudante = $request->estudantes;
         $UTV->utvcurso_informacoes = $request->informacoes;
 
-        //dd($UTV);
-
 
         try {
 
             $UTV->save();
 
-            return redirect('/cursos/utv/');
+            return redirect('/cursos/utv/')->with('add_cursos', 'Produto cadastrado com sucesso!');
         } catch (PDOException $e) {
 
             echo $e->getMessage();
@@ -260,7 +258,7 @@ class utvController extends Controller
         try {
 
             $UTV->save();
-            return redirect('/home/utv');
+            return redirect('/home/utv')->with('updade','sucesso');
         } catch (PDOException $e) {
 
             echo $e->getMessage();

@@ -9,7 +9,7 @@
   <link href="/css/add_utv.css" rel="stylesheet">
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
   <link rel="icon" href="/img/title.png">
-  <title>  Empregabilidade | CDL Manaus</title>
+  <title> Empregabilidade | CDL Manaus</title>
 </head>
 
 <body>
@@ -17,64 +17,72 @@
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
       <a class="navbar-brand" href="/"><img id="logo" src="/img/cdl_logo.png"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Candidatos
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                       <li><a class="dropdown-item" href="/login/candidato">Entrar</a></li>
-                      <!--<li><a class="dropdown-item" href="">Buscar Vagas</a></li> <!-- "/busca/candidato"  remover quando for implementar -->
-                      <!--<li><hr class="dropdown-divider"></li>-->
-                      
-                    </ul>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Empresas
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="/login/empresa">Entrar</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Organizações Militares
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="/login/militar">Entrar</a></li>
-                     <!-- <li><a class="dropdown-item" href="/busca/militar">Buscar por Ex-Militares</a></li> -->
-                     <!-- <li><hr class="dropdown-divider"></li> -->
-                      
-                    </ul>
-                </li>
-            </ul>
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Candidatos
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="/login/candidato">Entrar</a></li>
+                <!--<li><a class="dropdown-item" href="">Buscar Vagas</a></li> <!-- "/busca/candidato"  remover quando for implementar -->
+                <!--<li><hr class="dropdown-divider"></li>-->
+
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Empresas
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="/login/empresa">Entrar</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Organizações Militares
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="/login/militar">Entrar</a></li>
+                <!-- <li><a class="dropdown-item" href="/busca/militar">Buscar por Ex-Militares</a></li> -->
+                <!-- <li><hr class="dropdown-divider"></li> -->
+
+              </ul>
+            </li>
+          </ul>
 
         </div>
-        
+
       </div>
       <ul class="nav justify-content-end">
         <li class="nav-item">
-          <a class="nav-link active" target="_blank" aria-current="page" href="https://www.linkedin.com/company/cdlm/"><img src="/icons/1.png" width="25px"></a>
+          <a class="nav-link active" target="_blank" aria-current="page"
+            href="https://www.linkedin.com/company/cdlm/"><img src="/icons/1.png" width="25px"></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" target="_blank" aria-current="page" href="https://pt-br.facebook.com/cdlmanausoficial/"><img src="/icons/2.png" width="25px"></a>
+          <a class="nav-link active" target="_blank" aria-current="page"
+            href="https://pt-br.facebook.com/cdlmanausoficial/"><img src="/icons/2.png" width="25px"></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" target="_blank" href="https://www.instagram.com/cdlmanaus/?hl=en"><img src="/icons/4.png" width="25px"></a>
+          <a class="nav-link" target="_blank" href="https://www.instagram.com/cdlmanaus/?hl=en"><img src="/icons/4.png"
+              width="25px"></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" target="_blank" href="https://www.youtube.com/channel/UCyjD5GbQuRrztgyRxlVAZdQ"><img src="/icons/3.png" width="25px"></a>
+          <a class="nav-link" target="_blank" href="https://www.youtube.com/channel/UCyjD5GbQuRrztgyRxlVAZdQ"><img
+              src="/icons/3.png" width="25px"></a>
         </li>
 
       </ul>
     </div>
-    
+
   </nav>
 
   <!--
@@ -93,19 +101,19 @@
   </div>
   <footer style="margin-top: 150px">
     <nav class="navbar fixed-bottom navbar-expand-sm navbar bg" style="background-color: #284D92">
-        <div class="container" style="margin-top: 8px">
-            <div class="col-6 input-group-sm">
-                <p class="text-start" style="color:#fff">Progride® é uma marca registrada © <?php echo date('Y')?>
-                </p>
-            </div>
-            <div class="col-6 input-group-sm">
-                <p class="text-end" style="color:#fff">Desenvolvido por <img src="/icons/progride.png" width="25">
-                    Progride </p>
-            </div>
-
+      <div class="container" style="margin-top: 8px">
+        <div class="col-6 input-group-sm">
+          <p class="text-start" style="color:#fff">Progride® é uma marca registrada © <?php echo date('Y')?>
+          </p>
         </div>
+        <div class="col-6 input-group-sm">
+          <p class="text-end" style="color:#fff">Desenvolvido por <img src="/icons/progride.png" width="25">
+            Progride </p>
+        </div>
+
+      </div>
     </nav>
-</footer>
+  </footer>
 </body>
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -113,8 +121,8 @@
 
 
 
-  @if(session('empresa_cadastro_erro'))
-  <script>
+@if(session('empresa_cadastro_erro'))
+<script>
   Swal.fire({
     position: 'center',
     icon: 'error',
@@ -122,11 +130,11 @@
     showConfirmButton: false,
     timer: 1500
   })
-  </script>
-  @endif
+</script>
+@endif
 
-  @if(session('duplicado'))
-  <script>
+@if(session('duplicado'))
+<script>
   Swal.fire({
     position: 'center',
     icon: 'error',
@@ -135,8 +143,8 @@
     showConfirmButton: false,
     timer: 3500
   })
-  </script>
-  @endif
+</script>
+@endif
 
 
 <!-- Adicionando Javascript -->
@@ -206,18 +214,6 @@
     });
 </script>
 
-<!-- Mensagem de cadastro com sucesso -->
-@if(session('mensagem'))
-<script>
-  Swal.fire({
-  position: 'center',
-  icon: 'success',
-  title: 'Registro cadastrado com sucesso!',
-  showConfirmButton: false,
-  timer: 1500
-})
-</script>
-@endif
 
 <!-- Mesagem de validação de campos  -->
 
@@ -229,7 +225,6 @@
 
 
 <script>
-
   $('#asscdl').ready(function(){
     if($("#asscdl:checked").val() == undefined){
             $("#asscdl").prop('checked', false);
