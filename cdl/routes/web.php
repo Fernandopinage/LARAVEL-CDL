@@ -13,7 +13,7 @@ use App\Http\Controllers\VagasController;
 use App\Models\Empresa;
 use App\Models\Oms;
 use RealRashid\SweetAlert\Facades\Alert; // sweetAlert
-
+use Illuminate\Http\Request;
 
 /*
 Route::get('/', function () {
@@ -31,6 +31,10 @@ Route::get('/', [homeController::class, 'index']); // home do projeto
 Route::get('login/candidato', [CandidatoController::class, 'index']); // chamando tela de candidatos
 Route::get('busca/candidato', [CandidatoController::class, 'selectCandidato']); // chamando tela  busca candidato 
 Route::get('/add/candidato', [CandidatoController::class, 'formularioCandidato']); // chamando tela de formulario do candidato
+Route::post('/insert/candidato',function(Request $request){
+
+    dd($request);
+});
 //});
 
 

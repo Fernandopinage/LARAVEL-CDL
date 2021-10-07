@@ -2,7 +2,7 @@
 
 @section('cadastro')
 
-<form action="empresa" method="POST">
+<form action="/insert/candidato" method="POST">
 
     @csrf
     <div class="form-signin">
@@ -148,11 +148,11 @@
             </div>
             <div class="col-md-2">
                 <label class="form-check-label" for="flexCheckIndeterminate">Senha </label>
-                <input type="text" class="form-control form-control-sm" placeholder="">
+                <input type="password" class="form-control form-control-sm" placeholder="">
             </div>
             <div class="col-md-2">
                 <label class="form-check-label" for="flexCheckIndeterminate">Confirmar Senha </label>
-                <input type="text" class="form-control form-control-sm" placeholder="">
+                <input type="password" class="form-control form-control-sm" placeholder="">
             </div>
             <div class="col-md-2">
                 <label class="form-check-label" for="flexCheckIndeterminate">Telefone</label>
