@@ -119,8 +119,47 @@
 
 <script>
 
+
+  function profissional(id){
+
+
+  if(id === 'sim'){
+      document.getElementById('01').style.display = 'none'
+      document.getElementById('02').style.display = 'none'
+      document.getElementById('03').style.display = 'none'
+      document.getElementById('04').style.display = 'none'
+      document.getElementById('05').style.display = 'none'
+      document.getElementById('06').style.display = 'none'
+      document.getElementById('07').style.display = 'none'
+  }else{
+    document.getElementById('01').style.display = 'block'
+    document.getElementById('02').style.display = 'block'
+    document.getElementById('03').style.display = 'block'
+    document.getElementById('04').style.display = 'block'
+    document.getElementById('05').style.display = 'block'
+    document.getElementById('06').style.display = 'block'
+    document.getElementById('07').style.display = 'block'
+
+  }
+    }
+
+
+
+
+
+
+
+</script>
+
+<script>
   $(document).ready(function(){
     document.getElementById('divMilitar').style.display ='none'
+      $('#curso_div').hide();
+      $('#termino_div').hide();
+      $('#semestre_div').hide();
+      $('#periodo_div').hide();
+      $('#institucao_div').hide();
+  
   });
  document.getElementById('exmilitar').addEventListener('click',function(){
    
@@ -139,54 +178,62 @@
 
 <script>
   $('#formacao').change(function(){
+
     
-    if(document.getElementById('formacao').value === 'Ensino fundamental completo' || document.getElementById('formacao').value === 'Ensino fundamental incompleto'){
+    if(document.getElementById('formacao').value === 'Ensino Fundamental completo' || document.getElementById('formacao').value === 'Ensino Fundamental incompleto'){
      
       $('#curso_div').hide();
-      $('#termino_div').hide();
+      $('#termino_div').show();
       $('#semestre_div').hide();
       $('#periodo_div').hide();
-  
+      $('#institucao_div').hide();
     }
   
     if(document.getElementById('formacao').value === 'Ensino Medio completo'){
       $('#curso_div').hide();
+      $('#termino_div').show();
       $('#semestre_div').hide();
       $('#periodo_div').hide();
-      $('#termino_div').show();
+      $('#institucao_div').hide();
     }
   
     if(document.getElementById('formacao').value  === 'Ensino Medio cursando'){
       $('#curso_div').hide();
-      $('#termino_div').hide();
+      $('#termino_div').show();
       $('#semestre_div').hide();
       $('#periodo_div').hide();
+      $('#institucao_div').hide();
     }
   
     if(document.getElementById('formacao').value  === 'Ensino Tecnico completo'){
   
-      $('#curso_div').hide();
-      $('#termino_div').hide();
+      $('#curso_div').show();
+      $('#termino_div').show();
       $('#semestre_div').hide();
       $('#periodo_div').hide();
+      $('#institucao_div').show();
   
     }
   
     if(document.getElementById('formacao').value  === 'Ensino Tecnico cursando'){
   
-    $('#curso_div').show();
-    $('#termino_div').hide();
-    $('#semestre_div').hide();
-    $('#periodo_div').show();
+  
+      $('#curso_div').show();
+      $('#termino_div').show();
+      $('#semestre_div').hide();
+      $('#periodo_div').hide();
+      $('#institucao_div').show();
   
     }
   
     if(document.getElementById('formacao').value  === 'Superior Completo'){
   
     $('#curso_div').show();
-    $('#termino_div').hide();
+    $('#termino_div').show();
     $('#semestre_div').hide();
-    $('#periodo_div').show();
+    $('#periodo_div').hide();
+    $('#institucao_div').show();
+    
   
     }
   
@@ -194,27 +241,30 @@
     if(document.getElementById('formacao').value  === 'Superior Cursando'){
   
     $('#curso_div').show();
-    $('#termino_div').hide();
+    $('#termino_div').show();
     $('#semestre_div').hide();
     $('#periodo_div').show();
+    $('#institucao_div').show();
   
     }
   
     if(document.getElementById('formacao').value  === 'Pos-Graduacao Completo'){
   
     $('#curso_div').show();
-    $('#termino_div').hide();
+    $('#termino_div').show();
     $('#semestre_div').hide();
     $('#periodo_div').hide();
+    $('#institucao_div').show();
   
     }
   
     if(document.getElementById('formacao').value  === 'Pos-Graduacao Cursando'){
   
       $('#curso_div').show();
-      $('#termino_div').hide();
+      $('#termino_div').show();
       $('#semestre_div').hide();
       $('#periodo_div').hide();
+      $('#institucao_div').show();
   
     }
   

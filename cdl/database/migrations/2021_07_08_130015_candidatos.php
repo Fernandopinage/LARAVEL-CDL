@@ -26,8 +26,6 @@ class Candidatos extends Migration
               faz relacionamento com tabela idioma o ID do candidato vira chave estrangeira no idioma
 
               */
-
-
             $table->integer('can_id')->unsigned();      //  chave primaria auto incremento
             $table->string('can_foto',250);             //  foto do candidato
             $table->string('can_nome',100);             //  nome do candidado 

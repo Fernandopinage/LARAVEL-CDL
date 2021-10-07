@@ -85,26 +85,31 @@
                         <option>Separado</option>
                     </select>
                 </div>
-                <div class="col-md-1">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Sexo </label>
+                <div class="col-md-2">
+                    <label class="form-check-label" for="flexCheckIndeterminate">Possui filhos</label>
                     <div class="form-check ">
                         <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option2">
                         <label class="form-check-label" for="gridRadios1">
-                            Homem
+                            Sim
                         </label>
                     </div>
                     <div class="form-check ">
                         <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option3">
                         <label class="form-check-label" for="gridRadios2">
-                            Mulher
+                            Não
                         </label>
                     </div>
-                    <div class="form-check ">
-                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3">
-                        <label class="form-check-label" for="gridRadios3">
-                            Outros
-                        </label>
-                    </div>
+                </div>
+                <div class="col-md-2">
+                    <label class="form-check-label" for="flexCheckIndeterminate">Gênero </label>
+                    <select id="inputState" name="cor" class="form-select form-select-sm">
+                        <option selected></option>
+                        <option>Masculino</option>
+                        <option>Feminino</option>
+                        <option>Outros</option>
+
+                    </select>
+
                 </div>
 
                 <div class="col-md-2" style="margin-top: 30px;">
@@ -250,9 +255,9 @@
                     <span><strong>*</strong></span></label>
                 <select class="form-select form-select-sm" name="formacao" id="formacao"
                     aria-label="Default select example" required>
-                    <option selected></option>
-                    <option value="Ensino fundamental completo">Ensino fundamental completo</option>
-                    <option value="Ensino fundamental incompleto">Ensino fundamental incompleto</option>
+                    <option value="null" selected></option>
+                    <option value="Ensino Fundamental completo">Ensino Fundamental completo</option>
+                    <option value="Ensino Fundamental incompleto">Ensino Fundamental incompleto</option>
                     <option value="Ensino Medio completo">Ensino Médio completo</option>
                     <option value="Ensino Medio cursando">Ensino Médio cursando</option>
                     <option value="Ensino Tecnico cursando">Ensino Técnico cursando</option>
@@ -263,12 +268,16 @@
                     <option value="Pos-Graduacao Completo">Pós-Graduação Completo</option>
                 </select>
             </div>
+            <div class="col-md-3" id="institucao_div">
+                <label class="form-check-label" for="flexCheckIndeterminate">Instituição de Ensino </label>
+                <input type="text" class="form-control form-control-sm" name="instituicao" placeholder="">
+            </div>
             <div class="col-md-3" id="curso_div">
                 <label class="form-check-label" for="flexCheckIndeterminate">Nome do curso </label>
                 <input type="text" class="form-control form-control-sm" name="curso" placeholder="">
             </div>
             <div class="col-md-2" id="termino_div">
-                <label class="form-check-label" for="flexCheckIndeterminate">Ano de Términio </label>
+                <label class="form-check-label" for="flexCheckIndeterminate">Ano de termino </label>
                 <input type="month" class="form-control form-select-sm" name="termino" placeholder="">
             </div>
             <div class="col-md-2" id="semestre_div">
@@ -296,34 +305,7 @@
 
                 </select>
             </div>
-            <div class="col-md-3">
-                <label class="form-check-label" for="flexCheckIndeterminate">Experiência
-                    <span><strong>*</strong></span></label>
-                <select class="form-select form-select-sm" name="experiencia" id="experiencia"
-                    aria-label="Default select example" required>
-                    <option selected></option>
-                    <option value="Sem Experiência">Sem Experiência</option>
-                    <option value="Com Experiência">Com Experiência</option>
-                    <option value="Primeiro Emprego">Primeiro Emprego</option>
-                </select>
-            </div>
-            <div class="col-md-2" id="tempoexperiencia_div">
-                <label class="form-check-label" for="flexCheckIndeterminate">Tempo de Experiência
-                    <span><strong>*</strong></span></label>
-                <select class="form-select form-select-sm" name="tempoexperiencia" id="tempoexperiencia"
-                    aria-label="Default select example" required>
-                    <option selected value="0"></option>
-                    <option value="1">Não informado</option>
-                    <option value="2">3 meses</option>
-                    <option value="3">6 meses</option>
-                    <option value="4">1 ano</option>
-                    <option value="5">3 anos</option>
-                    <option value="6">5 anos</option>
-                    <option value="7">10 anos</option>
-                    <option value="8">20 anos</option>
-                    <option value="9">30+ anos</option>
-                </select>
-            </div>
+
 
             <div style="padding-top: 50px">
 
@@ -368,53 +350,62 @@
                 <hr>
             </div>
 
-            <div class="col-md-12">
-                <div class="form-check-inline">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                    <label class="form-check-label" for="flexRadioDefault1">
-                        Sim
-                    </label>
+           
+
+
+                <div class="col-md-12">
+                    <div>
+
+                        <label class="form-check-label" for="flexCheckIndeterminate">Primeiro emprego? </label>
+                    </div>
+                    <div class="form-check-inline">
+                        <input class="form-check-input" type="radio" name="area_profissional" value="sim" id="area_profissional_sim" onclick="profissional('sim')">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            Sim
+                        </label>
+                    </div>
+                    <div class="form-check-inline">
+                        <input class="form-check-input" type="radio" name="area_profissional" value="não" id="area_profissional_nao" onclick="profissional('não')">
+                        <label class="form-check-label" for="flexRadioDefault2">
+                            Não
+                        </label>
+                    </div>
+
                 </div>
-                <div class="form-check-inline">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                    <label class="form-check-label" for="flexRadioDefault2">
-                        Não
-                    </label>
+
+                <div class="col-md-6" id="01">
+                    <label class="form-check-label" for="flexCheckIndeterminate">Nome da empresa </label>
+                    <input type="text" class="form-control form-control-sm" placeholder="">
                 </div>
-                <label class="form-check-label" for="flexCheckIndeterminate">Primeiro emprego? </label>
-            </div>
 
-            <div class="col-md-6">
-                <label class="form-check-label" for="flexCheckIndeterminate">Nome da empresa </label>
-                <input type="text" class="form-control form-control-sm" placeholder="">
-            </div>
+                <div class="col-md-5" id="02">
+                    <label class="form-check-label" for="flexCheckIndeterminate">Cargo </label>
+                    <input type="text" class="form-control form-control-sm" placeholder="">
+                </div>
 
-            <div class="col-md-5">
-                <label class="form-check-label" for="flexCheckIndeterminate">Cargo </label>
-                <input type="text" class="form-control form-control-sm" placeholder="">
-            </div>
+                <div class="col-md-2" style="margin-top: 50px;" id="03">
+                    <input class="form-check-input" type="checkbox">
+                    <label class="form-check-label" for="inlineCheckbox1">Empresa atual</label>
+                </div>
+                <div class="col-md-4" id="04">
+                    <label class="form-check-label" for="flexCheckIndeterminate">Data de Admissão </label>
+                    <input type="month" class="form-control form-control-sm" placeholder="">
+                </div>
 
-            <div class="col-md-2" style="margin-top: 50px;">
-                <input class="form-check-input" type="checkbox">
-                <label class="form-check-label" for="inlineCheckbox1">Empresa atual</label>
-            </div>
-            <div class="col-md-4">
-                <label class="form-check-label" for="flexCheckIndeterminate">Data de Admissão </label>
-                <input type="month" class="form-control form-control-sm" placeholder="">
-            </div>
+                <div class="col-md-4" id="05">
+                    <label class="form-check-label" for="flexCheckIndeterminate">Data de termino </label>
+                    <input type="month" class="form-control form-control-sm" placeholder="">
+                </div>
+                <div class="col-md-2" id="06">
+                    <label class="form-check-label" for="flexCheckIndeterminate">Salário</label>
+                    <input type="text" class="form-control form-control-sm" placeholder="">
+                </div>
+                <div class="col-md-5" id="07">
+                    <label class="form-check-label" for="flexCheckIndeterminate">Softwares utilizava</label>
+                    <input type="text" class="form-control form-control-sm" placeholder="">
+                </div>
 
-            <div class="col-md-4">
-                <label class="form-check-label" for="flexCheckIndeterminate">Data de termino </label>
-                <input type="month" class="form-control form-control-sm" placeholder="">
-            </div>
-            <div class="col-md-2">
-                <label class="form-check-label" for="flexCheckIndeterminate">Salário</label>
-                <input type="text" class="form-control form-control-sm" placeholder="">
-            </div>
-            <div class="col-md-5">
-                <label class="form-check-label" for="flexCheckIndeterminate">Softwares utilizava</label>
-                <input type="text" class="form-control form-control-sm" placeholder="">
-            </div>
+          
         </div>
 
     </div>
@@ -428,7 +419,7 @@
         </div>
         <div class="row g-3">
             <div class="text">
-                <h2 class="form-signin-heading">Preferencias Profissionais</h2>
+                <h2 class="form-signin-heading">Prefêrencias Profissionais</h2>
                 <hr>
             </div>
         </div>
@@ -675,13 +666,11 @@
 
 
 <script>
-
-    
     var cont =0;
     function addCampos(){
      
         var div = document.createElement('div');
-        div.innerHTML = '<div class="row g-3 shadow p-3 mb-5 bg-body rounded" id="div'+cont+'" style="margin:0px 20px 0px 20px; padding:20px;"> <div class="text-end"> <input type="button" class="btn btn-danger btn-sm" onclick="removeCampos('+cont+')" value="Remover Curso"></div><div class="col-md-4"> <label class="form-check-label" for="flexCheckIndeterminate">Cursos extracurriculares</label><input type="text" class="form-control form-control-sm" name="rg" placeholder=""> </div><div class="col-md-2"> <label class="form-check-label" for="flexCheckIndeterminate">Ano termino</label><input type="month" class="form-control form-control-sm" name="rg" placeholder=""></div> </div>';
+        div.innerHTML = '<div class="row g-3 shadow p-3 mb-5 bg-body rounded" id="div'+cont+'" style="margin:0px 20px 0px 20px; padding:20px;"> <div class="text-end"> <input type="button" class="btn btn-danger btn-sm" onclick="removeCampos('+cont+')" value="Remover Curso"></div><div class="col-md-4"> <label class="form-check-label" for="flexCheckIndeterminate">Cursos extracurriculares</label><input type="text" class="form-control form-control-sm" name="rg" placeholder=""> </div><div class="col-md-2"> <label class="form-check-label" for="flexCheckIndeterminate">Ano termino</label><input type="month" class="form-control form-control-sm" name="rg" placeholder=""></div><div class="col-md-4"> <label class="form-check-label" for="flexCheckIndeterminate">Aréa de Atuação</label><select class="form-select form-select-sm" name="areaatuacao[]" id="areaatuacao"><option selected value="0"></option></select>  </div>';
                  document.getElementById('lista').appendChild(div)
         cont++;
 
@@ -887,4 +876,3 @@ function mphone(v) {
 }
 </script>
 <!--------------------------------------------------->
-
