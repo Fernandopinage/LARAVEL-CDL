@@ -39,13 +39,14 @@
 
                 <div class="col-md-3">
                     <label class="form-check-label" for="flexCheckIndeterminate">CPF</label>
-                    <input type="text" class="form-control form-control-sm" name="cpf" placeholder="" onfocus="javascript: retirarFormatacao(this);"
-                    onblur="javascript: formatarCampo(this);" name="cnpj" id="cnpj" placeholder="99.999.999/9999-99"
-                    value="{{old('cnpj')}}">
+                    <input type="text" class="form-control form-control-sm" name="cpf" placeholder=""
+                        onfocus="javascript: retirarFormatacao(this);" onblur="javascript: formatarCampo(this);"
+                        name="cnpj" id="cnpj" placeholder="99.999.999/9999-99" value="{{old('cnpj')}}">
                 </div>
                 <div class="col-md-3">
                     <label class="form-check-label" for="flexCheckIndeterminate">RG</label>
-                    <input type="text" maxlength="10" class="form-control form-control-sm" onkeyup="somenteNumeros(this);" name="rg" placeholder="">
+                    <input type="text" maxlength="10" class="form-control form-control-sm"
+                        onkeyup="somenteNumeros(this);" name="rg" placeholder="">
                 </div>
                 <div class="col-md-3">
                     <label class="form-check-label" for="flexCheckIndeterminate">Data Nascimento </label>
@@ -109,13 +110,13 @@
                 <div class="col-md-2" style="margin-top: 30px;">
 
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                        <input class="form-check-input" type="checkbox" name="exmilitar" id="exmilitar">
                         <label class="form-check-label" for="inlineCheckbox1">Ex-militar?</label>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3" id="divMilitar">
                     <label class="form-check-label" for="flexCheckIndeterminate">Unidade Militar</label>
-                    <input type="text" class="form-control form-control-sm" name="cpf" placeholder="">
+                    <input type="text" class="form-control form-control-sm" name="unidademilitar" placeholder="">
                 </div>
                 <div class="col-md-3">
                     <label class="form-check-label" for="flexCheckIndeterminate">Matrícula</label>
@@ -155,11 +156,13 @@
             </div>
             <div class="col-md-2">
                 <label class="form-check-label" for="flexCheckIndeterminate">Telefone</label>
-                <input type="text" class="form-control form-control-sm" placeholder="(xx) xxxxx-xxxx" onkeypress="mask(this, mphone);" onblur="mask(this, mphone);" value="{{old('telefone')}}">
+                <input type="text" class="form-control form-control-sm" placeholder="(xx) xxxxx-xxxx"
+                    onkeypress="mask(this, mphone);" onblur="mask(this, mphone);" value="{{old('telefone')}}">
             </div>
             <div class="col-md-2">
                 <label class="form-check-label" for="flexCheckIndeterminate">Celular </label>
-                <input type="text" class="form-control form-control-sm" placeholder="(xx) xxxxx-xxxx" onkeypress="mask(this, mphone);" onblur="mask(this, mphone);" value="{{old('telefone')}}">
+                <input type="text" class="form-control form-control-sm" placeholder="(xx) xxxxx-xxxx"
+                    onkeypress="mask(this, mphone);" onblur="mask(this, mphone);" value="{{old('telefone')}}">
             </div>
 
         </div>
@@ -185,14 +188,14 @@
                 <div class="col-md-2">
                     <label class="form-check-label" for="flexCheckIndeterminate">CEP
                         <span><strong>*</strong></span></label>
-                    <input type="text"  maxlength="9"  class="form-control form-control-sm" name="cep" id="cep" placeholder=""
-                        value="{{old('cep')}}" required>
+                    <input type="text" maxlength="9" class="form-control form-control-sm" name="cep" id="cep"
+                        placeholder="" value="{{old('cep')}}" required>
                 </div>
                 <div class="col-md-1">
                     <label class="form-check-label" for="flexCheckIndeterminate">UF
                         <span><strong>*</strong></span></label>
-                    <input type="text" class="form-control form-control-sm" maxlength="2" name="uf" id="uf" placeholder=""
-                        value="{{old('uf')}}" required onkeypress="return lettersOnly(event);">
+                    <input type="text" class="form-control form-control-sm" maxlength="2" name="uf" id="uf"
+                        placeholder="" value="{{old('uf')}}" required onkeypress="return lettersOnly(event);">
                 </div>
                 <div class="col-md-2">
                     <label class="form-check-label" for="flexCheckIndeterminate">Cidade
@@ -413,9 +416,9 @@
                 <input type="text" class="form-control form-control-sm" placeholder="">
             </div>
         </div>
-        
+
     </div>
-    
+
     <div class="form-signin">
         <div class="text-end">
             <label class="switch">
@@ -429,7 +432,7 @@
                 <hr>
             </div>
         </div>
-        <div class="row g-3">            
+        <div class="row g-3">
             <div class="col-md-4" id="tempoexperiencia_div">
                 <label class="form-check-label" for="flexCheckIndeterminate">Preferências profissinal</label>
                 <select class="form-select form-select-sm" name="tempoexperiencia" id="tempoexperiencia"
@@ -438,7 +441,7 @@
                     <option value="1">Financeiro,</option>
                     <option value="2">Administração</option>
                     <option value="3">Vendas</option>
-          
+
                 </select>
             </div>
             <div class="col-md-2">
@@ -465,7 +468,8 @@
         </style>
 
         <div class="texto">
-            <p style="text-align: center;margin-top:10px"><b style="font-size: 20px">SISTEMA DE EMPREGABILIDADE CDL MANAUS</b></p>
+            <p style="text-align: center;margin-top:10px"><b style="font-size: 20px">SISTEMA DE EMPREGABILIDADE CDL
+                    MANAUS</b></p>
             <p style="text-align: center"><b style="font-size: 18px">Termo de Política para Uso do Sistema</b></p>
             <p><b>1. SERVIÇO</b></p>
             <p style="margin-left: 30px">1.1 <b>Objetivo do Serviço:</b>facilitar pessoas interessadas em buscar
@@ -663,13 +667,16 @@
 
 
 
-    
+
 </form>
 
 
 @endsection
 
+
 <script>
+
+    
     var cont =0;
     function addCampos(){
      
@@ -779,10 +786,9 @@ function mphone(v) {
 </script>
 
 <!-- ----------------------------------------------------------------- -->
-    <!-- Adicionando JQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-            crossorigin="anonymous"></script>
+<!-- Adicionando JQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <!-- Adicionando Javascript -->
 <script>
     $(document).ready(function() {
@@ -848,11 +854,11 @@ function mphone(v) {
               }
           });
       });
-  </script>
-  
-  <!--  Script campo RG onde só aceita numero -->
+</script>
 
-  <script>
+<!--  Script campo RG onde só aceita numero -->
+
+<script>
     function somenteNumeros(num) {
         var er = /[^0-9.]/;
         er.lastIndex = 0;
@@ -861,14 +867,14 @@ function mphone(v) {
           campo.value = "";
         }
     }
- </script>
-  
-  <!---------------------------------------------------->
+</script>
+
+<!---------------------------------------------------->
 
 
-  <!-- VALIDANDO DADOS APENAS LETRAS -->
-  <script>
-      function lettersOnly(evt) {
+<!-- VALIDANDO DADOS APENAS LETRAS -->
+<script>
+    function lettersOnly(evt) {
     evt = (evt) ? evt : event;
     var charCode = (evt.charCode) ? evt.charCode : ((evt.keyCode) ? evt.keyCode :
         ((evt.which) ? evt.which : 0));
@@ -879,5 +885,6 @@ function mphone(v) {
     }
     return true;
 }
-  </script>
-  <!--------------------------------------------------->
+</script>
+<!--------------------------------------------------->
+
