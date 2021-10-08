@@ -83,6 +83,7 @@ Route::get('/edita/oms/{id}', [OmsController::class, 'editaEmpresa']);  //tela d
 Route::post('/update/oms/{id}', [OmsController::class, 'Update']);
 Route::get('/alterar/senha/oms', [OmsController::class, 'alterarPassword']);
 Route::post('/modificar/senha/oms', [OmsController::class, 'modificarSenha']);
+Route::get('/delete/conta/oms/{id}', [OmsController::class, 'deleteConta']);
 //});
 
 
@@ -101,6 +102,8 @@ Route::get('/alterar/senha/', [utvController::class, 'atualizarSenha']);
 Route::get('/alterar/senha/utv/', [utvController::class, 'updateSenha']);
 Route::get('/redefinir/senha/utv', [utvController::class, 'redefinirUtvCurso']);
 Route::get('/recuperar/senha/', [utvController::class, 'redefinirSenha']);
+Route::get('/lista/cursos/utv',[utvController::class, 'ListarCursos']);
+
 Route::get('/redefinir/password/utv/{id}', function ($id) {
     return view('update_password_utv', ['id' => $id]);
     echo $id;

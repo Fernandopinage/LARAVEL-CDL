@@ -38,8 +38,12 @@
                     <input type="text" name="dias" class="form-control form-control-sm"  placeholder="" value="{{old('dias')}}" required>
                 </div>
                 <div class="col-md-2">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Período <span><strong>*</strong></span></label>
-                    <input type="text" name="periodo" class="form-control form-control-sm"  placeholder="" value="{{old('periodo')}}" required>
+                    <label class="form-check-label" for="flexCheckIndeterminate">Data de inicio <span><strong>*</strong></span></label>
+                    <input type="date" name="datainicio" class="form-control form-control-sm"  placeholder="" value="{{old('periodo')}}" required>
+                </div>
+                <div class="col-md-2">
+                    <label class="form-check-label" for="flexCheckIndeterminate">Data fim <span><strong>*</strong></span></label>
+                    <input type="date" name="datafim" class="form-control form-control-sm"  placeholder="" value="{{old('periodo')}}" required>
                 </div>
                 <div class="col-md-2">
                     <label class="form-check-label" for="flexCheckIndeterminate">Investimento  <span><strong>*</strong></span></label>

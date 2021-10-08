@@ -95,7 +95,8 @@
                                 <tr>
                                     <th scope="col">Horário:</th>
                                     <th scope="col">Dias:</th>
-                                    <th scope="col">Período:</th>
+                                    <th scope="col">Data de Início:</th>
+                                    <th scope="col">Data de Término:</th>
                                     <th scope="col">Investimento:</th>
                                     <th scope="col">Associado e Estudante:</th>
                                 </tr>
@@ -104,7 +105,8 @@
                                 <tr>
                                     <td><b style="color:#006CDE;">{{$cursos->utvcurso_hora}}</b></td>
                                     <td><b style="color:#006CDE;">{{$cursos->utvcurso_dias}}</b></td>
-                                    <td><b style="color:#006CDE;">{{$cursos->utvcurso_data}}</b></td>
+                                    <td><b style="color:#006CDE;">{{$cursos->utvcurso_data_inicio}}</b></td>
+                                    <td><b style="color:#006CDE;">{{$cursos->utvcurso_data_final}}</b> </td>
                                     <td><b style="color:#006CDE;">{{$cursos->utvcurso_valor_geral}}</b></td>
                                     <td><b style="color:#006CDE;">{{$cursos->utvcurso_valor_estudante}}</b></td>
                                 </tr>
@@ -112,8 +114,8 @@
                         </table>
                     </div>
                     <div class="card-footer text-left">
-                        <p><b style="color:#006CDE;"> Mais Informações:</b></p>
-                        <p style="color:#006CDE;">{{$cursos->utvcurso_informacoes}} </p>
+                        <p><b style="color:#006CDE;"> Mais Informações:</b>
+                            <span style="color:#006CDE;">{{$cursos->utvcurso_informacoes}} </span>
                     </div>
                 </div>
             </div>
@@ -183,7 +185,7 @@
                                     <label class="form-check-label" for="flexCheckIndeterminate">Data de Início
                                         <span><strong>*</strong></span></label>
                                     <input type="date" name="datainicio" class="form-control form-control-sm"
-                                        placeholder="" value="{{$cursos->utvcurso_data}}" required>
+                                        placeholder="" value="{{$cursos->utvcurso_data_inicio}}" required>
                                 </div>
                                 <div class="col-md-2">
                                     <label class="form-check-label" for="flexCheckIndeterminate">Data de Fim
@@ -231,4 +233,4 @@
 </div>
 -->
 
-@endsection
+@endsection 

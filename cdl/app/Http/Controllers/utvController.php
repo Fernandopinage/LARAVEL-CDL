@@ -83,7 +83,8 @@ class utvController extends Controller
         $UTV->utvcurso_desc = $request->detalhe;
         $UTV->utvcurso_hora = $request->horario;
         $UTV->utvcurso_dias = $request->dias;
-        $UTV->utvcurso_data = $request->periodo;
+        $UTV->utvcurso_data_inicio = $request->datainicio;
+        $UTV->utvcurso_data_final = $request->datafim;
         $UTV->utvcurso_valor_geral = $request->investimento;
         $UTV->utvcurso_valor_estudante = $request->estudantes;
         $UTV->utvcurso_informacoes = $request->informacoes;
@@ -180,6 +181,15 @@ class utvController extends Controller
     {
 
         return view('redefinir_curso');
+    }
+
+    public function ListarCursos(){
+
+        $cursos = DB::table('tbl_utvcurso')->get();
+        
+        //ddd($cursos);
+
+        return view('lista_curso_utv', compact('cursos'));
     }
 
     public function validarLogin(Request $request)

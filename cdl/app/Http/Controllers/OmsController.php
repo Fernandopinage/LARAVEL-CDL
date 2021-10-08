@@ -24,12 +24,13 @@ class OmsController extends Controller
             'password' => 'required'
         ]);
         */
-
         $oms =  Oms::where('oms_email', $request->email)->first();
+
+     
 
         if (!empty($oms)) {                                               //  caso tenha valor dentro da variavel empresa
 
-            if (Hash::check($request->password, $oms->oms_senha)) {
+            if (Hash::check($request->password, $oms->oms_senha) and $oms->oms_status == 'S') {
                 $id = $oms['oms_id'];
                 $request->session()->put('oms_id', $id);
                 $request->session()->put('oms_email', $request->email);
@@ -43,6 +44,7 @@ class OmsController extends Controller
 
             return redirect('login/militar')->with('erro', 'Email ou Senha incorretos!');   // caso não existe o email
         }
+       
     }
 
     public function home()
@@ -204,6 +206,15 @@ class OmsController extends Controller
         } else {
             return redirect('/alterar/senha/oms')->with('mensagem', 'Senhas estão erradas');
         }
+    }
+    public function deleteConta(request $request){
+
+        //dd($request->id);
+
+        $oms = Oms::find($request->id);
+        $oms->oms_status = 'N';
+        $oms->save();
+        return redirect('login/militar')->with('erro', 'Email ou Senha incorretos!');
     }
 
     public function login()
