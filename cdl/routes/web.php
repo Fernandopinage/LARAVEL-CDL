@@ -31,7 +31,7 @@ Route::get('/', [homeController::class, 'index']); // home do projeto
 Route::get('login/candidato', [CandidatoController::class, 'index']); // chamando tela de candidatos
 Route::get('busca/candidato', [CandidatoController::class, 'selectCandidato']); // chamando tela  busca candidato 
 Route::get('/add/candidato', [CandidatoController::class, 'formularioCandidato']); // chamando tela de formulario do candidato
-Route::post('/insert/candidato',[CandidatoController::class, 'store']);
+Route::post('/insert/candidato', [CandidatoController::class, 'store']);
 //});
 
 
@@ -89,24 +89,24 @@ Route::post('/modificar/senha/oms', [OmsController::class, 'modificarSenha']);
 //Route::middleware(['oms'])->group(function () {
 Route::get('login/utv', [utvController::class, 'index']);  // tela de acesso a utv
 Route::post('/validar/utv', [utvController::class, 'validarLogin']);
-Route::get('/edita/utv/{id}',[utvController::class, 'editaUtv']);
-Route::get('home/utv',[utvController::class, 'home']);
-Route::get('/atualizar/cursos/utv/',[utvController::class,'atualizarCurso']); // atualizando cursos
-Route::POST('/update/utv/{id}',[utvController::class, 'update']);
-Route::get('add/utv',[utvController::class, 'formularioUtv']);
-Route::get('/insert/utv/',[utvController::class, 'insertUTV']);
-Route::post('/insert/cursoutv',[utvController::class,'addCurso']);
-Route::get('/cursos/utv/',[utvController::class, 'cursosAdd']);
-Route::get('/alterar/senha/',[utvController::class,'atualizarSenha']);
-Route::get('/alterar/senha/utv/',[utvController::class,'updateSenha']);
-Route::get('/redefinir/senha/utv',[utvController::class, 'redefinirUtvCurso']);
-Route::get('/recuperar/senha/',[utvController::class, 'redefinirSenha']);
+Route::get('/edita/utv/{id}', [utvController::class, 'editaUtv']);
+Route::get('home/utv', [utvController::class, 'home']);
+Route::get('/atualizar/cursos/utv/', [utvController::class, 'atualizarCurso']); // atualizando cursos
+Route::POST('/update/utv/{id}', [utvController::class, 'update']);
+Route::get('add/utv', [utvController::class, 'formularioUtv']);
+Route::get('/insert/utv/', [utvController::class, 'insertUTV']);
+Route::post('/insert/cursoutv', [utvController::class, 'addCurso']);
+Route::get('/cursos/utv/', [utvController::class, 'cursosAdd']);
+Route::get('/alterar/senha/', [utvController::class, 'atualizarSenha']);
+Route::get('/alterar/senha/utv/', [utvController::class, 'updateSenha']);
+Route::get('/redefinir/senha/utv', [utvController::class, 'redefinirUtvCurso']);
+Route::get('/recuperar/senha/', [utvController::class, 'redefinirSenha']);
 Route::get('/redefinir/password/utv/{id}', function ($id) {
     return view('update_password_utv', ['id' => $id]);
-   echo $id;
+    echo $id;
 });
-Route::get('/recuperar/senha/utv/',[utvController::class, 'recuperarSenha']);
-Route::get('/buscar/candidato/utv/',[utvController::class,'buscarCandidato']);
+Route::get('/recuperar/senha/utv/', [utvController::class, 'recuperarSenha']);
+Route::get('/buscar/candidato/utv/', [utvController::class, 'buscarCandidato']);
 
 //}
 

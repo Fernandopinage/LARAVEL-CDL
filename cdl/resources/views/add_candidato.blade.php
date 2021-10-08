@@ -344,68 +344,181 @@
                 <span class="slider round"></span>
             </label>
         </div>
+
+        <div class="text">
+            <h2 class="form-signin-heading">Idiomas
+            </h2>
+            <hr>
+        </div>
+
+        <div class="endereco">
+            <div class="row g-3">
+                <div class="col-md-3">
+                    <label class="form-check-label" for="flexCheckIndeterminate">Escolha um idioma
+                        <span><strong>*</strong></span></label>
+                    <select class="form-select form-select-sm" name="periodo" aria-label="Default select example">
+                        <option selected></option>
+                        <option value="1">Inglês</option>
+                        <option value="2">Francês</option>
+                        <option value="3">Espanhol</option>
+                        <option value="outros">Outros</option>
+
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <label class="form-check-label" for="flexCheckIndeterminate">Escolha um idioma</label>
+                    <input type="text" name="outro" class="form-control form-control-sm">
+                </div>
+                <div class="col-md-2">
+                    <label class="form-check-label" for="flexCheckIndeterminate">Escrita</label>
+                    <div class="form-check ">
+                        <input class="form-check-input" type="radio" name="idioma_escrita" id="basico" value="option2">
+                        <label class="form-check-label" for="gridRadios1">
+                            Básico
+                        </label>
+                    </div>
+                    <div class="form-check ">
+                        <input class="form-check-input" type="radio" name="idioma_escrita" id="internediario"
+                            value="option3">
+                        <label class="form-check-label" for="gridRadios2">
+                            Intermediário
+                        </label>
+                    </div>
+                    <div class="form-check ">
+                        <input class="form-check-input" type="radio" name="idioma_escrita" id="avancado"
+                            value="option3">
+                        <label class="form-check-label" for="gridRadios2">
+                            Avançado
+                        </label>
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                    <label class="form-check-label" for="flexCheckIndeterminate">Leitura</label>
+                    <div class="form-check ">
+                        <input class="form-check-input" type="radio" name="idioma_leitura" id="basico" value="option2">
+                        <label class="form-check-label" for="gridRadios1">
+                            Básico
+                        </label>
+                    </div>
+                    <div class="form-check ">
+                        <input class="form-check-input" type="radio" name="idioma_leitura" id="internediario"
+                            value="option3">
+                        <label class="form-check-label" for="gridRadios2">
+                            Intermediário
+                        </label>
+                    </div>
+                    <div class="form-check ">
+                        <input class="form-check-input" type="radio" name="idioma_leitura" id="avancado"
+                            value="option3">
+                        <label class="form-check-label" for="gridRadios2">
+                            Avançado
+                        </label>
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                    <label class="form-check-label" for="flexCheckIndeterminate">Conversação</label>
+                    <div class="form-check ">
+                        <input class="form-check-input" type="radio" name="idioma_leitura" id="basico" value="option2">
+                        <label class="form-check-label" for="gridRadios1">
+                            Básico
+                        </label>
+                    </div>
+                    <div class="form-check ">
+                        <input class="form-check-input" type="radio" name="idioma_leitura" id="internediario"
+                            value="option3">
+                        <label class="form-check-label" for="gridRadios2">
+                            Intermediário
+                        </label>
+                    </div>
+                    <div class="form-check ">
+                        <input class="form-check-input" type="radio" name="idioma_leitura" id="avancado"
+                            value="option3">
+                        <label class="form-check-label" for="gridRadios2">
+                            Avançado
+                        </label>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <div class="form-signin">
+        <div class="text-end">
+            <label class="switch">
+                <input type="checkbox" checked>
+                <span class="slider round"></span>
+            </label>
+        </div>
         <div class="row g-3">
             <div class="text">
                 <h2 class="form-signin-heading">Experiência profissional</h2>
                 <hr>
             </div>
 
-           
 
 
-                <div class="col-md-12">
-                    <div>
 
-                        <label class="form-check-label" for="flexCheckIndeterminate">Primeiro emprego? </label>
-                    </div>
-                    <div class="form-check-inline">
-                        <input class="form-check-input" type="radio" name="area_profissional" value="sim" id="area_profissional_sim" onclick="profissional('sim')">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            Sim
-                        </label>
-                    </div>
-                    <div class="form-check-inline">
-                        <input class="form-check-input" type="radio" name="area_profissional" value="não" id="area_profissional_nao" onclick="profissional('não')">
-                        <label class="form-check-label" for="flexRadioDefault2">
-                            Não
-                        </label>
-                    </div>
+            <div class="col-md-12">
+                <div>
 
+                    <label class="form-check-label" for="flexCheckIndeterminate">Primeiro emprego? </label>
+                </div>
+                <div class="form-check-inline">
+                    <input class="form-check-input" type="radio" name="area_profissional" value="sim"
+                        id="area_profissional_sim" onclick="profissional('sim')">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        Sim
+                    </label>
+                </div>
+                <div class="form-check-inline">
+                    <input class="form-check-input" type="radio" name="area_profissional" value="não"
+                        id="area_profissional_nao" onclick="profissional('não')">
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        Não
+                    </label>
                 </div>
 
-                <div class="col-md-6" id="01">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Nome da empresa </label>
-                    <input type="text" class="form-control form-control-sm" placeholder="">
-                </div>
+            </div>
 
-                <div class="col-md-5" id="02">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Cargo </label>
-                    <input type="text" class="form-control form-control-sm" placeholder="">
-                </div>
+            <div class="col-md-6" id="01">
+                <label class="form-check-label" for="flexCheckIndeterminate">Nome da empresa </label>
+                <input type="text" class="form-control form-control-sm" placeholder="">
+            </div>
 
-                <div class="col-md-2" style="margin-top: 50px;" id="03">
-                    <input class="form-check-input" type="checkbox">
-                    <label class="form-check-label" for="inlineCheckbox1">Empresa atual</label>
-                </div>
-                <div class="col-md-4" id="04">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Data de Admissão </label>
-                    <input type="month" class="form-control form-control-sm" placeholder="">
-                </div>
+            <div class="col-md-5" id="02">
+                <label class="form-check-label" for="flexCheckIndeterminate">Cargo </label>
+                <input type="text" class="form-control form-control-sm" placeholder="">
+            </div>
 
-                <div class="col-md-4" id="05">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Data de termino </label>
-                    <input type="month" class="form-control form-control-sm" placeholder="">
-                </div>
-                <div class="col-md-2" id="06">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Salário</label>
-                    <input type="text" class="form-control form-control-sm" placeholder="">
-                </div>
-                <div class="col-md-5" id="07">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Softwares utilizava</label>
-                    <input type="text" class="form-control form-control-sm" placeholder="">
-                </div>
+            <div class="col-md-2" style="margin-top: 50px;" id="03">
+                <input class="form-check-input" type="checkbox">
+                <label class="form-check-label" for="inlineCheckbox1">Empresa atual</label>
+            </div>
+            <div class="col-md-4" id="04">
+                <label class="form-check-label" for="flexCheckIndeterminate">Data de Admissão </label>
+                <input type="month" class="form-control form-control-sm" placeholder="">
+            </div>
 
-          
+            <div class="col-md-4" id="05">
+                <label class="form-check-label" for="flexCheckIndeterminate">Data de termino </label>
+                <input type="month" class="form-control form-control-sm" placeholder="">
+            </div>
+            <div class="col-md-2" id="06">
+                <label class="form-check-label" for="flexCheckIndeterminate">Salário</label>
+                <input type="text" class="form-control form-control-sm" placeholder="">
+            </div>
+            <div class="col-md-5" id="07">
+                <label class="form-check-label" for="flexCheckIndeterminate">Softwares utilizava</label>
+                <input type="text" class="form-control form-control-sm" placeholder="">
+            </div>
+
+
         </div>
 
     </div>

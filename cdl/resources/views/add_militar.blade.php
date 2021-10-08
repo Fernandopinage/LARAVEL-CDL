@@ -42,11 +42,11 @@
                 </div>
                 <div class="col-md-4">
                     <label class="form-check-label" for="flexCheckIndeterminate">Senha  <span><strong>*</strong></span></label>
-                    <input type="password" class="form-control form-control-sm" name="senha" placeholder="" value="{{old('senha')}}" required>
+                    <input type="password" class="form-control form-control-sm" name="senha" minlength="6" maxlength="12" placeholder="" value="{{old('senha')}}" required>
                 </div>
                 <div class="col-md-4">
                     <label class="form-check-label" for="flexCheckIndeterminate">Confirma Senha  <span><strong>*</strong></span></label>
-                    <input type="password" class="form-control form-control-sm" name="confirma" placeholder="" value="{{old('senha')}}" required>
+                    <input type="password" class="form-control form-control-sm" name="confirma" minlength="6" maxlength="12" placeholder="" value="{{old('senha')}}" required>
                 </div>
                 <div class="col-md-4">
                     <label class="form-check-label" for="flexCheckIndeterminate">Contato Técnico  <span><strong>*</strong></span></label>

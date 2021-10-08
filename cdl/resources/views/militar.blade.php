@@ -19,9 +19,11 @@
         <div class="col">
             <a class="nav-link" href="{{'/oms/redefinir'}}">Esqueci minha senha</a>
         </div>
+        <!--
         <div class="col">
             <a class="nav-link" href="{{('/add/oms/')}}">Criar uma conta</a>
         </div>
+        -->
     </div>
 
     <div class="d-grid gap-2">
