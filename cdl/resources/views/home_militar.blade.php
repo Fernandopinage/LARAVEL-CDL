@@ -103,15 +103,15 @@
 <div class="container" id="curso">
     @for($i = 0; $i < 3; $i++)
     
-    <div class=" d-inline-block" style="margin-top: 20px;">
+    <div class="d-inline-block" style="margin-top: 20px;" >
 
         <div class="row">
             <div class="col-sm-3">
                 <div class="card">
                     <div class="card-body">
                         <h1>
-                            <span style="color: #157347; margin-right:132px"><img src="/img/curso_de_ingles_imd.png"
-                                    height="450px" width="350px" class="img-thumbnail" alt="..."></span><span
+                            <span style="color: #157347; margin-right:132px"><a href="" target="_blank"><img src="/img/curso_de_ingles_imd.png"
+                                height="600px" width="600px" class="img-thumbnail" alt="..." ></a></span><span
                                 style="color: #696969;"></span>
                         </h1>
                     </div>
