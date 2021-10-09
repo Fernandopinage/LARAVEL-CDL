@@ -365,11 +365,11 @@
 
                     </select>
                 </div>
-                <div class="col-md-3">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Escolha um idioma</label>
+                <div class="col-md-3" class="div_outro">
+                    <label class="form-check-label" for="flexCheckIndeterminate">Digite outro idioma</label>
                     <input type="text" name="outro" class="form-control form-control-sm">
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-2" class="div_encrita">
                     <label class="form-check-label" for="flexCheckIndeterminate">Escrita</label>
                     <div class="form-check ">
                         <input class="form-check-input" type="radio" name="idioma_escrita" id="basico" value="option2">
@@ -393,7 +393,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-2">
+                <div class="col-md-2" class="div_leitura">
                     <label class="form-check-label" for="flexCheckIndeterminate">Leitura</label>
                     <div class="form-check ">
                         <input class="form-check-input" type="radio" name="idioma_leitura" id="basico" value="option2">
@@ -417,7 +417,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-2">
+                <div class="col-md-2" class="div_conversa">
                     <label class="form-check-label" for="flexCheckIndeterminate">Conversação</label>
                     <div class="form-check ">
                         <input class="form-check-input" type="radio" name="idioma_leitura" id="basico" value="option2">
