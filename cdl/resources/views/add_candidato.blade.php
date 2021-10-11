@@ -245,86 +245,106 @@
                 <span class="slider round"></span>
             </label>
         </div>
-        <div class="row g-3">
-            <div class="text">
-                <h2 class="form-signin-heading">Formação Acadêmica</h2>
-                <hr>
-            </div>
-            <div class="col-md-4">
-                <label class="form-check-label" for="flexCheckIndeterminate">Formação
-                    <span><strong>*</strong></span></label>
-                <select class="form-select form-select-sm" name="formacao" id="formacao"
-                    aria-label="Default select example" required>
-                    <option value="null" selected></option>
-                    <option value="Ensino Fundamental completo">Ensino Fundamental completo</option>
-                    <option value="Ensino Fundamental incompleto">Ensino Fundamental incompleto</option>
-                    <option value="Ensino Medio completo">Ensino Médio completo</option>
-                    <option value="Ensino Medio cursando">Ensino Médio cursando</option>
-                    <option value="Ensino Tecnico cursando">Ensino Técnico cursando</option>
-                    <option value="Ensino Técnico completo">Ensino Técnico completo</option>
-                    <option value="Superior Cursando">Superior Cursando</option>
-                    <option value="Superior Completo">Superior Completo</option>
-                    <option value="Pos-Graduacao Cursando">Pós-Graduação Cursando</option>
-                    <option value="Pos-Graduacao Completo">Pós-Graduação Completo</option>
-                </select>
-            </div>
-            <div class="col-md-3" id="institucao_div">
-                <label class="form-check-label" for="flexCheckIndeterminate">Instituição de Ensino </label>
-                <input type="text" class="form-control form-control-sm" name="instituicao" placeholder="">
-            </div>
-            <div class="col-md-3" id="curso_div">
-                <label class="form-check-label" for="flexCheckIndeterminate">Nome do curso </label>
-                <input type="text" class="form-control form-control-sm" name="curso" placeholder="">
-            </div>
-            <div class="col-md-2" id="termino_div">
-                <label class="form-check-label" for="flexCheckIndeterminate">Ano de termino </label>
-                <input type="month" class="form-control form-select-sm" name="termino" placeholder="">
-            </div>
-            <div class="col-md-2" id="semestre_div">
-                <label class="form-check-label" for="flexCheckIndeterminate">Semestre em Curso </label>
-                <select class="form-select form-select-sm" name="semestre" aria-label="Default select example">
-                    <option selected></option>
-                    <option value="1">1º Semestre</option>
-                    <option value="2">2º Semestre</option>
 
-                </select>
-            </div>
-            <div class="col-md-3" id="periodo_div">
-                <label class="form-check-label" for="flexCheckIndeterminate">Período em Curso </label>
-                <select class="form-select form-select-sm" name="periodo" aria-label="Default select example">
-                    <option selected></option>
-                    <option value="1">1º Período</option>
-                    <option value="2">2º Período</option>
-                    <option value="3">3º Período</option>
-                    <option value="4">4º Período</option>
-                    <option value="5">5º Período</option>
-                    <option value="6">6º Período</option>
-                    <option value="7">7º Período</option>
-                    <option value="8">8º Período</option>
-                    <option value="9">Ou Mais</option>
+        <div class="text">
+            <h2 class="form-signin-heading">Formação Acadêmica</h2>
+            <hr>
+        </div>
+        <div class="col-md-4">
+            <label class="form-check-label" for="flexCheckIndeterminate">Formação
+                <span><strong>*</strong></span></label>
+            <select class="form-select form-select-sm" name="formacao" id="formacao" aria-label="Default select example"
+                required>
+                <option value="null" selected></option>
+                <option value="Ensino Fundamental completo">Ensino Fundamental completo</option>
+                <option value="Ensino Fundamental incompleto">Ensino Fundamental incompleto</option>
+                <option value="Ensino Medio completo">Ensino Médio completo</option>
+                <option value="Ensino Medio cursando">Ensino Médio cursando</option>
+                <option value="Ensino Tecnico cursando">Ensino Técnico cursando</option>
+                <option value="Ensino Técnico completo">Ensino Técnico completo</option>
+                <option value="Superior Cursando">Superior Cursando</option>
+                <option value="Superior Completo">Superior Completo</option>
+                <option value="Pos-Graduacao Cursando">Pós-Graduação Cursando</option>
+                <option value="Pos-Graduacao Completo">Pós-Graduação Completo</option>
+            </select>
+        </div>
+        <div class="col-md-3" id="institucao_div">
+            <label class="form-check-label" for="flexCheckIndeterminate">Instituição de Ensino </label>
+            <input type="text" class="form-control form-control-sm" name="instituicao" placeholder="">
+        </div>
+        <div class="col-md-3" id="curso_div">
+            <label class="form-check-label" for="flexCheckIndeterminate">Nome do curso </label>
+            <input type="text" class="form-control form-control-sm" name="curso" placeholder="">
+        </div>
+        <div class="col-md-2" id="termino_div">
+            <label class="form-check-label" for="flexCheckIndeterminate">Ano de termino </label>
+            <input type="month" class="form-control form-select-sm" name="termino" placeholder="">
+        </div>
+        <div class="col-md-2" id="semestre_div">
+            <label class="form-check-label" for="flexCheckIndeterminate">Semestre em Curso </label>
+            <select class="form-select form-select-sm" name="semestre" aria-label="Default select example">
+                <option selected></option>
+                <option value="1">1º Semestre</option>
+                <option value="2">2º Semestre</option>
 
-                </select>
-            </div>
+            </select>
+        </div>
+        <div class="col-md-3" id="periodo_div">
+            <label class="form-check-label" for="flexCheckIndeterminate">Período em Curso </label>
+            <select class="form-select form-select-sm" name="periodo" aria-label="Default select example">
+                <option selected></option>
+                <option value="1">1º Período</option>
+                <option value="2">2º Período</option>
+                <option value="3">3º Período</option>
+                <option value="4">4º Período</option>
+                <option value="5">5º Período</option>
+                <option value="6">6º Período</option>
+                <option value="7">7º Período</option>
+                <option value="8">8º Período</option>
+                <option value="9">Ou Mais</option>
 
-
-            <div style="padding-top: 50px">
-
-                <h4 style="position:absolute;margin-top:15px;color: #284D92;">Curso Extracurriculares
-                </h4>
-                <div class="text-end" style="padding-top: 10px">
-                    <input type="button" class="btn btn-success btn-sm" onclick="addCampos()" value="Adicionar Curso">
-                </div>
-                <hr>
-
-            </div>
-            
-            <!-- div responsavel por adicionar outros campo -->
-            <div id="lista" style="padding: 30px 0px 30px 0px"> </div>
-            <!-- ****************************************** -->
+            </select>
         </div>
 
 
-        
+        <div style="padding-top: 50px">
+
+            <h4 style="position:absolute;margin-top:15px;color: #284D92;">Curso Extracurriculares
+            </h4>
+            <div class="text-end" style="padding-top: 10px">
+                <input type="button" class="btn btn-success btn-sm" onclick="addCampos()" value="Adicionar Curso">
+            </div>
+            <hr>
+
+        </div>
+        <div class="row g-3 shadow p-4 mb-5 bg-body rounded" style="margin:0px 20px 0px 20px; padding:20px;">
+
+            <div class="col-md-4">
+                <label class="form-check-label" for="flexCheckIndeterminate">Cursos extracurriculares</label>
+                <input type="text" class="form-control form-control-sm" name="curso_extra[]" placeholder="">
+            </div>
+            <div class="col-md-2">
+                <label class="form-check-label" for="flexCheckIndeterminate">Ano termino</label>
+                <input type="month" class="form-control form-control-sm" name="curso_ano_termino[]" placeholder="">
+            </div>
+            <div class="col-md-4">
+                <label class="form-check-label" for="flexCheckIndeterminate">Aréa de Atuação</label>
+                <select class="form-select form-select-sm" name="curso_area_atuacao[]" id="areaatuacao">
+                    <option selected value="0"></option>
+                </select>
+            </div>
+
+
+
+        </div>
+
+        <!-- div responsavel por adicionar outros campo -->
+        <div id="lista" style="padding: 30px 0px 30px 0px"> </div>
+        <!-- ****************************************** -->
+
+
+
+
         <div style="padding-top: 50px">
 
             <h4 style="position:absolute;margin-top:15px;color: #284D92;">Curso UTV
