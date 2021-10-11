@@ -257,7 +257,7 @@
     if(document.getElementById('formacao').value  === 'Superior Cursando'){
   
     $('#curso_div').show();
-    $('#termino_div').show();
+    $('#termino_div').hide();
     $('#semestre_div').hide();
     $('#periodo_div').show();
     $('#institucao_div').show();

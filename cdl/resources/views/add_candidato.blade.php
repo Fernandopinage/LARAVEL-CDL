@@ -250,60 +250,63 @@
             <h2 class="form-signin-heading">Formação Acadêmica</h2>
             <hr>
         </div>
-        <div class="col-md-4">
-            <label class="form-check-label" for="flexCheckIndeterminate">Formação
-                <span><strong>*</strong></span></label>
-            <select class="form-select form-select-sm" name="formacao" id="formacao" aria-label="Default select example"
-                required>
-                <option value="null" selected></option>
-                <option value="Ensino Fundamental completo">Ensino Fundamental completo</option>
-                <option value="Ensino Fundamental incompleto">Ensino Fundamental incompleto</option>
-                <option value="Ensino Medio completo">Ensino Médio completo</option>
-                <option value="Ensino Medio cursando">Ensino Médio cursando</option>
-                <option value="Ensino Tecnico cursando">Ensino Técnico cursando</option>
-                <option value="Ensino Técnico completo">Ensino Técnico completo</option>
-                <option value="Superior Cursando">Superior Cursando</option>
-                <option value="Superior Completo">Superior Completo</option>
-                <option value="Pos-Graduacao Cursando">Pós-Graduação Cursando</option>
-                <option value="Pos-Graduacao Completo">Pós-Graduação Completo</option>
-            </select>
-        </div>
-        <div class="col-md-3" id="institucao_div">
-            <label class="form-check-label" for="flexCheckIndeterminate">Instituição de Ensino </label>
-            <input type="text" class="form-control form-control-sm" name="instituicao" placeholder="">
-        </div>
-        <div class="col-md-3" id="curso_div">
-            <label class="form-check-label" for="flexCheckIndeterminate">Nome do curso </label>
-            <input type="text" class="form-control form-control-sm" name="curso" placeholder="">
-        </div>
-        <div class="col-md-2" id="termino_div">
-            <label class="form-check-label" for="flexCheckIndeterminate">Ano de termino </label>
-            <input type="month" class="form-control form-select-sm" name="termino" placeholder="">
-        </div>
-        <div class="col-md-2" id="semestre_div">
-            <label class="form-check-label" for="flexCheckIndeterminate">Semestre em Curso </label>
-            <select class="form-select form-select-sm" name="semestre" aria-label="Default select example">
-                <option selected></option>
-                <option value="1">1º Semestre</option>
-                <option value="2">2º Semestre</option>
 
-            </select>
-        </div>
-        <div class="col-md-3" id="periodo_div">
-            <label class="form-check-label" for="flexCheckIndeterminate">Período em Curso </label>
-            <select class="form-select form-select-sm" name="periodo" aria-label="Default select example">
-                <option selected></option>
-                <option value="1">1º Período</option>
-                <option value="2">2º Período</option>
-                <option value="3">3º Período</option>
-                <option value="4">4º Período</option>
-                <option value="5">5º Período</option>
-                <option value="6">6º Período</option>
-                <option value="7">7º Período</option>
-                <option value="8">8º Período</option>
-                <option value="9">Ou Mais</option>
+        <div class="row g-3">
+            <div class="col-md-4">
+                <label class="form-check-label" for="flexCheckIndeterminate">Formação
+                    <span><strong>*</strong></span></label>
+                <select class="form-select form-select-sm" name="formacao" id="formacao"
+                    aria-label="Default select example" required>
+                    <option value="null" selected></option>
+                    <option value="Ensino Fundamental completo">Ensino Fundamental completo</option>
+                    <option value="Ensino Fundamental incompleto">Ensino Fundamental incompleto</option>
+                    <option value="Ensino Medio completo">Ensino Médio completo</option>
+                    <option value="Ensino Medio cursando">Ensino Médio cursando</option>
+                    <option value="Ensino Tecnico cursando">Ensino Técnico cursando</option>
+                    <option value="Ensino Técnico completo">Ensino Técnico completo</option>
+                    <option value="Superior Cursando">Superior Cursando</option>
+                    <option value="Superior Completo">Superior Completo</option>
+                    <option value="Pos-Graduacao Cursando">Pós-Graduação Cursando</option>
+                    <option value="Pos-Graduacao Completo">Pós-Graduação Completo</option>
+                </select>
+            </div>
+            <div class="col-md-3" id="institucao_div">
+                <label class="form-check-label" for="flexCheckIndeterminate">Instituição de Ensino </label>
+                <input type="text" class="form-control form-control-sm" name="instituicao" placeholder="">
+            </div>
+            <div class="col-md-3" id="curso_div">
+                <label class="form-check-label" for="flexCheckIndeterminate">Nome do curso </label>
+                <input type="text" class="form-control form-control-sm" name="curso" placeholder="">
+            </div>
+            <div class="col-md-2" id="termino_div">
+                <label class="form-check-label" for="flexCheckIndeterminate">Ano em Curso</label>
+                <input type="month" class="form-control form-select-sm" name="termino" placeholder="">
+            </div>
+            <div class="col-md-2" id="semestre_div">
+                <label class="form-check-label" for="flexCheckIndeterminate">Semestre em Curso </label>
+                <select class="form-select form-select-sm" name="semestre" aria-label="Default select example">
+                    <option selected></option>
+                    <option value="1">1º Semestre</option>
+                    <option value="2">2º Semestre</option>
 
-            </select>
+                </select>
+            </div>
+            <div class="col-md-3" id="periodo_div">
+                <label class="form-check-label" for="flexCheckIndeterminate">Período em Curso </label>
+                <select class="form-select form-select-sm" name="periodo" aria-label="Default select example">
+                    <option selected></option>
+                    <option value="1">1º Período</option>
+                    <option value="2">2º Período</option>
+                    <option value="3">3º Período</option>
+                    <option value="4">4º Período</option>
+                    <option value="5">5º Período</option>
+                    <option value="6">6º Período</option>
+                    <option value="7">7º Período</option>
+                    <option value="8">8º Período</option>
+                    <option value="9">Ou Mais</option>
+
+                </select>
+            </div>
         </div>
 
 
@@ -883,12 +886,15 @@
 <script>
     var cont =1;
     function addIdioma(){
-     
+
+        if(document.getElementById('idioma').value != ''){
+
         var div = document.createElement('div');
         div.innerHTML = '<div class="row g-3 shadow p-3 mb-5 bg-body rounded" id="divUTv'+cont+'" style="margin:0px 20px 0px 20px; padding:20px;"> <div class="text-end"> <input type="button" class="btn btn-danger btn-sm" onclick="removeCamposUTv('+cont+')" value="Remover Curso"></div> <div class="col-md-3">   <label class="form-check-label" for="flexCheckIndeterminate">Escolha um idioma  <span><strong>*</strong></span></label><select class="form-select form-select-sm" name="idioma[]" id="idioma"   aria-label="Default select example">  <option selected></option>        <option value="Inglês">Inglês</option>  <option value="Francês">Francês</option>  <option value="Espanhol">Espanhol</option>  </select></div> <div class="col-md-2" id="div_encrita"> <label class="form-check-label" for="flexCheckIndeterminate">Escrita</label>  <div class="form-check ">  <input class="form-check-input" type="radio" name="idioma_escrita[]" id="idioma_escrita_basico" value="option2"> <label class="form-check-label" for="idioma_escrita_basico"> Básico </label>  </div>   <div class="form-check ">  <input class="form-check-input" type="radio" name="idioma_escrita[]"  id="idioma_escrita_internediario" value="option3"> <label class="form-check-label" for="idioma_escrita_internediario">  Intermediário  </label> </div> <div class="form-check "> <input class="form-check-input" type="radio" name="idioma_escrita[]"  id="idioma_escrita_avancado" value="option3"> <label class="form-check-label" for="idioma_escrita_avancado"> Avançado</label> </div> </div> <div class="col-md-2" id="div_leitura"> <label class="form-check-label" for="flexCheckIndeterminate">Leitura</label> <div class="form-check ">  <input class="form-check-input" type="radio" name="idioma_leitura[]" id="idioma_leitura_basico" value="option2"><label class="form-check-label" for="idioma_leitura_basico"> Básico </label> </div> <div class="form-check "><input class="form-check-input" type="radio" name="idioma_leitura[]" id="idioma_leitura_internediario" value="option3"><label class="form-check-label" for="idioma_leitura_internediario"> Intermediário  </label> </div> <div class="form-check "> <input class="form-check-input" type="radio" name="idioma_leitura[]" id="idioma_leitura_avancado" value="option3"><label class="form-check-label" for="idioma_leitura_avancado">  Avançado </label> </div>  </div> <div class="col-md-2" id="div_conversa"> <label class="form-check-label" for="flexCheckIndeterminate">Conversação</label><div class="form-check "> <input class="form-check-input" type="radio" name="idioma_conversacao[]" id="idioma_conversacao_basico" value="option2"> <label class="form-check-label" for="idioma_conversacao_basico">   Básico   </label>   </div> <div class="form-check "><input class="form-check-input" type="radio" name="idioma_conversacao[]" id="idioma_conversacao_internediario" value="option3"> <label class="form-check-label" for="idioma_conversacao_internediario">  Intermediário  </label>   </div>  <div class="form-check ">  <input class="form-check-input" type="radio" name="idioma_conversacao[]"id="idioma_conversacao_avancado" value="option3"><label class="form-check-label" for="idioma_conversacao_avancado">  Avançado  </label>   </div> </div>';
                  document.getElementById('listaIdioma').appendChild(div)
         cont++;
-
+        
+        }
     }
 
     function removeCamposUTv(id){
