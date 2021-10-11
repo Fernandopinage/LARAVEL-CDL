@@ -541,13 +541,13 @@
 
             </div>
 
-            <div  class="row g-3 shadow p-3 mb-5 bg-body rounded" id="00" style="margin: 20px">
+            <div  class="row g-3 shadow p-3 mb-5 bg-body rounded" id="00" style="margin: 10px">
                 <div class="col-md-6" id="01">
                     <label class="form-check-label" for="flexCheckIndeterminate">Nome da empresa </label>
                     <input type="text" class="form-control form-control-sm" placeholder="">
                 </div>
 
-                <div class="col-md-5" id="02">
+                <div class="col-md-4" id="02">
                     <label class="form-check-label" for="flexCheckIndeterminate">Cargo </label>
                     <input type="text" class="form-control form-control-sm" placeholder="">
                 </div>
@@ -556,12 +556,12 @@
                     <input class="form-check-input" type="checkbox">
                     <label class="form-check-label" for="inlineCheckbox1">Empresa atual</label>
                 </div>
-                <div class="col-md-4" id="04">
+                <div class="col-md-2" id="04">
                     <label class="form-check-label" for="flexCheckIndeterminate">Data de Admissão </label>
                     <input type="month" class="form-control form-control-sm" placeholder="">
                 </div>
 
-                <div class="col-md-4" id="05">
+                <div class="col-md-2" id="05">
                     <label class="form-check-label" for="flexCheckIndeterminate">Data de termino </label>
                     <input type="month" class="form-control form-control-sm" placeholder="">
                 </div>
@@ -569,7 +569,7 @@
                     <label class="form-check-label" for="flexCheckIndeterminate">Salário</label>
                     <input type="text" class="form-control form-control-sm" placeholder="">
                 </div>
-                <div class="col-md-5" id="07">
+                <div class="col-md-3" id="07">
                     <label class="form-check-label" for="flexCheckIndeterminate">Softwares utilizava</label>
                     <input type="text" class="form-control form-control-sm" placeholder="">
                 </div>
