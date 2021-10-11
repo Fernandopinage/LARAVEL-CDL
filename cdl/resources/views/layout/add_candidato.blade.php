@@ -122,6 +122,7 @@
 
 
   if(id === 'sim'){
+   
       document.getElementById('01').style.display = 'none'
       document.getElementById('02').style.display = 'none'
       document.getElementById('03').style.display = 'none'
@@ -130,6 +131,7 @@
       document.getElementById('06').style.display = 'none'
       document.getElementById('07').style.display = 'none'
   }else{
+    
     document.getElementById('01').style.display = 'block'
     document.getElementById('02').style.display = 'block'
     document.getElementById('03').style.display = 'block'
