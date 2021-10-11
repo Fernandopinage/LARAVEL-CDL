@@ -317,11 +317,10 @@
                 <hr>
 
             </div>
+            <!-- div responsavel por adicionar outros campo -->
+            <div id="lista" style="padding: 30px 0px 30px 0px"> </div>
+            <!-- ****************************************** -->
         </div>
-        <!-- div responsavel por adicionar outros campo -->
-        <div id="lista" style="padding: 30px 0px 30px 0px"> </div>
-        <!-- ****************************************** -->
-
         <div style="padding-top: 50px">
 
             <h4 style="position:absolute;margin-top:15px;color: #284D92;">Curso UTV
@@ -346,106 +345,116 @@
         </div>
 
         <div class="text">
-            <h2 class="form-signin-heading">Idiomas
+            <h2 class="form-signin-heading" style="padding-top: 50px; position: absolute;">Idiomas
             </h2>
+            <div class="text-end" style="padding-top: 50px; position: relative; margin-right:10px">
+                <input type="button" class="btn btn-success btn-sm" onclick="addIdioma()" value="Adicionar Idioma">
+            </div>
             <hr>
         </div>
 
+
         <div class="endereco">
-            <div class="row g-3">
+            <div class="row g-3 shadow p-3 mb-5 bg-body rounded" style="margin: 20px">
+
                 <div class="col-md-3">
                     <label class="form-check-label" for="flexCheckIndeterminate">Escolha um idioma
                         <span><strong>*</strong></span></label>
-                    <select class="form-select form-select-sm" name="periodo" aria-label="Default select example">
+                    <select class="form-select form-select-sm" name="idioma[]" id="idioma"
+                        aria-label="Default select example">
                         <option selected></option>
-                        <option value="1">Inglês</option>
-                        <option value="2">Francês</option>
-                        <option value="3">Espanhol</option>
-                        <option value="outros">Outros</option>
+                        <option value="Inglês">Inglês</option>
+                        <option value="Francês">Francês</option>
+                        <option value="Espanhol">Espanhol</option>
+                        <option value="Outros">Outros</option>
 
                     </select>
                 </div>
-                <div class="col-md-3" class="div_outro">
+                <div class="col-md-3" id="div_outro">
                     <label class="form-check-label" for="flexCheckIndeterminate">Digite outro idioma</label>
-                    <input type="text" name="outro" class="form-control form-control-sm">
+                    <input type="text" name="outro_idioma[]" id="outro_idioma" class="form-control form-control-sm">
                 </div>
-                <div class="col-md-2" class="div_encrita">
+                <div class="col-md-2" id="div_encrita">
                     <label class="form-check-label" for="flexCheckIndeterminate">Escrita</label>
                     <div class="form-check ">
-                        <input class="form-check-input" type="radio" name="idioma_escrita" id="basico" value="option2">
-                        <label class="form-check-label" for="gridRadios1">
+                        <input class="form-check-input" type="radio" name="idioma_escrita[]" id="idioma_escrita_basico"
+                            value="option2">
+                        <label class="form-check-label" for="idioma_escrita_basico">
                             Básico
                         </label>
                     </div>
                     <div class="form-check ">
-                        <input class="form-check-input" type="radio" name="idioma_escrita" id="internediario"
-                            value="option3">
-                        <label class="form-check-label" for="gridRadios2">
+                        <input class="form-check-input" type="radio" name="idioma_escrita[]"
+                            id="idioma_escrita_internediario" value="option3">
+                        <label class="form-check-label" for="idioma_escrita_internediario">
                             Intermediário
                         </label>
                     </div>
                     <div class="form-check ">
-                        <input class="form-check-input" type="radio" name="idioma_escrita" id="avancado"
-                            value="option3">
-                        <label class="form-check-label" for="gridRadios2">
+                        <input class="form-check-input" type="radio" name="idioma_escrita[]"
+                            id="idioma_escrita_avancado" value="option3">
+                        <label class="form-check-label" for="idioma_escrita_avancado">
                             Avançado
                         </label>
                     </div>
                 </div>
 
-                <div class="col-md-2" class="div_leitura">
+                <div class="col-md-2" id="div_leitura">
                     <label class="form-check-label" for="flexCheckIndeterminate">Leitura</label>
                     <div class="form-check ">
-                        <input class="form-check-input" type="radio" name="idioma_leitura" id="basico" value="option2">
-                        <label class="form-check-label" for="gridRadios1">
+                        <input class="form-check-input" type="radio" name="idioma_leitura[]" id="idioma_leitura_basico"
+                            value="option2">
+                        <label class="form-check-label" for="idioma_leitura_basico">
                             Básico
                         </label>
                     </div>
                     <div class="form-check ">
-                        <input class="form-check-input" type="radio" name="idioma_leitura" id="internediario"
-                            value="option3">
-                        <label class="form-check-label" for="gridRadios2">
+                        <input class="form-check-input" type="radio" name="idioma_leitura[]"
+                            id="idioma_leitura_internediario" value="option3">
+                        <label class="form-check-label" for="idioma_leitura_internediario">
                             Intermediário
                         </label>
                     </div>
                     <div class="form-check ">
-                        <input class="form-check-input" type="radio" name="idioma_leitura" id="avancado"
-                            value="option3">
-                        <label class="form-check-label" for="gridRadios2">
+                        <input class="form-check-input" type="radio" name="idioma_leitura[]"
+                            id="idioma_leitura_avancado" value="option3">
+                        <label class="form-check-label" for="idioma_leitura_avancado">
                             Avançado
                         </label>
                     </div>
                 </div>
 
-                <div class="col-md-2" class="div_conversa">
+                <div class="col-md-2" id="div_conversa">
                     <label class="form-check-label" for="flexCheckIndeterminate">Conversação</label>
                     <div class="form-check ">
-                        <input class="form-check-input" type="radio" name="idioma_leitura" id="basico" value="option2">
-                        <label class="form-check-label" for="gridRadios1">
+                        <input class="form-check-input" type="radio" name="idioma_conversacao[]"
+                            id="idioma_conversacao_basico" value="option2">
+                        <label class="form-check-label" for="idioma_conversacao_basico">
                             Básico
                         </label>
                     </div>
                     <div class="form-check ">
-                        <input class="form-check-input" type="radio" name="idioma_leitura" id="internediario"
-                            value="option3">
-                        <label class="form-check-label" for="gridRadios2">
+                        <input class="form-check-input" type="radio" name="idioma_conversacao[]"
+                            id="idioma_conversacao_internediario" value="option3">
+                        <label class="form-check-label" for="idioma_conversacao_internediario">
                             Intermediário
                         </label>
                     </div>
                     <div class="form-check ">
-                        <input class="form-check-input" type="radio" name="idioma_leitura" id="avancado"
-                            value="option3">
-                        <label class="form-check-label" for="gridRadios2">
+                        <input class="form-check-input" type="radio" name="idioma_conversacao[]"
+                            id="idioma_conversacao_avancado" value="option3">
+                        <label class="form-check-label" for="idioma_conversacao_avancado">
                             Avançado
                         </label>
                     </div>
                 </div>
-
             </div>
 
+                    <!-- div responsavel por adicionar outros campo -->
+        <div id="listaIdioma" style="padding: 30px 0px 30px 0px"> </div>
+        <!-- ****************************************** -->
+
         </div>
-
-
     </div>
 
     <div class="form-signin">
@@ -581,47 +590,55 @@
                 mercado de trabalho e empresas interessadas em contratar colaboradores ou ofertar vagas de
                 emprego.</p>
             <p><b>2. POLÍTICA DE PRIVACIDADE</b></p>
-            <p style="margin-left: 30px">2.1 A presente política de privacidade rege o tratamento dos dados das pessoas,
+            <p style="margin-left: 30px">2.1 A presente política de privacidade rege o tratamento dos dados das
+                pessoas,
                 imputados durante
                 o acesso e uso dos serviços que o site CDL Manaus oferece aos seus Usuários. Todas as
                 informações pessoais relativas a membros, clientes, empresas e visitantes, coletadas por meio do
                 Sistema de Empregabilidade CDL Manaus, são em conformidade com a Lei de Proteção de Dados
                 Pessoais (Lei nº 13.709/18), garantindo que qualquer informação fornecida pelos usuários é
                 tratada com diligência e confidencialidade.</p>
-            <p style="margin-left: 30px">2.2 A nossa Política de Privacidade contém informações claras sobre a coleta,
+            <p style="margin-left: 30px">2.2 A nossa Política de Privacidade contém informações claras sobre a
+                coleta,
                 uso, armazenamento e
                 proteção de dados dos usuários do serviço. Esta Política se aplica a todos os serviços e aplicações
                 disponibilizados pelo site CDL Manaus, podendo haver termos específicos para determinados
                 serviços, o que será informado oportunamente ao Usuário.
             </p>
             <p><b>3. DEFINIÇÕES</b></p>
-            <p style="margin-left: 30px">3.1 CANDIDATO: pessoa interessada em cadastrar-se no Sistema com o propósito de
+            <p style="margin-left: 30px">3.1 CANDIDATO: pessoa interessada em cadastrar-se no Sistema com o
+                propósito de
                 pesquisar
                 oportunidade de emprego;</p>
             <p style="margin-left: 30px">3.2 EMPRESA: entidade interessada em pesquisar, selecionar candidatos, ou
                 publicar disponibilidade
                 de vagas de emprego;</p>
-            <p style="margin-left: 30px">3.3 MILITARES: organização governamental interessada em cadastrar-se no Sistema
+            <p style="margin-left: 30px">3.3 MILITARES: organização governamental interessada em cadastrar-se no
+                Sistema
                 com o propósito
                 de proporcionar aos seus integrantes e ex-integrantes a oportunidade de integração ao mercado
                 do trabalho.</p>
             <p style="margin-left: 30px">3.4 CDL MANAUS: mantenedora do Sistema Empregabilidade;</p>
             <p style="margin-left: 30px">3.5 UTV: unidade de treinamento e capacitação da CDL Manaus.</p>
             <p><b>4. OBJETIVO GERAL DA POLÍTICA DE PRIVACIDADE</b></p>
-            <p style="margin-left: 30px">4.1. Facilitar o contato entre candidatos que buscam oportunidades de trabalho
+            <p style="margin-left: 30px">4.1. Facilitar o contato entre candidatos que buscam oportunidades de
+                trabalho
                 e empresas que
                 desejam selecionar profissionais qualificados;</p>
-            <p style="margin-left: 30px">4.2. Servir de ponto de encontro para o sucesso, no qual as empresas encontram
+            <p style="margin-left: 30px">4.2. Servir de ponto de encontro para o sucesso, no qual as empresas
+                encontram
                 os talentos para as
                 suas vagas, e os candidatos acham as melhores empresas e oportunidades para alcançar o êxito
                 profissional.
             </p>
             <p><b>5. OBJETIVOS ESPECIFICOS DA POLÍTICA DE PRIVACIDADE</b></p>
-            <p style="margin-left: 30px">5.1. Utilização do SISTEMA para cadastramento de currículo do CANDIDADO, sendo
+            <p style="margin-left: 30px">5.1. Utilização do SISTEMA para cadastramento de currículo do CANDIDADO,
+                sendo
                 de sua inteira
                 responsabilidade a veracidade e todas informações inseridas no CADASTRO, não tendo a CDL
                 Manaus qualquer reponsabilidade no conteúdo cadastrado;</p>
-            <p style="margin-left: 30px">5.2. Disponibilizar currículos de pessoas habilitadas ou não pela Universidade
+            <p style="margin-left: 30px">5.2. Disponibilizar currículos de pessoas habilitadas ou não pela
+                Universidade
                 de Tecnologia do Varejo
                 (UTV), facilitando o acesso ao emprego;</p>
             <p style="margin-left: 30px">5.3. Captar clientes potenciais com os cursos da UTV / CDL Manaus.
@@ -710,13 +727,15 @@
                 autoridades competentes) ou se você violar nossos Termos de Serviço. </p>
 
             <p><b>8. DA SEGURANÇA DE SEUS DADOS</b></p>
-            <p style="margin-left: 30px">8.1 <b>Links Internos e Links Externos</b><br>Quando você nos fornece as suas
+            <p style="margin-left: 30px">8.1 <b>Links Internos e Links Externos</b><br>Quando você nos fornece as
+                suas
                 informações pessoais para completar seu cadastro,
                 automaticamente está concordando com a nossa coleta e uso de informações pessoais apenas
                 para esses fins específicos.
             </p>
             <p><b>9. DA IDADE DE CONSENTIMENTO</b></p>
-            <p style="margin-left: 30px">9.1. Ao usar esse site e cadastrar suas informações, você confirma que é maior
+            <p style="margin-left: 30px">9.1. Ao usar esse site e cadastrar suas informações, você confirma que é
+                maior
                 de idade ou que
                 realizou seu cadastro sob a orientação de uma pessoa responsável maior idade, e que se localizava
                 em seu estado ou província de residência e que nos deu seu consentimento para armazenar seus
@@ -724,15 +743,18 @@
             </p>
 
             <p><b>10. DAS ALTERAÇÕES NA POLÍTICA DE PRIVACIDADE </b></p>
-            <p style="margin-left: 30px">10.1. Reservamos o direito de modificar essa política de privacidade a qualquer
+            <p style="margin-left: 30px">10.1. Reservamos o direito de modificar essa política de privacidade a
+                qualquer
                 momento. Portanto,
                 por favor, leia-a com frequência. As alterações e esclarecimentos surtem efeito imediatamente
-                após serem publicadas no site. Caso façamos alterações na política de privacidade, iremos notificálo
+                após serem publicadas no site. Caso façamos alterações na política de privacidade, iremos
+                notificálo
                 sobre a atualização. Assim, você saberá quais informações coletamos, como as usamos, e sob
                 que circunstâncias, caso aplicável, as utilizaremos e/ou divulgaremos.
 
             </p>
-            <p style="margin-left: 30px">10.2. Caso ocorra a fusão de nosso site com outra ferramenta da empresa, suas
+            <p style="margin-left: 30px">10.2. Caso ocorra a fusão de nosso site com outra ferramenta da empresa,
+                suas
                 informações podem ser
                 transferidas para os novos bancos de dados para que possamos continuar acessando e ofertando
                 nossos serviços e produtos para você.
@@ -779,11 +801,11 @@
 
 
 <script>
-    var cont =0;
+    var cont =1;
     function addCampos(){
      
         var div = document.createElement('div');
-        div.innerHTML = '<div class="row g-3 shadow p-3 mb-5 bg-body rounded" id="div'+cont+'" style="margin:0px 20px 0px 20px; padding:20px;"> <div class="text-end"> <input type="button" class="btn btn-danger btn-sm" onclick="removeCampos('+cont+')" value="Remover Curso"></div><div class="col-md-4"> <label class="form-check-label" for="flexCheckIndeterminate">Cursos extracurriculares</label><input type="text" class="form-control form-control-sm" name="rg" placeholder=""> </div><div class="col-md-2"> <label class="form-check-label" for="flexCheckIndeterminate">Ano termino</label><input type="month" class="form-control form-control-sm" name="rg" placeholder=""></div><div class="col-md-4"> <label class="form-check-label" for="flexCheckIndeterminate">Aréa de Atuação</label><select class="form-select form-select-sm" name="areaatuacao[]" id="areaatuacao"><option selected value="0"></option></select>  </div>';
+        div.innerHTML = '<div class="row g-3 shadow p-3 mb-5 bg-body rounded" id="div'+cont+'" style="margin:0px 20px 0px 20px; padding:20px;"> <div class="text-end"> <input type="button" class="btn btn-danger btn-sm" onclick="removeCampos('+cont+')" value="Remover Curso"></div><div class="col-md-4"> <label class="form-check-label" for="flexCheckIndeterminate">Cursos extracurriculares</label><input type="text" class="form-control form-control-sm" name="curso_extra[]" placeholder=""> </div><div class="col-md-2"> <label class="form-check-label" for="flexCheckIndeterminate">Ano termino</label><input type="month" class="form-control form-control-sm" name="curso_ano_termino[]" placeholder=""></div><div class="col-md-4"> <label class="form-check-label" for="flexCheckIndeterminate">Aréa de Atuação</label><select class="form-select form-select-sm" name="curso_area_atuacao[]" id="areaatuacao"><option selected value="0"></option></select>  </div>';
                  document.getElementById('lista').appendChild(div)
         cont++;
 
@@ -796,12 +818,29 @@
 </script>
 
 <script>
-    var cont =0;
+    var cont =1;
     function addCamposUtv(){
      
         var div = document.createElement('div');
-        div.innerHTML = '<div class="row g-3 shadow p-3 mb-5 bg-body rounded" id="divUTv'+cont+'" style="margin:0px 20px 0px 20px; padding:20px;"> <div class="text-end"> <input type="button" class="btn btn-danger btn-sm" onclick="removeCamposUTv('+cont+')" value="Remover Curso"></div> <div class="col-md-4"><label class="form-check-label" for="flexCheckIndeterminate">Título do curso</label> <input type="text" class="form-control form-control-sm" name="rg" placeholder=""> </div>  <div class="col-md-2">  <label class="form-check-label" for="flexCheckIndeterminate">Carga horária</label> <input type="text" class="form-control form-control-sm" name="rg" placeholder="">  </div> <div class="col-md-2">  <label class="form-check-label" for="flexCheckIndeterminate">Data de Emissão</label><input type="month" class="form-control form-control-sm" name="rg" placeholder=""> </div>';
+        div.innerHTML = '<div class="row g-3 shadow p-3 mb-5 bg-body rounded" id="divUTv'+cont+'" style="margin:0px 20px 0px 20px; padding:20px;"> <div class="text-end"> <input type="button" class="btn btn-danger btn-sm" onclick="removeCamposUTv('+cont+')" value="Remover Curso"></div> <div class="col-md-4"><label class="form-check-label" for="flexCheckIndeterminate">Título do curso</label> <input type="text" class="form-control form-control-sm" name="utv_titlulo[]" placeholder=""> </div>  <div class="col-md-2">  <label class="form-check-label" for="flexCheckIndeterminate">Carga horária</label> <input type="text" class="form-control form-control-sm" name="utv_carga[]" placeholder="">  </div> <div class="col-md-2">  <label class="form-check-label" for="flexCheckIndeterminate">Data de Emissão</label><input type="month" class="form-control form-control-sm" name="utv_data[]" placeholder=""> </div>';
                  document.getElementById('listaUTv').appendChild(div)
+        cont++;
+
+    }
+
+    function removeCamposUTv(id){
+
+         document.getElementById('divUTv'+id).remove();   
+    }
+</script>
+
+<script>
+    var cont =1;
+    function addIdioma(){
+     
+        var div = document.createElement('div');
+        div.innerHTML = '<div class="row g-3 shadow p-3 mb-5 bg-body rounded" id="divUTv'+cont+'" style="margin:0px 20px 0px 20px; padding:20px;"> <div class="text-end"> <input type="button" class="btn btn-danger btn-sm" onclick="removeCamposUTv('+cont+')" value="Remover Curso"></div> <div class="col-md-3">   <label class="form-check-label" for="flexCheckIndeterminate">Escolha um idioma  <span><strong>*</strong></span></label><select class="form-select form-select-sm" name="idioma[]" id="idioma"   aria-label="Default select example">  <option selected></option>        <option value="Inglês">Inglês</option>  <option value="Francês">Francês</option>  <option value="Espanhol">Espanhol</option>  </select></div> <div class="col-md-2" id="div_encrita"> <label class="form-check-label" for="flexCheckIndeterminate">Escrita</label>  <div class="form-check ">  <input class="form-check-input" type="radio" name="idioma_escrita[]" id="idioma_escrita_basico" value="option2"> <label class="form-check-label" for="idioma_escrita_basico"> Básico </label>  </div>   <div class="form-check ">  <input class="form-check-input" type="radio" name="idioma_escrita[]"  id="idioma_escrita_internediario" value="option3"> <label class="form-check-label" for="idioma_escrita_internediario">  Intermediário  </label> </div> <div class="form-check "> <input class="form-check-input" type="radio" name="idioma_escrita[]"  id="idioma_escrita_avancado" value="option3"> <label class="form-check-label" for="idioma_escrita_avancado"> Avançado</label> </div> </div> <div class="col-md-2" id="div_leitura"> <label class="form-check-label" for="flexCheckIndeterminate">Leitura</label> <div class="form-check ">  <input class="form-check-input" type="radio" name="idioma_leitura[]" id="idioma_leitura_basico" value="option2"><label class="form-check-label" for="idioma_leitura_basico"> Básico </label> </div> <div class="form-check "><input class="form-check-input" type="radio" name="idioma_leitura[]" id="idioma_leitura_internediario" value="option3"><label class="form-check-label" for="idioma_leitura_internediario"> Intermediário  </label> </div> <div class="form-check "> <input class="form-check-input" type="radio" name="idioma_leitura[]" id="idioma_leitura_avancado" value="option3"><label class="form-check-label" for="idioma_leitura_avancado">  Avançado </label> </div>  </div> <div class="col-md-2" id="div_conversa"> <label class="form-check-label" for="flexCheckIndeterminate">Conversação</label><div class="form-check "> <input class="form-check-input" type="radio" name="idioma_conversacao[]" id="idioma_conversacao_basico" value="option2"> <label class="form-check-label" for="idioma_conversacao_basico">   Básico   </label>   </div> <div class="form-check "><input class="form-check-input" type="radio" name="idioma_conversacao[]" id="idioma_conversacao_internediario" value="option3"> <label class="form-check-label" for="idioma_conversacao_internediario">  Intermediário  </label>   </div>  <div class="form-check ">  <input class="form-check-input" type="radio" name="idioma_conversacao[]"id="idioma_conversacao_avancado" value="option3"><label class="form-check-label" for="idioma_conversacao_avancado">  Avançado  </label>   </div> </div>';
+                 document.getElementById('listaIdioma').appendChild(div)
         cont++;
 
     }

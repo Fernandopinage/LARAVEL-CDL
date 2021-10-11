@@ -118,8 +118,6 @@
 
 
 <script>
-
-
   function profissional(id){
 
 
@@ -142,14 +140,32 @@
 
   }
     }
+</script>
+
+<script>
+  $(document).ready(function(){
+
+      document.getElementById('div_outro').style.display = 'none'
 
 
+    })
 
+    $('#idioma').change(function(){
 
+      if(document.getElementById('idioma').value == 'Outros'){
 
+      document.getElementById('div_outro').style.display = 'block'
+
+      }else {
+        document.getElementById('div_outro').style.display = 'none'
+      
+      }
+
+    })
 
 
 </script>
+
 
 <script>
   $(document).ready(function(){

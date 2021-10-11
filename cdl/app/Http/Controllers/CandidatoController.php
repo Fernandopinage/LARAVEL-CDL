@@ -50,7 +50,7 @@ class CandidatoController extends Controller
      */
     public function store(Request $request)
     {
-        echo "ok";
+       
         dd($request);
     }
 
