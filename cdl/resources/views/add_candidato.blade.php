@@ -317,10 +317,14 @@
                 <hr>
 
             </div>
+            
             <!-- div responsavel por adicionar outros campo -->
             <div id="lista" style="padding: 30px 0px 30px 0px"> </div>
             <!-- ****************************************** -->
         </div>
+
+
+        
         <div style="padding-top: 50px">
 
             <h4 style="position:absolute;margin-top:15px;color: #284D92;">Curso UTV
@@ -331,9 +335,31 @@
             <hr>
 
         </div>
+
+        <div class="row g-3 shadow p-4 mb-5 bg-body rounded" style="margin:0px 20px 0px 20px; padding:20px;">
+
+            <div class="col-md-4">
+                <label class="form-check-label" for="flexCheckIndeterminate">Título do curso</label>
+                <input type="text" class="form-control form-control-sm" name="utv_titlulo[]" placeholder="">
+            </div>
+            <div class="col-md-2">
+                <label class="form-check-label" for="flexCheckIndeterminate">Carga horária</label>
+                <input type="text" class="form-control form-control-sm" name="utv_carga[]" placeholder="">
+            </div>
+            <div class="col-md-2">
+                <label class="form-check-label" for="flexCheckIndeterminate">Data de Emissão</label>
+                <input type="month" class="form-control form-control-sm" name="utv_data[]" placeholder="">
+            </div>
+
+
+
+        </div>
         <!-- div responsavel por adicionar outros campo -->
         <div id="listaUTv" style="padding: 30px 0px 30px 0px"> </div>
         <!-- ****************************************** -->
+
+
+
     </div>
 
     <div class="form-signin">
@@ -450,9 +476,9 @@
                 </div>
             </div>
 
-                    <!-- div responsavel por adicionar outros campo -->
-        <div id="listaIdioma" style="padding: 30px 0px 30px 0px"> </div>
-        <!-- ****************************************** -->
+            <!-- div responsavel por adicionar outros campo -->
+            <div id="listaIdioma" style="padding: 30px 0px 30px 0px"> </div>
+            <!-- ****************************************** -->
 
         </div>
     </div>
