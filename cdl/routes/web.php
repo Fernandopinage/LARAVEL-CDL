@@ -70,9 +70,8 @@ Route::post('/validar/oms', [OmsController::class, 'validarOms']); // validando 
 Route::get('/home/militar', [OmsController::class, 'home']);
 Route::get('/add/oms/', [OmsController::class, 'formularioOms']); // add OMS
 Route::get('/insert/oms/', [OmsController::class, 'store']);
-Route::get('busca/militar', [exmilitarController::class, 'index']); // chamando tela busca 
-Route::get('busca/militar/filtro/', [exmilitarController::class, 'buscarExmilitar']); // buscando candidato
-Route::get('busca/militar/filtro/{id}');
+Route::get('/busca/militar', [exmilitarController::class, 'index']); // chamando tela busca 
+Route::get('busca/militar/filtro',[exmilitarController::class, 'filtroExmilitar']);
 Route::get('/oms/redefinir', [OmsController::class, 'redefinir']); // tela de redefinir senha
 Route::post('/redefinir/senha/oms', [OmsController::class, 'redefinirSenha']); // chamndo a logica para redefinir
 Route::get('/redefinir/password/oms/{id}', function ($id) {

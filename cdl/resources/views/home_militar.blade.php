@@ -54,7 +54,9 @@
 
 
 <div class="container" id="canditados">
-    @for($i = 0; $i < 6; $i++) <div class=" d-inline-block" style="padding: 8px;">
+    @foreach($candidato as $candidato)
+       
+    <div class=" d-inline-block" style="padding: 8px;">
 
         <div class="form-row" style="border: 0px;">
             <div class="form-group col-md-4">
@@ -70,14 +72,15 @@
                             </h1>
                             <hr>
                             <br>
-                            <span style="color: #97212d; margin-right:110px">Nome:</span><span
-                                style="color: #696969"></span>
+                            <span><b style="color: #97212d; margin-right:0px">Nome:</b></span><span
+                                style="color: #535151"> {{$candidato->can_nome}}</span>
                             <br>
-                            <span style="color: #22427c; margin-right:185px">Formação:</span>
+                            <span ><b style="color: #22427c; margin-right:0px">Formação:</b></span><span
+                            style="color: #535151"> {{$candidato->can_formacao}}</span>
 
                             <br>
-                            <span style="color: #22427c; margin-right:185px">Trabalhando Atualmente:</span>
-                            <span style="color: #696969;"></span>
+                            <span><b style="color: #22427c; margin-right:0px">Trabalhando Atualmente:</b></span>
+                            <span style="color: #535151"> {{$candidato->can_area_profissional}}</span>
 
                             <div class="text-center d-grid" style="margin-top: 20px;">
                                 <button type="button" class="btn btn-success" data-toggle="modal"
@@ -91,7 +94,7 @@
             </div>
         </div>
 </div>
-@endfor
+@endforeach
 </div>
 
 

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Mail\omsMail;
+use App\Models\Candidato;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 use App\Models\Oms;
@@ -49,10 +50,20 @@ class OmsController extends Controller
 
     public function home()
     {
-
-        return view('home_militar');
+     
+        $candidato = Candidato::select('*')->where('can_exmilitar','on')->orderBy('can_id', 'DESC')->limit(9)->get();
+        //ddd($candidato);
+        
+        return view('home_militar',compact('candidato'));
     }
 
+    public function exMilitar(){
+
+               
+        $candidato = Candidato::select('*')->where('can_exmilitar','on')->get();
+        
+        return view('home_militar',compact($candidato));
+    }
 
     public function store(Request $request)
     {

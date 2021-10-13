@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Candidato;
 use Illuminate\Http\Request;
 
 class exmilitarController extends Controller
@@ -16,13 +17,30 @@ class exmilitarController extends Controller
         return view('exmilitar');
     }
 
-    public function buscarExmilitar(Request $request){
+    public function filtroExmilitar(Request $request){
 
-        $request->buscar;
+        if(!empty($request)){
+
+            
+            $dados = Candidato::where('can_exmilitar','on')
+            ->where('can_nome','like',$request->buscar.'%')
+            ->orWhere('can_cpf','like', $request->buscar.'%')
+            ->orWhere('can_matricula','like', $request->buscar.'%')
+            ->get();
+            
+            if(!empty($dados)){
+                
+                
+                
+                return view('exmilitar',compact('dados'));
+                
+            }
+        }
+
         
-        return view('exmilitar_buscar', compact('request'));
 
     }
+ 
 
     public function create()
     {
