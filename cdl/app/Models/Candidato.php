@@ -15,5 +15,29 @@ class Candidato extends Model
         //  definindo chave primaria
         protected $primaryKey = 'can_id';
 
+        // definir um array
+
+        protected $casts = [
+            'can_curso_extra' => 'array',
+            'can_curso_ano_termino' => 'array',
+            'can_curso_area_atuacao' => 'array',
+            'can_utv_titlulo' => 'array',
+            'can_utv_carga' => 'array',
+            'can_utv_data' => 'array',
+            'can_idioma' => 'array',
+            'can_outro_idioma' => 'array',
+            'can_idioma_escrita' => 'array',
+            'can_idioma_leitura' => 'array',
+            'can_idioma_conversacao' => 'array',
+            'can_area_profissional' => 'array',
+            'can_cargo_empresa' => 'array',
+            'can_atual_empresa' => 'array',
+            'can_data_inicio_empresa' => 'array',
+            'can_data_termino_empresa' => 'array',
+            'can_salario_empresa' => 'array',
+            'can_software_empresa' => 'array',
+
+        ];
+
         
 }

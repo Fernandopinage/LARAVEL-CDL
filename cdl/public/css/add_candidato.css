@@ -22,7 +22,9 @@
     
     }
   
-  
+  span{
+    color: red;
+  }
 
   
     a:link{
