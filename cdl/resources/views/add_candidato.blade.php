@@ -69,15 +69,15 @@
                 </div>
                 <div class="col-md-1">
                     <label class="form-check-label" for="flexCheckIndeterminate">Peso</label>
-                    <input type="text" class="form-control form-control-sm" placeholder="">
+                    <input type="text" class="form-control form-control-sm" name="peso" placeholder="">
                 </div>
                 <div class="col-md-1">
                     <label class="form-check-label" for="flexCheckIndeterminate">Altura</label>
-                    <input type="text" class="form-control form-control-sm" placeholder="">
+                    <input type="text" class="form-control form-control-sm" name="altura" placeholder="">
                 </div>
                 <div class="col-md-2">
                     <label class="form-check-label" for="flexCheckIndeterminate">Estado Civil </label>
-                    <select id="inputState" name="cor" class="form-select form-select-sm">
+                    <select id="inputState" name="estadocivil" class="form-select form-select-sm">
                         <option selected></option>
                         <option>Solteiro</option>
                         <option>Casado</option>
@@ -88,13 +88,13 @@
                 <div class="col-md-2">
                     <label class="form-check-label" for="flexCheckIndeterminate">Possui filhos</label>
                     <div class="form-check ">
-                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option2">
+                        <input class="form-check-input" type="radio" name="filhos" id="gridRadios1" value="option2">
                         <label class="form-check-label" for="gridRadios1">
                             Sim
                         </label>
                     </div>
                     <div class="form-check ">
-                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option3">
+                        <input class="form-check-input" type="radio" name="filiacao" id="gridRadios2" value="option3">
                         <label class="form-check-label" for="gridRadios2">
                             Não
                         </label>
@@ -102,7 +102,7 @@
                 </div>
                 <div class="col-md-2">
                     <label class="form-check-label" for="flexCheckIndeterminate">Gênero </label>
-                    <select id="inputState" name="cor" class="form-select form-select-sm">
+                    <select id="inputState" name="genero" class="form-select form-select-sm">
                         <option selected></option>
                         <option>Masculino</option>
                         <option>Feminino</option>
@@ -125,7 +125,7 @@
                 </div>
                 <div class="col-md-3">
                     <label class="form-check-label" for="flexCheckIndeterminate">Matrícula</label>
-                    <input type="text" class="form-control form-control-sm" name="rg" placeholder="">
+                    <input type="text" class="form-control form-control-sm" name="matricula" placeholder="">
                 </div>
 
 
@@ -149,25 +149,25 @@
 
             <div class="col-md-4">
                 <label class="form-check-label" for="flexCheckIndeterminate">Email </label>
-                <input type="text" class="form-control form-control-sm" placeholder="">
+                <input type="text" class="form-control form-control-sm" placeholder="" name="email">
             </div>
             <div class="col-md-2">
                 <label class="form-check-label" for="flexCheckIndeterminate">Senha </label>
-                <input type="password" class="form-control form-control-sm" placeholder="">
+                <input type="password" class="form-control form-control-sm" placeholder="" name="senha">
             </div>
             <div class="col-md-2">
                 <label class="form-check-label" for="flexCheckIndeterminate">Confirmar Senha </label>
-                <input type="password" class="form-control form-control-sm" placeholder="">
+                <input type="password" class="form-control form-control-sm" placeholder="" name="confirma">
             </div>
             <div class="col-md-2">
                 <label class="form-check-label" for="flexCheckIndeterminate">Telefone</label>
                 <input type="text" class="form-control form-control-sm" placeholder="(xx) xxxxx-xxxx"
-                    onkeypress="mask(this, mphone);" onblur="mask(this, mphone);" value="{{old('telefone')}}">
+                    onkeypress="mask(this, mphone);" onblur="mask(this, mphone);" value="{{old('telefone')}}" name="telefone">
             </div>
             <div class="col-md-2">
                 <label class="form-check-label" for="flexCheckIndeterminate">Celular </label>
                 <input type="text" class="form-control form-control-sm" placeholder="(xx) xxxxx-xxxx"
-                    onkeypress="mask(this, mphone);" onblur="mask(this, mphone);" value="{{old('telefone')}}">
+                    onkeypress="mask(this, mphone);" onblur="mask(this, mphone);" value="{{old('telefone')}}" name="celular">
             </div>
 
         </div>
@@ -544,34 +544,34 @@
             <div  class="row g-3 shadow p-3 mb-5 bg-body rounded" id="00" style="margin: 10px">
                 <div class="col-md-6" id="01">
                     <label class="form-check-label" for="flexCheckIndeterminate">Nome da empresa </label>
-                    <input type="text" class="form-control form-control-sm" placeholder="">
+                    <input type="text" class="form-control form-control-sm" name="nome_empresa[]" placeholder="">
                 </div>
 
                 <div class="col-md-4" id="02">
                     <label class="form-check-label" for="flexCheckIndeterminate">Cargo </label>
-                    <input type="text" class="form-control form-control-sm" placeholder="">
+                    <input type="text" class="form-control form-control-sm" name="cargo_empresa[]" placeholder="">
                 </div>
 
                 <div class="col-md-2" style="margin-top: 50px;" id="03">
-                    <input class="form-check-input" type="checkbox">
+                    <input class="form-check-input" type="checkbox" name="atual_empresa[]">
                     <label class="form-check-label" for="inlineCheckbox1">Empresa atual</label>
                 </div>
                 <div class="col-md-2" id="04">
                     <label class="form-check-label" for="flexCheckIndeterminate">Data de Admissão </label>
-                    <input type="month" class="form-control form-control-sm" placeholder="">
+                    <input type="month" class="form-control form-control-sm" placeholder="" name="data_inicio_empresa[]">
                 </div>
 
                 <div class="col-md-2" id="05">
                     <label class="form-check-label" for="flexCheckIndeterminate">Data de termino </label>
-                    <input type="month" class="form-control form-control-sm" placeholder="">
+                    <input type="month" class="form-control form-control-sm" placeholder="" name="data_termino_empresa[]">
                 </div>
                 <div class="col-md-2" id="06">
                     <label class="form-check-label" for="flexCheckIndeterminate">Salário</label>
-                    <input type="text" class="form-control form-control-sm" placeholder="">
+                    <input type="text" class="form-control form-control-sm" placeholder="" name="salario_empres[]a">
                 </div>
                 <div class="col-md-3" id="07">
                     <label class="form-check-label" for="flexCheckIndeterminate">Softwares utilizava</label>
-                    <input type="text" class="form-control form-control-sm" placeholder="">
+                    <input type="text" class="form-control form-control-sm" placeholder="" name="software_empresa[]">
                 </div>
             </div>
            
@@ -598,7 +598,7 @@
                 <select class="form-select form-select-sm" name="tempoexperiencia" id="tempoexperiencia"
                     aria-label="Default select example" required>
                     <option selected value="0"></option>
-                    <option value="1">Financeiro,</option>
+                    <option value="1">Financeiro</option>
                     <option value="2">Administração</option>
                     <option value="3">Vendas</option>
 
@@ -606,7 +606,7 @@
             </div>
             <div class="col-md-2">
                 <label class="form-check-label" for="flexCheckIndeterminate">Pretensão salarial </label>
-                <input type="text" class="form-control form-control-sm" placeholder="">
+                <input type="text" class="form-control form-control-sm" name="pretensao_salario" placeholder="">
             </div>
         </div>
 
