@@ -1,29 +1,75 @@
 @extends('layout.buscar_candidados_utv')
 
 @section('buscar_candidado_utv')
-<form class="form-signin" method="get" action="">
+<form class="form-signin" method="get" action="/buscar/filtro/candidato/">
     <div class="text-center">
         <h2 class="form-signin-heading">Buscar Ex-Alunos</h2>
         <hr>
     </div>
-    <div class="row g-3">
 
-        <div class="col-md-2">
-            <label for="inputEmail4" class="form-label">CPF</label>
-            <input type="text" class="form-control form-control-sm" id="inputEmail4">
-        </div>
-        <div class="col-md-5">
-            <label for="inputPassword4" class="form-label">Nome</label>
-            <input type="text" class="form-control form-control-sm" id="inputPassword4">
-        </div>
-        <div class="col-md-5">
-            <label for="inputPassword4" class="form-label">Curso</label>
-            <input type="text" class="form-control form-control-sm" id="inputPassword4">
-        </div>
-        <div class="text-end">
-            <input type="submit" class="btn btn-primary" onclick="alert('Buscar em desenvolvimento')" value="Pesquisar">
-        </div>
+    <div class="input-group g-3">
+        <input type="text" class="form-control" name="buscar" placeholder="Pesquise por Nome, CPF' ou Curso"
+            aria-label="Recipient's username">
+        <input class="btn btn-primary" type="submit" value="Buscar" id="buscar">
     </div>
 
+
+
 </form>
+
+<div class="container">
+    @if(!empty($candidato))
+    <div class="container" id="canditados" style="margin-top: 50px; margin-bottom:50px">
+        @foreach ($candidato as $candidato)
+
+        <div class=" d-inline-block" style="padding: 8px;">
+
+            <div class="form-row" style="border: 0px;">
+                <div class="form-group col-md-4">
+                    <div class="card" style="width: 25rem;">
+                        <div class="card-body">
+
+                            <span style="color: #284D92"></span>
+                            <p>
+                            <h1>
+                                <span style="color: #157347; margin-right:132px; "><img src="/img/index-1.jpg"
+                                        height="350px" width="350px" class="img-thumbnail" alt="..."></span><span
+                                    style="color: #696969;"></span>
+                                <p class="text-center"> <img src="/img/star.png" height="150px" width="150px"
+                                        class="img-thumbnail" alt="..."></p>
+                            </h1>
+                            <hr>
+                            <br>
+                            <span><b style="color: #97212d; margin-right:0px">Nome:</b></span><span
+                                style="color: #535151"> {{$candidato->can_nome}}</span>
+                            <br>
+                            <span><b style="color: #22427c; margin-right:0px">Formação:</b></span><span
+                                style="color: #535151"> {{$candidato->can_formacao}}</span>
+
+                            <br>
+                            <span><b style="color: #22427c; margin-right:0px">Status:</b></span>
+                            <span style="color: #535151">
+
+                                @if ($candidato->can_area_profissional == 'sim')
+                                {{"Empregada"}}
+                                @else
+                                {{"Procurando Emprego"}}
+                                @endif
+                            </span>
+
+                            <br>
+                            <span><b style="color: #22427c; margin-right:0px">Unidade Militar:</b></span>
+                            <span style="color: #535151"> {{$candidato->can_unidademilitar}}</span>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @endforeach
+    </div>
+    @endif
+</div>
 @endsection

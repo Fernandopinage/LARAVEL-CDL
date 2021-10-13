@@ -21,7 +21,7 @@ class exmilitarController extends Controller
 
         if(!empty($request)){
 
-            
+             
             $dados = Candidato::where('can_exmilitar','on')
             ->where('can_nome','like',$request->buscar.'%')
             ->orWhere('can_cpf','like', $request->buscar.'%')

@@ -90,7 +90,7 @@ Route::get('/delete/conta/oms/{id}', [OmsController::class, 'deleteConta']);
 Route::get('login/utv', [utvController::class, 'index']);  // tela de acesso a utv
 Route::post('/validar/utv', [utvController::class, 'validarLogin']);
 Route::get('/edita/utv/{id}', [utvController::class, 'editaUtv']);
-Route::get('home/utv', [utvController::class, 'home']);
+Route::get('/home/utv', [utvController::class, 'home']);
 Route::get('/atualizar/cursos/utv/', [utvController::class, 'atualizarCurso']); // atualizando cursos
 Route::POST('/update/utv/{id}', [utvController::class, 'update']);
 Route::get('add/utv', [utvController::class, 'formularioUtv']);
@@ -109,7 +109,7 @@ Route::get('/redefinir/password/utv/{id}', function ($id) {
 });
 Route::get('/recuperar/senha/utv/', [utvController::class, 'recuperarSenha']);
 Route::get('/buscar/candidato/utv/', [utvController::class, 'buscarCandidato']);
-
+Route::get('/buscar/filtro/candidato/', [utvController::class, 'filtrarCandidato']);
 //}
 
 

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Mail\utvcursoMail;
+use App\Models\Candidato;
 use Illuminate\Http\Request;
 use App\Models\UTV;
 use App\Models\UTVCURSOS;
@@ -23,6 +24,7 @@ class utvController extends Controller
     public function home()
     {
         $cursos = DB::table('tbl_utvcurso')->get();
+        
         return view('home_utv', compact('cursos'));
     }
 
@@ -244,6 +246,25 @@ class utvController extends Controller
 
         return view('buscar_candidados_utv');
     }
+
+    public function filtrarCandidato(Request $request){
+
+    
+            $candidato = Candidato::Where('can_nome','like',$request->buscar.'%')
+            ->orWhere('can_cpf','like', $request->buscar.'%')
+            ->get();
+    
+            if(!empty($cadidato)){
+                
+               
+                return view('buscar_candidados_utv',compact('candidato'));
+            }   
+                
+            
+        
+
+    }
+
 
     public function update(Request $request, $id)
     {
