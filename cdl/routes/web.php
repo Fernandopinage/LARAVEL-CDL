@@ -29,6 +29,9 @@ Route::get('/', [homeController::class, 'index']); // home do projeto
 /****************************************************************************************** */
 //Route::middleware(['candidado'])->group(function () {
 Route::get('login/candidato', [CandidatoController::class, 'index']); // chamando tela de candidatos
+Route::POST('/validar/candidato',[CandidatoController::class, 'validarCandidato']);
+Route::get('/home/candidato',[CandidatoController::class, 'home']);
+Route::get('/vagas/candidato',[CandidatoController::class, 'vagas']);
 Route::get('busca/candidato', [CandidatoController::class, 'selectCandidato']); // chamando tela  busca candidato 
 Route::get('/add/candidato', [CandidatoController::class, 'formularioCandidato']); // chamando tela de formulario do candidato
 Route::post('/insert/candidato', [CandidatoController::class, 'store']);

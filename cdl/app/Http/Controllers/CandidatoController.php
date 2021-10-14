@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Candidato;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class CandidatoController extends Controller
 {
@@ -17,11 +18,41 @@ class CandidatoController extends Controller
         return view('candidato');
     }
 
+    public function validarCandidato(Request $request){
+
+        $candidato =  Candidato::where('can_email', $request->email)->first();       
+
+           if(!empty($candidato)){
+
+                if(Hash::check($request->password, $candidato->can_senha)){
+                    $id = $candidato['emp_id'];
+                    $request->session()->put('can_id', $id);
+                    $request->session()->put('candidato', $request->email);
+                    return redirect('home/candidato');                                  // redirecinanmento se estiver tudo certo
+    
+                }else{
+                    return redirect('login/candidato');
+                }
+
+           }else{
+                    return redirect('login/candidato');
+           }
+    }
+
     public function formularioCandidato()
     {
         return view('add_candidato');
     }
 
+    public function home(){
+
+        return view('home_candidato');
+
+    }
+
+    public function vagas(){
+        return view('vagas_candidato');
+    }
 
     /**
      * Store a newly created resource in storage.
