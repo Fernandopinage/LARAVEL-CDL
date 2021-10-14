@@ -2,12 +2,13 @@
 
 @section('lista')
 
+<div class="visualizar" style="margin-bottom: 50px">
+
+    <h1>Veja os Cursos que a <b> UTV </b> tem para você!</h1>
+
+</div>
+
 <div class="container shadow-lg p-3 mb-5 bg-body rounded" id="curso">
-    <div class="visualizar">
-
-        <h1>Veja os Cursos que a <b> UTV </b> tem para você!</h1>
-
-    </div>
 
     @php
     $tamanho = count($cursos);
@@ -17,7 +18,7 @@
     @foreach($cursos as $cursos)
 
 
-    <div class=" d-inline-block" style="margin-top: 20px;" data-bs-toggle="modal"
+    <div class=" d-inline-block" style="margin-top: 18px;" data-bs-toggle="modal"
         data-bs-target="#edit{{$cursos->utvcurso_id}}">
 
         <div class="row">
@@ -26,7 +27,7 @@
                     <div class="card-body">
                         <h1>
                             <span style="color: #157347; margin-right:132px"><img src="/img/curso_de_ingles_imd.png"
-                                    height="450px" width="350px" class="img-thumbnail" alt="..."></span><span
+                                    height="300px" width="300px" class="img-thumbnail" alt="..."></span><span
                                 style="color: #696969;"></span>
                         </h1>
                     </div>
