@@ -30,8 +30,6 @@ class exmilitarController extends Controller
             
             if(!empty($dados)){
                 
-                
-                
                 return view('exmilitar',compact('dados'));
                 
             }
