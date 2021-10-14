@@ -15,7 +15,7 @@
           <input type="text" class="form-control" placeholder="Pesquisar cargo, competência ou empresa"  aria-label="Last name">
         </div>
         <div class="col-sm-2">
-            <button type="submit" class="btn btn-primary">Sign in</button>
+            <button type="submit" class="btn btn-primary">Pesquisar</button>
         </div>
     </div>
 </form>
