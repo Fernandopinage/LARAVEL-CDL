@@ -249,19 +249,22 @@ class utvController extends Controller
 
     public function filtrarCandidato(Request $request){
 
-    
-            $candidato = Candidato::Where('can_nome','like',$request->buscar.'%')
+        
+        
+        
+            $candidato = Candidato::where('can_utv_titlulo',$request->buscar.'%')
+            ->orWhere('can_nome','like',$request->buscar.'%')
             ->orWhere('can_cpf','like', $request->buscar.'%')
             ->get();
-    
-            if(!empty($cadidato)){
-                
-               
-                return view('buscar_candidados_utv',compact('candidato'));
-            }   
-                
-            
         
+            if(!empty($candidato)){
+
+                
+                return view('buscar_candidados_utv',compact('candidato'));
+                
+            }
+            
+                   
 
     }
 
