@@ -35,6 +35,7 @@ Route::get('/vagas/candidato',[CandidatoController::class, 'vagas']);
 Route::get('busca/candidato', [CandidatoController::class, 'selectCandidato']); // chamando tela  busca candidato 
 Route::get('/add/candidato', [CandidatoController::class, 'formularioCandidato']); // chamando tela de formulario do candidato
 Route::post('/insert/candidato', [CandidatoController::class, 'store']);
+Route::get('/editar/candidato/{id}',[CandidatoController::class, 'editarCandidato']);
 //});
 
 

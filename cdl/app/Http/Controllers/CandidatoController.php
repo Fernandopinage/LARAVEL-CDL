@@ -18,25 +18,26 @@ class CandidatoController extends Controller
         return view('candidato');
     }
 
-    public function validarCandidato(Request $request){
+    public function validarCandidato(Request $request)
+    {
 
-        $candidato =  Candidato::where('can_email', $request->email)->first();       
+        $candidato =  Candidato::where('can_email', $request->email)->first();
 
-           if(!empty($candidato)){
+        if (!empty($candidato)) {
 
-                if(Hash::check($request->password, $candidato->can_senha)){
-                    $id = $candidato['emp_id'];
-                    $request->session()->put('can_id', $id);
-                    $request->session()->put('candidato', $request->email);
-                    return redirect('home/candidato');                                  // redirecinanmento se estiver tudo certo
-    
-                }else{
-                    return redirect('login/candidato');
-                }
+            if (Hash::check($request->password, $candidato->can_senha)) {
+                $id = $candidato['can_id'];
+                $request->session()->put('can_id', $id);
+                $request->session()->put('candidato', $request->email);
+                
+                return redirect('home/candidato');                                  // redirecinanmento se estiver tudo certo
 
-           }else{
-                    return redirect('login/candidato');
-           }
+            } else {
+                return redirect('login/candidato');
+            }
+        } else {
+            return redirect('login/candidato');
+        }
     }
 
     public function formularioCandidato()
@@ -44,13 +45,14 @@ class CandidatoController extends Controller
         return view('add_candidato');
     }
 
-    public function home(){
+    public function home()
+    {
 
         return view('home_candidato');
-
     }
 
-    public function vagas(){
+    public function vagas()
+    {
         return view('vagas_candidato');
     }
 
@@ -86,8 +88,6 @@ class CandidatoController extends Controller
     {
 
         if ($request->senha === $request->confirma) {
-
-
 
             $candidato = new Candidato();
             $candidato->can_nome = $request->nome;
@@ -146,19 +146,18 @@ class CandidatoController extends Controller
             $candidato->can_pretensao_salario  = $request->pretensao_salario;
             $candidato->can_termo = $request->termo;
 
-            
+
             $candidato->save();
-            return redirect('login/candidato')->with('mensagem','Registro cadastrado com sucesso!'); // redirecionar para tela de anuncio
+            return redirect('login/candidato')->with('mensagem', 'Registro cadastrado com sucesso!'); // redirecionar para tela de anuncio
 
         }
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+    public function editarCandidato($id){
+
+        echo $id;
+    }
+
     public function show($id)
     {
         //
