@@ -155,7 +155,9 @@ class CandidatoController extends Controller
 
     public function editarCandidato($id){
 
-        echo $id;
+        $candidato = Candidato::find($id);
+       // ddd($candidato);
+        return view('update_candidato',compact('candidato'));
     }
 
     public function show($id)

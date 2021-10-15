@@ -286,8 +286,8 @@
                 <label class="form-check-label" for="flexCheckIndeterminate">Semestre em Curso </label>
                 <select class="form-select form-select-sm" name="semestre" aria-label="Default select example">
                     <option selected></option>
-                    <option value="1">1º Semestre</option>
-                    <option value="2">2º Semestre</option>
+                    <option value="1º Semestre">1º Semestre</option>
+                    <option value="2º Semestre">2º Semestre</option>
 
                 </select>
             </div>
@@ -567,7 +567,7 @@
                 </div>
                 <div class="col-md-2" id="06">
                     <label class="form-check-label" for="flexCheckIndeterminate">Salário</label>
-                    <input type="text" class="form-control form-control-sm" placeholder="" name="salario_empres[]a">
+                    <input type="text" class="form-control form-control-sm" placeholder="" name="salario_empres[]">
                 </div>
                 <div class="col-md-3" id="07">
                     <label class="form-check-label" for="flexCheckIndeterminate">Softwares utilizava</label>
