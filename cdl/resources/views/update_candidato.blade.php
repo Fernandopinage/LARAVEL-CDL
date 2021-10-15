@@ -598,7 +598,7 @@ $candidato;
 
         </div>
         </div>
-        
+        </div>
 
         <div class="form-signin">
             <div class="text-end">
