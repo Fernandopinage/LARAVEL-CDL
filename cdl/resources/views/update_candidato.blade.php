@@ -511,7 +511,7 @@ $candidato;
                     </div>
                     <div class="col-md-3" id="div_outro">
                         <label class="form-check-label" for="flexCheckIndeterminate">Digite outro idioma</label>
-                        <input type="text" name="outro_idioma[]" id="outro_idioma" class="form-control form-control-sm" >
+                        <input type="text" name="outro_idioma[]" id="outro_idioma" class="form-control form-control-sm">
                     </div>
                     <div class="col-md-2" id="div_encrita">
                         <label class="form-check-label" for="flexCheckIndeterminate">Escrita</label>
@@ -597,8 +597,8 @@ $candidato;
                 <!-- ****************************************** -->
 
         </div>
-    </div>
         </div>
+        
 
         <div class="form-signin">
             <div class="text-end">
@@ -620,14 +620,16 @@ $candidato;
                     </div>
                     <div class="form-check-inline">
                         <input class="form-check-input" type="radio" name="area_profissional" value="sim"
-                            id="area_profissional_sim" onclick="profissional('sim')" {{$candidato->can_area_profissional == 'sim' ? 'checked' :''}}>
+                            id="area_profissional_sim" onclick="profissional('sim')" {{$candidato->can_area_profissional
+                        == 'sim' ? 'checked' :''}}>
                         <label class="form-check-label" for="flexRadioDefault1">
                             Sim
                         </label>
                     </div>
                     <div class="form-check-inline">
                         <input class="form-check-input" type="radio" name="area_profissional" value="não"
-                            id="area_profissional_nao" onclick="profissional('não')" {{$candidato->can_area_profissional == 'não' ? 'checked' :''}}>
+                            id="area_profissional_nao" onclick="profissional('não')" {{$candidato->can_area_profissional
+                        == 'não' ? 'checked' :''}}>
                         <label class="form-check-label" for="flexRadioDefault2">
                             Não
                         </label>
@@ -637,24 +639,25 @@ $candidato;
 
                 @php
                 $tamanho4 = count($candidato->can_cargo_empresa);
-    
-                @endphp
-    
-                @for($i = 0; $i <$tamanho4; $i++)
 
-                <div class="row g-3 shadow p-3 mb-5 bg-body rounded" id="00" style="margin: 10px">
+                @endphp
+
+                @for($i = 0; $i <$tamanho4; $i++) <div class="row g-3 shadow p-3 mb-5 bg-body rounded" id="00"
+                    style="margin: 10px">
                     <div class="col-md-6" id="01">
                         <label class="form-check-label" for="flexCheckIndeterminate">Nome da empresa </label>
-                        <input type="text" class="form-control form-control-sm" name="nome_empresa[]" placeholder="" >
+                        <input type="text" class="form-control form-control-sm" name="nome_empresa[]" placeholder="">
                     </div>
 
                     <div class="col-md-4" id="02">
                         <label class="form-check-label" for="flexCheckIndeterminate">Cargo </label>
-                        <input type="text" class="form-control form-control-sm" name="cargo_empresa[]" placeholder="" value="{{$candidato->can_cargo_empresa[$i]}}">
+                        <input type="text" class="form-control form-control-sm" name="cargo_empresa[]" placeholder=""
+                            value="{{$candidato->can_cargo_empresa[$i]}}">
                     </div>
 
                     <div class="col-md-2" style="margin-top: 50px;" id="03">
-                        <input class="form-check-input" type="checkbox" name="atual_empresa[]" {{$candidato->can_atual_empresa == '["on"]' ? 'checked' : ''}}>
+                        <input class="form-check-input" type="checkbox" name="atual_empresa[]"
+                            {{$candidato->can_atual_empresa == '["on"]' ? 'checked' : ''}}>
                         <label class="form-check-label" for="inlineCheckbox1">Empresa atual</label>
                     </div>
                     <div class="col-md-2" id="04">
@@ -670,16 +673,17 @@ $candidato;
                     </div>
                     <div class="col-md-2" id="06">
                         <label class="form-check-label" for="flexCheckIndeterminate">Salário</label>
-                        <input type="text" class="form-control form-control-sm" placeholder="" name="salario_empres[]"  value="{{$candidato->can_salario_empresa[$i]}}">
+                        <input type="text" class="form-control form-control-sm" placeholder="" name="salario_empres[]"
+                            value="{{$candidato->can_salario_empresa}}">
                     </div>
                     <div class="col-md-3" id="07">
                         <label class="form-check-label" for="flexCheckIndeterminate">Softwares utilizava</label>
                         <input type="text" class="form-control form-control-sm" placeholder=""
-                            name="software_empresa[]" value="{{$candidato->can_salario_empresa[$i]}}">
+                            name="software_empresa[]">
                     </div>
-                </div>
-                @endfor
             </div>
+            @endfor
+        </div>
 
         </div>
 
@@ -937,8 +941,8 @@ $candidato;
             </div>
 
             <div class="form-check" style="margin-top: 80px">
-                <input class="form-check-input" type="checkbox"  name="termo" id="termo"
-                    required {{$candidato->can_termo == '["on"]' ? 'checked' :''}}>
+                <input class="form-check-input" type="checkbox" name="termo" id="termo" required {{$candidato->can_termo
+                == '["on"]' ? 'checked' :''}}>
                 <label class="form-check-label" for="flexCheckChecked" style="color: #0d6efd">
                     Li e aceito os Termos da Política de Dados do Site<span><strong>*</strong></span></label>
                 </label>
