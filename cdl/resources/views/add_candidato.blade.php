@@ -112,6 +112,11 @@
 
                 </div>
 
+                <div class="col-md-2">
+                    <label class="form-check-label" for="flexCheckIndeterminate">Pretensão salarial </label>
+                    <input type="text" class="form-control form-control-sm" name="pretensao_salario" placeholder="">
+                </div>
+
                 <div class="col-md-2" style="margin-top: 30px;">
 
                     <div class="form-check form-check-inline">
@@ -373,7 +378,10 @@
                 <label class="form-check-label" for="flexCheckIndeterminate">Data de Emissão</label>
                 <input type="month" class="form-control form-control-sm" name="utv_data[]" placeholder="">
             </div>
-
+            <div class="col-md-4" id="tempoexperiencia_div">
+                <label class="form-check-label" for="flexCheckIndeterminate">Área de Atuação</label>
+                <input type="text" class="form-control form-control-sm" name="utv_area_atuacao[]" placeholder="">
+            </div>
 
 
         </div>
@@ -515,7 +523,7 @@
         </div>
         <div class="row g-3">
             <div class="text">
-                <h2 class="form-signin-heading">Experiência profissional</h2>
+                <h2 class="form-signin-heading">Experiência Profissional</h2>
                 <hr>
             </div>
 
@@ -593,20 +601,20 @@
             </div>
         </div>
         <div class="row g-3">
+            <div class="row g-3 shadow p-3 mb-5 bg-body rounded" id="00" style="margin: 10px">
             <div class="col-md-4" id="tempoexperiencia_div">
-                <label class="form-check-label" for="flexCheckIndeterminate">Preferências profissinal</label>
+                
                 <select class="form-select form-select-sm" name="tempoexperiencia" id="tempoexperiencia"
                     aria-label="Default select example" required>
-                    <option selected value="0"></option>
-                    <option value="1">Financeiro</option>
-                    <option value="2">Administração</option>
-                    <option value="3">Vendas</option>
-
+                    <option selected></option>
+                    <option value="Financeiro" >Financeiro</option>
+                    <option value="Administração">Administração</option>
+                    <option value="Vendas">Vendas</option>
+                    <option value="RH">RH</option>
+                    <option value="Técnologia da informação">Técnologia da informação</option>
+                    <option value="Logística">Logística</option>
+                    <option value="Produção">Produção</option>
                 </select>
-            </div>
-            <div class="col-md-2">
-                <label class="form-check-label" for="flexCheckIndeterminate">Pretensão salarial </label>
-                <input type="text" class="form-control form-control-sm" name="pretensao_salario" placeholder="">
             </div>
         </div>
 
@@ -869,7 +877,7 @@
     function addCamposUtv(){
      
         var div = document.createElement('div');
-        div.innerHTML = '<div class="row g-3 shadow p-3 mb-5 bg-body rounded" id="divUTv'+cont+'" style="margin:0px 20px 0px 20px; padding:20px;"> <div class="text-end"> <input type="button" class="btn btn-danger btn-sm" onclick="removeCamposUTv('+cont+')" value="Remover Curso"></div> <div class="col-md-4"><label class="form-check-label" for="flexCheckIndeterminate">Título do curso</label> <input type="text" class="form-control form-control-sm" name="utv_titlulo[]" placeholder=""> </div>  <div class="col-md-2">  <label class="form-check-label" for="flexCheckIndeterminate">Carga horária</label> <input type="text" class="form-control form-control-sm" name="utv_carga[]" placeholder="">  </div> <div class="col-md-2">  <label class="form-check-label" for="flexCheckIndeterminate">Data de Emissão</label><input type="month" class="form-control form-control-sm" name="utv_data[]" placeholder=""> </div>';
+        div.innerHTML = '<div class="row g-3 shadow p-3 mb-5 bg-body rounded" id="divUTv'+cont+'" style="margin:0px 20px 0px 20px; padding:20px;"> <div class="text-end"> <input type="button" class="btn btn-danger btn-sm" onclick="removeCamposUTv('+cont+')" value="Remover Curso"></div> <div class="col-md-4"><label class="form-check-label" for="flexCheckIndeterminate">Título do curso</label> <input type="text" class="form-control form-control-sm" name="utv_titlulo[]" placeholder=""> </div>  <div class="col-md-2">  <label class="form-check-label" for="flexCheckIndeterminate">Carga horária</label> <input type="text" class="form-control form-control-sm" name="utv_carga[]" placeholder="">  </div> <div class="col-md-2">  <label class="form-check-label" for="flexCheckIndeterminate">Data de Emissão</label><input type="month" class="form-control form-control-sm" name="utv_data[]" placeholder=""> </div><div class="col-md-4" id="tempoexperiencia_div"><label class="form-check-label" for="flexCheckIndeterminate">Área de Atuação</label><input type="text" class="form-control form-control-sm" name="utv_area[]" placeholder=""> </div>';
                  document.getElementById('listaUTv').appendChild(div)
         cont++;
 

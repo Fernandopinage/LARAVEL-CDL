@@ -141,6 +141,10 @@ $candidato;
                     </select>
 
                 </div>
+                <div class="col-md-2">
+                    <label class="form-check-label" for="flexCheckIndeterminate">Pretensão salarial </label>
+                    <input type="text" class="form-control form-control-sm" name="pretensao_salario" placeholder="" value="{{$candidato->can_pretensao_salario}}">
+                </div>
 
                 <div class="col-md-2" style="margin-top: 30px;">
 
@@ -549,13 +553,14 @@ $candidato;
                     </div>
                 </div>
             </div>
+        </div>
             @endfor
             <!-- div responsavel por adicionar outros campo -->
             <div id="listaIdioma" style="padding: 30px 0px 30px 0px"> </div>
             <!-- ****************************************** -->
 
         </div>
-    </div>
+    
 
     <div class="form-signin">
         <div class="text-end">
@@ -566,7 +571,7 @@ $candidato;
         </div>
         <div class="row g-3">
             <div class="text">
-                <h2 class="form-signin-heading">Experiência profissional</h2>
+                <h2 class="form-signin-heading">Experiência Profissional</h2>
                 <hr>
             </div>
 
@@ -577,7 +582,7 @@ $candidato;
                 </div>
                 <div class="form-check-inline">
                     <input class="form-check-input" type="radio" name="area_profissional" value="sim"
-                        id="area_profissional_sim" onclick="profissional('sim')">
+                        id="area_profissional_sim" onclick="profissional('sim')" >
                     <label class="form-check-label" for="flexRadioDefault1">
                         Sim
                     </label>
@@ -592,6 +597,13 @@ $candidato;
 
             </div>
 
+            @php
+            $tamanho4 = count($candidato->can_cargo_empresa);
+    
+           @endphp
+    
+           @for($i = 0; $i <$tamanho4; $i++)
+
             <div class="row g-3 shadow p-3 mb-5 bg-body rounded" id="00" style="margin: 10px">
                 <div class="col-md-6" id="01">
                     <label class="form-check-label" for="flexCheckIndeterminate">Nome da empresa </label>
@@ -600,7 +612,7 @@ $candidato;
 
                 <div class="col-md-4" id="02">
                     <label class="form-check-label" for="flexCheckIndeterminate">Cargo </label>
-                    <input type="text" class="form-control form-control-sm" name="cargo_empresa[]" placeholder="">
+                    <input type="text" class="form-control form-control-sm" name="cargo_empresa[]" placeholder="" value="{{$candidato->can_cargo_empresa[$i]}}">
                 </div>
 
                 <div class="col-md-2" style="margin-top: 50px;" id="03">
@@ -610,23 +622,24 @@ $candidato;
                 <div class="col-md-2" id="04">
                     <label class="form-check-label" for="flexCheckIndeterminate">Data de Admissão </label>
                     <input type="month" class="form-control form-control-sm" placeholder=""
-                        name="data_inicio_empresa[]">
+                        name="data_inicio_empresa[]" value="{{$candidato->can_data_inicio_empresa[$i]}}" >
                 </div>
 
                 <div class="col-md-2" id="05">
                     <label class="form-check-label" for="flexCheckIndeterminate">Data de termino </label>
                     <input type="month" class="form-control form-control-sm" placeholder=""
-                        name="data_termino_empresa[]">
+                        name="data_termino_empresa[]" value="{{$candidato->can_data_termino_empresa[$i]}}">
                 </div>
                 <div class="col-md-2" id="06">
                     <label class="form-check-label" for="flexCheckIndeterminate">Salário</label>
-                    <input type="text" class="form-control form-control-sm" placeholder="" name="salario_empres[]a">
+                    <input type="text" class="form-control form-control-sm" placeholder="" name="salario_empres[]" value="{{$candidato->can_salario_empresa}}" >
                 </div>
                 <div class="col-md-3" id="07">
                     <label class="form-check-label" for="flexCheckIndeterminate">Softwares utilizava</label>
                     <input type="text" class="form-control form-control-sm" placeholder="" name="software_empresa[]">
                 </div>
             </div>
+            @endfor
 
         </div>
 
@@ -646,21 +659,23 @@ $candidato;
             </div>
         </div>
         <div class="row g-3">
+            <div class="row g-3 shadow p-3 mb-5 bg-body rounded" id="00" style="margin: 10px">
             <div class="col-md-4" id="tempoexperiencia_div">
-                <label class="form-check-label" for="flexCheckIndeterminate">Preferências profissinal</label>
+                
                 <select class="form-select form-select-sm" name="tempoexperiencia" id="tempoexperiencia"
                     aria-label="Default select example" required>
-                    <option selected value="0"></option>
-                    <option value="1">Financeiro</option>
-                    <option value="2">Administração</option>
-                    <option value="3">Vendas</option>
-
+                    <option selected></option>
+                    <option value="Financeiro" >Financeiro</option>
+                    <option value="Administração">Administração</option>
+                    <option value="Vendas">Vendas</option>
+                    <option value="RH">RH</option>
+                    <option value="Técnologia da informação">Técnologia da informação</option>
+                    <option value="Logística">Logística</option>
+                    <option value="Produção">Produção</option>
                 </select>
             </div>
-            <div class="col-md-2">
-                <label class="form-check-label" for="flexCheckIndeterminate">Pretensão salarial </label>
-                <input type="text" class="form-control form-control-sm" name="pretensao_salario" placeholder="">
-            </div>
+        </div>
+  
         </div>
 
     </div>
@@ -873,7 +888,7 @@ $candidato;
         </div>
 
         <div class="form-check" style="margin-top: 80px">
-            <input class="form-check-input" type="checkbox" value="{{old('termo')}}" name="termo" id="termo" required>
+            <input class="form-check-input" type="checkbox" name="termo" id="termo" required {{$candidato->can_termo == '["on"]' ? 'checked' :''}}>
             <label class="form-check-label" for="flexCheckChecked" style="color: #0d6efd">
                 Li e aceito os Termos da Política de Dados do Site<span><strong>*</strong></span></label>
             </label>
