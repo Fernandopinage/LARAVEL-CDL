@@ -69,7 +69,7 @@
                 </div>
                 <div class="col-md-1">
                     <label class="form-check-label" for="flexCheckIndeterminate">Peso</label>
-                    <input type="text" class="form-control form-control-sm" name="peso" placeholder="">
+                    <input type="text" class="form-control form-control-sm" name="peso" id="peso"  placeholder="">
                 </div>
                 <div class="col-md-1">
                     <label class="form-check-label" for="flexCheckIndeterminate">Altura</label>
@@ -1128,3 +1128,4 @@ function moeda(a, e, r, t) {
 }
 
 </script>
+
