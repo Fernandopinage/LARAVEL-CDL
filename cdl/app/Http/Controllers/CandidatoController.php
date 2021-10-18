@@ -97,7 +97,7 @@ class CandidatoController extends Controller
             $candidato->can_sobrenome  = $request->sobrenome;
             $candidato->can_foto  = $request->foto;
             $candidato->can_cpf  = $request->cpf;
-            $candidato->can_rg  = $request->RG;
+            $candidato->can_rg  = $request->rg;
             $candidato->can_nascimento  = $request->nascimento;
             $candidato->can_localnascimento  = $request->localnascimento;
             $candidato->can_cor  = $request->cor;
