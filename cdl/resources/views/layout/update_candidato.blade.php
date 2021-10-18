@@ -149,10 +149,106 @@
 </script>
 
 <script>
+
+$(document).ready(function(){
+
+   
+if(document.getElementById('formacao').value === 'Ensino_Fundamental_completo' || document.getElementById('formacao').value === 'Ensino_Fundamental_incompleto'){
+ 
+  $('#curso_div').hide();
+  $('#termino_div').show();
+  $('#semestre_div').hide();
+  $('#periodo_div').hide();
+  $('#institucao_div').hide();
+}
+
+if(document.getElementById('formacao').value === 'Ensino Médio_completo'){
+  $('#curso_div').hide();
+  $('#termino_div').show();
+  $('#semestre_div').hide();
+  $('#periodo_div').hide();
+  $('#institucao_div').hide();
+}
+
+if(document.getElementById('formacao').value  === 'Ensino_Médio_cursando'){
+  $('#curso_div').hide();
+  $('#termino_div').show();
+  $('#semestre_div').hide();
+  $('#periodo_div').hide();
+  $('#institucao_div').hide();
+}
+
+if(document.getElementById('formacao').value  === 'Ensino_Técnico_completo'){
+
+  $('#curso_div').show();
+  $('#termino_div').show();
+  $('#semestre_div').hide();
+  $('#periodo_div').hide();
+  $('#institucao_div').show();
+
+}
+
+if(document.getElementById('formacao').value  === 'Ensino_Técnico_cursando'){
+
+
+  $('#curso_div').show();
+  $('#termino_div').show();
+  $('#semestre_div').hide();
+  $('#periodo_div').hide();
+  $('#institucao_div').show();
+
+}
+
+if(document.getElementById('formacao').value  === 'Superior_Completo'){
+
+$('#curso_div').show();
+$('#termino_div').show();
+$('#semestre_div').hide();
+$('#periodo_div').hide();
+$('#institucao_div').show();
+
+
+}
+
+
+if(document.getElementById('formacao').value  === 'Superior_Cursando'){
+
+$('#curso_div').show();
+$('#termino_div').hide();
+$('#semestre_div').hide();
+$('#periodo_div').show();
+$('#institucao_div').show();
+
+}
+
+if(document.getElementById('formacao').value  === 'Pós-Graduação_Completo'){
+
+$('#curso_div').show();
+$('#termino_div').show();
+$('#semestre_div').hide();
+$('#periodo_div').hide();
+$('#institucao_div').show();
+
+}
+
+if(document.getElementById('formacao').value  === 'Pós-Graduação_Cursando'){
+
+  $('#curso_div').show();
+  $('#termino_div').show();
+  $('#semestre_div').hide();
+  $('#periodo_div').hide();
+  $('#institucao_div').show();
+
+}
+
+});
+
+
+
+
   $('#formacao').change(function(){
 
    
-    
     if(document.getElementById('formacao').value === 'Ensino_Fundamental_completo' || document.getElementById('formacao').value === 'Ensino_Fundamental_incompleto'){
      
       $('#curso_div').hide();
