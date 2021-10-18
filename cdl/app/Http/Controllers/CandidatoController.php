@@ -153,7 +153,7 @@ class CandidatoController extends Controller
             
 
             $candidato->save();
-        //     return redirect('login/candidato')->with('mensagem', 'Registro cadastrado com sucesso!'); // redirecionar para tela de anuncio
+            return redirect('login/candidato')->with('mensagem', 'Registro cadastrado com sucesso!'); // redirecionar para tela de anuncio
         }
        
         
