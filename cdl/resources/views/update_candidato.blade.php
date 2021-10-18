@@ -6,7 +6,7 @@
 $candidato;
 @endphp
 
-<form action="/insert/candidato" method="POST">
+<form action="/update/candidato/{{$candidato->can_id}}" method="post">
 
     @csrf
     <div class="form-signin">
