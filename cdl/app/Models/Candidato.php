@@ -24,6 +24,7 @@ class Candidato extends Model
             'can_utv_titlulo' => 'array',
             'can_utv_carga' => 'array',
             'can_utv_data' => 'array',
+            'can_utv_area_atuacao' => 'array',
             'can_idioma' => 'array',
             'can_outro_idioma' => 'array',
             'can_idioma_escrita' => 'array',
@@ -36,6 +37,7 @@ class Candidato extends Model
             'can_data_termino_empresa' => 'array',
             'can_salario_empresa' => 'array',
             'can_software_empresa' => 'array',
+            'can_tempoexperiencia' => 'array',
 
         ];
 

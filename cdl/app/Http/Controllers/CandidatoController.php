@@ -87,6 +87,9 @@ class CandidatoController extends Controller
     public function store(Request $request)
     {
 
+        //ddd($request);
+
+        
         if ($request->senha === $request->confirma) {
 
             $candidato = new Candidato();
@@ -101,14 +104,15 @@ class CandidatoController extends Controller
             $candidato->can_peso  = $request->peso;
             $candidato->can_altura  = $request->altura;
             $candidato->can_estadocivil  = $request->estadocivil;
-            $candidato->can_filhos  = $request->filhos;
             $candidato->can_filiacao  = $request->filiacao;
+           // $candidato->can_filhos  = $request->filhos;
             $candidato->can_genero  = $request->genero;
+            $candidato->can_pretensao_salario  = $request->pretensao_salario;
             $candidato->can_exmilitar  = $request->exmilitar;
             $candidato->can_unidademilitar  = $request->unidademilitar;
             $candidato->can_matricula  = $request->matricula;
             $candidato->can_email  = $request->email;
-            $candidato->can_senha  = $request->senha;
+            $candidato->can_senha  = Hash::make($request->senha);
             $candidato->can_telefone  = $request->telefone;
             $candidato->can_celular  = $request->celular;
             $candidato->can_cep  = $request->cep;
@@ -124,13 +128,13 @@ class CandidatoController extends Controller
             $candidato->can_termino  = $request->termino;
             $candidato->can_semestre  = $request->semestre;
             $candidato->can_periodo = $request->periodo;
-            /************************************** */
             $candidato->can_curso_extra    = $request->curso_extra;
             $candidato->can_curso_ano_termino  = $request->curso_ano_termino;
             $candidato->can_curso_area_atuacao  = $request->curso_area_atuacao;
             $candidato->can_utv_titlulo  = $request->utv_titlulo;
             $candidato->can_utv_carga  = $request->utv_carga;
             $candidato->can_utv_data  = $request->utv_data;
+            $candidato->can_utv_area_atuacao  = $request->utv_area_atuacao;
             $candidato->can_idioma  = $request->idioma;
             $candidato->can_outro_idioma  = $request->outro_idioma;
             $candidato->can_idioma_escrita  = $request->idioma_escrita;
@@ -142,15 +146,16 @@ class CandidatoController extends Controller
             $candidato->can_data_inicio_empresa  = $request->data_inicio_empresa;
             $candidato->can_data_termino_empresa  = $request->data_termino_empresa;
             $candidato->can_salario_empresa  = $request->salario_empresa;
+            $candidato->can_software_empresa  = $request->software_empresa;
             $candidato->can_tempoexperiencia  = $request->tempoexperiencia;
-            $candidato->can_pretensao_salario  = $request->pretensao_salario;
             $candidato->can_termo = $request->termo;
-
+            
 
             $candidato->save();
             return redirect('login/candidato')->with('mensagem', 'Registro cadastrado com sucesso!'); // redirecionar para tela de anuncio
 
         }
+        
     }
 
     public function editarCandidato($id){

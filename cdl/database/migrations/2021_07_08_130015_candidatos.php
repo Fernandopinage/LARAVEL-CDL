@@ -38,9 +38,10 @@ class Candidatos extends Migration
             $table->string('can_peso')->nullable(); 
             $table->string('can_altura')->nullable(); 
             $table->string('can_estadocivil')->nullable(); 
-            $table->string('can_filhos')->nullable(); 
+           // $table->string('can_filhos')->nullable(); 
             $table->string('can_filiacao')->nullable(); 
             $table->string('can_genero')->nullable(); 
+            $table->string('can_pretensao_salario')->nullable(); 
             $table->string('can_exmilitar')->nullable(); 
             $table->string('can_unidademilitar')->nullable(); 
             $table->string('can_matricula')->nullable(); 
@@ -67,7 +68,8 @@ class Candidatos extends Migration
             $table->string('can_curso_area_atuacao')->nullable(); 
             $table->string('can_utv_titlulo')->nullable(); 
             $table->string('can_utv_carga')->nullable(); 
-            $table->string('can_utv_data')->nullable(); 
+            $table->string('can_utv_data')->nullable();
+            $table->string('can_utv_area_atuacao')->nullable();
             $table->string('can_idioma')->nullable(); 
             $table->string('can_outro_idioma')->nullable(); 
             $table->string('can_idioma_escrita')->nullable(); 
@@ -80,8 +82,8 @@ class Candidatos extends Migration
             $table->string('can_data_termino_empresa')->nullable(); 
             $table->string('can_salario_empresa')->nullable(); 
             /***************************** */
+            $table->string('can_software_empresa')->nullable(); 
             $table->string('can_tempoexperiencia')->nullable(); 
-            $table->string('can_pretensao_salario')->nullable(); 
             $table->string('can_termo')->nullable(); 
             $table->timestamps();
         });
