@@ -263,16 +263,16 @@
                 <select class="form-select form-select-sm" name="formacao" id="formacao"
                     aria-label="Default select example" required>
                     <option value="null" selected></option>
-                    <option value="Ensino Fundamental completo">Ensino Fundamental completo</option>
-                    <option value="Ensino Fundamental incompleto">Ensino Fundamental incompleto</option>
-                    <option value="Ensino Medio completo">Ensino Médio completo</option>
-                    <option value="Ensino Medio cursando">Ensino Médio cursando</option>
-                    <option value="Ensino Tecnico cursando">Ensino Técnico cursando</option>
-                    <option value="Ensino Técnico completo">Ensino Técnico completo</option>
-                    <option value="Superior Cursando">Superior Cursando</option>
-                    <option value="Superior Completo">Superior Completo</option>
-                    <option value="Pos-Graduacao Cursando">Pós-Graduação Cursando</option>
-                    <option value="Pos-Graduacao Completo">Pós-Graduação Completo</option>
+                    <option value="Ensino_Fundamental_completo">Ensino Fundamental completo</option>
+                    <option value="Ensino_Fundamental_incompleto">Ensino Fundamental incompleto</option>
+                    <option value="Ensino_Médio_completo">Ensino Médio completo</option>
+                    <option value="Ensino_Médio_cursando">Ensino Médio cursando</option>
+                    <option value="Ensino_Técnico_cursando">Ensino Técnico cursando</option>
+                    <option value="Ensino_Técnico_completo">Ensino Técnico completo</option>
+                    <option value="Superior_Cursando">Superior Cursando</option>
+                    <option value="Superior_Completo">Superior Completo</option>
+                    <option value="Pós-Graduação_Cursando">Pós-Graduação Cursando</option>
+                    <option value="Pós-Graduação_Completo">Pós-Graduação Completo</option>
                 </select>
             </div>
             <div class="col-md-3" id="institucao_div">

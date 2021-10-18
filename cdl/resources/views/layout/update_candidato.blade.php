@@ -2,14 +2,15 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <link href="/css/add_candidato.css" rel="stylesheet">
-    <link rel="icon" href="/img/title.png">
-    <title>Empregabilidade | CDL Manaus</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link href="/css/add_candidato.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="icon" href="/img/title.png">
+  <title>Empregabilidade | CDL Manaus</title>
 </head>
 
 <body>
@@ -97,34 +98,6 @@
 </body>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.0/jquery.min.js"></script>
 
-
-<script>
-  function profissional(id){
-
-
-  if(id === 'sim'){
-   
-      document.getElementById('01').style.display = 'none'
-      document.getElementById('02').style.display = 'none'
-      document.getElementById('03').style.display = 'none'
-      document.getElementById('04').style.display = 'none'
-      document.getElementById('05').style.display = 'none'
-      document.getElementById('06').style.display = 'none'
-      document.getElementById('07').style.display = 'none'
-  }else{
-    
-    document.getElementById('01').style.display = 'block'
-    document.getElementById('02').style.display = 'block'
-    document.getElementById('03').style.display = 'block'
-    document.getElementById('04').style.display = 'block'
-    document.getElementById('05').style.display = 'block'
-    document.getElementById('06').style.display = 'block'
-    document.getElementById('07').style.display = 'block'
-
-  }
-    }
-</script>
-
 <script>
   $(document).ready(function(){
 
@@ -178,8 +151,9 @@
 <script>
   $('#formacao').change(function(){
 
+   
     
-    if(document.getElementById('formacao').value === 'Ensino Fundamental completo' || document.getElementById('formacao').value === 'Ensino Fundamental incompleto'){
+    if(document.getElementById('formacao').value === 'Ensino_Fundamental_completo' || document.getElementById('formacao').value === 'Ensino_Fundamental_incompleto'){
      
       $('#curso_div').hide();
       $('#termino_div').show();
@@ -188,7 +162,7 @@
       $('#institucao_div').hide();
     }
   
-    if(document.getElementById('formacao').value === 'Ensino Medio completo'){
+    if(document.getElementById('formacao').value === 'Ensino Médio_completo'){
       $('#curso_div').hide();
       $('#termino_div').show();
       $('#semestre_div').hide();
@@ -196,7 +170,7 @@
       $('#institucao_div').hide();
     }
   
-    if(document.getElementById('formacao').value  === 'Ensino Medio cursando'){
+    if(document.getElementById('formacao').value  === 'Ensino_Médio_cursando'){
       $('#curso_div').hide();
       $('#termino_div').show();
       $('#semestre_div').hide();
@@ -204,7 +178,7 @@
       $('#institucao_div').hide();
     }
   
-    if(document.getElementById('formacao').value  === 'Ensino Tecnico completo'){
+    if(document.getElementById('formacao').value  === 'Ensino_Técnico_completo'){
   
       $('#curso_div').show();
       $('#termino_div').show();
@@ -214,7 +188,7 @@
   
     }
   
-    if(document.getElementById('formacao').value  === 'Ensino Tecnico cursando'){
+    if(document.getElementById('formacao').value  === 'Ensino_Técnico_cursando'){
   
   
       $('#curso_div').show();
@@ -225,7 +199,7 @@
   
     }
   
-    if(document.getElementById('formacao').value  === 'Superior Completo'){
+    if(document.getElementById('formacao').value  === 'Superior_Completo'){
   
     $('#curso_div').show();
     $('#termino_div').show();
@@ -237,7 +211,7 @@
     }
   
   
-    if(document.getElementById('formacao').value  === 'Superior Cursando'){
+    if(document.getElementById('formacao').value  === 'Superior_Cursando'){
   
     $('#curso_div').show();
     $('#termino_div').hide();
@@ -247,7 +221,7 @@
   
     }
   
-    if(document.getElementById('formacao').value  === 'Pos-Graduacao Completo'){
+    if(document.getElementById('formacao').value  === 'Pós-Graduação_Completo'){
   
     $('#curso_div').show();
     $('#termino_div').show();
@@ -257,7 +231,7 @@
   
     }
   
-    if(document.getElementById('formacao').value  === 'Pos-Graduacao Cursando'){
+    if(document.getElementById('formacao').value  === 'Pós-Graduação_Cursando'){
   
       $('#curso_div').show();
       $('#termino_div').show();
@@ -270,6 +244,7 @@
   });
   
 </script>
+
 <!--<script src="/js/checkbox.js"></script> -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
   integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>

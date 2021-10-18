@@ -198,7 +198,7 @@
   $('#formacao').change(function(){
 
     
-    if(document.getElementById('formacao').value === 'Ensino Fundamental completo' || document.getElementById('formacao').value === 'Ensino Fundamental incompleto'){
+    if(document.getElementById('formacao').value === 'Ensino_Fundamental_completo' || document.getElementById('formacao').value === 'Ensino_Fundamental_incompleto'){
      
       $('#curso_div').hide();
       $('#termino_div').show();
@@ -207,7 +207,7 @@
       $('#institucao_div').hide();
     }
   
-    if(document.getElementById('formacao').value === 'Ensino Medio completo'){
+    if(document.getElementById('formacao').value === 'Ensino Médio_completo'){
       $('#curso_div').hide();
       $('#termino_div').show();
       $('#semestre_div').hide();
@@ -215,7 +215,7 @@
       $('#institucao_div').hide();
     }
   
-    if(document.getElementById('formacao').value  === 'Ensino Medio cursando'){
+    if(document.getElementById('formacao').value  === 'Ensino_Médio_cursando'){
       $('#curso_div').hide();
       $('#termino_div').show();
       $('#semestre_div').hide();
@@ -223,7 +223,7 @@
       $('#institucao_div').hide();
     }
   
-    if(document.getElementById('formacao').value  === 'Ensino Tecnico completo'){
+    if(document.getElementById('formacao').value  === 'Ensino_Técnico_completo'){
   
       $('#curso_div').show();
       $('#termino_div').show();
@@ -233,7 +233,7 @@
   
     }
   
-    if(document.getElementById('formacao').value  === 'Ensino Tecnico cursando'){
+    if(document.getElementById('formacao').value  === 'Ensino_Técnico_cursando'){
   
   
       $('#curso_div').show();
@@ -244,7 +244,7 @@
   
     }
   
-    if(document.getElementById('formacao').value  === 'Superior Completo'){
+    if(document.getElementById('formacao').value  === 'Superior_Completo'){
   
     $('#curso_div').show();
     $('#termino_div').show();
@@ -256,7 +256,7 @@
     }
   
   
-    if(document.getElementById('formacao').value  === 'Superior Cursando'){
+    if(document.getElementById('formacao').value  === 'Superior_Cursando'){
   
     $('#curso_div').show();
     $('#termino_div').hide();
@@ -266,7 +266,7 @@
   
     }
   
-    if(document.getElementById('formacao').value  === 'Pos-Graduacao Completo'){
+    if(document.getElementById('formacao').value  === 'Pós-Graduação_Completo'){
   
     $('#curso_div').show();
     $('#termino_div').show();
@@ -276,7 +276,7 @@
   
     }
   
-    if(document.getElementById('formacao').value  === 'Pos-Graduacao Cursando'){
+    if(document.getElementById('formacao').value  === 'Pós-Graduação_Cursando'){
   
       $('#curso_div').show();
       $('#termino_div').show();

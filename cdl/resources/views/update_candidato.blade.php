@@ -278,28 +278,19 @@ $candidato;
                 <label class="form-check-label" for="flexCheckIndeterminate">Formação
                     <span><strong>*</strong></span></label>
                 <select class="form-select form-select-sm" name="formacao" id="formacao"
-                    aria-label="Default select example" required value="{{$candidato->can_formacao}}">
+                    aria-label="Default select example" required >
                     <option value="null"></option>
-                    <option {{$candidato->can_formacao == 'Ensino Fundamental completo' ? 'selected' :''}} value="Ensino
-                        Fundamental completo">Ensino Fundamental completo</option>
-                    <option {{$candidato->can_formacao == 'Ensino Fundamental incompleto' ? 'selected' :''}}
-                        value="Ensino Fundamental incompleto">Ensino Fundamental incompleto</option>
-                    <option {{$candidato->can_formacao == 'Ensino Médio completo' ? 'selected' :''}} value="Ensino Médio
-                        completo">Ensino Médio completo</option>
-                    <option {{$candidato->can_formacao == 'Ensino Médio cursando' ? 'selected' :''}} value="Ensino Médio
-                        cursando">Ensino Médio cursando</option>
-                    <option {{$candidato->can_formacao == 'Ensino Técnico cursando' ? 'selected' :''}} value="Ensino
-                        Técnico cursando">Ensino Técnico cursando</option>
-                    <option {{$candidato->can_formacao == 'Ensino Técnico completo' ? 'selected' :''}} value="Ensino
-                        Técnico completo">Ensino Técnico completo</option>
-                    <option {{$candidato->can_formacao == 'Superior Cursando' ? 'selected' :''}} value="Superior
-                        Cursando">Superior Cursando</option>
-                    <option {{$candidato->can_formacao == 'Superior Completo' ? 'selected' :''}} value="Superior
-                        Completo">Superior Completo</option>
-                    <option {{$candidato->can_formacao == 'Superior Completo' ? 'selected' :''}} value="Pós-Graduação
-                        Cursando">Pós-Graduação Cursando</option>
-                    <option {{$candidato->can_formacao == 'Pós-Graduação Completo' ? 'selected' :''}}
-                        value="Pós-Graduação Completo">Pós-Graduação Completo</option>
+                    <option {{$candidato->can_formacao == 'Ensino_Fundamental_completo' ? 'selected' :''}} value="Ensino_Fundamental_completo">Ensino Fundamental completo</option>
+                    <option {{$candidato->can_formacao == 'Ensino Fundamental_incompleto' ? 'selected' :''}}value="Ensino Fundamental_incompleto">Ensino Fundamental incompleto</option>
+                    <option {{$candidato->can_formacao == 'Ensino_Médio_completo' ? 'selected' :''}} value="Ensino_Médio_completo">Ensino Médio completo</option>
+                    <option {{$candidato->can_formacao == 'Ensino_Médio_cursando' ? 'selected' :''}} value="Ensino_Médio_cursando">Ensino Médio cursando</option>
+                    <option {{$candidato->can_formacao == 'Ensino_Técnico_cursando' ? 'selected' :''}} value="Ensino_Técnico_cursando">Ensino Técnico cursando</option>
+                    <option {{$candidato->can_formacao == 'Ensino_Técnico_completo' ? 'selected' :''}} value="Ensino_Técnico_completo">Ensino Técnico completo</option>
+                    <option {{$candidato->can_formacao == 'Superior_Cursando' ? 'selected' :''}} value="Superior_Cursando">Superior Cursando</option>
+                    <option {{$candidato->can_formacao == 'Superior_Completo' ? 'selected' :''}} value="Superior_Completo">Superior Completo</option>
+                    <option {{$candidato->can_formacao == 'Pós-Graduação_Cursando' ? 'selected' :''}} value="Pós-Graduação_Cursando">Pós-Graduação Cursando</option>
+                    <option {{$candidato->can_formacao == 'Pós-Graduação_Completo' ? 'selected' :''}} value="Pós-Graduação_Completo">Pós-Graduação Completo</option>
+                    
                 </select>
             </div>
             <div class="col-md-3" id="institucao_div">
