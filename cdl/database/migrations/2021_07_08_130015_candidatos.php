@@ -76,6 +76,7 @@ class Candidatos extends Migration
             $table->string('can_idioma_leitura')->nullable(); 
             $table->string('can_idioma_conversacao')->nullable(); 
             $table->string('can_area_profissional')->nullable(); 
+            $table->string('can_nome_empresa')->nullable(); 
             $table->string('can_cargo_empresa')->nullable(); 
             $table->string('can_atual_empresa')->nullable(); 
             $table->string('can_data_inicio_empresa')->nullable(); 

@@ -89,7 +89,7 @@ class CandidatoController extends Controller
 
         //ddd($request);
 
-        
+          
         if ($request->senha === $request->confirma) {
 
             $candidato = new Candidato();
@@ -141,6 +141,7 @@ class CandidatoController extends Controller
             $candidato->can_idioma_leitura = $request->idioma_leitura;
             $candidato->can_idioma_conversacao  = $request->idioma_conversacao;
             $candidato->can_area_profissional  = $request->area_profissional;
+            $candidato->can_nome_empresa  = $request->nome_empresa;
             $candidato->can_cargo_empresa  = $request->cargo_empresa;
             $candidato->can_atual_empresa  = $request->atual_empresa;
             $candidato->can_data_inicio_empresa  = $request->data_inicio_empresa;
@@ -152,9 +153,9 @@ class CandidatoController extends Controller
             
 
             $candidato->save();
-            return redirect('login/candidato')->with('mensagem', 'Registro cadastrado com sucesso!'); // redirecionar para tela de anuncio
-
+        //     return redirect('login/candidato')->with('mensagem', 'Registro cadastrado com sucesso!'); // redirecionar para tela de anuncio
         }
+       
         
     }
 

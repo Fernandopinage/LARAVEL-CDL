@@ -588,10 +588,12 @@ $candidato;
             </div>
             <div class="row g-3">
                 <div class="text">
-                    <h2 class="form-signin-heading">Experiência Profissional</h2>
+                    <h2 class="form-signin-heading" style="position:absolute;margin-top:50px;">Experiência Profissional</h2>
+                    <div class="text-end" style="padding-top: 50px; position: relative; margin-right:10px">
+                        <input type="button" class="btn btn-success btn-sm" onclick="addExperiencia()" value="Adicionar Experiência">
+                    </div>
                     <hr>
                 </div>
-
                 <div class="col-md-12">
                     <div>
 
@@ -626,7 +628,7 @@ $candidato;
                     <div class="col-md-6" id="01">
                         <label class="form-check-label" for="flexCheckIndeterminate">Nome da empresa </label>
                         <input type="text" class="form-control form-control-sm" name="nome_empresa[]" placeholder=""
-                            value="">
+                            value="{{$candidato->can_nome_empresa[$i]}}">
                     </div>
 
                     <div class="col-md-4" id="02">
@@ -635,10 +637,6 @@ $candidato;
                             value="{{$candidato->can_cargo_empresa[$i]}}">
                     </div>
 
-                    <div class="col-md-2" style="margin-top: 50px;" id="03">
-                        <input class="form-check-input" type="checkbox" name="atual_empresa[]" value="">
-                        <label class="form-check-label" for="inlineCheckbox1">Empresa atual</label>
-                    </div>
                     <div class="col-md-2" id="04">
                         <label class="form-check-label" for="flexCheckIndeterminate">Data de Admissão </label>
                         <input type="month" class="form-control form-control-sm" placeholder=""
@@ -895,7 +893,7 @@ $candidato;
 
             <div class="form-check" style="margin-top: 80px">
                 <input class="form-check-input" type="checkbox" name="termo" id="termo" required {{$candidato->can_termo
-                == '["on"]' ? 'checked' :''}}>
+                    == 'on' ? 'checked' :''}}>
                 <label class="form-check-label" for="flexCheckChecked" style="color: #0d6efd">
                     Li e aceito os Termos da Política de Dados do Site<span><strong>*</strong></span></label>
                 </label>

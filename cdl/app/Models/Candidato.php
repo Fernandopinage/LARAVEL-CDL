@@ -31,6 +31,7 @@ class Candidato extends Model
             'can_idioma_leitura' => 'array',
             'can_idioma_conversacao' => 'array',
             'can_area_profissional' => 'array',
+            'can_nome_empresa' => 'array',
             'can_cargo_empresa' => 'array',
             'can_atual_empresa' => 'array',
             'can_data_inicio_empresa' => 'array',

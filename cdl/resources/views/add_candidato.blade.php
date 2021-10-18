@@ -837,7 +837,7 @@
         </div>
 
         <div class="form-check" style="margin-top: 80px">
-            <input class="form-check-input" type="checkbox" value="{{old('termo')}}" name="termo" id="termo" required>
+            <input class="form-check-input" type="checkbox"  name="termo" id="termo" required>
             <label class="form-check-label" for="flexCheckChecked" style="color: #0d6efd">
                 Li e aceito os Termos da Política de Dados do Site<span><strong>*</strong></span></label>
             </label>
