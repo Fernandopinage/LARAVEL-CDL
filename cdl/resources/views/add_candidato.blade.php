@@ -602,21 +602,23 @@
                 <span class="slider round"></span>
             </label>
         </div>
-        <div class="row g-3">
-            <div class="text">
-                <h2 class="form-signin-heading">Prefêrencias Profissionais</h2>
-                <hr>
-            </div>
+
+        <div class="text">
+            <h2 class="form-signin-heading">Prefêrencias Profissionais
+            </h2>
+  
+            <hr>
         </div>
 
         <div class="preferencia">
 
 
-            <div class="row g-3">
-                <div class="row g-3 shadow p-3 mb-5 bg-body rounded" id="00" style="margin: 10px">
-                    <div class="col-md-4" id="tempoexperiencia_div">
-
-                        <select class="form-select form-select-sm" name="tempoexperiencia" id="tempoexperiencia"
+            <div class="row g-3 shadow p-3 mb-5 bg-body rounded" id="00" style="margin: 10px">
+                <div class="row g-3">
+                    <div class="col-md-6" id="tempoexperiencia_div">
+                        <label class="form-check-label" for="flexCheckIndeterminate">Selecione Prefêrencias
+                            Profissionais</label>
+                        <select class="form-select form-select-sm" name="tempoexperiencia[]" id="tempoexperiencia"
                             aria-label="Default select example" required>
                             <option selected></option>
                             <option value="Financeiro">Financeiro</option>
@@ -628,7 +630,17 @@
                             <option value="Produção">Produção</option>
                         </select>
                     </div>
+                    <div class="col-md-2" style="margin-top: 42px;">
+                       
+                            <input type="button" class="btn btn-success btn-sm" onclick="addPreferencia()"
+                                value="Adicionar Prefêrencias">
+                        
+                    </div>
                 </div>
+                
+                <!-- div responsavel por adicionar outros campo -->
+                <div id="listaPreferencia" style="padding-top: 20px"> </div>
+                <!-- ****************************************** -->
 
             </div>
         </div>
@@ -951,6 +963,27 @@
 
          document.getElementById('divExperiencia'+id).remove();   
          cont04--;
+    }
+</script>
+
+
+<script>
+    var cont05 =1;
+    function addPreferencia(){
+        if(cont05 <4){
+
+        var div = document.createElement('div');
+        div.innerHTML = '<div class="row g-3" id="divPreferencia'+cont05+'"><div class="col-md-6" id="tempoexperiencia_div"><label class="form-check-label" for="flexCheckIndeterminate">Selecione Prefêrencias Profissionais</label> <select class="form-select form-select-sm" name="tempoexperiencia[]" id="tempoexperiencia" aria-label="Default select example" required> <option selected></option><option value="Financeiro">Financeiro</option><option value="Administração">Administração</option><option value="Vendas">Vendas</option><option value="RH">RH</option><option value="Técnologia da informação">Técnologia da informação</option><option value="Logística">Logística</option> <option value="Produção">Produção</option></select></div><div class="col-md-2" id="tempoexperiencia_div" style="margin-top:42px"><input type="button" class="btn btn-danger btn-sm" onclick="removeCamposPreferencia('+cont05+')" value="Remover Prefêrencias"> </div></div></div>';
+                 document.getElementById('listaPreferencia').appendChild(div)
+        cont05++;
+       
+        }
+    }
+
+    function removeCamposPreferencia(id){
+
+         document.getElementById('divPreferencia'+id).remove();  
+         cont05--;
     }
 </script>
 
