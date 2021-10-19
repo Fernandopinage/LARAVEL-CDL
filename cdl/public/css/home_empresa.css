@@ -59,7 +59,7 @@ option{
     max-width: 880px;
     padding: 35px 35px 45px 35px;
     margin:  auto;
-    background-color: rgba(252, 250, 250, 0.575);
+	box-shadow: 4px 4px 8px rgba(0,0,0,0.15);
     border-radius: 18px;
     
 }

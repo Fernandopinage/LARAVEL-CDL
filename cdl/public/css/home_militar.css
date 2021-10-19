@@ -48,7 +48,7 @@ title{
     max-width: 880px;
     padding: 35px 35px 45px 35px;
     margin:  auto;
-    box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.342);
+    box-shadow: 4px 4px 8px rgba(0,0,0,0.15);
     border-radius: 18px;
     
 }

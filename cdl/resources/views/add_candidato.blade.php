@@ -574,7 +574,7 @@
 
     </div>
 
-    <div class="form-signin">
+    <div class="form-signin" style="margin-bottom: 50px">
         <div class="text-end">
             <label class="switch">
                 <input type="checkbox" checked>
@@ -606,14 +606,11 @@
             </div>
 
         </div>
+    </div>
 
 
-        <div class="">
-            <h2 class="form-signin-heading">TERMO</h2>
-            <hr>
-        </div>
 
-        <div class="row g-3 shadow p-3 mb-5 bg-body rounded" id="00" style="margin: 10px">
+        <div class="shadow-lg p-3 mb-5 bg-body rounded" id="00" style="margin: 10px">
             <style>
                 .texto {
                     max-height: 500px;
@@ -844,7 +841,7 @@
             <div class="text-end">
                 <input type="submit" class="btn btn-primary" value="Salvar Registros">
             </div>
-        </div>
+        
 
 
 
