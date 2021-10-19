@@ -278,19 +278,29 @@ $candidato;
                 <label class="form-check-label" for="flexCheckIndeterminate">Formação
                     <span><strong>*</strong></span></label>
                 <select class="form-select form-select-sm" name="formacao" id="formacao"
-                    aria-label="Default select example" required >
+                    aria-label="Default select example" required>
                     <option value="null"></option>
-                    <option {{$candidato->can_formacao == 'Ensino_Fundamental_completo' ? 'selected' :''}} value="Ensino_Fundamental_completo">Ensino Fundamental completo</option>
-                    <option {{$candidato->can_formacao == 'Ensino Fundamental_incompleto' ? 'selected' :''}}value="Ensino Fundamental_incompleto">Ensino Fundamental incompleto</option>
-                    <option {{$candidato->can_formacao == 'Ensino_Médio_completo' ? 'selected' :''}} value="Ensino_Médio_completo">Ensino Médio completo</option>
-                    <option {{$candidato->can_formacao == 'Ensino_Médio_cursando' ? 'selected' :''}} value="Ensino_Médio_cursando">Ensino Médio cursando</option>
-                    <option {{$candidato->can_formacao == 'Ensino_Técnico_cursando' ? 'selected' :''}} value="Ensino_Técnico_cursando">Ensino Técnico cursando</option>
-                    <option {{$candidato->can_formacao == 'Ensino_Técnico_completo' ? 'selected' :''}} value="Ensino_Técnico_completo">Ensino Técnico completo</option>
-                    <option {{$candidato->can_formacao == 'Superior_Cursando' ? 'selected' :''}} value="Superior_Cursando">Superior Cursando</option>
-                    <option {{$candidato->can_formacao == 'Superior_Completo' ? 'selected' :''}} value="Superior_Completo">Superior Completo</option>
-                    <option {{$candidato->can_formacao == 'Pós-Graduação_Cursando' ? 'selected' :''}} value="Pós-Graduação_Cursando">Pós-Graduação Cursando</option>
-                    <option {{$candidato->can_formacao == 'Pós-Graduação_Completo' ? 'selected' :''}} value="Pós-Graduação_Completo">Pós-Graduação Completo</option>
-                    
+                    <option {{$candidato->can_formacao == 'Ensino_Fundamental_completo' ? 'selected' :''}}
+                        value="Ensino_Fundamental_completo">Ensino Fundamental completo</option>
+                    <option {{$candidato->can_formacao == 'Ensino Fundamental_incompleto' ? 'selected'
+                        :''}}value="Ensino Fundamental_incompleto">Ensino Fundamental incompleto</option>
+                    <option {{$candidato->can_formacao == 'Ensino_Médio_completo' ? 'selected' :''}}
+                        value="Ensino_Médio_completo">Ensino Médio completo</option>
+                    <option {{$candidato->can_formacao == 'Ensino_Médio_cursando' ? 'selected' :''}}
+                        value="Ensino_Médio_cursando">Ensino Médio cursando</option>
+                    <option {{$candidato->can_formacao == 'Ensino_Técnico_cursando' ? 'selected' :''}}
+                        value="Ensino_Técnico_cursando">Ensino Técnico cursando</option>
+                    <option {{$candidato->can_formacao == 'Ensino_Técnico_completo' ? 'selected' :''}}
+                        value="Ensino_Técnico_completo">Ensino Técnico completo</option>
+                    <option {{$candidato->can_formacao == 'Superior_Cursando' ? 'selected' :''}}
+                        value="Superior_Cursando">Superior Cursando</option>
+                    <option {{$candidato->can_formacao == 'Superior_Completo' ? 'selected' :''}}
+                        value="Superior_Completo">Superior Completo</option>
+                    <option {{$candidato->can_formacao == 'Pós-Graduação_Cursando' ? 'selected' :''}}
+                        value="Pós-Graduação_Cursando">Pós-Graduação Cursando</option>
+                    <option {{$candidato->can_formacao == 'Pós-Graduação_Completo' ? 'selected' :''}}
+                        value="Pós-Graduação_Completo">Pós-Graduação Completo</option>
+
                 </select>
             </div>
             <div class="col-md-3" id="institucao_div">
@@ -360,7 +370,13 @@ $candidato;
         </div>
 
         @php
+
+        if(!empty($candidato->can_curso_extra)){
+
         $tamanho = count($candidato->can_curso_extra);
+        }else{
+        $tamnho = 1;
+        }
 
         @endphp
 
@@ -406,7 +422,15 @@ $candidato;
     </div>
 
     @php
+
+
+
+    if(!empty($candidato->can_utv_titlulo)){
+
     $tamanho2 = count($candidato->can_utv_titlulo);
+    }else{
+    $tamanho2 = 1;
+    }
 
     @endphp
 
@@ -460,6 +484,14 @@ $candidato;
 
             @php
             $tamanho3 = count($candidato->can_idioma);
+
+            if(!empty($candidato->can_idioma)){
+
+            $tamanho3 = count($candidato->can_idioma);
+            }else{
+            $tamanho3 = 1;
+            }
+
 
             @endphp
 
@@ -579,9 +611,11 @@ $candidato;
             </div>
             <div class="row g-3">
                 <div class="text">
-                    <h2 class="form-signin-heading" style="position:absolute;margin-top:50px;">Experiência Profissional</h2>
+                    <h2 class="form-signin-heading" style="position:absolute;margin-top:50px;">Experiência Profissional
+                    </h2>
                     <div class="text-end" style="padding-top: 50px; position: relative; margin-right:10px">
-                        <input type="button" class="btn btn-success btn-sm" onclick="addExperiencia()" value="Adicionar Experiência">
+                        <input type="button" class="btn btn-success btn-sm" onclick="addExperiencia()"
+                            value="Adicionar Experiência">
                     </div>
                     <hr>
                 </div>
@@ -611,6 +645,14 @@ $candidato;
 
                 @php
                 $tamanho4 = count($candidato->can_cargo_empresa);
+
+                if(!empty($candidato->can_cargo_empresa)){
+
+                $tamanho4 = count($candidato->can_cargo_empresa);
+                }else{
+                $tamanho4 = 1;
+                }
+
 
                 @endphp
 
@@ -652,6 +694,10 @@ $candidato;
                     </div>
             </div>
             @endfor
+
+            <!-- div responsavel por adicionar outros campo -->
+            <div id="listaExperiencia" style="padding: 30px 0px 30px 0px"> </div>
+            <!-- ****************************************** -->
 
         </div>
 
@@ -884,7 +930,7 @@ $candidato;
 
             <div class="form-check" style="margin-top: 80px">
                 <input class="form-check-input" type="checkbox" name="termo" id="termo" required {{$candidato->can_termo
-                    == 'on' ? 'checked' :''}}>
+                == 'on' ? 'checked' :''}}>
                 <label class="form-check-label" for="flexCheckChecked" style="color: #0d6efd">
                     Li e aceito os Termos da Política de Dados do Site<span><strong>*</strong></span></label>
                 </label>
@@ -912,59 +958,93 @@ $candidato;
 
 
 <script>
-    var cont =1;
-    function addCampos(){
-     
-        var div = document.createElement('div');
-        div.innerHTML = '<div class="row g-3 shadow p-3 mb-5 bg-body rounded" id="div'+cont+'" style="margin:0px 20px 0px 20px; padding:20px;"> <div class="text-end"> <input type="button" class="btn btn-danger btn-sm" onclick="removeCampos('+cont+')" value="Remover Curso"></div><div class="col-md-4"> <label class="form-check-label" for="flexCheckIndeterminate">Cursos extracurriculares</label><input type="text" class="form-control form-control-sm" name="curso_extra[]" placeholder=""> </div><div class="col-md-2"> <label class="form-check-label" for="flexCheckIndeterminate">Ano termino</label><input type="month" class="form-control form-control-sm" name="curso_ano_termino[]" placeholder=""></div><div class="col-md-4"> <label class="form-check-label" for="flexCheckIndeterminate">Aréa de Atuação</label><select class="form-select form-select-sm" name="curso_area_atuacao[]" id="areaatuacao"><option selected value="0"></option></select>  </div>';
-                 document.getElementById('lista').appendChild(div)
-        cont++;
+    var cont01 = 1;
 
+    function addCampos(){
+
+        if(cont01 < 4){
+        
+            var div = document.createElement('div');
+            div.innerHTML = '<div class="row g-3 shadow p-3 mb-5 bg-body rounded" id="div'+cont01+'" style="margin:0px 20px 0px 20px; padding:20px;"> <div class="text-end"> <input type="button" class="btn btn-danger btn-sm" onclick="removeCampos('+cont01+')" value="Remover Curso"></div><div class="col-md-4"> <label class="form-check-label" for="flexCheckIndeterminate">Cursos extracurriculares</label><input type="text" class="form-control form-control-sm" name="curso_extra[]" placeholder=""> </div><div class="col-md-2"> <label class="form-check-label" for="flexCheckIndeterminate">Ano termino</label><input type="month" class="form-control form-control-sm" name="curso_ano_termino[]" placeholder=""></div><div class="col-md-4"> <label class="form-check-label" for="flexCheckIndeterminate">Aréa de Atuação</label><select class="form-select form-select-sm" name="curso_area_atuacao[]" id="areaatuacao"><option selected value="0"></option></select>  </div>';
+                    document.getElementById('lista').appendChild(div)
+            cont01++;
+            
+        }
     }
 
     function removeCampos(id){
 
          document.getElementById('div'+id).remove();   
+         cont01--;
     }
 </script>
 
 <script>
-    var cont =1;
+    var cont02 =1;
     function addCamposUtv(){
      
+     if(cont02 < 4){
+
         var div = document.createElement('div');
-        div.innerHTML = '<div class="row g-3 shadow p-3 mb-5 bg-body rounded" id="divUTv'+cont+'" style="margin:0px 20px 0px 20px; padding:20px;"> <div class="text-end"> <input type="button" class="btn btn-danger btn-sm" onclick="removeCamposUTv('+cont+')" value="Remover Curso"></div> <div class="col-md-4"><label class="form-check-label" for="flexCheckIndeterminate">Título do curso</label> <input type="text" class="form-control form-control-sm" name="utv_titlulo[]" placeholder=""> </div>  <div class="col-md-2">  <label class="form-check-label" for="flexCheckIndeterminate">Carga horária</label> <input type="text" class="form-control form-control-sm" name="utv_carga[]" placeholder="">  </div> <div class="col-md-2">  <label class="form-check-label" for="flexCheckIndeterminate">Data de Emissão</label><input type="month" class="form-control form-control-sm" name="utv_data[]" placeholder=""> </div>';
+        div.innerHTML = '<div class="row g-3 shadow p-3 mb-5 bg-body rounded" id="divUTv'+cont02+'" style="margin:0px 20px 0px 20px; padding:20px;"> <div class="text-end"> <input type="button" class="btn btn-danger btn-sm" onclick="removeCamposUTv('+cont02+')" value="Remover Curso"></div> <div class="col-md-4"><label class="form-check-label" for="flexCheckIndeterminate">Título do curso</label> <input type="text" class="form-control form-control-sm" name="utv_titlulo[]" placeholder=""> </div>  <div class="col-md-2">  <label class="form-check-label" for="flexCheckIndeterminate">Carga horária</label> <input type="text" class="form-control form-control-sm" name="utv_carga[]" placeholder="">  </div> <div class="col-md-2">  <label class="form-check-label" for="flexCheckIndeterminate">Data de Emissão</label><input type="month" class="form-control form-control-sm" name="utv_data[]" placeholder=""> </div>';
                  document.getElementById('listaUTv').appendChild(div)
-        cont++;
+        cont02++;
+     }
 
     }
 
     function removeCamposUTv(id){
 
-         document.getElementById('divUTv'+id).remove();   
+         document.getElementById('divUTv'+id).remove();
+         cont02--;   
     }
 </script>
 
 <script>
-    var cont =1;
-    function addIdioma(){
+    var cont03 =1;
 
-        if(document.getElementById('idioma').value != ''){
+        function addIdioma(){
+            if(document.getElementById('idioma').value != ''){
+                if(cont03 < 4){
+
+                    var div = document.createElement('div');
+                    div.innerHTML = '<div class="row g-3 shadow p-3 mb-5 bg-body rounded" id="divUTv'+cont03+'" style="margin:0px 20px 0px 20px; padding:20px;"> <div class="text-end"> <input type="button" class="btn btn-danger btn-sm" onclick="removeCamposUTv('+cont03+')" value="Remover Curso"></div> <div class="col-md-3">   <label class="form-check-label" for="flexCheckIndeterminate">Escolha um idioma  <span><strong>*</strong></span></label><select class="form-select form-select-sm" name="idioma[]" id="idioma"   aria-label="Default select example">  <option selected></option>        <option value="Inglês">Inglês</option>  <option value="Francês">Francês</option>  <option value="Espanhol">Espanhol</option>  </select></div> <div class="col-md-2" id="div_encrita"> <label class="form-check-label" for="flexCheckIndeterminate">Escrita</label>  <div class="form-check ">  <input class="form-check-input" type="radio" name="idioma_escrita[]" id="idioma_escrita_basico" value="option2"> <label class="form-check-label" for="idioma_escrita_basico"> Básico </label>  </div>   <div class="form-check ">  <input class="form-check-input" type="radio" name="idioma_escrita[]"  id="idioma_escrita_internediario" value="option3"> <label class="form-check-label" for="idioma_escrita_internediario">  Intermediário  </label> </div> <div class="form-check "> <input class="form-check-input" type="radio" name="idioma_escrita[]"  id="idioma_escrita_avancado" value="option3"> <label class="form-check-label" for="idioma_escrita_avancado"> Avançado</label> </div> </div> <div class="col-md-2" id="div_leitura"> <label class="form-check-label" for="flexCheckIndeterminate">Leitura</label> <div class="form-check ">  <input class="form-check-input" type="radio" name="idioma_leitura[]" id="idioma_leitura_basico" value="option2"><label class="form-check-label" for="idioma_leitura_basico"> Básico </label> </div> <div class="form-check "><input class="form-check-input" type="radio" name="idioma_leitura[]" id="idioma_leitura_internediario" value="option3"><label class="form-check-label" for="idioma_leitura_internediario"> Intermediário  </label> </div> <div class="form-check "> <input class="form-check-input" type="radio" name="idioma_leitura[]" id="idioma_leitura_avancado" value="option3"><label class="form-check-label" for="idioma_leitura_avancado">  Avançado </label> </div>  </div> <div class="col-md-2" id="div_conversa"> <label class="form-check-label" for="flexCheckIndeterminate">Conversação</label><div class="form-check "> <input class="form-check-input" type="radio" name="idioma_conversacao[]" id="idioma_conversacao_basico" value="option2"> <label class="form-check-label" for="idioma_conversacao_basico">   Básico   </label>   </div> <div class="form-check "><input class="form-check-input" type="radio" name="idioma_conversacao[]" id="idioma_conversacao_internediario" value="option3"> <label class="form-check-label" for="idioma_conversacao_internediario">  Intermediário  </label>   </div>  <div class="form-check ">  <input class="form-check-input" type="radio" name="idioma_conversacao[]"id="idioma_conversacao_avancado" value="option3"><label class="form-check-label" for="idioma_conversacao_avancado">  Avançado  </label>   </div> </div>';
+                            document.getElementById('listaIdioma').appendChild(div)
+                            
+                    cont03++;
+                    console.log(cont03);
+
+                }
+            }
+
+        }
+    function removeCamposUTv(id){
+
+         document.getElementById('divUTv'+id).remove();   
+         cont03--;
+    }
+</script>
+
+<script>
+    var cont04 =1;
+    function addExperiencia(){
+        if(cont04 < 4){
 
         var div = document.createElement('div');
-        div.innerHTML = '<div class="row g-3 shadow p-3 mb-5 bg-body rounded" id="divUTv'+cont+'" style="margin:0px 20px 0px 20px; padding:20px;"> <div class="text-end"> <input type="button" class="btn btn-danger btn-sm" onclick="removeCamposUTv('+cont+')" value="Remover Curso"></div> <div class="col-md-3">   <label class="form-check-label" for="flexCheckIndeterminate">Escolha um idioma  <span><strong>*</strong></span></label><select class="form-select form-select-sm" name="idioma[]" id="idioma"   aria-label="Default select example">  <option selected></option>        <option value="Inglês">Inglês</option>  <option value="Francês">Francês</option>  <option value="Espanhol">Espanhol</option>  </select></div> <div class="col-md-2" id="div_encrita"> <label class="form-check-label" for="flexCheckIndeterminate">Escrita</label>  <div class="form-check ">  <input class="form-check-input" type="radio" name="idioma_escrita[]" id="idioma_escrita_basico" value="option2"> <label class="form-check-label" for="idioma_escrita_basico"> Básico </label>  </div>   <div class="form-check ">  <input class="form-check-input" type="radio" name="idioma_escrita[]"  id="idioma_escrita_internediario" value="option3"> <label class="form-check-label" for="idioma_escrita_internediario">  Intermediário  </label> </div> <div class="form-check "> <input class="form-check-input" type="radio" name="idioma_escrita[]"  id="idioma_escrita_avancado" value="option3"> <label class="form-check-label" for="idioma_escrita_avancado"> Avançado</label> </div> </div> <div class="col-md-2" id="div_leitura"> <label class="form-check-label" for="flexCheckIndeterminate">Leitura</label> <div class="form-check ">  <input class="form-check-input" type="radio" name="idioma_leitura[]" id="idioma_leitura_basico" value="option2"><label class="form-check-label" for="idioma_leitura_basico"> Básico </label> </div> <div class="form-check "><input class="form-check-input" type="radio" name="idioma_leitura[]" id="idioma_leitura_internediario" value="option3"><label class="form-check-label" for="idioma_leitura_internediario"> Intermediário  </label> </div> <div class="form-check "> <input class="form-check-input" type="radio" name="idioma_leitura[]" id="idioma_leitura_avancado" value="option3"><label class="form-check-label" for="idioma_leitura_avancado">  Avançado </label> </div>  </div> <div class="col-md-2" id="div_conversa"> <label class="form-check-label" for="flexCheckIndeterminate">Conversação</label><div class="form-check "> <input class="form-check-input" type="radio" name="idioma_conversacao[]" id="idioma_conversacao_basico" value="option2"> <label class="form-check-label" for="idioma_conversacao_basico">   Básico   </label>   </div> <div class="form-check "><input class="form-check-input" type="radio" name="idioma_conversacao[]" id="idioma_conversacao_internediario" value="option3"> <label class="form-check-label" for="idioma_conversacao_internediario">  Intermediário  </label>   </div>  <div class="form-check ">  <input class="form-check-input" type="radio" name="idioma_conversacao[]"id="idioma_conversacao_avancado" value="option3"><label class="form-check-label" for="idioma_conversacao_avancado">  Avançado  </label>   </div> </div>';
-                 document.getElementById('listaIdioma').appendChild(div)
-        cont++;
-
+        div.innerHTML = '<div  class="row g-3 shadow p-3 mb-5 bg-body rounded" id="divExperiencia'+cont04+'" style="margin: 10px"> <div class="text-end"> <input type="button" class="btn btn-danger btn-sm" onclick="removeCamposEx('+cont04+')" value="Remover Curso"></div> <div class="col-md-6" id="01">  <label class="form-check-label" for="flexCheckIndeterminate">Nome da empresa </label> <input type="text" class="form-control form-control-sm" name="nome_empresa[]" placeholder=""> </div><div class="col-md-4" id="02"> <label class="form-check-label" for="flexCheckIndeterminate">Cargo </label> <input type="text" class="form-control form-control-sm" name="cargo_empresa[]" placeholder=""> </div> <div class="col-md-2" style="margin-top: 40px;" id="03"> <label class="form-check-label" for="inlineCheckbox1">Empresa atual?</label><input class="form-check-input" type="checkbox" name="atual_empresa[]"> </div> <div class="col-md-2" id="04"> <label class="form-check-label" for="flexCheckIndeterminate">Data de Admissão </label>  <input type="month" class="form-control form-control-sm" placeholder="" name="data_inicio_empresa[]"> </div> <div class="col-md-2" id="05"><label class="form-check-label" for="flexCheckIndeterminate">Data de termino </label><input type="month" class="form-control form-control-sm" placeholder="" name="data_termino_empresa[]">  </div> <div class="col-md-2" id="06"><label class="form-check-label" for="flexCheckIndeterminate">Salário</label>  <input type="text" class="form-control form-control-sm" placeholder="" name="salario_empresa[]">  </div>  <div class="col-md-3" id="07">   <label class="form-check-label" for="flexCheckIndeterminate">Softwares utilizava</label>  <input type="text" class="form-control form-control-sm" placeholder="" name="software_empresa[]"> </div></div></div>';
+                 document.getElementById('listaExperiencia').appendChild(div)
+        cont04++;
+       
         }
     }
 
-    function removeCamposUTv(id){
+    function removeCamposEx(id){
 
-         document.getElementById('divUTv'+id).remove();   
+         document.getElementById('divExperiencia'+id).remove();   
+         cont04--;
     }
-</script>
 
+</script>
 
 
 <!-- *************************validando cnpj ************************* -->

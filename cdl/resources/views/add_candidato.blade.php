@@ -114,7 +114,8 @@
 
                 <div class="col-md-2">
                     <label class="form-check-label" for="flexCheckIndeterminate">Pretensão salarial </label>
-                    <input type="text" class="form-control form-control-sm" name="pretensao_salario" placeholder="" onKeyPress="return(moeda(this,'.',',',event))">
+                    <input type="text" class="form-control form-control-sm" name="pretensao_salario" placeholder=""
+                        onKeyPress="return(moeda(this,'.',',',event))">
                 </div>
 
                 <div class="col-md-2" style="margin-top: 30px;">
@@ -167,12 +168,14 @@
             <div class="col-md-2">
                 <label class="form-check-label" for="flexCheckIndeterminate">Telefone</label>
                 <input type="text" class="form-control form-control-sm" placeholder="(xx) xxxxx-xxxx"
-                    onkeypress="mask(this, mphone);" onblur="mask(this, mphone);" value="{{old('telefone')}}" name="telefone">
+                    onkeypress="mask(this, mphone);" onblur="mask(this, mphone);" value="{{old('telefone')}}"
+                    name="telefone">
             </div>
             <div class="col-md-2">
                 <label class="form-check-label" for="flexCheckIndeterminate">Celular </label>
                 <input type="text" class="form-control form-control-sm" placeholder="(xx) xxxxx-xxxx"
-                    onkeypress="mask(this, mphone);" onblur="mask(this, mphone);" value="{{old('telefone')}}" name="celular">
+                    onkeypress="mask(this, mphone);" onblur="mask(this, mphone);" value="{{old('telefone')}}"
+                    name="celular">
             </div>
 
         </div>
@@ -525,7 +528,8 @@
             <div class="text">
                 <h2 class="form-signin-heading" style="position:absolute;margin-top:50px;">Experiência Profissional</h2>
                 <div class="text-end" style="padding-top: 50px; position: relative; margin-right:10px">
-                    <input type="button" class="btn btn-success btn-sm" onclick="addExperiencia()" value="Adicionar Experiência">
+                    <input type="button" class="btn btn-success btn-sm" onclick="addExperiencia()"
+                        value="Adicionar Experiência">
                 </div>
                 <hr>
             </div>
@@ -535,7 +539,7 @@
 
                     <label class="form-check-label" for="flexCheckIndeterminate">Primeiro emprego? </label>
                 </div>
-               
+
 
                 <div class="form-check-inline">
                     <input class="form-check-input" type="radio" name="area_profissional" value="sim"
@@ -554,7 +558,7 @@
 
             </div>
 
-            <div  class="row g-3 shadow p-3 mb-5 bg-body rounded" id="00" style="margin: 10px">
+            <div class="row g-3 shadow p-3 mb-5 bg-body rounded" id="00" style="margin: 10px">
                 <div class="col-md-6" id="01">
                     <label class="form-check-label" for="flexCheckIndeterminate">Nome da empresa </label>
                     <input type="text" class="form-control form-control-sm" name="nome_empresa[]" placeholder="">
@@ -568,31 +572,34 @@
                 <div class="col-md-2" style="margin-top: 40px;" id="03">
                     <label class="form-check-label" for="inlineCheckbox1">Empresa atual?</label>
                     <input class="form-check-input" type="checkbox" name="atual_empresa[]">
-                    
+
                 </div>
                 <div class="col-md-2" id="04">
                     <label class="form-check-label" for="flexCheckIndeterminate">Data de Admissão </label>
-                    <input type="month" class="form-control form-control-sm" placeholder="" name="data_inicio_empresa[]">
+                    <input type="month" class="form-control form-control-sm" placeholder=""
+                        name="data_inicio_empresa[]">
                 </div>
 
                 <div class="col-md-2" id="05">
                     <label class="form-check-label" for="flexCheckIndeterminate">Data de termino </label>
-                    <input type="month" class="form-control form-control-sm" placeholder="" name="data_termino_empresa[]">
+                    <input type="month" class="form-control form-control-sm" placeholder=""
+                        name="data_termino_empresa[]">
                 </div>
                 <div class="col-md-2" id="06">
                     <label class="form-check-label" for="flexCheckIndeterminate">Salário</label>
-                    <input type="text" class="form-control form-control-sm" placeholder="" name="salario_empresa[]" onKeyPress="return(moeda(this,'.',',',event))">
+                    <input type="text" class="form-control form-control-sm" placeholder="" name="salario_empresa[]"
+                        onKeyPress="return(moeda(this,'.',',',event))">
                 </div>
                 <div class="col-md-3" id="07">
                     <label class="form-check-label" for="flexCheckIndeterminate">Softwares utilizava</label>
                     <input type="text" class="form-control form-control-sm" placeholder="" name="software_empresa[]">
                 </div>
             </div>
-           
+
         </div>
-                    <!-- div responsavel por adicionar outros campo -->
-                    <div id="listaExperiencia" style="padding: 30px 0px 30px 0px"> </div>
-                    <!-- ****************************************** -->
+        <!-- div responsavel por adicionar outros campo -->
+        <div id="listaExperiencia" style="padding: 30px 0px 30px 0px"> </div>
+        <!-- ****************************************** -->
 
     </div>
 
@@ -611,249 +618,262 @@
         </div>
         <div class="row g-3">
             <div class="row g-3 shadow p-3 mb-5 bg-body rounded" id="00" style="margin: 10px">
-            <div class="col-md-4" id="tempoexperiencia_div">
-                
-                <select class="form-select form-select-sm" name="tempoexperiencia" id="tempoexperiencia"
-                    aria-label="Default select example" required>
-                    <option selected></option>
-                    <option value="Financeiro" >Financeiro</option>
-                    <option value="Administração">Administração</option>
-                    <option value="Vendas">Vendas</option>
-                    <option value="RH">RH</option>
-                    <option value="Técnologia da informação">Técnologia da informação</option>
-                    <option value="Logística">Logística</option>
-                    <option value="Produção">Produção</option>
-                </select>
+                <div class="col-md-4" id="tempoexperiencia_div">
+
+                    <select class="form-select form-select-sm" name="tempoexperiencia" id="tempoexperiencia"
+                        aria-label="Default select example" required>
+                        <option selected></option>
+                        <option value="Financeiro">Financeiro</option>
+                        <option value="Administração">Administração</option>
+                        <option value="Vendas">Vendas</option>
+                        <option value="RH">RH</option>
+                        <option value="Técnologia da informação">Técnologia da informação</option>
+                        <option value="Logística">Logística</option>
+                        <option value="Produção">Produção</option>
+                    </select>
+                </div>
             </div>
-        </div>
-
-    </div>
-
-    
-    <div class="">
-        <h2 class="form-signin-heading">TERMO</h2>
-        <hr>
-    </div>
-    
-    <div class="row g-3 shadow p-3 mb-5 bg-body rounded" id="00" style="margin: 10px">
-        <style>
-            .texto {
-                max-height: 500px;
-                overflow-y: auto;
-                justify-content: center;
-            }
-        </style>
-
-        <div class="texto">
-            <p style="text-align: center;margin-top:10px"><b style="font-size: 20px">SISTEMA DE EMPREGABILIDADE CDL
-                    MANAUS</b></p>
-            <p style="text-align: center"><b style="font-size: 18px">Termo de Política para Uso do Sistema</b></p>
-            <p><b>1. SERVIÇO</b></p>
-            <p style="margin-left: 30px">1.1 <b>Objetivo do Serviço:</b>facilitar pessoas interessadas em buscar
-                colocação ou recolocação no
-                mercado de trabalho e empresas interessadas em contratar colaboradores ou ofertar vagas de
-                emprego.</p>
-            <p><b>2. POLÍTICA DE PRIVACIDADE</b></p>
-            <p style="margin-left: 30px">2.1 A presente política de privacidade rege o tratamento dos dados das
-                pessoas,
-                imputados durante
-                o acesso e uso dos serviços que o site CDL Manaus oferece aos seus Usuários. Todas as
-                informações pessoais relativas a membros, clientes, empresas e visitantes, coletadas por meio do
-                Sistema de Empregabilidade CDL Manaus, são em conformidade com a Lei de Proteção de Dados
-                Pessoais (Lei nº 13.709/18), garantindo que qualquer informação fornecida pelos usuários é
-                tratada com diligência e confidencialidade.</p>
-            <p style="margin-left: 30px">2.2 A nossa Política de Privacidade contém informações claras sobre a
-                coleta,
-                uso, armazenamento e
-                proteção de dados dos usuários do serviço. Esta Política se aplica a todos os serviços e aplicações
-                disponibilizados pelo site CDL Manaus, podendo haver termos específicos para determinados
-                serviços, o que será informado oportunamente ao Usuário.
-            </p>
-            <p><b>3. DEFINIÇÕES</b></p>
-            <p style="margin-left: 30px">3.1 CANDIDATO: pessoa interessada em cadastrar-se no Sistema com o
-                propósito de
-                pesquisar
-                oportunidade de emprego;</p>
-            <p style="margin-left: 30px">3.2 EMPRESA: entidade interessada em pesquisar, selecionar candidatos, ou
-                publicar disponibilidade
-                de vagas de emprego;</p>
-            <p style="margin-left: 30px">3.3 MILITARES: organização governamental interessada em cadastrar-se no
-                Sistema
-                com o propósito
-                de proporcionar aos seus integrantes e ex-integrantes a oportunidade de integração ao mercado
-                do trabalho.</p>
-            <p style="margin-left: 30px">3.4 CDL MANAUS: mantenedora do Sistema Empregabilidade;</p>
-            <p style="margin-left: 30px">3.5 UTV: unidade de treinamento e capacitação da CDL Manaus.</p>
-            <p><b>4. OBJETIVO GERAL DA POLÍTICA DE PRIVACIDADE</b></p>
-            <p style="margin-left: 30px">4.1. Facilitar o contato entre candidatos que buscam oportunidades de
-                trabalho
-                e empresas que
-                desejam selecionar profissionais qualificados;</p>
-            <p style="margin-left: 30px">4.2. Servir de ponto de encontro para o sucesso, no qual as empresas
-                encontram
-                os talentos para as
-                suas vagas, e os candidatos acham as melhores empresas e oportunidades para alcançar o êxito
-                profissional.
-            </p>
-            <p><b>5. OBJETIVOS ESPECIFICOS DA POLÍTICA DE PRIVACIDADE</b></p>
-            <p style="margin-left: 30px">5.1. Utilização do SISTEMA para cadastramento de currículo do CANDIDADO,
-                sendo
-                de sua inteira
-                responsabilidade a veracidade e todas informações inseridas no CADASTRO, não tendo a CDL
-                Manaus qualquer reponsabilidade no conteúdo cadastrado;</p>
-            <p style="margin-left: 30px">5.2. Disponibilizar currículos de pessoas habilitadas ou não pela
-                Universidade
-                de Tecnologia do Varejo
-                (UTV), facilitando o acesso ao emprego;</p>
-            <p style="margin-left: 30px">5.3. Captar clientes potenciais com os cursos da UTV / CDL Manaus.
-            </p>
-            <p><b>6. POLÍTICA DE PRIVACIDADE</b></p>
-            <p style="margin-left: 30px">6.1.<b> O que fazemos com as suas informações?</b></p>
-            <p style="margin-left: 45px"><span style="margin-right: 20px; color:#000;font-size:20px;"><b>a</b></span>.
-                Quando
-                você realiza seu cadastro em nossa plataforma, coletamos as informações pessoais
-                que você nos fornece, tais como seu nome, CPF, RG, e-mail, número de telefone e/ou telefone
-                celular, morada, data de nascimento, grau de escolaridade, cursos de aprimoramento,
-                informações profissionais e últimas experiências relacionadas a emprego.</p>
-
-            <p style="margin-left: 45px"><span style="margin-right: 20px; color:#000;font-size:20px;"><b>b</b></span>.
-                De posse
-                dessas informações, partes delas serão distribuídas em nossa página para facilitar a
-                ligação entre você e uma empresa e vice-versa, através de um algoritmo criado
-                especificamente para essa função. Sendo assim, uma empresa ou uma instituição, seja ela
-                pública ou privada terá acesso a seus dados.</p>
-            <p style="margin-left: 45px"><span style="margin-right: 20px; color:#000;font-size:20px;"><b>c</b></span>. A
-                CDL
-                Manaus se compromete a não usar seus dados para outros fins que não sejam única e
-                exclusivamente para intermediar contatos de trabalho entre você e uma empresa e/ou
-                instituição. No entanto a CDL não tem responsabilidade por qualquer vínculo empregatício
-                ou acordo firmado entre as partes.</p>
-
-            <p style="margin-left: 45px"><span style="margin-right: 20px; color:#000;font-size:20px;"><b>d</b></span>. É
-                vedado
-                o acesso total de empresas não cadastradas aos seus dados.</p>
-            <p style="margin-left: 45px"><span style="margin-right: 20px; color:#000;font-size:20px;"><b>e</b></span>.
-                Se faz
-                necessário ressaltar, que ao aceitar nossa política de privacidade, você nos autoriza a
-                informá-lo sobre nossos serviços, produtos e outras atualizações por e-mail, sms ou outro
-                meio eletrônico.
-            </p>
-            <p style="margin-left: 45px"><span style="margin-right: 20px; color:#000;font-size:20px;"><b>f</b></span>.
-                Todas as
-                informações pessoais relativas a membros, assinantes, clientes ou visitantes que
-                usem o portal de empregabilidade serão tratadas em concordância com a Lei da Proteção de
-                Dados Pessoais (Lei nº 13.709/18).</p>
-            <p style="margin-left: 45px"><span style="margin-right: 20px; color:#000;font-size:20px;"><b>g</b></span>. O
-                uso do
-                sistema de empregabilidade CDL MANAUS pressupõe a aceitação deste acordo de
-                privacidade. A CDL MANAUS reserva-se ao direito de alterar este acordo sem aviso prévio.
-                Deste modo, recomendamos que consulte a nossa política de privacidade com regularidade
-                de forma a estar sempre atualizado.</p>
-
-            <p><b>6.2. Os anúncios de oferta de vagas e programação de treinamento e capacitação da CDL Manaus.
-                </b></p>
-            <p style="margin-left: 45px"><span style="margin-right: 20px; color:#000;font-size:20px;"><b>a</b></span>. A
-                política de anúncios do sistema de Empregabilidade CDL Manaus, restringe sua publicidade
-                de anúncios ao tempo da sua visita e as páginas que visitou dentro do nosso website. </p>
-            <p><b>6.3. Cookies</b></p>
-            <p style="margin-left: 45px"><span style="margin-right: 20px; color:#000;font-size:20px;"><b>a</b></span>. A
-                CDL
-                MANAUS, não utiliza cookies muito menos armazena dados de clientes para
-                comercializar ou exibir anúncios. </p>
-            <p style="margin-left: 45px"><span style="margin-right: 20px; color:#000;font-size:20px;"><b>b</b></span>.
-                Os
-                cookies rastreáveis são ou pode ser partes referentes as ligações de uso dos sites das redes
-                sociais. (Facebook, Instagram, Youtube e outros)</p>
-
-            <p><b>6.4. Ligações a sites de terceiros</b></p>
-
-            <p style="margin-left: 45px"><span style="margin-right: 20px; color:#000;font-size:20px;"><b>a</b></span>. O
-                CDL
-                MANAUS possui ligações para outros sites, os quais, ao nosso ver, podem conter
-                informações / ferramentas úteis para os nossos visitantes. A nossa política de privacidade não
-                é aplicada a sites de terceiros, pelo que, caso visite outro site a partir do nosso deverá ler a
-                política de privacidade do mesmo. </p>
-            <p style="margin-left: 45px"><span style="margin-right: 20px; color:#000;font-size:20px;"><b>b</b></span>. A
-                CDL
-                MANAUS não se responsabiliza pela política de privacidade ou conteúdo presente nos
-                sites de terceiros.</p>
-
-            <p><b>7. DO CONSENTIMENTO DE USO DE SUAS INFORMAÇÕES</b></p>
-            <p style="margin-left: 30px">7.1 Quando você nos fornece as suas informações pessoais para completar seu
-                cadastro,
-                automaticamente está concordando com a nossa coleta e uso de informações pessoais apenas
-                para esses fins específicos.
-            </p>
-            <p style="margin-left: 30px">7.2 <b>Como posso retirar os meus dados da lista de marketing?</b> </p>
-            <p style="margin-left: 45px"><span style="margin-right: 20px; color:#000;font-size:20px;"><b>a</b></span>.
-                Podemos
-                divulgar suas informações pessoais se formos obrigados por lei a fazê-lo (para
-                autoridades competentes) ou se você violar nossos Termos de Serviço. </p>
-
-            <p><b>8. DA SEGURANÇA DE SEUS DADOS</b></p>
-            <p style="margin-left: 30px">8.1 <b>Links Internos e Links Externos</b><br>Quando você nos fornece as
-                suas
-                informações pessoais para completar seu cadastro,
-                automaticamente está concordando com a nossa coleta e uso de informações pessoais apenas
-                para esses fins específicos.
-            </p>
-            <p><b>9. DA IDADE DE CONSENTIMENTO</b></p>
-            <p style="margin-left: 30px">9.1. Ao usar esse site e cadastrar suas informações, você confirma que é
-                maior
-                de idade ou que
-                realizou seu cadastro sob a orientação de uma pessoa responsável maior idade, e que se localizava
-                em seu estado ou província de residência e que nos deu seu consentimento para armazenar seus
-                dados pessoais.
-            </p>
-
-            <p><b>10. DAS ALTERAÇÕES NA POLÍTICA DE PRIVACIDADE </b></p>
-            <p style="margin-left: 30px">10.1. Reservamos o direito de modificar essa política de privacidade a
-                qualquer
-                momento. Portanto,
-                por favor, leia-a com frequência. As alterações e esclarecimentos surtem efeito imediatamente
-                após serem publicadas no site. Caso façamos alterações na política de privacidade, iremos
-                notificálo
-                sobre a atualização. Assim, você saberá quais informações coletamos, como as usamos, e sob
-                que circunstâncias, caso aplicável, as utilizaremos e/ou divulgaremos.
-
-            </p>
-            <p style="margin-left: 30px">10.2. Caso ocorra a fusão de nosso site com outra ferramenta da empresa,
-                suas
-                informações podem ser
-                transferidas para os novos bancos de dados para que possamos continuar acessando e ofertando
-                nossos serviços e produtos para você.
-
-            </p>
-
-            <p><b>11. PERGUNTAS E INFORMAÇÕES DE CONTATO </b></p>
-            <p style="margin-left: 30px">11.1. Se você gostaria de acessar, corrigir, alterar ou excluir quaisquer
-                informações pessoais que temos
-                sobre você, registre uma queixa, ou simplesmente peça mais informações de contato conosco
-                através do e-mail suporte@cdlmanaus.org.br ou por telefone: (92) 3627-2894.
-
-            </p>
-
 
         </div>
 
-        <div class="form-check" style="margin-top: 80px">
-            <input class="form-check-input" type="checkbox"  name="termo" id="termo" required>
-            <label class="form-check-label" for="flexCheckChecked" style="color: #0d6efd">
-                Li e aceito os Termos da Política de Dados do Site<span><strong>*</strong></span></label>
-            </label>
+
+        <div class="">
+            <h2 class="form-signin-heading">TERMO</h2>
+            <hr>
         </div>
-        <hr>
-        <!--
+
+        <div class="row g-3 shadow p-3 mb-5 bg-body rounded" id="00" style="margin: 10px">
+            <style>
+                .texto {
+                    max-height: 500px;
+                    overflow-y: auto;
+                    justify-content: center;
+                }
+            </style>
+
+            <div class="texto">
+                <p style="text-align: center;margin-top:10px"><b style="font-size: 20px">SISTEMA DE EMPREGABILIDADE CDL
+                        MANAUS</b></p>
+                <p style="text-align: center"><b style="font-size: 18px">Termo de Política para Uso do Sistema</b></p>
+                <p><b>1. SERVIÇO</b></p>
+                <p style="margin-left: 30px">1.1 <b>Objetivo do Serviço:</b>facilitar pessoas interessadas em buscar
+                    colocação ou recolocação no
+                    mercado de trabalho e empresas interessadas em contratar colaboradores ou ofertar vagas de
+                    emprego.</p>
+                <p><b>2. POLÍTICA DE PRIVACIDADE</b></p>
+                <p style="margin-left: 30px">2.1 A presente política de privacidade rege o tratamento dos dados das
+                    pessoas,
+                    imputados durante
+                    o acesso e uso dos serviços que o site CDL Manaus oferece aos seus Usuários. Todas as
+                    informações pessoais relativas a membros, clientes, empresas e visitantes, coletadas por meio do
+                    Sistema de Empregabilidade CDL Manaus, são em conformidade com a Lei de Proteção de Dados
+                    Pessoais (Lei nº 13.709/18), garantindo que qualquer informação fornecida pelos usuários é
+                    tratada com diligência e confidencialidade.</p>
+                <p style="margin-left: 30px">2.2 A nossa Política de Privacidade contém informações claras sobre a
+                    coleta,
+                    uso, armazenamento e
+                    proteção de dados dos usuários do serviço. Esta Política se aplica a todos os serviços e aplicações
+                    disponibilizados pelo site CDL Manaus, podendo haver termos específicos para determinados
+                    serviços, o que será informado oportunamente ao Usuário.
+                </p>
+                <p><b>3. DEFINIÇÕES</b></p>
+                <p style="margin-left: 30px">3.1 CANDIDATO: pessoa interessada em cadastrar-se no Sistema com o
+                    propósito de
+                    pesquisar
+                    oportunidade de emprego;</p>
+                <p style="margin-left: 30px">3.2 EMPRESA: entidade interessada em pesquisar, selecionar candidatos, ou
+                    publicar disponibilidade
+                    de vagas de emprego;</p>
+                <p style="margin-left: 30px">3.3 MILITARES: organização governamental interessada em cadastrar-se no
+                    Sistema
+                    com o propósito
+                    de proporcionar aos seus integrantes e ex-integrantes a oportunidade de integração ao mercado
+                    do trabalho.</p>
+                <p style="margin-left: 30px">3.4 CDL MANAUS: mantenedora do Sistema Empregabilidade;</p>
+                <p style="margin-left: 30px">3.5 UTV: unidade de treinamento e capacitação da CDL Manaus.</p>
+                <p><b>4. OBJETIVO GERAL DA POLÍTICA DE PRIVACIDADE</b></p>
+                <p style="margin-left: 30px">4.1. Facilitar o contato entre candidatos que buscam oportunidades de
+                    trabalho
+                    e empresas que
+                    desejam selecionar profissionais qualificados;</p>
+                <p style="margin-left: 30px">4.2. Servir de ponto de encontro para o sucesso, no qual as empresas
+                    encontram
+                    os talentos para as
+                    suas vagas, e os candidatos acham as melhores empresas e oportunidades para alcançar o êxito
+                    profissional.
+                </p>
+                <p><b>5. OBJETIVOS ESPECIFICOS DA POLÍTICA DE PRIVACIDADE</b></p>
+                <p style="margin-left: 30px">5.1. Utilização do SISTEMA para cadastramento de currículo do CANDIDADO,
+                    sendo
+                    de sua inteira
+                    responsabilidade a veracidade e todas informações inseridas no CADASTRO, não tendo a CDL
+                    Manaus qualquer reponsabilidade no conteúdo cadastrado;</p>
+                <p style="margin-left: 30px">5.2. Disponibilizar currículos de pessoas habilitadas ou não pela
+                    Universidade
+                    de Tecnologia do Varejo
+                    (UTV), facilitando o acesso ao emprego;</p>
+                <p style="margin-left: 30px">5.3. Captar clientes potenciais com os cursos da UTV / CDL Manaus.
+                </p>
+                <p><b>6. POLÍTICA DE PRIVACIDADE</b></p>
+                <p style="margin-left: 30px">6.1.<b> O que fazemos com as suas informações?</b></p>
+                <p style="margin-left: 45px"><span
+                        style="margin-right: 20px; color:#000;font-size:20px;"><b>a</b></span>.
+                    Quando
+                    você realiza seu cadastro em nossa plataforma, coletamos as informações pessoais
+                    que você nos fornece, tais como seu nome, CPF, RG, e-mail, número de telefone e/ou telefone
+                    celular, morada, data de nascimento, grau de escolaridade, cursos de aprimoramento,
+                    informações profissionais e últimas experiências relacionadas a emprego.</p>
+
+                <p style="margin-left: 45px"><span
+                        style="margin-right: 20px; color:#000;font-size:20px;"><b>b</b></span>.
+                    De posse
+                    dessas informações, partes delas serão distribuídas em nossa página para facilitar a
+                    ligação entre você e uma empresa e vice-versa, através de um algoritmo criado
+                    especificamente para essa função. Sendo assim, uma empresa ou uma instituição, seja ela
+                    pública ou privada terá acesso a seus dados.</p>
+                <p style="margin-left: 45px"><span
+                        style="margin-right: 20px; color:#000;font-size:20px;"><b>c</b></span>. A
+                    CDL
+                    Manaus se compromete a não usar seus dados para outros fins que não sejam única e
+                    exclusivamente para intermediar contatos de trabalho entre você e uma empresa e/ou
+                    instituição. No entanto a CDL não tem responsabilidade por qualquer vínculo empregatício
+                    ou acordo firmado entre as partes.</p>
+
+                <p style="margin-left: 45px"><span
+                        style="margin-right: 20px; color:#000;font-size:20px;"><b>d</b></span>. É
+                    vedado
+                    o acesso total de empresas não cadastradas aos seus dados.</p>
+                <p style="margin-left: 45px"><span
+                        style="margin-right: 20px; color:#000;font-size:20px;"><b>e</b></span>.
+                    Se faz
+                    necessário ressaltar, que ao aceitar nossa política de privacidade, você nos autoriza a
+                    informá-lo sobre nossos serviços, produtos e outras atualizações por e-mail, sms ou outro
+                    meio eletrônico.
+                </p>
+                <p style="margin-left: 45px"><span
+                        style="margin-right: 20px; color:#000;font-size:20px;"><b>f</b></span>.
+                    Todas as
+                    informações pessoais relativas a membros, assinantes, clientes ou visitantes que
+                    usem o portal de empregabilidade serão tratadas em concordância com a Lei da Proteção de
+                    Dados Pessoais (Lei nº 13.709/18).</p>
+                <p style="margin-left: 45px"><span
+                        style="margin-right: 20px; color:#000;font-size:20px;"><b>g</b></span>. O
+                    uso do
+                    sistema de empregabilidade CDL MANAUS pressupõe a aceitação deste acordo de
+                    privacidade. A CDL MANAUS reserva-se ao direito de alterar este acordo sem aviso prévio.
+                    Deste modo, recomendamos que consulte a nossa política de privacidade com regularidade
+                    de forma a estar sempre atualizado.</p>
+
+                <p><b>6.2. Os anúncios de oferta de vagas e programação de treinamento e capacitação da CDL Manaus.
+                    </b></p>
+                <p style="margin-left: 45px"><span
+                        style="margin-right: 20px; color:#000;font-size:20px;"><b>a</b></span>. A
+                    política de anúncios do sistema de Empregabilidade CDL Manaus, restringe sua publicidade
+                    de anúncios ao tempo da sua visita e as páginas que visitou dentro do nosso website. </p>
+                <p><b>6.3. Cookies</b></p>
+                <p style="margin-left: 45px"><span
+                        style="margin-right: 20px; color:#000;font-size:20px;"><b>a</b></span>. A
+                    CDL
+                    MANAUS, não utiliza cookies muito menos armazena dados de clientes para
+                    comercializar ou exibir anúncios. </p>
+                <p style="margin-left: 45px"><span
+                        style="margin-right: 20px; color:#000;font-size:20px;"><b>b</b></span>.
+                    Os
+                    cookies rastreáveis são ou pode ser partes referentes as ligações de uso dos sites das redes
+                    sociais. (Facebook, Instagram, Youtube e outros)</p>
+
+                <p><b>6.4. Ligações a sites de terceiros</b></p>
+
+                <p style="margin-left: 45px"><span
+                        style="margin-right: 20px; color:#000;font-size:20px;"><b>a</b></span>. O
+                    CDL
+                    MANAUS possui ligações para outros sites, os quais, ao nosso ver, podem conter
+                    informações / ferramentas úteis para os nossos visitantes. A nossa política de privacidade não
+                    é aplicada a sites de terceiros, pelo que, caso visite outro site a partir do nosso deverá ler a
+                    política de privacidade do mesmo. </p>
+                <p style="margin-left: 45px"><span
+                        style="margin-right: 20px; color:#000;font-size:20px;"><b>b</b></span>. A
+                    CDL
+                    MANAUS não se responsabiliza pela política de privacidade ou conteúdo presente nos
+                    sites de terceiros.</p>
+
+                <p><b>7. DO CONSENTIMENTO DE USO DE SUAS INFORMAÇÕES</b></p>
+                <p style="margin-left: 30px">7.1 Quando você nos fornece as suas informações pessoais para completar seu
+                    cadastro,
+                    automaticamente está concordando com a nossa coleta e uso de informações pessoais apenas
+                    para esses fins específicos.
+                </p>
+                <p style="margin-left: 30px">7.2 <b>Como posso retirar os meus dados da lista de marketing?</b> </p>
+                <p style="margin-left: 45px"><span
+                        style="margin-right: 20px; color:#000;font-size:20px;"><b>a</b></span>.
+                    Podemos
+                    divulgar suas informações pessoais se formos obrigados por lei a fazê-lo (para
+                    autoridades competentes) ou se você violar nossos Termos de Serviço. </p>
+
+                <p><b>8. DA SEGURANÇA DE SEUS DADOS</b></p>
+                <p style="margin-left: 30px">8.1 <b>Links Internos e Links Externos</b><br>Quando você nos fornece as
+                    suas
+                    informações pessoais para completar seu cadastro,
+                    automaticamente está concordando com a nossa coleta e uso de informações pessoais apenas
+                    para esses fins específicos.
+                </p>
+                <p><b>9. DA IDADE DE CONSENTIMENTO</b></p>
+                <p style="margin-left: 30px">9.1. Ao usar esse site e cadastrar suas informações, você confirma que é
+                    maior
+                    de idade ou que
+                    realizou seu cadastro sob a orientação de uma pessoa responsável maior idade, e que se localizava
+                    em seu estado ou província de residência e que nos deu seu consentimento para armazenar seus
+                    dados pessoais.
+                </p>
+
+                <p><b>10. DAS ALTERAÇÕES NA POLÍTICA DE PRIVACIDADE </b></p>
+                <p style="margin-left: 30px">10.1. Reservamos o direito de modificar essa política de privacidade a
+                    qualquer
+                    momento. Portanto,
+                    por favor, leia-a com frequência. As alterações e esclarecimentos surtem efeito imediatamente
+                    após serem publicadas no site. Caso façamos alterações na política de privacidade, iremos
+                    notificálo
+                    sobre a atualização. Assim, você saberá quais informações coletamos, como as usamos, e sob
+                    que circunstâncias, caso aplicável, as utilizaremos e/ou divulgaremos.
+
+                </p>
+                <p style="margin-left: 30px">10.2. Caso ocorra a fusão de nosso site com outra ferramenta da empresa,
+                    suas
+                    informações podem ser
+                    transferidas para os novos bancos de dados para que possamos continuar acessando e ofertando
+                    nossos serviços e produtos para você.
+
+                </p>
+
+                <p><b>11. PERGUNTAS E INFORMAÇÕES DE CONTATO </b></p>
+                <p style="margin-left: 30px">11.1. Se você gostaria de acessar, corrigir, alterar ou excluir quaisquer
+                    informações pessoais que temos
+                    sobre você, registre uma queixa, ou simplesmente peça mais informações de contato conosco
+                    através do e-mail suporte@cdlmanaus.org.br ou por telefone: (92) 3627-2894.
+
+                </p>
+
+
+            </div>
+
+            <div class="form-check" style="margin-top: 80px">
+                <input class="form-check-input" type="checkbox" name="termo" id="termo" required>
+                <label class="form-check-label" for="flexCheckChecked" style="color: #0d6efd">
+                    Li e aceito os Termos da Política de Dados do Site<span><strong>*</strong></span></label>
+                </label>
+            </div>
+            <hr>
+            <!--
         <div class="text-end">
             <input type="submit" class="btn btn-primary" value="Salvar Registros">
         </div>
 
     -->
-        <span> Campos Obrigatórios <strong>*</strong></span>
-        <div class="text-end">
-            <input type="submit" class="btn btn-primary" value="Salvar Registros">
+            <span> Campos Obrigatórios <strong>*</strong></span>
+            <div class="text-end">
+                <input type="submit" class="btn btn-primary" value="Salvar Registros">
+            </div>
         </div>
-    </div>
 
 
 
@@ -865,57 +885,67 @@
 
 
 <script>
-    var cont =1;
+    var cont01 =1;
     function addCampos(){
      
-        var div = document.createElement('div');
-        div.innerHTML = '<div class="row g-3 shadow p-3 mb-5 bg-body rounded" id="div'+cont+'" style="margin:0px 20px 0px 20px; padding:20px;"> <div class="text-end"> <input type="button" class="btn btn-danger btn-sm" onclick="removeCampos('+cont+')" value="Remover Curso"></div><div class="col-md-4"> <label class="form-check-label" for="flexCheckIndeterminate">Cursos extracurriculares</label><input type="text" class="form-control form-control-sm" name="curso_extra[]" placeholder=""> </div><div class="col-md-2"> <label class="form-check-label" for="flexCheckIndeterminate">Ano termino</label><input type="month" class="form-control form-control-sm" name="curso_ano_termino[]" placeholder=""></div><div class="col-md-4"> <label class="form-check-label" for="flexCheckIndeterminate">Aréa de Atuação</label><select class="form-select form-select-sm" name="curso_area_atuacao[]" id="areaatuacao"><option selected value="0"></option></select>  </div>';
-                 document.getElementById('lista').appendChild(div)
-        cont++;
+        if(cont01 < 4){
 
+        var div = document.createElement('div');
+        div.innerHTML = '<div class="row g-3 shadow p-3 mb-5 bg-body rounded" id="div'+cont01+'" style="margin:0px 20px 0px 20px; padding:20px;"> <div class="text-end"> <input type="button" class="btn btn-danger btn-sm" onclick="removeCampos('+cont01+')" value="Remover Curso"></div><div class="col-md-4"> <label class="form-check-label" for="flexCheckIndeterminate">Cursos extracurriculares</label><input type="text" class="form-control form-control-sm" name="curso_extra[]" placeholder=""> </div><div class="col-md-2"> <label class="form-check-label" for="flexCheckIndeterminate">Ano termino</label><input type="month" class="form-control form-control-sm" name="curso_ano_termino[]" placeholder=""></div><div class="col-md-4"> <label class="form-check-label" for="flexCheckIndeterminate">Aréa de Atuação</label><select class="form-select form-select-sm" name="curso_area_atuacao[]" id="areaatuacao"><option selected value="0"></option></select>  </div>';
+                 document.getElementById('lista').appendChild(div)
+        cont01++;
+
+        }
     }
 
     function removeCampos(id){
 
          document.getElementById('div'+id).remove();   
+         cont01--;
     }
 </script>
 
 <script>
-    var cont =1;
+    var cont02 =1;
     function addCamposUtv(){
      
+    if(cont02 < 4){
+
         var div = document.createElement('div');
-        div.innerHTML = '<div class="row g-3 shadow p-3 mb-5 bg-body rounded" id="divUTv'+cont+'" style="margin:0px 20px 0px 20px; padding:20px;"> <div class="text-end"> <input type="button" class="btn btn-danger btn-sm" onclick="removeCamposUTv('+cont+')" value="Remover Curso"></div> <div class="col-md-4"><label class="form-check-label" for="flexCheckIndeterminate">Título do curso</label> <input type="text" class="form-control form-control-sm" name="utv_titlulo[]" placeholder=""> </div>  <div class="col-md-2">  <label class="form-check-label" for="flexCheckIndeterminate">Carga horária</label> <input type="text" class="form-control form-control-sm" name="utv_carga[]" placeholder="">  </div> <div class="col-md-2">  <label class="form-check-label" for="flexCheckIndeterminate">Data de Emissão</label><input type="month" class="form-control form-control-sm" name="utv_data[]" placeholder=""> </div><div class="col-md-4" id="tempoexperiencia_div"><label class="form-check-label" for="flexCheckIndeterminate">Área de Atuação</label><input type="text" class="form-control form-control-sm" name="utv_area[]" placeholder=""> </div>';
+        div.innerHTML = '<div class="row g-3 shadow p-3 mb-5 bg-body rounded" id="divUTv'+cont02+'" style="margin:0px 20px 0px 20px; padding:20px;"> <div class="text-end"> <input type="button" class="btn btn-danger btn-sm" onclick="removeCamposUTv('+cont02+')" value="Remover Curso"></div> <div class="col-md-4"><label class="form-check-label" for="flexCheckIndeterminate">Título do curso</label> <input type="text" class="form-control form-control-sm" name="utv_titlulo[]" placeholder=""> </div>  <div class="col-md-2">  <label class="form-check-label" for="flexCheckIndeterminate">Carga horária</label> <input type="text" class="form-control form-control-sm" name="utv_carga[]" placeholder="">  </div> <div class="col-md-2">  <label class="form-check-label" for="flexCheckIndeterminate">Data de Emissão</label><input type="month" class="form-control form-control-sm" name="utv_data[]" placeholder=""> </div><div class="col-md-4" id="tempoexperiencia_div"><label class="form-check-label" for="flexCheckIndeterminate">Área de Atuação</label><input type="text" class="form-control form-control-sm" name="utv_area[]" placeholder=""> </div>';
                  document.getElementById('listaUTv').appendChild(div)
-        cont++;
+        cont02++;
 
+        }
     }
-
     function removeCamposUTv(id){
 
          document.getElementById('divUTv'+id).remove();   
+         cont02--;
     }
 </script>
 
 <script>
-    var cont =1;
+    var cont03 =1;
     function addIdioma(){
 
+    if(cont03 < 4){
         
         if(document.getElementById('idioma').value != ''){
 
         var div = document.createElement('div');
-        div.innerHTML = '<div class="row g-3 shadow p-3 mb-5 bg-body rounded" id="divIdioma'+cont+'" style="margin:0px 20px 0px 20px; padding:20px;"> <div class="text-end"> <input type="button" class="btn btn-danger btn-sm" onclick="removeCamposIdioma('+cont+')" value="Remover Curso"></div>  <div class="col-md-3"> <label class="form-check-label" for="flexCheckIndeterminate">Escolha um idioma <span><strong>*</strong></span></label> <select class="form-select form-select-sm" name="idioma[]" id="idioma" aria-label="Default select example"><option selected></option>  <option value="Inglês">Inglês</option><option value="Francês">Francês</option><option value="Espanhol">Espanhol</option></select></div><div class="col-md-2" id="div_encrita"><label class="form-check-label" for="flexCheckIndeterminate">Escrita</label> <div class="form-check "> <input class="form-check-input" type="radio" name="idioma_escrita[]" id="idioma_escrita_basico'+cont+'"><label class="form-check-label" for="idioma_escrita_basico'+cont+'">  Básico</label> </div><div class="form-check "> <input class="form-check-input" type="radio" name="idioma_escrita[]" id="idioma_escrita_internediario" value="option3"> <label class="form-check-label" for="idioma_escrita_internediario"> Intermediário  </label>  </div> <div class="form-check "><input class="form-check-input" type="radio" name="idioma_escrita[]" id="idioma_escrita_avancado" value="option3">  <label class="form-check-label" for="idioma_escrita_avancado"> Avançado</label></div></div> <div class="col-md-2" id="div_leitura"> <label class="form-check-label" for="flexCheckIndeterminate">Leitura</label>               <div class="form-check "> <input class="form-check-input" type="radio" name="idioma_leitura[]" id="idioma_leitura_basico"  value="option2"> <label class="form-check-label" for="idioma_leitura_basico"> Básico </label> </div> <div class="form-check "> <input class="form-check-input" type="radio" name="idioma_leitura[]" id="idioma_leitura_internediario" value="option3">  <label class="form-check-label" for="idioma_leitura_internediario">  Intermediário </label>  </div> <div class="form-check "> <input class="form-check-input" type="radio" name="idioma_leitura[]" id="idioma_leitura_avancado" value="option3"> <label class="form-check-label" for="idioma_leitura_avancado">  Avançado </label>  </div> </div>  <div class="col-md-2" id="div_conversa"> <label class="form-check-label" for="flexCheckIndeterminate">Conversação</label>  <div class="form-check "><input class="form-check-input" type="radio" name="idioma_conversacao[]" id="idioma_conversacao_basico" value="option2"><label class="form-check-label" for="idioma_conversacao_basico">  Básico </label>  </div>  <div class="form-check ">   <input class="form-check-input" type="radio" name="idioma_conversacao[]"  id="idioma_conversacao_internediario" value="option3"> <label class="form-check-label" for="idioma_conversacao_internediario"> Intermediário</label> </div> <div class="form-check "> <input class="form-check-input" type="radio" name="idioma_conversacao[]" id="idioma_conversacao_avancado" value="option3">  <label class="form-check-label" for="idioma_conversacao_avancado"> Avançado </label> </div>   </div> </div> ';
+        div.innerHTML = '<div class="row g-3 shadow p-3 mb-5 bg-body rounded" id="divIdioma'+cont03+'" style="margin:0px 20px 0px 20px; padding:20px;"> <div class="text-end"> <input type="button" class="btn btn-danger btn-sm" onclick="removeCamposIdioma('+cont03+')" value="Remover Curso"></div>  <div class="col-md-3"> <label class="form-check-label" for="flexCheckIndeterminate">Escolha um idioma <span><strong>*</strong></span></label> <select class="form-select form-select-sm" name="idioma[]" id="idioma" aria-label="Default select example"><option selected></option>  <option value="Inglês">Inglês</option><option value="Francês">Francês</option><option value="Espanhol">Espanhol</option></select></div><div class="col-md-2" id="div_encrita"><label class="form-check-label" for="flexCheckIndeterminate">Escrita</label> <div class="form-check "> <input class="form-check-input" type="radio" name="idioma_escrita[]" id="idioma_escrita_basico'+cont03+'"><label class="form-check-label" for="idioma_escrita_basico'+cont03+'">  Básico</label> </div><div class="form-check "> <input class="form-check-input" type="radio" name="idioma_escrita[]" id="idioma_escrita_internediario" value="option3"> <label class="form-check-label" for="idioma_escrita_internediario"> Intermediário  </label>  </div> <div class="form-check "><input class="form-check-input" type="radio" name="idioma_escrita[]" id="idioma_escrita_avancado" value="option3">  <label class="form-check-label" for="idioma_escrita_avancado"> Avançado</label></div></div> <div class="col-md-2" id="div_leitura"> <label class="form-check-label" for="flexCheckIndeterminate">Leitura</label>               <div class="form-check "> <input class="form-check-input" type="radio" name="idioma_leitura[]" id="idioma_leitura_basico"  value="option2"> <label class="form-check-label" for="idioma_leitura_basico"> Básico </label> </div> <div class="form-check "> <input class="form-check-input" type="radio" name="idioma_leitura[]" id="idioma_leitura_internediario" value="option3">  <label class="form-check-label" for="idioma_leitura_internediario">  Intermediário </label>  </div> <div class="form-check "> <input class="form-check-input" type="radio" name="idioma_leitura[]" id="idioma_leitura_avancado" value="option3"> <label class="form-check-label" for="idioma_leitura_avancado">  Avançado </label>  </div> </div>  <div class="col-md-2" id="div_conversa"> <label class="form-check-label" for="flexCheckIndeterminate">Conversação</label>  <div class="form-check "><input class="form-check-input" type="radio" name="idioma_conversacao[]" id="idioma_conversacao_basico" value="option2"><label class="form-check-label" for="idioma_conversacao_basico">  Básico </label>  </div>  <div class="form-check ">   <input class="form-check-input" type="radio" name="idioma_conversacao[]"  id="idioma_conversacao_internediario" value="option3"> <label class="form-check-label" for="idioma_conversacao_internediario"> Intermediário</label> </div> <div class="form-check "> <input class="form-check-input" type="radio" name="idioma_conversacao[]" id="idioma_conversacao_avancado" value="option3">  <label class="form-check-label" for="idioma_conversacao_avancado"> Avançado </label> </div>   </div> </div> ';
                  document.getElementById('listaIdioma').appendChild(div)
-        cont++;
+        cont03++;
 
         }
+    }
     }
 
     function removeCamposIdioma(id){
 
          document.getElementById('divIdioma'+id).remove();   
+         cont03--;
     }
 </script>
 
@@ -923,19 +953,22 @@
 
 
 <script>
-    var cont =1;
+    var cont04 =1;
     function addExperiencia(){
-        
+        if(cont04 <4){
+
         var div = document.createElement('div');
-        div.innerHTML = '<div  class="row g-3 shadow p-3 mb-5 bg-body rounded" id="divExperiencia'+cont+'" style="margin: 10px"> <div class="text-end"> <input type="button" class="btn btn-danger btn-sm" onclick="removeCamposEx('+cont+')" value="Remover Curso"></div> <div class="col-md-6" id="01">  <label class="form-check-label" for="flexCheckIndeterminate">Nome da empresa </label> <input type="text" class="form-control form-control-sm" name="nome_empresa[]" placeholder=""> </div><div class="col-md-4" id="02"> <label class="form-check-label" for="flexCheckIndeterminate">Cargo </label> <input type="text" class="form-control form-control-sm" name="cargo_empresa[]" placeholder=""> </div> <div class="col-md-2" style="margin-top: 40px;" id="03"> <label class="form-check-label" for="inlineCheckbox1">Empresa atual?</label><input class="form-check-input" type="checkbox" name="atual_empresa[]"> </div> <div class="col-md-2" id="04"> <label class="form-check-label" for="flexCheckIndeterminate">Data de Admissão </label>  <input type="month" class="form-control form-control-sm" placeholder="" name="data_inicio_empresa[]"> </div> <div class="col-md-2" id="05"><label class="form-check-label" for="flexCheckIndeterminate">Data de termino </label><input type="month" class="form-control form-control-sm" placeholder="" name="data_termino_empresa[]">  </div> <div class="col-md-2" id="06"><label class="form-check-label" for="flexCheckIndeterminate">Salário</label>  <input type="text" class="form-control form-control-sm" placeholder="" name="salario_empresa[]">  </div>  <div class="col-md-3" id="07">   <label class="form-check-label" for="flexCheckIndeterminate">Softwares utilizava</label>  <input type="text" class="form-control form-control-sm" placeholder="" name="software_empresa[]"> </div></div></div>';
+        div.innerHTML = '<div  class="row g-3 shadow p-3 mb-5 bg-body rounded" id="divExperiencia'+cont04+'" style="margin: 10px"> <div class="text-end"> <input type="button" class="btn btn-danger btn-sm" onclick="removeCamposEx('+cont04+')" value="Remover Curso"></div> <div class="col-md-6" id="01">  <label class="form-check-label" for="flexCheckIndeterminate">Nome da empresa </label> <input type="text" class="form-control form-control-sm" name="nome_empresa[]" placeholder=""> </div><div class="col-md-4" id="02"> <label class="form-check-label" for="flexCheckIndeterminate">Cargo </label> <input type="text" class="form-control form-control-sm" name="cargo_empresa[]" placeholder=""> </div> <div class="col-md-2" style="margin-top: 40px;" id="03"> <label class="form-check-label" for="inlineCheckbox1">Empresa atual?</label><input class="form-check-input" type="checkbox" name="atual_empresa[]"> </div> <div class="col-md-2" id="04"> <label class="form-check-label" for="flexCheckIndeterminate">Data de Admissão </label>  <input type="month" class="form-control form-control-sm" placeholder="" name="data_inicio_empresa[]"> </div> <div class="col-md-2" id="05"><label class="form-check-label" for="flexCheckIndeterminate">Data de termino </label><input type="month" class="form-control form-control-sm" placeholder="" name="data_termino_empresa[]">  </div> <div class="col-md-2" id="06"><label class="form-check-label" for="flexCheckIndeterminate">Salário</label>  <input type="text" class="form-control form-control-sm" placeholder="" name="salario_empresa[]">  </div>  <div class="col-md-3" id="07">   <label class="form-check-label" for="flexCheckIndeterminate">Softwares utilizava</label>  <input type="text" class="form-control form-control-sm" placeholder="" name="software_empresa[]"> </div></div></div>';
                  document.getElementById('listaExperiencia').appendChild(div)
-        cont++;
+        cont04++;
        
+        }
     }
 
     function removeCamposEx(id){
 
          document.getElementById('divExperiencia'+id).remove();   
+         cont04--;
     }
 </script>
 
@@ -1118,9 +1151,7 @@ function mphone(v) {
 <!--------------------------------------------------->
 
 <script>
-
-
-function moeda(a, e, r, t) {
+    function moeda(a, e, r, t) {
     let n = ""
       , h = j = 0
       , u = tamanho2 = 0
@@ -1160,8 +1191,6 @@ function moeda(a, e, r, t) {
 </script>
 
 <script>
-
-      
     function validaCPF(cpf)
      {
        var numeros, digitos, soma, i, resultado, digitos_iguais;
@@ -1196,4 +1225,4 @@ function moeda(a, e, r, t) {
        else
            return false;
      }
-       </script>
+</script>
