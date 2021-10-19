@@ -715,6 +715,100 @@ $candidato;
     </div>
 </div>
 
+<div class="form-signin" style="margin-bottom: 50px">
+    <div class="text-end">
+        <label class="switch">
+            <input type="checkbox" checked id="preferencia">
+            <span class="slider round"></span>
+        </label>
+    </div>
+
+    <div class="text">
+        <h2 class="form-signin-heading">Prefêrencias Profissionais
+        </h2>
+
+        <hr>
+    </div>
+
+    <div class="preferencia">
+
+
+        <div class="row g-3 shadow p-3 mb-5 bg-body rounded" id="00" style="margin: 10px">
+
+            @php
+            $tamanho5 = count($candidato->can_tempoexperiencia);
+
+            if(!empty($candidato->can_tempoexperiencia)){
+
+            $tamanho5 = count($candidato->can_tempoexperiencia);
+            }else{
+            $tamanho5 = 1;
+            }
+
+
+            @endphp
+
+
+            <div class="row g-3">
+                <div class="col-md-6" id="tempoexperiencia_div">
+                    <label class="form-check-label" for="flexCheckIndeterminate">Selecione Prefêrencias
+                        Profissionais</label>
+                    <select class="form-select form-select-sm" name="tempoexperiencia[]" id="tempoexperiencia"
+                        aria-label="Default select example" required>
+                        <option selected></option>
+                        <option  value="Financeiro">Financeiro</option>
+                        <option  value="Administração">Administração</option>
+                        <option  value="Vendas">Vendas</option>
+                        <option  value="RH">RH</option>
+                        <option  value="Técnologia da informação">Técnologia da informação</option>
+                        <option  value="Logística">Logística</option>
+                        <option  value="Produção">Produção</option>
+                    </select>
+                </div>
+                <div class="col-md-2" style="margin-top: 42px;">
+                
+                        <input type="button" class="btn btn-success btn-sm" onclick="addPreferencia()"
+                            value="Adicionar Prefêrencias">
+                    
+                </div>
+            </div>
+
+            @for($i = 0; $i <$tamanho5; $i++)
+            
+            <div class="row g-3" id="divPreferencia<?php echo $i; ?>">
+                <div class="col-md-6" id="">
+                    <label class="form-check-label" for="flexCheckIndeterminate">Selecione Prefêrencias
+                        Profissionais</label>
+                    <select class="form-select form-select-sm" name="tempoexperiencia[]" id="tempoexperiencia"
+                        aria-label="Default select example" required>
+                        <option selected></option>
+                        <option {{$candidato->can_tempoexperiencia[$i] == 'Financeiro' ? 'selected' :''}} value="Financeiro">Financeiro</option>
+                        <option {{$candidato->can_tempoexperiencia[$i] == 'Administração' ? 'selected' :''}}  value="Administração">Administração</option>
+                        <option {{$candidato->can_tempoexperiencia[$i] == 'Vendas' ? 'selected' :''}}  value="Vendas">Vendas</option>
+                        <option {{$candidato->can_tempoexperiencia[$i] == 'RH' ? 'selected' :''}}  value="RH">RH</option>
+                        <option {{$candidato->can_tempoexperiencia[$i] == 'Técnologia da informação' ? 'selected' :''}}  value="Técnologia da informação">Técnologia da informação</option>
+                        <option {{$candidato->can_tempoexperiencia[$i] == 'Logística' ? 'selected' :''}}  value="Logística">Logística</option>
+                        <option {{$candidato->can_tempoexperiencia[$i] == 'Produção' ? 'selected' :''}}  value="Produção">Produção</option>
+                    </select>
+                </div>
+                <div class="col-md-2" style="margin-top: 42px;">
+                   
+                    <input type="button" class="btn btn-danger btn-sm" onclick="removeCamposPreferencia(<?php echo $i;?>)" value="Remover Prefêrencias">
+                    
+                </div>
+            </div>
+            @endfor
+            <!-- div responsavel por adicionar outros campo -->
+            <div id="listaPreferencia" style="padding-top: 20px"> </div>
+            <!-- ****************************************** -->
+
+        </div>
+    </div>
+</div>
+
+
+
+
 
 
     <div class="row g-3 shadow p-3 mb-5 bg-body rounded" id="00" style="margin: 10px">
@@ -1047,6 +1141,25 @@ $candidato;
 
 </script>
 
+<script>
+    var cont05 =1;
+    function addPreferencia(){
+        if(cont05 <4){
+
+        var div = document.createElement('div');
+        div.innerHTML = '<div class="row g-3" id="divPreferencia'+cont05+'"><div class="col-md-6" id="tempoexperiencia_div"><label class="form-check-label" for="flexCheckIndeterminate">Selecione Prefêrencias Profissionais</label> <select class="form-select form-select-sm" name="tempoexperiencia[]" id="tempoexperiencia" aria-label="Default select example" required> <option selected></option><option value="Financeiro">Financeiro</option><option value="Administração">Administração</option><option value="Vendas">Vendas</option><option value="RH">RH</option><option value="Técnologia da informação">Técnologia da informação</option><option value="Logística">Logística</option> <option value="Produção">Produção</option></select></div><div class="col-md-2" id="tempoexperiencia_div" style="margin-top:42px"><input type="button" class="btn btn-danger btn-sm" onclick="removeCamposPreferencia('+cont05+')" value="Remover Prefêrencias"> </div></div></div>';
+                 document.getElementById('listaPreferencia').appendChild(div)
+        cont05++;
+       
+        }
+    }
+
+    function removeCamposPreferencia(id){
+
+         document.getElementById('divPreferencia'+id).remove();  
+         cont05--;
+    }
+</script>
 
 <!-- *************************validando cnpj ************************* -->
 <script>
