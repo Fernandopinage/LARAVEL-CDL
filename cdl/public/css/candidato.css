@@ -40,11 +40,11 @@ title{
   
     a:link{
       
-      color: #523617;
+      color: #fff;
     }
     a:hover {
       text-decoration: none;
-      color: black;
+      color: #fff;
     }
     hr{
       color: #fff;

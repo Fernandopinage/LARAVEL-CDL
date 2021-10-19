@@ -118,20 +118,24 @@
                         onKeyPress="return(moeda(this,'.',',',event))">
                 </div>
 
-                <div class="col-md-2" style="margin-top: 30px;">
+                <div class="col-md-2">
+                    <label class="form-check-label" for="flexCheckIndeterminate">Ex-militar? </label>
+                    <select name="exmilitar" id="exmilitar" class="form-select form-select-sm">
+                        <option selected></option>
+                        <option value="Sim">Sim</option>
+                        <option value="Não">Não</option>
 
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" name="exmilitar" id="exmilitar">
-                        <label class="form-check-label" for="inlineCheckbox1">Ex-militar?</label>
-                    </div>
+                    </select>
+
                 </div>
+
                 <div class="col-md-3" id="divMilitar">
                     <label class="form-check-label" for="flexCheckIndeterminate">Unidade Militar</label>
-                    <input type="text" class="form-control form-control-sm" name="unidademilitar" placeholder="">
+                    <input type="text" class="form-control form-control-sm" name="unidademilitar" id="unidademilitar" placeholder="">
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3" id="divMatricula">
                     <label class="form-check-label" for="flexCheckIndeterminate">Matrícula</label>
-                    <input type="text" class="form-control form-control-sm" name="matricula" placeholder="">
+                    <input type="text" class="form-control form-control-sm" name="matricula" id="matricula" placeholder="">
                 </div>
 
 
@@ -149,12 +153,12 @@
         </div>
         <div class="row g-3">
             <div class="text">
-                <h2 class="form-signin-heading">Informações de contato</h2>
+                <h2 class="form-signin-heading">Informações de Contato</h2>
                 <hr>
             </div>
 
             <div class="col-md-4">
-                <label class="form-check-label" for="flexCheckIndeterminate">Email </label>
+                <label class="form-check-label" for="flexCheckIndeterminate">E-mail </label>
                 <input type="text" class="form-control form-control-sm" placeholder="" name="email">
             </div>
             <div class="col-md-2">

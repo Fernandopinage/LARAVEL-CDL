@@ -172,6 +172,7 @@
 <script>
   $(document).ready(function(){
     document.getElementById('divMilitar').style.display ='none'
+    document.getElementById('divMatricula').style.display ='none'
       $('#curso_div').hide();
       $('#termino_div').hide();
       $('#semestre_div').hide();
@@ -179,18 +180,22 @@
       $('#institucao_div').hide();
   
   });
- document.getElementById('exmilitar').addEventListener('click',function(){
-   
-   if(document.getElementById('exmilitar').checked){
+ 
+    $('#exmilitar').change(function(){
+
+   if(document.getElementById('exmilitar').value == 'Sim'){
 
       document.getElementById('divMilitar').style.display = 'block'
-
+      document.getElementById('divMatricula').style.display ='block'
+    
     
    }else{
      document.getElementById('divMilitar').style.display ='none'
+     document.getElementById('divMatricula').style.display ='none'
       
    }
- })
+    });
+ 
 
 </script>
 
