@@ -381,9 +381,11 @@ $candidato;
         @endphp
 
 
-        @for($i = 0; $i <$tamanho; $i++) <div class="row g-3 shadow p-4 mb-5 bg-body rounded"
+        @for($i = 0; $i <$tamanho; $i++) <div class="row g-3 shadow p-4 mb-5 bg-body rounded" id="div<?php echo $i;?>"
             style="margin:0px 20px 0px 20px; padding:20px;">
-
+            <div class="text-end">
+                <input type="button" class="btn btn-danger btn-sm" onclick="removeCampos(<?php echo $i;?>)" value="Remover Curso">
+            </div>
             <div class="col-md-4">
                 <label class="form-check-label" for="flexCheckIndeterminate">Cursos extracurriculares</label>
                 <input type="text" class="form-control form-control-sm" name="curso_extra[]" placeholder=""
@@ -434,8 +436,11 @@ $candidato;
 
     @endphp
 
-    @for($i = 0; $i <$tamanho2; $i++) <div class="row g-3 shadow p-4 mb-5 bg-body rounded"
+    @for($i = 0; $i <$tamanho2; $i++) <div class="row g-3 shadow p-4 mb-5 bg-body rounded" id="divUTv<?php echo $i; ?>"
         style="margin:0px 20px 0px 20px; padding:20px;">
+        <div class="text-end">
+            <input type="button" class="btn btn-danger btn-sm" onclick="removeCamposUTv(<?php echo $i;?>)" value="Remover Curso">
+        </div>
 
         <div class="col-md-4">
             <label class="form-check-label" for="flexCheckIndeterminate">Título do curso</label>
@@ -496,8 +501,10 @@ $candidato;
             @endphp
 
             @for($i = 0; $i <$tamanho3; $i++) <div class="endereco">
-                <div class="row g-3 shadow p-3 mb-5 bg-body rounded" style="margin: 20px">
-
+                <div class="row g-3 shadow p-3 mb-5 bg-body rounded" id="divIdioma<?php echo $i;?>" style="margin: 20px">
+                    <div class="text-end">
+                        <input type="button" class="btn btn-danger btn-sm" onclick="removeIdioma(<?php echo $i;?>)" value="Remover Curso">
+                    </div>
                     <div class="col-md-3">
                         <label class="form-check-label" for="flexCheckIndeterminate">Escolha um idioma
                             <span><strong>*</strong></span></label>
@@ -656,8 +663,9 @@ $candidato;
 
                 @endphp
 
-                @for($i = 0; $i <$tamanho4; $i++) <div class="row g-3 shadow p-3 mb-5 bg-body rounded" id="00"
+                @for($i = 0; $i <$tamanho4; $i++) <div class="row g-3 shadow p-3 mb-5 bg-body rounded" id="divExperiencia<?php echo $i;?>"
                     style="margin: 10px">
+                    <div class="text-end"> <input type="button" class="btn btn-danger btn-sm" onclick="removeCamposEx(<?php echo $i;?>)" value="Remover Curso"></div>
                     <div class="col-md-6" id="01">
                         <label class="form-check-label" for="flexCheckIndeterminate">Nome da empresa </label>
                         <input type="text" class="form-control form-control-sm" name="nome_empresa[]" placeholder=""
@@ -1008,9 +1016,9 @@ $candidato;
                 if(cont03 < 4){
 
                     var div = document.createElement('div');
-                    div.innerHTML = '<div class="row g-3 shadow p-3 mb-5 bg-body rounded" id="divUTv'+cont03+'" style="margin:0px 20px 0px 20px; padding:20px;"> <div class="text-end"> <input type="button" class="btn btn-danger btn-sm" onclick="removeCamposUTv('+cont03+')" value="Remover Curso"></div> <div class="col-md-3">   <label class="form-check-label" for="flexCheckIndeterminate">Escolha um idioma  <span><strong>*</strong></span></label><select class="form-select form-select-sm" name="idioma[]" id="idioma"   aria-label="Default select example">  <option selected></option>        <option value="Inglês">Inglês</option>  <option value="Francês">Francês</option>  <option value="Espanhol">Espanhol</option>  </select></div> <div class="col-md-2" id="div_encrita"> <label class="form-check-label" for="flexCheckIndeterminate">Escrita</label>  <div class="form-check ">  <input class="form-check-input" type="radio" name="idioma_escrita[]" id="idioma_escrita_basico" value="option2"> <label class="form-check-label" for="idioma_escrita_basico"> Básico </label>  </div>   <div class="form-check ">  <input class="form-check-input" type="radio" name="idioma_escrita[]"  id="idioma_escrita_internediario" value="option3"> <label class="form-check-label" for="idioma_escrita_internediario">  Intermediário  </label> </div> <div class="form-check "> <input class="form-check-input" type="radio" name="idioma_escrita[]"  id="idioma_escrita_avancado" value="option3"> <label class="form-check-label" for="idioma_escrita_avancado"> Avançado</label> </div> </div> <div class="col-md-2" id="div_leitura"> <label class="form-check-label" for="flexCheckIndeterminate">Leitura</label> <div class="form-check ">  <input class="form-check-input" type="radio" name="idioma_leitura[]" id="idioma_leitura_basico" value="option2"><label class="form-check-label" for="idioma_leitura_basico"> Básico </label> </div> <div class="form-check "><input class="form-check-input" type="radio" name="idioma_leitura[]" id="idioma_leitura_internediario" value="option3"><label class="form-check-label" for="idioma_leitura_internediario"> Intermediário  </label> </div> <div class="form-check "> <input class="form-check-input" type="radio" name="idioma_leitura[]" id="idioma_leitura_avancado" value="option3"><label class="form-check-label" for="idioma_leitura_avancado">  Avançado </label> </div>  </div> <div class="col-md-2" id="div_conversa"> <label class="form-check-label" for="flexCheckIndeterminate">Conversação</label><div class="form-check "> <input class="form-check-input" type="radio" name="idioma_conversacao[]" id="idioma_conversacao_basico" value="option2"> <label class="form-check-label" for="idioma_conversacao_basico">   Básico   </label>   </div> <div class="form-check "><input class="form-check-input" type="radio" name="idioma_conversacao[]" id="idioma_conversacao_internediario" value="option3"> <label class="form-check-label" for="idioma_conversacao_internediario">  Intermediário  </label>   </div>  <div class="form-check ">  <input class="form-check-input" type="radio" name="idioma_conversacao[]"id="idioma_conversacao_avancado" value="option3"><label class="form-check-label" for="idioma_conversacao_avancado">  Avançado  </label>   </div> </div>';
+                    div.innerHTML = '<div class="row g-3 shadow p-3 mb-5 bg-body rounded" id="divIdioma'+cont03+'" style="margin:0px 20px 0px 20px; padding:20px;"> <div class="text-end"> <input type="button" class="btn btn-danger btn-sm" onclick="removeIdioma('+cont03+')" value="Remover Curso"></div> <div class="col-md-3">   <label class="form-check-label" for="flexCheckIndeterminate">Escolha um idioma  <span><strong>*</strong></span></label><select class="form-select form-select-sm" name="idioma[]" id="idioma"   aria-label="Default select example">  <option selected></option>        <option value="Inglês">Inglês</option>  <option value="Francês">Francês</option>  <option value="Espanhol">Espanhol</option>  </select></div> <div class="col-md-2" id="div_encrita"> <label class="form-check-label" for="flexCheckIndeterminate">Escrita</label>  <div class="form-check ">  <input class="form-check-input" type="radio" name="idioma_escrita[]" id="idioma_escrita_basico" value="option2"> <label class="form-check-label" for="idioma_escrita_basico"> Básico </label>  </div>   <div class="form-check ">  <input class="form-check-input" type="radio" name="idioma_escrita[]"  id="idioma_escrita_internediario" value="option3"> <label class="form-check-label" for="idioma_escrita_internediario">  Intermediário  </label> </div> <div class="form-check "> <input class="form-check-input" type="radio" name="idioma_escrita[]"  id="idioma_escrita_avancado" value="option3"> <label class="form-check-label" for="idioma_escrita_avancado"> Avançado</label> </div> </div> <div class="col-md-2" id="div_leitura"> <label class="form-check-label" for="flexCheckIndeterminate">Leitura</label> <div class="form-check ">  <input class="form-check-input" type="radio" name="idioma_leitura[]" id="idioma_leitura_basico" value="option2"><label class="form-check-label" for="idioma_leitura_basico"> Básico </label> </div> <div class="form-check "><input class="form-check-input" type="radio" name="idioma_leitura[]" id="idioma_leitura_internediario" value="option3"><label class="form-check-label" for="idioma_leitura_internediario"> Intermediário  </label> </div> <div class="form-check "> <input class="form-check-input" type="radio" name="idioma_leitura[]" id="idioma_leitura_avancado" value="option3"><label class="form-check-label" for="idioma_leitura_avancado">  Avançado </label> </div>  </div> <div class="col-md-2" id="div_conversa"> <label class="form-check-label" for="flexCheckIndeterminate">Conversação</label><div class="form-check "> <input class="form-check-input" type="radio" name="idioma_conversacao[]" id="idioma_conversacao_basico" value="option2"> <label class="form-check-label" for="idioma_conversacao_basico">   Básico   </label>   </div> <div class="form-check "><input class="form-check-input" type="radio" name="idioma_conversacao[]" id="idioma_conversacao_internediario" value="option3"> <label class="form-check-label" for="idioma_conversacao_internediario">  Intermediário  </label>   </div>  <div class="form-check ">  <input class="form-check-input" type="radio" name="idioma_conversacao[]"id="idioma_conversacao_avancado" value="option3"><label class="form-check-label" for="idioma_conversacao_avancado">  Avançado  </label>   </div> </div>';
                             document.getElementById('listaIdioma').appendChild(div)
-                            
+
                     cont03++;
                     console.log(cont03);
 
@@ -1018,9 +1026,9 @@ $candidato;
             }
 
         }
-    function removeCamposUTv(id){
+    function removeIdioma(id){
 
-         document.getElementById('divUTv'+id).remove();   
+         document.getElementById('divIdioma'+id).remove();   
          cont03--;
     }
 </script>
