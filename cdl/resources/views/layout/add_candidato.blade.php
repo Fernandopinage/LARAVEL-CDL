@@ -118,6 +118,104 @@
 
 
 <script>
+  $(document).ready(function() {
+
+    $('#pessoais').change(function(){
+      if($("#pessoais:checked").val() == undefined){
+        $("#pessoais").prop('checked', false);
+        $('.pessoais').hide(); 
+      }else{
+        $("#pessoais").prop('checked', true);
+        $('.pessoais').show(); 
+      }
+
+    });
+
+    $('#endereco').change(function(){
+      if($("#endereco:checked").val() == undefined){
+        $("#endereco").prop('checked', false);
+        $('.endereco').hide(); 
+      }else{
+        $("#endereco").prop('checked', true);
+        $('.endereco').show(); 
+      }
+
+    });
+
+    $('#informacoesContato').change(function(){
+      if($("#informacoesContato:checked").val() == undefined){
+        $("#informacoesContato").prop('checked', false);
+        $('.informacoesContato').hide(); 
+      }else{
+        $("#informacoesContato").prop('checked', true);
+        $('.informacoesContato').show(); 
+      }
+
+    });
+
+    $('#academica').change(function(){
+      if($("#academica:checked").val() == undefined){
+        $("#academica").prop('checked', false);
+        $('.academica').hide(); 
+      }else{
+        $("#academica").prop('checked', true);
+        $('.academica').show(); 
+      }
+
+    });
+
+    $('#idioma').change(function(){
+      if($("#idioma:checked").val() == undefined){
+        $("#idioma").prop('checked', false);
+        $('.idioma').hide(); 
+      }else{
+        $("#idioma").prop('checked', true);
+        $('.idioma').show(); 
+      }
+
+    });
+
+    $('#profissional').change(function(){
+      if($("#profissional:checked").val() == undefined){
+        $("#profissional").prop('checked', false);
+        $('.profissional').hide(); 
+      }else{
+        $("#profissional").prop('checked', true);
+        $('.profissional').show(); 
+      }
+
+    });
+
+    $('#preferencia').change(function(){
+      if($("#preferencia:checked").val() == undefined){
+        $("#preferencia").prop('checked', false);
+        $('.preferencia').hide(); 
+      }else{
+        $("#preferencia").prop('checked', true);
+        $('.preferencia').show(); 
+      }
+
+    });
+
+
+    $('#termo').change(function(){
+      if($("#termo:checked").val() == undefined){
+        $("#termo").prop('checked', false);
+        $('.termo').hide(); 
+      }else{
+        $("#termo").prop('checked', true);
+        $('.termo').show(); 
+      }
+
+    });
+
+  });
+    
+
+</script>
+
+
+<script>
   function profissional(id){
 
 

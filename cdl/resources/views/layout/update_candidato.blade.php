@@ -15,86 +15,90 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="/home/candidato"><img id="logo" src="/img/cdl_logo.png"></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="/vagas/candidato">Buscar Vagas</a>
-              </li>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/home/candidato"><img id="logo" src="/img/cdl_logo.png"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/vagas/candidato">Buscar Vagas</a>
+          </li>
 
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false">
-                  Opções
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="/editar/candidato/{{session('can_id')}}">Editar Candidato</a></li>
-                  <li><a class="dropdown-item" href="/alterar/senha/empresa">Redefinir Senha</a></li>
-                  <li>
-                    <hr class="dropdown-divider">
-                  </li>
-                  <li><a class="dropdown-item" href="/">Sair</a></li>
-                </ul>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Opções
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="/editar/candidato/{{session('can_id')}}">Editar Candidato</a></li>
+              <li><a class="dropdown-item" href="/alterar/senha/empresa">Redefinir Senha</a></li>
+              <li>
+                <hr class="dropdown-divider">
               </li>
+              <li><a class="dropdown-item" href="/">Sair</a></li>
             </ul>
-    
-          </div>
-          <ul class="nav justify-content-end">
-            <button type="button" class="btn btn position-relative" style="background-color:#F8F9FA; margin-right:10px">
-              <img src="/icons/outline_notifications_black_24dp.png"> 
-              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                99+
-                <span class="visually-hidden">unread messages</span>
-              </span>
-            </button>
-            <li class="nav-item">
-              <a class="nav-link active" target="_blank" aria-current="page" href="https://www.linkedin.com/company/cdlm/"><img src="/icons/1.png" width="25px"></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" target="_blank" aria-current="page" href="https://pt-br.facebook.com/cdlmanausoficial/"><img src="/icons/2.png" width="25px"></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" target="_blank" href="https://www.instagram.com/cdlmanaus/?hl=en"><img src="/icons/4.png" width="25px"></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" target="_blank" href="https://www.youtube.com/channel/UCyjD5GbQuRrztgyRxlVAZdQ"><img src="/icons/3.png" width="25px"></a>
-            </li>
-    
-          </ul>
-        </div>
-    
-      </nav>
-      
+          </li>
+        </ul>
 
-    <div class="container">
+      </div>
+      <ul class="nav justify-content-end">
+        <button type="button" class="btn btn position-relative" style="background-color:#F8F9FA; margin-right:10px">
+          <img src="/icons/outline_notifications_black_24dp.png">
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+            99+
+            <span class="visually-hidden">unread messages</span>
+          </span>
+        </button>
+        <li class="nav-item">
+          <a class="nav-link active" target="_blank" aria-current="page"
+            href="https://www.linkedin.com/company/cdlm/"><img src="/icons/1.png" width="25px"></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" target="_blank" aria-current="page"
+            href="https://pt-br.facebook.com/cdlmanausoficial/"><img src="/icons/2.png" width="25px"></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" target="_blank" href="https://www.instagram.com/cdlmanaus/?hl=en"><img src="/icons/4.png"
+              width="25px"></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" target="_blank" href="https://www.youtube.com/channel/UCyjD5GbQuRrztgyRxlVAZdQ"><img
+              src="/icons/3.png" width="25px"></a>
+        </li>
 
-        @yield('editar')
-
+      </ul>
     </div>
 
+  </nav>
 
-    <footer style="margin-top: 150px">
-        <nav class="navbar fixed-bottom navbar-expand-sm navbar bg" style="background-color: #284D92">
-            <div class="container" style="margin-top: 8px">
-                <div class="col-6 input-group-sm">
-                    <p class="text-start" style="color:#fff">Progride® é uma marca registrada ©
-                        <?php echo date('Y')?>
-                    </p>
-                </div>
-                <div class="col-6 input-group-sm">
-                    <p class="text-end" style="color:#fff">Desenvolvido por <img src="/icons/progride.png" width="25">
-                        Progride </p>
-                </div>
 
-            </div>
-        </nav>
-    </footer>
+  <div class="container">
+
+    @yield('editar')
+
+  </div>
+
+
+  <footer style="margin-top: 150px">
+    <nav class="navbar fixed-bottom navbar-expand-sm navbar bg" style="background-color: #284D92">
+      <div class="container" style="margin-top: 8px">
+        <div class="col-6 input-group-sm">
+          <p class="text-start" style="color:#fff">Progride® é uma marca registrada ©
+            <?php echo date('Y')?>
+          </p>
+        </div>
+        <div class="col-6 input-group-sm">
+          <p class="text-end" style="color:#fff">Desenvolvido por <img src="/icons/progride.png" width="25">
+            Progride </p>
+        </div>
+
+      </div>
+    </nav>
+  </footer>
 </body>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.0/jquery.min.js"></script>
 
@@ -154,8 +158,66 @@
 </script>
 
 <script>
+  $('#pessoais').change(function(){
+  if($("#pessoais:checked").val() == undefined){
+    $("#pessoais").prop('checked', false);
+    $('.pessoais').hide(); 
+  }else{
+    $("#pessoais").prop('checked', true);
+    $('.pessoais').show(); 
+  }
 
-$(document).ready(function(){
+});
+
+$('#informacoesContato').change(function(){
+  if($("#informacoesContato:checked").val() == undefined){
+    $("#informacoesContato").prop('checked', false);
+    $('.informacoesContato').hide(); 
+  }else{
+    $("#informacoesContato").prop('checked', true);
+    $('.informacoesContato').show(); 
+  }
+
+});
+
+$('#endereco').change(function(){
+  if($("#endereco:checked").val() == undefined){
+    $("#endereco").prop('checked', false);
+    $('.endereco').hide(); 
+  }else{
+    $("#endereco").prop('checked', true);
+    $('.endereco').show(); 
+  }
+
+});
+
+$('#academica').change(function(){
+  if($("#academica:checked").val() == undefined){
+    $("#academica").prop('checked', false);
+    $('.academica').hide(); 
+  }else{
+    $("#academica").prop('checked', true);
+    $('.academica').show(); 
+  }
+
+});
+
+$('#idioma_check').change(function(){
+
+      if($("#idioma_check:checked").val() == undefined){
+        $("#idioma_check").prop('checked', false);
+        $('.idioma_check').hide(); 
+      }else{
+        $("#idioma_check").prop('checked', true);
+        $('.idioma_check').show(); 
+      }
+
+    });
+
+</script>
+
+<script>
+  $(document).ready(function(){
 
    
 if(document.getElementById('formacao').value === 'Ensino_Fundamental_completo' || document.getElementById('formacao').value === 'Ensino_Fundamental_incompleto'){
@@ -345,6 +407,8 @@ if(document.getElementById('formacao').value  === 'Pós-Graduação_Cursando'){
   });
   
 </script>
+
+
 
 <!--<script src="/js/checkbox.js"></script> -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
