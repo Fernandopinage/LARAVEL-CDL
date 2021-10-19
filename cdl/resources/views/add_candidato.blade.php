@@ -434,80 +434,47 @@
                     <label class="form-check-label" for="flexCheckIndeterminate">Digite outro idioma</label>
                     <input type="text" name="outro_idioma[]" id="outro_idioma" class="form-control form-control-sm">
                 </div>
-                <div class="col-md-2" id="div_encrita">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Escrita</label>
-                    <div class="form-check ">
-                        <input class="form-check-input" type="radio" name="idioma_escrita[]" id="idioma_escrita_basico"
-                            value="option2">
-                        <label class="form-check-label" for="idioma_escrita_basico">
-                            Básico
-                        </label>
-                    </div>
-                    <div class="form-check ">
-                        <input class="form-check-input" type="radio" name="idioma_escrita[]"
-                            id="idioma_escrita_internediario" value="option3">
-                        <label class="form-check-label" for="idioma_escrita_internediario">
-                            Intermediário
-                        </label>
-                    </div>
-                    <div class="form-check ">
-                        <input class="form-check-input" type="radio" name="idioma_escrita[]"
-                            id="idioma_escrita_avancado" value="option3">
-                        <label class="form-check-label" for="idioma_escrita_avancado">
-                            Avançado
-                        </label>
-                    </div>
+                <div class="col-md-3">
+                    <label class="form-check-label" for="flexCheckIndeterminate">Nível de Escrita
+                        <span><strong>*</strong></span></label>
+                    <select class="form-select form-select-sm" name="idioma_escrita[]" id="idioma_escrita"
+                        aria-label="Default select example">
+                        <option selected></option>
+                        <option value="Básico">Básico</option>
+                        <option value="Intermediário">Intermediário</option>
+                        <option value="Avançado">Avançado</option>
+                        
+
+                    </select>
                 </div>
 
-                <div class="col-md-2" id="div_leitura">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Leitura</label>
-                    <div class="form-check ">
-                        <input class="form-check-input" type="radio" name="idioma_leitura[]" id="idioma_leitura_basico"
-                            value="option2">
-                        <label class="form-check-label" for="idioma_leitura_basico">
-                            Básico
-                        </label>
-                    </div>
-                    <div class="form-check ">
-                        <input class="form-check-input" type="radio" name="idioma_leitura[]"
-                            id="idioma_leitura_internediario" value="option3">
-                        <label class="form-check-label" for="idioma_leitura_internediario">
-                            Intermediário
-                        </label>
-                    </div>
-                    <div class="form-check ">
-                        <input class="form-check-input" type="radio" name="idioma_leitura[]"
-                            id="idioma_leitura_avancado" value="option3">
-                        <label class="form-check-label" for="idioma_leitura_avancado">
-                            Avançado
-                        </label>
-                    </div>
+                <div class="col-md-3">
+                    <label class="form-check-label" for="flexCheckIndeterminate">Nível de Leitura
+                        <span><strong>*</strong></span></label>
+                    <select class="form-select form-select-sm" name="idioma_leitura[]" id="idioma_leitura"
+                        aria-label="Default select example">
+                        <option selected></option>
+                        <option value="Básico">Básico</option>
+                        <option value="Intermediário">Intermediário</option>
+                        <option value="Avançado">Avançado</option>
+                        
+
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <label class="form-check-label" for="flexCheckIndeterminate">Nível de Conversação
+                        <span><strong>*</strong></span></label>
+                    <select class="form-select form-select-sm" name="idioma_conversacao[]" id="idioma_conversacao"
+                        aria-label="Default select example">
+                        <option selected></option>
+                        <option value="Básico">Básico</option>
+                        <option value="Intermediário">Intermediário</option>
+                        <option value="Avançado">Avançado</option>
+                        
+
+                    </select>
                 </div>
 
-                <div class="col-md-2" id="div_conversa">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Conversação</label>
-                    <div class="form-check ">
-                        <input class="form-check-input" type="radio" name="idioma_conversacao[]"
-                            id="idioma_conversacao_basico" value="option2">
-                        <label class="form-check-label" for="idioma_conversacao_basico">
-                            Básico
-                        </label>
-                    </div>
-                    <div class="form-check ">
-                        <input class="form-check-input" type="radio" name="idioma_conversacao[]"
-                            id="idioma_conversacao_internediario" value="option3">
-                        <label class="form-check-label" for="idioma_conversacao_internediario">
-                            Intermediário
-                        </label>
-                    </div>
-                    <div class="form-check ">
-                        <input class="form-check-input" type="radio" name="idioma_conversacao[]"
-                            id="idioma_conversacao_avancado" value="option3">
-                        <label class="form-check-label" for="idioma_conversacao_avancado">
-                            Avançado
-                        </label>
-                    </div>
-                </div>
             </div>
 
             <!-- div responsavel por adicionar outros campo -->
@@ -933,10 +900,11 @@
         
         if(document.getElementById('idioma').value != ''){
 
+            alert('ok')
         var div = document.createElement('div');
-        div.innerHTML = '<div class="row g-3 shadow p-3 mb-5 bg-body rounded" id="divIdioma'+cont03+'" style="margin:0px 20px 0px 20px; padding:20px;"> <div class="text-end"> <input type="button" class="btn btn-danger btn-sm" onclick="removeCamposIdioma('+cont03+')" value="Remover Curso"></div>  <div class="col-md-3"> <label class="form-check-label" for="flexCheckIndeterminate">Escolha um idioma <span><strong>*</strong></span></label> <select class="form-select form-select-sm" name="idioma[]" id="idioma" aria-label="Default select example"><option selected></option>  <option value="Inglês">Inglês</option><option value="Francês">Francês</option><option value="Espanhol">Espanhol</option></select></div><div class="col-md-2" id="div_encrita"><label class="form-check-label" for="flexCheckIndeterminate">Escrita</label> <div class="form-check "> <input class="form-check-input" type="radio" name="idioma_escrita[]" id="idioma_escrita_basico'+cont03+'"><label class="form-check-label" for="idioma_escrita_basico'+cont03+'">  Básico</label> </div><div class="form-check "> <input class="form-check-input" type="radio" name="idioma_escrita[]" id="idioma_escrita_internediario" value="option3"> <label class="form-check-label" for="idioma_escrita_internediario"> Intermediário  </label>  </div> <div class="form-check "><input class="form-check-input" type="radio" name="idioma_escrita[]" id="idioma_escrita_avancado" value="option3">  <label class="form-check-label" for="idioma_escrita_avancado"> Avançado</label></div></div> <div class="col-md-2" id="div_leitura"> <label class="form-check-label" for="flexCheckIndeterminate">Leitura</label>               <div class="form-check "> <input class="form-check-input" type="radio" name="idioma_leitura[]" id="idioma_leitura_basico"  value="option2"> <label class="form-check-label" for="idioma_leitura_basico"> Básico </label> </div> <div class="form-check "> <input class="form-check-input" type="radio" name="idioma_leitura[]" id="idioma_leitura_internediario" value="option3">  <label class="form-check-label" for="idioma_leitura_internediario">  Intermediário </label>  </div> <div class="form-check "> <input class="form-check-input" type="radio" name="idioma_leitura[]" id="idioma_leitura_avancado" value="option3"> <label class="form-check-label" for="idioma_leitura_avancado">  Avançado </label>  </div> </div>  <div class="col-md-2" id="div_conversa"> <label class="form-check-label" for="flexCheckIndeterminate">Conversação</label>  <div class="form-check "><input class="form-check-input" type="radio" name="idioma_conversacao[]" id="idioma_conversacao_basico" value="option2"><label class="form-check-label" for="idioma_conversacao_basico">  Básico </label>  </div>  <div class="form-check ">   <input class="form-check-input" type="radio" name="idioma_conversacao[]"  id="idioma_conversacao_internediario" value="option3"> <label class="form-check-label" for="idioma_conversacao_internediario"> Intermediário</label> </div> <div class="form-check "> <input class="form-check-input" type="radio" name="idioma_conversacao[]" id="idioma_conversacao_avancado" value="option3">  <label class="form-check-label" for="idioma_conversacao_avancado"> Avançado </label> </div>   </div> </div> ';
-                 document.getElementById('listaIdioma').appendChild(div)
-        cont03++;
+        div.innerHTML = '<div class="row g-3 shadow p-3 mb-5 bg-body rounded" id="divIdioma'+cont03+'" style="margin:0px 20px 0px 20px; padding:20px;"> <div class="text-end"> <input type="button" class="btn btn-danger btn-sm" onclick="removeCamposIdioma('+cont03+')" value="Remover Curso"></div> <div class="col-md-3"><label class="form-check-label" for="flexCheckIndeterminate">Escolha um idioma <span><strong>*</strong></span></label><select class="form-select form-select-sm" name="idioma[]" id="idioma" aria-label="Default select example"> <option selected></option> <option value="Inglês">Inglês</option><option value="Francês">Francês</option>  <option value="Espanhol">Espanhol</option><option value="Outros">Outros</option> </select></div> <div class="col-md-3"><label class="form-check-label" for="flexCheckIndeterminate">Nível de Escrita<span><strong>*</strong></span></label><select class="form-select form-select-sm" name="idioma_escrita[]" id="idioma_escrita" aria-label="Default select example"><option selected></option> <option value="Básico">Básico</option> <option value="Intermediário">Intermediário</option> <option value="Avançado">Avançado</option> </select></div> <div class="col-md-3"><label class="form-check-label" for="flexCheckIndeterminate">Nível de Leitura <span><strong>*</strong></span></label> <select class="form-select form-select-sm" name="idioma_leitura[]" id="idioma_leitura" aria-label="Default select example">  <option selected></option> <option value="Básico">Básico</option>  <option value="Intermediário">Intermediário</option> <option value="Avançado">Avançado</option>   </select></div>  <div class="col-md-3"> <label class="form-check-label" for="flexCheckIndeterminate">Nível de Conversação <span><strong>*</strong></span></label> <select class="form-select form-select-sm" name="idioma_conversacao[]" id="idioma_conversacao" aria-label="Default select example">                <option selected></option> <option value="Básico">Básico</option> <option value="Intermediário">Intermediário</option> <option value="Avançado">Avançado</option></select></div> </div>';
+        document.getElementById('listaIdioma').appendChild(div)
+         cont03++;
 
         }
     }

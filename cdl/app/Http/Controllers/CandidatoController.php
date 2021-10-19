@@ -192,6 +192,7 @@ class CandidatoController extends Controller
     public function update(Request $request, $id)
     {
 
+       
             $candidato = Candidato::find($id);
             $candidato->can_nome = $request->nome;
             $candidato->can_sobrenome  = $request->sobrenome;
@@ -252,7 +253,7 @@ class CandidatoController extends Controller
 
             $candidato->save();
             return redirect('/home/candidato/')->with('mensagem', 'Registro cadastrado com sucesso!'); // redirecionar para tela de anuncio
-
+            
            
     }
 
