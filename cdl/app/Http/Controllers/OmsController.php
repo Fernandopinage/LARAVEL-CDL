@@ -71,12 +71,11 @@ class OmsController extends Controller
         //dd($request);
 
 
-        /*
+        
         $this->validate($request, [
 
             'unidade' => 'required',
             'telefone' => 'required',
-            'telefone2' => 'required',
             'tecnico' => 'required',
             'email' => 'required',
             'senha' => 'required',
@@ -90,7 +89,7 @@ class OmsController extends Controller
 
 
         ]);
-        */
+        
 
         if ($request->senha === $request->confirma) {
 

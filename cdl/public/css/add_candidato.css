@@ -133,3 +133,6 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
   
+#footer-cadastro{
+    margin-top: 120px;
+}
