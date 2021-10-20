@@ -15,6 +15,8 @@
 
     @endphp
 
+  
+
     @foreach($cursos as $cursos)
 
 
@@ -26,7 +28,7 @@
                 <div class="card">
                     <div class="card-body">
                         <h1>
-                            <span style="color: #157347; margin-right:132px"><img src="/img/curso_de_ingles_imd.png"
+                            <span style="color: #157347; margin-right:132px"><img src="/img/curso/{{$cursos->utvcurso_folder}}"
                                     height="300px" width="300px" class="img-thumbnail" alt="..."></span><span
                                 style="color: #696969;"></span>
                         </h1>

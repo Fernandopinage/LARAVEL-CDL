@@ -1,7 +1,7 @@
 @extends('layout.add_cursoutv')
 @section('curso')
 
-<form method="POST" action="/insert/cursoutv" >
+<form method="POST" action="/insert/cursoutv" enctype="multipart/form-data">
 
     @csrf
 
@@ -15,8 +15,10 @@
         
         <div class="pessoais">
 
+            <div class="col-md-6">
+                <img id="perfil" src="" alt="profile Pic">
+            </div>
             <div class="row g-3">
-
                 <div class="col-md-6">
                     <label class="form-check-label" for="flexCheckIndeterminate">Imagem do Curso  <span><strong>*</strong></span></label>
                     <input class="form-control form-control-sm" name="logo" type="file" id="formFile" value="{{old('logo')}}">

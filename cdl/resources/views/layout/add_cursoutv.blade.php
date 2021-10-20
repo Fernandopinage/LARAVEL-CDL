@@ -275,6 +275,8 @@
 <script>
   $(document).ready(function() {
 
+    $('#perfil').hide();
+
     $('#pessoais').change(function(){
       if($("#pessoais:checked").val() == undefined){
         $("#pessoais").prop('checked', false);
@@ -322,6 +324,25 @@
     
 
 </script>
+
+<script>
+
+  $('#perfil').click(function(){
+   $('#formFile').trigger('click'); 
+  });
+  
+  $('#formFile').change(function(){
+  
+     const file = $(this)[0].files[0];
+     const fileReader = new FileReader()
+     fileReader.onloadend = function(){
+      $('#perfil').attr('src',fileReader.result)
+     }
+     fileReader.readAsDataURL(file)
+     $('#perfil').show();
+  });
+  
+  </script>
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
   integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>

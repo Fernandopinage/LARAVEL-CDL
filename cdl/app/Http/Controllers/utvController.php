@@ -80,7 +80,24 @@ class utvController extends Controller
     {
 
         $UTV = new UTVCURSOS();
-        $UTV->utvcurso_folder  = $request->logo;
+        //$UTV->utvcurso_folder  = $request->logo;
+
+        if($request->hasFile('logo') && $request->file('logo')->isValid()){
+               
+            $requestFoto = $request->logo;          // pegando a imagem 
+
+            $extension = $requestFoto->extension(); // criando pegando extensão do aquivo
+
+            $imagemName = md5($requestFoto->getClientOriginalName().strtotime("now")); // alterando nome do arquivo
+            
+
+            $request->logo->move(public_path('img/curso'),$imagemName.".".$extension); // criando pasta dentro do publick img
+
+            $UTV->utvcurso_folder = $imagemName.".".$extension;
+
+
+        }
+        
         $UTV->utvcurso_titulo = $request->curso;
         $UTV->utvcurso_desc = $request->detalhe;
         $UTV->utvcurso_hora = $request->horario;
