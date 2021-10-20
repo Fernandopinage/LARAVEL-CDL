@@ -155,15 +155,17 @@ class EmpresaController extends Controller
                 $empresa->emp_funcao = $request->funcao;
                 $empresa->emp_setor = $request->setor;
                 $empresa->emp_desativar = 'N';
+                
                 $empresa->save();
-
+               
                 //return View('add_empresa')->with('success','teste');
                 return redirect('/login/empresa')->with('empresa_cadastro', 'Produto cadastrado com sucesso!');
             } else {
                 return redirect('add/empresa')->with('empresa_cadastro_erro', 'Erro');
             }
         } catch (\Throwable $th) {
-            return redirect('add/empresa')->with('duplicado','empresa_cadastro_erro');
+            echo $th;
+            //return redirect('add/empresa')->with('duplicado','empresa_cadastro_erro');
         }
     }
 

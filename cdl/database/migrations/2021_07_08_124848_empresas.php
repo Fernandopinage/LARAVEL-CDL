@@ -39,7 +39,7 @@ class Empresas extends Migration
             $table->char('emp_chack_assoc',1)->nullable();          // Associado CDL manaus? campo check | caso check aparecer campo para preencher codigo
             $table->string('emp_cod_assoc',20)->nullable();         // campo para preencher codigo caso check box seja preenchido 
             $table->string('emp_senha',255)->nullable();             // definir a senha de acesso (obrigatorio)
-            $table->char('emp_termo',1)->nullable();                // check com politica de termo de dados do site. (obrigatorio)
+            $table->char('emp_termo',5)->nullable();                // check com politica de termo de dados do site. (obrigatorio)
             $table->char('emp_status',1)->nullable();               // status ativo ou inativo. (obrigatorio)
             $table->char('emp_desativar',1)->nullable();            //  desativar conta 
             $table->timestamps();
