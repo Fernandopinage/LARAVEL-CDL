@@ -151,20 +151,20 @@ class EmpresaController extends Controller
                 $empresa->emp_cod_assoc = $request->cod;
                 $empresa->emp_senha = Hash::make($request->senha);
                 $empresa->emp_termo = $request->termo;
-                $empresa->emp_status = $request->status;
+                $empresa->emp_status = 'N';
                 $empresa->emp_funcao = $request->funcao;
                 $empresa->emp_setor = $request->setor;
                 $empresa->emp_desativar = 'N';
                 
                 $empresa->save();
-               
+               // ddd($request);
                 //return View('add_empresa')->with('success','teste');
                 return redirect('/login/empresa')->with('empresa_cadastro', 'Produto cadastrado com sucesso!');
             } else {
                 return redirect('add/empresa')->with('empresa_cadastro_erro', 'Erro');
             }
         } catch (\Throwable $th) {
-            echo $th;
+            
             //return redirect('add/empresa')->with('duplicado','empresa_cadastro_erro');
         }
     }
@@ -204,19 +204,23 @@ class EmpresaController extends Controller
         //dd($empresa);
         
         //$empresa->emp_logo = $request->logo;
-        if($request->hasFile('logo') && $request->file('logo')->isValid()){
-               
+
+        if(!empty($request->logo)){
+
+            if($request->hasFile('logo') && $request->file('logo')->isValid()){
+                
             $requestFoto = $request->logo;          // pegando a imagem 
-
+            
             $extension = $requestFoto->extension(); // criando pegando extensão do aquivo
-
+            
             $imagemName = md5($requestFoto->getClientOriginalName().strtotime("now")); // alterando nome do arquivo
             
-
+            
             $request->logo->move(public_path('img/empresas'),$imagemName.".".$extension); // criando pasta dentro do publick img
-
+            
             $empresa->emp_logo = $imagemName.".".$extension;
-
+            
+            }
 
         }
         $empresa->emp_fantasia = $request->fantasia;
@@ -243,10 +247,10 @@ class EmpresaController extends Controller
         $empresa->emp_funcao = $request->funcao;
         $empresa->emp_setor = $request->setor;
         $empresa->emp_desativar = $request->desativar;
-       // $empresa->save();
+        $empresa->save();
 
-            ddd($request);
-        //return redirect('home/empresa')->with('alterar', 'Produto cadastrado com sucesso!');
+            ///ddd($request);
+        return redirect('home/empresa')->with('alterar', 'Produto cadastrado com sucesso!');
         
     }
 
