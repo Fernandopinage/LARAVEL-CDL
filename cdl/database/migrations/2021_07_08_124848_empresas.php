@@ -36,7 +36,7 @@ class Empresas extends Migration
             $table->string('emp_email_contato',100)->nullable();    // email do contato da empresa (obrigatorio)
             $table->string('emp_funcao',100)->nullable();           // chave estrangeira  de função/cargo
             $table->string('emp_setor',100)->nullable();            // chave estrangeira  de setor/departamento
-            $table->char('emp_chack_assoc',1)->nullable();          // Associado CDL manaus? campo check | caso check aparecer campo para preencher codigo
+            $table->char('emp_chack_assoc',5)->nullable();          // Associado CDL manaus? campo check | caso check aparecer campo para preencher codigo
             $table->string('emp_cod_assoc',20)->nullable();         // campo para preencher codigo caso check box seja preenchido 
             $table->string('emp_senha',255)->nullable();             // definir a senha de acesso (obrigatorio)
             $table->char('emp_termo',5)->nullable();                // check com politica de termo de dados do site. (obrigatorio)

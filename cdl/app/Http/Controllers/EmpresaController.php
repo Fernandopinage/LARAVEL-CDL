@@ -203,7 +203,22 @@ class EmpresaController extends Controller
         $empresa = Empresa::find($id);
         //dd($empresa);
         
-        $empresa->emp_logo = $request->logo;
+        //$empresa->emp_logo = $request->logo;
+        if($request->hasFile('logo') && $request->file('logo')->isValid()){
+               
+            $requestFoto = $request->logo;          // pegando a imagem 
+
+            $extension = $requestFoto->extension(); // criando pegando extensão do aquivo
+
+            $imagemName = md5($requestFoto->getClientOriginalName().strtotime("now")); // alterando nome do arquivo
+            
+
+            $request->logo->move(public_path('img/empresas'),$imagemName.".".$extension); // criando pasta dentro do publick img
+
+            $empresa->emp_logo = $imagemName.".".$extension;
+
+
+        }
         $empresa->emp_fantasia = $request->fantasia;
         $empresa->emp_email = $request->email;
         $empresa->emp_razao = $request->razao;
@@ -228,10 +243,10 @@ class EmpresaController extends Controller
         $empresa->emp_funcao = $request->funcao;
         $empresa->emp_setor = $request->setor;
         $empresa->emp_desativar = $request->desativar;
-        $empresa->save();
+       // $empresa->save();
 
-
-        return redirect('home/empresa')->with('alterar', 'Produto cadastrado com sucesso!');
+            ddd($request);
+        //return redirect('home/empresa')->with('alterar', 'Produto cadastrado com sucesso!');
         
     }
 

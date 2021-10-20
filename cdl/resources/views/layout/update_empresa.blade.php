@@ -268,6 +268,24 @@ Swal.fire({  position: 'center',  icon: 'warning',  title: 'Preencha os campos o
   });
 </script>
 
+<script>
+
+  $('#perfil').click(function(){
+   $('#formFile').trigger('click'); 
+  });
+  
+  $('#formFile').change(function(){
+  
+     const file = $(this)[0].files[0];
+     const fileReader = new FileReader()
+     fileReader.onloadend = function(){
+      $('#perfil').attr('src',fileReader.result)
+     }
+     fileReader.readAsDataURL(file)
+  });
+  
+  </script>
+
    <!-- jquery -->
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
    <!-- ***** -->

@@ -200,9 +200,9 @@
         <div class="adcinais">
             <div class="row g-3">
                 <div class="col-md-2">
-                    <input type="hidden" value="1" name="status"> <!-- campo responsavel por ativar empresa -->
+                    <input type="hidden" value="1" name="associado"> <!-- campo responsavel por ativar empresa -->
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="asscdl" value="{{old('razao')}}">
+                        <input class="form-check-input" type="checkbox" name="associado" id="asscdl" value="{{old('razao')}}">
                         <label class="form-check-label" name="associado" id="associado"
                             for="flexCheckIndeterminate">Associado CDL Manaus?</label>
                     </div>
