@@ -89,13 +89,32 @@ class CandidatoController extends Controller
 
         //ddd($request);
 
+
+
+
           
         if ($request->senha === $request->confirma) {
 
             $candidato = new Candidato();
             $candidato->can_nome = $request->nome;
             $candidato->can_sobrenome  = $request->sobrenome;
-            $candidato->can_foto  = $request->foto;
+            
+            if($request->hasFile('foto') && $request->file('foto')->isValid()){
+               
+                $requestFoto = $request->foto;          // pegando a imagem 
+
+                $extension = $requestFoto->extension(); // criando pegando extensão do aquivo
+
+                $imagemName = md5($requestFoto->getClientOriginalName().strtotime("now")); // alterando nome do arquivo
+                
+
+                $request->foto->move(public_path('img/events'),$imagemName.".".$extension); // criando pasta dentro do publick img
+
+                $candidato->can_foto = $imagemName.".".$extension;
+
+
+            }
+            //$candidato->can_foto  = $request->foto;
             $candidato->can_cpf  = $request->cpf;
             $candidato->can_rg  = $request->rg;
             $candidato->can_nascimento  = $request->nascimento;
@@ -152,8 +171,8 @@ class CandidatoController extends Controller
             $candidato->can_termo = $request->termo;
             
 
-            $candidato->save();
-            return redirect('login/candidato')->with('mensagem', 'Registro cadastrado com sucesso!'); // redirecionar para tela de anuncio
+           $candidato->save();
+           return redirect('login/candidato')->with('mensagem', 'Registro cadastrado com sucesso!'); // redirecionar para tela de anuncio
         }
       
         
@@ -196,7 +215,23 @@ class CandidatoController extends Controller
             $candidato = Candidato::find($id);
             $candidato->can_nome = $request->nome;
             $candidato->can_sobrenome  = $request->sobrenome;
-            $candidato->can_foto  = $request->foto;
+
+            if($request->hasFile('foto') && $request->file('foto')->isValid()){
+               
+                $requestFoto = $request->foto;          // pegando a imagem 
+
+                $extension = $requestFoto->extension(); // criando pegando extensão do aquivo
+
+                $imagemName = md5($requestFoto->getClientOriginalName().strtotime("now")); // alterando nome do arquivo
+                
+
+                $request->foto->move(public_path('img/events'),$imagemName.".".$extension); // criando pasta dentro do publick img
+
+                $candidato->can_foto = $imagemName.".".$extension;
+
+
+            }
+
             $candidato->can_cpf  = $request->cpf;
             $candidato->can_rg  = $request->rg;
             $candidato->can_nascimento  = $request->nascimento;
@@ -250,7 +285,8 @@ class CandidatoController extends Controller
             $candidato->can_tempoexperiencia  = $request->tempoexperiencia;
             $candidato->can_termo = $request->termo;
             $candidato->save();
-            return redirect('/home/candidato/')->with('mensagem', 'Registro cadastrado com sucesso!'); // redirecionar para tela de anuncio
+
+            //return redirect('/home/candidato/')->with('mensagem', 'Registro cadastrado com sucesso!'); // redirecionar para tela de anuncio
             
            
     }

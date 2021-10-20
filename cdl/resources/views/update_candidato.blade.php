@@ -6,7 +6,7 @@
 $candidato;
 @endphp
 
-<form action="/update/candidato/{{$candidato->can_id}}" method="post">
+<form action="/update/candidato/{{$candidato->can_id}}" method="post" enctype="multipart/form-data">
 
     @csrf
     <div class="form-signin">
@@ -18,13 +18,16 @@ $candidato;
         </div>
 
         <div class="text">
+            <div class="text-center">
+                <img id="perfil" src="/img/events/{{$candidato->can_foto}}" alt="profile Pic" >
+            </div>
             <h2 class="form-signin-heading">Dados Pessoais</h2>
             <hr>
         </div>
 
         <div class="pessoais">
-
             <div class="row g-3">
+
 
                 <div class="col-md-4">
                     <label class="form-check-label" for="flexCheckIndeterminate">Primeiro Nome </label>
@@ -40,8 +43,8 @@ $candidato;
 
                 <div class="col-md-4">
                     <label class="form-check-label" for="flexCheckIndeterminate">Selecione Sua foto</label>
-                    <input class="form-control form-control-sm" type="file" name="foto" value="{{$candidato->can_foto}}"
-                        id="formFile">
+                    <input type="file" name="foto" id="formFile" class="form-control-file">
+                       
                 </div>
 
                 <div class="col-md-3">

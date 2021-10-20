@@ -2,7 +2,7 @@
 
 @section('cadastro')
 
-<form action="/insert/candidato" method="POST">
+<form action="/insert/candidato" method="POST" enctype="multipart/form-data">
 
     @csrf
     <div class="form-signin">
@@ -33,8 +33,9 @@
                 </div>
 
                 <div class="col-md-4">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Selecione Sua foto</label>
-                    <input class="form-control form-control-sm" type="file" name="foto" id="formFile">
+                    <label class="form-check-label" for="image">Selecione Sua foto</label>
+                    <!--<input class="form-control form-control-sm" type="file" name="foto" id="formFile"> -->
+                    <input type="file" name="foto" id="formFile" class="form-control-file">
                 </div>
 
                 <div class="col-md-3">
