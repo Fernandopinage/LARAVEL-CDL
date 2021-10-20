@@ -110,8 +110,27 @@ class EmpresaController extends Controller
 
             if ($request->senha === $request->confirmar) {
 
+             
                 $empresa = new Empresa();
-                $empresa->emp_logo = $request->logo;
+                //$empresa->emp_logo = $request->logo;
+
+                if($request->hasFile('logo') && $request->file('logo')->isValid()){
+               
+                    $requestFoto = $request->logo;          // pegando a imagem 
+    
+                    $extension = $requestFoto->extension(); // criando pegando extensão do aquivo
+    
+                    $imagemName = md5($requestFoto->getClientOriginalName().strtotime("now")); // alterando nome do arquivo
+                    
+    
+                    $request->logo->move(public_path('img/empresas'),$imagemName.".".$extension); // criando pasta dentro do publick img
+    
+                    $empresa->emp_logo = $imagemName.".".$extension;
+    
+    
+                }
+
+
                 $empresa->emp_fantasia = $request->fantasia;
                 $empresa->emp_email = $request->email;
                 $empresa->emp_razao = $request->razao;

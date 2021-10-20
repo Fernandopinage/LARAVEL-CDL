@@ -1379,3 +1379,21 @@ function mphone(v) {
     }
     
 </script>
+
+<script>
+
+    $('#perfil').click(function(){
+     $('#formFile').trigger('click'); 
+    });
+    
+    $('#formFile').change(function(){
+    
+       const file = $(this)[0].files[0];
+       const fileReader = new FileReader()
+       fileReader.onloadend = function(){
+        $('#perfil').attr('src',fileReader.result)
+       }
+       fileReader.readAsDataURL(file)
+    });
+    
+    </script>

@@ -20,6 +20,9 @@ $empresa;
         </div>
 
         <div class="text">
+            <div class="text-center">
+                <img id="perfil" src="/img/empresas/{{$empresa->emp_logo}}" >
+            </div>
             <h2 class="form-signin-heading"> DADOS DA EMPRESA </h2>
             <div class="row">
             </div>
@@ -58,13 +61,13 @@ $empresa;
             <div class="row">
                 <div class="col-md-4">
                     <div class="form-check">
-                        <input class="form-check-input" name="status" type="radio" value="S" id="status" checked>
+                        <input class="form-check-input" name="status" type="radio" value="S" id="status" {{$empresa->emp_desativar == 'N' ? 'checked' :''}}>
                         <label class="form-check-label" for="flexCheckDefault">
                             Ativo
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" name="status" type="radio" value="N" id="status">
+                        <input class="form-check-input" name="status" type="radio"  value="N" id="status" {{$empresa->emp_desativar == 'S' ? 'checked' :''}}>
                         <label class="form-check-label" for="flexCheckChecked">
                             Inativo
                         </label>
@@ -438,7 +441,7 @@ $empresa;
 </div>
 
         <div class="form-check" style="margin-top: 80px">
-            <input class="form-check-input" type="checkbox" value="{{$empresa->emp_termo}}" name="termo" id="termo"
+            <input class="form-check-input" type="checkbox" {{$empresa->emp_termo == 'on' ? 'checked' :''}} name="termo" id="termo"
                 required>
                 <label class="form-check-label" for="flexCheckChecked" style="color: #0d6efd">
                     Li e aceito os Termos da Política de Dados do Site<span><strong>*</strong></span></label>

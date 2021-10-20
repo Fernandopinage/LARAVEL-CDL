@@ -2,7 +2,7 @@
 
 @section('cadastro')
 
-<form method="post" action={{('/insert/empresa')}}>
+<form method="post" action={{('/insert/empresa')}} enctype="multipart/form-data">
 
     @csrf
 
@@ -15,6 +15,9 @@
         </div>
 
         <div class="text">
+            <div class="text-center">
+                <img id="perfil" src="/img/events/perfil.png" alt="profile Pic">
+            </div>
             <h2 class="form-signin-heading"> DADOS DA EMPRESA </h2>
             <hr>
         </div>
@@ -39,7 +42,7 @@
 
                 <div class="col-md-4">
                     <label class="form-check-label" for="flexCheckIndeterminate">Logo Empresa</label>
-                    <input class="form-control form-control-sm" name="logo" type="file" id="formFile"
+                    <input type="file" name="logo" id="formFile" class="form-control-file"
                         value="{{old('logo')}}">
                 </div>
 
