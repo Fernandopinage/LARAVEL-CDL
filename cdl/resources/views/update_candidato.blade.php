@@ -19,7 +19,7 @@ $candidato;
 
         <div class="text">
             <div class="text-center">
-                <img id="perfil" src="/img/events/{{$candidato->can_foto}}" alt="profile Pic" >
+                <img id="perfil" src="/img/events/{{$candidato->can_foto}}" alt="profile Pic">
             </div>
             <h2 class="form-signin-heading">Dados Pessoais</h2>
             <hr>
@@ -29,19 +29,19 @@ $candidato;
             <div class="row g-3">
 
 
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <label class="form-check-label" for="flexCheckIndeterminate">Primeiro Nome </label>
                     <input type="text" class="form-control form-control-sm" name="nome" value="{{$candidato->can_nome}}"
                         placeholder="">
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <label class="form-check-label" for="flexCheckIndeterminate">Sobrenome</label>
                     <input type="text" class="form-control form-control-sm" name="sobrenome"
                         value="{{$candidato->can_sobrenome}}" placeholder="">
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-md-4" style="display: none">
                     <label class="form-check-label" for="flexCheckIndeterminate">Selecione Sua foto</label>
                     <input type="file" name="foto" id="formFile" class="form-control-file">
                        

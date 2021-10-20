@@ -14,6 +14,9 @@
         </div>
 
         <div class="text">
+            <div class="text-center">
+                <img id="perfil" src="/img/events/perfil.png" alt="profile Pic">
+            </div>
             <h2 class="form-signin-heading">Dados Pessoais</h2>
             <hr>
         </div>
@@ -1242,3 +1245,4 @@ function mphone(v) {
            return false;
      }
 </script>
+
