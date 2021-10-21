@@ -236,7 +236,7 @@ $empresa;
         </div>
         <div class="adcinais">
             <div class="row g-3">
-                <div class="col-md-2">
+                <div class="col-md-4">
 
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" name="associado"  {{$empresa->emp_chack_assoc == 'on' ? 'checked' :''}} id="asscdl">
