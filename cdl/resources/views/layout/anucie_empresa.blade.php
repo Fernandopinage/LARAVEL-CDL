@@ -294,9 +294,7 @@ function moeda(a, e, r, t) {
       });
 
     });
-        $('#pcd').change(function(){
-          console.log(document.getElementById('pcd').value)
-        });
+      
 
 </script>
 

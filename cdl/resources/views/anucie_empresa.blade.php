@@ -229,23 +229,23 @@
                     </div>
                 </div>
                 <div class="col-md-2">
-                    <label class="form-check-label" for="flexCheckIndeterminate"> PCD?</label>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="pcd" id="pcd" value="sim">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                          Sim
+                    <label class="form-check-label" for="flexCheckIndeterminate">PCD</label>
+                    <div class="form-check ">
+                        <input class="form-check-input" type="radio" name="pcd" id="pcd1" value="sim">
+                        <label class="form-check-label" for="gridRadios1">
+                            Sim
                         </label>
-                      </div>
-                      <div class="form-check">
-                        <input class="form-check-input" type="radio" name="pcd" id="pcd" value="não" checked>
-                        <label class="form-check-label" for="flexRadioDefault2">
-                         Não
+                    </div>
+                    <div class="form-check ">
+                        <input class="form-check-input" type="radio" name="pcd" id="pcd2" value="não">
+                        <label class="form-check-label" for="gridRadios2">
+                            Não
                         </label>
                     </div>
                 </div>
                 <div class="mb-3" id="descPCD">
                     <label for="exampleFormControlTextarea1" class="form-label">Descreva a deficiência</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1"  name="descricao_pcd" rows="4"></textarea>
+                    <textarea class="form-control" id="descricao_pcd"  name="descricao_pcd" rows="4"></textarea>
                 </div>
                 <div class="mb-3">
                     <label class="form-check-label" for="flexCheckIndeterminate">Descrição da Vaga </label>
@@ -263,3 +263,17 @@
     
 </form>
 @endsection
+
+<script>
+
+$('pcd1').click(function(){
+    alert('sim')
+    document.getElementById('descricao_pcd').style.display = "block";
+  });
+
+  $('pcd2').click(function(){
+    alert('não')
+    document.getElementById('descricao_pcd').style.display = "none";
+  });
+
+</script>
