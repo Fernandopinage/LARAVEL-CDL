@@ -90,10 +90,12 @@
                     <label class="form-check-label" for="flexCheckIndeterminate">Nome do curso </label>
                     <input type="text" class="form-control form-control-sm" name="curso" placeholder="">
                 </div>
+                
                 <div class="col-md-2" id="termino_div">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Ano de Términio </label>
+                    <label class="form-check-label" id="label_Anotermino">Ano de Términio </label>
                     <input type="month"  class="form-control form-select-sm" name="termino" placeholder="">
                 </div>
+                
                 <div class="col-md-2" id="semestre_div">
                     <label class="form-check-label" for="flexCheckIndeterminate">Semestre em Curso </label>
                     <select class="form-select form-select-sm" name="semestre" aria-label="Default select example">
@@ -119,6 +121,7 @@
                         
                     </select>
                 </div>
+
                 <div class="col-md-3">
                     <label class="form-check-label" for="flexCheckIndeterminate">Experiência <span><strong>*</strong></span></label>
                     <select class="form-select form-select-sm" name="experiencia" id="experiencia" aria-label="Default select example" required>

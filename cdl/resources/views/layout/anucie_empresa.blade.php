@@ -143,19 +143,20 @@ $('#formacao').change(function(){
     $('#curso_div').hide();
     $('#semestre_div').hide();
     $('#periodo_div').hide();
-    $('#termino_div').show();
+    $('#termino_div').hide();
   }
 
   if(document.getElementById('formacao').value  === 'Ensino Medio cursando'){
-    $('#curso_div').hide();
-    $('#termino_div').hide();
+    $('#curso_div').show();
+    $('#termino_div').show();
     $('#semestre_div').hide();
     $('#periodo_div').hide();
+    document.getElementById('label_Anotermino').innerHTML = 'Ano  em Curso';
   }
 
-  if(document.getElementById('formacao').value  === 'Ensino Tecnico completo'){
+  if(document.getElementById('formacao').value  === 'Ensino Técnico completo'){
 
-    $('#curso_div').hide();
+    $('#curso_div').show();
     $('#termino_div').hide();
     $('#semestre_div').hide();
     $('#periodo_div').hide();
@@ -176,7 +177,7 @@ $('#formacao').change(function(){
   $('#curso_div').show();
   $('#termino_div').hide();
   $('#semestre_div').hide();
-  $('#periodo_div').show();
+  $('#periodo_div').hide();
 
   }
 
@@ -204,7 +205,7 @@ $('#formacao').change(function(){
     $('#curso_div').show();
     $('#termino_div').hide();
     $('#semestre_div').hide();
-    $('#periodo_div').hide();
+    $('#periodo_div').show();
 
   }
 
