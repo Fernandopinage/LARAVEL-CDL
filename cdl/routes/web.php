@@ -39,7 +39,6 @@ Route::get('/editar/candidato/{id}',[CandidatoController::class, 'editarCandidat
 Route::post('/update/candidato/{id}',[CandidatoController::class, 'update']);
 //});
 
-
 Route::get('login/empresa', [EmpresaController::class, 'index'])->name('login/empresa'); // chamando tela de login da empresa
 //Route::middleware(['empresaGrupo'])->group(function () {
 Route::get('/vagas/disponivel/', [EmpresaController::class, 'vagasDisponiveis']);

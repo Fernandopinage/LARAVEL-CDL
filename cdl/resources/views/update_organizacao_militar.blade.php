@@ -47,8 +47,7 @@ $oms;
                         <span><strong>*</strong></span></label>
                     <input type="tel" class="form-control form-control-sm" onkeypress="mask(this, mphone);"
                         onblur="mask(this, mphone);" name="telefone2" placeholder="(99) 99999-9999"
-                        onkeypress="mask(this, mphone);" onblur="mask(this, mphone);" value="{{$oms->oms_celular}}"
-                        required>
+                        onkeypress="mask(this, mphone);" onblur="mask(this, mphone);" value="{{$oms->oms_celular}}">
                 </div>
                 <div class="col-md-4">
                     <label class="form-check-label" for="flexCheckIndeterminate">E-mail

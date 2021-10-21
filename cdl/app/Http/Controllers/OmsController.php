@@ -117,7 +117,7 @@ class OmsController extends Controller
             $oms->oms_status = 'S';
             $oms->save();
 
-           // return redirect('login/militar')->with('empresa_cadastro', 'Produto cadastrado com sucesso!');
+            return redirect('login/militar')->with('empresa_cadastro', 'Produto cadastrado com sucesso!');
         } else {
             return redirect('/add/oms/');
         }

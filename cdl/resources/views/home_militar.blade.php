@@ -52,7 +52,7 @@
     <h5>5330 profissionais cadastrados na última semana</h5>
 </div>
 
-@if(!empty($condition))
+@if(!empty($candidato))
   
 
 <div class="container" id="canditados">
