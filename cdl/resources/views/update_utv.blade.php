@@ -11,7 +11,7 @@ $utv;
     <div class="form-signin">
 
         <div class="text">
-            <h2 class="form-signin-heading">DADOS DO UTV </h2>
+            <h2 class="form-signin-heading">DADOS DA UTV </h2>
             <hr>
         </div>
 
@@ -77,7 +77,7 @@ $utv;
                         value="{{$utv->utv_email_tec}}" required>
                 </div>
                 <div class="col-md-4">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Função Técnico
+                    <label class="form-check-label" for="flexCheckIndeterminate">Função/Cargo Técnico
                         <span><strong>*</strong></span> </label>
                     <input type="text" name="funcao" class="form-control form-control-sm" placeholder=""
                         value="{{$utv->utv_funcao_tec}}" required>
@@ -126,11 +126,11 @@ $utv;
             </div>
         </div>
         <hr>
+        <span> Campos Obrigatórios <strong>*</strong></span>
 
         <div class="text-end">
             <input type="submit" class="btn btn-success" value="Alterar Registros">
         </div>
-        <span> Campos Obrigatórios <strong>*</strong></span>
     </div>
 
 </form>

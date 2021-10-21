@@ -1,14 +1,14 @@
 @extends('layout.add_utv')
 @section('add_utv')
 
-<form method="POST" action="/insert/utv/" >
+<form method="POST" action="/insert/utv" >
 
     @csrf
 
     <div class="form-signin">
 
         <div class="text">          
-            <h2 class="form-signin-heading">DADOS DO UTV </h2>
+            <h2 class="form-signin-heading">DADOS DA UTV </h2>
             <hr>
         </div>
         
@@ -50,7 +50,7 @@
                     <input type="text" name="email_tecnico" class="form-control form-control-sm" placeholder="" value="{{old('email_tecnico')}}" required>
                 </div>
                 <div class="col-md-4">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Função Técnico  <span><strong>*</strong></span> </label>
+                    <label class="form-check-label" for="flexCheckIndeterminate">Função/Cargo Técnico  <span><strong>*</strong></span> </label>
                     <input type="text" name="funcao" class="form-control form-control-sm" placeholder="" value="{{old('funcao')}}" required>
                 </div>
                 <div class="col-md-2">
@@ -84,11 +84,11 @@
             </div>  
         </div> 
         <hr>
+        <span> Campos Obrigatórios <strong>*</strong></span>
         
         <div class="text-end">
             <input type="submit" class="btn btn-success" value="Salvar Registros">
         </div>
-        <span> Campos Obrigatórios <strong>*</strong></span>
     </div>
 
 </form>

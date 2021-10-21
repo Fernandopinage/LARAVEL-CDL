@@ -64,6 +64,7 @@ class utvController extends Controller
             $UTV->utv_email_tec = $request->email_tecnico;
             $UTV->utv_funcao_tec = $request->funcao;
             $UTV->utv_status = $request->$Status;
+            //ddd($request);
             $UTV->save();
 
             return redirect('/login/utv')->with('utv_cadastro', 'Produto cadastrado com sucesso!');
