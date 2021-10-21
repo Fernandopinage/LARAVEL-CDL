@@ -52,6 +52,8 @@
     <h5>5330 profissionais cadastrados na última semana</h5>
 </div>
 
+@if(!empty($condition))
+  
 
 <div class="container" id="canditados">
     @foreach($candidato as $candidato)
@@ -96,6 +98,7 @@
 </div>
 @endforeach
 </div>
+@endif
 
 
 <div class="visualizar">

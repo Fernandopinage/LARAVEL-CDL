@@ -52,9 +52,14 @@ class OmsController extends Controller
     {
      
         $candidato = Candidato::select('*')->where('can_exmilitar','on')->orderBy('can_id', 'DESC')->limit(9)->get();
-        //ddd($candidato);
         
-        return view('home_militar',compact('candidato'));
+        if(!empty($candidato)){
+            
+            return view('home_militar',compact('candidato'));
+        }else{
+            return view('home_militar');
+        }
+
     }
 
     public function exMilitar(){
@@ -68,7 +73,7 @@ class OmsController extends Controller
     public function store(Request $request)
     {
 
-        //dd($request);
+        //ddd($request);
 
 
         
@@ -111,7 +116,8 @@ class OmsController extends Controller
             $oms->oms_complemento = $request->complemento;
             $oms->oms_status = 'S';
             $oms->save();
-            return redirect('login/militar')->with('empresa_cadastro', 'Produto cadastrado com sucesso!');
+
+           // return redirect('login/militar')->with('empresa_cadastro', 'Produto cadastrado com sucesso!');
         } else {
             return redirect('/add/oms/');
         }

@@ -34,7 +34,7 @@
                 </div>
                 <div class="col-md-3">
                     <label class="form-check-label" for="flexCheckIndeterminate">Telefone</span></label>
-                    <input type="tel" class="form-control form-control-sm" onkeypress="mask(this, mphone);" onblur="mask(this, mphone);" name="telefone2" placeholder="(99) 99999-9999" onkeypress="mask(this, mphone);" onblur="mask(this, mphone);" value="{{old('telefone2')}}" required>
+                    <input type="tel" class="form-control form-control-sm" onkeypress="mask(this, mphone);" onblur="mask(this, mphone);" name="telefone2" placeholder="(99) 99999-9999" onkeypress="mask(this, mphone);" onblur="mask(this, mphone);" value="{{old('telefone2')}}">
                 </div>
                 <div class="col-md-4">
                     <label class="form-check-label" for="flexCheckIndeterminate">E-mail  <span><strong>*</strong></span></label>

@@ -159,7 +159,7 @@ class EmpresaController extends Controller
                 
                 //ddd($request);
                 //return View('add_empresa')->with('success','teste');
-               return redirect('/login/empresa')->with('empresa_cadastro', 'Produto cadastrado com sucesso!');
+                return redirect('/login/empresa')->with('empresa_cadastro', 'Produto cadastrado com sucesso!');
             } else {
                 return redirect('add/empresa')->with('empresa_cadastro_erro', 'Erro');
             }
