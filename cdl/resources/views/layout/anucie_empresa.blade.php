@@ -167,8 +167,8 @@ $('#formacao').change(function(){
 
   $('#curso_div').show();
   $('#termino_div').hide();
-  $('#semestre_div').hide();
-  $('#periodo_div').show();
+  $('#semestre_div').show();
+  $('#periodo_div').hide();
 
   }
 

@@ -161,8 +161,8 @@
                     <input type="text" class="form-control form-control-sm" name="bairro" id="bairro" placeholder="">
                 </div>
                 <!-- ************************************* -->
-                <div class="col-md-2">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Idioma Necessário</label>
+                <div class="col-md-3">
+                    <label class="form-check-label" for="flexCheckIndeterminate">Idioma Necessário para a vaga ?</label>
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="" name="idioma_necessario" id="idioma_necessario">
                         <label class="form-check-label" for="flexCheckDefault">
@@ -201,27 +201,45 @@
                 <div class="col-md-2">
                     <label class="form-check-label" for="flexCheckIndeterminate"> Vaga remota</label>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="S" name="vaga" id="flexCheckDefault">
-                        <label class="form-check-label" for="flexCheckDefault">
-                            
+                        <input class="form-check-input" type="radio" name="vaga" id="vaga" value="sim">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                          Sim
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="vaga" id="vaga" value="não" checked>
+                        <label class="form-check-label" for="flexRadioDefault2">
+                         Não
                         </label>
                     </div>
                 </div>
                 <div class="col-md-2">
                     <label class="form-check-label" for="flexCheckIndeterminate"> Exibir nome da Empresa </span></label>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="S" name="exibir_empresa" id="flexCheckDefault">
-                        <label class="form-check-label" for="flexCheckDefault">
-                        
+                        <input class="form-check-input" type="radio" name="exibir_empresa" id="exibir_empresa" value="sim">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                          Sim
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exibir_empresa" id="exibir_empresa" value="não" checked>
+                        <label class="form-check-label" for="flexRadioDefault2">
+                         Não
                         </label>
                     </div>
                 </div>
                 <div class="col-md-2">
                     <label class="form-check-label" for="flexCheckIndeterminate"> PCD?</label>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="S" id="pcd" name="pcd" id="flexCheckDefault">
-                        <label class="form-check-label" for="flexCheckDefault">
-                            
+                        <input class="form-check-input" type="radio" name="pcd" id="pcd" value="sim">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                          Sim
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="pcd" id="pcd" value="não" checked>
+                        <label class="form-check-label" for="flexRadioDefault2">
+                         Não
                         </label>
                     </div>
                 </div>

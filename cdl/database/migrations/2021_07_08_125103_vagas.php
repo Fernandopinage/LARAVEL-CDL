@@ -39,7 +39,7 @@ class Vagas extends Migration
             $table->string('vag_idioma',100)->nullable();           //  Campo referente se escrita do candidato
             $table->string('vag_idioma_nivel',20)->nullable();      // nivel do idioma
             $table->string('vag_idioma_outro',100)->nullable();     //  outro idiomas
-            $table->char('vag_pcd',1)->nullable();                  // se possui deficiencia 
+            $table->char('vag_pcd',5)->nullable();                  // se possui deficiencia 
             $table->longText('vag_pcd_descricao')->nullable();      // caso possua deficiencia campo para descrever       
             $table->timestamps();
         });
