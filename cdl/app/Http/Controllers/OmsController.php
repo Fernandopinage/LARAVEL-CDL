@@ -166,12 +166,12 @@ class OmsController extends Controller
 
 
         if (empty($oms)) {
-            return redirect('/oms/redefinir')->with('redefinir', 'Produto cadastrado com sucesso!');
+            return redirect('/oms/redefinir')->with('mensagem', 'Produto cadastrado com sucesso!');
         } else {
 
             Mail::to($oms->oms_email)->send(new omsMail(Oms::where('oms_email', $request->email)->first()));
 
-            return redirect('/oms/redefinir')->with('sucesso', 'Produto cadastrado com sucesso!');
+            return redirect('/oms/redefinir')->with('redefinir', 'Produto cadastrado com sucesso!');
         }
     }
 
