@@ -417,9 +417,7 @@ $candidato;
                 </div>
                 <div class="col-md-4">
                     <label class="form-check-label" for="flexCheckIndeterminate">Aréa de Atuação</label>
-                    <select class="form-select form-select-sm" name="curso_area_atuacao[]" id="areaatuacao">
-                        <option selected value="0"></option>
-                    </select>
+                    <input type="text" class="form-control form-control-sm" name="curso_area_atuacao[]" id="areaatuacao" value="{{$candidato->can_curso_area_atuacao[$i]}}">
                 </div>
 
 
@@ -1063,7 +1061,7 @@ $candidato;
         if(cont01 < 4){
         
             var div = document.createElement('div');
-            div.innerHTML = '<div class="row g-3 shadow p-3 mb-5 bg-body rounded" id="div'+cont01+'" style="margin:0px 20px 0px 20px; padding:20px;"> <div class="text-end"> <input type="button" class="btn btn-danger btn-sm" onclick="removeCampos('+cont01+')" value="Remover Curso"></div><div class="col-md-4"> <label class="form-check-label" for="flexCheckIndeterminate">Cursos extracurriculares</label><input type="text" class="form-control form-control-sm" name="curso_extra[]" placeholder=""> </div><div class="col-md-2"> <label class="form-check-label" for="flexCheckIndeterminate">Ano termino</label><input type="month" class="form-control form-control-sm" name="curso_ano_termino[]" placeholder=""></div><div class="col-md-4"> <label class="form-check-label" for="flexCheckIndeterminate">Aréa de Atuação</label><select class="form-select form-select-sm" name="curso_area_atuacao[]" id="areaatuacao"><option selected value="0"></option></select>  </div>';
+            div.innerHTML = '<div class="row g-3 shadow p-3 mb-5 bg-body rounded" id="div'+cont01+'" style="margin:0px 20px 0px 20px; padding:20px;"> <div class="text-end"> <input type="button" class="btn btn-danger btn-sm" onclick="removeCampos('+cont01+')" value="Remover Curso"></div><div class="col-md-4"> <label class="form-check-label" for="flexCheckIndeterminate">Cursos extracurriculares</label><input type="text" class="form-control form-control-sm" name="curso_extra[]" placeholder=""> </div><div class="col-md-2"> <label class="form-check-label" for="flexCheckIndeterminate">Ano termino</label><input type="month" class="form-control form-control-sm" name="curso_ano_termino[]" placeholder=""></div><div class="col-md-4"> <label class="form-check-label" for="flexCheckIndeterminate">Aréa de Atuação</label> <input type="text" class="form-control form-control-sm" name="curso_area_atuacao[]" id="areaatuacao" value="{{$candidato->can_curso_area_atuacao[$i]}}">  </div>';
                     document.getElementById('lista').appendChild(div)
             cont01++;
             

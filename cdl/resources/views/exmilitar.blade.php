@@ -9,7 +9,7 @@
         <hr>
     </div>
     <div class="input-group g-3">
-        <input type="text" class="form-control" name="buscar" placeholder="Pesquise por Nomes, CPF' ou Unidades Militar" aria-label="Recipient's username"
+        <input type="text" class="form-control" name="buscar" placeholder="Pesquise por Nome, cpf ou unidades militar" aria-label="Recipient's username"
             >
         <input class="btn btn-dark" type="submit" value="Buscar" id="buscar">
     </div>
