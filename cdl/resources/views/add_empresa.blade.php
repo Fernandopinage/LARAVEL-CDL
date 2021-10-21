@@ -199,7 +199,7 @@
         </div>
         <div class="adcinais">
             <div class="row g-3">
-                <div class="col-md-2">
+                <div class="col-md-4">
                     <input type="hidden" value="1" name="associado"> <!-- campo responsavel por ativar empresa -->
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" name="associado" id="asscdl" >

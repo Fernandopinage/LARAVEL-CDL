@@ -89,10 +89,6 @@ class CandidatoController extends Controller
 
         //ddd($request);
 
-
-
-
-          
         if ($request->senha === $request->confirma) {
 
             $candidato = new Candidato();
@@ -172,7 +168,7 @@ class CandidatoController extends Controller
             
             ddd($request);
            //$candidato->save();
-           //return redirect('login/candidato')->with('mensagem', 'Registro cadastrado com sucesso!'); // redirecionar para tela de anuncio
+           return redirect('login/candidato')->with('mensagem', 'Registro cadastrado com sucesso!'); // redirecionar para tela de anuncio
         }
       
         
