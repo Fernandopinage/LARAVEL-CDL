@@ -8,6 +8,7 @@ use App\Http\Controllers\homeController;
 use App\Http\Controllers\OmsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\indexController; // necessario instancia 
+use App\Http\Controllers\PDFControler;
 use App\Http\Controllers\utvController;
 use App\Http\Controllers\VagasController;
 use App\Models\Empresa;
@@ -118,3 +119,6 @@ Route::get('/buscar/filtro/candidato/', [utvController::class, 'filtrarCandidato
 
 
 Route::get('login/acesso', [acessoController::class, 'index']);   // tela de acesso area administrativa
+
+
+Route::get('/gerar/pdf/', [PDFControler::class , 'gerarPDF']);
