@@ -293,24 +293,10 @@ function moeda(a, e, r, t) {
 
       });
 
-
-      $('#pcd').change(function(){
-
-        if($("#pcd:checked").val() == undefined){
-            $("#pcd").prop('checked', false);
-            $('#descPCD').hide(); 
-            
-        }else{
-          $("#pcd").prop('checked', true);
-          $('#descPCD').hide();  
-          $
-        }
-
-
-      });
-
-
     });
+        $('#pcd').change(function(){
+          console.log(document.getElementById('pcd').value)
+        });
 
 </script>
 
