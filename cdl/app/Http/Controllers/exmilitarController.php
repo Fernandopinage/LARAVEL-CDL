@@ -22,7 +22,7 @@ class exmilitarController extends Controller
         if(!empty($request)){
 
              
-            $dados = Candidato::where('can_exmilitar','on')
+            $dados = Candidato::where('can_exmilitar','Sim')
             ->where('can_nome','like',$request->buscar.'%')
             ->orWhere('can_cpf','like', $request->buscar.'%')
             ->orWhere('can_matricula','like', $request->buscar.'%')
@@ -36,6 +36,12 @@ class exmilitarController extends Controller
         }
 
         
+
+    }
+
+    public function abaFiltro($id){
+
+        return view('buscar_filtro_exmilitar',compact('id'));
 
     }
  
