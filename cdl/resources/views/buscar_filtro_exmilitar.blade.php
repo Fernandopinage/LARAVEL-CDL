@@ -17,7 +17,7 @@
     <div class="row g-3 shadow p-4 mb-5 bg-body rounded">
         <div class="text-end">
           
-          <a href="" ><img src="/icons/baseline_print_black_24dp.png"></a>
+          <a href="/gerar/pdf/{{$dados->can_id}}" ><img src="/icons/baseline_print_black_24dp.png"></a>
           
         </div>
 

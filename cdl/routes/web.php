@@ -94,6 +94,8 @@ Route::post('/update/oms/{id}', [OmsController::class, 'Update']);
 Route::get('/alterar/senha/oms', [OmsController::class, 'alterarPassword']);
 Route::post('/modificar/senha/oms', [OmsController::class, 'modificarSenha']);
 Route::get('/delete/conta/oms/{id}', [OmsController::class, 'deleteConta']);
+
+Route::get('/gerar/pdf/{id}', [PDFControler::class , 'gerarPDF']);
 //});
 
 
@@ -127,4 +129,4 @@ Route::get('/buscar/filtro/candidato/', [utvController::class, 'filtrarCandidato
 Route::get('login/acesso', [acessoController::class, 'index']);   // tela de acesso area administrativa
 
 
-Route::get('/gerar/pdf/', [PDFControler::class , 'gerarPDF']);
+

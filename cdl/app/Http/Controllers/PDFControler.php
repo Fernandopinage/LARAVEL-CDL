@@ -3,17 +3,21 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Barryvdh\DomPDF\PDF;
-use Dompdf\Dompdf;
+use App\Models\Candidato;
+use Barryvdh\DomPDF\FACADE as PDF;
+
 
 class PDFControler extends Controller
 {
-    public function gerarPDF(){
+    public function gerarPDF($id){
        
-        $pdf = new DomPDF();
-        $pdf->loadHtml('<h1>teste</h1>');
-        $pdf->setPaper("a4");
-        $pdf->render();
-        $pdf->stream("file.pdf",["Attachment" =>false]);
+
+        $dados = Candidato::find($id);
+    
+        $pdf = PDF::loadView('pdf', compact('dados'));
+
+        return $pdf->setPaper("a4")->stream('file.pdf');
+
+        
     }
 }
