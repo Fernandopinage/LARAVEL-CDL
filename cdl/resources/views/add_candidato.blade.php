@@ -35,13 +35,13 @@
                     <input type="text" class="form-control form-control-sm" name="sobrenome" placeholder="">
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-md-4" id="selecionarFoto">
                     <label class="form-check-label" for="image">Selecione Sua foto</label>
                     <!--<input class="form-control form-control-sm" type="file" name="foto" id="formFile"> -->
                     <input type="file" name="foto" id="formFile" class="form-control-file">
                 </div>
 
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <label class="form-check-label" for="flexCheckIndeterminate">CPF</label>
                     <input type="text" class="form-control form-control-sm" name="cpf" placeholder=""
                         onfocus="javascript: retirarFormatacao(this);" onblur="javascript: formatarCampo(this);"
@@ -52,7 +52,7 @@
                     <input type="text" maxlength="10" class="form-control form-control-sm"
                         onkeyup="somenteNumeros(this);" name="rg" placeholder="">
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-2">
                     <label class="form-check-label" for="flexCheckIndeterminate">Data Nascimento </label>
                     <input type="date" class="form-control form-control-sm" name="nascimento" placeholder="">
                 </div>
@@ -89,7 +89,7 @@
                         <option value="Separado">Separado</option>
                     </select>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-1">
                     <label class="form-check-label" for="flexCheckIndeterminate">Possui filhos</label>
                     <div class="form-check ">
                         <input class="form-check-input" type="radio" name="filiacao" id="gridRadios1" value="option2">
@@ -133,12 +133,12 @@
 
                 </div>
 
-                <div class="col-md-3" id="divMilitar">
+                <div class="col-md-2" id="divMilitar">
                     <label class="form-check-label" for="flexCheckIndeterminate">Unidade Militar</label>
                     <input type="text" class="form-control form-control-sm" name="unidademilitar" id="unidademilitar"
                         placeholder="">
                 </div>
-                <div class="col-md-3" id="divMatricula">
+                <div class="col-md-2" id="divMatricula">
                     <label class="form-check-label" for="flexCheckIndeterminate">Matrícula</label>
                     <input type="text" class="form-control form-control-sm" name="matricula" id="matricula"
                         placeholder="">

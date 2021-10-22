@@ -298,6 +298,14 @@
 </script>
 
 <script>
+
+
+  $(document).ready(function(){
+    $('#selecionarFoto').hide();
+  });
+
+
+
   $('#formacao').change(function(){
 
     
