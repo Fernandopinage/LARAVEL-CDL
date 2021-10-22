@@ -35,7 +35,7 @@
                                 <span style="color: #284D92"></span>
                                 <p>
                                 <h1>
-                                    <span style="color: #157347; margin-right:132px; "><img src="/img/index-1.jpg"
+                                    <span style="color: #157347; margin-right:132px; "><img src="/img/events/{{$candidato->can_foto}}"
                                             height="350px" width="350px" class="img-thumbnail" alt="..."></span><span
                                         style="color: #696969;"></span>
                                     <p class="text-center"> <img src="/img/star.png" height="150px" width="150px"
