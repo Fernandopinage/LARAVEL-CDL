@@ -96,15 +96,15 @@
                     </select>
                 </div>
                 <div class="col-md-2">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Possui filhos</label>
+                    <label class="form-check-label" for="flexCheckIndeterminate">Possui filhos?</label>
                     <div class="form-check ">
-                        <input class="form-check-input" type="radio" name="filiacao" id="gridRadios1" value="option2">
+                        <input class="form-check-input" type="radio" name="filiacao" id="gridRadios1" value="sim">
                         <label class="form-check-label" for="gridRadios1">
                             Sim
                         </label>
                     </div>
                     <div class="form-check ">
-                        <input class="form-check-input" type="radio" name="filiacao" id="gridRadios2" value="option3">
+                        <input class="form-check-input" type="radio" name="filiacao" id="gridRadios2" value="não">
                         <label class="form-check-label" for="gridRadios2">
                             Não
                         </label>

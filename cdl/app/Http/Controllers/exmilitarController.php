@@ -41,7 +41,14 @@ class exmilitarController extends Controller
 
     public function abaFiltro($id){
 
-        return view('buscar_filtro_exmilitar',compact('id'));
+        $id = base64_decode($id);
+
+        $dados = Candidato::where('can_id', '=', $id)
+        ->where('can_exmilitar', '=', 'Sim')
+        ->get();
+
+        return view('buscar_filtro_exmilitar',compact('dados'));
+        //return view('buscar_filtro_exmilitar',compact('candidato'));
 
     }
  
