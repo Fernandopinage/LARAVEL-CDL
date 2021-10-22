@@ -323,23 +323,31 @@ if(document.getElementById('formacao').value  === 'Pós-Graduação_Cursando'){
     if(document.getElementById('formacao').value === 'Ensino_Fundamental_completo' || document.getElementById('formacao').value === 'Ensino_Fundamental_incompleto'){
      
       $('#curso_div').hide();
-      $('#termino_div').show();
+      $('#termino_div').hide();
       $('#semestre_div').hide();
       $('#periodo_div').hide();
       $('#institucao_div').hide();
+      
     }
   
-    if(document.getElementById('formacao').value === 'Ensino Médio_completo'){
+    if(document.getElementById('formacao').value === 'Ensino_Médio_completo'){
+
       $('#curso_div').hide();
       $('#termino_div').show();
+      $label = document.getElementById('termino_div_label');
+      $label.innerHTML = "Ano de conclusão"
       $('#semestre_div').hide();
       $('#periodo_div').hide();
       $('#institucao_div').hide();
+
     }
   
     if(document.getElementById('formacao').value  === 'Ensino_Médio_cursando'){
       $('#curso_div').hide();
       $('#termino_div').show();
+      $label = document.getElementById('termino_div_label');
+      $label.innerHTML = "Ano em curso"
+
       $('#semestre_div').hide();
       $('#periodo_div').hide();
       $('#institucao_div').hide();
@@ -349,6 +357,8 @@ if(document.getElementById('formacao').value  === 'Pós-Graduação_Cursando'){
   
       $('#curso_div').show();
       $('#termino_div').show();
+      $label = document.getElementById('termino_div_label');
+      $label.innerHTML = "Ano de conclusão"
       $('#semestre_div').hide();
       $('#periodo_div').hide();
       $('#institucao_div').show();
@@ -357,10 +367,10 @@ if(document.getElementById('formacao').value  === 'Pós-Graduação_Cursando'){
   
     if(document.getElementById('formacao').value  === 'Ensino_Técnico_cursando'){
   
-  
+
       $('#curso_div').show();
-      $('#termino_div').show();
-      $('#semestre_div').hide();
+      $('#termino_div').hide();
+      $('#semestre_div').show();
       $('#periodo_div').hide();
       $('#institucao_div').show();
   
@@ -368,8 +378,11 @@ if(document.getElementById('formacao').value  === 'Pós-Graduação_Cursando'){
   
     if(document.getElementById('formacao').value  === 'Superior_Completo'){
   
-    $('#curso_div').show();
+  
+      $('#curso_div').show();
     $('#termino_div').show();
+    $label = document.getElementById('termino_div_label');
+    $label.innerHTML = "Ano de conclusão"
     $('#semestre_div').hide();
     $('#periodo_div').hide();
     $('#institucao_div').show();
@@ -380,7 +393,7 @@ if(document.getElementById('formacao').value  === 'Pós-Graduação_Cursando'){
   
     if(document.getElementById('formacao').value  === 'Superior_Cursando'){
   
-    $('#curso_div').show();
+      $('#curso_div').show();
     $('#termino_div').hide();
     $('#semestre_div').hide();
     $('#periodo_div').show();
@@ -389,11 +402,13 @@ if(document.getElementById('formacao').value  === 'Pós-Graduação_Cursando'){
     }
   
     if(document.getElementById('formacao').value  === 'Pós-Graduação_Completo'){
-  
+      
     $('#curso_div').show();
     $('#termino_div').show();
     $('#semestre_div').hide();
     $('#periodo_div').hide();
+    $label = document.getElementById('termino_div_label');
+    $label.innerHTML = "Ano de conclusão"
     $('#institucao_div').show();
   
     }
@@ -401,9 +416,9 @@ if(document.getElementById('formacao').value  === 'Pós-Graduação_Cursando'){
     if(document.getElementById('formacao').value  === 'Pós-Graduação_Cursando'){
   
       $('#curso_div').show();
-      $('#termino_div').show();
+      $('#termino_div').hide();
       $('#semestre_div').hide();
-      $('#periodo_div').hide();
+      $('#periodo_div').show();
       $('#institucao_div').show();
   
     }
@@ -431,7 +446,6 @@ $('#formFile').change(function(){
 });
 
 </script>
-
 
 
 <!--<script src="/js/checkbox.js"></script> -->
