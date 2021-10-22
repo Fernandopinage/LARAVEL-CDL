@@ -129,6 +129,10 @@
 
 <script>
   $(document).ready(function(){
+    
+
+    $('#selecionarFoto').hide();
+    
     document.getElementById('divMilitar').style.display ='none'
     document.getElementById('divMatricula').style.display ='none'
       $('#curso_div').hide();

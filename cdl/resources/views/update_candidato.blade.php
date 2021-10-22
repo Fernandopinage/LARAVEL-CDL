@@ -30,15 +30,15 @@ $candidato;
 
 
                 <div class="col-md-6">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Primeiro Nome </label>
+                    <label class="form-check-label" for="flexCheckIndeterminate">Primeiro Nome <span><strong>*</strong></label>
                     <input type="text" class="form-control form-control-sm" name="nome" value="{{$candidato->can_nome}}"
-                        placeholder="">
+                        placeholder="" required>
                 </div>
 
                 <div class="col-md-6">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Sobrenome</label>
+                    <label class="form-check-label" for="flexCheckIndeterminate">Sobrenome <span><strong>*</strong></label>
                     <input type="text" class="form-control form-control-sm" name="sobrenome"
-                        value="{{$candidato->can_sobrenome}}" placeholder="">
+                        value="{{$candidato->can_sobrenome}}" placeholder="" required>
                 </div>
 
                 <div class="col-md-4" style="display: none">
@@ -48,7 +48,7 @@ $candidato;
                 </div>
 
                 <div class="col-md-3">
-                    <label class="form-check-label" for="flexCheckIndeterminate">CPF</label>
+                    <label class="form-check-label" for="flexCheckIndeterminate">CPF <span><strong>*</strong></label>
                     <input type="text" class="form-control form-control-sm" name="cpf" placeholder=""
                         onfocus="javascript: retirarFormatacao(this);" onblur="javascript: formatarCampo(this);"
                         name="cnpj" id="cnpj" placeholder="99.999.999/9999-99" value="{{$candidato->can_cpf}}">
@@ -59,17 +59,17 @@ $candidato;
                         onkeyup="somenteNumeros(this);" name="rg" placeholder="" value="{{$candidato->can_rg}}">
                 </div>
                 <div class="col-md-3">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Data Nascimento </label>
+                    <label class="form-check-label" for="flexCheckIndeterminate">Data Nascimento <span><strong>*</strong></label>
                     <input type="date" class="form-control form-control-sm" name="nascimento" placeholder=""
-                        value="{{$candidato->can_nascimento}}">
+                        value="{{$candidato->can_nascimento}}" required>
                 </div>
                 <div class="col-md-3">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Local de Nascimento </label>
+                    <label class="form-check-label" for="flexCheckIndeterminate">Local de Nascimento <span><strong>*</strong></label>
                     <input type="text" class="form-control form-control-sm" name="localnascimento" placeholder=""
-                        value="{{$candidato->can_localnascimento}}">
+                        value="{{$candidato->can_localnascimento}}" required>
                 </div>
                 <div class="col-md-2">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Cor</label>
+                    <label class="form-check-label" for="flexCheckIndeterminate">Cor/Raça</label>
                     <select id="inputState" name="cor" class="form-select form-select-sm"
                         value="{{$candidato->can_cor}}">
                         <option></option>
@@ -528,7 +528,7 @@ $candidato;
                     </div>
                     <div class="col-md-3">
                         <label class="form-check-label" for="flexCheckIndeterminate">Escolha um idioma
-                            <span><strong>*</strong></span></label>
+                            </label>
                         <select class="form-select form-select-sm" name="idioma[]" id="idioma"
                             aria-label="Default select example">
                             <option selected></option>
@@ -554,7 +554,7 @@ $candidato;
 
                     <div class="col-md-3">
                         <label class="form-check-label" for="flexCheckIndeterminate">Nível de Escrita
-                            <span><strong>*</strong></span></label>
+                            </label>
                         <select class="form-select form-select-sm" name="idioma_escrita[]" id="idioma_escrita"
                             aria-label="Default select example">
                             <option></option>
@@ -571,7 +571,7 @@ $candidato;
 
                     <div class="col-md-3">
                         <label class="form-check-label" for="flexCheckIndeterminate">Nível de Leitura
-                            <span><strong>*</strong></span></label>
+                            </label>
                         <select class="form-select form-select-sm" name="idioma_leitura[]" id="idioma_leitura"
                             aria-label="Default select example">
                             <option></option>
@@ -587,7 +587,7 @@ $candidato;
                     </div>
                     <div class="col-md-3">
                         <label class="form-check-label" for="flexCheckIndeterminate">Nível de Conversação
-                            <span><strong>*</strong></span></label>
+                            </label>
                         <select class="form-select form-select-sm" name="idioma_conversacao[]" id="idioma_conversacao"
                             aria-label="Default select example">
                             <option></option>

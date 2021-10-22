@@ -25,14 +25,16 @@
 
             <div class="row g-3">
 
-                <div class="col-md-4">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Primeiro Nome </label>
-                    <input type="text" class="form-control form-control-sm" name="nome" placeholder="">
+                <div class="col-md-6">
+                    <label class="form-check-label" for="flexCheckIndeterminate">Primeiro Nome
+                        <span><strong>*</strong></span> </label>
+                    <input type="text" class="form-control form-control-sm" name="nome" placeholder="" required>
                 </div>
 
-                <div class="col-md-4">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Sobrenome</label>
-                    <input type="text" class="form-control form-control-sm" name="sobrenome" placeholder="">
+                <div class="col-md-6">
+                    <label class="form-check-label" for="flexCheckIndeterminate">Sobrenome
+                        <span><strong>*</strong></span></label>
+                    <input type="text" class="form-control form-control-sm" name="sobrenome" placeholder="" required>
                 </div>
 
                 <div class="col-md-4" id="selecionarFoto">
@@ -41,27 +43,31 @@
                     <input type="file" name="foto" id="formFile" class="form-control-file">
                 </div>
 
-                <div class="col-md-4">
-                    <label class="form-check-label" for="flexCheckIndeterminate">CPF</label>
+                <div class="col-md-3">
+                    <label class="form-check-label" for="flexCheckIndeterminate">CPF
+                        <span><strong>*</strong></span></label>
                     <input type="text" class="form-control form-control-sm" name="cpf" placeholder=""
                         onfocus="javascript: retirarFormatacao(this);" onblur="javascript: formatarCampo(this);"
-                        name="cnpj" id="cnpj" placeholder="99.999.999/9999-99" value="{{old('cnpj')}}">
+                        name="cnpj" id="cnpj" placeholder="99.999.999/9999-99" value="{{old('cnpj')}}" required>
                 </div>
                 <div class="col-md-3">
                     <label class="form-check-label" for="flexCheckIndeterminate">RG</label>
                     <input type="text" maxlength="10" class="form-control form-control-sm"
                         onkeyup="somenteNumeros(this);" name="rg" placeholder="">
                 </div>
-                <div class="col-md-2">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Data Nascimento </label>
-                    <input type="date" class="form-control form-control-sm" name="nascimento" placeholder="">
+                <div class="col-md-3">
+                    <label class="form-check-label" for="flexCheckIndeterminate">Data Nascimento
+                        <span><strong>*</strong></span> </label>
+                    <input type="date" class="form-control form-control-sm" name="nascimento" placeholder="" required>
                 </div>
                 <div class="col-md-3">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Local de Nascimento </label>
-                    <input type="text" class="form-control form-control-sm" name="localnascimento" placeholder="">
+                    <label class="form-check-label" for="flexCheckIndeterminate">Local de Nascimento
+                        <span><strong>*</strong></span> </label>
+                    <input type="text" class="form-control form-control-sm" name="localnascimento" placeholder=""
+                        required>
                 </div>
                 <div class="col-md-2">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Cor</label>
+                    <label class="form-check-label" for="flexCheckIndeterminate">Cor/Raça</label>
                     <select id="inputState" name="cor" class="form-select form-select-sm">
                         <option selected></option>
                         <option value="Branca">Branca</option>
@@ -89,7 +95,7 @@
                         <option value="Separado">Separado</option>
                     </select>
                 </div>
-                <div class="col-md-1">
+                <div class="col-md-2">
                     <label class="form-check-label" for="flexCheckIndeterminate">Possui filhos</label>
                     <div class="form-check ">
                         <input class="form-check-input" type="radio" name="filiacao" id="gridRadios1" value="option2">
@@ -117,7 +123,7 @@
                 </div>
 
                 <div class="col-md-2">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Pretensão salarial </label>
+                    <label class="form-check-label" for="flexCheckIndeterminate">Pretensão Salarial </label>
                     <input type="text" class="form-control form-control-sm" name="pretensao_salario" placeholder=""
                         onKeyPress="return(moeda(this,'.',',',event))">
                 </div>
@@ -167,16 +173,19 @@
             <div class="row g-3">
 
                 <div class="col-md-4">
-                    <label class="form-check-label" for="flexCheckIndeterminate">E-mail </label>
-                    <input type="text" class="form-control form-control-sm" placeholder="" name="email">
+                    <label class="form-check-label" for="flexCheckIndeterminate">E-mail <span><strong>*</strong></span>
+                    </label>
+                    <input type="text" class="form-control form-control-sm" placeholder="" name="email" required>
                 </div>
                 <div class="col-md-2">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Senha </label>
-                    <input type="password" class="form-control form-control-sm" placeholder="" name="senha">
+                    <label class="form-check-label" for="flexCheckIndeterminate">Senha
+                        <span><strong>*</strong></span></label>
+                    <input type="password" class="form-control form-control-sm" placeholder="" name="senha" required>
                 </div>
                 <div class="col-md-2">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Confirmar Senha </label>
-                    <input type="password" class="form-control form-control-sm" placeholder="" name="confirma">
+                    <label class="form-check-label" for="flexCheckIndeterminate">Confirmar Senha
+                        <span><strong>*</strong></span> </label>
+                    <input type="password" class="form-control form-control-sm" placeholder="" name="confirma" required>
                 </div>
                 <div class="col-md-2">
                     <label class="form-check-label" for="flexCheckIndeterminate">Telefone</label>
@@ -185,10 +194,11 @@
                         name="telefone">
                 </div>
                 <div class="col-md-2">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Celular </label>
+                    <label class="form-check-label" for="flexCheckIndeterminate">Celular
+                        <span><strong>*</strong></span></label>
                     <input type="text" class="form-control form-control-sm" placeholder="(xx) xxxxx-xxxx"
                         onkeypress="mask(this, mphone);" onblur="mask(this, mphone);" value="{{old('telefone')}}"
-                        name="celular">
+                        name="celular" required>
                 </div>
 
             </div>
@@ -358,7 +368,8 @@
                 </div>
                 <div class="col-md-4">
                     <label class="form-check-label" for="flexCheckIndeterminate">Aréa de Atuação</label>
-                    <input type="text" class="form-control form-control-sm" name="curso_area_atuacao[]" id="areaatuacao">
+                    <input type="text" class="form-control form-control-sm" name="curso_area_atuacao[]"
+                        id="areaatuacao">
                 </div>
 
 
@@ -387,7 +398,7 @@
             <div class="row g-3 shadow p-4 mb-5 bg-body rounded" style="margin:0px 20px 0px 20px; padding:20px;">
 
                 <div class="col-md-4">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Título do curso</label>
+                    <label class="form-check-label" for="flexCheckIndeterminate">Nome do curso</label>
                     <input type="text" class="form-control form-control-sm" name="utv_titlulo[]" placeholder="">
                 </div>
                 <div class="col-md-2">
@@ -439,7 +450,7 @@
 
                     <div class="col-md-3">
                         <label class="form-check-label" for="flexCheckIndeterminate">Escolha um idioma
-                            <span><strong>*</strong></span></label>
+                        </label>
                         <select class="form-select form-select-sm" name="idioma[]" id="idioma"
                             aria-label="Default select example">
                             <option selected></option>
@@ -456,7 +467,7 @@
                     </div>
                     <div class="col-md-3">
                         <label class="form-check-label" for="flexCheckIndeterminate">Nível de Escrita
-                            <span><strong>*</strong></span></label>
+                        </label>
                         <select class="form-select form-select-sm" name="idioma_escrita[]" id="idioma_escrita"
                             aria-label="Default select example">
                             <option selected></option>
@@ -470,7 +481,7 @@
 
                     <div class="col-md-3">
                         <label class="form-check-label" for="flexCheckIndeterminate">Nível de Leitura
-                            <span><strong>*</strong></span></label>
+                        </label>
                         <select class="form-select form-select-sm" name="idioma_leitura[]" id="idioma_leitura"
                             aria-label="Default select example">
                             <option selected></option>
@@ -483,7 +494,7 @@
                     </div>
                     <div class="col-md-3">
                         <label class="form-check-label" for="flexCheckIndeterminate">Nível de Conversação
-                            <span><strong>*</strong></span></label>
+                        </label>
                         <select class="form-select form-select-sm" name="idioma_conversacao[]" id="idioma_conversacao"
                             aria-label="Default select example">
                             <option selected></option>
@@ -608,7 +619,7 @@
         <div class="text">
             <h2 class="form-signin-heading">Prefêrencias Profissionais
             </h2>
-  
+
             <hr>
         </div>
 
@@ -633,13 +644,13 @@
                         </select>
                     </div>
                     <div class="col-md-2" style="margin-top: 42px;">
-                       
-                            <input type="button" class="btn btn-success btn-sm" onclick="addPreferencia()"
-                                value="Adicionar Prefêrencias">
-                        
+
+                        <input type="button" class="btn btn-success btn-sm" onclick="addPreferencia()"
+                            value="Adicionar Prefêrencias">
+
                     </div>
                 </div>
-                
+
                 <!-- div responsavel por adicionar outros campo -->
                 <div id="listaPreferencia" style="padding-top: 20px"> </div>
                 <!-- ****************************************** -->
@@ -907,7 +918,7 @@
     if(cont02 < 4){
 
         var div = document.createElement('div');
-        div.innerHTML = '<div class="row g-3 shadow p-3 mb-5 bg-body rounded" id="divUTv'+cont02+'" style="margin:0px 20px 0px 20px; padding:20px;"> <div class="text-end"> <input type="button" class="btn btn-danger btn-sm" onclick="removeCamposUTv('+cont02+')" value="Remover Curso"></div> <div class="col-md-4"><label class="form-check-label" for="flexCheckIndeterminate">Título do curso</label> <input type="text" class="form-control form-control-sm" name="utv_titlulo[]" placeholder=""> </div>  <div class="col-md-2">  <label class="form-check-label" for="flexCheckIndeterminate">Carga horária</label> <input type="text" class="form-control form-control-sm" name="utv_carga[]" placeholder="">  </div> <div class="col-md-2">  <label class="form-check-label" for="flexCheckIndeterminate">Data de Emissão</label><input type="month" class="form-control form-control-sm" name="utv_data[]" placeholder=""> </div><div class="col-md-4" id="tempoexperiencia_div"><label class="form-check-label" for="flexCheckIndeterminate">Área de Atuação</label><input type="text" class="form-control form-control-sm" name="utv_area[]" placeholder=""> </div>';
+        div.innerHTML = '<div class="row g-3 shadow p-3 mb-5 bg-body rounded" id="divUTv'+cont02+'" style="margin:0px 20px 0px 20px; padding:20px;"> <div class="text-end"> <input type="button" class="btn btn-danger btn-sm" onclick="removeCamposUTv('+cont02+')" value="Remover Curso"></div> <div class="col-md-4"><label class="form-check-label" for="flexCheckIndeterminate">Nome do curso</label> <input type="text" class="form-control form-control-sm" name="utv_titlulo[]" placeholder=""> </div>  <div class="col-md-2">  <label class="form-check-label" for="flexCheckIndeterminate">Carga horária</label> <input type="text" class="form-control form-control-sm" name="utv_carga[]" placeholder="">  </div> <div class="col-md-2">  <label class="form-check-label" for="flexCheckIndeterminate">Data de Emissão</label><input type="month" class="form-control form-control-sm" name="utv_data[]" placeholder=""> </div><div class="col-md-4" id="tempoexperiencia_div"><label class="form-check-label" for="flexCheckIndeterminate">Área de Atuação</label><input type="text" class="form-control form-control-sm" name="utv_area[]" placeholder=""> </div>';
                  document.getElementById('listaUTv').appendChild(div)
         cont02++;
 
@@ -930,7 +941,7 @@
 
            
         var div = document.createElement('div');
-        div.innerHTML = '<div class="row g-3 shadow p-3 mb-5 bg-body rounded" id="divIdioma'+cont03+'" style="margin:0px 20px 0px 20px; padding:20px;"> <div class="text-end"> <input type="button" class="btn btn-danger btn-sm" onclick="removeCamposIdioma('+cont03+')" value="Remover Curso"></div> <div class="col-md-3"><label class="form-check-label" for="flexCheckIndeterminate">Escolha um idioma <span><strong>*</strong></span></label><select class="form-select form-select-sm" name="idioma[]" id="idioma" aria-label="Default select example"> <option selected></option> <option value="Inglês">Inglês</option><option value="Francês">Francês</option>  <option value="Espanhol">Espanhol</option><option value="Outros">Outros</option> </select></div> <div class="col-md-3"><label class="form-check-label" for="flexCheckIndeterminate">Nível de Escrita<span><strong>*</strong></span></label><select class="form-select form-select-sm" name="idioma_escrita[]" id="idioma_escrita" aria-label="Default select example"><option selected></option> <option value="Básico">Básico</option> <option value="Intermediário">Intermediário</option> <option value="Avançado">Avançado</option> </select></div> <div class="col-md-3"><label class="form-check-label" for="flexCheckIndeterminate">Nível de Leitura <span><strong>*</strong></span></label> <select class="form-select form-select-sm" name="idioma_leitura[]" id="idioma_leitura" aria-label="Default select example">  <option selected></option> <option value="Básico">Básico</option>  <option value="Intermediário">Intermediário</option> <option value="Avançado">Avançado</option>   </select></div>  <div class="col-md-3"> <label class="form-check-label" for="flexCheckIndeterminate">Nível de Conversação <span><strong>*</strong></span></label> <select class="form-select form-select-sm" name="idioma_conversacao[]" id="idioma_conversacao" aria-label="Default select example">                <option selected></option> <option value="Básico">Básico</option> <option value="Intermediário">Intermediário</option> <option value="Avançado">Avançado</option></select></div> </div>';
+        div.innerHTML = '<div class="row g-3 shadow p-3 mb-5 bg-body rounded" id="divIdioma'+cont03+'" style="margin:0px 20px 0px 20px; padding:20px;"> <div class="text-end"> <input type="button" class="btn btn-danger btn-sm" onclick="removeCamposIdioma('+cont03+')" value="Remover Curso"></div> <div class="col-md-3"><label class="form-check-label" for="flexCheckIndeterminate">Escolha um idioma </label><select class="form-select form-select-sm" name="idioma[]" id="idioma" aria-label="Default select example"> <option selected></option> <option value="Inglês">Inglês</option><option value="Francês">Francês</option>  <option value="Espanhol">Espanhol</option><option value="Outros">Outros</option> </select></div> <div class="col-md-3"><label class="form-check-label" for="flexCheckIndeterminate">Nível de Escrita</label><select class="form-select form-select-sm" name="idioma_escrita[]" id="idioma_escrita" aria-label="Default select example"><option selected></option> <option value="Básico">Básico</option> <option value="Intermediário">Intermediário</option> <option value="Avançado">Avançado</option> </select></div> <div class="col-md-3"><label class="form-check-label" for="flexCheckIndeterminate">Nível de Leitura </label> <select class="form-select form-select-sm" name="idioma_leitura[]" id="idioma_leitura" aria-label="Default select example">  <option selected></option> <option value="Básico">Básico</option>  <option value="Intermediário">Intermediário</option> <option value="Avançado">Avançado</option>   </select></div>  <div class="col-md-3"> <label class="form-check-label" for="flexCheckIndeterminate">Nível de Conversação </label> <select class="form-select form-select-sm" name="idioma_conversacao[]" id="idioma_conversacao" aria-label="Default select example">                <option selected></option> <option value="Básico">Básico</option> <option value="Intermediário">Intermediário</option> <option value="Avançado">Avançado</option></select></div> </div>';
         document.getElementById('listaIdioma').appendChild(div)
          cont03++;
 
@@ -1243,4 +1254,3 @@ function mphone(v) {
            return false;
      }
 </script>
-
