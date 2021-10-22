@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\candidatoMail;
 use App\Models\Candidato;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
 
 class CandidatoController extends Controller
 {
@@ -298,4 +300,75 @@ class CandidatoController extends Controller
     {
         //
     }
+
+
+    public function redefinirCandidato(){
+
+        
+        return view('redefinir_usuario');
+
+    }
+
+    public function redefinir(Request $request){
+
+     
+        $this->validate($request, [
+            'email' => 'required'
+        ]);
+
+        $candidato = Candidato::where('can_email', $request->email)->first();  // pegando os dados da empresa EMAIL NOME
+
+        
+        
+        if(empty($candidato)){
+            return redirect('/redefinir/candidato')->with('mensagem', 'Produto cadastrado com sucesso!');
+        }else{
+            
+            $id = $candidato->can_id;
+            
+            $email = $candidato->can_email;
+            $nome = $candidato->can_nome;
+            
+            
+            
+            Mail::to($request->email)->send(new candidatoMail(Candidato::where('can_email',$request->email)->first()));
+
+            return redirect('/redefinir/candidato')->with('sucesso', 'Produto cadastrado com sucesso!');
+            
+
+            /*
+            Mail::to($request->email)->send(new empresaMail(Empresa::where('emp_email', $request->email)->first()));
+
+            return redirect('/redefinir/empresa')->with('sucesso', 'Produto cadastrado com sucesso!');
+            */
+        }
+
+
+    }
+
+    public function updateSenha($id){
+
+        $candidato = Candidato::find($id);
+       
+        return view('alterar_senha_candidato', compact('candidato'));
+       
+    }
+
+    public function modificar(Request $request){
+
+        $id = $request->id;
+
+        if($request->newsenha === $request->confsenha){
+
+            $candidato = Candidato::find($id);
+            $candidato->can_senha  = Hash::make($request->senha);
+            $candidato->save();
+            return redirect('login/candidato')->with('mensagem', 'Registro cadastrado com sucesso!');
+
+        }
+
+    }
+
+    
+
 }
