@@ -779,21 +779,6 @@ $candidato;
 
 
             <div class="row g-3">
-                <div class="col-md-6" id="tempoexperiencia_div">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Selecione Prefêrencias
-                        Profissionais</label>
-                    <select class="form-select form-select-sm" name="tempoexperiencia[]" id="tempoexperiencia"
-                        aria-label="Default select example">
-                        <option selected></option>
-                        <option  value="Financeiro">Financeiro</option>
-                        <option  value="Administração">Administração</option>
-                        <option  value="Vendas">Vendas</option>
-                        <option  value="RH">RH</option>
-                        <option  value="Técnologia da informação">Técnologia da informação</option>
-                        <option  value="Logística">Logística</option>
-                        <option  value="Produção">Produção</option>
-                    </select>
-                </div>
                 <div class="col-md-2" style="margin-top: 42px;">
                 
                         <input type="button" class="btn btn-success btn-sm" onclick="addPreferencia()"
