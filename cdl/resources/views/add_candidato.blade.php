@@ -149,6 +149,21 @@
                     <input type="text" class="form-control form-control-sm" name="matricula" id="matricula"
                         placeholder="">
                 </div>
+                <div class="col-md-2">
+                    <label class="form-check-label" for="flexCheckIndeterminate">PCD</label>
+                    <div class="form-check ">
+                        <input class="form-check-input" type="radio" name="pcd" id="pcd1" value="sim">
+                        <label class="form-check-label" for="pcd1">
+                            Sim
+                        </label>
+                    </div>
+                    <div class="form-check ">
+                        <input class="form-check-input" type="radio" name="pcd" id="pcd2" value="não" checked>
+                        <label class="form-check-label" for="pcd2">
+                            Não
+                        </label>
+                    </div>
+                </div>
 
 
             </div>
