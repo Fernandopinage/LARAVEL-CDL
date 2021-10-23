@@ -361,15 +361,17 @@ class CandidatoController extends Controller
     public function modificar(Request $request){
 
         $id = $request->id;
-
+        
         if($request->newsenha === $request->confsenha){
-
+            
             $candidato = Candidato::find($id);
-            $candidato->can_senha  = Hash::make($request->senha);
+            $candidato->can_senha  = Hash::make($request->newsenha);
             $candidato->save();
+            //ddd($request);
             return redirect('login/candidato')->with('mensagem', 'Registro cadastrado com sucesso!');
 
         }
+       
 
     }
 
