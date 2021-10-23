@@ -188,7 +188,7 @@
             <div class="row g-3">
 
                 <div class="col-md-4">
-                    <label class="form-check-label" for="flexCheckIndeterminate">E-mail <span><strong>*</strong></span>
+                    <label class="form-check-label" for="flexCheckIndeterminate">{{@error('email')}}E-mail <span><strong>*</strong></span>
                     </label>
                     <input type="text" class="form-control form-control-sm" placeholder="" name="email" required>
                 </div>

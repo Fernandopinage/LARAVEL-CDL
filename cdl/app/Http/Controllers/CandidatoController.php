@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Requests;
 use App\Mail\candidatoMail;
 use App\Models\Candidato;
 use Illuminate\Http\Request;
@@ -88,11 +89,12 @@ class CandidatoController extends Controller
      */
     public function store(Request $request)
     {
-
+        /*
         $request->validate([
             'email' => 'unique:tbl_candidatos,can_email',
             
         ]);
+        */
 
         if ($request->senha === $request->confirma) {
 
