@@ -364,7 +364,7 @@
                 </div>
                 <div class="col-md-2">
                     <label class="form-check-label" for="flexCheckIndeterminate" id="utv_carga_label">Carga horária</label>
-                    <input type="text" class="form-control form-control-sm" id="curso_carga[]" name="curso_extra_carga[]" placeholder="">
+                    <input type="text" class="form-control form-control-sm" id="curso_carga[]" name="curso_carga[]" placeholder="">
                 </div>
                 <div class="col-md-2">
                     <label class="form-check-label" for="flexCheckIndeterminate">Data de Emissão</label>
