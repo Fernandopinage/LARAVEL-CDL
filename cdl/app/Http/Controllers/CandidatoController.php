@@ -169,9 +169,9 @@ class CandidatoController extends Controller
             $candidato->can_software_empresa  = $request->software_empresa;
             $candidato->can_tempoexperiencia  = $request->tempoexperiencia;
             $candidato->can_termo = $request->termo;
+            $candidato->save();
             
            //ddd($request);
-           $candidato->save();
            return redirect('login/candidato')->with('mensagem', 'Registro cadastrado com sucesso!'); // redirecionar para tela de anuncio
         }
       

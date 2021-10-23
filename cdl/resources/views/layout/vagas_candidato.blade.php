@@ -86,8 +86,7 @@
     <nav class="navbar fixed-bottom navbar-expand-sm navbar bg" style="background-color: #284D92">
       <div class="container" style="margin-top: 8px">
         <div class="col-6 input-group-sm">
-          <p class="text-start" style="color:#fff">Progride® é uma marca registrada ©
-            <?php echo date('Y')?>
+          <p class="text-start" style="color:#fff">Progride® é uma marca registrada © <?php echo date('Y')?>
           </p>
         </div>
         <div class="col-6 input-group-sm">
@@ -110,7 +109,7 @@
 <script>
 
   $('#formacao').change(function(){
-    
+    alert('ok')
     if(document.getElementById('formacao').value === 'Ensino fundamental completo' || document.getElementById('formacao').value === 'Ensino fundamental incompleto'){
      
       $('#curso_div').hide();

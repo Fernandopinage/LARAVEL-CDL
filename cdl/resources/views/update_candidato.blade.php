@@ -420,29 +420,28 @@ $candidato;
                     <input type="button" class="btn btn-danger btn-sm" onclick="removeCampos(<?php echo $i;?>)"
                         value="Remover Curso">
                 </div>
-                <div class="col-md-2">
-                    <label class="form-check-label" for="flexCheckIndeterminate" id="utv_carga_label">Carga horária</label>
-                    <input type="text" class="form-control form-control-sm" id="curso_carga[]" name="curso_carga[]" placeholder=""
-                    value="{{$candidato->curso_carga[$i]}}">
-                </div>
                 <div class="col-md-4">
                     <label class="form-check-label" for="flexCheckIndeterminate">Cursos extracurriculares</label>
                     <input type="text" class="form-control form-control-sm" name="curso_extra[]" placeholder=""
                         value="{{$candidato->can_curso_extra[$i]}}">
                 </div>
-                <div class="col-md-3">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Data de Emissão</label>
-                    <input type="month" class="form-control form-control-sm" name="curso_ano_termino[]" placeholder=""
-                        value="{{$candidato->can_curso_ano_termino[$i]}}">
+                <div class="col-md-2">
+                    <label class="form-check-label" for="flexCheckIndeterminate" id="utv_carga_label">Carga horária</label>
+                    <input type="text" class="form-control form-control-sm" id="curso_carga[]" name="curso_carga[]" placeholder=""
+                    value="{{$candidato->curso_carga[$i]}}">
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-3">
+                    <label class="form-check-label" for="flexCheckIndeterminate">Data de Emissão de Certificado</label>
+                    <input type="month" class="form-control form-control-sm" name="curso_ano_termino[]" placeholder="" value="{{$candidato->can_curso_ano_termino[$i]}}">
+                </div>
+                <div class="col-md-3">
                     <label class="form-check-label" for="flexCheckIndeterminate">Aréa de Atuação</label>
                     <input type="text" class="form-control form-control-sm" name="curso_area_atuacao[]" id="areaatuacao" value="{{$candidato->can_curso_area_atuacao[$i]}}">
                 </div>
                 <div class="col-md-4">
                     <label class="form-check-label" for="flexCheckIndeterminate">Instituicao de Ensino</label>
-                    <input type="text" class="form-control form-control-sm" name="curso_instituicao[]" placeholder=""
-                    value="{{$candidato->curso_instituicao[$i]}}">
+                    <input type="text" class="form-control form-control-sm" name="curso_instituicao[]" placeholder="" value="{{$candidato->curso_instituicao[$i]}}"
+                    >
                 </div>
 
 
@@ -486,7 +485,7 @@ $candidato;
             </div>
 
             <div class="col-md-4">
-                <label class="form-check-label" for="flexCheckIndeterminate">Título do curso</label>
+                <label class="form-check-label" for="flexCheckIndeterminate">Nome do curso</label>
                 <input type="text" class="form-control form-control-sm" name="utv_titlulo[]" placeholder=""
                     value="{{$candidato->can_utv_titlulo[$i]}}">
             </div>
@@ -495,10 +494,14 @@ $candidato;
                 <input type="text" class="form-control form-control-sm" name="utv_carga[]" placeholder=""
                     value="{{$candidato->can_utv_carga[$i]}}">
             </div>
-            <div class="col-md-2">
-                <label class="form-check-label" for="flexCheckIndeterminate">Data de Emissão</label>
+            <div class="col-md-3">
+                <label class="form-check-label" for="flexCheckIndeterminate">Data de Emissão de Certificado</label>
                 <input type="month" class="form-control form-control-sm" name="utv_data[]" placeholder=""
                     value="{{$candidato->can_utv_data[$i]}}">
+            </div>
+            <div class="col-md-3" id="tempoexperiencia_div">
+                <label class="form-check-label" for="flexCheckIndeterminate" id="utv_area_atuacao_label">Área de Atuação</label>
+                <input type="text" class="form-control form-control-sm" id="utv_area_atuacao" name="utv_area_atuacao[]" placeholder="" value="{{$candidato->curso_instituicao[$i]}}">
             </div>
 
     </div>
@@ -780,7 +783,7 @@ $candidato;
                     <label class="form-check-label" for="flexCheckIndeterminate">Selecione Prefêrencias
                         Profissionais</label>
                     <select class="form-select form-select-sm" name="tempoexperiencia[]" id="tempoexperiencia"
-                        aria-label="Default select example" required>
+                        aria-label="Default select example">
                         <option selected></option>
                         <option  value="Financeiro">Financeiro</option>
                         <option  value="Administração">Administração</option>
@@ -1086,7 +1089,7 @@ $candidato;
         if(cont01 < 4){
         
             var div = document.createElement('div');
-            div.innerHTML = '<div class="row g-3 shadow p-3 mb-5 bg-body rounded" id="div'+cont01+'" style="margin:0px 20px 0px 20px; padding:20px;"> <div class="text-end"> <input type="button" class="btn btn-danger btn-sm" onclick="removeCampos('+cont01+')" value="Remover Curso"></div><div class="col-md-4"> <label class="form-check-label" for="flexCheckIndeterminate">Cursos extracurriculares</label><input type="text" class="form-control form-control-sm" name="curso_extra[]" placeholder=""> </div><div class="col-md-2"> <label class="form-check-label" for="flexCheckIndeterminate">Ano termino</label><input type="month" class="form-control form-control-sm" name="curso_ano_termino[]" placeholder=""></div><div class="col-md-4"> <label class="form-check-label" for="flexCheckIndeterminate">Aréa de Atuação</label> <input type="text" class="form-control form-control-sm" name="curso_area_atuacao[]" id="areaatuacao">  </div>';
+            div.innerHTML = '<div class="row g-3 shadow p-3 mb-5 bg-body rounded" id="div'+cont01+'" style="margin:0px 20px 0px 20px; padding:20px;">  <div class="text-end"><input type="button" class="btn btn-danger btn-sm" onclick="removeCampos('+cont01+')" value="Remover Curso">    </div><div class="col-md-4"><label class="form-check-label" for="flexCheckIndeterminate">Cursos extracurriculares</label> <input type="text" class="form-control form-control-sm" name="curso_extra[]" placeholder=""> </div><div class="col-md-2"><label class="form-check-label" for="flexCheckIndeterminate" id="utv_carga_label">Carga horária</label><input type="text" class="form-control form-control-sm" id="utv_carga" name="curso_carga[]" placeholder=""> </div><div class="col-md-3"> <label class="form-check-label" for="flexCheckIndeterminate">Data de Emissão de Certificado</label><input type="month" class="form-control form-control-sm" name="curso_ano_termino[]" placeholder="">    </div> <div class="col-md-3"> <label class="form-check-label" for="flexCheckIndeterminate">Aréa de Atuação</label><input type="text" class="form-control form-control-sm" name="curso_area_atuacao[]" id="areaatuacao">  </div><div class="col-md-4"><label class="form-check-label" for="flexCheckIndeterminate">Instituição de Ensino</label><input type="text" class="form-control form-control-sm" name="curso_instituicao[]" placeholder=""> </div>';
                     document.getElementById('lista').appendChild(div)
             cont01++;
             
@@ -1107,7 +1110,7 @@ $candidato;
      if(cont02 < 4){
 
         var div = document.createElement('div');
-        div.innerHTML = '<div class="row g-3 shadow p-3 mb-5 bg-body rounded" id="divUTv'+cont02+'" style="margin:0px 20px 0px 20px; padding:20px;"> <div class="text-end"> <input type="button" class="btn btn-danger btn-sm" onclick="removeCamposUTv('+cont02+')" value="Remover Curso"></div> <div class="col-md-4"><label class="form-check-label" for="flexCheckIndeterminate">Título do curso</label> <input type="text" class="form-control form-control-sm" name="utv_titlulo[]" placeholder=""> </div>  <div class="col-md-2">  <label class="form-check-label" for="flexCheckIndeterminate">Carga horária</label> <input type="text" class="form-control form-control-sm" name="utv_carga[]" placeholder="">  </div> <div class="col-md-2">  <label class="form-check-label" for="flexCheckIndeterminate">Data de Emissão</label><input type="month" class="form-control form-control-sm" name="utv_data[]" placeholder=""> </div>';
+        div.innerHTML = '<div class="row g-3 shadow p-3 mb-5 bg-body rounded" id="divUTv'+cont02+'" style="margin:0px 20px 0px 20px; padding:20px;"> <div class="text-end"> <input type="button" class="btn btn-danger btn-sm" onclick="removeCamposUTv('+cont02+')" value="Remover Curso"></div> <div class="col-md-4"><label class="form-check-label" for="flexCheckIndeterminate">Nome do curso</label> <input type="text" class="form-control form-control-sm" name="utv_titlulo[]" placeholder=""> </div>  <div class="col-md-2">  <label class="form-check-label" for="flexCheckIndeterminate">Carga horária</label> <input type="text" class="form-control form-control-sm" name="utv_carga[]" placeholder="">  </div> <div class="col-md-3">  <label class="form-check-label" for="flexCheckIndeterminate">Data de Emissão de Certificado</label><input type="month" class="form-control form-control-sm" name="utv_data[]" placeholder=""> </div><div class="col-md-3" id="tempoexperiencia_div"><label class="form-check-label" for="flexCheckIndeterminate">Área de Atuação</label><input type="text" class="form-control form-control-sm" name="utv_area[]" placeholder=""> </div>';
                  document.getElementById('listaUTv').appendChild(div)
         cont02++;
      }
