@@ -66,6 +66,10 @@ class Candidatos extends Migration
             $table->string('can_curso_extra')->nullable(); 
             $table->string('can_curso_ano_termino')->nullable(); 
             $table->string('can_curso_area_atuacao')->nullable(); 
+
+            $table->string('curso_carga')->nullable(); 
+            $table->string('curso_instituicao')->nullable(); 
+
             $table->string('can_utv_titlulo')->nullable(); 
             $table->string('can_utv_carga')->nullable(); 
             $table->string('can_utv_data')->nullable();

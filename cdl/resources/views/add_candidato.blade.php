@@ -363,7 +363,11 @@
                     <input type="text" class="form-control form-control-sm" name="curso_extra[]" placeholder="">
                 </div>
                 <div class="col-md-2">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Ano termino</label>
+                    <label class="form-check-label" for="flexCheckIndeterminate" id="utv_carga_label">Carga horária</label>
+                    <input type="text" class="form-control form-control-sm" id="curso_carga[]" name="curso_extra_carga[]" placeholder="">
+                </div>
+                <div class="col-md-2">
+                    <label class="form-check-label" for="flexCheckIndeterminate">Data de Emissão</label>
                     <input type="month" class="form-control form-control-sm" name="curso_ano_termino[]" placeholder="">
                 </div>
                 <div class="col-md-4">
@@ -371,7 +375,10 @@
                     <input type="text" class="form-control form-control-sm" name="curso_area_atuacao[]"
                         id="areaatuacao">
                 </div>
-
+                <div class="col-md-4">
+                    <label class="form-check-label" for="flexCheckIndeterminate">Instituicao de Ensino</label>
+                    <input type="text" class="form-control form-control-sm" name="curso_instituicao[]" placeholder="">
+                </div>
 
 
             </div>
@@ -897,7 +904,7 @@
         if(cont01 < 4){
 
         var div = document.createElement('div');
-        div.innerHTML = '<div class="row g-3 shadow p-3 mb-5 bg-body rounded" id="div'+cont01+'" style="margin:0px 20px 0px 20px; padding:20px;"> <div class="text-end"> <input type="button" class="btn btn-danger btn-sm" onclick="removeCampos('+cont01+')" value="Remover Curso"></div><div class="col-md-4"> <label class="form-check-label" for="flexCheckIndeterminate">Cursos extracurriculares</label><input type="text" class="form-control form-control-sm" name="curso_extra[]" placeholder=""> </div><div class="col-md-2"> <label class="form-check-label" for="flexCheckIndeterminate">Ano termino</label><input type="month" class="form-control form-control-sm" name="curso_ano_termino[]" placeholder=""></div><div class="col-md-4"> <label class="form-check-label" for="flexCheckIndeterminate">Aréa de Atuação</label><input type="text" class="form-control form-control-sm" name="curso_area_atuacao[]" id="areaatuacao">  </div>';
+        div.innerHTML = '<div class="row g-3 shadow p-3 mb-5 bg-body rounded" id="div'+cont01+'" style="margin:0px 20px 0px 20px; padding:20px;">  <div class="text-end"><input type="button" class="btn btn-danger btn-sm" onclick="removeCampos('+cont01+')" value="Remover Curso">    </div><div class="col-md-4"><label class="form-check-label" for="flexCheckIndeterminate">Cursos extracurriculares</label> <input type="text" class="form-control form-control-sm" name="curso_extra[]" placeholder=""> </div><div class="col-md-2"><label class="form-check-label" for="flexCheckIndeterminate" id="utv_carga_label">Carga horária</label><input type="text" class="form-control form-control-sm" id="utv_carga" name="curso_extra_carga[]" placeholder=""> </div><div class="col-md-2"> <label class="form-check-label" for="flexCheckIndeterminate">Data de Emissão</label><input type="month" class="form-control form-control-sm" name="curso_ano_termino[]" placeholder="">    </div> <div class="col-md-4"> <label class="form-check-label" for="flexCheckIndeterminate">Aréa de Atuação</label><input type="text" class="form-control form-control-sm" name="curso_area_atuacao[]" id="areaatuacao">  </div><div class="col-md-4"><label class="form-check-label" for="flexCheckIndeterminate">Instituicao de Ensino</label><input type="text" class="form-control form-control-sm" name="curso_extra[]" placeholder=""> </div>';
                  document.getElementById('lista').appendChild(div)
         cont01++;
 

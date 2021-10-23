@@ -405,19 +405,29 @@ $candidato;
                     <input type="button" class="btn btn-danger btn-sm" onclick="removeCampos(<?php echo $i;?>)"
                         value="Remover Curso">
                 </div>
+                <div class="col-md-2">
+                    <label class="form-check-label" for="flexCheckIndeterminate" id="utv_carga_label">Carga horária</label>
+                    <input type="text" class="form-control form-control-sm" id="curso_carga[]" name="curso_extra_carga[]" placeholder=""
+                    value="{{$candidato->curso_carga[$i]}}">
+                </div>
                 <div class="col-md-4">
                     <label class="form-check-label" for="flexCheckIndeterminate">Cursos extracurriculares</label>
                     <input type="text" class="form-control form-control-sm" name="curso_extra[]" placeholder=""
                         value="{{$candidato->can_curso_extra[$i]}}">
                 </div>
                 <div class="col-md-3">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Ano termino</label>
+                    <label class="form-check-label" for="flexCheckIndeterminate">Data de Emissão</label>
                     <input type="month" class="form-control form-control-sm" name="curso_ano_termino[]" placeholder=""
                         value="{{$candidato->can_curso_ano_termino[$i]}}">
                 </div>
                 <div class="col-md-4">
                     <label class="form-check-label" for="flexCheckIndeterminate">Aréa de Atuação</label>
                     <input type="text" class="form-control form-control-sm" name="curso_area_atuacao[]" id="areaatuacao" value="{{$candidato->can_curso_area_atuacao[$i]}}">
+                </div>
+                <div class="col-md-4">
+                    <label class="form-check-label" for="flexCheckIndeterminate">Instituicao de Ensino</label>
+                    <input type="text" class="form-control form-control-sm" name="curso_instituicao[]" placeholder=""
+                    value="{{$candidato->curso_instituicao[$i]}}">
                 </div>
 
 

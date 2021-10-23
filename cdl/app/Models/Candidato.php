@@ -21,6 +21,8 @@ class Candidato extends Model
             'can_curso_extra' => 'array',
             'can_curso_ano_termino' => 'array',
             'can_curso_area_atuacao' => 'array',
+            'curso_carga' => 'array',
+            'curso_instituicao' => 'array',
             'can_utv_titlulo' => 'array',
             'can_utv_carga' => 'array',
             'can_utv_data' => 'array',

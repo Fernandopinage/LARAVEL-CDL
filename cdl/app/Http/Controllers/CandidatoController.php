@@ -122,7 +122,9 @@ class CandidatoController extends Controller
             $candidato->can_altura  = $request->altura;
             $candidato->can_estadocivil  = $request->estadocivil;
             $candidato->can_filiacao  = $request->filiacao;
-           // $candidato->can_filhos  = $request->filhos;
+            $candidato->curso_carga  = $request->curso_carga;
+            $candidato->curso_instituicao  = $request->curso_instituicao;
+
             $candidato->can_genero  = $request->genero;
             $candidato->can_pretensao_salario  = $request->pretensao_salario;
             $candidato->can_exmilitar  = $request->exmilitar;
@@ -239,7 +241,8 @@ class CandidatoController extends Controller
             $candidato->can_altura  = $request->altura;
             $candidato->can_estadocivil  = $request->estadocivil;
             $candidato->can_filiacao  = $request->filiacao;
-           // $candidato->can_filhos  = $request->filhos;
+            $candidato->curso_carga  = $request->curso_carga;
+            $candidato->curso_instituicao  = $request->curso_instituicao;
             $candidato->can_genero  = $request->genero;
             $candidato->can_pretensao_salario  = $request->pretensao_salario;
             $candidato->can_exmilitar  = $request->exmilitar;
