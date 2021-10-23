@@ -21,7 +21,7 @@
         </div>
         
         <div class="col">
-            <a class="nav-link" href="{{('/add/oms/')}}">Criar uma conta</a>
+          <!--  <a class="nav-link" href="{{('/add/oms/')}}">Criar uma conta</a> -->
         </div>
     
     </div>
