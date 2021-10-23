@@ -226,6 +226,10 @@
       document.getElementById('05').style.display = 'none'
       document.getElementById('06').style.display = 'none'
       document.getElementById('07').style.display = 'none'
+      document.getElementById('hr').style.marginTop = "50px";
+      $('#newExperiencia').hide();
+
+
     });
 
     $('#area_profissional_nao').click(function(){
@@ -237,6 +241,8 @@
     document.getElementById('05').style.display = 'block'
     document.getElementById('06').style.display = 'block'
     document.getElementById('07').style.display = 'block'
+    document.getElementById('hr').style.marginTop = "18px";
+    $('#newExperiencia').show();
     });
 
 

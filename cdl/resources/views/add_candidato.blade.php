@@ -528,10 +528,10 @@
             <h2 class="form-signin-heading" style="position:absolute;margin-top:50px;">Experiência Profissional
             </h2>
             <div class="text-end" style="padding-top: 50px; position: relative; margin-right:10px">
-                <input type="button" class="btn btn-success btn-sm" onclick="addExperiencia()"
+                <input type="button" class="btn btn-success btn-sm" id="newExperiencia" onclick="addExperiencia()"
                     value="Adicionar Experiência">
             </div>
-            <hr>
+            <hr id="hr">
         </div>
 
         <div class="profissional">
