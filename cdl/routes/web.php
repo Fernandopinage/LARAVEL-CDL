@@ -55,9 +55,6 @@ Route::post('/insert/empresa', [EmpresaController::class, 'store']); // submeten
 Route::get('/edita/empresa/{id}', [EmpresaController::class, 'editaEmpresa']);  //tela de update de empresa
 Route::post('/update/empresa/{id}', [EmpresaController::class, 'update']);
 Route::get('/redefinir/empresa', [EmpresaController::class, 'redefinirSenha']); // chamando tela de redefinir senha
-Route::get('/empresa/redefinir', function () {
-    return view("mailEmpresa.empresaMail");
-});
 Route::get('/redefinir/password/{id}', function ($id) {
     return view('redefinir_password', ['id' => $id]);
 });

@@ -92,7 +92,7 @@
                 </div>
 
                 <div class="col-md-2" id="termino_medeio">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Ano de Conclusão </label>
+                    <label class="form-check-label" for="flexCheckIndeterminate" id="termino_div_label">Ano de Conclusão </label>
                     <input type="date" class="form-control form-select-sm" name="termino_medio" id="termino_medio" placeholder="">
                 </div>
 

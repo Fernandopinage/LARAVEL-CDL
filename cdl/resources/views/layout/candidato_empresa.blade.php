@@ -121,6 +121,7 @@
       $('#leitura_outros').hide();
       $('#escrita_outros').hide();
 
+      $('#modulo_pos').hide();
 
       $('#ingle').change(function(){
 
@@ -212,14 +213,16 @@
 
         }else if(document.getElementById('formacao').value == 'medio cursando'){
 
-              $('#letivo_medio').show();
-              $('#termino_medeio').hide();
+              $('#letivo_medio').hide();
+              $('#termino_medeio').show();
               $('#curso_tecnico').hide();
               $('#semetre').hide();
               $('#curso_superior').hide();
               $('#periodo_superior').hide();
               $('#curso_pos').hide();
               $('#modulo_pos').hide();
+              $label = document.getElementById('termino_div_label');
+              $label.innerHTML = "Ano de conclusão"
 
 
         }else if(document.getElementById('formacao').value == 'tecnico cursando'){
@@ -277,9 +280,9 @@
               $('#curso_tecnico').hide();
               $('#semetre').hide();
               $('#curso_superior').hide();
-              $('#periodo_superior').hide();
-              $('#curso_pos').show();
-              $('#modulo_pos').show();
+              $('#periodo_superior').show();
+              $('#curso_pos').hide();
+              $('#modulo_pos').hide();
 
 
         }else if(document.getElementById('formacao').value == 'pos completo'){
