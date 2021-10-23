@@ -122,7 +122,7 @@
                     </select>
                 </div>
 
-                <div class="col-md-3">
+                <div class="col-md-2">
                     <label class="form-check-label" for="flexCheckIndeterminate">Experiência <span><strong>*</strong></span></label>
                     <select class="form-select form-select-sm" name="experiencia" id="experiencia" aria-label="Default select example" required>
                         <option selected></option>
