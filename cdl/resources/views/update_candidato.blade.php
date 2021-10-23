@@ -708,7 +708,7 @@ $candidato;
                 </div>
                 <div class="col-md-2" id="06">
                     <label class="form-check-label" for="flexCheckIndeterminate">Salário</label>
-                    <input type="text" class="form-control form-control-sm" placeholder="" name="salario_empres[]"
+                    <input type="text" class="form-control form-control-sm" placeholder="" name="salario_empresa[]"
                         value="{{$candidato->can_salario_empresa[$i]}}" onKeyPress="return(moeda(this,'.',',',event))">
                 </div>
                 <div class="col-md-3" id="07">
