@@ -89,7 +89,10 @@ class CandidatoController extends Controller
     public function store(Request $request)
     {
 
-        //ddd($request);
+        $request->validate([
+            'email' => 'unique:tbl_candidatos,can_email',
+            
+        ]);
 
         if ($request->senha === $request->confirma) {
 
