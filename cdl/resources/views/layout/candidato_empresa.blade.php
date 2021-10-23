@@ -25,7 +25,7 @@
             <a class="nav-link" href="/vagas/disponivel/">Vagas Disponíveis</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/anucio/empresa">Anúncio de Vaga </a>
+            <a class="nav-link" href="/anuncio/empresa">Anúncio de Vaga </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/filtra/candidato/empresa">Buscar Candidatos</a>
