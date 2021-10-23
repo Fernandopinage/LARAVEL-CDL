@@ -126,7 +126,7 @@ Route::get('/buscar/filtro/candidato/', [utvController::class, 'filtrarCandidato
 //}
 
 
-Route::get('login/acesso', [acessoController::class, 'index']);   // tela de acesso area administrativa
-
+Route::get('login/acesso', [AcessoController::class, 'index']);   // tela de acesso area administrativa
+Route::post('/validar/restrito');
 
 
