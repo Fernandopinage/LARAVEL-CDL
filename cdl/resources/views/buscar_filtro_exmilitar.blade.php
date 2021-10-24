@@ -23,7 +23,13 @@
 
         <div class="text">
             <div class="text-center">
+
+                @if(!empty($dados->can_foto))
+                
                 <img id="perfil" src="/img/events/{{$dados->can_foto}}" alt="profile Pic">
+                @else
+                <img id="perfil" src="/img/events/perfil.png" alt="profile Pic">
+                @endif
             </div>
             <h2 class="form-signin-heading" style="color:#284D92;">Dados Pessoais</h2>
             <hr>

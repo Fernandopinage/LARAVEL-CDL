@@ -170,7 +170,7 @@ class OmsController extends Controller
             $oms = Oms::find($request->id);
             $oms->oms_senha = Hash::make($request->confsenha);
             $oms->save();
-            return redirect('/home/militar')->with('alterar', 'Sua senha foi alterado com sucesso!');
+            return redirect('/login/militar')->with('alterar', 'Sua senha foi alterado com sucesso!');
         } elseif ($request->newsenha != $request->confsenha) {
 
             return redirect('/oms/redefinir')->with('diferente', 'Senha incorretas');

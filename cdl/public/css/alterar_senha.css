@@ -2,6 +2,15 @@ title{
   background: url('/img/title.png');
   width: 10px;
 }
+
+body{
+  background: repeat-y url('/img/login_m.jpg') ;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  
+}
 #logo{
     
     width: 150px;

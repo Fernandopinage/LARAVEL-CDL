@@ -16,7 +16,6 @@
 
 </form>
 
-
 <div class="container">
 
     @if(!empty($dados))
@@ -35,9 +34,19 @@
                                 <span style="color: #284D92"></span>
                                 <p>
                                 <h1>
-                                    <span style="color: #157347; margin-right:132px; "><img src="/img/events/{{$candidato->can_foto}}"
-                                            height="350px" width="350px" class="img-thumbnail" alt="..."></span><span
-                                        style="color: #696969;"></span>
+                                    <span style="color: #157347; margin-right:132px;">
+
+                                        @if(!empty($candidato->can_foto))
+                                        <img src="/img/events/{{$candidato->can_foto}}" height="350px" width="350px" class="img-thumbnail" alt="...">
+                                            
+                                        @else
+                                        <img src="/img/events/perfil.png" height="300px" width="300px" class="img-thumbnail" alt="...">
+                                            
+                                        @endif
+                                    
+                                    
+                                    </span>
+                                    <span style="color: #696969;"></span>
                                     <p class="text-center"> <img src="/img/star.png" height="150px" width="150px"
                                             class="img-thumbnail" alt="..."></p>
                                 </h1>

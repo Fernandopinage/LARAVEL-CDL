@@ -23,15 +23,17 @@ class exmilitarController extends Controller
 
              
             $dados = Candidato::where('can_exmilitar','Sim')
-            ->where('can_nome','like',$request->buscar.'%')
-            ->orWhere('can_cpf','like', $request->buscar.'%')
-            ->orWhere('can_matricula','like', $request->buscar.'%')
+            ->where('can_nome','like','%'.$request->buscar.'%')
+            ->orWhere('can_cpf','like', '%'.$request->buscar.'%')
+            ->orWhere('can_matricula','like', '%'.$request->buscar.'%')
             ->get();
             
             if(!empty($dados)){
                 
                 return view('exmilitar',compact('dados'));
                 
+            }else{
+                return view('exmilitar');
             }
         }
 
