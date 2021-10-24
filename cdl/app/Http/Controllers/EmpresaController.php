@@ -33,7 +33,7 @@ class EmpresaController extends Controller
 
         if (!empty($empresa)) {                                               //  caso tenha valor dentro da variavel empresa
 
-            if (Hash::check($request->password, $empresa->emp_senha) and ($empresa->emp_desativar != 'on')) {     //  decodificando senha hash 
+            if (Hash::check($request->password, $empresa->emp_senha) and  ($empresa->emp_desativar != 'S') and ($empresa->emp_desativar != 'on')) {     //  decodificando senha hash 
 
                 $id = $empresa['emp_id'];
                 $request->session()->put('empresa_id', $id);

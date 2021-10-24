@@ -31,7 +31,7 @@ $empresa;
         <div class="text-end">
             <!-- checked <img src="/icons/outline_help_outline_black_24dp.png">  -->
             <label for="floatingInput" style="padding-right:5px; ">
-                <input class="form-check-input mt-0" type="checkbox" name="desativar" id="desativar" {{$empresa->emp_desativar == 'S' ? 'checked' :''}}>
+                <input class="form-check-input mt-0" type="checkbox" name="desativar" id="desativar"  {{$empresa->emp_desativar == 'S' ? 'checked' :''}}>
                 <span id="des_empresa"> DESATIVAR EMPRESA <span>
             </label>
             <img data-bs-toggle="modal" data-bs-target="#exampleModal" id="help"
