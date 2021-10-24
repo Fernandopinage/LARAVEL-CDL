@@ -2,7 +2,7 @@
 
 @section('cadastro')
 
-<form action="/insert/candidato" method="POST" enctype="multipart/form-data">
+<form action="/insert/candidato" method="POST" enctype="multipart/form-data" style="margin-bottom: 300px">
 
     @csrf
     <div class="form-signin">
