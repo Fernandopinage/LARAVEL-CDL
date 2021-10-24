@@ -25,24 +25,7 @@
 
         <div class="pessoais">
 
-            <div class="row">
-                <div class="col-md-4">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Exibir nome da empresa?</label>
-                    <div class="form-check">
-                        <input class="form-check-input" name="status" type="radio" value="S" id="status"  checked>
-                        <label class="form-check-label" for="flexCheckDefault">
-                            Sim 
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" name="status" type="radio"  value="N" id="status" >
-                        <label class="form-check-label" for="flexCheckChecked">
-                            Não
-                        </label>
-                    </div>
-                </div>
 
-            </div>
             <br>
             <div class="row g-3">
 

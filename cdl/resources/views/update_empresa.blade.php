@@ -21,7 +21,12 @@ $empresa;
 
         <div class="text">
             <div class="text-center">
+                @if(!empty($empresa->emp_logo))
                 <img id="perfil" src="/img/empresas/{{$empresa->emp_logo}}" >
+                @else
+                <img id="perfil" src="/img/events/perfil.png" >
+                    
+                @endif
             </div>
             <h2 class="form-signin-heading"> DADOS DA EMPRESA </h2>
             <div class="row">
