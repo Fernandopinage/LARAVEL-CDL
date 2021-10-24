@@ -29,7 +29,7 @@
                     <input type="text" name="unidade" class="form-control form-control-sm" placeholder="" value="{{old('unidade')}}" required>
                 </div>
                 <div class="col-md-3">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Celular  <span><strong>*</strong></span></label>
+                    <label class="form-check-label" for="flexCheckIndeterminate">Celular</label>
                     <input type="tel" class="form-control form-control-sm" onkeypress="mask(this, mphone);" onblur="mask(this, mphone);" name="telefone" placeholder="(99) 99999-9999" onkeypress="mask(this, mphone);" onblur="mask(this, mphone);" value="{{old('telefone')}}" required>
                 </div>
                 <div class="col-md-3">

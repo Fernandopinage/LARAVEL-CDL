@@ -35,8 +35,8 @@ $oms;
                         value="{{$oms->oms_nome}}" required>
                 </div>
                 <div class="col-md-3">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Telefone
-                        <span><strong>*</strong></span></label>
+                    <label class="form-check-label" for="flexCheckIndeterminate">Celular
+                       </label>
                     <input type="tel" class="form-control form-control-sm" onkeypress="mask(this, mphone);"
                         onblur="mask(this, mphone);" name="telefone" placeholder="(99) 99999-9999"
                         onkeypress="mask(this, mphone);" onblur="mask(this, mphone);" value="{{$oms->oms_telefone}}"
@@ -44,7 +44,7 @@ $oms;
                 </div>
                 <div class="col-md-3">
                     <label class="form-check-label" for="flexCheckIndeterminate">Telefone
-                        <span><strong>*</strong></span></label>
+                        </label>
                     <input type="tel" class="form-control form-control-sm" onkeypress="mask(this, mphone);"
                         onblur="mask(this, mphone);" name="telefone2" placeholder="(99) 99999-9999"
                         onkeypress="mask(this, mphone);" onblur="mask(this, mphone);" value="{{$oms->oms_celular}}">
