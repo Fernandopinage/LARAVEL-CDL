@@ -30,7 +30,7 @@ class CandidatoController extends Controller
 
         if (!empty($candidato)) {
 
-            if (Hash::check($request->password, $candidato->can_senha)) {
+            if (Hash::check($request->password, $candidato->can_senha) and ($candidato->can_status != 'on')) {
                 $id = $candidato['can_id'];
                 $request->session()->put('can_id', $id);
                 $request->session()->put('candidato', $request->email);
