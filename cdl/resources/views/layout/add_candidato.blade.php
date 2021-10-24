@@ -9,6 +9,7 @@
     integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
   <link href="/css/add_candidato.css" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
   <link rel="icon" href="/img/title.png">
   <title>Empregabilidade | CDL Manaus</title>
 </head>
@@ -115,6 +116,21 @@
   </footer>
 </body>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.0/jquery.min.js"></script>
+
+
+@if(session('erro'))
+<script>
+  Swal.fire({
+    position: 'center',
+    icon: 'error',
+    title: 'CPF/CNPJ duplidado',
+    showConfirmButton: false,
+    timer: 1500
+  })
+  </script>
+@endif
+
+
 
 
 <script>

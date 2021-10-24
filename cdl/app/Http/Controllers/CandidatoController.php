@@ -202,13 +202,12 @@ class CandidatoController extends Controller
 
 
        }else{
-           echo "existe";
-       }
-       
+
+        return redirect('/add/candidato')->with('erro', 'erro');
         
 
-        
-      
+       }
+    
      
     }
 
