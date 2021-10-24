@@ -121,7 +121,7 @@
 @if(session('erro'))
 <script>
   Swal.fire({
-    position: 'center',
+    position: 'center',  
     icon: 'error',
     title: 'CPF/CNPJ duplidado',
     showConfirmButton: false,
