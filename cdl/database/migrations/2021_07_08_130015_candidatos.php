@@ -92,6 +92,7 @@ class Candidatos extends Migration
             $table->string('can_software_empresa')->nullable(); 
             $table->string('can_tempoexperiencia')->nullable(); 
             $table->string('can_termo')->nullable(); 
+            $table->string('can_status')->nullable(); 
             $table->timestamps();
         });
     }

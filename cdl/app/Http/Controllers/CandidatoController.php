@@ -194,6 +194,7 @@ class CandidatoController extends Controller
             $candidato->can_software_empresa  = $request->software_empresa;
             $candidato->can_tempoexperiencia  = $request->tempoexperiencia;
             $candidato->can_termo = $request->termo;
+            $candidato->can_status = 'N';
             $candidato->save();
             
            //ddd($request);
@@ -319,6 +320,7 @@ class CandidatoController extends Controller
             $candidato->can_software_empresa  = $request->software_empresa;
             $candidato->can_tempoexperiencia  = $request->tempoexperiencia;
             $candidato->can_termo = $request->termo;
+            $candidato->can_status = $request->status;
             $candidato->save();
             
            //ddd($request);
