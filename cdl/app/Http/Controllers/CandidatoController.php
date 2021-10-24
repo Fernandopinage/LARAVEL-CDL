@@ -413,7 +413,10 @@ class CandidatoController extends Controller
             //ddd($request);
             return redirect('login/candidato')->with('mensagem', 'Registro cadastrado com sucesso!');
 
+        }else{
+            return redirect('/redefinir/password/candidato/'.$id)->with('erro_senha', 'erro_senha');
         }
+
        
 
     }
