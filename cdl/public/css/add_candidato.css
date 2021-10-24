@@ -16,9 +16,7 @@
     height: 200px;
     border-radius: 50%;
     border: 2.5px solid;
-    /*
-    border-image: linear-gradient(#106AF2 0%, #00E0FF 100%) 1 ;
-    */
+   
   }
   
     .form-signin {
