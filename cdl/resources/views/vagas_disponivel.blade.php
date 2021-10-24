@@ -10,15 +10,18 @@
         <hr>
     </div>
 
+
+    @if(isset($vagas))
+        
     @foreach($vagas as $vagas)
 
 
 
     <div class=" d-inline-block" style="padding: 8px;">
 
-        <div class="form-row" {{$vagas->vag_id}}style="border: 0px;">
+        <div   {{$vagas->vag_id}}style="border: 0px; ">
             <div class="form-group col-md-4">
-                <div class="card" style="width: 25rem;">
+                <div class="row g-3 shadow p-4 mb-5 bg-body rounded" style="width: 25rem; margin:20px;">
                     <div class="card-body">
                         <p class="card-title text-left">
                             <span style="color: #284D92">{{$vagas->vag_cargo}}</span>
@@ -54,7 +57,7 @@
 
 
     @endforeach
-
+    @endif
 
 </form>
 

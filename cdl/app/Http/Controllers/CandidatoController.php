@@ -8,6 +8,8 @@ use App\Models\Candidato;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
+//use Vagas;
+use App\Models\Vagas;
 
 class CandidatoController extends Controller
 {
@@ -56,7 +58,18 @@ class CandidatoController extends Controller
 
     public function vagas()
     {
+
+        
         return view('vagas_candidato');
+    }
+
+    public function listarVagas(Request $Request){
+
+        
+        $vagas = Vagas::where('vag_cargo',$Request->cargo)->first(); 
+
+        ddd($vagas);
+       // $vagas = Vagas::select('*')->get();
     }
 
     /**
@@ -96,6 +109,13 @@ class CandidatoController extends Controller
         ]);
         */
 
+        $existe = new Candidato();
+        $existe =  Candidato::where('can_cpf',$request->cpf)->count();
+
+     
+       
+       if($existe == 0){
+        
         if ($request->senha === $request->confirma) {
 
             $candidato = new Candidato();
@@ -179,8 +199,17 @@ class CandidatoController extends Controller
            //ddd($request);
            return redirect('login/candidato')->with('mensagem', 'Registro cadastrado com sucesso!'); // redirecionar para tela de anuncio
         }
-      
+
+
+       }else{
+           echo "existe";
+       }
+       
         
+
+        
+      
+     
     }
 
     public function editarCandidato($id){

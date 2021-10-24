@@ -61,8 +61,12 @@ class EmpresaController extends Controller
         //$vagas = Vagas::where('vag_oculta','N')->get();
         $vagas = Vagas::select('*')->get();
         //dd($vagas);
+        if(!empty($vagas)){
 
-        return view('vagas_disponivel', compact('vagas'));
+            return view('vagas_disponivel', compact('vagas'));
+        }else{
+            return view('vagas_disponivel');
+        }
     }
 
     public function home()
