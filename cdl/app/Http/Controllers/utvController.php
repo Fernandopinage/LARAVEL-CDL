@@ -63,7 +63,7 @@ class utvController extends Controller
             $UTV->utv_contato_tec = $request->tecnico;
             $UTV->utv_email_tec = $request->email_tecnico;
             $UTV->utv_funcao_tec = $request->funcao;
-            $UTV->utv_status = $request->$Status;
+            $UTV->utv_status = 'N';
             //ddd($request);
             $UTV->save();
 
@@ -215,13 +215,11 @@ class utvController extends Controller
     public function validarLogin(Request $request)
     {
 
-
-
         $utv =  UTV::where('utv_email', $request->email)->first();
 
         if (!empty($utv)) {
 
-            if (Hash::check($request->password, $utv->utv_senha)) {
+            if (Hash::check($request->password, $utv->utv_senha) and ($utv->utv_status != 'S')) {
 
                 $id = $utv['utv_id'];
                 $request->session()->put('utv_id', $id);

@@ -22,16 +22,17 @@ $utv;
 
 
                 <div class="col-md-12">
+                    <label class="form-check-label" for="flexCheckIndeterminate">Deseja desativar sua conta? </label>
                     <div class="form-check">
-                        <input class="form-check-input" name="status" type="radio" value="S" id="status" checked>
+                        <input class="form-check-input" name="status" type="radio" value="S" id="status" {{$utv->utv_status == 'S' ? 'checked' :''}}>
                         <label class="form-check-label" for="flexCheckDefault">
-                            Ativo
+                            Sim
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" name="status" type="radio" value="N" id="status">
+                        <input class="form-check-input" name="status" type="radio" value="N" id="status" {{$utv->utv_status == 'N' ? 'checked' :''}}>
                         <label class="form-check-label" for="flexCheckChecked">
-                            Inativo
+                            Não
                         </label>
                     </div>
                 </div>
@@ -44,7 +45,7 @@ $utv;
                 </div>
                 <div class="col-md-3">
                     <label class="form-check-label" for="flexCheckIndeterminate">Telefone
-                        <span><strong>*</strong></span></label>
+                        </label>
                     <input type="tel" class="form-control form-control-sm" onkeypress="mask(this, mphone);"
                         onblur="mask(this, mphone);" name="telefone" placeholder="(99) 99999-9999"
                         onkeypress="mask(this, mphone);" onblur="mask(this, mphone);" value="{{$utv->utv_telefone}}"
@@ -52,7 +53,7 @@ $utv;
                 </div>
                 <div class="col-md-3">
                     <label class="form-check-label" for="flexCheckIndeterminate">Celular
-                        <span><strong>*</strong></span></label>
+                        </label>
                     <input type="tel" class="form-control form-control-sm" onkeypress="mask(this, mphone);"
                         onblur="mask(this, mphone);" name="telefone2" placeholder="(99) 99999-9999"
                         onkeypress="mask(this, mphone);" onblur="mask(this, mphone);" value="{{$utv->utv_telefone2}}"
