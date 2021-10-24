@@ -50,20 +50,63 @@
         @yield('busca')
 
     </div>
-    <footer>
-      <nav class="navbar fixed-bottom navbar-expand-sm navbar bg" style="background-color: #2D2C31">
-          <div class="container">
+    <footer style="margin-top: 150px;" >
+      <nav class="navbar bottom navbar-expand-sm navbar bg" style="background-color: #d0d0d056; margin-bottom:0px">
+      
+        <div class="container" id="container" style="color:#black; font-size:14px;">
+            <div class="row">
+                <div class="col-md-4 p-4">
+                    <h6>> CDL MANAUS - DJALMA BATISTA</h6>
+                    <span style="color: black">Cond. Amazonas Flat Service, 3000<br>
+                        Loja A, Torre Sul<br>
+                        Av. Djalma Batista | Chapada | 69.050-010<br>
+                        Segunda a Quinta-feira das 08h às 18h<br>
+                        Sexta-feira das 08h às 17h</span>
+                </div>
+                <div class="col-md-3 p-4">
+                    <h6>> CDL MANAUS - CENTRO</h6>
+                    <span style="color: black">Rua Rui Barbosa, 156<br>
+                        Centro  |  69.010-220<br>
+                        Segunda a Quinta-feira das 08h às 18h<br>
+                        Sexta-feira das 08h às 17h</span>
+                </div>
+                <div class="col-md-3 p-4">
+                    <h6>>
+                        UTV - RAIZ</h6>
+                    <span style="color: black">Rua Delfim de Souza, 125<br>
+                        Raiz  |  69.068-020<br>
+                        Segunda a Quinta-feira das 08h às 18h<br>
+                        Sexta-feira das 08h às 17h</span>
+                </div>
+                <div class="col-md-2 p-4">
+                    <h6>> ATENDIMENTO</h6>
+                    <span style="color: black">Dúvidas<br>
+                        + 55 92 3627-2867<br>
+                        + 55 92 3627-2868<br>
+                        suporte@cdlmanaus.org.br</span>
+                </div>
+            </div>
+      
+  
+          </div>
+        </div>
+      </nav>
+      <!--
+      <nav class="navbar fixed-bottom navbar-expand-sm navbar bg" style="background-color: #284D92">
+         <div class="container" style="margin-top: 8px">
               <div class="col-6 input-group-sm">
-                  <p class="text-start" style="color:#fff">Progride® é uma marca registrada © <?php echo date('Y')?>
+                  <p class="text-start" style="color:#fff">Progride® é uma marca registrada ©
+                      <?php echo date('Y')?>
                   </p>
               </div>
               <div class="col-6 input-group-sm">
-                  <p class="text-end" style="color:#fff">Desenvolvido por <img src="/icons/progride.png" width="18">
+                  <p class="text-end" style="color:#fff">Desenvolvido por <img src="/icons/progride.png" width="25">
                       Progride </p>
               </div>
-
+  
           </div>
       </nav>
+    -->
   </footer>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>

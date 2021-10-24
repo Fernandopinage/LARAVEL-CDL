@@ -98,7 +98,6 @@
     @yield('cadastro')
 
   </div>
-
   <footer style="margin-top: 150px;" >
     <nav class="navbar bottom navbar-expand-sm navbar bg" style="background-color: #d0d0d056; margin-bottom:0px">
     
