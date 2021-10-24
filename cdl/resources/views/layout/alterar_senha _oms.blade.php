@@ -16,35 +16,41 @@
   
   <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="/home/militar"><img id="logo" src="/img/cdl_logo.png"></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="/busca/militar">Buscar por Ex-Militares</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false">
-                  Opções
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="/edita/oms/{{session('oms_id')}}">Editar Organização Militar</a></li>
-                  <li><a class="dropdown-item" href="/alterar/senha/oms">Redefinir Senha</a></li>
-                  <li>
-                    <hr class="dropdown-divider">
-                  </li>
-                  <li><a class="dropdown-item" href="/login/militar">Sair</a></li>
-                </ul>
-              </li>
-            </ul>
-    
-          </div>
-      </nav>
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/home/militar"><img id="logo" src="/img/cdl_logo.png"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/busca/militar">Buscar por Ex-Militares</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Opções
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="/add/oms/">Criar Conta</a></li>
+                <li><a class="dropdown-item" href="/edita/oms/{{session('oms_id')}}">Editar Organização Militar</a></li>
+                @php
+                  $id = session('oms_id');
+                @endphp
+                <li><a class="dropdown-item" href="/alterar/senha/oms">Redefinir Senha</a></li>
+                <li><a class="dropdown-item" onclick="excluir()" >Excluir Conta</a></li>
+            
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="/login/militar">Sair</a></li>
+              </ul>
+            </li>
+          </ul>
+  
+        </div>
+    </nav>
     <!--
     <div id="menu">
 

@@ -73,37 +73,15 @@ class OmsController extends Controller
     public function store(Request $request)
     {
 
-        //ddd($request);
-
-
         
-        $this->validate($request, [
-
-            'unidade' => 'required',
-            'telefone' => 'required',
-            'tecnico' => 'required',
-            'email' => 'required',
-            'senha' => 'required',
-            'funcao' => 'required',
-            'cep' => 'required',
-            'uf' => 'required',
-            'cidade' => 'required',
-            'bairro' => 'required',
-            'numero' => 'required',
-            'email_tecnico' => 'required'
-
-
-        ]);
-        
-
         if ($request->senha === $request->confirma) {
 
             $oms = new Oms();
             $oms->oms_nome = $request->unidade;
             $oms->oms_telefone = $request->telefone;
+            $oms->oms_celular = $request->telefone2;
             $oms->oms_email = $request->email;
             $oms->oms_senha = Hash::make($request->senha);
-            $oms->oms_celular = $request->oms_celular;
             $oms->oms_tecnico = $request->tecnico;
             $oms->oms_email_tecnico = $request->email_tecnico;
             $oms->oms_funcao = $request->funcao;
@@ -117,9 +95,12 @@ class OmsController extends Controller
             $oms->oms_status = 'S';
             $oms->save();
 
-            return redirect('login/militar')->with('empresa_cadastro', 'Produto cadastrado com sucesso!');
+            //ddd($request);
+            return redirect('home/militar')->with('empresa_cadastro', 'Produto cadastrado com sucesso!');
+           
         } else {
             return redirect('/add/oms/');
+            
         }
     }
 

@@ -16,52 +16,39 @@
   
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="/"><img id="logo" src="/img/cdl-logo.png" alt=""></a>
+      <a class="navbar-brand" href="/home/militar"><img id="logo" src="/img/cdl_logo.png"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                Candidatos
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                 <li><a class="dropdown-item" href="/login/candidato">Entrar</a></li>
-                <!--<li><a class="dropdown-item" href="">Buscar Vagas</a></li> <!-- "/busca/candidato"  remover quando for implementar -->
-                <!--<li><hr class="dropdown-divider"></li>-->
-
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                Empresas
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="/login/empresa">Entrar</a></li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                Organizações Militares
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="/login/militar">Entrar</a></li>
-                
-                <!--<li><hr class="dropdown-divider"></li>-->
-              </ul>
-            </li>
-          </ul>
-
-        </div>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/busca/militar">Buscar por Ex-Militares</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Opções
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="/add/oms/">Criar Conta</a></li>
+              <li><a class="dropdown-item" href="/edita/oms/{{session('oms_id')}}">Editar Organização Militar</a></li>
+              @php
+                $id = session('oms_id');
+              @endphp
+              <li><a class="dropdown-item" href="/alterar/senha/oms">Redefinir Senha</a></li>
+              <li><a class="dropdown-item" onclick="excluir()" >Excluir Conta</a></li>
+          
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="/login/militar">Sair</a></li>
+            </ul>
+          </li>
+        </ul>
 
       </div>
-    </div>
   </nav>
     <!--
     <div id="menu">
@@ -82,13 +69,13 @@
   @endif
 
   <footer style="margin-top: 150px;" >
-    <nav class="navbar bottom navbar-expand-sm navbar bg" style="background-color: #d0d0d056; margin-bottom:0px">
+    <nav class="navbar bottom navbar-expand-sm navbar bg" style="background-color: #8f8d5d7e; margin-bottom:0px">
     
-      <div class="container" id="container" style="color:#black; font-size:14px;">
+      <div class="container" id="container" style="color:#fff; font-size:14px;">
           <div class="row">
               <div class="col-md-4 p-4">
                   <h6>> CDL MANAUS - DJALMA BATISTA</h6>
-                  <span style="color: black">Cond. Amazonas Flat Service, 3000<br>
+                  <span style="color: #fff">Cond. Amazonas Flat Service, 3000<br>
                       Loja A, Torre Sul<br>
                       Av. Djalma Batista | Chapada | 69.050-010<br>
                       Segunda a Quinta-feira das 08h às 18h<br>
@@ -96,7 +83,7 @@
               </div>
               <div class="col-md-3 p-4">
                   <h6>> CDL MANAUS - CENTRO</h6>
-                  <span style="color: black">Rua Rui Barbosa, 156<br>
+                  <span style="color: #fff">Rua Rui Barbosa, 156<br>
                       Centro  |  69.010-220<br>
                       Segunda a Quinta-feira das 08h às 18h<br>
                       Sexta-feira das 08h às 17h</span>
@@ -104,14 +91,14 @@
               <div class="col-md-3 p-4">
                   <h6>>
                       UTV - RAIZ</h6>
-                  <span style="color: black">Rua Delfim de Souza, 125<br>
+                  <span style="color: #fff">Rua Delfim de Souza, 125<br>
                       Raiz  |  69.068-020<br>
                       Segunda a Quinta-feira das 08h às 18h<br>
                       Sexta-feira das 08h às 17h</span>
               </div>
               <div class="col-md-2 p-4">
                   <h6>> ATENDIMENTO</h6>
-                  <span style="color: black">Dúvidas<br>
+                  <span style="color: #fff">Dúvidas<br>
                       + 55 92 3627-2867<br>
                       + 55 92 3627-2868<br>
                       suporte@cdlmanaus.org.br</span>
@@ -139,6 +126,7 @@
     </nav>
   -->
 </footer>
+
 
 <!-- Adicionando Javascript -->
 <script>
