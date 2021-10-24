@@ -33,7 +33,7 @@ class EmpresaController extends Controller
 
         if (!empty($empresa)) {                                               //  caso tenha valor dentro da variavel empresa
 
-            if (Hash::check($request->password, $empresa->emp_senha)) {     //  decodificando senha hash 
+            if (Hash::check($request->password, $empresa->emp_senha) and ($empresa->emp_desativar != 'on')) {     //  decodificando senha hash 
 
                 $id = $empresa['emp_id'];
                 $request->session()->put('empresa_id', $id);
@@ -91,25 +91,11 @@ class EmpresaController extends Controller
     {
 
 
-        // validando campos obrigatorios caso um dos campos esteja em banco nao inserir no banco de dados 
-        /*
-       $this->validate($request, [
+        $existe = new Empresa();
+        $existe =  Empresa::where('emp_cnpj',$request->cnpj)->count();
 
-            'razao' => 'required',              //tabel  //campo
-            'cnpj' => ['required', 'unique:tbl_empresas,emp_cnpj'],
-            'ramo' => 'required',
-            'email' => 'required|email|unique:users,email',
-            'tecnico' => 'required',
-            'cep' => 'required',
-            'termo' => 'required',
-            'funcao' => 'required',
-            'setor' => 'required',
-            'complemento' =>'required'
-        ]);
-        */
-
-        // Verificando se os campos de senhas são iguais     
-
+        if($existe == 0){
+        
         try {
 
             if ($request->senha === $request->confirmar) {
@@ -133,8 +119,6 @@ class EmpresaController extends Controller
     
     
                 }
-
-
                 $empresa->emp_fantasia = $request->fantasia;
                 $empresa->emp_email = $request->email;
                 $empresa->emp_razao = $request->razao;
@@ -155,7 +139,7 @@ class EmpresaController extends Controller
                 $empresa->emp_cod_assoc = $request->cod;
                 $empresa->emp_senha = Hash::make($request->senha);
                 $empresa->emp_termo = $request->termo;
-                $empresa->emp_status = 'N';
+                $empresa->emp_status = $request->status;
                 $empresa->emp_funcao = $request->funcao;
                 $empresa->emp_setor = $request->setor;
                 $empresa->emp_desativar = 'N';
@@ -170,6 +154,10 @@ class EmpresaController extends Controller
         } catch (\Throwable $th) {
             
             //return redirect('add/empresa')->with('duplicado','empresa_cadastro_erro');
+        }
+        
+        }else{
+            return redirect('/add/empresa')->with('erro', 'erro');
         }
     }
 
@@ -189,21 +177,7 @@ class EmpresaController extends Controller
     public function update(Request $request, $id)
     {
         
-        /*
-        $this->validate($request, [
-
-            'razao' => 'required',
-            'cnpj' => ['required', 'unique:tbl_empresas,emp_cnpj'],
-            'ramo' => 'required',
-            'email' => 'required',
-            'tecnico' => 'required',
-            'cep' => 'required',
-            'termo' => 'required',
-            'funcao' => 'required',
-            'setor' => 'required',
-            'complemento' => 'required'
-        ]);
-        */
+     
         $empresa = Empresa::find($id);
         //dd($empresa);
         

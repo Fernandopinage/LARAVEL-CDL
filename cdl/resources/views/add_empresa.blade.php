@@ -25,22 +25,42 @@
 
         <div class="pessoais">
 
+            <div class="row">
+                <div class="col-md-4">
+                    <label class="form-check-label" for="flexCheckIndeterminate">Exibir nome da empresa?</label>
+                    <div class="form-check">
+                        <input class="form-check-input" name="status" type="radio" value="S" id="status"  checked>
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Sim 
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="status" type="radio"  value="N" id="status" >
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Não
+                        </label>
+                    </div>
+                </div>
+
+            </div>
+            <br>
             <div class="row g-3">
 
-                <div class="col-md-4">
+
+                <div class="col-md-6">
                     <label class="form-check-label" for="flexCheckIndeterminate">Nome Fantasia </label>
                     <input type="text" name="fantasia" class="form-control form-control-sm " placeholder=""
                         value="{{old('fantasia')}}">
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <label class="form-check-label" for="flexCheckIndeterminate">Razão Social
                         <span><strong>*</strong></span></label>
                     <input type="text" name="razao" id="razao" class="form-control form-control-sm" placeholder=""
                         value="{{old('razao')}}" required>
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-md-4" id="logoEmpresaDiv">
                     <label class="form-check-label" for="flexCheckIndeterminate">Logo Empresa</label>
                     <input type="file" name="logo" id="formFile" class="form-control-file"
                         value="{{old('logo')}}">

@@ -31,7 +31,7 @@ $empresa;
         <div class="text-end">
             <!-- checked <img src="/icons/outline_help_outline_black_24dp.png">  -->
             <label for="floatingInput" style="padding-right:5px; ">
-                <input class="form-check-input mt-0" type="checkbox" name="desativar" id="desativar" value="">
+                <input class="form-check-input mt-0" type="checkbox" name="desativar" id="desativar" {{$empresa->emp_desativar == 'S' ? 'checked' :''}}>
                 <span id="des_empresa"> DESATIVAR EMPRESA <span>
             </label>
             <img data-bs-toggle="modal" data-bs-target="#exampleModal" id="help"
@@ -60,16 +60,17 @@ $empresa;
 
             <div class="row">
                 <div class="col-md-4">
+                    <label class="form-check-label" for="flexCheckIndeterminate">Exibir nome da empresa?</label>
                     <div class="form-check">
-                        <input class="form-check-input" name="status" type="radio" value="S" id="status" {{$empresa->emp_status == 'N' ? 'checked' :''}}>
+                        <input class="form-check-input" name="status" type="radio" value="S" id="status" {{$empresa->emp_status == 'S' ? 'checked' :''}}>
                         <label class="form-check-label" for="flexCheckDefault">
-                            Ativo 
+                            Sim 
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" name="status" type="radio"  value="N" id="status" {{$empresa->emp_status == 'S' ? 'checked' :''}}>
+                        <input class="form-check-input" name="status" type="radio"  value="N" id="status" {{$empresa->emp_status == 'N' ? 'checked' :''}}>
                         <label class="form-check-label" for="flexCheckChecked">
-                            Inativo
+                            Não
                         </label>
                     </div>
                 </div>

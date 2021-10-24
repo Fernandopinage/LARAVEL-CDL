@@ -153,8 +153,20 @@
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-z
 
+
+  @if(session('erro'))
+  <script>
+    Swal.fire({
+      position: 'center',  
+      icon: 'error',
+      title: 'CPF/CNPJ duplidado',
+      showConfirmButton: false,
+      timer: 1500
+    })
+    </script>
+  @endif
+  
 
   @if(session('empresa_cadastro_erro'))
   <script>
@@ -185,6 +197,9 @@ z
 <!-- Adicionando Javascript -->
 <script>
   $(document).ready(function() {
+
+        $('#logoEmpresaDiv').hide();
+
 
         function limpa_formulário_cep() {
             // Limpa valores do formulário de cep.
