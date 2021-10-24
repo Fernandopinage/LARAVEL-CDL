@@ -25,7 +25,7 @@
         <p class="text-start"><span>Olá</span><span>,{{$inputs->emp_fantasia}}.<span></p>
         <p class="text-start"><span>Recuperar senha</span></p>
         <p>Não lembra sua senha?</p>
-        <p>Por Favor, <a href="http://127.0.0.1:8000/redefinir/password/{{$inputs->emp_id}}">Clique aqui</a> é cadastre uma nova senha. </p>
+        <p>Por Favor, <a href="https://cdl.agenciaprogride.com.br/redefinir/password/{{$inputs->emp_id}}">Clique aqui</a> é cadastre uma nova senha. </p>
     </div>
 </body>
 <footer>
