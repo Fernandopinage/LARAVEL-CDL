@@ -167,7 +167,7 @@
     icon: 'error',
     title: 'CPF/CNPJ duplidado',
     showConfirmButton: false,
-    timer: 1500
+    timer: 3000
   })
   </script>
 @endif

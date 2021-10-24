@@ -19,7 +19,12 @@ $candidato;
 
         <div class="text">
             <div class="text-center">
+                @if($candidato->can_foto != null)
+                
                 <img id="perfil" src="/img/events/{{$candidato->can_foto}}" alt="profile Pic">
+                @else
+                <img id="perfil" src="/img/events/perfil.png" alt="profile Pic">
+                @endif
             </div>
             <div class="text-end">
 
