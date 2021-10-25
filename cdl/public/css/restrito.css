@@ -22,8 +22,9 @@ title{
           padding: 35px 35px 45px 35px;
           margin:  auto;
           margin-top: 50px;
-          margin-left: 10px;
-          background-color: #02693c;
+          
+          color: #004b97c7;
+          background-color: #c6d0d5;
           box-shadow: 4px 4px 8px rgba(0,0,0,0.15);
           border-radius: 18px;
         
@@ -36,8 +37,8 @@ title{
         .btn:hover{
       
           color: #f0ede9;
-          background-color: #FDB62A;
-          border-color: #FDB62A;
+          background-color: #051f50;
+          border-color: #051f50;
         }
       
         a:hover {
@@ -48,14 +49,14 @@ title{
           color: #fff;
         }
         h2{
-          color: #fff;
+          color: #004C97;
         }
         .nav-link{
-            color: #fff;
+            color: #051f50;
         }
         .nav-link:hover{
       
-          color: #fff;
+          color: #051f50;
         }
       
         .photo{
