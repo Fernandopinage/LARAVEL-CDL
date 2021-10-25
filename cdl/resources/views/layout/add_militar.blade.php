@@ -127,6 +127,44 @@
   -->
 </footer>
 
+<script>
+  function excluir(){
+   
+
+const swalWithBootstrapButtons = Swal.mixin({
+  customClass: {
+    confirmButton: 'btn btn-success',
+    cancelButton: 'btn btn-danger'
+  },
+  buttonsStyling: false
+})
+
+swalWithBootstrapButtons.fire({
+  title: 'Tem certeza?',
+  text: "Que deseja excluir sua conta ?",
+  icon: 'warning',
+  showCancelButton: true,
+  confirmButtonText: 'Deletar!',
+  cancelButtonText: 'Cancelar!',
+  reverseButtons: true
+}).then((result) => {
+  if (result.isConfirmed) {
+
+    location.href="/delete/conta/oms/<?php echo $id; ?>";
+  } else if (
+    /* Read more about handling dismissals below */
+    result.dismiss === Swal.DismissReason.cancel
+  ) {
+    swalWithBootstrapButtons.fire(
+      'Cancelado',
+      '',
+      'error'
+    )
+  }
+})
+
+  }
+</script>
 
 <!-- Adicionando Javascript -->
 <script>

@@ -145,7 +145,7 @@ class utvController extends Controller
     public function recuperarSenha(Request $request)
     {
 
-
+        
         $UTV = UTV::Where('utv_id', $request->id)->first();
         if (!empty($UTV)) {
 

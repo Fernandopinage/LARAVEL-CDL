@@ -35,7 +35,12 @@
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li><a class="dropdown-item" href="/add/oms/">Criar Conta</a></li>
                 <li><a class="dropdown-item" href="/edita/oms/{{session('oms_id')}}">Editar Organização Militar</a></li>
+                @php
+                  $id = session('oms_id');
+                @endphp
                 <li><a class="dropdown-item" href="/alterar/senha/oms">Redefinir Senha</a></li>
+                <li><a class="dropdown-item" onclick="excluir()" >Excluir Conta</a></li>
+            
                 <li>
                   <hr class="dropdown-divider">
                 </li>
@@ -121,6 +126,45 @@
     </nav>
   -->
 </footer>
+
+<script>
+  function excluir(){
+   
+
+const swalWithBootstrapButtons = Swal.mixin({
+  customClass: {
+    confirmButton: 'btn btn-success',
+    cancelButton: 'btn btn-danger'
+  },
+  buttonsStyling: false
+})
+
+swalWithBootstrapButtons.fire({
+  title: 'Tem certeza?',
+  text: "Que deseja excluir sua conta ?",
+  icon: 'warning',
+  showCancelButton: true,
+  confirmButtonText: 'Deletar!',
+  cancelButtonText: 'Cancelar!',
+  reverseButtons: true
+}).then((result) => {
+  if (result.isConfirmed) {
+
+    location.href="/delete/conta/oms/<?php echo $id; ?>";
+  } else if (
+    /* Read more about handling dismissals below */
+    result.dismiss === Swal.DismissReason.cancel
+  ) {
+    swalWithBootstrapButtons.fire(
+      'Cancelado',
+      '',
+      'error'
+    )
+  }
+})
+
+  }
+</script>
 
 <!-- Adicionando Javascript -->
 <script>

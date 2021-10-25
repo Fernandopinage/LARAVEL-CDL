@@ -7,6 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link href="/css/busca_exmilitar.css" rel="stylesheet">
     <link rel="icon" href="/img/title.png">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <title>Empregabilidade | CDL Manaus</title>
 </head>
 <body>
@@ -55,6 +56,48 @@
         @yield('busca')
 
     </div>
+
+
+    <script>
+      function excluir(){
+       
+    
+    const swalWithBootstrapButtons = Swal.mixin({
+      customClass: {
+        confirmButton: 'btn btn-success',
+        cancelButton: 'btn btn-danger'
+      },
+      buttonsStyling: false
+    })
+    
+    swalWithBootstrapButtons.fire({
+      title: 'Tem certeza?',
+      text: "Que deseja excluir sua conta ?",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: 'Deletar!',
+      cancelButtonText: 'Cancelar!',
+      reverseButtons: true
+    }).then((result) => {
+      if (result.isConfirmed) {
+    
+        location.href="/delete/conta/oms/<?php echo $id; ?>";
+      } else if (
+        /* Read more about handling dismissals below */
+        result.dismiss === Swal.DismissReason.cancel
+      ) {
+        swalWithBootstrapButtons.fire(
+          'Cancelado',
+          '',
+          'error'
+        )
+      }
+    })
+    
+      }
+    </script>
+
+
     <footer style="margin-top: 150px;" >
       <nav class="navbar bottom navbar-expand-sm navbar bg" style="background-color: #d0d0d056; margin-bottom:0px">
       
