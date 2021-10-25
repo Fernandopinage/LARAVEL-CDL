@@ -59,7 +59,6 @@ class CandidatoController extends Controller
     public function vagas()
     {
 
-        
         return view('vagas_candidato');
     }
 
