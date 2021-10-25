@@ -366,17 +366,7 @@ Swal.fire({
 </script>
 @endif
 
-@if(session('result'))
-<script>
-Swal.fire({
-  position: 'center',
-  icon: 'warning',
-  text: 'Ainda não possui nenhum registro candidato!',
-  showConfirmButton: false,
-  timer: 5500
-})
-</script>
-@endif
+
    <!-- jquery -->
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
    <!-- ***** -->

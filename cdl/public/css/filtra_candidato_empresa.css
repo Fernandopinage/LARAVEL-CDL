@@ -13,7 +13,14 @@ title{
     padding: 12px;
     background-color: #284D92;
 }
-  
+#perfil{
+
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 2.5px solid;
+ 
+}
 .form-signin {
     
   border-radius: 25px;

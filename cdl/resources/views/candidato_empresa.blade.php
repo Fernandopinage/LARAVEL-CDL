@@ -19,29 +19,7 @@
 
                 <div class="col-md-4">
                     <label class="form-check-label" for="flexCheckIndeterminate">Área de Atuação </label>
-                    <select class="form-select form-select-sm" name="area" id="area" aria-label="Default select example">
-                        <option selected></option>
-                        <option value="Almoxarifado">Almoxarifado</option>
-                        <option value="Área Comercial">Área Comercial</option>
-                        <option value="Área da Saúde">Área da Saúde</option>
-                        <option value="Cobrança">Cobrança</option>
-                        <option value="Comunicação">Comunicação</option>
-                        <option value="Compras">Compras</option>
-                        <option value="Designer">Designer</option>
-                        <option value="Estoque">Estoque</option>
-                        <option value="Jurídico">Jurídico</option>
-                        <option value="Planejamento">Planejamento</option>
-                        <option value="Produção">Produção</option>
-                        <option value="Qualidade">Qualidade</option>
-                        <option value="Recursos Humanos">Recursos Humanos</option>
-                        <option value="Secretariado">Secretariado</option>
-                        <option value="Serviço Social">Serviço Social</option>
-                        <option value="Segurança do Trabalho">Segurança do Trabalho</option>
-                        <option value="Tecnologia da Informação">Tecnologia da Informação</option>
-                        <option value="Telemarketing">Telemarketing</option>
-                        <option value="Vigilância">Vigilância</option>
-                        <option value="Outros">Outros</option>
-                    </select>
+                    <input type="text" class="form-control form-select-sm" name="area" id="area">
                 </div>
                 <div class="col-md-2">
                     <div class="text-left">
@@ -59,8 +37,8 @@
                         <label class="form-check-label" for="inlineCheckbox1" name="militar" id="militar" >Ex-Militar</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                        <label class="form-check-label" for="inlineCheckbox2" name="aluno" id="aluno" >Ex-Aluno UTV</label>
+                        <input class="form-check-input" type="checkbox"name="aluno" id="aluno"  >
+                        <label class="form-check-label" for="inlineCheckbox2"  >Ex-Aluno UTV</label>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -169,25 +147,25 @@
                 <div class="col-md-2">
                     <label class="form-check-label" for="flexCheckIndeterminate">Idioma</label>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="ingle" name="ingle">
+                        <input class="form-check-input" type="checkbox" value="Inglês" id="idioma" name="idioma">
                         <label class="form-check-label" for="flexCheckDefault">
                             Inglês
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="espanhol" name="espanhol">
+                        <input class="form-check-input" type="checkbox" value="Espanhol" id="idioma" name="idioma">
                         <label class="form-check-label" for="flexCheckChecked">
                             Espanhol
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="frances" name="frances">
+                        <input class="form-check-input" type="checkbox" value="Francês" id="idioma" name="idioma">
                         <label class="form-check-label" for="flexCheckChecked">
                             Francês
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="outros" name="outros">
+                        <input class="form-check-input" type="checkbox" value="Outros" id="idioma" name="idioma">
                         <label class="form-check-label" for="flexCheckChecked">
                             Outros
                         </label>
@@ -197,21 +175,21 @@
                 <div class="col-md-2" id="leitura_ingles">
                     <label class="form-check-label" for="flexCheckIndeterminate">Nível de Leitura (Inglês)</label>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="leitura_ingles" id="leitura_ingles"
+                        <input class="form-check-input" type="radio" value="Básico" name="leiruta_ingles" id="leiruta_ingles"
                             value="option1" checked>
                         <label class="form-check-label" for="leitura_ingles">
                             Básico
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="leitura_ingles" id="leitura_ingles"
+                        <input class="form-check-input" type="radio" value="Intermediário" name="leiruta_ingles" id="leiruta_ingles"
                             value="option2">
                         <label class="form-check-label" for="leitura_ingles">
                             Intermediário
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="leitura_ingles" id="leitura_ingles"
+                        <input class="form-check-input" type="radio" value="Avançado" name="leiruta_ingles" id="leiruta_ingles"
                             value="option3">
                         <label class="form-check-label" for="leitura_ingles">
                             Avançado
@@ -222,21 +200,21 @@
                 <div class="col-md-2" id="escrita_ingles">
                     <label class="form-check-label" for="flexCheckIndeterminate">Nivel de Escrita (Inglês)</label>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="escrita_ingles" id="escrita_ingles"
+                        <input class="form-check-input" type="radio" value="Básico" name="escrita_ingles" id="escrita_ingles"
                             value="option1" checked>
                         <label class="form-check-label" for="escrita_ingles">
                             Básico
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="escrita_ingles" id="escrita_ingles"
+                        <input class="form-check-input" type="radio" value="Intermediário" name="escrita_ingles" id="escrita_ingles"
                             value="option2">
-                        <label class="form-check-label" for="escrita_ingles">
+                        <label class="form-check-label" for="escrita">
                             Intermediário
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="escrita_ingles" id="escrita_ingles"
+                        <input class="form-check-input" type="radio" value="Avançado" name="escrita_ingles" id="escrita_ingles"
                             value="option3">
                         <label class="form-check-label" for="escrita_ingles">
                             Avançado
@@ -428,6 +406,71 @@
 
 
 </form>
+
+<div class="container">
+
+    @if(!empty($candidato))
+    <div class="row g-3 shadow p-4 mb-5 bg-body rounded" style="margin-top: 50px">
+        @foreach ($candidato as $candidato)
+
+        <div class=" d-inline-block" style="padding: 8px;">
+
+                <div class="form-group col-md-4">
+                    <div class="card" style="width: 27rem;">
+                        <div  class="card-body">
+
+                            <span style="color: #284D92"></span>
+                            <p>
+                            <h1>
+                                <span style="color: #157347; margin-left:125px; ">
+                                    @if($candidato->can_foto != null)
+                
+                                    <img id="perfil" src="/img/events/{{$candidato->can_foto}}" height="150px" width="150px" class="img-thumbnail" alt="...">
+                                    @else
+                                    <img id="perfil" src="/img/events/perfil.png" height="150px" width="150px" class="img-thumbnail" alt="...">
+                                    @endif
+                                    
+                                </span><span style="color: #696969;"></span>
+                               
+                            </h1>
+                            <hr>
+                            <br>
+                            <span><b style="color: #22427c; margin-right:0px">Nome:</b></span><span
+                                style="color: #535151"> {{$candidato->can_nome}}</span>
+                            <br>
+                            <span><b style="color: #22427c; margin-right:0px">E-mail:</b></span><span
+                            style="color: #535151"> {{$candidato->can_email}}</span>
+
+                            <br>
+                            <span><b style="color: #22427c; margin-right:0px">Celular:</b></span><span
+                            style="color: #535151"> {{$candidato->can_celular}}</span>
+
+                            <br>
+                            <span><b style="color: #22427c; margin-right:0px">Telefone:</b></span><span
+                                style="color: #535151"> {{$candidato->can_telefone}}</span>
+
+                            <br>
+                            <span><b style="color: #22427c; margin-right:0px">CPF:</b></span>
+                            <span
+                            style="color: #535151"> {{$candidato->can_cpf}}</span>
+
+                            <br>
+                            <span><b style="color: #22427c; margin-right:0px">Curso UTV:</b></span>
+                    
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+        @endforeach
+    </div>
+    @endif
+  
+</div>
+
+
+
+
 @endsection
 
 

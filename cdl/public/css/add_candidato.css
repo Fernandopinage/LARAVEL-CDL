@@ -19,6 +19,16 @@
    
   }
   
+  #help{
+    width: 25px;
+  }
+
+  #help:title{
+
+    border-radius: 55px;
+
+  }
+  
     .form-signin {
       /*max-width: 1280px;*/
       padding: 15px 35px 45px 15px;

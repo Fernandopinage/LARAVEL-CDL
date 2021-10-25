@@ -227,8 +227,15 @@ class EmpresaController extends Controller
         $empresa->emp_desativar = $request->desativar;
         $empresa->save();
 
-            ///ddd($request);
-        return redirect('home/empresa')->with('alterar', 'Produto cadastrado com sucesso!');
+        if($request->desativar == 'S'){
+
+            return redirect('login/empresa')->with('erro', 'erro');
+
+        }else{
+
+            return redirect('home/empresa')->with('alterar', 'Produto cadastrado com sucesso!');
+        }
+            
         
     }
 
@@ -347,20 +354,34 @@ class EmpresaController extends Controller
 
     public function filtrarCandidato(Request $request)
     {
-        // filtra candidados 
-        //$buscar = Candidato::where('vag_cargo',$request->area ,'vag_experiencia',$request->experiencia);
-        //dd($buscar);
 
-       // dd($request->query);
 
-        if($request->query == ""){
+        $candidato = Candidato::where('can_curso_area_atuacao','like','%'.$request->area.'%')
+        ->orWhere('can_tempoexperiencia','like','%'.$request->experiencia.'%')
+        ->orWhere('can_formacao','like', '%'.$request->formacao.'%')
+        //->orWhere('	can_periodo','like', '%'.$request->letivo.'%')
+        ->orWhere('can_curso_ano_termino','like','%'.$request->termino_medio.'%')
+        ->orWhere('can_curso','like', '%'.$request->curso.'%')
+        ->orWhere('can_semestre','like', '%'.$request->semetre.'%')
+        ->orWhere('curso_instituicao','like', '%'.$request->superior.'%')
+        ->orWhere('can_periodo','like','%'.$request->pos.'%')
+        ->orWhere('can_bairro','like', '%'.$request->bairro.'%')
+       // ->orWhere('can_idioma','like', '%'.$request->idioma.'%')
+       // ->orWhere('can_idioma_leitura','like', '%'.$request->leitura.'%')
+       // ->orWhere('	can_idioma_escrita','like','%'.$request->escrita.'%')
+       // ->orWhere('can_idioma','like', '%'.$request->idioma.'%')
+       // ->orWhere('can_idioma_leitura','like', '%'.$request->leitura.'%')
+       // ->orWhere('	can_idioma_escrita','like','%'.$request->escrita.'%')
+        ->get();
 
-            return redirect('/filtra/candidato/empresa')->with('vazio','vazio');
+      
+    
+        
+        if(!empty($candidato)){
 
-        }else{
-            return redirect('/filtra/candidato/empresa')->with('result','resultado');
+            return view('candidato_empresa',compact('candidato'));
         }
-
+        
        
     }
 

@@ -30,15 +30,31 @@ $candidato;
 
 
                 <div style="color:red;">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Deseja desativar sua conta? </label>
                     <input class="form-check-input" type="checkbox"  name="status" {{$candidato->can_status == 'on' ? 'checked' :''}} >
-
+                    <label class="form-check-label" for="flexCheckIndeterminate">Deseja desativar sua conta? </label>
+                    <img data-bs-toggle="modal" data-bs-target="#exampleModal" id="help"src="/icons/photo4927315340036254278.jpg" title="Inativando sua conta, você está declarando em não ter interesse em receber mais propostas de empregos e nem anunciar vagas, ou seja, sua conta será apta somente à visualizar vagas e candidatos">
 
                 </div>
 
             </div>
             <h2 class="form-signin-heading">Dados Pessoais</h2>
             <hr>
+        </div>
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Inativar Conta</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Inativando sua conta, você está declarando em não ter interesse em receber mais propostas de
+                        empregos e nem anunciar vagas, ou seja, sua conta será apta somente à visualizar vagas e
+                        candidatos
+                    </div>
+
+                </div>
+            </div>
         </div>
 
         <div class="pessoais">

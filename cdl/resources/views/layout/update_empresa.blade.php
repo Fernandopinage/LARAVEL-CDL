@@ -146,7 +146,7 @@
 <!-- Adicionando Javascript -->
 <script>
     $(document).ready(function() {
-
+          $('#logoDiv').hide();
         function limpa_formulário_cep() {
             // Limpa valores do formulário de cep.
             $("#rua").val("");

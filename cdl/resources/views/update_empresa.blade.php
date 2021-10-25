@@ -48,7 +48,7 @@ $empresa;
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Inativar Conta</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
@@ -63,41 +63,23 @@ $empresa;
 
         <div class="pessoais">
 
-            <div class="row">
-                <div class="col-md-4">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Exibir nome da empresa?</label>
-                    <div class="form-check">
-                        <input class="form-check-input" name="status" type="radio" value="S" id="status" {{$empresa->emp_status == 'S' ? 'checked' :''}}>
-                        <label class="form-check-label" for="flexCheckDefault">
-                            Sim 
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" name="status" type="radio"  value="N" id="status" {{$empresa->emp_status == 'N' ? 'checked' :''}}>
-                        <label class="form-check-label" for="flexCheckChecked">
-                            Não
-                        </label>
-                    </div>
-                </div>
-
-            </div>
             <br>
             <div class="row g-3">
 
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <label class="form-check-label" for="flexCheckIndeterminate">Nome Fantasia </label>
                     <input type="text" name="fantasia" value="{{$empresa->emp_fantasia}}"
                         class="form-control form-control-sm" placeholder="">
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <label class="formGroupExampleInput" for="flexCheckIndeterminate">Razão Social
                         <span><strong>*</strong></span></label>
                     <input type="text" name="razao" value="{{$empresa->emp_razao}}"
                         class="form-control form-control-sm" placeholder="" required>
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-md-4" id="logoDiv">
                     <label class="form-check-label" for="flexCheckIndeterminate">Logo Empresa </label>
                     <input class="form-control form-control-sm" value="{{$empresa->emp_logo}}" name="logo" type="file"
                         id="formFile">
