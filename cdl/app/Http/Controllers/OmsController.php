@@ -219,6 +219,11 @@ class OmsController extends Controller
         return view('militar');
     }
 
+    public function loginRestrito()
+    {
+        return view('retrito_militar');
+    }
+
 
     public function formularioOms()
     {
