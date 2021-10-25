@@ -62,13 +62,33 @@ class CandidatoController extends Controller
         return view('vagas_candidato');
     }
 
-    public function listarVagas(Request $Request){
+    public function listarVagas(Request $request){
 
         
-        $vagas = Vagas::where('vag_cargo',$Request->cargo)->first(); 
+        $vagas = Vagas::where('vag_cargo','like','%'.$request->cargo.'%')
+        ->orWhere('vag_tipo','like','%'.$request->tipo.'%') 
+        ->orWhere('vag_salario','like','%'.$request->salario.'%') 
+        ->orWhere('vag_formacao','like','%'.$request->areformacaoa.'%') 
+        ->orWhere('vag_curso','like','%'.$request->curso.'%') 
+        ->orWhere('vag_termino','like','%'.$request->termino.'%') 
+        ->orWhere('vag_semestre','like','%'.$request->semestre.'%') 
+        ->orWhere('vag_periodo','like','%'.$request->periodo.'%') 
+        ->orWhere('vag_bairro','like','%'.$request->bairro.'%') 
+        ->orWhere('vag_opcao','like','%'.$request->vaga.'%') 
+        ->orWhere('vag_pcd','like','%'.$request->pcd.'%') 
+        ->orWhere('vag_semestre','like','%'.$request->semestre.'%') 
+        ->get();       
+        //ddd($vagas);
 
-        ddd($vagas);
-       // $vagas = Vagas::select('*')->get();
+
+        if(!empty($vagas)){
+
+            return view('vagas_candidato',compact('vagas'));
+
+        }else{
+            return view('vagas_candidato');
+        }
+       
     }
 
     /**

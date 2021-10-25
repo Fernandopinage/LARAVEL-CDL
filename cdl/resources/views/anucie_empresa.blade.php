@@ -85,8 +85,8 @@
                     <label class="form-check-label" for="flexCheckIndeterminate">Semestre em Curso </label>
                     <select class="form-select form-select-sm" name="semestre" aria-label="Default select example">
                         <option selected></option>
-                        <option value="1">1º Semestre</option>
-                        <option value="2">2º Semestre</option>
+                        <option value="1º Semestre">1º Semestre</option>
+                        <option value="2º Semestre">2º Semestre</option>
 
                     </select>
                 </div>
@@ -94,15 +94,15 @@
                     <label class="form-check-label" for="flexCheckIndeterminate">Período em Curso </label>
                     <select class="form-select form-select-sm" name="periodo" aria-label="Default select example">
                         <option selected></option>
-                        <option value="1">1º Período</option>
-                        <option value="2">2º Período</option>
-                        <option value="3">3º Período</option>
-                        <option value="4">4º Período</option>
-                        <option value="5">5º Período</option>
-                        <option value="6">6º Período</option>
-                        <option value="7">7º Período</option>
-                        <option value="8">8º Período</option>
-                        <option value="9">Ou Mais</option>
+                        <option value="1º Período">1º Período</option>
+                        <option value="2º Período">2º Período</option>
+                        <option value="3º Período">3º Período</option>
+                        <option value="4º Período">4º Período</option>
+                        <option value="5º Período">5º Período</option>
+                        <option value="6º Período">6º Período</option>
+                        <option value="7º Período">7º Período</option>
+                        <option value="8º Período">8º Período</option>
+                        <option value="Ou Mais">Ou Mais</option>
 
                     </select>
                 </div>
@@ -124,15 +124,15 @@
                     <select class="form-select form-select-sm" name="tempoexperiencia" id="tempoexperiencia"
                         aria-label="Default select example" required>
                         <option selected value="0"></option>
-                        <option value="1">Não informado</option>
-                        <option value="2">3 meses</option>
-                        <option value="3">6 meses</option>
-                        <option value="4">1 ano</option>
-                        <option value="5">3 anos</option>
-                        <option value="6">5 anos</option>
-                        <option value="7">10 anos</option>
-                        <option value="8">20 anos</option>
-                        <option value="9">30+ anos</option>
+                        <option value="Não informado">Não informado</option>
+                        <option value="3 meses">3 meses</option>
+                        <option value="6 meses">6 meses</option>
+                        <option value="1 ano">1 ano</option>
+                        <option value="3 anos">3 anos</option>
+                        <option value="5 anos">5 anos</option>
+                        <option value="10 anos">10 anos</option>
+                        <option value="20 anos">20 anos</option>
+                        <option value="30+ anos">30+ anos</option>
                     </select>
                 </div>
 

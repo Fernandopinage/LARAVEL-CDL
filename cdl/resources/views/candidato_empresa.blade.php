@@ -446,10 +446,6 @@
                             style="color: #535151"> {{$candidato->can_celular}}</span>
 
                             <br>
-                            <span><b style="color: #22427c; margin-right:0px">Telefone:</b></span><span
-                                style="color: #535151"> {{$candidato->can_telefone}}</span>
-
-                            <br>
                             <span><b style="color: #22427c; margin-right:0px">CPF:</b></span>
                             <span
                             style="color: #535151"> {{$candidato->can_cpf}}</span>
