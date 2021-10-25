@@ -174,11 +174,6 @@
                 <p class="card-title"><b style="color:#006CDE;">Tipo de contratação: </b><b> {{$vagas->vag_tipo}}</b></p>
                 <p class="card-title"><b style="color:#006CDE;">Salário Oferecido: </b><b> {{$vagas->vag_salario}}</b></p>
                 <p class="card-title"><b style="color:#006CDE;">{{$vagas->vag_experiencia}}</b></p>
-
-
-                <h6 class="card-title" style="margin-top: 20px">Sobre vaga:</h6>
-                <p class="card-text">{{$vagas->vag_descricao}}</p>
-
                 <div class="card-body">
                     <div style="margin-top: 20px">
                         <p style="font-size: 41px; color:#0362c7;">Requisitos</p>
@@ -190,6 +185,8 @@
                         <p> <b> - Nível:</b> {{$vagas->vag_idioma_nivel}}</p>
                             
                       @endif  
+                      <h6 class="card-title" style="margin-top: 20px">Sobre vaga:</h6>
+                      <p class="card-text">{{$vagas->vag_descricao}}</p>
 
                 </div>
             </div>
