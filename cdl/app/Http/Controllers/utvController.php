@@ -21,6 +21,10 @@ class utvController extends Controller
         return view('utv');
     }
 
+    public function indexRestrito(){
+        return view('restrito_utv');
+    }
+
     public function home()
     {
         $cursos = DB::table('tbl_utvcurso')->get();

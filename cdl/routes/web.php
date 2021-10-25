@@ -98,6 +98,7 @@ Route::get('/gerar/pdf/{id}', [PDFControler::class , 'gerarPDF']);
 
 
 //Route::middleware(['oms'])->group(function () {
+Route::get('restrito/login/utv', [utvController::class, 'indexRestrito']);  // tela de acesso a utv
 Route::get('login/utv', [utvController::class, 'index']);  // tela de acesso a utv
 Route::post('/validar/utv', [utvController::class, 'validarLogin']);
 Route::get('/edita/utv/{id}', [utvController::class, 'editaUtv']);
