@@ -51,8 +51,8 @@ class OmsController extends Controller
 
     public function home()
     {
-        $curso = DB::table('tbl_utvcurso')->select('*')->get();
-        $candidato = Candidato::select('*')->where('can_exmilitar','on')->orderBy('can_id', 'DESC')->limit(9)->get();
+        $curso = DB::table('tbl_utvcurso')->select('*')->orderBy('utvcurso_id', 'DESC')->limit(9)->get();
+        $candidato = Candidato::select('*')->where('can_exmilitar','Sim')->orderBy('can_id', 'DESC')->limit(9)->get();
         
         if(!empty($candidato)){
             

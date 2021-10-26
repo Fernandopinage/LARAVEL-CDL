@@ -62,15 +62,25 @@
 
         <div class="form-row" style="border: 0px;">
             <div class="form-group col-md-4">
-                <div class="card" style="width: 25rem;">
+                <div class="card" style="width: 20rem;">
                     <div class="card-body">
 
                         <span style="color: #284D92"></span>
                         <p>
                         <h1>
-                            <span style="color: #157347; margin-right:132px"><img src="/img/index-1.jpg" height="250px"
-                                    width="150px" class="img-thumbnail" alt="..."></span><span
-                                style="color: #696969;"></span>
+                            <span style="color: #157347; margin-left:50px; ">
+                                @if($candidato->can_foto != null)
+                                    
+                                    <img src="/img/events/{{$candidato->can_foto}}" height="250px" width="150px" class="img-thumbnail" alt="..." style="border-radius:50%; ">
+                                    </span>
+                                    <span style="color: #696969;"></span>
+                                    
+                                @else
+
+                                    <img src="/img/events/perfil.png" alt="profile Pic" width="150px" class="img-thumbnail" style="border-radius:50%; "></span>
+                                    <span style="color: #696969;"></span>
+                                        
+                                @endif
                         </h1>
                         <hr>
                         <br>
