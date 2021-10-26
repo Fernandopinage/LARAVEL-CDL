@@ -155,7 +155,8 @@
   Swal.fire({
     position: 'center',  
     icon: 'error',
-    title: 'E-mail invalido, Por favor verifique seu e-mail  ',
+    title: 'E-mail inválido,',
+    text: 'informe um e-mail válido'
     showConfirmButton: false,
     timer: 3000
   })
