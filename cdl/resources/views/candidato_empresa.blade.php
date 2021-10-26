@@ -2,7 +2,8 @@
 
 @section('filtrocandidato')
 
-<form method="get" action="/buscar/candidato/empresa"> <!-- /add/candidato/empresa -->
+<form method="get" action="/buscar/candidato/empresa">
+    <!-- /add/candidato/empresa -->
 
     @csrf
 
@@ -24,7 +25,8 @@
                 <div class="col-md-2">
                     <div class="text-left">
                         <label class="form-check-label" for="flexCheckIndeterminate">Experiência</label>
-                        <select class="form-select form-select-sm" name="experiencia" id="experiencia" aria-label="Default select example">
+                        <select class="form-select form-select-sm" name="experiencia" id="experiencia"
+                            aria-label="Default select example">
                             <option value="Sem Experiência">Sem Experiência</option>
                             <option value="Com Experiência">Com Experiência</option>
                             <option value="Primeiro Emprego">Primeiro Emprego</option>
@@ -34,11 +36,12 @@
                 <div class="col-md-2" style="margin-top: 25px">
                     <div class="form-check form-check">
                         <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                        <label class="form-check-label" for="inlineCheckbox1" name="militar" id="militar" >Ex-Militar</label>
+                        <label class="form-check-label" for="inlineCheckbox1" name="militar"
+                            id="militar">Ex-Militar</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox"name="aluno" id="aluno"  >
-                        <label class="form-check-label" for="inlineCheckbox2"  >Ex-Aluno UTV</label>
+                        <input class="form-check-input" type="checkbox" name="aluno" id="aluno">
+                        <label class="form-check-label" for="inlineCheckbox2">Ex-Aluno UTV</label>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -61,7 +64,8 @@
                 <!--*************************************** ensino medio ***********************************************-->
                 <div class="col-md-2" id="letivo_medio">
                     <label class="form-check-label" for="flexCheckIndeterminate">Ano Letivo</label>
-                    <select class="form-select form-select-sm" name="letivo" id="letivo" aria-label="Default select example">
+                    <select class="form-select form-select-sm" name="letivo" id="letivo"
+                        aria-label="Default select example">
                         <option selected></option>
                         <option value="1">1º Ano</option>
                         <option value="2">2º Ano</option>
@@ -70,8 +74,10 @@
                 </div>
 
                 <div class="col-md-2" id="termino_medeio">
-                    <label class="form-check-label" for="flexCheckIndeterminate" id="termino_div_label">Ano de Conclusão </label>
-                    <input type="date" class="form-control form-select-sm" name="termino_medio" id="termino_medio" placeholder="">
+                    <label class="form-check-label" for="flexCheckIndeterminate" id="termino_div_label">Ano de Conclusão
+                    </label>
+                    <input type="date" class="form-control form-select-sm" name="termino_medio" id="termino_medio"
+                        placeholder="">
                 </div>
 
                 <!--*************************************** ----------- ***********************************************-->
@@ -83,7 +89,8 @@
                 </div>
                 <div class="col-md-2" id="semetre">
                     <label class="form-check-label" for="flexCheckIndeterminate">Semestre em Curso </label>
-                    <select class="form-select form-select-sm" name="semetre" id="semetre" aria-label="Default select example">
+                    <select class="form-select form-select-sm" name="semetre" id="semetre"
+                        aria-label="Default select example">
                         <option selected></option>
                         <option value="1">1º Semestre</option>
                         <option value="2">2º Semestre</option>
@@ -95,11 +102,13 @@
                 <!--*************************************** ensino superior ***********************************************-->
                 <div class="col-md-3" id="curso_superior">
                     <label class="form-check-label" for="flexCheckIndeterminate">Nome do Curso </label>
-                    <input type="text" class="form-control form-control-sm" name="superior" id="superior" placeholder="">
+                    <input type="text" class="form-control form-control-sm" name="superior" id="superior"
+                        placeholder="">
                 </div>
                 <div class="col-md-2" id="periodo_superior">
                     <label class="form-check-label" for="flexCheckIndeterminate">Périodo em Curso </label>
-                    <select class="form-select form-select-sm" name="periodo_curso" id="periodo_curso" aria-label="Default select example">
+                    <select class="form-select form-select-sm" name="periodo_curso" id="periodo_curso"
+                        aria-label="Default select example">
                         <option selected></option>
                         <option value="1">1º Périodo</option>
                         <option value="2">2º Périodo</option>
@@ -123,7 +132,8 @@
                 </div>
                 <div class="col-md-2" id="modulo_pos">
                     <label class="form-check-label" for="flexCheckIndeterminate">Modulo da Pós </label>
-                    <select class="form-select form-select-sm" name="periodo_pos" id="periodo_pos" aria-label="Default select example">
+                    <select class="form-select form-select-sm" name="periodo_pos" id="periodo_pos"
+                        aria-label="Default select example">
                         <option selected></option>
                         <option value="1">1º Modulo</option>
                         <option value="2">2º Modulo</option>
@@ -175,22 +185,22 @@
                 <div class="col-md-2" id="leitura_ingles">
                     <label class="form-check-label" for="flexCheckIndeterminate">Nível de Leitura (Inglês)</label>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" value="Básico" name="leiruta_ingles" id="leiruta_ingles"
-                            value="option1" checked>
+                        <input class="form-check-input" type="radio" value="Básico" name="leiruta_ingles"
+                            id="leiruta_ingles" value="option1" checked>
                         <label class="form-check-label" for="leitura_ingles">
                             Básico
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" value="Intermediário" name="leiruta_ingles" id="leiruta_ingles"
-                            value="option2">
+                        <input class="form-check-input" type="radio" value="Intermediário" name="leiruta_ingles"
+                            id="leiruta_ingles" value="option2">
                         <label class="form-check-label" for="leitura_ingles">
                             Intermediário
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" value="Avançado" name="leiruta_ingles" id="leiruta_ingles"
-                            value="option3">
+                        <input class="form-check-input" type="radio" value="Avançado" name="leiruta_ingles"
+                            id="leiruta_ingles" value="option3">
                         <label class="form-check-label" for="leitura_ingles">
                             Avançado
                         </label>
@@ -200,22 +210,22 @@
                 <div class="col-md-2" id="escrita_ingles">
                     <label class="form-check-label" for="flexCheckIndeterminate">Nivel de Escrita (Inglês)</label>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" value="Básico" name="escrita_ingles" id="escrita_ingles"
-                            value="option1" checked>
+                        <input class="form-check-input" type="radio" value="Básico" name="escrita_ingles"
+                            id="escrita_ingles" value="option1" checked>
                         <label class="form-check-label" for="escrita_ingles">
                             Básico
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" value="Intermediário" name="escrita_ingles" id="escrita_ingles"
-                            value="option2">
+                        <input class="form-check-input" type="radio" value="Intermediário" name="escrita_ingles"
+                            id="escrita_ingles" value="option2">
                         <label class="form-check-label" for="escrita">
                             Intermediário
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" value="Avançado" name="escrita_ingles" id="escrita_ingles"
-                            value="option3">
+                        <input class="form-check-input" type="radio" value="Avançado" name="escrita_ingles"
+                            id="escrita_ingles" value="option3">
                         <label class="form-check-label" for="escrita_ingles">
                             Avançado
                         </label>
@@ -400,73 +410,70 @@
         <div class="text-end">
             <a href="" class="btn btn-secondary">Limpar Filtro</a>
             <a href="" class="btn btn-success">Salvar Filtro</a>
-            <input type="submit" class="btn btn-primary" value="Buscar Candidatos"> <!-- onclick="alert('Ainda não possui candidatos cadastrados')"-->
+            <input type="submit" class="btn btn-primary" value="Buscar Candidatos">
+            <!-- onclick="alert('Ainda não possui candidatos cadastrados')"-->
         </div>
     </div>
 
 
 </form>
 
-<div class="container">
 
-    @if(!empty($candidato))
-    <div class="row g-3 shadow p-4 mb-5 bg-body rounded" style="margin-top: 50px">
-        @foreach ($candidato as $candidato)
 
-        <div class=" d-inline-block" style="padding: 8px;">
+@if(!empty($candidato))
+<div class="row g-3 shadow p-4 mb-5 bg-body rounded" style="margin-top: 50px">
 
-                <div class="form-group col-md-4">
-                    <div class="card" style="width: 27rem;">
-                        <div  class="card-body">
+    @foreach ($candidato as $candidato)
 
-                            <span style="color: #284D92"></span>
-                            <p>
-                            <h1>
-                                <span style="color: #157347; margin-left:125px; ">
-                                    @if($candidato->can_foto != null)
-                
-                                    <img id="perfil" src="/img/events/{{$candidato->can_foto}}" height="150px" width="150px" class="img-thumbnail" alt="...">
-                                    @else
-                                    <img id="perfil" src="/img/events/perfil.png" height="150px" width="150px" class="img-thumbnail" alt="...">
-                                    @endif
-                                    
-                                </span><span style="color: #696969;"></span>
-                               
-                            </h1>
-                            <hr>
-                            <br>
-                            <span><b style="color: #22427c; margin-right:0px">Nome:</b></span><span
-                                style="color: #535151"> {{$candidato->can_nome}}</span>
-                            <br>
-                            <span><b style="color: #22427c; margin-right:0px">E-mail:</b></span><span
-                            style="color: #535151"> {{$candidato->can_email}}</span>
+    <div class=" d-inline-block " style="padding: 8px;">
 
-                            <br>
-                            <span><b style="color: #22427c; margin-right:0px">Celular:</b></span><span
-                            style="color: #535151"> {{$candidato->can_celular}}</span>
+        <div class="form-group col-md-4">
+            <div class="card" style="width: 20rem;">
+                <div class="card-body">
 
-                            <br>
-                            <span><b style="color: #22427c; margin-right:0px">CPF:</b></span>
-                            <span
-                            style="color: #535151"> {{$candidato->can_cpf}}</span>
+                    <span style="color: #284D92"></span>
+                    <p>
+                    <h1>
+                        <span style="color: #157347; margin-left:50px; ">
+                            @if($candidato->can_foto != null)
 
-                            <br>
-                            <span><b style="color: #22427c; margin-right:0px">Curso UTV:</b></span>
-                    
-                        </div>
-                    </div>
+                            <img id="perfil" src="/img/events/{{$candidato->can_foto}}" height="150px" width="150px"
+                                class="img-thumbnail" alt="...">
+                            @else
+                            <img id="perfil" src="/img/events/perfil.png" height="150px" width="150px"
+                                class="img-thumbnail" alt="...">
+                            @endif
+
+                        </span><span style="color: #696969;"></span>
+
+                    </h1>
+                    <hr>
+                    <br>
+                    <span><b style="color: #22427c; margin-right:0px">Nome:</b></span><span style="color: #535151">
+                        {{$candidato->can_nome}}</span>
+                    <br>
+                    <span><b style="color: #22427c; margin-right:0px">E-mail:</b></span><span style="color: #535151">
+                        {{$candidato->can_email}}</span>
+
+                    <br>
+                    <span><b style="color: #22427c; margin-right:0px">Celular:</b></span><span style="color: #535151">
+                        {{$candidato->can_celular}}</span>
+
+                    <br>
+                    <span><b style="color: #22427c; margin-right:0px">CPF:</b></span>
+                    <span style="color: #535151"> {{$candidato->can_cpf}}</span>
+
+                    <br>
+                    <span><b style="color: #22427c; margin-right:0px">Curso UTV:</b></span>
                 </div>
+                <input type="submit" class="btn btn-primary" value="Seu candidato ideial" style="color:#fff;">
+            </div>
         </div>
-
-        @endforeach
     </div>
-    @endif
-  
+    @endforeach
+
 </div>
-
-
+@endif
 
 
 @endsection
-
-

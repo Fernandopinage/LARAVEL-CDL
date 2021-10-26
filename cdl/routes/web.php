@@ -43,6 +43,10 @@ Route::get('/redefinir/candidato/',[CandidatoController::class, 'redefinirCandid
 Route::post('/redefinir/senha/candidato/',[CandidatoController::class, 'redefinir']);
 Route::get('/redefinir/password/candidato/{id}',[CandidatoController::class, 'updateSenha']);
 Route::post('/modificar/senha/candidato', [CandidatoController::class, 'modificar']);
+Route::get('/vaga/candidato',function(Request $request){
+
+    ddd($request);
+});
 
 //});
 

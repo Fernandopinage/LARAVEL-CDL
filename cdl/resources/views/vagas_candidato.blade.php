@@ -159,6 +159,7 @@
     <div class="row">
 
         <div class="col-sm-12">
+            <form action="/vaga/candidato" method="GET">
             <div class="card" style="padding: 15px">
                 <p class="card-title"><b style="font-size:36px;color:#006CDE;margin-bottom:10px">{{$vagas->vag_cargo}} -
                     {{$vagas->vag_cidade}} {{$vagas->vag_uf}} </b></p>
@@ -189,6 +190,8 @@
                       <p class="card-text">{{$vagas->vag_descricao}}</p>
 
                 </div>
+                <input type="submit" class="btn btn-primary" value="Candidate-se para esta vaga" style="color:#fff;">
+            </form>
             </div>
         </div>
     </div>
