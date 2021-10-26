@@ -284,6 +284,7 @@ class utvController extends Controller
 
     public function editaUtv($id) //  edita empresa
     {
+        $id = base64_decode($id);
 
         $utv = UTV::find($id);
         return view('update_utv', compact('utv'));

@@ -183,11 +183,10 @@ class EmpresaController extends Controller
     public function update(Request $request, $id)
     {
         
-     
-        $empresa = Empresa::find($id);
-        //dd($empresa);
+        //ddd($request);
         
-        //$empresa->emp_logo = $request->logo;
+        $empresa = Empresa::find($id);
+
 
         if(!empty($request->logo)){
 
@@ -241,7 +240,8 @@ class EmpresaController extends Controller
 
             return redirect('home/empresa')->with('alterar', 'Produto cadastrado com sucesso!');
         }
-            
+           
+        
         
     }
 
