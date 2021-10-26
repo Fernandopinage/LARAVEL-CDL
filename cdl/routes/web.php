@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\acessoController;
+use App\Http\Controllers\AcessoController;
 use App\Http\Controllers\CandidatoController;
 use App\Http\Controllers\EmpresaController;
 use App\Http\Controllers\exmilitarController;
@@ -130,9 +130,12 @@ Route::get('/buscar/filtro/candidato/', [utvController::class, 'filtrarCandidato
 //}
 
 
+
+Route::get('/login/acesso', [AcessoController::class, 'index']);
+/*
 Route::get('/login/acesso', [acessoController::class, 'index']);   // tela de acesso area administrativa
 Route::post('/validar/restrito',[acessoController::class, 'validarLogin']);
 Route::get('/add/restrito/',[acessoController::class, 'store']);
 Route::POST('/insert/restrito',[acessoController::class, 'insertRestrito']);
 Route::get('/home/acesso', [acessoController::class, 'home']);
-
+*/

@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Restrito;
 use Illuminate\Support\Facades\Hash;
 
-class acessoController extends Controller
+class AcessoController extends Controller
 {
     public function index(){
 
@@ -15,13 +15,17 @@ class acessoController extends Controller
 
     public function validarLogin(Request $request){
 
-        $Restrito =  Restrito::where('res_email', $request->email)->first();
+        $Restrito = Restrito::where('res_email',$request->email)->first();
+
+        
 
         
         if (!empty($Restrito)) {
             
             //ddd($request);
-            if (Hash::check($request->password, $Restrito->res_senha)) {
+
+       
+            if (hash::check($request->password, $Restrito->res_senha)) {
 
                 $id = $Restrito['can_id'];
                 $request->session()->put('res_id', $id);
@@ -33,6 +37,7 @@ class acessoController extends Controller
                 return redirect('login/acesso');
                
             }
+            
         } else {
             return redirect('/login/acesso');
            
