@@ -413,7 +413,7 @@ class CandidatoController extends Controller
 
     public function updateSenha($id){
 
-        //$id = base64_decode($id);
+        $id = base64_decode($id);
 
         $candidato = Candidato::find($id);
        
