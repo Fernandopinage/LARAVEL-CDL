@@ -188,10 +188,10 @@ class EmpresaController extends Controller
         $empresa = Empresa::find($id);
 
 
-        
         if(!empty($request->logo)){
 
             if($request->hasFile('logo') && $request->file('logo')->isValid()){
+                echo $request->logo;
                
                 $requestFoto = $request->logo;          // pegando a imagem 
 
@@ -243,7 +243,7 @@ class EmpresaController extends Controller
 
             return redirect('home/empresa')->with('alterar', 'Produto cadastrado com sucesso!');
         }
-           
+          
        
         
         

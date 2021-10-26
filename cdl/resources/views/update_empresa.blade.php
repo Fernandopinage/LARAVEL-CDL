@@ -81,7 +81,7 @@ $empresa;
 
                 <div class="col-md-4" id="logoDiv">
                     <label class="form-check-label" for="flexCheckIndeterminate">Logo Empresa </label>
-                    <input class="form-control form-control-sm" value="{{$empresa->emp_logo}}" name="logo" type="file"
+                    <input class="form-control form-control-sm" name="logo" type="file"
                         id="formFile">
                 </div>
 
