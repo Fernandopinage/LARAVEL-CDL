@@ -11,7 +11,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
 use Oms as GlobalOms;
-
+use UtvCursos;
+use Illuminate\Support\Facades\DB;
 class OmsController extends Controller
 {
 
@@ -50,17 +51,21 @@ class OmsController extends Controller
 
     public function home()
     {
-     
+        $curso = DB::table('tbl_utvcurso')->select('*')->get();
         $candidato = Candidato::select('*')->where('can_exmilitar','on')->orderBy('can_id', 'DESC')->limit(9)->get();
         
         if(!empty($candidato)){
             
-            return view('home_militar',compact('candidato'));
+            return view('home_militar',compact('candidato','curso'));
         }else{
             return view('home_militar');
         }
 
     }
+
+ 
+
+
 
     public function exMilitar(){
 
