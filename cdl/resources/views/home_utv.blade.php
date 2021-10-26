@@ -60,34 +60,36 @@
     </div>
 
     @php
-    $tamanho = count($cursos);
+    $tamanho = count($curso);
 
     @endphp
 
-    @foreach($cursos as $cursos)
+    @foreach($curso as $curso)
 
 
 
-    <div class=" d-inline-block" style="margin-top: 20px;" data-bs-toggle="modal"
-        data-bs-target="#edit{{$cursos->utvcurso_id}}">
+    <div class="d-inline-block" style="margin-top: 20px;">
 
         <div class="row">
             <div class="col-sm-3">
                 <div class="card">
                     <div class="card-body">
                         <h1>
-                            <span style="color: #157347; margin-right:132px"><img src="/img/curso_de_ingles_imd.png"
-                                    height="450px" width="350px" class="img-thumbnail" alt="..."></span><span
-                                style="color: #696969;"></span>
+                            <span style="color: #157347; margin-right:132px"><a href="" target="_blank"><img
+                                        src="/img/curso/{{$curso->utvcurso_folder}}" height="800px" width="800px"
+                                        class="img-thumbnail" alt="..."></a>
+                            </span>
+                            <span style="color: #696969;">
+                            </span>
                         </h1>
                     </div>
                 </div>
             </div>
             <div class="col-sm-9">
                 <div class="card" style="padding: 15px">
-                    <h5 class="card-title"><b style="color:#006CDE;">Curso: {{$cursos->utvcurso_titulo}}</b></h5>
+                    <h5 class="card-title"><b style="color:#006CDE;">Curso: {{$curso->utvcurso_titulo}}</b></h5>
                     <h6 class="card-title">Sobre Curso:</h6>
-                    <p class="card-text">{{$cursos->utvcurso_desc}}</p>
+                    <p class="card-text">{{$curso->utvcurso_desc}}</p>
 
                     <div class="card-body">
                         <table class="table">
@@ -95,27 +97,26 @@
                                 <tr>
                                     <th scope="col">Horário:</th>
                                     <th scope="col">Dias:</th>
-                                    <th scope="col">Data de Início:</th>
-                                    <th scope="col">Data de Término:</th>
+                                    <th scope="col">Período:</th>
                                     <th scope="col">Investimento:</th>
-                                    <th scope="col">Associado e Estudante:</th>
+                                    <th scope="col">Estudante:</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><b style="color:#006CDE;">{{$cursos->utvcurso_hora}}</b></td>
-                                    <td><b style="color:#006CDE;">{{$cursos->utvcurso_dias}}</b></td>
-                                    <td><b style="color:#006CDE;">{{$cursos->utvcurso_data_inicio}}</b></td>
-                                    <td><b style="color:#006CDE;">{{$cursos->utvcurso_data_final}}</b> </td>
-                                    <td><b style="color:#006CDE;">{{$cursos->utvcurso_valor_geral}}</b></td>
-                                    <td><b style="color:#006CDE;">{{$cursos->utvcurso_valor_estudante}}</b></td>
+                                    <td><b style="color:#006CDE;">{{$curso->utvcurso_hora}}</b></td>
+                                    <td><b style="color:#006CDE;">{{$curso->utvcurso_dias}}</b></td>
+                                    <td><b style="color:#006CDE;">{{$curso->utvcurso_data_inicio}} as
+                                            {{$curso->utvcurso_data_final}}</b></td>
+                                    <td><b style="color:#006CDE;">{{$curso->utvcurso_valor_geral}}</b></td>
+                                    <td><b style="color:#006CDE;">{{$curso->utvcurso_valor_estudante}}</b></td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                     <div class="card-footer text-left">
-                        <p><b style="color:#006CDE;"> Mais Informações:</b>
-                            <span style="color:#006CDE;">{{$cursos->utvcurso_informacoes}} </span>
+                        <p><b style="color:#006CDE;"> Mais Informações:</b></p>
+                        <p style="color:#006CDE;">{{$curso->utvcurso_informacoes}}</p>
                     </div>
                 </div>
             </div>

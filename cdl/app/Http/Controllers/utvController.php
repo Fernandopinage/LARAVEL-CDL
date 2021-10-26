@@ -27,9 +27,9 @@ class utvController extends Controller
 
     public function home()
     {
-        $cursos = DB::table('tbl_utvcurso')->get();
+        $curso = DB::table('tbl_utvcurso')->get();
         
-        return view('home_utv', compact('cursos'));
+        return view('home_utv', compact('curso'));
     }
 
     public function create()

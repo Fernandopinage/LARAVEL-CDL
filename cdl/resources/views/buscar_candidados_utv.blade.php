@@ -67,10 +67,8 @@
                             <br>
                             <span><b style="color: #22427c; margin-right:0px">Curso UTV:</b></span>
                       
-                        
-                    
-
                         </div>
+                        <button type="button" class="btn btn-primary btn-sm btn-block">Vísualizar perfil</button>
                     </div>
                 </div>
             </div>
