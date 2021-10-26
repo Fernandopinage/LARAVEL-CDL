@@ -442,6 +442,21 @@ class CandidatoController extends Controller
 
     }
 
+    public function modificarSenha($id){
+
+        $id = base64_decode($id);
+        
+        $candidato = Candidato::find($id);
+
+
+        return view('redefinir_senha_candidato', compact('candidato'));
+        
+    }
+
+    public function ViewModificarSenha(){
+
+        return view('redefinir_senha_candidato');
+    }
     
 
 }
