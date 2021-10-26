@@ -19,24 +19,14 @@ class OmsController extends Controller
 
     public function validarOms(Request $request)
     {
-        /*
-        $this->validate($request, [
-
-            'email' => 'required',
-            'password' => 'required'
-        ]);
-        */
         $oms =  Oms::where('oms_email', $request->email)->first();
-
-     
-
         if (!empty($oms)) {                                               //  caso tenha valor dentro da variavel empresa
 
             if (Hash::check($request->password, $oms->oms_senha) and $oms->oms_status == 'S') {
-                $id = $oms['oms_id'];
+                $id = base64_encode($oms['oms_id']);
                 $request->session()->put('oms_id', $id);
                 $request->session()->put('oms_email', $request->email);
-                return redirect('/home/militar');
+                return redirect('login/militar');
             } else {
                 return redirect('login/militar')->with('erro', 'Email ou Senha incorretos!');
             }
@@ -48,6 +38,29 @@ class OmsController extends Controller
         }
        
     }
+
+    public function validarRestritoOms(Request $request)
+    {
+        $oms =  Oms::where('oms_email', $request->email)->first();
+        if (!empty($oms)) {                                               //  caso tenha valor dentro da variavel empresa
+
+            if (Hash::check($request->password, $oms->oms_senha) and $oms->oms_status == 'S') {
+                $id = base64_encode($oms['oms_id']);
+                $request->session()->put('oms_id', $id);
+                $request->session()->put('oms_email', $request->email);
+                return redirect('/home/militar');
+            } else {
+                return redirect('/restrito/login/militar')->with('erro', 'Email ou Senha incorretos!');
+            }
+
+            return redirect('/restrito/login/militar')->with('erro', 'Email ou Senha incorretos!');
+        } else {
+
+            return redirect('/restrito/login/militar')->with('erro', 'Email ou Senha incorretos!');   // caso não existe o email
+        }
+       
+    }
+
 
     public function home()
     {
