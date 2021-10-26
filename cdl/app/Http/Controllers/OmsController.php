@@ -114,7 +114,7 @@ class OmsController extends Controller
             $oms->save();
 
             //ddd($request);
-            return redirect('home/militar')->with('empresa_cadastro', 'Produto cadastrado com sucesso!');
+            return redirect('/restrito/login/militar')->with('empresa_cadastro', 'Produto cadastrado com sucesso!');
            
         } else {
             return redirect('/add/oms/');
@@ -152,6 +152,8 @@ class OmsController extends Controller
 
     public function editaEmpresa($id) //  edita empresa
     {
+
+        $id = base64_decode($id);
 
         $oms = Oms::find($id);
         return view('update_organizacao_militar', compact('oms'));
