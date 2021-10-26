@@ -3,6 +3,7 @@
 @section('redefinir')
 
 <form class="form-signin" method="POST" action="/redefinir/senha/candidato/">
+    
 
     @csrf
     <div class="text-center">

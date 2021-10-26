@@ -385,17 +385,14 @@ class CandidatoController extends Controller
         $candidato = Candidato::where('can_email', $request->email)->first();  // pegando os dados da empresa EMAIL NOME
 
         
-        
         if(empty($candidato)){
-            return redirect('/redefinir/candidato')->with('mensagem', 'Produto cadastrado com sucesso!');
+            return redirect('/redefinir/candidato')->with('erro', 'erro');
         }else{
             
             $id = $candidato->can_id;
             
             $email = $candidato->can_email;
             $nome = $candidato->can_nome;
-            
-            
             
             Mail::to($request->email)->send(new candidatoMail(Candidato::where('can_email',$request->email)->first()));
 
