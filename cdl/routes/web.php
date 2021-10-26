@@ -52,7 +52,7 @@ Route::get('/vaga/candidato',function(Request $request){
 
 Route::get('login/empresa', [EmpresaController::class, 'index'])->name('login/empresa'); // chamando tela de login da empresa
 //Route::middleware(['empresaGrupo'])->group(function () {
-Route::get('/vagas/disponivel/', [EmpresaController::class, 'vagasDisponiveis']);
+Route::get('/vagas/disponivel/{id}', [EmpresaController::class, 'vagasDisponiveis']);
 Route::get('home/empresa', [EmpresaController::class, 'home']);   //  redirecinando para tela home   
 Route::post('/validar/empresa', [EmpresaController::class, 'validarLogin']); // tela de login da empresa 
 Route::get('add/empresa', [EmpresaController::class, 'formularioEmpresa']); // tela de formulario cadastro de empresa

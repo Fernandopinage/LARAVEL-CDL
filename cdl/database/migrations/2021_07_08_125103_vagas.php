@@ -40,7 +40,8 @@ class Vagas extends Migration
             $table->string('vag_idioma_nivel')->nullable();      // nivel do idioma
             $table->string('vag_idioma_outro')->nullable();     //  outro idiomas
             $table->char('vag_pcd')->nullable();                  // se possui deficiencia 
-            $table->longText('vag_pcd_descricao')->nullable();      // caso possua deficiencia campo para descrever       
+            $table->longText('vag_pcd_descricao')->nullable();      // caso possua deficiencia campo para descrever  
+            $table->string('vag_id_empresa')->nullable();     
             $table->timestamps();
         });
     }

@@ -173,7 +173,7 @@ Swal.fire({
   title: 'E-MAIL INVÁLIDO',
   text: 'Informe um e-mail valido',
   showConfirmButton: false,
-  timer: 1500
+  timer: 3000
 })
 </script>
 @endif

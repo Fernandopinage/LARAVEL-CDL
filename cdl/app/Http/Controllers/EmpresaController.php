@@ -55,11 +55,16 @@ class EmpresaController extends Controller
         return view('empresa');
     }
 
-    public function vagasDisponiveis()
+    public function vagasDisponiveis($id)
     {
 
+
+
+        
         //$vagas = Vagas::where('vag_oculta','N')->get();
-        $vagas = Vagas::select('*')->get();
+        $vagas = Vagas::select('*')
+        ->orWhere('vag_id_empresa',$id)
+        ->get();
         //dd($vagas);
         if(!empty($vagas)){
 
@@ -67,6 +72,7 @@ class EmpresaController extends Controller
         }else{
             return view('vagas_disponivel');
         }
+        
     }
 
     public function home()

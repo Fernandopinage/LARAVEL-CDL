@@ -22,13 +22,13 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="/vagas/disponivel/">Vagas Disponíveis</a>
+            <a class="nav-link" href="/vagas/disponivel/{{session('empresa_id')}}">Vagas Disponíveis</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/anuncio/empresa">Anúncio de Vaga </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/filtra/candidato/empresa">Busca Candidatos</a>
+            <a class="nav-link" href="/filtra/candidato/empresa">Buscar Candidatos</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"

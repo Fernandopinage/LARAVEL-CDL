@@ -88,6 +88,7 @@ class VagasController extends Controller
         $anucio->vag_salario = $request->salario;
         $anucio->vag_pcd = $request->pcd;
         $anucio->vag_pcd_descricao = $request->descricao_pcd;
+        $anucio->vag_id_empresa = $request->id_empresa;
         $anucio->save();
        return redirect('home/empresa')->with('mensagem','Registro cadastrado com sucesso!'); // redirecionar para tela de anuncio
         
