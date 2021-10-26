@@ -20,6 +20,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <!--
         <ul class="navbar-nav">
           <li class="nav-item">
             <a class="nav-link" href="/vagas/candidato">Buscar Vagas</a>
@@ -40,7 +41,7 @@
             </ul>
           </li>
         </ul>
-
+      -->
       </div>
       <ul class="nav justify-content-end">
         <button type="button" class="btn btn position-relative" style="background-color:#F8F9FA; margin-right:10px">

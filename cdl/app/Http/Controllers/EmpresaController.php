@@ -35,7 +35,7 @@ class EmpresaController extends Controller
 
             if (Hash::check($request->password, $empresa->emp_senha) and  ($empresa->emp_desativar != 'S') and ($empresa->emp_desativar != 'on')) {     //  decodificando senha hash 
 
-                $id = $empresa['emp_id'];
+                $id = base64_encode($empresa['emp_id']);
                 $request->session()->put('empresa_id', $id);
                 $request->session()->put('empresa', $request->email);
                 return redirect('home/empresa');                                  // redirecinanmento se estiver tudo certo
@@ -58,7 +58,7 @@ class EmpresaController extends Controller
     public function vagasDisponiveis($id)
     {
 
-
+        $id = base64_decode($id);
 
         
         //$vagas = Vagas::where('vag_oculta','N')->get();
@@ -247,6 +247,7 @@ class EmpresaController extends Controller
 
     public function editaEmpresa($id) //  edita empresa
     {
+        $id = base64_decode($id); 
 
         $empresa = Empresa::find($id);
         return view('update_empresa', compact('empresa'));

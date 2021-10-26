@@ -31,7 +31,9 @@ class CandidatoController extends Controller
         if (!empty($candidato)) {
 
             if (Hash::check($request->password, $candidato->can_senha) and ($candidato->can_status != 'on')) {
-                $id = $candidato['can_id'];
+                $id = base64_encode($candidato['can_id']);
+
+
                 $request->session()->put('can_id', $id);
                 $request->session()->put('candidato', $request->email);
                 
@@ -232,7 +234,7 @@ class CandidatoController extends Controller
     }
 
     public function editarCandidato($id){
-
+        $id = base64_decode($id);
         $candidato = Candidato::find($id);
        // ddd($candidato);
         return view('update_candidato',compact('candidato'));
@@ -264,7 +266,7 @@ class CandidatoController extends Controller
     public function update(Request $request, $id)
     {
 
-       
+            
             $candidato = Candidato::find($id);
             $candidato->can_nome = $request->nome;
             $candidato->can_sobrenome  = $request->sobrenome;
@@ -411,6 +413,8 @@ class CandidatoController extends Controller
 
     public function updateSenha($id){
 
+        //$id = base64_decode($id);
+
         $candidato = Candidato::find($id);
        
         return view('alterar_senha_candidato', compact('candidato'));
@@ -419,6 +423,7 @@ class CandidatoController extends Controller
 
     public function modificar(Request $request){
 
+     
         $id = $request->id;
         
         if($request->newsenha === $request->confsenha){
