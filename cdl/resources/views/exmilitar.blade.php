@@ -28,19 +28,19 @@
 
                 <div class="form-row" style="border: 0px;">
                     <div class="form-group col-md-4">
-                        <div class="card" style="width: 25rem;">
+                        <div class="card" style="width: 20rem;">
                             <div class="card-body">
 
                                 <span style="color: #284D92"></span>
                                 <p>
                                 <h1>
-                                    <span style="color: #157347; margin-right:132px;">
+                                    <span style="color: #157347; margin-right:132px; margin-left:50px; ">
 
                                         @if(!empty($candidato->can_foto))
-                                        <img src="/img/events/{{$candidato->can_foto}}" height="350px" width="350px" class="img-thumbnail" alt="...">
+                                        <img src="/img/events/{{$candidato->can_foto}}" height="150px" width="150px" class="img-thumbnail" alt="...">
                                             
                                         @else
-                                        <img src="/img/events/perfil.png" height="300px" width="300px" class="img-thumbnail" alt="...">
+                                        <img src="/img/events/perfil.png" height="150px" width="150px" class="img-thumbnail" alt="...">
                                             
                                         @endif
                                     

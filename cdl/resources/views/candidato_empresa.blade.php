@@ -421,52 +421,51 @@
 
 
 @if(!empty($candidato))
-<div class="row g-3 shadow p-4 mb-5 bg-body rounded" style="margin-top: 50px">
-
+<div class="container" id="canditados" style="margin-top: 50px; margin-bottom:50px">
     @foreach ($candidato as $candidato)
 
-    <div class=" d-inline-block " style="padding: 8px;">
+    <div class=" d-inline-block" style="padding: 8px;" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <div class="form-row" style="border: 0px;">
+            <div class="form-group col-md-4">
+                <div class="card" style="width: 20rem;">
+                    <div class="card-body">
+                        <span style="color: #284D92"></span>
+                        <p>
+                        <h1>
+                            <span style="color: #157347; margin-left:50px; ">
+                                @if($candidato->can_foto != null)
 
-        <div class="form-group col-md-4">
-            <div class="card" style="width: 20rem;">
-                <div class="card-body">
+                                <img id="perfil" src="/img/events/{{$candidato->can_foto}}" height="150px" width="150px"
+                                    class="img-thumbnail" alt="...">
+                                @else
+                                <img id="perfil" src="/img/events/perfil.png" height="150px" width="150px"
+                                    class="img-thumbnail" alt="...">
+                                @endif
 
-                    <span style="color: #284D92"></span>
-                    <p>
-                    <h1>
-                        <span style="color: #157347; margin-left:50px; ">
-                            @if($candidato->can_foto != null)
+                            </span><span style="color: #696969;"></span>
 
-                            <img id="perfil" src="/img/events/{{$candidato->can_foto}}" height="150px" width="150px"
-                                class="img-thumbnail" alt="...">
-                            @else
-                            <img id="perfil" src="/img/events/perfil.png" height="150px" width="150px"
-                                class="img-thumbnail" alt="...">
-                            @endif
+                        </h1>
+                        <hr>
+                        <br>
+                        <span><b style="color: #22427c; margin-right:0px">Nome:</b></span><span style="color: #535151">
+                            {{$candidato->can_nome}}</span>
+                        <br>
+                        <span><b style="color: #22427c; margin-right:0px">E-mail:</b></span><span
+                            style="color: #535151">
+                            {{$candidato->can_email}}</span>
 
-                        </span><span style="color: #696969;"></span>
+                        <br>
+                        <span><b style="color: #22427c; margin-right:0px">Celular:</b></span>
 
-                    </h1>
-                    <hr>
-                    <br>
-                    <span><b style="color: #22427c; margin-right:0px">Nome:</b></span><span style="color: #535151">
-                        {{$candidato->can_nome}}</span>
-                    <br>
-                    <span><b style="color: #22427c; margin-right:0px">E-mail:</b></span><span style="color: #535151">
-                        {{$candidato->can_email}}</span>
+                        <br>
+                        <span><b style="color: #22427c; margin-right:0px">CPF:</b></span>
+                        <span style="color: #535151"> {{$candidato->can_cpf}}</span>
 
-                    <br>
-                    <span><b style="color: #22427c; margin-right:0px">Celular:</b></span><span style="color: #535151">
-                        {{$candidato->can_celular}}</span>
-
-                    <br>
-                    <span><b style="color: #22427c; margin-right:0px">CPF:</b></span>
-                    <span style="color: #535151"> {{$candidato->can_cpf}}</span>
-
-                    <br>
-                    <span><b style="color: #22427c; margin-right:0px">Curso UTV:</b></span>
+                        <br>
+                        <span><b style="color: #22427c; margin-right:0px">Curso UTV:</b></span>
+                    </div>
+                    <input type="submit" class="btn btn-primary" value="Seu candidato ideial" style="color:#fff;">
                 </div>
-                <input type="submit" class="btn btn-primary" value="Seu candidato ideial" style="color:#fff;">
             </div>
         </div>
     </div>

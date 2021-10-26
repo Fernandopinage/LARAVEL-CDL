@@ -28,15 +28,24 @@
 
             <div class="form-row" style="border: 0px;">
                 <div class="form-group col-md-4">
-                    <div class="card" style="width: 27rem;">
+                    <div class="card" style="width: 20rem;">
                         <div class="card-body">
 
                             <span style="color: #284D92"></span>
                             <p>
                             <h1>
-                                <span style="color: #157347; margin-right:132px; "><img src="/img/index-1.jpg"
-                                        height="350px" width="350px" class="img-thumbnail" alt="..."></span><span
-                                    style="color: #696969;"></span>
+                                <span style="color: #157347; margin-right:132px; margin-left:50px; ">
+
+                                    @if(!empty($candidato->can_foto))
+                                    <img src="/img/events/{{$candidato->can_foto}}" height="150px" width="150px" class="img-thumbnail" alt="..." style="border-radius: 50%">
+                                        
+                                    @else
+                                    <img src="/img/events/perfil.png" height="150px" width="150px" class="img-thumbnail" alt="..." style="border-radius: 50%">
+                                        
+                                    @endif
+                                
+                                
+                                </span>
                                
                             </h1>
                             <hr>
@@ -50,11 +59,6 @@
                             <br>
                             <span><b style="color: #22427c; margin-right:0px">Celular:</b></span><span
                             style="color: #535151"> {{$candidato->can_celular}}</span>
-
-
-                            <span><b style="color: #22427c; margin-right:0px">Telefone:</b></span><span
-                                style="color: #535151"> {{$candidato->can_telefone}}</span>
-
                             <br>
                             <span><b style="color: #22427c; margin-right:0px">CPF:</b></span>
                             <span
