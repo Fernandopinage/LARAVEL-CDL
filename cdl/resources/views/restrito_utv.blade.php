@@ -2,7 +2,7 @@
 
 @section('login')
 
-<form class="form-signin" method="post" action="/validar/utv">
+<form class="form-signin" method="post" action="/restrito/validar/utv">
     @csrf
     <div class="text-center" >
         <h2 class="form-signin-heading">UTV</h2>

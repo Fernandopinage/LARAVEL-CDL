@@ -71,7 +71,7 @@ class utvController extends Controller
             //ddd($request);
             $UTV->save();
 
-            return redirect('/login/utv')->with('utv_cadastro', 'Produto cadastrado com sucesso!');
+            return redirect('restrito/login/utv')->with('utv_cadastro', 'Produto cadastrado com sucesso!');
         }
     }
 
@@ -146,6 +146,9 @@ class utvController extends Controller
         }
     }
 
+
+
+    
     public function recuperarSenha(Request $request)
     {
 
@@ -225,7 +228,7 @@ class utvController extends Controller
 
             if (Hash::check($request->password, $utv->utv_senha) and ($utv->utv_status != 'S')) {
 
-                $id = $utv['utv_id'];
+                $id = base64_encode($utv['utv_id']);
                 $request->session()->put('utv_id', $id);
                 $request->session()->put('utv_email', $request->email);
                 return redirect('home/utv');
@@ -237,6 +240,30 @@ class utvController extends Controller
             return redirect('login/utv');
         }
     }
+
+
+    public function validarRestritoLogin(Request $request)
+    {
+
+        $utv =  UTV::where('utv_email', $request->email)->first();
+
+        if (!empty($utv)) {
+
+            if (Hash::check($request->password, $utv->utv_senha) and ($utv->utv_status != 'S')) {
+
+                $id = base64_encode($utv['utv_id']);
+                $request->session()->put('utv_id', $id);
+                $request->session()->put('utv_email', $request->email);
+                return redirect('home/utv');
+            } else {
+                return redirect('login/utv');
+            }
+        } else {
+
+            return redirect('login/utv');
+        }
+    }
+
 
     public function cursosAdd()
     {

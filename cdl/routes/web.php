@@ -52,8 +52,8 @@ Route::get('/vaga/candidato',function(Request $request){
 
 //});
 
-Route::get('login/empresa', [EmpresaController::class, 'index'])->name('login/empresa'); // chamando tela de login da empresa
 //Route::middleware(['empresaGrupo'])->group(function () {
+Route::get('login/empresa', [EmpresaController::class, 'index'])->name('login/empresa'); // chamando tela de login da empresa
 Route::get('/vagas/disponivel/{id}', [EmpresaController::class, 'vagasDisponiveis']);
 Route::get('home/empresa', [EmpresaController::class, 'home']);   //  redirecinando para tela home   
 Route::post('/validar/empresa', [EmpresaController::class, 'validarLogin']); // tela de login da empresa 
@@ -81,7 +81,6 @@ Route::get('/logout/empresa/{id}', [EmpresaController::class, 'logout']);
 //Route::middleware(['oms'])->group(function () {
 Route::get('/restrito/login/militar', [OmsController::class, 'loginRestrito']); // chamando tela de index login OMS
 Route::POST('/restrito/validar/militar', [OmsController::class, 'validarRestritoOms']); // chamando tela de index login OMS
-
 Route::get('/login/militar', [OmsController::class, 'login']); // chamando tela de index login OMS
 Route::post('/validar/oms', [OmsController::class, 'validarOms']); // validando login
 Route::get('/home/militar', [OmsController::class, 'home']);
@@ -107,7 +106,10 @@ Route::get('/gerar/pdf/{id}', [PDFControler::class , 'gerarPDF']);
 
 
 //Route::middleware(['oms'])->group(function () {
-Route::get('restrito/login/utv', [utvController::class, 'indexRestrito']);  // tela de acesso a utv
+Route::get('/restrito/login/utv', [utvController::class, 'indexRestrito']);  // tela de acesso a utv
+Route::post('/restrito/validar/utv', [utvController::class, 'validarRestritoLogin']);  // tela de acesso a utv
+
+
 Route::get('login/utv', [utvController::class, 'index']);  // tela de acesso a utv
 Route::post('/validar/utv', [utvController::class, 'validarLogin']);
 Route::get('/edita/utv/{id}', [utvController::class, 'editaUtv']);
