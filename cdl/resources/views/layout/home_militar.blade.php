@@ -33,7 +33,7 @@
               Opções
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="/add/oms/">Criar Conta</a></li>
+              
               <li><a class="dropdown-item" href="/edita/oms/{{session('oms_id')}}">Editar Organização Militar</a></li>
               @php
                 $id = session('oms_id');
