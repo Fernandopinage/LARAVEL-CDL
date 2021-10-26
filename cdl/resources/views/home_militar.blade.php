@@ -53,11 +53,11 @@
 </div>
 
 @if(!empty($candidato))
-  
+
 
 <div class="container" id="canditados">
     @foreach($candidato as $candidato)
-       
+
     <div class=" d-inline-block" style="padding: 8px;">
 
         <div class="form-row" style="border: 0px;">
@@ -67,36 +67,35 @@
 
                         <span style="color: #284D92"></span>
                         <p>
-                            <h1>
-                                <span style="color: #157347; margin-right:132px"><img src="/img/index-1.jpg"
-                                        height="250px" width="150px" class="img-thumbnail" alt="..."></span><span
-                                    style="color: #696969;"></span>
-                            </h1>
-                            <hr>
-                            <br>
-                            <span><b style="color: #97212d; margin-right:0px">Nome:</b></span><span
-                                style="color: #535151"> {{$candidato->can_nome}}</span>
-                            <br>
-                            <span ><b style="color: #22427c; margin-right:0px">Formação:</b></span><span
+                        <h1>
+                            <span style="color: #157347; margin-right:132px"><img src="/img/index-1.jpg" height="250px"
+                                    width="150px" class="img-thumbnail" alt="..."></span><span
+                                style="color: #696969;"></span>
+                        </h1>
+                        <hr>
+                        <br>
+                        <span><b style="color: #97212d; margin-right:0px">Nome:</b></span><span style="color: #535151">
+                            {{$candidato->can_nome}}</span>
+                        <br>
+                        <span><b style="color: #22427c; margin-right:0px">Formação:</b></span><span
                             style="color: #535151"> {{$candidato->can_formacao}}</span>
 
-                            <br>
-                            <span><b style="color: #22427c; margin-right:0px">Trabalhando Atualmente:</b></span>
-                            <span style="color: #535151"> {{$candidato->can_area_profissional}}</span>
+                        <br>
+                        <span><b style="color: #22427c; margin-right:0px">Trabalhando Atualmente:</b></span>
+                        <span style="color: #535151"> {{$candidato->can_area_profissional}}</span>
 
-                            <div class="text-center d-grid" style="margin-top: 20px;">
-                                <button type="button" class="btn btn-success" data-toggle="modal"
-                                    data-target="#visualizar">
-                                    VISUALIZAR PERFIL
-                                </button>
+                        <div class="text-center d-grid" style="margin-top: 20px;">
+                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#visualizar">
+                                VISUALIZAR PERFIL
+                            </button>
 
-                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-</div>
-@endforeach
+    </div>
+    @endforeach
 </div>
 @endif
 
@@ -108,19 +107,19 @@
 </div>
 <div class="container" id="curso">
     @foreach ($curso as $curso)
-        
-    <div class="d-inline-block" style="margin-top: 20px;" >
+
+    <div class="d-inline-block" style="margin-top: 20px;">
 
         <div class="row">
             <div class="col-sm-3">
                 <div class="card">
                     <div class="card-body">
                         <h1>
-                            <span style="color: #157347; margin-right:132px"><a href="" target="_blank"><img src="/img/curso/{{$curso->utvcurso_folder}}"
-                                height="800px" width="800px" class="img-thumbnail" alt="..." ></a>
+                            <span style="color: #157347; margin-right:132px"><a href="" target="_blank"><img
+                                        src="/img/curso/{{$curso->utvcurso_folder}}" height="800px" width="800px"
+                                        class="img-thumbnail" alt="..."></a>
                             </span>
-                            <span
-                                style="color: #696969;">
+                            <span style="color: #696969;">
                             </span>
                         </h1>
                     </div>
@@ -147,7 +146,8 @@
                                 <tr>
                                     <td><b style="color:#006CDE;">{{$curso->utvcurso_hora}}</b></td>
                                     <td><b style="color:#006CDE;">{{$curso->utvcurso_dias}}</b></td>
-                                    <td><b style="color:#006CDE;">{{$curso->utvcurso_data_inicio}} as {{$curso->utvcurso_data_final}}</b></td>
+                                    <td><b style="color:#006CDE;">{{$curso->utvcurso_data_inicio}} as
+                                            {{$curso->utvcurso_data_final}}</b></td>
                                     <td><b style="color:#006CDE;">{{$curso->utvcurso_valor_geral}}</b></td>
                                     <td><b style="color:#006CDE;">{{$curso->utvcurso_valor_estudante}}</b></td>
                                 </tr>
@@ -155,12 +155,13 @@
                         </table>
                     </div>
                     <div class="card-footer text-left">
-                        <p><b style="color:#006CDE;"> Mais Informações:</b></p><p style="color:#006CDE;">{{$curso->utvcurso_informacoes}}</p>
+                        <p><b style="color:#006CDE;"> Mais Informações:</b></p>
+                        <p style="color:#006CDE;">{{$curso->utvcurso_informacoes}}</p>
                     </div>
                 </div>
             </div>
         </div>
-</div>
+    </div>
 
     @endforeach
 </div>

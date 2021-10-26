@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Restrito;
 use Illuminate\Support\Facades\Hash;
 
-class AcessoController extends Controller
+class acessoController extends Controller
 {
     public function index(){
 
