@@ -26,7 +26,7 @@ class OmsController extends Controller
                 $id = base64_encode($oms['oms_id']);
                 $request->session()->put('oms_id', $id);
                 $request->session()->put('oms_email', $request->email);
-                return redirect('login/militar');
+                return redirect('home/militar');
             } else {
                 return redirect('login/militar')->with('erro', 'Email ou Senha incorretos!');
             }
