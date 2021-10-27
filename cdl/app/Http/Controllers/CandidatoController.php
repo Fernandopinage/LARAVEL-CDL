@@ -433,7 +433,8 @@ class CandidatoController extends Controller
 
 
         if (empty($candidato)) {
-            return redirect('/redefinir/candidato')->with('erro', 'erro');
+            
+            return redirect('/redefinir/candidato')->with('mensagem', 'erro_senha cadastrado com sucesso!');
         } else {
 
             $id = $candidato->can_id;
