@@ -40,7 +40,7 @@ Route::post('/insert/candidato', [CandidatoController::class, 'store']);
 Route::get('/editar/candidato/{id}',[CandidatoController::class, 'editarCandidato']);
 Route::post('/update/candidato/{id}',[CandidatoController::class, 'update']);
 Route::get('/redefinir/candidato/',[CandidatoController::class, 'redefinirCandidato']);
-Route::POST('/redefinir/senha/candidato/',[CandidatoController::class, 'redefinir']);
+Route::GET('/redefinir/senha/candidato/',[CandidatoController::class, 'redefinir']);
 Route::get('/redefinir/password/candidato/{id}',[CandidatoController::class, 'updateSenha']);
 Route::get('/password/candidato/',[CandidatoController::class, 'updateSenha']);
 Route::get('/mail/password/candidato/{id}',[CandidatoController::class, 'modificarSenha']);
