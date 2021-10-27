@@ -68,9 +68,9 @@ class CandidatoController extends Controller
 
         
         $vagas = Vagas::where('vag_cargo','like','%'.$request->cargo.'%')
-        ->orWhere('vag_tipo','like','%'.$request->tipo.'%') 
-        ->orWhere('vag_salario','like','%'.$request->salario.'%') 
-        ->orWhere('vag_formacao','like','%'.$request->areformacaoa.'%') 
+        ->orWhere('vag_tipo','like','%'.$request->vaga.'%') 
+        //->orWhere('vag_salario','like','%'.$request->salario.'%') 
+        /*->orWhere('vag_formacao','like','%'.$request->areformacaoa.'%') 
         ->orWhere('vag_curso','like','%'.$request->curso.'%') 
         ->orWhere('vag_termino','like','%'.$request->termino.'%') 
         ->orWhere('vag_semestre','like','%'.$request->semestre.'%') 
@@ -78,7 +78,7 @@ class CandidatoController extends Controller
         ->orWhere('vag_bairro','like','%'.$request->bairro.'%') 
         ->orWhere('vag_opcao','like','%'.$request->vaga.'%') 
         ->orWhere('vag_pcd','like','%'.$request->pcd.'%') 
-        ->orWhere('vag_semestre','like','%'.$request->semestre.'%') 
+        ->orWhere('vag_semestre','like','%'.$request->semestre.'%') */
         ->get();       
         //ddd($vagas);
 

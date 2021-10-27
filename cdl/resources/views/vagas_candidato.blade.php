@@ -8,8 +8,6 @@
 
         @csrf
 
-
-
         <div class="text-center">
             <h2 class="form-signin-heading">Buscar Vagas</h2>
             <hr>
