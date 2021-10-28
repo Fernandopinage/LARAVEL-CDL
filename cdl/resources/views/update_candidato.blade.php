@@ -20,10 +20,20 @@ $candidato;
         <div class="text">
             <div class="text-center">
                 @if($candidato->can_foto != null)
-                
-                <img id="perfil" src="/img/events/{{$candidato->can_foto}}" alt="profile Pic">
+                <div>
+                    <img  class="border border-success" id="perfil" src="/img/events/{{$candidato->can_foto}}" alt="profile Pic">
+                </div>
+                <div class="m-t-2">
+                    <label class="form-check-label" for="flexCheckIndeterminate">Imagem de Perfil </label>
+                </div>
                 @else
-                <img id="perfil" src="/img/events/perfil.png" alt="profile Pic">
+                <div class="">
+                    <img class="border border-success" id="perfil" src="/img/events/perfil.png" alt="profile Pic">
+                </div>
+                <div class="m-t-2">
+
+                    <label class="form-check-label" for="flexCheckIndeterminate">Imagem de Perfil </label>
+                </div>
                 @endif
             </div>
             <div class="text-end">

@@ -22,9 +22,20 @@ $empresa;
         <div class="text">
             <div class="text-center">
                 @if(!empty($empresa->emp_logo))
-                <img id="perfil" src="/img/empresas/{{$empresa->emp_logo}}" >
+                <div>
+                    <img id="perfil" src="/img/empresas/{{$empresa->emp_logo}}" >
+                </div>
+                <div>
+                    <label class="form-check-label" for="flexCheckIndeterminate">Imagem de Perfil </label>
+                </div>
                 @else
-                <img id="perfil" src="/img/events/perfil.png" >
+                <div class="">
+                    <img class="border border-success" id="perfil" src="/img/events/perfil.png" alt="profile Pic">
+                </div>
+                <div class="m-t-2">
+
+                    <label class="form-check-label" for="flexCheckIndeterminate">Imagem de Perfil </label>
+                </div>
                     
                 @endif
             </div>

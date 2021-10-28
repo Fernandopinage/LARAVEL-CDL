@@ -16,7 +16,12 @@
 
         <div class="text">
             <div class="text-center">
-                <img id="perfil" src="/img/events/perfil.png" alt="profile Pic">
+                <div>
+                    <img class="border border-success" id="perfil" src="/img/events/perfil.png" alt="profile Pic">
+                </div>
+                <div>
+                    <label class="form-check-label" for="flexCheckIndeterminate">Imagem de Perfil </label>
+                </div>
             </div>
             <h2 class="form-signin-heading"> DADOS DA EMPRESA </h2>
             <hr>
