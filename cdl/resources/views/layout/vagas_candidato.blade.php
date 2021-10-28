@@ -8,6 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
         <link href="/css/add_empresa.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="icon" href="/img/title.png">
     <title>Empregabilidade | CDL Manaus</title>
 </head>
@@ -136,6 +137,127 @@
       -->
     </footer>
 </body>
+<script>
+
+
+  $(document).ready(function(){
+    $('#selecionarFoto').hide();
+         
+    $('#curso_div').hide();
+    $('#termino_div').hide();
+    $('#semestre_div').hide();
+    $('#periodo_div').hide();
+    $('#institucao_div').hide();
+  });
+
+
+
+  $('#formacao').change(function(){
+
+    
+    if(document.getElementById('formacao').value === 'Ensino_Fundamental_completo' || document.getElementById('formacao').value === 'Ensino_Fundamental_incompleto'){
+     
+      $('#curso_div').hide();
+      $('#termino_div').hide();
+      $('#semestre_div').hide();
+      $('#periodo_div').hide();
+      $('#institucao_div').hide();
+    }
+  
+    if(document.getElementById('formacao').value === 'Ensino_Médio_completo'){
+      
+      $('#curso_div').hide();
+      $('#termino_div').show();
+      $label = document.getElementById('termino_div_label');
+      $label.innerHTML = "Ano de conclusão"
+      $('#semestre_div').hide();
+      $('#periodo_div').hide();
+      $('#institucao_div').hide();
+    }
+  
+    if(document.getElementById('formacao').value  === 'Ensino_Médio_cursando'){
+      $('#curso_div').hide();
+      $('#termino_div').show();
+      $label = document.getElementById('termino_div_label');
+      $label.innerHTML = "Ano em curso"
+
+      $('#semestre_div').hide();
+      $('#periodo_div').hide();
+      $('#institucao_div').hide();
+    }
+  
+    if(document.getElementById('formacao').value  === 'Ensino_Técnico_completo'){
+  
+      $('#curso_div').show();
+      $('#termino_div').show();
+      $label = document.getElementById('termino_div_label');
+      $label.innerHTML = "Ano de conclusão"
+      $('#semestre_div').hide();
+      $('#periodo_div').hide();
+      $('#institucao_div').show();
+  
+    }
+  
+    if(document.getElementById('formacao').value  === 'Ensino_Técnico_cursando'){
+  
+  
+      $('#curso_div').show();
+      $('#termino_div').hide();
+      $('#semestre_div').show();
+      $('#periodo_div').hide();
+      $('#institucao_div').show();
+  
+    }
+  
+    if(document.getElementById('formacao').value  === 'Superior_Completo'){
+  
+    $('#curso_div').show();
+    $('#termino_div').show();
+    $label = document.getElementById('termino_div_label');
+    $label.innerHTML = "Ano de conclusão"
+    $('#semestre_div').hide();
+    $('#periodo_div').hide();
+    $('#institucao_div').show();
+    
+  
+    }
+  
+  
+    if(document.getElementById('formacao').value  === 'Superior_Cursando'){
+  
+    $('#curso_div').show();
+    $('#termino_div').hide();
+    $('#semestre_div').hide();
+    $('#periodo_div').show();
+    $('#institucao_div').show();
+   
+  
+    }
+  
+    if(document.getElementById('formacao').value  === 'Pós-Graduação_Completo'){
+  
+    $('#curso_div').show();
+    $('#termino_div').show();
+    $('#semestre_div').hide();
+    $('#periodo_div').hide();
+    $label = document.getElementById('termino_div_label');
+    $label.innerHTML = "Ano de conclusão"
+    $('#institucao_div').show();
+  
+    }
+  
+    if(document.getElementById('formacao').value  === 'Pós-Graduação_Cursando'){
+  
+      $('#curso_div').show();
+      $('#termino_div').hide();
+      $('#semestre_div').hide();
+      $('#periodo_div').show();
+      $('#institucao_div').show();
+  
+    }
+  
+  });
+</script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
     integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
 </script>
