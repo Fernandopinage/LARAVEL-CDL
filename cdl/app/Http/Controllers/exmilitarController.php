@@ -21,6 +21,7 @@ class exmilitarController extends Controller
 
         if(!empty($request)){
 
+            
              
             $dados = Candidato::where('can_exmilitar','Sim')
             ->where('can_nome','like','%'.$request->buscar.'%')
@@ -50,7 +51,7 @@ class exmilitarController extends Controller
         ->get();
 
         return view('buscar_filtro_exmilitar',compact('dados'));
-        //return view('buscar_filtro_exmilitar',compact('candidato'));
+        
 
     }
  

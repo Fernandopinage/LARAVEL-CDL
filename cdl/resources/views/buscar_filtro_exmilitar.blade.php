@@ -12,8 +12,6 @@
 
     @foreach ($dados as $dados)
 
-
-
     <div class="row g-3 shadow p-4 mb-5 bg-body rounded">
         <div class="text-end">
           

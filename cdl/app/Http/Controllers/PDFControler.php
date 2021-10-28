@@ -10,7 +10,8 @@ use Barryvdh\DomPDF\FACADE as PDF;
 class PDFControler extends Controller
 {
     public function gerarPDF($id){
-       
+        
+        
 
         $dados = Candidato::find($id);
     
