@@ -4,7 +4,7 @@
 
 <div style="margin-bottom: 50px">
 
-    <form class="form-signin" method="get" action="/lista/vaga/candidato" style="margin-top:50px; margin-bottom:50px">
+    <form class="form-signin" method="get" action="/lista/vaga/candidato" style="margin-top:50px; margin-bottom: 50px">
 
         @csrf
 
