@@ -771,7 +771,7 @@ $candidato;
                 @for($i = 0; $i <$tamanho4; $i++) <div class="row g-3 shadow p-3 mb-5 bg-body rounded"
                     id="divExperiencia<?php echo $i;?>" style="margin: 10px">
                     <div class="text-end"> <input type="button" class="btn btn-danger btn-sm"
-                            onclick="removeCamposEx(<?php echo $i;?>)" value="Remover Curso"></div>
+                            onclick="removeCamposEx(<?php echo $i;?>)" value="Remover Experiência"></div>
                     <div class="col-md-6" id="01">
                         <label class="form-check-label" for="flexCheckIndeterminate">Nome da empresa </label>
                         <input type="text" class="form-control form-control-sm" name="nome_empresa[]" placeholder=""
@@ -802,7 +802,7 @@ $candidato;
                             onKeyPress="return(moeda(this,'.',',',event))">
                     </div>
                     <div class="col-md-3" id="07">
-                        <label class="form-check-label" for="flexCheckIndeterminate">Softwares utilizava</label>
+                        <label class="form-check-label" for="flexCheckIndeterminate">Software utilizados</label>
                         <input type="text" class="form-control form-control-sm" placeholder="" name="software_empresa[]"
                             value="{{$candidato->can_software_empresa[$i]}}">
                     </div>
@@ -1218,7 +1218,7 @@ $candidato;
         if(cont04 < 4){
 
         var div = document.createElement('div');
-        div.innerHTML = '<div  class="row g-3 shadow p-3 mb-5 bg-body rounded" id="divExperiencia'+cont04+'" style="margin: 10px"> <div class="text-end"> <input type="button" class="btn btn-danger btn-sm" onclick="removeCamposEx('+cont04+')" value="Remover Curso"></div> <div class="col-md-6" id="01">  <label class="form-check-label" for="flexCheckIndeterminate">Nome da empresa </label> <input type="text" class="form-control form-control-sm" name="nome_empresa[]" placeholder=""> </div><div class="col-md-5" id="02"> <label class="form-check-label" for="flexCheckIndeterminate">Cargo </label> <input type="text" class="form-control form-control-sm" name="cargo_empresa[]" placeholder=""> </div> <div class="col-md-2" style="margin-top: 40px;" id="03"> <label class="form-check-label" for="inlineCheckbox1">Empresa atual?</label><input class="form-check-input" type="checkbox" name="atual_empresa[]"> </div> <div class="col-md-2" id="04"> <label class="form-check-label" for="flexCheckIndeterminate">Data de Admissão </label>  <input type="month" class="form-control form-control-sm" placeholder="" name="data_inicio_empresa[]"> </div> <div class="col-md-2" id="05"><label class="form-check-label" for="flexCheckIndeterminate">Data de termino </label><input type="month" class="form-control form-control-sm" placeholder="" name="data_termino_empresa[]">  </div> <div class="col-md-2" id="06"><label class="form-check-label" for="flexCheckIndeterminate">Salário</label>  <input type="text" class="form-control form-control-sm" placeholder="" name="salario_empresa[]">  </div>  <div class="col-md-3" id="07">   <label class="form-check-label" for="flexCheckIndeterminate">Softwares utilizava</label>  <input type="text" class="form-control form-control-sm" placeholder="" name="software_empresa[]"> </div></div></div>';
+        div.innerHTML = '<div  class="row g-3 shadow p-3 mb-5 bg-body rounded" id="divExperiencia'+cont04+'" style="margin: 10px"> <div class="text-end"> <input type="button" class="btn btn-danger btn-sm" onclick="removeCamposEx('+cont04+')" value="Remover Experiência"></div> <div class="col-md-6" id="01">  <label class="form-check-label" for="flexCheckIndeterminate">Nome da empresa </label> <input type="text" class="form-control form-control-sm" name="nome_empresa[]" placeholder=""> </div><div class="col-md-5" id="02"> <label class="form-check-label" for="flexCheckIndeterminate">Cargo </label> <input type="text" class="form-control form-control-sm" name="cargo_empresa[]" placeholder=""> </div> <div class="col-md-2" style="margin-top: 40px;" id="03"> <label class="form-check-label" for="inlineCheckbox1">Empresa atual?</label><input class="form-check-input" type="checkbox" name="atual_empresa[]"> </div> <div class="col-md-2" id="04"> <label class="form-check-label" for="flexCheckIndeterminate">Data de Admissão </label>  <input type="month" class="form-control form-control-sm" placeholder="" name="data_inicio_empresa[]"> </div> <div class="col-md-2" id="05"><label class="form-check-label" for="flexCheckIndeterminate">Data de termino </label><input type="month" class="form-control form-control-sm" placeholder="" name="data_termino_empresa[]">  </div> <div class="col-md-2" id="06"><label class="form-check-label" for="flexCheckIndeterminate">Salário</label>  <input type="text" class="form-control form-control-sm" placeholder="" name="salario_empresa[]">  </div>  <div class="col-md-3" id="07">   <label class="form-check-label" for="flexCheckIndeterminate">Software utilizados</label>  <input type="text" class="form-control form-control-sm" placeholder="" name="software_empresa[]"> </div></div></div>';
                  document.getElementById('listaExperiencia').appendChild(div)
         cont04++;
        
