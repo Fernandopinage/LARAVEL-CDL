@@ -248,44 +248,7 @@ $candidato;
         </div>
     </div>
 
-    <div class="form-signin">
-        <div class="text-end">
-            <label class="switch">
-                <input type="checkbox" id="informacoesContato" checked>
-                <span class="slider round"></span>
-            </label>
-        </div>
-
-        <div class="text">
-            <h2 class="form-signin-heading">Informações de Contato</h2>
-            <hr>
-        </div>
-
-        <div class="informacoesContato">
-            <div class="row g-3">
-
-                <div class="col-md-4">
-                    <label class="form-check-label" for="flexCheckIndeterminate">E-mail </label>
-                    <input type="text" class="form-control form-control-sm" placeholder="" name="email"
-                        value="{{$candidato->can_email}}">
-                </div>
-                <div class="col-md-2">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Telefone</label>
-                    <input type="text" class="form-control form-control-sm" placeholder="(xx) xxxxx-xxxx"
-                        onkeypress="mask(this, mphone);" onblur="mask(this, mphone);" name="telefone"
-                        value="{{$candidato->can_telefone}}">
-                </div>
-                <div class="col-md-2">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Celular </label>
-                    <input type="text" class="form-control form-control-sm" placeholder="(xx) xxxxx-xxxx"
-                        onkeypress="mask(this, mphone);" onblur="mask(this, mphone);" name="celular"
-                        value="{{$candidato->can_celular}}">
-                </div>
-
-            </div>
-        </div>
-
-    </div>
+    
 
     <div class="form-signin">
         <div class="text-end">
