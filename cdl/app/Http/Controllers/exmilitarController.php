@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Candidato;
 use Illuminate\Http\Request;
+use Vagas;
 
 class exmilitarController extends Controller
 {
@@ -20,14 +21,36 @@ class exmilitarController extends Controller
     public function filtroExmilitar(Request $request){
 
         if(!empty($request)){
-
             
-             
+            
+            
+            /* 
+            $dados = Candidato::where(function($query) use ($request){
+                
+                if($request->can_exmilitar){
+                    $query->where('can_exmilitar','!=','Não');
+                }
+                if($request->can_nome){
+                    $query->orWhere('can_nome','like','%'.$request->buscar.'%');
+                }
+                if($request->can_cpf){
+                    $query->orWhere('can_cpf','like', '%'.$request->buscar.'%');
+                }
+                if($request->can_matricula){
+                    $query->orWhere('can_matricula','like', '%'.$request->buscar.'%');
+                }
+                
+            })->get();
+            
+            ddd($dados);
+            */
+            
             $dados = Candidato::where('can_exmilitar','Sim')
             ->where('can_nome','like','%'.$request->buscar.'%')
             ->orWhere('can_cpf','like', '%'.$request->buscar.'%')
             ->orWhere('can_matricula','like', '%'.$request->buscar.'%')
             ->get();
+            
             
             if(!empty($dados)){
                 
@@ -36,19 +59,22 @@ class exmilitarController extends Controller
             }else{
                 return view('exmilitar');
             }
+
+
         }
 
         
-
     }
 
     public function abaFiltro($id){
 
         $id = base64_decode($id);
 
+    
         $dados = Candidato::where('can_id', '=', $id)
         ->where('can_exmilitar', '=', 'Sim')
         ->get();
+          
 
         return view('buscar_filtro_exmilitar',compact('dados'));
         
