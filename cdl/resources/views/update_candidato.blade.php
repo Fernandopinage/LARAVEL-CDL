@@ -208,7 +208,25 @@ $candidato;
                     <input type="text" class="form-control form-control-sm" name="matricula" id="matricula"
                         placeholder="" value="{{$candidato->can_matricula}}">
                 </div>
+
+                <div class="col-md-4">
+                    <label class="form-check-label" for="flexCheckIndeterminate">E-mail </label>
+                    <input type="text" class="form-control form-control-sm" placeholder="" name="email"
+                        value="{{$candidato->can_email}}">
+                </div>
                 <div class="col-md-2">
+                    <label class="form-check-label" for="flexCheckIndeterminate">Telefone</label>
+                    <input type="text" class="form-control form-control-sm" placeholder="(xx) xxxxx-xxxx"
+                        onkeypress="mask(this, mphone);" onblur="mask(this, mphone);" name="telefone"
+                        value="{{$candidato->can_telefone}}">
+                </div>
+                <div class="col-md-2">
+                    <label class="form-check-label" for="flexCheckIndeterminate">Celular </label>
+                    <input type="text" class="form-control form-control-sm" placeholder="(xx) xxxxx-xxxx"
+                        onkeypress="mask(this, mphone);" onblur="mask(this, mphone);" name="celular"
+                        value="{{$candidato->can_celular}}">
+                </div>
+                <div class="col-md-1">
                     <label class="form-check-label" for="flexCheckIndeterminate">PCD</label>
                     <div class="form-check ">
                         <input class="form-check-input" type="radio" name="pcd" id="pcd1" value="sim"
@@ -225,7 +243,6 @@ $candidato;
                         </label>
                     </div>
                 </div>
-
 
             </div>
         </div>

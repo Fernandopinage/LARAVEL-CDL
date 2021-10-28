@@ -155,43 +155,6 @@
                     <input type="text" class="form-control form-control-sm" name="matricula" id="matricula"
                         placeholder="">
                 </div>
-                <div class="col-md-2">
-                    <label class="form-check-label" for="flexCheckIndeterminate">PCD</label>
-                    <div class="form-check ">
-                        <input class="form-check-input" type="radio" name="pcd" id="pcd1" value="sim">
-                        <label class="form-check-label" for="pcd1">
-                            Sim
-                        </label>
-                    </div>
-                    <div class="form-check ">
-                        <input class="form-check-input" type="radio" name="pcd" id="pcd2" value="não" checked>
-                        <label class="form-check-label" for="pcd2">
-                            Não
-                        </label>
-                    </div>
-                </div>
-
-
-            </div>
-        </div>
-    </div>
-
-
-    <div class="form-signin">
-        <div class="text-end">
-            <label class="switch">
-                <input type="checkbox" id="informacoesContato" checked>
-                <span class="slider round"></span>
-            </label>
-        </div>
-
-        <div class="text">
-            <h2 class="form-signin-heading">Informações de Contato</h2>
-            <hr>
-        </div>
-        <div class="informacoesContato">
-
-            <div class="row g-3">
 
                 <div class="col-md-4">
                     <label class="form-check-label" for="flexCheckIndeterminate">E-mail <span><strong>*</strong></span>
@@ -221,12 +184,25 @@
                         onkeypress="mask(this, mphone);" onblur="mask(this, mphone);" value="{{old('telefone')}}"
                         name="celular" required>
                 </div>
+                <div class="col-md-1">
+                    <label class="form-check-label" for="flexCheckIndeterminate">PCD</label>
+                    <div class="form-check ">
+                        <input class="form-check-input" type="radio" name="pcd" id="pcd1" value="sim">
+                        <label class="form-check-label" for="pcd1">
+                            Sim
+                        </label>
+                    </div>
+                    <div class="form-check ">
+                        <input class="form-check-input" type="radio" name="pcd" id="pcd2" value="não" checked>
+                        <label class="form-check-label" for="pcd2">
+                            Não
+                        </label>
+                    </div>
+                </div>
 
             </div>
         </div>
-
     </div>
-
 
     <div class="form-signin">
         <div class="text-end">
