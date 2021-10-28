@@ -8,6 +8,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
   <link href="/css/busca_exmilitar.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <link rel="icon" href="/img/title.png">
   <title>Empregabilidade | CDL Manaus</title>
 </head>
@@ -34,7 +35,8 @@
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li><a class="dropdown-item" href="/editar/candidato/{{session('can_id')}}">Editar Candidato</a></li>
-              <li><a class="dropdown-item" href="/redefinir/password/candidato/{{session('can_id')}}">Redefinir Senha</a></li>
+              <li><a class="dropdown-item" href="/redefinir/password/candidato/{{session('can_id')}}">Redefinir
+                  Senha</a></li>
               <li>
                 <hr class="dropdown-divider">
               </li>
@@ -81,45 +83,45 @@
 
   </div>
 
-  <footer style="margin-top: 150px;" >
+  <footer style="margin-top: 150px;">
     <nav class="navbar bottom navbar-expand-sm navbar bg" style="background-color: #d0d0d056; margin-bottom:0px">
-    
-      <div class="container" id="container" style="color:#black; font-size:14px;">
-          <div class="row">
-              <div class="col-md-4 p-4">
-                  <h6>> CDL MANAUS - DJALMA BATISTA</h6>
-                  <span style="color: black">Cond. Amazonas Flat Service, 3000<br>
-                      Loja A, Torre Sul<br>
-                      Av. Djalma Batista | Chapada | 69.050-010<br>
-                      Segunda a Quinta-feira das 08h às 18h<br>
-                      Sexta-feira das 08h às 17h</span>
-              </div>
-              <div class="col-md-3 p-4">
-                  <h6>> CDL MANAUS - CENTRO</h6>
-                  <span style="color: black">Rua Rui Barbosa, 156<br>
-                      Centro  |  69.010-220<br>
-                      Segunda a Quinta-feira das 08h às 18h<br>
-                      Sexta-feira das 08h às 17h</span>
-              </div>
-              <div class="col-md-3 p-4">
-                  <h6>>
-                      UTV - RAIZ</h6>
-                  <span style="color: black">Rua Delfim de Souza, 125<br>
-                      Raiz  |  69.068-020<br>
-                      Segunda a Quinta-feira das 08h às 18h<br>
-                      Sexta-feira das 08h às 17h</span>
-              </div>
-              <div class="col-md-2 p-4">
-                  <h6>> ATENDIMENTO</h6>
-                  <span style="color: black">Dúvidas<br>
-                      + 55 92 3627-2867<br>
-                      + 55 92 3627-2868<br>
-                      suporte@cdlmanaus.org.br</span>
-              </div>
-          </div>
-    
 
+      <div class="container" id="container" style="color:#black; font-size:14px;">
+        <div class="row">
+          <div class="col-md-4 p-4">
+            <h6>> CDL MANAUS - DJALMA BATISTA</h6>
+            <span style="color: black">Cond. Amazonas Flat Service, 3000<br>
+              Loja A, Torre Sul<br>
+              Av. Djalma Batista | Chapada | 69.050-010<br>
+              Segunda a Quinta-feira das 08h às 18h<br>
+              Sexta-feira das 08h às 17h</span>
+          </div>
+          <div class="col-md-3 p-4">
+            <h6>> CDL MANAUS - CENTRO</h6>
+            <span style="color: black">Rua Rui Barbosa, 156<br>
+              Centro | 69.010-220<br>
+              Segunda a Quinta-feira das 08h às 18h<br>
+              Sexta-feira das 08h às 17h</span>
+          </div>
+          <div class="col-md-3 p-4">
+            <h6>>
+              UTV - RAIZ</h6>
+            <span style="color: black">Rua Delfim de Souza, 125<br>
+              Raiz | 69.068-020<br>
+              Segunda a Quinta-feira das 08h às 18h<br>
+              Sexta-feira das 08h às 17h</span>
+          </div>
+          <div class="col-md-2 p-4">
+            <h6>> ATENDIMENTO</h6>
+            <span style="color: black">Dúvidas<br>
+              + 55 92 3627-2867<br>
+              + 55 92 3627-2868<br>
+              suporte@cdlmanaus.org.br</span>
+          </div>
         </div>
+
+
+      </div>
       </div>
     </nav>
     <!--
@@ -138,7 +140,7 @@
         </div>
     </nav>
   -->
-</footer>
+  </footer>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
   integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
@@ -147,93 +149,132 @@
   integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous">
 </script>
 
-
 <script>
 
+
+  $(document).ready(function(){
+    $('#selecionarFoto').hide();
+    $('#curso_div').hide();
+      $('#termino_div').hide();
+      $('#semestre_div').hide();
+      $('#periodo_div').hide();
+      $('#institucao_div').hide();
+  });
+
+
+
   $('#formacao').change(function(){
-    alert('ok')
-    if(document.getElementById('formacao').value === 'Ensino fundamental completo' || document.getElementById('formacao').value === 'Ensino fundamental incompleto'){
+
+    
+    if(document.getElementById('formacao').value === 'Ensino_Fundamental_completo' || document.getElementById('formacao').value === 'Ensino_Fundamental_incompleto'){
      
       $('#curso_div').hide();
       $('#termino_div').hide();
       $('#semestre_div').hide();
       $('#periodo_div').hide();
-  
+      $('#institucao_div').hide();
     }
   
-    if(document.getElementById('formacao').value === 'Ensino Medio completo'){
+    if(document.getElementById('formacao').value === 'Ensino_Médio_completo'){
+      
       $('#curso_div').hide();
+      $('#termino_div').show();
+      $label = document.getElementById('termino_div_label');
+      $label.innerHTML = "Ano de conclusão"
       $('#semestre_div').hide();
       $('#periodo_div').hide();
-      $('#termino_div').hide();
+      $('#institucao_div').hide();
     }
   
-    if(document.getElementById('formacao').value  === 'Ensino Medio cursando'){
+    if(document.getElementById('formacao').value  === 'Ensino_Médio_cursando'){
+      $('#curso_div').hide();
+      $('#termino_div').show();
+      $label = document.getElementById('termino_div_label');
+      $label.innerHTML = "Ano em curso"
+
+      $('#semestre_div').hide();
+      $('#periodo_div').hide();
+      $('#institucao_div').hide();
+    }
+  
+    if(document.getElementById('formacao').value  === 'Ensino_Técnico_completo'){
+  
       $('#curso_div').show();
       $('#termino_div').show();
+      $label = document.getElementById('termino_div_label');
+      $label.innerHTML = "Ano de conclusão"
       $('#semestre_div').hide();
       $('#periodo_div').hide();
-      document.getElementById('label_Anotermino').innerHTML = 'Ano  em Curso';
+      $('#institucao_div').show();
+  
     }
   
-    if(document.getElementById('formacao').value  === 'Ensino Técnico completo'){
+    if(document.getElementById('formacao').value  === 'Ensino_Técnico_cursando'){
+  
   
       $('#curso_div').show();
       $('#termino_div').hide();
-      $('#semestre_div').hide();
+      $('#semestre_div').show();
       $('#periodo_div').hide();
+      $('#institucao_div').show();
   
     }
   
-    if(document.getElementById('formacao').value  === 'Ensino Tecnico cursando'){
+    if(document.getElementById('formacao').value  === 'Superior_Completo'){
   
     $('#curso_div').show();
-    $('#termino_div').hide();
-    $('#semestre_div').show();
-    $('#periodo_div').hide();
-  
-    }
-  
-    if(document.getElementById('formacao').value  === 'Superior Completo'){
-  
-    $('#curso_div').show();
-    $('#termino_div').hide();
+    $('#termino_div').show();
+    $label = document.getElementById('termino_div_label');
+    $label.innerHTML = "Ano de conclusão"
     $('#semestre_div').hide();
     $('#periodo_div').hide();
+    $('#institucao_div').show();
+    
   
     }
   
   
-    if(document.getElementById('formacao').value  === 'Superior Cursando'){
+    if(document.getElementById('formacao').value  === 'Superior_Cursando'){
   
     $('#curso_div').show();
     $('#termino_div').hide();
     $('#semestre_div').hide();
     $('#periodo_div').show();
+    $('#institucao_div').show();
+   
   
     }
   
-    if(document.getElementById('formacao').value  === 'Pos-Graduacao Completo'){
+    if(document.getElementById('formacao').value  === 'Pós-Graduação_Completo'){
   
     $('#curso_div').show();
-    $('#termino_div').hide();
+    $('#termino_div').show();
     $('#semestre_div').hide();
     $('#periodo_div').hide();
+    $label = document.getElementById('termino_div_label');
+    $label.innerHTML = "Ano de conclusão"
+    $('#institucao_div').show();
   
     }
   
-    if(document.getElementById('formacao').value  === 'Pos-Graduacao Cursando'){
+    if(document.getElementById('formacao').value  === 'Pós-Graduação_Cursando'){
   
       $('#curso_div').show();
       $('#termino_div').hide();
       $('#semestre_div').hide();
       $('#periodo_div').show();
+      $('#institucao_div').show();
   
     }
   
   });
-  
-  </script>
-  
+</script>
+
+<!--<script src="/js/checkbox.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+  integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+  integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> <!-- jquery CDN  -->
 
 </html>
