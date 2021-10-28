@@ -464,7 +464,7 @@
                         <br>
                         <span><b style="color: #22427c; margin-right:0px">Curso UTV:</b></span>
                     </div>
-                    <input type="submit" class="btn btn-primary" value="Seu candidato ideial" style="color:#fff;">
+                    <input type="submit" class="btn btn-primary" value="Seu candidato ideal" style="color:#fff;">
                 </div>
             </div>
         </div>
