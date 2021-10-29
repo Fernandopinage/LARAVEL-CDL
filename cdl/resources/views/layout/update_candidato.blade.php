@@ -35,7 +35,8 @@
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li><a class="dropdown-item" href="/editar/candidato/{{session('can_id')}}">Editar Candidato</a></li>
-              <li><a class="dropdown-item" href="/redefinir/password/candidato/{{session('can_id')}}">Redefinir Senha</a></li>
+              <li><a class="dropdown-item" href="/redefinir/password/candidato/{{session('can_id')}}">Redefinir
+                  Senha</a></li>
               <li>
                 <hr class="dropdown-divider">
               </li>
@@ -83,49 +84,49 @@
   </div>
 
 
-  <footer style="margin-top: 150px;" >
+  <footer style="margin-top: 150px;">
     <nav class="navbar bottom navbar-expand-sm navbar bg" style="background-color: #d0d0d056; margin-bottom:0px">
-    
-      <div class="container" id="container" style="color:#black; font-size:14px;">
-          <div class="row">
-              <div class="col-md-4 p-4">
-                  <h6>> CDL MANAUS - DJALMA BATISTA</h6>
-                  <span style="color: black">Cond. Amazonas Flat Service, 3000<br>
-                      Loja A, Torre Sul<br>
-                      Av. Djalma Batista | Chapada | 69.050-010<br>
-                      Segunda a Quinta-feira das 08h às 18h<br>
-                      Sexta-feira das 08h às 17h</span>
-              </div>
-              <div class="col-md-3 p-4">
-                  <h6>> CDL MANAUS - CENTRO</h6>
-                  <span style="color: black">Rua Rui Barbosa, 156<br>
-                      Centro  |  69.010-220<br>
-                      Segunda a Quinta-feira das 08h às 18h<br>
-                      Sexta-feira das 08h às 17h</span>
-              </div>
-              <div class="col-md-3 p-4">
-                  <h6>>
-                      UTV - RAIZ</h6>
-                  <span style="color: black">Rua Delfim de Souza, 125<br>
-                      Raiz  |  69.068-020<br>
-                      Segunda a Quinta-feira das 08h às 18h<br>
-                      Sexta-feira das 08h às 17h</span>
-              </div>
-              <div class="col-md-2 p-4">
-                  <h6>> ATENDIMENTO</h6>
-                  <span style="color: black">Dúvidas<br>
-                      + 55 92 3627-2867<br>
-                      + 55 92 3627-2868<br>
-                      suporte@cdlmanaus.org.br</span>
-              </div>
-          </div>
-    
 
+      <div class="container" id="container" style="color:#black; font-size:14px;">
+        <div class="row">
+          <div class="col-md-4 p-4">
+            <h6>> CDL MANAUS - DJALMA BATISTA</h6>
+            <span style="color: black">Cond. Amazonas Flat Service, 3000<br>
+              Loja A, Torre Sul<br>
+              Av. Djalma Batista | Chapada | 69.050-010<br>
+              Segunda a Quinta-feira das 08h às 18h<br>
+              Sexta-feira das 08h às 17h</span>
+          </div>
+          <div class="col-md-3 p-4">
+            <h6>> CDL MANAUS - CENTRO</h6>
+            <span style="color: black">Rua Rui Barbosa, 156<br>
+              Centro | 69.010-220<br>
+              Segunda a Quinta-feira das 08h às 18h<br>
+              Sexta-feira das 08h às 17h</span>
+          </div>
+          <div class="col-md-3 p-4">
+            <h6>>
+              UTV - RAIZ</h6>
+            <span style="color: black">Rua Delfim de Souza, 125<br>
+              Raiz | 69.068-020<br>
+              Segunda a Quinta-feira das 08h às 18h<br>
+              Sexta-feira das 08h às 17h</span>
+          </div>
+          <div class="col-md-2 p-4">
+            <h6>> ATENDIMENTO</h6>
+            <span style="color: black">Dúvidas<br>
+              + 55 92 3627-2867<br>
+              + 55 92 3627-2868<br>
+              suporte@cdlmanaus.org.br</span>
+          </div>
         </div>
+
+
+      </div>
       </div>
     </nav>
-    
-</footer>
+
+  </footer>
 </body>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.0/jquery.min.js"></script>
 
@@ -248,117 +249,21 @@ $('#idioma_check').change(function(){
 </script>
 
 <script>
-  $(document).ready(function(){
-
-   
-if(document.getElementById('formacao').value === 'Ensino_Fundamental_completo' || document.getElementById('formacao').value === 'Ensino_Fundamental_incompleto'){
- 
-  $('#curso_div').hide();
-  $('#termino_div').show();
-  $('#semestre_div').hide();
-  $('#periodo_div').hide();
-  $('#institucao_div').hide();
-}
-
-if(document.getElementById('formacao').value === 'Ensino Médio_completo'){
-  $('#curso_div').hide();
-  $('#termino_div').show();
-  $('#semestre_div').hide();
-  $('#periodo_div').hide();
-  $('#institucao_div').hide();
-}
-
-if(document.getElementById('formacao').value  === 'Ensino_Médio_cursando'){
-  $('#curso_div').hide();
-  $('#termino_div').show();
-  $('#semestre_div').hide();
-  $('#periodo_div').hide();
-  $('#institucao_div').hide();
-}
-
-if(document.getElementById('formacao').value  === 'Ensino_Técnico_completo'){
-
-  $('#curso_div').show();
-  $('#termino_div').show();
-  $('#semestre_div').hide();
-  $('#periodo_div').hide();
-  $('#institucao_div').show();
-
-}
-
-if(document.getElementById('formacao').value  === 'Ensino_Técnico_cursando'){
-
-
-  $('#curso_div').show();
-  $('#termino_div').show();
-  $('#semestre_div').hide();
-  $('#periodo_div').hide();
-  $('#institucao_div').show();
-
-}
-
-if(document.getElementById('formacao').value  === 'Superior_Completo'){
-
-$('#curso_div').show();
-$('#termino_div').show();
-$('#semestre_div').hide();
-$('#periodo_div').hide();
-$('#institucao_div').show();
-
-
-}
-
-
-if(document.getElementById('formacao').value  === 'Superior_Cursando'){
-
-$('#curso_div').show();
-$('#termino_div').hide();
-$('#semestre_div').hide();
-$('#periodo_div').show();
-$('#institucao_div').show();
-
-}
-
-if(document.getElementById('formacao').value  === 'Pós-Graduação_Completo'){
-
-$('#curso_div').show();
-$('#termino_div').show();
-$('#semestre_div').hide();
-$('#periodo_div').hide();
-$('#institucao_div').show();
-
-}
-
-if(document.getElementById('formacao').value  === 'Pós-Graduação_Cursando'){
-
-  $('#curso_div').show();
-  $('#termino_div').show();
-  $('#semestre_div').hide();
-  $('#periodo_div').hide();
-  $('#institucao_div').show();
-
-}
-
-});
-
-
-
 
   $('#formacao').change(function(){
 
-   
-    if(document.getElementById('formacao').value === 'Ensino_Fundamental_completo' || document.getElementById('formacao').value === 'Ensino_Fundamental_incompleto'){
+    
+    if(document.getElementById('formacao').value === 'Ensino_Fundamental_Completo' || document.getElementById('formacao').value === 'Ensino_Fundamental_Incompleto'){
      
       $('#curso_div').hide();
       $('#termino_div').hide();
       $('#semestre_div').hide();
       $('#periodo_div').hide();
       $('#institucao_div').hide();
-      
     }
   
-    if(document.getElementById('formacao').value === 'Ensino_Médio_completo'){
-
+    if(document.getElementById('formacao').value === 'Ensino_Médio_Completo'){
+      
       $('#curso_div').hide();
       $('#termino_div').show();
       $label = document.getElementById('termino_div_label');
@@ -366,10 +271,9 @@ if(document.getElementById('formacao').value  === 'Pós-Graduação_Cursando'){
       $('#semestre_div').hide();
       $('#periodo_div').hide();
       $('#institucao_div').hide();
-
     }
   
-    if(document.getElementById('formacao').value  === 'Ensino_Médio_cursando'){
+    if(document.getElementById('formacao').value  === 'Ensino_Médio_Cursando'){
       $('#curso_div').hide();
       $('#termino_div').show();
       $label = document.getElementById('termino_div_label');
@@ -380,7 +284,7 @@ if(document.getElementById('formacao').value  === 'Pós-Graduação_Cursando'){
       $('#institucao_div').hide();
     }
   
-    if(document.getElementById('formacao').value  === 'Ensino_Técnico_completo'){
+    if(document.getElementById('formacao').value  === 'Ensino_Técnico_Completo'){
   
       $('#curso_div').show();
       $('#termino_div').show();
@@ -392,9 +296,9 @@ if(document.getElementById('formacao').value  === 'Pós-Graduação_Cursando'){
   
     }
   
-    if(document.getElementById('formacao').value  === 'Ensino_Técnico_cursando'){
+    if(document.getElementById('formacao').value  === 'Ensino_Técnico_Cursando'){
   
-
+  
       $('#curso_div').show();
       $('#termino_div').hide();
       $('#semestre_div').show();
@@ -405,8 +309,7 @@ if(document.getElementById('formacao').value  === 'Pós-Graduação_Cursando'){
   
     if(document.getElementById('formacao').value  === 'Superior_Completo'){
   
-  
-      $('#curso_div').show();
+    $('#curso_div').show();
     $('#termino_div').show();
     $label = document.getElementById('termino_div_label');
     $label.innerHTML = "Ano de conclusão"
@@ -420,16 +323,17 @@ if(document.getElementById('formacao').value  === 'Pós-Graduação_Cursando'){
   
     if(document.getElementById('formacao').value  === 'Superior_Cursando'){
   
-      $('#curso_div').show();
+    $('#curso_div').show();
     $('#termino_div').hide();
     $('#semestre_div').hide();
     $('#periodo_div').show();
     $('#institucao_div').show();
+   
   
     }
   
     if(document.getElementById('formacao').value  === 'Pós-Graduação_Completo'){
-      
+  
     $('#curso_div').show();
     $('#termino_div').show();
     $('#semestre_div').hide();
@@ -451,14 +355,118 @@ if(document.getElementById('formacao').value  === 'Pós-Graduação_Cursando'){
     }
   
   });
-  
 </script>
-
-
 
 <script>
 
-$('#perfil').click(function(){
+  $(document).ready(function(){
+
+    
+    if(document.getElementById('formacao').value === 'Ensino_Fundamental_Completo' || document.getElementById('formacao').value === 'Ensino_Fundamental_Incompleto'){
+     
+      $('#curso_div').hide();
+      $('#termino_div').hide();
+      $('#semestre_div').hide();
+      $('#periodo_div').hide();
+      $('#institucao_div').hide();
+    }
+  
+    if(document.getElementById('formacao').value === 'Ensino_Médio_Completo'){
+      
+      $('#curso_div').hide();
+      $('#termino_div').show();
+      $label = document.getElementById('termino_div_label');
+      $label.innerHTML = "Ano de conclusão"
+      $('#semestre_div').hide();
+      $('#periodo_div').hide();
+      $('#institucao_div').hide();
+    }
+  
+    if(document.getElementById('formacao').value  === 'Ensino_Médio_Cursando'){
+      $('#curso_div').hide();
+      $('#termino_div').show();
+      $label = document.getElementById('termino_div_label');
+      $label.innerHTML = "Ano em curso"
+
+      $('#semestre_div').hide();
+      $('#periodo_div').hide();
+      $('#institucao_div').hide();
+    }
+  
+    if(document.getElementById('formacao').value  === 'Ensino_Técnico_Completo'){
+  
+      $('#curso_div').show();
+      $('#termino_div').show();
+      $label = document.getElementById('termino_div_label');
+      $label.innerHTML = "Ano de conclusão"
+      $('#semestre_div').hide();
+      $('#periodo_div').hide();
+      $('#institucao_div').show();
+  
+    }
+  
+    if(document.getElementById('formacao').value  === 'Ensino_Técnico_Cursando'){
+  
+  
+      $('#curso_div').show();
+      $('#termino_div').hide();
+      $('#semestre_div').show();
+      $('#periodo_div').hide();
+      $('#institucao_div').show();
+  
+    }
+  
+    if(document.getElementById('formacao').value  === 'Superior_Completo'){
+  
+    $('#curso_div').show();
+    $('#termino_div').show();
+    $label = document.getElementById('termino_div_label');
+    $label.innerHTML = "Ano de conclusão"
+    $('#semestre_div').hide();
+    $('#periodo_div').hide();
+    $('#institucao_div').show();
+    
+  
+    }
+  
+  
+    if(document.getElementById('formacao').value  === 'Superior_Cursando'){
+  
+    $('#curso_div').show();
+    $('#termino_div').hide();
+    $('#semestre_div').hide();
+    $('#periodo_div').show();
+    $('#institucao_div').show();
+   
+  
+    }
+  
+    if(document.getElementById('formacao').value  === 'Pós-Graduação_Completo'){
+  
+    $('#curso_div').show();
+    $('#termino_div').show();
+    $('#semestre_div').hide();
+    $('#periodo_div').hide();
+    $label = document.getElementById('termino_div_label');
+    $label.innerHTML = "Ano de conclusão"
+    $('#institucao_div').show();
+  
+    }
+  
+    if(document.getElementById('formacao').value  === 'Pós-Graduação_Cursando'){
+  
+      $('#curso_div').show();
+      $('#termino_div').hide();
+      $('#semestre_div').hide();
+      $('#periodo_div').show();
+      $('#institucao_div').show();
+  
+    }
+  
+  });
+</script>
+<script>
+  $('#perfil').click(function(){
  $('#formFile').trigger('click'); 
 });
 

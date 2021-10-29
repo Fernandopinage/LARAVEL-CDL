@@ -332,18 +332,18 @@ $candidato;
                     <select class="form-select form-select-sm" name="formacao" id="formacao"
                         aria-label="Default select example" required>
                         <option value="null"></option>
-                        <option {{$candidato->can_formacao == 'Ensino_Fundamental_completo' ? 'selected' :''}}
-                            value="Ensino_Fundamental_completo">Ensino Fundamental completo</option>
-                        <option {{$candidato->can_formacao == 'Ensino Fundamental_incompleto' ? 'selected'
-                            :''}}value="Ensino Fundamental_incompleto">Ensino Fundamental incompleto</option>
-                        <option {{$candidato->can_formacao == 'Ensino_Médio_completo' ? 'selected' :''}}
-                            value="Ensino_Médio_completo">Ensino Médio completo</option>
-                        <option {{$candidato->can_formacao == 'Ensino_Médio_cursando' ? 'selected' :''}}
-                            value="Ensino_Médio_cursando">Ensino Médio cursando</option>
-                        <option {{$candidato->can_formacao == 'Ensino_Técnico_cursando' ? 'selected' :''}}
-                            value="Ensino_Técnico_cursando">Ensino Técnico cursando</option>
-                        <option {{$candidato->can_formacao == 'Ensino_Técnico_completo' ? 'selected' :''}}
-                            value="Ensino_Técnico_completo">Ensino Técnico completo</option>
+                        <option {{$candidato->can_formacao == 'Ensino_Fundamental_Completo' ? 'selected' :''}}
+                            value="Ensino_Fundamental_Completo">Ensino Fundamental completo</option>
+                        <option {{$candidato->can_formacao == 'Ensino Fundamental_Incompleto' ? 'selected'
+                            :''}}value="Ensino Fundamental_Incompleto">Ensino Fundamental incompleto</option>
+                        <option {{$candidato->can_formacao == 'Ensino_Médio_Completo' ? 'selected' :''}}
+                            value="Ensino_Médio_Completo">Ensino Médio completo</option>
+                        <option {{$candidato->can_formacao == 'Ensino_Médio_Cursando' ? 'selected' :''}}
+                            value="Ensino_Médio_Cursando">Ensino Médio cursando</option>
+                        <option {{$candidato->can_formacao == 'Ensino_Técnico_Cursando' ? 'selected' :''}}
+                            value="Ensino_Técnico_Cursando">Ensino Técnico cursando</option>
+                        <option {{$candidato->can_formacao == 'Ensino_Técnico_Completo' ? 'selected' :''}}
+                            value="Ensino_Técnico_Completo">Ensino Técnico completo</option>
                         <option {{$candidato->can_formacao == 'Superior_Cursando' ? 'selected' :''}}
                             value="Superior_Cursando">Superior Cursando</option>
                         <option {{$candidato->can_formacao == 'Superior_Completo' ? 'selected' :''}}

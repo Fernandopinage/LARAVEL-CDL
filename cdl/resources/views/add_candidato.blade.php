@@ -291,12 +291,12 @@
                     <select class="form-select form-select-sm" name="formacao" id="formacao"
                         aria-label="Default select example" required>
                         <option value="null" selected></option>
-                        <option value="Ensino_Fundamental_completo">Ensino Fundamental completo</option>
-                        <option value="Ensino_Fundamental_incompleto">Ensino Fundamental incompleto</option>
-                        <option value="Ensino_Médio_completo">Ensino Médio completo</option>
-                        <option value="Ensino_Médio_cursando">Ensino Médio cursando</option>
-                        <option value="Ensino_Técnico_cursando">Ensino Técnico cursando</option>
-                        <option value="Ensino_Técnico_completo">Ensino Técnico completo</option>
+                        <option value="Ensino_Fundamental_Completo">Ensino Fundamental completo</option>
+                        <option value="Ensino_Fundamental_Incompleto">Ensino Fundamental incompleto</option>
+                        <option value="Ensino_Médio_Completo">Ensino Médio completo</option>
+                        <option value="Ensino_Médio_Cursando">Ensino Médio cursando</option>
+                        <option value="Ensino_Técnico_Cursando">Ensino Técnico cursando</option>
+                        <option value="Ensino_Técnico_Completo">Ensino Técnico completo</option>
                         <option value="Superior_Cursando">Superior Cursando</option>
                         <option value="Superior_Completo">Superior Completo</option>
                         <option value="Pós-Graduação_Cursando">Pós-Graduação Cursando</option>

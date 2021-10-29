@@ -214,7 +214,7 @@
 
       $('#formacao').change(function(){
 
-        if(document.getElementById('formacao').value == 'fundamental completo'){
+        if(document.getElementById('formacao').value == 'Ensino_Fundamental_Completo'){
 
             $('#letivo_medio').hide();
             $('#termino_medeio').hide();
@@ -230,7 +230,7 @@
 
 
 
-        }else if(document.getElementById('formacao').value == 'fundamental incompleto' ){
+        }else if(document.getElementById('formacao').value == 'Ensino_Fundamental_Incompleto' ){
 
               $('#letivo_medio').hide();
               $('#termino_medeio').hide();
@@ -242,7 +242,7 @@
               $('#modulo_pos').hide();
 
 
-        }else if(document.getElementById('formacao').value == 'medio completo' ){
+        }else if(document.getElementById('formacao').value == 'Ensino_Médio_Completo' ){
 
               $('#letivo_medio').hide();
               $('#termino_medeio').hide();
@@ -254,7 +254,7 @@
               $('#modulo_pos').hide();
 
 
-        }else if(document.getElementById('formacao').value == 'medio cursando'){
+        }else if(document.getElementById('formacao').value == 'Ensino_Médio_Cursando'){
 
               $('#letivo_medio').hide();
               $('#termino_medeio').show();
@@ -268,7 +268,7 @@
               $label.innerHTML = "Ano de conclusão"
 
 
-        }else if(document.getElementById('formacao').value == 'tecnico cursando'){
+        }else if(document.getElementById('formacao').value == 'Ensino_Técnico_Cursando'){
 
               $('#letivo_medio').hide();
               $('#termino_medeio').hide();
@@ -280,7 +280,7 @@
               $('#modulo_pos').hide();
 
 
-        }else if(document.getElementById('formacao').value == 'tecnico completo'){
+        }else if(document.getElementById('formacao').value == 'Ensino_Técnico_Completo'){
 
               $('#letivo_medio').hide();
               $('#termino_medeio').hide();
@@ -292,7 +292,7 @@
               $('#modulo_pos').hide();
 
 
-        }else if(document.getElementById('formacao').value == 'superior cursando'){
+        }else if(document.getElementById('formacao').value == 'Superior_Cursando'){
 
               $('#letivo_medio').hide();
               $('#termino_medeio').hide();
@@ -304,7 +304,7 @@
               $('#modulo_pos').hide();
 
 
-        }else if(document.getElementById('formacao').value == 'superior completo'){
+        }else if(document.getElementById('formacao').value == 'Superior_Completo'){
 
               $('#letivo_medio').hide();
               $('#termino_medeio').hide();
@@ -316,7 +316,7 @@
               $('#modulo_pos').hide();
 
 
-        }else if(document.getElementById('formacao').value == 'pos cursando'){
+        }else if(document.getElementById('formacao').value == 'Pós-Graduação_Cursando'){
 
               $('#letivo_medio').hide();
               $('#termino_medeio').hide();
@@ -328,7 +328,7 @@
               $('#modulo_pos').hide();
 
 
-        }else if(document.getElementById('formacao').value == 'pos completo'){
+        }else if(document.getElementById('formacao').value == 'Pós-Graduação_Completo'){
               $('#letivo_medio').hide();
               $('#termino_medeio').hide();
               $('#curso_tecnico').hide();

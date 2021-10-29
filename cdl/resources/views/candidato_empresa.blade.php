@@ -48,17 +48,17 @@
                     <label class="form-check-label" for="flexCheckIndeterminate">Formação</label>
                     <select class="form-select form-select-sm" name="formacao" id="formacao"
                         aria-label="Default select example">
-                        <option selected></option>
-                        <option value="fundamental incompleto">Ensino fundamental incompleto</option>
-                        <option value="fundamental completo">Ensino fundamental completo</option>
-                        <option value="medio cursando">Ensino Médio cursando</option>
-                        <option value="medio completo">Ensino Médio completo</option>
-                        <option value="tecnico cursando">Ensino Técnico cursando</option>
-                        <option value="tecnico completo">Ensino Técnico completo</option>
-                        <option value="superior cursando">Superior Cursando</option>
-                        <option value="superior completo">Superior Completo</option>
-                        <option value="pos cursando">Pós-Graduação Cursando</option>
-                        <option value="pos completo">Pós-Graduação Completo</option>
+                        <option value="null" selected></option>
+                        <option value="Ensino_Fundamental_Completo">Ensino Fundamental completo</option>
+                        <option value="Ensino_Fundamental_Incompleto">Ensino Fundamental incompleto</option>
+                        <option value="Ensino_Médio_Completo">Ensino Médio completo</option>
+                        <option value="Ensino_Médio_Cursando">Ensino Médio cursando</option>
+                        <option value="Ensino_Técnico_Cursando">Ensino Técnico cursando</option>
+                        <option value="Ensino_Técnico_Completo">Ensino Técnico completo</option>
+                        <option value="Superior_Cursando">Superior Cursando</option>
+                        <option value="Superior_Completo">Superior Completo</option>
+                        <option value="Pós-Graduação_Cursando">Pós-Graduação Cursando</option>
+                        <option value="Pós-Graduação_Completo">Pós-Graduação Completo</option>
                     </select>
                 </div>
                 <!--*************************************** ensino medio ***********************************************-->
