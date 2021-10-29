@@ -269,7 +269,6 @@
 
 </script>
 
-
 <script>
 
     $('#area_profissional_sim').click(function(){

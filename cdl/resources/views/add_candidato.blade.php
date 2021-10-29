@@ -312,7 +312,8 @@
                     <input type="text" class="form-control form-control-sm" name="curso" placeholder="">
                 </div>
                 <div class="col-md-2" id="termino_div">
-                    <label class="form-check-label" for="flexCheckIndeterminate" id="termino_div_label">Ano em Curso</label>
+                    <label class="form-check-label" for="flexCheckIndeterminate" id="termino_div_label">Ano em
+                        Curso</label>
                     <input type="month" class="form-control form-select-sm" name="termino" placeholder="">
                 </div>
                 <div class="col-md-2" id="semestre_div">
@@ -360,8 +361,10 @@
                     <input type="text" class="form-control form-control-sm" name="curso_extra[]" placeholder="">
                 </div>
                 <div class="col-md-2">
-                    <label class="form-check-label" for="flexCheckIndeterminate" id="utv_carga_label">Carga horária</label>
-                    <input type="text" class="form-control form-control-sm" id="curso_carga[]" name="curso_carga[]" placeholder="">
+                    <label class="form-check-label" for="flexCheckIndeterminate" id="utv_carga_label">Carga
+                        horária</label>
+                    <input type="text" class="form-control form-control-sm" id="curso_carga[]" name="curso_carga[]"
+                        placeholder="">
                 </div>
                 <div class="col-md-3">
                     <label class="form-check-label" for="flexCheckIndeterminate">Data de Emissão de Certificado</label>
@@ -403,19 +406,26 @@
 
                 <div class="col-md-4">
                     <label class="form-check-label" for="flexCheckIndeterminate">Nome do curso</label>
-                    <input type="text" class="form-control form-control-sm" id="utv_titlulo" name="utv_titlulo[]" placeholder="" onblur="utvBlur()">
+                    <input type="text" class="form-control form-control-sm" id="utv_titlulo" name="utv_titlulo[]"
+                        placeholder="" onblur="utvBlur()">
                 </div>
                 <div class="col-md-2">
-                    <label class="form-check-label" for="flexCheckIndeterminate" id="utv_carga_label">Carga horária</label>
-                    <input type="text" class="form-control form-control-sm" id="utv_carga" name="utv_carga[]" placeholder="">
+                    <label class="form-check-label" for="flexCheckIndeterminate" id="utv_carga_label">Carga
+                        horária</label>
+                    <input type="text" class="form-control form-control-sm" id="utv_carga" name="utv_carga[]"
+                        placeholder="">
                 </div>
                 <div class="col-md-3">
-                    <label class="form-check-label" for="flexCheckIndeterminate" id="utv_data_label">Data de Emissão de Certificado</label>
-                    <input type="month" class="form-control form-control-sm" id="utv_data" name="utv_data[]" placeholder="">
+                    <label class="form-check-label" for="flexCheckIndeterminate" id="utv_data_label">Data de Emissão de
+                        Certificado</label>
+                    <input type="month" class="form-control form-control-sm" id="utv_data" name="utv_data[]"
+                        placeholder="">
                 </div>
                 <div class="col-md-3" id="tempoexperiencia_div">
-                    <label class="form-check-label" for="flexCheckIndeterminate" id="utv_area_atuacao_label">Área de Atuação</label>
-                    <input type="text" class="form-control form-control-sm" id="utv_area_atuacao" name="utv_area_atuacao[]" placeholder="">
+                    <label class="form-check-label" for="flexCheckIndeterminate" id="utv_area_atuacao_label">Área de
+                        Atuação</label>
+                    <input type="text" class="form-control form-control-sm" id="utv_area_atuacao"
+                        name="utv_area_atuacao[]" placeholder="">
                 </div>
 
 
@@ -557,7 +567,7 @@
                     </div>
                     <div class="form-check-inline">
                         <input class="form-check-input" type="radio" name="area_profissional" value="não"
-                            id="area_profissional_nao"  checked>
+                            id="area_profissional_nao" checked>
                         <label class="form-check-label" for="flexRadioDefault2">
                             Não
                         </label>
@@ -578,7 +588,7 @@
 
                     <div class="col-md-2" style="margin-top: 40px;" id="03">
                         <label class="form-check-label" for="inlineCheckbox1">Empresa atual?</label>
-                        <input class="form-check-input" type="checkbox" name="atual_empresa[]">
+                        <input class="form-check-input" type="checkbox" id="atual_empresa0" name="atual_empresa[]">
 
                     </div>
                     <div class="col-md-2" id="04">
@@ -969,7 +979,7 @@
         if(cont04 <4){
 
         var div = document.createElement('div');
-        div.innerHTML = '<div  class="row g-3 shadow p-3 mb-5 bg-body rounded" id="divExperiencia'+cont04+'" style="margin: 10px"> <div class="text-end"> <input type="button" class="btn btn-danger btn-sm" onclick="removeCamposEx('+cont04+')" value="Remover Experiência"></div> <div class="col-md-6" id="01">  <label class="form-check-label" for="flexCheckIndeterminate">Nome da empresa </label> <input type="text" class="form-control form-control-sm" name="nome_empresa[]" placeholder=""> </div><div class="col-md-5" id="02"> <label class="form-check-label" for="flexCheckIndeterminate">Cargo </label> <input type="text" class="form-control form-control-sm" name="cargo_empresa[]" placeholder=""> </div> <div class="col-md-2" style="margin-top: 40px;" id="03"> <label class="form-check-label" for="inlineCheckbox1">Empresa atual?</label><input class="form-check-input" type="checkbox" name="atual_empresa[]"> </div> <div class="col-md-2" id="04"> <label class="form-check-label" for="flexCheckIndeterminate">Data de Admissão </label>  <input type="month" class="form-control form-control-sm" placeholder="" name="data_inicio_empresa[]"> </div> <div class="col-md-2" id="05"><label class="form-check-label" for="flexCheckIndeterminate">Data de termino </label><input type="month" class="form-control form-control-sm" placeholder="" name="data_termino_empresa[]">  </div> <div class="col-md-2" id="06"><label class="form-check-label" for="flexCheckIndeterminate">Salário</label>  <input type="text" class="form-control form-control-sm" placeholder="" name="salario_empresa[]">  </div>  <div class="col-md-3" id="07">   <label class="form-check-label" for="flexCheckIndeterminate">Software utilizados</label>  <input type="text" class="form-control form-control-sm" placeholder="" name="software_empresa[]"> </div></div></div>';
+        div.innerHTML = '<div  class="row g-3 shadow p-3 mb-5 bg-body rounded" id="divExperiencia'+cont04+'" style="margin: 10px"> <div class="text-end"> <input type="button" class="btn btn-danger btn-sm" onclick="removeCamposEx('+cont04+')" value="Remover Experiência"></div> <div class="col-md-6" id="01">  <label class="form-check-label" for="flexCheckIndeterminate">Nome da empresa </label> <input type="text" class="form-control form-control-sm" name="nome_empresa[]" placeholder=""> </div><div class="col-md-5" id="02"> <label class="form-check-label" for="flexCheckIndeterminate">Cargo </label> <input type="text" class="form-control form-control-sm" name="cargo_empresa[]" placeholder=""> </div> <div class="col-md-2" style="margin-top: 40px;" id="03"> <label class="form-check-label" for="inlineCheckbox1">Empresa atual?</label><input class="form-check-input" type="checkbox" onclick="EmpresaAtual('+cont04+')" id="atual_empresa'+cont04+'" name="atual_empresa[]"> </div> <div class="col-md-2" id="04"> <label class="form-check-label" for="flexCheckIndeterminate">Data de Admissão </label>  <input type="month" class="form-control form-control-sm" placeholder="" name="data_inicio_empresa[]"> </div> <div class="col-md-2" id="05"><label class="form-check-label" for="flexCheckIndeterminate">Data de termino </label><input type="month" class="form-control form-control-sm" placeholder="" id="data_termino_empresa'+cont04+'" name="data_termino_empresa[]">  </div> <div class="col-md-2" id="06"><label class="form-check-label" for="flexCheckIndeterminate">Salário</label>  <input type="text" class="form-control form-control-sm" placeholder="" name="salario_empresa[]">  </div>  <div class="col-md-3" id="07">   <label class="form-check-label" for="flexCheckIndeterminate">Software utilizados</label>  <input type="text" class="form-control form-control-sm" placeholder="" name="software_empresa[]"> </div></div></div>';
                  document.getElementById('listaExperiencia').appendChild(div)
         cont04++;
        
@@ -980,6 +990,17 @@
 
          document.getElementById('divExperiencia'+id).remove();   
          cont04--;
+    }
+
+    function EmpresaAtual(id){
+
+        if($("#atual_empresa"+id).prop('checked') == true){
+        $("#data_termino_empresa"+id).prop("disabled", true); 
+        }
+        if($("#atual_empresa"+id).prop('checked') == false){
+            $("#data_termino_empresa"+id).prop("disabled", false); 
+        }
+
     }
 </script>
 
@@ -1006,7 +1027,6 @@
 
 
 <script>
-
     function utvBlur(){
         
         if(document.getElementById('utv_titlulo').value != ''){
