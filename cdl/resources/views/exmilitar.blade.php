@@ -23,6 +23,9 @@
     <div class="container" id="canditados" style="margin-top: 50px; margin-bottom:50px">
         @foreach($dados as $candidato)
 
+        @if($candidato->can_exmilitar === 'Sim')
+
+
         <a href="/militar/filtro/{{base64_encode($candidato->can_id)}}" target="_blank">
             <div class=" d-inline-block" style="padding: 8px;" data-bs-toggle="modal" data-bs-target="#exampleModal">
 
@@ -37,14 +40,16 @@
                                     <span style="color: #157347; margin-right:132px; margin-left:50px; ">
 
                                         @if(!empty($candidato->can_foto))
-                                        <img src="/img/events/{{$candidato->can_foto}}" height="150px" width="150px" class="img-thumbnail" alt="...">
-                                            
+                                        <img src="/img/events/{{$candidato->can_foto}}" height="150px" width="150px"
+                                            class="img-thumbnail" alt="...">
+
                                         @else
-                                        <img src="/img/events/perfil.png" height="150px" width="150px" class="img-thumbnail" alt="...">
-                                            
+                                        <img src="/img/events/perfil.png" height="150px" width="150px"
+                                            class="img-thumbnail" alt="...">
+
                                         @endif
-                                    
-                                    
+
+
                                     </span>
                                     <span style="color: #696969;"></span>
                                     <p class="text-center"> <img src="/img/star.png" height="150px" width="150px"
@@ -80,6 +85,7 @@
                 </div>
             </div>
         </a>
+        @endif
         @endforeach
     </div>
 

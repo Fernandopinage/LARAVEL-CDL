@@ -22,8 +22,6 @@ class exmilitarController extends Controller
 
         if(!empty($request)){
             
-            
-            
             /* 
             $dados = Candidato::where(function($query) use ($request){
                 
@@ -45,8 +43,7 @@ class exmilitarController extends Controller
             ddd($dados);
             */
             
-            $dados = Candidato::where('can_exmilitar','Sim')
-            ->where('can_nome','like','%'.$request->buscar.'%')
+            $dados = Candidato::where('can_nome','like','%'.$request->buscar.'%')
             ->orWhere('can_cpf','like', '%'.$request->buscar.'%')
             ->orWhere('can_matricula','like', '%'.$request->buscar.'%')
             ->get();
