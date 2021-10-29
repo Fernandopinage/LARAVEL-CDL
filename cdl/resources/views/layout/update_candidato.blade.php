@@ -124,22 +124,7 @@
         </div>
       </div>
     </nav>
-    <!--
-    <nav class="navbar fixed-bottom navbar-expand-sm navbar bg" style="background-color: #284D92">
-       <div class="container" style="margin-top: 8px">
-            <div class="col-6 input-group-sm">
-                <p class="text-start" style="color:#fff">Progride® é uma marca registrada ©
-                    <?php echo date('Y')?>
-                </p>
-            </div>
-            <div class="col-6 input-group-sm">
-                <p class="text-end" style="color:#fff">Desenvolvido por <img src="/icons/progride.png" width="25">
-                    Progride </p>
-            </div>
-
-        </div>
-    </nav>
-  -->
+    
 </footer>
 </body>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.0/jquery.min.js"></script>
@@ -149,7 +134,7 @@
 
       document.getElementById('div_outro').style.display = 'none'
 
-
+  
     })
 
     $('#idioma').change(function(){
