@@ -243,14 +243,14 @@
   
     if(document.getElementById('formacao').value  === 'Superior_Completo'){
   
-    $('#curso_div').show();
-    $('#termino_div').show();
-    $label = document.getElementById('termino_div_label');
-    $label.innerHTML = "Ano de conclusão"
-    $('#semestre_div').hide();
-    $('#periodo_div').hide();
-    $('#institucao_div').show();
-    
+        $('#periodo_div').hide();
+        $('#curso_div').show();
+        $('#termino_div').show();
+        $label = document.getElementById('termino_div_label');
+        $label.innerHTML = "Ano de conclusão"
+        $('#semestre_div').hide();
+        $('#institucao_div').show();
+        
   
     }
   
