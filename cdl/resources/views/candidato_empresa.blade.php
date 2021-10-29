@@ -27,6 +27,7 @@
                         <label class="form-check-label" for="flexCheckIndeterminate">Experiência</label>
                         <select class="form-select form-select-sm" name="experiencia" id="experiencia"
                             aria-label="Default select example">
+                            <option selected></option>
                             <option value="Sem Experiência">Sem Experiência</option>
                             <option value="Com Experiência">Com Experiência</option>
                             <option value="Primeiro Emprego">Primeiro Emprego</option>
@@ -36,7 +37,7 @@
                 <div class="col-md-2" style="margin-top: 25px">
                     <div class="form-check form-check">
                         <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                        <label class="form-check-label" for="inlineCheckbox1" name="militar"
+                        <label class="form-check-label" for="inlineCheckbox1" name="militar" value="Sim"
                             id="militar">Ex-Militar</label>
                     </div>
                     <div class="form-check form-check-inline">
@@ -462,7 +463,9 @@
                         <span style="color: #535151"> {{$candidato->can_cpf}}</span>
 
                         <br>
-                        <span><b style="color: #22427c; margin-right:0px">Curso UTV:</b></span>
+                        @if(isset($candidato->can_utv_titlulo))
+                        <span><b style="color: #22427c; margin-right:0px">Curso UTV:</b></span><span>{{$candidato->can_utv_titlulo[0]}}</span>
+                        @endif
                     </div>
                     <input type="submit" class="btn btn-primary" value="Seu candidato ideal" style="color:#fff;">
                 </div>

@@ -373,7 +373,7 @@ class EmpresaController extends Controller
             if($request->area){
                               
                 
-                $query->where('can_curso_area_atuacao','like','%'.$request->area.'%');
+                $query->where('can_utv_area_atuacao','like','%'.$request->area.'%');
             }
             /*
             if($request->experiencia){
@@ -397,10 +397,10 @@ class EmpresaController extends Controller
             if($request->semetre){
                 $query->where('can_semestre','like', '%'.$request->semetre.'%');
             }
-            /*
             if($request->superior){
                 $query->where('curso_instituicao','like', '%'.$request->superior.'%');
             }
+            /*
             if($request->pos){
                 $query->where('can_periodo','like','%'.$request->pos.'%');
             }
