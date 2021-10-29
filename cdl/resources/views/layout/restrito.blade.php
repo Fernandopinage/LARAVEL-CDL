@@ -20,49 +20,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Candidatos
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                     <li><a class="dropdown-item" href="/login/candidato">Entrar</a></li>
-                    <!--  <li><a class="dropdown-item" href="">Buscar Vagas</a></li> <!-- "/busca/candidato"  remover quando for implementar -->
-                      <!--<li><hr class="dropdown-divider"></li>-->
-                      
-                    </ul>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Empresas
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="/login/empresa">Entrar</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Organizações Militares
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="/login/militar">Entrar</a></li>
-                      <!--<li><a class="dropdown-item" href="/busca/militar">Buscar por Ex-Militares</a></li>-->
-                     <!-- <li><hr class="dropdown-divider"></li> -->
-                      
-                    </ul>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                      data-bs-toggle="dropdown" aria-expanded="false">
-                      UTV
-                  </a>
-                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="/login/utv">Entrar</a></li>
-
-                  </ul>
-              </li>
-            </ul>
-
+          
         </div>
         
       </div>

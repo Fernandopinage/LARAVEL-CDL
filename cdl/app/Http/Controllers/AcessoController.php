@@ -69,9 +69,9 @@ class AcessoController extends Controller
             $Restrito->res_perfil = $request->perfil;
             $Restrito->save();
 
-            return redirect('/login/acesso')->with('win','win');
+            return redirect('/restrito/area/acesso')->with('win','win');
         }else{
-            return redirect('/login/acesso')->with('erro','erro');
+            return redirect('/restrito/area/acesso')->with('erro','erro');
         }
         
      
