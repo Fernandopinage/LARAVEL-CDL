@@ -155,7 +155,7 @@
   $('#formacao').change(function(){
 
     
-    if(document.getElementById('formacao').value === 'Ensino_Fundamental_completo' || document.getElementById('formacao').value === 'Ensino_Fundamental_incompleto'){
+    if(document.getElementById('formacao').value === 'Ensino_Fundamental_Completo' || document.getElementById('formacao').value === 'Ensino_Fundamental_Incompleto'){
      
       $('#curso_div').hide();
       $('#termino_div').hide();
@@ -164,7 +164,7 @@
       $('#institucao_div').hide();
     }
   
-    if(document.getElementById('formacao').value === 'Ensino_Médio_completo'){
+    if(document.getElementById('formacao').value === 'Ensino_Médio_Completo'){
       
       $('#curso_div').hide();
       $('#termino_div').show();
@@ -175,7 +175,7 @@
       $('#institucao_div').hide();
     }
   
-    if(document.getElementById('formacao').value  === 'Ensino_Médio_cursando'){
+    if(document.getElementById('formacao').value  === 'Ensino_Médio_Cursando'){
       $('#curso_div').hide();
       $('#termino_div').show();
       $label = document.getElementById('termino_div_label');
@@ -186,7 +186,7 @@
       $('#institucao_div').hide();
     }
   
-    if(document.getElementById('formacao').value  === 'Ensino_Técnico_completo'){
+    if(document.getElementById('formacao').value  === 'Ensino_Técnico_Completo'){
   
       $('#curso_div').show();
       $('#termino_div').show();
@@ -198,7 +198,7 @@
   
     }
   
-    if(document.getElementById('formacao').value  === 'Ensino_Técnico_cursando'){
+    if(document.getElementById('formacao').value  === 'Ensino_Técnico_Cursando'){
   
   
       $('#curso_div').show();

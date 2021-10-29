@@ -111,23 +111,23 @@ $empresa;
                         value="{{$empresa->emp_email}}" name="email" placeholder="" required>
                 </div>
                 <div class="col-md-4">
-                    <label class="formGroupExampleInput" for="flexCheckIndeterminate">Nome do Técnico
+                    <label class="formGroupExampleInput" for="flexCheckIndeterminate">Nome do contato técnico
                         <span><strong>*</strong></span></label>
                     <input type="text" class="form-control form-control-sm" name="tecnico"
                         value="{{$empresa->emp_nome_contato}}" placeholder="" required>
                 </div>
                 <div class="col-md-4">
-                    <label class="form-check-label" for="flexCheckIndeterminate">E-mail do Técnico </label>
+                    <label class="form-check-label" for="flexCheckIndeterminate">E-mail do contato técnico </label>
                     <input type="text" class="form-control form-control-sm" name="emailtecnico"
                         value="{{$empresa->emp_email_contato}}" placeholder="EXEMPLO@EMAIL.COM">
                 </div>
                 <div class="col-md-4">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Função/Cargo </label>
+                    <label class="form-check-label" for="flexCheckIndeterminate">Função/Cargo do contato técnico</label>
                     <input type="text" class="form-control form-control-sm" name="funcao"
                         value="{{$empresa->emp_funcao}}" placeholder="">
                 </div>
                 <div class="col-md-4">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Setor/Departamento </label>
+                    <label class="form-check-label" for="flexCheckIndeterminate">Setor/Departamento do contato técnico </label>
                     <input type="text" class="form-control form-control-sm" name="setor" value="{{$empresa->emp_setor}}"
                         placeholder="">
                 </div>

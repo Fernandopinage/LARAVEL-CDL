@@ -81,25 +81,25 @@
                         placeholder="" value="{{old('confirmar')}}" required>
                 </div>
                 <div class="col-md-4">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Nome do Técnico
+                    <label class="form-check-label" for="flexCheckIndeterminate">Nome do contato técnico
                         <span><strong>*</strong></span></label>
                     <input type="text" class="form-control form-control-sm" name="tecnico" id="tecnico" placeholder=""
                         value="{{old('tecnico')}}" required>
                 </div>
                 <div class="col-md-4">
-                    <label class="form-check-label" for="flexCheckIndeterminate">E-mail do Técnico
+                    <label class="form-check-label" for="flexCheckIndeterminate">E-mail do contato técnico
                         <span><strong>*</strong></span></label>
                     <input type="email" class="form-control form-control-sm" name="emailtecnico" id="emailtecnico"
                         placeholder="" value="{{old('email')}}" required>
                 </div>
                 <div class="col-md-4">
                     <label class="form-check-label"
-                        for="flexCheckIndeterminate">Função/Cargo<span><strong>*</strong></span> </label>
+                        for="flexCheckIndeterminate">Função/Cargo do contato técnico<span><strong>*</strong></span> </label>
                     <input type="text" class="form-control form-control-sm" name="funcao" id="funcao" placeholder=""
                         value="{{old('funcao')}}" required>
                 </div>
                 <div class="col-md-3">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Setor/Departamento
+                    <label class="form-check-label" for="flexCheckIndeterminate">Setor/Departamento do contato técnico
                         <span><strong>*</strong></span></label>
                     <input type="text" class="form-control form-control-sm" name="setor" id="setor" placeholder=""
                         value="{{old('setor')}}" required>

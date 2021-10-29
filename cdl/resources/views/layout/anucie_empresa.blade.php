@@ -171,89 +171,124 @@
 
 <script>
 
-$('#formacao').change(function(){
+
+  $(document).ready(function(){
+    $('#selecionarFoto').hide();
+         
+    $('#curso_div').hide();
+    $('#termino_div').hide();
+    $('#semestre_div').hide();
+    $('#periodo_div').hide();
+    $('#institucao_div').hide();
+  });
+
+
+
+  $('#formacao').change(function(){
+
+    
+    if(document.getElementById('formacao').value === 'Ensino_Fundamental_Completo' || document.getElementById('formacao').value === 'Ensino_Fundamental_Incompleto'){
+     
+      $('#curso_div').hide();
+      $('#termino_div').hide();
+      $('#semestre_div').hide();
+      $('#periodo_div').hide();
+      $('#institucao_div').hide();
+    }
   
-  if(document.getElementById('formacao').value === 'Ensino fundamental completo' || document.getElementById('formacao').value === 'Ensino fundamental incompleto'){
-   
-    $('#curso_div').hide();
-    $('#termino_div').hide();
-    $('#semestre_div').hide();
-    $('#periodo_div').hide();
+    if(document.getElementById('formacao').value === 'Ensino_Médio_Completo'){
+      
+      $('#curso_div').hide();
+      $('#termino_div').show();
+      $label = document.getElementById('termino_div_label');
+      $label.innerHTML = "Ano de conclusão"
+      $('#semestre_div').hide();
+      $('#periodo_div').hide();
+      $('#institucao_div').hide();
+    }
+  
+    if(document.getElementById('formacao').value  === 'Ensino_Médio_Cursando'){
+      $('#curso_div').hide();
+      $('#termino_div').show();
+      $label = document.getElementById('termino_div_label');
+      $label.innerHTML = "Ano em curso"
 
-  }
-
-  if(document.getElementById('formacao').value === 'Ensino Medio completo'){
-    $('#curso_div').hide();
-    $('#semestre_div').hide();
-    $('#periodo_div').hide();
-    $('#termino_div').hide();
-  }
-
-  if(document.getElementById('formacao').value  === 'Ensino Medio cursando'){
+      $('#semestre_div').hide();
+      $('#periodo_div').hide();
+      $('#institucao_div').hide();
+    }
+  
+    if(document.getElementById('formacao').value  === 'Ensino_Técnico_Completo'){
+  
+      $('#curso_div').show();
+      $('#termino_div').show();
+      $label = document.getElementById('termino_div_label');
+      $label.innerHTML = "Ano de conclusão"
+      $('#semestre_div').hide();
+      $('#periodo_div').hide();
+      $('#institucao_div').show();
+  
+    }
+  
+    if(document.getElementById('formacao').value  === 'Ensino_Técnico_Cursando'){
+  
+  
+      $('#curso_div').show();
+      $('#termino_div').hide();
+      $('#semestre_div').show();
+      $('#periodo_div').hide();
+      $('#institucao_div').show();
+  
+    }
+  
+    if(document.getElementById('formacao').value  === 'Superior_Completo'){
+  
     $('#curso_div').show();
     $('#termino_div').show();
+    $label = document.getElementById('termino_div_label');
+    $label.innerHTML = "Ano de conclusão"
     $('#semestre_div').hide();
     $('#periodo_div').hide();
-    document.getElementById('label_Anotermino').innerHTML = 'Ano  em Curso';
-  }
-
-  if(document.getElementById('formacao').value  === 'Ensino Técnico completo'){
-
-    $('#curso_div').show();
-    $('#termino_div').hide();
-    $('#semestre_div').hide();
-    $('#periodo_div').hide();
-
-  }
-
-  if(document.getElementById('formacao').value  === 'Ensino Tecnico cursando'){
-
-  $('#curso_div').show();
-  $('#termino_div').hide();
-  $('#semestre_div').show();
-  $('#periodo_div').hide();
-
-  }
-
-  if(document.getElementById('formacao').value  === 'Superior Completo'){
-
-  $('#curso_div').show();
-  $('#termino_div').hide();
-  $('#semestre_div').hide();
-  $('#periodo_div').hide();
-
-  }
-
-
-  if(document.getElementById('formacao').value  === 'Superior Cursando'){
-
-  $('#curso_div').show();
-  $('#termino_div').hide();
-  $('#semestre_div').hide();
-  $('#periodo_div').show();
-
-  }
-
-  if(document.getElementById('formacao').value  === 'Pos-Graduacao Completo'){
-
-  $('#curso_div').show();
-  $('#termino_div').hide();
-  $('#semestre_div').hide();
-  $('#periodo_div').hide();
-
-  }
-
-  if(document.getElementById('formacao').value  === 'Pos-Graduacao Cursando'){
-
+    $('#institucao_div').show();
+    
+  
+    }
+  
+  
+    if(document.getElementById('formacao').value  === 'Superior_Cursando'){
+  
     $('#curso_div').show();
     $('#termino_div').hide();
     $('#semestre_div').hide();
     $('#periodo_div').show();
-
-  }
-
-});
-
+    $('#institucao_div').show();
+   
+  
+    }
+  
+    if(document.getElementById('formacao').value  === 'Pós-Graduação_Completo'){
+  
+    $('#curso_div').show();
+    $('#termino_div').show();
+    $('#semestre_div').hide();
+    $('#periodo_div').hide();
+    $label = document.getElementById('termino_div_label');
+    $label.innerHTML = "Ano de conclusão"
+    $('#institucao_div').show();
+  
+    }
+  
+    if(document.getElementById('formacao').value  === 'Pós-Graduação_Cursando'){
+  
+      $('#curso_div').show();
+      $('#termino_div').hide();
+      $('#semestre_div').hide();
+      $('#periodo_div').show();
+      $('#institucao_div').show();
+  
+    }
+  
+  });
 </script>
 
 
