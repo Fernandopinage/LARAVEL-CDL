@@ -4,7 +4,7 @@
 
 <div style="margin-bottom: 50px">
 
-    <form class="form-signin" method="get" action="/lista/vaga/candidato" style="margin-top:50px; margin-bottom: 50px">
+    <form class="form-signin" method="get" action="/lista/vaga/candidato/{{session('empresa_id')}}" style="margin-top:50px; margin-bottom: 50px">
 
         @csrf
 
@@ -162,17 +162,21 @@
                 <p class="card-title"><b style="font-size:36px;color:#006CDE;margin-bottom:10px">{{$vagas->vag_cargo}} -
                     {{$vagas->vag_cidade}} {{$vagas->vag_uf}} </b></p>
                 <hr>
-                <p class="card-title"><b style="color:#006CDE;">Cargo: </b> <b>{{$vagas->vag_cargo}}</b></p>
-
+                @if($vagas->vag_oculta == 'sim')
+                <p class="card-title"><b style="color:#006CDE;">{{$Empresa->emp_fantasia}}</b></p>
+                @endif                            
+                <p class="card-title"><b style="color:#006CDE;">Tipo de contratação: </b><b> {{$vagas->vag_tipo}}</b></p>
+                <p class="card-title"><b style="color:#006CDE;">Salário Oferecido: </b><b> {{$vagas->vag_salario}}</b></p>
+                @if($vagas->vag_opcao == 'sim')
+                <p class="card-title"><b style="color:#006CDE;">Vaga Remota</b></p>
+                @endif
+                <p class="card-title"><b style="color:#006CDE;">{{$vagas->vag_experiencia}}</b></p>
                 @if($vagas->vag_pcd == 'sim')
                         
                 <p class="card-title"><b style="color:#006CDE;">Vagas para: </b> <b>PCD</b></p>
                         
                 @endif     
-                            
-                <p class="card-title"><b style="color:#006CDE;">Tipo de contratação: </b><b> {{$vagas->vag_tipo}}</b></p>
-                <p class="card-title"><b style="color:#006CDE;">Salário Oferecido: </b><b> {{$vagas->vag_salario}}</b></p>
-                <p class="card-title"><b style="color:#006CDE;">{{$vagas->vag_experiencia}}</b></p>
+
                 <div class="card-body">
                     <div style="margin-top: 20px">
                         <p style="font-size: 41px; color:#0362c7;">Requisitos</p>

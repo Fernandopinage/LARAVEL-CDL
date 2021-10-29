@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Requests;
 use App\Mail\candidatoMail;
 use App\Models\Candidato;
+use App\Models\Empresa;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
@@ -64,7 +65,7 @@ class CandidatoController extends Controller
         return view('vagas_candidato');
     }
 
-    public function listarVagas(Request $request)
+    public function listarVagas(Request $request, $id)
     {
 
 
@@ -140,10 +141,15 @@ class CandidatoController extends Controller
                 
 
             })->get();
-       
+
+            $id = base64_decode($id);
+
+           $Empresa = Empresa::find($id);
+           
+               
         if (!empty($vagas)) {
 
-            return view('vagas_candidato', compact('vagas'));
+            return view('vagas_candidato', compact('vagas','Empresa'));
         } else {
             return view('vagas_candidato');
         }
