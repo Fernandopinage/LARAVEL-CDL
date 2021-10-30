@@ -148,6 +148,8 @@
 
     </form>
 </div>
+
+
 @if(!empty($vagas))
 
 @foreach($vagas as $vagas)
