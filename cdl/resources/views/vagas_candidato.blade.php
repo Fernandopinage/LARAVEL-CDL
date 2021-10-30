@@ -163,7 +163,7 @@
                     {{$vagas->vag_cidade}} {{$vagas->vag_uf}} </b></p>
                 <hr>
                 @if($vagas->vag_oculta == 'sim')
-                <p class="card-title"><b style="color:#006CDE;">Empresa: </b><b>{{$Empresa->emp_fantasia}}</b></p>
+                <p class="card-title"><b style="color:#006CDE;">Empresa: </b><b>{{$vagas->vag_nome_empresa}}</b></p>
                 @else
                 <p class="card-title"><b style="color:#006CDE;">Empresa: </b><b>Confidencial</b></p>
                 @endif 
@@ -191,7 +191,9 @@
                       <p class="card-text">{{$vagas->vag_descricao}}</p>
 
                 </div>
-                <input type="submit" class="btn btn-primary" value="Candidate-se para esta vaga" style="color:#fff;">
+            
+                <button type="button"  onclick="Pretendente({{$vagas->vag_id}})"  class="btn btn-primary">Candidate-se para esta vaga</button>
+                
             </form>
             </div>
         </div>
@@ -205,6 +207,48 @@
 @endif
 
 @endsection
+
+<script>
+
+     
+        
+    function Pretendente(id){
+  
+ 
+
+const swalWithBootstrapButtons = Swal.mixin({
+  customClass: {
+    confirmButton: 'btn btn-success',
+    cancelButton: 'btn btn-danger'
+  },
+  buttonsStyling: false
+})
+
+swalWithBootstrapButtons.fire({
+ title: 'Deseja-se candidatar a vaga?',
+ // text: "Deseja-se candidatar a vaga?",
+  icon: 'info',
+  showCancelButton: true,
+  confirmButtonText: 'Sim',
+
+  cancelButtonText: 'Não',
+  reverseButtons: true
+}).then((result) => {
+  if (result.isConfirmed) {
+
+         location.href="/vaga/candidato/"+id);
+    
+  } else if (
+    /* Read more about handling dismissals below */
+    result.dismiss === Swal.DismissReason.cancel
+  ) {
+    
+  }
+})
+    }
+
+
+  </script>
 
 <script>
     function moeda(a, e, r, t) {

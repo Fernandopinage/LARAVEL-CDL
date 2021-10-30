@@ -37,6 +37,7 @@ class EmpresaController extends Controller
 
                 $id = base64_encode($empresa['emp_id']);
                 $request->session()->put('empresa_id', $id);
+                $request->session()->put('empresa_nome', $empresa->emp_razao);
                 $request->session()->put('empresa', $request->email);
                 return redirect('home/empresa');                                  // redirecinanmento se estiver tudo certo
 

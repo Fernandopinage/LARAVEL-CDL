@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
 //use Vagas;
 use App\Models\Vagas;
+use Candidatos;
 
 class CandidatoController extends Controller
 {
@@ -67,8 +68,6 @@ class CandidatoController extends Controller
 
     public function listarVagas(Request $request, $id)
     {
-
-          
 
             $vagas = Vagas::where(function($query) use ($request){
 
@@ -144,13 +143,14 @@ class CandidatoController extends Controller
             })->get();
 
             $id = base64_decode($id);
-
-           $Empresa = Empresa::find($id);
+            $candidato = Candidato::find($id);
+            
+           //$Empresa = Empresa::find($id);
            
                
         if (!empty($vagas)) {
 
-            return view('vagas_candidato', compact('vagas','Empresa'));
+            return view('vagas_candidato', compact('vagas','candidato'));
         } else {
             return view('vagas_candidato');
         }
@@ -501,4 +501,10 @@ class CandidatoController extends Controller
 
         return view('redefinir_senha_candidato');
     }
+    
+    public function candidatarVaga(Request $request){
+
+        ddd($request->id);
+    }
+
 }

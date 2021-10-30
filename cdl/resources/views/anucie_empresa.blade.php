@@ -18,8 +18,9 @@
             <div class="row g-3">
 
 
+                <input type="hidden" name="empresa_nome" value="{{session('empresa_nome')}}">
                 <input type="hidden" name="id_empresa" value="{{session('empresa_id')}}">
-
+               
                 <div class="col-md-4">
                     <label class="form-check-label" for="flexCheckIndeterminate">Data de início da divulgação </label>
                     <input type="date" name="datainicio" class="form-control form-control-sm" placeholder="">
