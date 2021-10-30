@@ -88,7 +88,7 @@ class VagasController extends Controller
         $anucio->vag_salario = $request->salario;
         $anucio->vag_pcd = $request->pcd;
         $anucio->vag_pcd_descricao = $request->descricao_pcd;
-        $anucio->vag_id_empresa = $request->id_empresa;
+        $anucio->vag_id_empresa = base64_decode($request->id_empresa);
         $anucio->vag_nome_empresa = $request->empresa_nome;
         //ddd($request);
         $anucio->save();

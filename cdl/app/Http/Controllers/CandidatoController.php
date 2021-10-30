@@ -504,7 +504,10 @@ class CandidatoController extends Controller
     
     public function candidatarVaga(Request $request){
 
-        ddd($request->id);
+
+        echo $request->id."<pre>";
+        echo $request->user."<pre>";
+        echo $request->emp."<pre>";
     }
 
 }

@@ -191,8 +191,8 @@
                       <p class="card-text">{{$vagas->vag_descricao}}</p>
 
                 </div>
-            
-                <button type="button"  onclick="Pretendente({{$vagas->vag_id}})"  class="btn btn-primary">Candidate-se para esta vaga</button>
+                
+                <a  class="btn btn-primary"  href="/vaga/candidato/{{$vagas->vag_id}}{{$candidato->can_id}}{{($vagas->vag_id_empresa)}}" style="color:#fff">Candidate-se para esta vaga</a>
                 
             </form>
             </div>
@@ -212,7 +212,7 @@
 
      
         
-    function Pretendente(id){
+    function Pretendente(id,user){
   
  
 
@@ -236,7 +236,7 @@ swalWithBootstrapButtons.fire({
 }).then((result) => {
   if (result.isConfirmed) {
 
-         location.href="/vaga/candidato/"+id);
+         location.href="/vaga/candidato/"+id,user);
     
   } else if (
     /* Read more about handling dismissals below */
