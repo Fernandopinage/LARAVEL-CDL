@@ -4,12 +4,12 @@
 
 <div style="margin-bottom: 50px">
 
-    <form class="form-signin" method="get" action="/lista/vaga/candidato/{{session('empresa_id')}}" style="margin-top:50px; margin-bottom: 50px">
+    <form class="form-signin" method="get" action="/lista/vaga/candidato/{{session('can_id')}}" style="margin-top:50px; margin-bottom: 50px">
 
         @csrf
 
         <div class="text-center">
-            <h2 class="form-signin-heading">Buscar Vagas</h2>
+            <h2 class="form-signin-heading">Buscar Vagas </h2>
             <hr>
         </div>
         <div class="pessoais">
@@ -163,19 +163,18 @@
                     {{$vagas->vag_cidade}} {{$vagas->vag_uf}} </b></p>
                 <hr>
                 @if($vagas->vag_oculta == 'sim')
-                <p class="card-title"><b style="color:#006CDE;">{{$Empresa->emp_fantasia}}</b></p>
-                @endif                            
+                <p class="card-title"><b style="color:#006CDE;">Empresa: </b><b>{{$Empresa->emp_fantasia}}</b></p>
+                @else
+                <p class="card-title"><b style="color:#006CDE;">Empresa: </b><b>Confidencial</b></p>
+                @endif 
+                <p class="card-title"><b style="color:#006CDE;">Endereço: </b><b> {{$vagas->vag_bairro != null ? $vagas->vag_bairro : 'Não divulgado'}}</b></p>                          
                 <p class="card-title"><b style="color:#006CDE;">Tipo de contratação: </b><b> {{$vagas->vag_tipo}}</b></p>
-                <p class="card-title"><b style="color:#006CDE;">Salário Oferecido: </b><b> {{$vagas->vag_salario}}</b></p>
-                @if($vagas->vag_opcao == 'sim')
-                <p class="card-title"><b style="color:#006CDE;">Vaga Remota</b></p>
-                @endif
-                <p class="card-title"><b style="color:#006CDE;">{{$vagas->vag_experiencia}}</b></p>
-                @if($vagas->vag_pcd == 'sim')
-                        
-                <p class="card-title"><b style="color:#006CDE;">Vagas para: </b> <b>PCD</b></p>
-                        
-                @endif     
+                <p class="card-title"><b style="color:#006CDE;">Salário Oferecido:</b><b> {{$vagas->vag_salario != null? $vagas->vag_salario:''}}</b></p>
+                <p class="card-title"><b style="color:#006CDE;">Vaga Remota:</b><b> {{$vagas->vag_opcao == 'sim'?'SIM':'NÃO'}}</b></p>
+               
+               
+                <p class="card-title"><b style="color:#006CDE;">Vagas para PCD: </b><b> {{$vagas->vag_pcd == 'sim'?'SIM':'NÃO'}}</b></p>
+                   
 
                 <div class="card-body">
                     <div style="margin-top: 20px">

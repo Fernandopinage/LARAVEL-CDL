@@ -237,7 +237,7 @@
                         </label>
                     </div>
                     <div class="form-check ">
-                        <input class="form-check-input" type="radio" name="pcd" id="pcd2" value="não">
+                        <input class="form-check-input" type="radio" name="pcd" id="pcd2" value="não" checked>
                         <label class="form-check-label" for="gridRadios2">
                             Não
                         </label>

@@ -68,6 +68,7 @@ class CandidatoController extends Controller
     public function listarVagas(Request $request, $id)
     {
 
+          
 
             $vagas = Vagas::where(function($query) use ($request){
 
@@ -93,7 +94,7 @@ class CandidatoController extends Controller
 
                 if($request->formacao){
 
-                    $query->where('vag_formacao','like','%'.$request->areformacaoa.'%');
+                    $query->where('vag_formacao', $request->formacao);
 
                 }
 
@@ -153,14 +154,9 @@ class CandidatoController extends Controller
         } else {
             return view('vagas_candidato');
         }
+        
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
 
     public function selectCandidato(Request $Request)
     {
