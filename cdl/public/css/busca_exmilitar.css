@@ -80,4 +80,11 @@ body{
     .photo{
         display:none;
     }
+
+
+
+}
+
+.form-control:disabled{
+  background-color: #fff;
 }

@@ -97,8 +97,8 @@ Route::post('/update/oms/{id}', [OmsController::class, 'Update']);
 Route::get('/alterar/senha/oms', [OmsController::class, 'alterarPassword']);
 Route::post('/modificar/senha/oms', [OmsController::class, 'modificarSenha']);
 Route::get('/delete/conta/oms/{id}', [OmsController::class, 'deleteConta']);
-
 Route::get('/gerar/pdf/{id}', [PDFControler::class , 'gerarPDF']);
+Route::get('/avaliar/candidato/oms/',[OmsController::class, 'avaliarCandidato']);
 //});
 
 

@@ -7,10 +7,8 @@
 
 <div class="container">
 
-
-
-
     @foreach ($dados as $dados)
+    <form action="/avaliar/candidato/oms/" method="get">
 
     <div class="row g-3 shadow p-4 mb-5 bg-body rounded">
         <div class="text-end">
@@ -36,96 +34,107 @@
         <div class="pessoais">
 
             <div class="row g-3">
-
+                <input type="hidden" name="id" value="{{$dados->can_id}}">
                 <div class="col-md-6">
                     <label class="form-check-label" for="flexCheckIndeterminate" >Primeiro Nome
                     </label>
                     <input type="text" class="form-control form-control-sm" name="nome" placeholder=""
-                        value="{{$dados->can_nome}}">
+                        value="{{$dados->can_nome}}" disabled>
                 </div>
 
                 <div class="col-md-6">
                     <label class="form-check-label" for="flexCheckIndeterminate">Sobrenome
                         <span><strong>*</strong></span></label>
                     <input type="text" class="form-control form-control-sm" name="sobrenome" placeholder=""
-                        value="{{$dados->can_sobrenome}}">
+                        value="{{$dados->can_sobrenome}}" disabled>
                 </div>
                 <div class="col-md-3">
                     <label class="form-check-label" for="flexCheckIndeterminate">CPF
                         <span><strong>*</strong></span></label>
-                    <input type="text" class="form-control form-control-sm" name="cpf" value="{{$dados->can_cpf}}">
+                    <input type="text" class="form-control form-control-sm" name="cpf" value="{{$dados->can_cpf}}" disabled>
                 </div>
                 <div class="col-md-3">
                     <label class="form-check-label" for="flexCheckIndeterminate">RG</label>
                     <input type="text" maxlength="10" class="form-control form-control-sm"
-                        onkeyup="somenteNumeros(this);" name="rg" placeholder="" value="{{$dados->can_rg}}">
+                        onkeyup="somenteNumeros(this);" name="rg" placeholder="" value="{{$dados->can_rg}}" disabled>
                 </div>
                 <div class="col-md-3">
                     <label class="form-check-label" for="flexCheckIndeterminate">Data Nascimento
                         <span><strong>*</strong></span> </label>
                     <input type="date" class="form-control form-control-sm" name="nascimento" placeholder=""
-                        value="{{$dados->can_nascimento}}">
+                        value="{{$dados->can_nascimento}}" disabled>
                 </div>
                 <div class="col-md-3">
                     <label class="form-check-label" for="flexCheckIndeterminate">Local de Nascimento
                         <span><strong>*</strong></span> </label>
                     <input type="text" class="form-control form-control-sm" name="localnascimento"
-                        value="{{$dados->can_localnascimento}}">
+                        value="{{$dados->can_localnascimento}}" disabled>
                 </div>
                 <div class="col-md-2">
                     <label class="form-check-label" for="flexCheckIndeterminate">Cor/Raça</label>
                     <input type="text" class="form-control form-control-sm" name="localnascimento"
-                        value="{{$dados->can_cor}}">
+                        value="{{$dados->can_cor}}" disabled>
                 </div>
                 <div class="col-md-1">
                     <label class="form-check-label" for="flexCheckIndeterminate">Peso</label>
                     <input type="text" class="form-control form-control-sm" name="peso" placeholder=""
-                        value="{{$dados->can_peso}}">
+                        value="{{$dados->can_peso}}" disabled>
                 </div>
                 <div class="col-md-1">
                     <label class="form-check-label" for="flexCheckIndeterminate">Altura</label>
                     <input type="text" class="form-control form-control-sm" name="altura" placeholder=""
-                        value="{{$dados->can_altura}}">
+                        value="{{$dados->can_altura}}" disabled>
                 </div>
                 <div class="col-md-2">
                     <label class="form-check-label" for="flexCheckIndeterminate">Estado Civil </label>
                     <input type="text" class="form-control form-control-sm" name="altura" placeholder=""
-                        value="{{$dados->can_estadocivil}}">
+                        value="{{$dados->can_estadocivil}}" disabled>
                 </div>
                 <div class="col-md-2">
                     <label class="form-check-label" for="flexCheckIndeterminate">Possui filhos</label>
                     <input type="text" class="form-control form-control-sm" name="altura" placeholder=""
-                        value="{{$dados->can_filiacao}}">
+                        value="{{$dados->can_filiacao == 'não' ? 'Não' :'Sim'}}" disabled>
                 </div>
                 <div class="col-md-2">
                     <label class="form-check-label" for="flexCheckIndeterminate">Gênero </label>
                     <input type="text" class="form-control form-control-sm" name="altura" placeholder=""
-                        value="{{$dados->can_genero}}">
+                        value="{{$dados->can_genero}}" disabled>
 
                 </div>
 
                 <div class="col-md-2">
                     <label class="form-check-label" for="flexCheckIndeterminate">Pretensão Salarial </label>
                     <input type="text" class="form-control form-control-sm" name="altura" placeholder=""
-                        value="{{$dados->can_pretensao_salario}}">
+                        value="{{$dados->can_pretensao_salario}}" disabled>
                 </div>
 
                 <div class="col-md-2">
                     <label class="form-check-label" for="flexCheckIndeterminate">Ex-militar? </label>
                     <input type="text" class="form-control form-control-sm" name="altura" placeholder=""
-                        value="{{$dados->can_exmilitar}}">
+                        value="{{$dados->can_exmilitar}}" disabled> 
 
                 </div>
 
                 <div class="col-md-2" id="divMilitar">
                     <label class="form-check-label" for="flexCheckIndeterminate">Unidade Militar</label>
                     <input type="text" class="form-control form-control-sm" name="altura" placeholder=""
-                        value="{{$dados->can_unidademilitar}}">
+                        value="{{$dados->can_unidademilitar}}" disabled>
                 </div>
                 <div class="col-md-2" id="divMatricula">
                     <label class="form-check-label" for="flexCheckIndeterminate">Matrícula</label>
                     <input type="text" class="form-control form-control-sm" name="matricula" id="matricula"
-                        value="{{$dados->can_matricula}}">
+                        value="{{$dados->can_matricula}}" disabled>
+                </div>
+                <div class="col-md-2" id="divMatricula">
+                    <label class="form-check-label" for="flexCheckIndeterminate"><span style="color:red;">Avaliação Candidato</span></label>
+                    <select class="form-select form-select-sm" name="avalicao" aria-label="Default select example" required>
+                       
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option selected value="5">5</option>  
+                    </select>
                 </div>
 
 
@@ -155,19 +164,19 @@
                 <div class="col-md-4">
                     <label class="form-check-label" for="flexCheckIndeterminate">E-mail </label>
                     <input type="text" class="form-control form-control-sm" placeholder="" name="email"
-                        value="{{$dados->can_email}}">
+                        value="{{$dados->can_email}}" disabled>
                 </div>
                 <div class="col-md-2">
                     <label class="form-check-label" for="flexCheckIndeterminate">Telefone</label>
                     <input type="text" class="form-control form-control-sm" placeholder="(xx) xxxxx-xxxx"
                         onkeypress="mask(this, mphone);" onblur="mask(this, mphone);" name="telefone"
-                        value="{{$dados->can_telefone}}">
+                        value="{{$dados->can_telefone}}" disabled>
                 </div>
                 <div class="col-md-2">
                     <label class="form-check-label" for="flexCheckIndeterminate">Celular </label>
                     <input type="text" class="form-control form-control-sm" placeholder="(xx) xxxxx-xxxx"
                         onkeypress="mask(this, mphone);" onblur="mask(this, mphone);" name="celular"
-                        value="{{$dados->can_celular}}">
+                        value="{{$dados->can_celular}}" disabled>
                 </div>
 
             </div>
@@ -196,41 +205,41 @@
                     <label class="form-check-label" for="flexCheckIndeterminate">CEP
                         <span><strong>*</strong></span></label>
                     <input type="text" maxlength="9" class="form-control form-control-sm" name="cep" id="cep"
-                        placeholder="" required value="{{$dados->can_cep}}">
+                        placeholder="" required value="{{$dados->can_cep}}" disabled>
                 </div>
                 <div class="col-md-1">
                     <label class="form-check-label" for="flexCheckIndeterminate">UF
                         <span><strong>*</strong></span></label>
                     <input type="text" class="form-control form-control-sm" maxlength="2" name="uf" id="uf"
-                        placeholder="" required onkeypress="return lettersOnly(event);" value="{{$dados->can_uf}}">
+                        placeholder="" required onkeypress="return lettersOnly(event);" value="{{$dados->can_uf}}" disabled>
                 </div>
                 <div class="col-md-2">
                     <label class="form-check-label" for="flexCheckIndeterminate">Cidade
                         <span><strong>*</strong></span></label>
                     <input type="text" class="form-control form-control-sm" name="cidade" id="cidade" placeholder=""
-                        required value="{{$dados->can_cidade}}">
+                        required value="{{$dados->can_cidade}}" disabled>
                 </div>
                 <div class="col-md-7">
                     <label class="form-check-label" for="flexCheckIndeterminate">Bairro
                         <span><strong>*</strong></span></label>
                     <input type="text" class="form-control form-control-sm" name="bairro" id="bairro" placeholder=""
-                        required value="{{$dados->can_bairro}}">
+                        required value="{{$dados->can_bairro}}" disabled>
                 </div>
                 <div class="col-md-2">
                     <label class="form-check-label"
                         for="flexCheckIndeterminate">Nº</label></label><span><strong>*</strong></span></label>
                     <input type="text" class="form-control form-control-sm" name="numero" id="numero" placeholder=""
-                        required value="{{$dados->can_numero}}">
+                        required value="{{$dados->can_numero}}" disabled>
                 </div>
                 <div class="col-md-4">
                     <label class="form-check-label" for="flexCheckIndeterminate">Logradouro</label>
                     <input type="text" class="form-control form-control-sm" name="rua" id="rua" placeholder=""
-                        value="{{$dados->can_rua}}">
+                        value="{{$dados->can_rua}}" disabled>
                 </div>
                 <div class="col-md-6">
                     <label class="form-check-label" for="flexCheckIndeterminate">Complemento</label>
                     <input type="text" class="form-control form-control-sm" name="complemento" id="complemento"
-                        placeholder="" value="{{$dados->can_complemento}}">
+                        placeholder="" value="{{$dados->can_complemento}}" disabled>
                 </div>
             </div>
 
@@ -259,7 +268,7 @@
                     <label class="form-check-label" for="flexCheckIndeterminate">Formação
                         <span><strong>*</strong></span></label>
                     <select class="form-select form-select-sm" name="formacao" id="formacao"
-                        aria-label="Default select example" required>
+                        aria-label="Default select example" disabled>
                         <option value="null"></option>
                         <option {{$dados->can_formacao == 'Ensino_Fundamental_completo' ? 'selected' :''}}
                             value="Ensino_Fundamental_completo">Ensino Fundamental completo</option>
@@ -287,23 +296,23 @@
                 <div class="col-md-3" id="institucao_div">
                     <label class="form-check-label" for="flexCheckIndeterminate">Instituição de Ensino </label>
                     <input type="text" class="form-control form-control-sm" name="instituicao" placeholder=""
-                        value="{{$dados->can_instituicao}}">
+                        value="{{$dados->can_instituicao}}" disabled>
                 </div>
                 <div class="col-md-3" id="curso_div">
                     <label class="form-check-label" for="flexCheckIndeterminate">Nome do curso </label>
                     <input type="text" class="form-control form-control-sm" name="curso" placeholder=""
-                        value="{{$dados->can_curso}}">
+                        value="{{$dados->can_curso}}" disabled>
                 </div>
                 <div class="col-md-2" id="termino_div">
                     <label class="form-check-label" for="flexCheckIndeterminate" id="termino_div_label">Ano em
                         Curso</label>
                     <input type="month" class="form-control form-select-sm" name="termino" placeholder=""
-                        value="{{$dados->can_termino}}">
+                        value="{{$dados->can_termino}}" disabled>
                 </div>
                 <div class="col-md-2" id="semestre_div">
                     <label class="form-check-label" for="flexCheckIndeterminate">Semestre em Curso </label>
                     <select class="form-select form-select-sm" name="semestre" aria-label="Default select example"
-                        value="{{$dados->can_semestre}}">
+                        value="{{$dados->can_semestre}}" disabled>
                         <option selected></option>
                         <option {{$dados->can_semestre == '1º Semestre' ? 'selected' :''}} value="1º Semestre">1º
                             Semestre</option>
@@ -315,7 +324,7 @@
                 <div class="col-md-3" id="periodo_div">
                     <label class="form-check-label" for="flexCheckIndeterminate">Período em Curso</label>
                     <select class="form-select form-select-sm" name="periodo" aria-label="Default select example"
-                        value="{{$dados->can_periodo}}">
+                        value="{{$dados->can_periodo}}"disabled>
                         <option></option>
                         <option {{$dados->can_periodo == '1º Período' ? 'selected' :''}} value="1º Período">1º
                             Período
@@ -375,17 +384,17 @@
                 <div class="col-md-4">
                     <label class="form-check-label" for="flexCheckIndeterminate">Cursos extracurriculares</label>
                     <input type="text" class="form-control form-control-sm" name="curso_extra[]" placeholder=""
-                        value="{{$dados->can_curso_extra[$i]}}">
+                        value="{{$dados->can_curso_extra[$i]}}" disabled>
                 </div>
                 <div class="col-md-3">
                     <label class="form-check-label" for="flexCheckIndeterminate">Ano termino</label>
                     <input type="month" class="form-control form-control-sm" name="curso_ano_termino[]" placeholder=""
-                        value="{{$dados->can_curso_ano_termino[$i]}}">
+                        value="{{$dados->can_curso_ano_termino[$i]}}" disabled>
                 </div>
                 <div class="col-md-4">
                     <label class="form-check-label" for="flexCheckIndeterminate">Aréa de Atuação</label>
                     <input type="text" class="form-control form-control-sm" name="curso_area_atuacao[]" id="areaatuacao"
-                        value="{{$dados->can_curso_area_atuacao[$i]}}">
+                        value="{{$dados->can_curso_area_atuacao[$i]}}" disabled>
                 </div>
 
 
@@ -424,17 +433,17 @@
             <div class="col-md-4">
                 <label class="form-check-label" for="flexCheckIndeterminate">Título do curso</label>
                 <input type="text" class="form-control form-control-sm" name="utv_titlulo[]" placeholder=""
-                    value="{{$dados->can_utv_titlulo[$i]}}">
+                    value="{{$dados->can_utv_titlulo[$i]}}" disabled>
             </div>
             <div class="col-md-2">
                 <label class="form-check-label" for="flexCheckIndeterminate">Carga horária</label>
                 <input type="text" class="form-control form-control-sm" name="utv_carga[]" placeholder=""
-                    value="{{$dados->can_utv_carga[$i]}}">
+                    value="{{$dados->can_utv_carga[$i]}}" disabled>
             </div>
             <div class="col-md-2">
                 <label class="form-check-label" for="flexCheckIndeterminate">Data de Emissão</label>
                 <input type="month" class="form-control form-control-sm" name="utv_data[]" placeholder=""
-                    value="{{$dados->can_utv_data[$i]}}">
+                    value="{{$dados->can_utv_data[$i]}}" disabled>
             </div>
 
     </div>
@@ -471,7 +480,7 @@
                     <label class="form-check-label" for="flexCheckIndeterminate">Escolha um idioma
                     </label>
                     <select class="form-select form-select-sm" name="idioma[]" id="idioma"
-                        aria-label="Default select example">
+                        aria-label="Default select example" disabled>
                         <option selected></option>
                         <option {{$dados->can_idioma[$i] == 'Inglês' ? 'selected' :''}} value="Inglês">Inglês
                         </option>
@@ -489,7 +498,7 @@
                 <div class="col-md-3" id="div_outro">
                     <label class="form-check-label" for="flexCheckIndeterminate">Digite outro idioma</label>
                     <input type="text" name="outro_idioma[]" id="outro_idioma" class="form-control form-control-sm"
-                        value="{{$dados->$can_outro_idioma[$i]}}">
+                        value="{{$dados->$can_outro_idioma[$i]}}" disabled>
                 </div>
                 @endif
 
@@ -497,7 +506,7 @@
                     <label class="form-check-label" for="flexCheckIndeterminate">Nível de Escrita
                     </label>
                     <select class="form-select form-select-sm" name="idioma_escrita[]" id="idioma_escrita"
-                        aria-label="Default select example">
+                        aria-label="Default select example" disabled>
                         <option></option>
                         <option {{$dados->can_idioma_escrita[$i] == 'Básico' ? 'selected' :''}}
                             value="Básico">Básico</option>
@@ -514,7 +523,7 @@
                     <label class="form-check-label" for="flexCheckIndeterminate">Nível de Leitura
                     </label>
                     <select class="form-select form-select-sm" name="idioma_leitura[]" id="idioma_leitura"
-                        aria-label="Default select example">
+                        aria-label="Default select example" disabled>
                         <option></option>
                         <option {{$dados->can_idioma_escrita[$i] == 'Básico' ? 'selected' :''}}
                             value="Básico">Básico</option>
@@ -530,7 +539,7 @@
                     <label class="form-check-label" for="flexCheckIndeterminate">Nível de Conversação
                     </label>
                     <select class="form-select form-select-sm" name="idioma_conversacao[]" id="idioma_conversacao"
-                        aria-label="Default select example">
+                        aria-label="Default select example" disabled>
                         <option></option>
                         <option {{$dados->can_idioma_escrita[$i] == 'Básico' ? 'selected' :''}}
                             value="Básico">Básico</option>
@@ -595,36 +604,37 @@
                 <div class="col-md-6" id="01">
                     <label class="form-check-label" for="flexCheckIndeterminate">Nome da empresa </label>
                     <input type="text" class="form-control form-control-sm" name="nome_empresa[]" placeholder=""
-                        value="{{$dados->can_nome_empresa[$i]}}">
+                        value="{{$dados->can_nome_empresa[$i]}}" disabled>
                 </div>
 
                 <div class="col-md-4" id="02">
                     <label class="form-check-label" for="flexCheckIndeterminate">Cargo </label>
                     <input type="text" class="form-control form-control-sm" name="cargo_empresa[]" placeholder=""
-                        value="{{$dados->can_cargo_empresa[$i]}}">
+                        value="{{$dados->can_cargo_empresa[$i]}}" disabled>
                 </div>
 
                 <div class="col-md-2" id="04">
                     <label class="form-check-label" for="flexCheckIndeterminate">Data de Admissão </label>
                     <input type="month" class="form-control form-control-sm" placeholder="" name="data_inicio_empresa[]"
-                        value="{{$dados->can_data_inicio_empresa[$i]}}">
+                        value="{{$dados->can_data_inicio_empresa[$i]}}" disabled>
                 </div>
 
                 <div class="col-md-2" id="05">
                     <label class="form-check-label" for="flexCheckIndeterminate">Data de termino </label>
                     <input type="month" class="form-control form-control-sm" placeholder=""
-                        name="data_termino_empresa[]" value="{{$dados->can_data_termino_empresa[$i]}}">
+                        name="data_termino_empresa[]" value="{{$dados->can_data_termino_empresa[$i]}}" disabled>
                 </div>
                 <div class="col-md-2" id="06">
                     <label class="form-check-label" for="flexCheckIndeterminate">Salário</label>
                     <input type="text" class="form-control form-control-sm" placeholder="" name="salario_empres[]"
-                        value="{{$dados->can_salario_empresa[$i]}}" onKeyPress="return(moeda(this,'.',',',event))">
+                        value="{{$dados->can_salario_empresa[$i]}}" onKeyPress="return(moeda(this,'.',',',event))" disabled>
                 </div>
                 <div class="col-md-3" id="07">
                     <label class="form-check-label" for="flexCheckIndeterminate">Softwares utilizava</label>
                     <input type="text" class="form-control form-control-sm" placeholder="" name="software_empresa[]"
-                        value="{{$dados->can_software_empresa[$i]}}">
+                        value="{{$dados->can_software_empresa[$i]}}" disabled>
                 </div>
+                
         </div>
         @endfor
 
@@ -655,18 +665,21 @@
                 <label class="form-check-label" for="flexCheckIndeterminate">Selecione Prefêrencias
                     Profissionais</label>
                 <input type="text" class="form-control form-control-sm" placeholder="" name="software_empresa[]"
-                    value="{{$dados->can_tempoexperiencia[$i]}}">
+                    value="{{$dados->can_tempoexperiencia[$i]}}" disabled>
             </div>
 
     </div>
     @endfor
+    
 </div>
 @endforeach
 
 
 
-
-
+<div class="text-end">
+    <input type="submit" class="btn btn-primary" value="Salvar Registros">
+</div>
+</form>
 </div>
 
 @endsection

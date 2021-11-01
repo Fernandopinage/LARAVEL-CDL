@@ -250,4 +250,17 @@ class OmsController extends Controller
 
         return view('add_militar');
     }
+
+    public function avaliarCandidato(Request $request){
+
+
+          $candidato =  Candidato::find($request->id);
+          $candidato->can_nota = $request->avalicao;
+          $candidato->save();
+
+          $id = base64_encode($request->id);
+        
+          return redirect('/militar/filtro/'.$id)->with('avaliacao', 'Email ou Senha incorretos!');
+
+    }
 }
