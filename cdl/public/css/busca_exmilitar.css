@@ -88,3 +88,7 @@ body{
 .form-control:disabled{
   background-color: #fff;
 }
+
+.form-select:disabled{
+  background-color: #fff;
+}
