@@ -78,9 +78,33 @@
                                 <span><b style="color: #22427c; margin-right:0px">Unidade Militar:</b></span>
                                 <span style="color: #535151"> {{$candidato->can_unidademilitar}}</span>
 
-                                <div class="d-grid gap-2" style="margin-top: 10px">
-                                    <a class="btn btn-primary" href="/militar/filtro/{{base64_encode($candidato->can_id)}}" target="_blank">Visualizar</a>
-                                </div>
+                                <?php
+                                
+                                if(!empty($candidato->can_nota)){
+
+                                    ?>
+
+                                        <div class="d-grid gap-2" style="margin-top: 10px">
+                                            <a class="btn btn-primary" href="/militar/filtro/{{base64_encode($candidato->can_id)}}" target="_blank" style="background-color: #ef723e;">Avaliado</a>
+                                        </div>
+                                    
+                                    <?php
+
+                                }else{
+
+                                    ?>
+                                        <div class="d-grid gap-2" style="margin-top: 10px">
+                                            <a class="btn btn-primary" href="/militar/filtro/{{base64_encode($candidato->can_id)}}" target="_blank">Avaliar</a>
+                                        </div>
+                                    
+                                    
+                                    <?php
+                                    
+                                }
+                                
+                                ?>
+
+
                             </div>
                         </div>
                     </div>

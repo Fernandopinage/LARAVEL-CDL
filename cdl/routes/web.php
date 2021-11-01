@@ -16,11 +16,6 @@ use App\Models\Oms;
 use RealRashid\SweetAlert\Facades\Alert; // sweetAlert
 use Illuminate\Http\Request;
 
-/*
-Route::get('/', function () {
-    return view('welcome');
-});
-*/
 
 Route::get('/', [homeController::class, 'index']); // home do projeto
 

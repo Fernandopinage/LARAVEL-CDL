@@ -65,11 +65,28 @@
                             style="color: #535151"> {{$candidato->can_cpf}}</span>
 
                             <br>
-                            <span><b style="color: #22427c; margin-right:0px">Curso UTV:</b></span>
-                      
-                            <div class="d-grid gap-2" style="margin-top: 10px; color:#FFF;">
-                                <a class="btn btn-primary" href="/utv/filtro/{{base64_encode($candidato->can_id)}}" target="_blank">Validar</a>
-                            </div>
+                           
+                            <?php 
+                            
+                            if($candidato->can_validacao == "Sim"){
+                                ?>
+                                <div class="d-grid gap-2" style="margin-top: 10px; color:#FFF;">
+                                <a class="btn btn" href="/utv/filtro/{{base64_encode($candidato->can_id)}}" target="_blank" style="background-color:#efa83e; color:#fff;">Validado</a>
+                                </div>
+                                
+                                <?php
+                            }else{
+                                ?>
+                                
+                                <div class="d-grid gap-2" style="margin-top: 10px; color:#FFF;">
+                                    <a class="btn btn-primary" href="/utv/filtro/{{base64_encode($candidato->can_id)}}" target="_blank">Validar</a>
+                                </div>
+                                
+                                <?php 
+                            }
+                            
+                            ?>
+
                         </div>
                     </div>
                 </div>
