@@ -18,6 +18,8 @@ use Illuminate\Http\Request;
 
 
 Route::get('/', [homeController::class, 'index']); // home do projeto
+Route::get('/filtro',[homeController::class, 'filtro']);
+Route::get('/filtro/buscar',[homeController::class, 'filtroBuscar']);
 
 /****************************************************************************************** */
 

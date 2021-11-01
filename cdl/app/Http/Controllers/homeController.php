@@ -2,25 +2,70 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Empresa;
 use Illuminate\Http\Request;
+use App\Models\Vagas;
+use App\Models\Candidato;
 
 class homeController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
+    public function index(){
+
         return view('home');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    public function filtro(Request $request)
+    {
+
+
+
+        $valor = $request->select;
+
+        switch ($valor) {
+            case 'vagas':
+               
+                if(!empty($request->pesquisa)){
+
+                    $vagas = Vagas::where('vag_cargo','like','%'.$request->cargo.'%');
+                   //ddd($vagas);
+
+                    return view('home_buscar',compact('vagas'));
+
+                }else{
+                    $vagas = Vagas::all();
+
+                    return view('home_buscar',compact('vagas'));
+                }
+
+
+                break;
+
+            case 'candidatos':
+                
+                $candidato = Candidato::all();
+                return view('home_buscar',compact('candidato'));
+                break;
+
+            case 'militares';
+                
+                $candidato = Candidato::select('*')->where('can_exmilitar','Sim')->get();
+                return view('home_buscar',compact('candidato'));
+                break;
+            default:
+                # code...
+                break;
+        }
+
+    }
+
+ 
+    public function filtroBuscar(){
+
+
+        return view('home_buscar');
+    }
+
+   
     public function create()
     {
         //
