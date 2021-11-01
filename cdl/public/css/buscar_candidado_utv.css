@@ -2,6 +2,16 @@ title{
     background: url('/img/title.png');
     width: 10px;
   }
+
+  #perfil{
+
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 2.5px solid;
+   
+  }
+  
   #logo{
       
       width: 150px;

@@ -67,8 +67,10 @@
                             <br>
                             <span><b style="color: #22427c; margin-right:0px">Curso UTV:</b></span>
                       
+                            <div class="d-grid gap-2" style="margin-top: 10px; color:#FFF;">
+                                <a class="btn btn-primary" href="/utv/filtro/{{base64_encode($candidato->can_id)}}" target="_blank">Validar</a>
+                            </div>
                         </div>
-                        <button type="button" class="btn btn-primary btn-sm btn-block">Vísualizar perfil</button>
                     </div>
                 </div>
             </div>

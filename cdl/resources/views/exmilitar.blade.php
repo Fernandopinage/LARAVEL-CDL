@@ -26,7 +26,7 @@
         @if($candidato->can_exmilitar === 'Sim')
 
 
-        <a href="/militar/filtro/{{base64_encode($candidato->can_id)}}" target="_blank">
+       
             <div class=" d-inline-block" style="padding: 8px;" data-bs-toggle="modal" data-bs-target="#exampleModal">
 
                 <div class="form-row" style="border: 0px;">
@@ -78,13 +78,15 @@
                                 <span><b style="color: #22427c; margin-right:0px">Unidade Militar:</b></span>
                                 <span style="color: #535151"> {{$candidato->can_unidademilitar}}</span>
 
-
+                                <div class="d-grid gap-2" style="margin-top: 10px">
+                                    <a class="btn btn-primary" href="/militar/filtro/{{base64_encode($candidato->can_id)}}" target="_blank">Visualizar</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </a>
+        
         @endif
         @endforeach
     </div>

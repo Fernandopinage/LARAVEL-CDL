@@ -7,6 +7,7 @@ use App\Models\Candidato;
 use Illuminate\Http\Request;
 use App\Models\UTV;
 use App\Models\UTVCURSOS;
+use Candidatos;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
@@ -347,6 +348,32 @@ class utvController extends Controller
         }
     }
 
+    public function abaFiltro($id){
+
+        $id = base64_decode($id);
+
+    
+        $dados = Candidato::where('can_id', '=', $id)
+        ->where('can_exmilitar', '=', 'Sim')
+        ->get();
+          
+
+        return view('buscar_filtro_utv',compact('dados'));
+    }
+
+    public function validarCandidato(Request $request){
+
+        $candidato =  Candidato::find($request->id);
+        $candidato->can_validacao = $request->avalicao;
+
+        //ddd($request);
+       $candidato->save();
+
+        $id = base64_encode($request->id);
+      
+        return redirect('/utv/filtro/'.$id)->with('avaliacao', 'Email ou Senha incorretos!');
+        
+    }
 
     public function destroy($id)
     {
