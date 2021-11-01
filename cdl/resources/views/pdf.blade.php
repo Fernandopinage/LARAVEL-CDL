@@ -255,7 +255,7 @@
 
                 for($i=0;$i<$tamanho4;$i++){
  
-                    echo "<p style='font-size:16px'><b>Nome da empresa:</b> ".$dados->can_nome_empresa[$i]." - <b>Data de Admissão: </b>".$data = date('m/Y',strtotime($dados->can_data_inicio_empresa[$i]))." </b>  <b>a Data de termino: </b>".$data = date('m/Y',strtotime($dados->can_data_termino_empresa[$i]))." </p>";
+                    echo "<p style='font-size:16px'><b>Nome da empresa:</b> ".$dados->can_nome_empresa[$i]." - ".$data = date('m/Y',strtotime($dados->can_data_inicio_empresa[$i]))."   a ".$data = date('m/Y',strtotime($dados->can_data_termino_empresa[$i]))." </p>";
                     echo "<p style='font-size:16px'><b>Cargo:</b> ".$dados->can_cargo_empresa[$i]."</p><p> <b>Salário:</b> ".$dados->can_salario_empresa[$i]."</p>";
                     if(!empty($dados->can_software_empresa)){
                     echo "<p style='font-size:16px'><b>Software utilizados: </b>  ".$dados->can_software_empresa[$i]." </p>";    
