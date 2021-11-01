@@ -85,7 +85,7 @@
                                     ?>
 
                                         <div class="d-grid gap-2" style="margin-top: 10px">
-                                            <a class="btn btn-primary" href="/militar/filtro/{{base64_encode($candidato->can_id)}}" target="_blank" style="background-color: #ef723e;">Avaliado</a>
+                                            <a class="btn btn-success" href="/militar/filtro/{{base64_encode($candidato->can_id)}}" target="_blank">Avaliado</a>
                                         </div>
                                     
                                     <?php
@@ -94,7 +94,7 @@
 
                                     ?>
                                         <div class="d-grid gap-2" style="margin-top: 10px">
-                                            <a class="btn btn-primary" href="/militar/filtro/{{base64_encode($candidato->can_id)}}" target="_blank">Avaliar</a>
+                                            <a class="btn btn-danger" href="/militar/filtro/{{base64_encode($candidato->can_id)}}" target="_blank">Pendente para avaliar</a>
                                         </div>
                                     
                                     
