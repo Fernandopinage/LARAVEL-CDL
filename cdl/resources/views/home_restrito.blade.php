@@ -242,7 +242,7 @@
             <div class="col-md-4" id="selecionarFoto">
                 <label class="form-check-label" for="image">Foto do banner principal</label>
                 <!--<input class="form-control form-control-sm" type="file" name="foto" id="formFile"> -->
-                <input type="file" name="fofoto_slide03_omsto" id="formFile" class="form-control-file">
+                <input type="file" name="foto_slide03_oms" id="formFile" class="form-control-file">
             </div>
             <div class="col-md-2">
                 <label class="form-check-label" for="flexCheckIndeterminate">Altura
