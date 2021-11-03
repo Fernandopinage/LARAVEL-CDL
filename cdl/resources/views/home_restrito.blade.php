@@ -2,7 +2,7 @@
 
 @section('home')
 
-<form action=""  enctype="multipart/form-data" style="margin-bottom: 300px">
+<form action="" method="GET"  enctype="multipart/form-data" style="margin-bottom: 300px">
 
     <div class="row g-3 shadow p-4 mb-5 bg-body rounded" style="margin-top: 80px">
         <div class="text-center">
@@ -14,17 +14,17 @@
             <div class="col-md-4" id="selecionarFoto">
                 <label class="form-check-label" for="image">Foto do banner principal</label>
                 <!--<input class="form-control form-control-sm" type="file" name="foto" id="formFile"> -->
-                <input type="file" name="foto" id="formFile" class="form-control-file">
+                <input type="file" name="foto_principal" id="formFile" class="form-control-file">
             </div>
             <div class="col-md-2">
                 <label class="form-check-label" for="flexCheckIndeterminate">Altura
                     <span><strong>*</strong></span> </label>
-                <input type="number" class="form-control form-control-sm" name="nome" placeholder="" required>
+                <input type="number" class="form-control form-control-sm" name="altura_principal" placeholder="">
             </div>
             <div class="col-md-2">
                 <label class="form-check-label" for="flexCheckIndeterminate">Largura
                     <span><strong>*</strong></span> </label>
-                <input type="number" class="form-control form-control-sm" name="nome" placeholder="" required>
+                <input type="number" class="form-control form-control-sm" name="largura_principal" placeholder="">
             </div>
         </div>
         <div class="row g-3">
@@ -33,17 +33,17 @@
             <div class="col-md-4" id="selecionarFoto">
                 <label class="form-check-label" for="image">Foto do banner principal</label>
                 <!--<input class="form-control form-control-sm" type="file" name="foto" id="formFile"> -->
-                <input type="file" name="foto" id="formFile" class="form-control-file">
+                <input type="file" name="slide01_principal" id="formFile" class="form-control-file">
             </div>
             <div class="col-md-2">
                 <label class="form-check-label" for="flexCheckIndeterminate">Altura
                     <span><strong>*</strong></span> </label>
-                <input type="number" class="form-control form-control-sm" name="nome" placeholder="" required>
+                <input type="number" class="form-control form-control-sm" name="altura_slide_principal" placeholder="">
             </div>
             <div class="col-md-2">
                 <label class="form-check-label" for="flexCheckIndeterminate">Largura
                     <span><strong>*</strong></span> </label>
-                <input type="number" class="form-control form-control-sm" name="nome" placeholder="" required>
+                <input type="number" class="form-control form-control-sm" name="largura_slide_principal" placeholder="">
             </div>
 
         </div>
@@ -54,17 +54,17 @@
             <div class="col-md-4" id="selecionarFoto">
                 <label class="form-check-label" for="image">Foto do banner principal</label>
                 <!--<input class="form-control form-control-sm" type="file" name="foto" id="formFile"> -->
-                <input type="file" name="foto" id="formFile" class="form-control-file">
+                <input type="file" name="slide02_principal" id="formFile" class="form-control-file">
             </div>
             <div class="col-md-2">
                 <label class="form-check-label" for="flexCheckIndeterminate">Altura
                     <span><strong>*</strong></span> </label>
-                <input type="number" class="form-control form-control-sm" name="nome" placeholder="" required>
+                <input type="number" class="form-control form-control-sm" name="altura_slide2_principal" placeholder="">
             </div>
             <div class="col-md-2">
                 <label class="form-check-label" for="flexCheckIndeterminate">Largura
                     <span><strong>*</strong></span> </label>
-                <input type="number" class="form-control form-control-sm" name="nome" placeholder="" required>
+                <input type="number" class="form-control form-control-sm" name="largura_slide2_principal" placeholder="">
             </div>
         </div>
 
@@ -74,17 +74,17 @@
             <div class="col-md-4" id="selecionarFoto">
                 <label class="form-check-label" for="image">Foto do banner principal</label>
                 <!--<input class="form-control form-control-sm" type="file" name="foto" id="formFile"> -->
-                <input type="file" name="foto" id="formFile" class="form-control-file">
+                <input type="file" name="slide03_principal" id="formFile" class="form-control-file">
             </div>
             <div class="col-md-2">
                 <label class="form-check-label" for="flexCheckIndeterminate">Altura
                     <span><strong>*</strong></span> </label>
-                <input type="number" class="form-control form-control-sm" name="nome" placeholder="" required>
+                <input type="number" class="form-control form-control-sm" name="altura_slide3_principal" placeholder="">
             </div>
             <div class="col-md-2">
                 <label class="form-check-label" for="flexCheckIndeterminate">Largura
                     <span><strong>*</strong></span> </label>
-                <input type="number" class="form-control form-control-sm" name="nome" placeholder="" required>
+                <input type="number" class="form-control form-control-sm" name="largura_slide3_principal" placeholder="">
             </div>
             <div class="text-end" style="margin-top: 20px">
                 <input type="submit" class="btn btn-success" value="Salvar Registros">
@@ -96,7 +96,7 @@
 
 </form>
 
-<form action=""  enctype="multipart/form-data" style="margin-bottom: 300px">
+<form action="" method="GET" enctype="multipart/form-data" style="margin-bottom: 300px">
 
     <div class="row g-3 shadow p-4 mb-5 bg-body rounded" style="margin-top: 80px">
         <div class="text-center">
@@ -113,12 +113,12 @@
             <div class="col-md-2">
                 <label class="form-check-label" for="flexCheckIndeterminate">Altura
                     <span><strong>*</strong></span> </label>
-                <input type="number" class="form-control form-control-sm" name="nome" placeholder="" required>
+                <input type="number" class="form-control form-control-sm" name="nome" placeholder="">
             </div>
             <div class="col-md-2">
                 <label class="form-check-label" for="flexCheckIndeterminate">Largura
                     <span><strong>*</strong></span> </label>
-                <input type="number" class="form-control form-control-sm" name="nome" placeholder="" required>
+                <input type="number" class="form-control form-control-sm" name="nome" placeholder="">
             </div>
             <div class="text-end" style="margin-top: 20px">
                 <input type="submit" class="btn btn-success" value="Salvar Registros">
@@ -128,7 +128,7 @@
 
 </form>
 
-<form action=""  enctype="multipart/form-data" style="margin-bottom: 300px">
+<form action="" method="GET"  enctype="multipart/form-data" style="margin-bottom: 300px">
 
     <div class="row g-3 shadow p-4 mb-5 bg-body rounded" style="margin-top: 80px">
         <div class="text-center">
@@ -146,12 +146,12 @@
             <div class="col-md-2">
                 <label class="form-check-label" for="flexCheckIndeterminate">Altura
                     <span><strong>*</strong></span> </label>
-                <input type="number" class="form-control form-control-sm" name="nome" placeholder="" required>
+                <input type="number" class="form-control form-control-sm" name="nome" placeholder="">
             </div>
             <div class="col-md-2">
                 <label class="form-check-label" for="flexCheckIndeterminate">Largura
                     <span><strong>*</strong></span> </label>
-                <input type="number" class="form-control form-control-sm" name="nome" placeholder="" required>
+                <input type="number" class="form-control form-control-sm" name="nome" placeholder="">
             </div>
 
         </div>
@@ -167,12 +167,12 @@
             <div class="col-md-2">
                 <label class="form-check-label" for="flexCheckIndeterminate">Altura
                     <span><strong>*</strong></span> </label>
-                <input type="number" class="form-control form-control-sm" name="nome" placeholder="" required>
+                <input type="number" class="form-control form-control-sm" name="nome" placeholder="">
             </div>
             <div class="col-md-2">
                 <label class="form-check-label" for="flexCheckIndeterminate">Largura
                     <span><strong>*</strong></span> </label>
-                <input type="number" class="form-control form-control-sm" name="nome" placeholder="" required>
+                <input type="number" class="form-control form-control-sm" name="nome" placeholder="">
             </div>
             <div class="text-end" style="margin-top: 20px">
                 <input type="submit" class="btn btn-success" value="Salvar Registros">
@@ -184,7 +184,7 @@
 </form>
 
 
-<form action=""  enctype="multipart/form-data" style="margin-bottom: 300px">
+<form action="" method="GET"  enctype="multipart/form-data" style="margin-bottom: 300px">
 
     <div class="row g-3 shadow p-4 mb-5 bg-body rounded" style="margin-top: 80px">
         <div class="text-center">
@@ -202,12 +202,12 @@
             <div class="col-md-2">
                 <label class="form-check-label" for="flexCheckIndeterminate">Altura
                     <span><strong>*</strong></span> </label>
-                <input type="number" class="form-control form-control-sm" name="nome" placeholder="" required>
+                <input type="number" class="form-control form-control-sm" name="nome" placeholder="">
             </div>
             <div class="col-md-2">
                 <label class="form-check-label" for="flexCheckIndeterminate">Largura
                     <span><strong>*</strong></span> </label>
-                <input type="number" class="form-control form-control-sm" name="nome" placeholder="" required>
+                <input type="number" class="form-control form-control-sm" name="nome" placeholder="">
             </div>
 
         </div>
@@ -280,7 +280,7 @@
 
 </form>
 
-<form action=""  enctype="multipart/form-data" style="margin-bottom: 300px">
+<form action="" method="GET"  enctype="multipart/form-data" style="margin-bottom: 300px">
 
     <div class="row g-3 shadow p-4 mb-5 bg-body rounded" style="margin-top: 80px">
         <div class="text-center">

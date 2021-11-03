@@ -140,4 +140,5 @@ Route::post('/validar/restrito',[AcessoController::class, 'validarLogin']);
 Route::get('/add/restrito/',[AcessoController::class, 'store']);
 Route::POST('/insert/restrito',[AcessoController::class, 'insertRestrito']);
 Route::get('/home/acesso', [AcessoController::class, 'home']);
+Route::get('/banner/alterar',[AcessoController::class, 'Banner']);
 

@@ -77,4 +77,10 @@ class AcessoController extends Controller
      
     
     }
+
+    public function Banner(Request $request){
+
+        ddd($request);
+
+    }
 }
