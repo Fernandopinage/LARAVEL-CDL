@@ -155,42 +155,9 @@
 
     </section>
     <!--/col-max-->
-    <hr>
-    <div class="container" id="container">
-      <div class="row">
-        <div class="col-sm-3">
-          <h6>> CDL MANAUS - DJALMA BATISTA</h6>
-          <span>Cond. Amazonas Flat Service, 3000<br>
-            Loja A, Torre Sul<br>
-            Av. Djalma Batista | Chapada | 69.050-010<br>
-            Segunda a Quinta-feira das 08h às 18h<br>
-            Sexta-feira das 08h às 17h</span>
-        </div>
-        <div class="col-sm-3">
-          <h6>> CDL MANAUS - CENTRO</h6>
-          <span>Rua Rui Barbosa, 156<br>
-            Centro | 69.010-220<br>
-            Segunda a Quinta-feira das 08h às 18h<br>
-            Sexta-feira das 08h às 17h</span>
-        </div>
-        <div class="col-sm-3">
-          <h6>>
-            UTV - RAIZ</h6>
-          <span>Rua Delfim de Souza, 125<br>
-            Raiz | 69.068-020<br>
-            Segunda a Quinta-feira das 08h às 18h<br>
-            Sexta-feira das 08h às 17h</span>
-        </div>
-        <div class="col-sm-3">
-          <h6>> ATENDIMENTO</h6>
-          <span>Dúvidas<br>
-            + 55 92 3627-2867<br>
-            + 55 92 3627-2868<br>
-            suporte@cdlmanaus.org.br</span>
-        </div>
-      </div>
+    
     </div>
-    <hr>
+    
     <!---- ------>
 
   </div>

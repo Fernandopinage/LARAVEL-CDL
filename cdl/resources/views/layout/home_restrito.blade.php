@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <link href="/css/candidato.css" rel="stylesheet">
+    <link href="/css/restrito.css" rel="stylesheet">
     <link rel="icon" href="/img/title.png">
     <title>Empregabilidade | CDL Manaus</title>
 </head>
@@ -66,6 +66,9 @@
             </ul>
 
         </div>
+
+ 
+  
         
       </div>
       <ul class="nav justify-content-end">
@@ -95,8 +98,8 @@
     </div>
 
 
-    <footer >
-      <nav class="navbar fixed-bottom navbar-expand-sm navbar bg" style="background-color: #d0d0d056; margin-bottom:0px">
+    <footer style="margin-top: 150px;" >
+      <nav class="navbar bottom navbar-expand-sm navbar bg" style="background-color: #d0d0d056; margin-bottom:0px">
       
         <div class="container" id="container" style="color:#black; font-size:14px;">
             <div class="row">

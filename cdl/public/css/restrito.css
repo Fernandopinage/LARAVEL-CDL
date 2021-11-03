@@ -30,23 +30,12 @@ title{
         
         }
       
-        .btn{
-          color: #fff;
-          background-color: #092c6e;
-        }
-        .btn:hover{
-      
-          color: #f0ede9;
-          background-color: #051f50;
-          border-color: #051f50;
-        }
-      
         a:hover {
           text-decoration: none;
           color: black;
         }
-        hr{
-          color: #fff;
+        strong{
+          color: red;
         }
         h2{
           color: #004C97;

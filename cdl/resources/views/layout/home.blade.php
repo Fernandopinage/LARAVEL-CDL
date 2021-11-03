@@ -119,7 +119,7 @@
 
                     </div>
                     <ul class="list-group list-group-flush">
-                        <a href="#" class="btn btn-outline-primary btn-lg btn-block">BUSCAR CANDIDATO</a>
+                        <a href="/login/candidato" class="btn btn-outline-primary btn-lg btn-block">BUSCAR CANDIDATO</a>
                     </ul>
                 </div>
             </div>
@@ -133,7 +133,7 @@
                             empresas. Cadastra-se. É GRÁTIS!</p>
                     </div>
                     <ul class="list-group list-group-flush">
-                        <a href="#" class="btn btn-outline-primary btn-lg btn-block">BUSCAR OPORTUNIDADE</a>
+                        <a href="/login/empresa" class="btn btn-outline-primary btn-lg btn-block">BUSCAR OPORTUNIDADE</a>
                     </ul>
                 </div>
             </div>
