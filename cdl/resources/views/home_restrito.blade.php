@@ -2,7 +2,7 @@
 
 @section('home')
 
-<form action="" method="GET"  enctype="multipart/form-data" >
+<form action="/banner/alterar" method="GET"  enctype="multipart/form-data" >
 
     <div class="row g-3 shadow p-4 mb-5 bg-body rounded" style="margin-top: 80px">
         <div class="text-center">
@@ -96,7 +96,7 @@
 
 </form>
 
-<form action="" method="GET" enctype="multipart/form-data" >
+<form action="/banner/alterar" method="GET" enctype="multipart/form-data" >
 
     <div class="row g-3 shadow p-4 mb-5 bg-body rounded" style="margin-top: 80px">
         <div class="text-center">
@@ -128,7 +128,7 @@
 
 </form>
 
-<form action="" method="GET"  enctype="multipart/form-data">
+<form action="/banner/alterar" method="GET"  enctype="multipart/form-data">
 
     <div class="row g-3 shadow p-4 mb-5 bg-body rounded" style="margin-top: 80px">
         <div class="text-center">
@@ -184,7 +184,7 @@
 </form>
 
 
-<form action="" method="GET"  enctype="multipart/form-data" >
+<form action="/banner/alterar" method="GET"  enctype="multipart/form-data" >
 
     <div class="row g-3 shadow p-4 mb-5 bg-body rounded" style="margin-top: 80px">
         <div class="text-center">
@@ -280,7 +280,7 @@
 
 </form>
 
-<form action="" method="GET"  enctype="multipart/form-data">
+<form action="/banner/alterar" method="GET"  enctype="multipart/form-data">
 
     <div class="row g-3 shadow p-4 mb-5 bg-body rounded" style="margin-top: 80px">
         <div class="text-center">
