@@ -367,7 +367,7 @@ class EmpresaController extends Controller
 
            // ddd($request);
   
-        $candidato = Candidato::where(function($query) use ($request){
+            $candidato = Candidato::where(function($query) use ($request){
 
             if($request->area){
                               

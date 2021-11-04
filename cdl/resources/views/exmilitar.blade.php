@@ -37,7 +37,7 @@
                                 <span style="color: #284D92"></span>
                                 <p>
                                 <h1>
-                                    <span style="color: #157347; margin-right:132px; margin-left:70px; ">
+                                    <span style="color: #157347; margin-right:132px; margin-left:40px; ">
 
                                         @if(!empty($candidato->can_foto))
                                         <img src="/img/events/{{$candidato->can_foto}}" id="perfil" height="150px" width="150px"
@@ -58,33 +58,33 @@
 
                                     if(empty($candidato->can_nota)){
                                         ?>
-                                        <img src="/img/0.png" height="150px" width="150px" class="img-thumbnail" alt="{{$candidato->can_nota}}">
+                                        <img src="/img/0.png" height="150px" width="150px" class="img-thumbnail" alt="{{$candidato->can_nota}}" style="border:0px;">
                                         <?php
                                     }
                                     
                                     if($candidato->can_nota == '5'){
                                         ?>
-                                        <img src="/img/5.png" height="150px" width="150px" class="img-thumbnail" alt="{{$candidato->can_nota}}">
+                                        <img src="/img/5.png" height="150px" width="150px" class="img-thumbnail" alt="{{$candidato->can_nota}}" style="border:0px;">
                                         <?php
                                     }
                                     if($candidato->can_nota == '4'){
                                         ?>
-                                        <img src="/img/4.png" height="150px" width="150px" class="img-thumbnail" alt="{{$candidato->can_nota}}">
+                                        <img src="/img/4.png" height="150px" width="150px" class="img-thumbnail" alt="{{$candidato->can_nota}}" style="border:0px;">
                                         <?php
                                     }
                                     if($candidato->can_nota == '3'){
                                         ?>
-                                        <img src="/img/3.png" height="150px" width="150px" class="img-thumbnail" alt="{{$candidato->can_nota}}">
+                                        <img src="/img/3.png" height="150px" width="150px" class="img-thumbnail" alt="{{$candidato->can_nota}}" style="border:0px;">
                                         <?php
                                     }   
                                     if($candidato->can_nota == '2'){
                                         ?>
-                                        <img src="/img/2.png" height="150px" width="150px" class="img-thumbnail" alt="{{$candidato->can_nota}}">
+                                        <img src="/img/2.png" height="150px" width="150px" class="img-thumbnail" alt="{{$candidato->can_nota}}" style="border:0px;">
                                         <?php
                                     }
                                     if($candidato->can_nota == '1'){
                                         ?>
-                                        <img src="/img/1.png" height="150px" width="150px" class="img-thumbnail" alt="{{$candidato->can_nota}}">
+                                        <img src="/img/1.png" height="150px" width="150px" class="img-thumbnail" alt="{{$candidato->can_nota}}" style="border:0px;">
                                         <?php
                                     }
                                     ?>
