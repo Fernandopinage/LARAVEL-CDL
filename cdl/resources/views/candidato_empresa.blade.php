@@ -456,11 +456,9 @@
                             {{$candidato->can_email}}</span>
 
                         <br>
-                        <span><b style="color: #22427c; margin-right:0px">Celular:</b></span>
-
-                        <br>
-                        <span><b style="color: #22427c; margin-right:0px">CPF:</b></span>
-                        <span style="color: #535151"> {{$candidato->can_cpf}}</span>
+                        <span><b style="color: #22427c; margin-right:0px">Telefone:</b></span><span
+                        style="color: #535151">
+                        {{$candidato->can_telefone}}</span>
 
                         <br>
                         @if(isset($candidato->can_utv_titlulo))
