@@ -49,7 +49,7 @@
 <div class="visualizar">
 
     <h1>ÚLTIMOS <b> EX MILITARES </b> EM DESTAQUE</h1>
-    <h5>5330 profissionais cadastrados na última semana</h5>
+    <h5>{{count($candidato)}} profissionais cadastrados na última semana</h5>
 </div>
 
 @if(!empty($candidato))
@@ -58,7 +58,7 @@
 <div class="container" id="canditados">
     @foreach($candidato as $candidato)
 
-    <div class=" d-inline-block" style="padding: 8px;">
+    <div class=" d-inline-block" style="padding: 8px;" data-bs-toggle="modal" data-bs-target="#exampleModal">
 
         <div class="form-row" style="border: 0px;">
             <div class="form-group col-md-4">
@@ -68,38 +68,105 @@
                         <span style="color: #284D92"></span>
                         <p>
                         <h1>
-                            <span style="color: #157347; margin-left:50px; ">
-                                @if($candidato->can_foto != null)
-                                    
-                                    <img src="/img/events/{{$candidato->can_foto}}" height="250px" width="150px" class="img-thumbnail" alt="..." style="border-radius:50%; ">
-                                    </span>
-                                    <span style="color: #696969;"></span>
-                                    
-                                @else
+                            <span style="color: #157347; margin-right:132px; margin-left:70px; ">
 
-                                    <img src="/img/events/perfil.png" alt="profile Pic" width="150px" class="img-thumbnail" style="border-radius:50%; "></span>
-                                    <span style="color: #696969;"></span>
-                                        
+                                @if(!empty($candidato->can_foto))
+                                <img src="/img/events/{{$candidato->can_foto}}" height="150px" width="150px"
+                                    class="img-thumbnail" style="border-radius: 50%">
+
+                                @else
+                                <img src="/img/events/perfil.png" height="150px" width="150px"
+                                    class="img-thumbnail" style="border-radius: 50%">
+
                                 @endif
+
+
+                            </span>
+                            <span style="color: #696969;"></span>
+                            <p class="text-center"> 
+
+                            <?php 
+                            
+                            if(empty($candidato->can_nota)){
+                                ?>
+                                <img src="/img/0.png" height="150px" width="150px" class="img-thumbnail" alt="{{$candidato->can_nota}}" style="border:0px;">
+                                <?php
+                            }
+                            if($candidato->can_nota == '5'){
+                                ?>
+                                <img src="/img/5.png" height="150px" width="150px" class="img-thumbnail" alt="{{$candidato->can_nota}}" style="border:0px;">
+                                <?php
+                            }
+                            if($candidato->can_nota == '4'){
+                                ?>
+                                <img src="/img/4.png" height="150px" width="150px" class="img-thumbnail" alt="{{$candidato->can_nota}}" style="border:0px;">
+                                <?php
+                            }
+                            if($candidato->can_nota == '3'){
+                                ?>
+                                <img src="/img/3.png" height="150px" width="150px" class="img-thumbnail" alt="{{$candidato->can_nota}}" style="border:0px;">
+                                <?php
+                            }   
+                            if($candidato->can_nota == '2'){
+                                ?>
+                                <img src="/img/2.png" height="150px" width="150px" class="img-thumbnail" alt="{{$candidato->can_nota}}" style="border:0px;">
+                                <?php
+                            }
+                            if($candidato->can_nota == '1'){
+                                ?>
+                                <img src="/img/1.png" height="150px" width="150px" class="img-thumbnail" alt="{{$candidato->can_nota}}" style="border:0px;">
+                                <?php
+                            }
+                            ?>
+                            </p>
                         </h1>
                         <hr>
                         <br>
-                        <span><b style="color: #97212d; margin-right:0px">Nome:</b></span><span style="color: #535151">
-                            {{$candidato->can_nome}}</span>
+                        <span><b style="color: #22427c; margin-right:0px">Nome:</b></span><span
+                            style="color: #535151"> {{$candidato->can_nome}}</span>
+                            <span
+                            style="color: #535151"> {{$candidato->can_sobrenome}}</span>
                         <br>
-                        <span><b style="color: #22427c; margin-right:0px">Formação:</b></span><span
-                            style="color: #535151"> {{$candidato->can_formacao}}</span>
+                        <span><b style="color: #22427c; margin-right:0px">Telefone:</b></span><span
+                        style="color: #535151"> {{$candidato->can_telefone}}</span>
+                        <br>
+                        <span><b style="color: #22427c; margin-right:0px">E-mail:</b></span><span
+                        style="color: #535151"> {{$candidato->can_email}}</span>
+                        <br>
+                        <span><b style="color: #22427c; margin-right:0px">CPF:</b></span><span
+                            style="color: #535151"> {{$candidato->can_cpf}}</span>
 
                         <br>
-                        <span><b style="color: #22427c; margin-right:0px">Trabalhando Atualmente:</b></span>
-                        <span style="color: #535151"> {{$candidato->can_area_profissional}}</span>
+                        <span><b style="color: #22427c; margin-right:0px">Unidade Militar:</b></span>
+                        <span style="color: #535151"> {{$candidato->can_unidademilitar}}</span>
 
-                        <div class="text-center d-grid" style="margin-top: 20px;">
-                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#visualizar">
-                                VISUALIZAR PERFIL
-                            </button>
+                        <?php
+                        
+                        if(!empty($candidato->can_nota)){
 
-                        </div>
+                            ?>
+
+                                <div class="d-grid gap-2" style="margin-top: 10px">
+                                    <a class="btn btn-success" href="/militar/filtro/{{base64_encode($candidato->can_id)}}" target="_blank">Avaliado</a>
+                                </div>
+                            
+                            <?php
+
+                        }else{
+
+                            ?>
+                                <div class="d-grid gap-2" style="margin-top: 10px">
+                                    <a class="btn btn-danger" href="/militar/filtro/{{base64_encode($candidato->can_id)}}" target="_blank">Pendente para avaliar</a>
+                                </div>
+                            
+                            
+                            <?php
+                            
+                        }
+                        
+                        ?>
+
+
                     </div>
                 </div>
             </div>

@@ -127,13 +127,13 @@
                 </div>
                 <div class="col-md-2" id="divMatricula">
                     <label class="form-check-label" for="flexCheckIndeterminate"><span style="color:red;">Avaliação Candidato</span></label>
-                    <select class="form-select form-select-sm" name="avalicao" aria-label="Default select example" required>
+                    <select class="form-select form-select-sm" name="avalicao" aria-label="Default select example" value="{{$dados->can_nota}}" required>
                        
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option selected value="5">5</option>  
+                        <option {{$dados->can_nota == '1'? 'selected':'' }} value="1">1</option>
+                        <option {{$dados->can_nota == '2'? 'selected':'' }} value="2">2</option>
+                        <option {{$dados->can_nota == '3'? 'selected':'' }} value="3">3</option>
+                        <option {{$dados->can_nota == '4'? 'selected':'' }} value="4">4</option>
+                        <option {{$dados->can_nota == '5'? 'selected':'' }} value="5">5</option>  
                     </select>
                 </div>
 

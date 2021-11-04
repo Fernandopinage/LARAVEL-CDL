@@ -37,7 +37,7 @@
                                 <span style="color: #284D92"></span>
                                 <p>
                                 <h1>
-                                    <span style="color: #157347; margin-right:132px; margin-left:50px; ">
+                                    <span style="color: #157347; margin-right:132px; margin-left:70px; ">
 
                                         @if(!empty($candidato->can_foto))
                                         <img src="/img/events/{{$candidato->can_foto}}" height="150px" width="150px"
@@ -52,27 +52,53 @@
 
                                     </span>
                                     <span style="color: #696969;"></span>
-                                    <p class="text-center"> <img src="/img/star.png" height="150px" width="150px"
-                                            class="img-thumbnail" alt="..."></p>
+                                    <p class="text-center"> 
+
+                                    <?php 
+                                    
+                                    if($candidato->can_nota == '5'){
+                                        ?>
+                                        <img src="/img/5.png" height="150px" width="150px" class="img-thumbnail" alt="{{$candidato->can_nota}}">
+                                        <?php
+                                    }
+                                    if($candidato->can_nota == '4'){
+                                        ?>
+                                        <img src="/img/4.png" height="150px" width="150px" class="img-thumbnail" alt="{{$candidato->can_nota}}">
+                                        <?php
+                                    }
+                                    if($candidato->can_nota == '3'){
+                                        ?>
+                                        <img src="/img/3.png" height="150px" width="150px" class="img-thumbnail" alt="{{$candidato->can_nota}}">
+                                        <?php
+                                    }   
+                                    if($candidato->can_nota == '2'){
+                                        ?>
+                                        <img src="/img/2.png" height="150px" width="150px" class="img-thumbnail" alt="{{$candidato->can_nota}}">
+                                        <?php
+                                    }
+                                    if($candidato->can_nota == '1'){
+                                        ?>
+                                        <img src="/img/1.png" height="150px" width="150px" class="img-thumbnail" alt="{{$candidato->can_nota}}">
+                                        <?php
+                                    }
+                                    ?>
+                                    </p>
                                 </h1>
                                 <hr>
                                 <br>
-                                <span><b style="color: #97212d; margin-right:0px">Nome:</b></span><span
+                                <span><b style="color: #22427c; margin-right:0px">Nome:</b></span><span
                                     style="color: #535151"> {{$candidato->can_nome}}</span>
+                                    <span
+                                    style="color: #535151"> {{$candidato->can_sobrenome}}</span>
                                 <br>
-                                <span><b style="color: #22427c; margin-right:0px">Formação:</b></span><span
-                                    style="color: #535151"> {{$candidato->can_formacao}}</span>
-
+                                <span><b style="color: #22427c; margin-right:0px">Telefone:</b></span><span
+                                style="color: #535151"> {{$candidato->can_telefone}}</span>
                                 <br>
-                                <span><b style="color: #22427c; margin-right:0px">Status:</b></span>
-                                <span style="color: #535151">
-
-                                    @if ($candidato->can_area_profissional == 'sim')
-                                    {{"Empregada"}}
-                                    @else
-                                    {{"Procurando Emprego"}}
-                                    @endif
-                                </span>
+                                <span><b style="color: #22427c; margin-right:0px">E-mail:</b></span><span
+                                style="color: #535151"> {{$candidato->can_email}}</span>
+                                <br>
+                                <span><b style="color: #22427c; margin-right:0px">CPF:</b></span><span
+                                    style="color: #535151"> {{$candidato->can_cpf}}</span>
 
                                 <br>
                                 <span><b style="color: #22427c; margin-right:0px">Unidade Militar:</b></span>
