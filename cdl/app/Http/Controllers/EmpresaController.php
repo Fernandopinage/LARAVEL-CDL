@@ -59,11 +59,12 @@ class EmpresaController extends Controller
     public function vagasDisponiveis($id)
     {
 
+        $id = base64_decode($id);
        
         $vagas = Vagas::select('*')
         ->orWhere('vag_id_empresa',$id)
         ->get();
-        //ddd($vagas);
+       // ddd($vagas);
         if(!empty($vagas)){
 
             return view('vagas_disponivel', compact('vagas'));
