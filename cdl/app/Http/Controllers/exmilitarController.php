@@ -44,6 +44,7 @@ class exmilitarController extends Controller
             */
             
             $dados = Candidato::where('can_nome','like','%'.$request->buscar.'%')
+            ->orWhere('can_sobrenome','like', '%'.$request->buscar.'%')
             ->orWhere('can_cpf','like', '%'.$request->buscar.'%')
             ->orWhere('can_matricula','like', '%'.$request->buscar.'%')
             ->get();
