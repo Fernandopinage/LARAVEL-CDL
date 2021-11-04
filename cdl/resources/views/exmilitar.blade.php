@@ -40,7 +40,7 @@
                                     <span style="color: #157347; margin-right:132px; margin-left:70px; ">
 
                                         @if(!empty($candidato->can_foto))
-                                        <img src="/img/events/{{$candidato->can_foto}}" height="150px" width="150px"
+                                        <img src="/img/events/{{$candidato->can_foto}}" id="perfil" height="150px" width="150px"
                                             class="img-thumbnail" alt="...">
 
                                         @else
@@ -55,6 +55,12 @@
                                     <p class="text-center"> 
 
                                     <?php 
+
+                                    if(empty($candidato->can_nota)){
+                                        ?>
+                                        <img src="/img/0.png" height="150px" width="150px" class="img-thumbnail" alt="{{$candidato->can_nota}}">
+                                        <?php
+                                    }
                                     
                                     if($candidato->can_nota == '5'){
                                         ?>
