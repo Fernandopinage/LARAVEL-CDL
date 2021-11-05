@@ -41,11 +41,12 @@
 
                                         @if(!empty($candidato->can_foto))
                                         <img src="/img/events/{{$candidato->can_foto}}" id="perfil" height="150px" width="150px"
-                                            class="img-thumbnail" alt="...">
+                                            class="img-thumbnail" alt="">
 
-                                        @else
-                                        <img src="/img/events/perfil.png" height="150px" width="150px"
-                                            class="img-thumbnail" alt="...">
+                                        @endif
+                                        @if(empty($candidato->can_foto))
+                                        <img src="/img/events/perfil.png" id="perfil" height="150px" width="150px"
+                                            class="img-thumbnail"  alt="">
 
                                         @endif
 
