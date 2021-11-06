@@ -60,7 +60,7 @@
                             UTV
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="login/utv">Entrar</a></li>
+                            <li><a class="dropdown-item" href="/login/utv">Entrar</a></li>
 
                         </ul>
                     </li>
