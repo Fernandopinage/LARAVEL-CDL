@@ -14,7 +14,7 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #004691">
         <div class="container-fluid">
           <a class="navbar-brand" href="/home/candidato"><img id="logo" src="/img/cdl_logo.png"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
@@ -24,12 +24,12 @@
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" href="/vagas/candidato">Buscar Vagas</a>
+                <a class="nav-link" href="/vagas/candidato" style="color:#fff;">Buscar Vagas</a>
               </li>
 
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false">
+                  aria-expanded="false" style="color:#fff;">
                   Opções
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">

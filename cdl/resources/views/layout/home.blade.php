@@ -14,7 +14,7 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #004691">
         <div class="container-fluid">
             <a class="navbar-brand" href="/"><img id="logo" src="/img/cdl_logo.png"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
@@ -26,7 +26,7 @@
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
+                                data-bs-toggle="dropdown" aria-expanded="false" style="color:#fff;">
                                 Candidatos
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -38,7 +38,7 @@
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
+                                data-bs-toggle="dropdown" aria-expanded="false" style="color:#fff;">
                                 Empresas
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -47,7 +47,7 @@
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
+                                data-bs-toggle="dropdown" aria-expanded="false" style="color:#fff;">
                                 Organizações Militares
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -58,7 +58,7 @@
 
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
+                                data-bs-toggle="dropdown" aria-expanded="false" style="color:#fff;">
                                 UTV
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
