@@ -228,12 +228,16 @@ class OmsController extends Controller
     }
     public function deleteConta(request $request){
 
-        //dd($request->id);
 
-        $oms = Oms::find($request->id);
+        //ddd($request->id);
+        $id = base64_decode($request->id);
+       
+
+        $oms = Oms::find($id);
         $oms->oms_status = 'N';
         $oms->save();
-        return redirect('login/militar')->with('erro', 'Email ou Senha incorretos!');
+        return redirect('login/militar');
+        
     }
 
     public function login()
