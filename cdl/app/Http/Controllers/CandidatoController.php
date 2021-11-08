@@ -6,6 +6,7 @@ use App\Http\Controllers\Requests;
 use App\Mail\candidatoMail;
 use App\Models\Candidato;
 use App\Models\Empresa;
+use App\Models\Pretendente;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
@@ -505,13 +506,17 @@ class CandidatoController extends Controller
     public function candidatarVaga(Request $request){
 
 
-        echo $request->id."<pre>";
-        echo $request->user."<pre>";
-        echo $request->emp."<pre>";
+        echo $request->id."<pre>";      //  vaga
+        echo $request->user."<pre>";    //  usuario
+        echo $request->emp."<pre>";     //  empresa
 
         
-
-
+        $Pretendente = new Pretendente();
+        $Pretendente->ptd_id_candidato = $request->user;    // id candidado
+        $Pretendente->ptd_id_vaga = $request->id;           // id nuemro da vaga 
+        $Pretendente->ptd_data =  $request->emp;            // id da empresa
+        $Pretendente->ptd_data =  date('d/m/Y');            // data da candidatura 
+        $Pretendente->save();
 
     }
 
