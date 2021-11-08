@@ -212,11 +212,7 @@ swalWithBootstrapButtons.fire({
     /* Read more about handling dismissals below */
     result.dismiss === Swal.DismissReason.cancel
   ) {
-    swalWithBootstrapButtons.fire(
-      'Cancelado',
-      '',
-      'error'
-    )
+
   }
 })
 
