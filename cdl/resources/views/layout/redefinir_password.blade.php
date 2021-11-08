@@ -13,7 +13,7 @@
 </head>
 <body>
     
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #004691">
     <div class="container-fluid">
       <a class="navbar-brand" href="/home/empresa"><img id="logo" src="/img/cdl_logo.png"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
@@ -40,9 +40,6 @@
 
   </nav>
   
-  <div id="menu">
-
-  </div>
 
     <div class="container">
 

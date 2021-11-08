@@ -12,7 +12,7 @@
 </head>
 <body>
     
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #004691">
     <div class="container-fluid">
       <a class="navbar-brand" href="/home/candidato"><img id="logo" src="/img/cdl_logo.png"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
@@ -44,13 +44,6 @@
     -->
       </div>
       <ul class="nav justify-content-end">
-        <button type="button" class="btn btn position-relative" style="background-color:#F8F9FA; margin-right:10px">
-          <img src="/icons/outline_notifications_black_24dp.png"> 
-          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-            99+
-            <span class="visually-hidden">unread messages</span>
-          </span>
-        </button>
         <li class="nav-item">
           <a class="nav-link active" target="_blank" aria-current="page" href="https://www.linkedin.com/company/cdlm/"><img src="/icons/1.png" width="25px"></a>
         </li>
