@@ -18,6 +18,11 @@ title{
       height: 60px;
       
     }
+
+    .swal2-cancel{
+
+      margin-right: 15px;
+  }
     
       #menu{
         padding: 30px;

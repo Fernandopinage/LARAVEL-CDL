@@ -28,6 +28,10 @@ title{
     
    
 }
+.swal2-cancel{
+
+    margin-right: 15px;
+}
 .carousel-control-next-icon{
     
     background-color: rgba(0, 0, 0, 0.411);

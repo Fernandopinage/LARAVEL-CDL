@@ -13,6 +13,11 @@ title{
     padding: 12px;
     background-color: #284D92;
 }
+
+.swal2-cancel{
+
+  margin-right: 15px;
+}
   
 .form-signin {
     

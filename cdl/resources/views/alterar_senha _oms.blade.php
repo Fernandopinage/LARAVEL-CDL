@@ -4,6 +4,8 @@
 
 <form class="form-signin" method="post" action="{{('/modificar/senha/oms')}}">
 
+    @csrf
+
     <div class="text-center">
         <h2 class="form-signin-heading">ALTERAR SENHA</h2>
         <hr>

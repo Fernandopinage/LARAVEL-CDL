@@ -11,6 +11,11 @@ body{
     
 }
 
+.swal2-cancel{
+
+  margin-right: 15px;
+}
+
 #logo{
     
     width: 150px;

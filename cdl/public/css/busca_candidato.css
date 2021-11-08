@@ -27,7 +27,10 @@ title{
     
     }
 
-    
+    .swal2-cancel{
+
+      margin-right: 15px;
+  }
  
   
     .btn{

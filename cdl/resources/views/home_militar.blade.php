@@ -68,15 +68,15 @@
                         <span style="color: #284D92"></span>
                         <p>
                         <h1>
-                            <span style="color: #157347; margin-right:132px; margin-left:70px; ">
+                            <span style="color: #157347; margin-left: 40px; ">
 
                                 @if(!empty($candidato->can_foto))
-                                <img src="/img/events/{{$candidato->can_foto}}" height="150px" width="150px"
+                                <img src="/img/events/{{$candidato->can_foto}}" id="perfil"
                                     class="img-thumbnail" style="border-radius: 50%">
 
                                 @else
                                 <img src="/img/events/perfil.png" height="150px" width="150px"
-                                    class="img-thumbnail" style="border-radius: 50%">
+                                    class="img-thumbnail" id="perfil" style="border-radius: 50%">
 
                                 @endif
 

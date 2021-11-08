@@ -151,6 +151,18 @@
   <!-- Adicionando Javascript -->
 
 
+  @if(session('diferente'))
+<script>
+  Swal.fire({
+    position: 'center',  
+    icon: 'error',
+    title: 'Dados diferentes',
+    showConfirmButton: false,
+    timer: 3000
+  })
+  </script>
+@endif
+
   <script>
     function excluir(){
    

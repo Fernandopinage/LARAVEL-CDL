@@ -9,6 +9,11 @@ title{
     
   }
 
+  .swal2-cancel{
+
+    margin-right: 15px;
+}
+
   #menu{
     padding: 12px;
     background-color: #284D92;

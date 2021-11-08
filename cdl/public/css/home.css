@@ -28,6 +28,10 @@ title{
     
    
 }
+.swal2-cancel{
+
+    margin-right: 15px;
+}
 input[placeholder]{
 
     text-align: center;

@@ -11,6 +11,12 @@ body{
     background-size: cover;
     
 }
+
+.swal2-cancel{
+
+    margin-right: 15px;
+}
+
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:300,400,500,600,700&display=swap');	
 #menu{
     padding: 30px;

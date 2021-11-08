@@ -16,6 +16,17 @@ title{
     
 }
 
+
+#perfil{
+
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 2.5px solid;
+    
+   
+  }
+
 .banner-principal{
  
     background: url('/img/banner-principal_.jpg'); 
@@ -41,6 +52,10 @@ title{
     padding: 40px;
 }
 
+.swal2-cancel{
+
+    margin-right: 15px;
+}
 
 .form-signin{
 

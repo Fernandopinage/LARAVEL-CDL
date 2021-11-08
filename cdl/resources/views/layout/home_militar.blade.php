@@ -184,7 +184,8 @@
 
 
 <script>
-  function excluir(){
+function excluir(){
+
    
 
 const swalWithBootstrapButtons = Swal.mixin({
@@ -220,6 +221,8 @@ swalWithBootstrapButtons.fire({
 })
 
   }
+
+
 </script>
 
 

@@ -16,6 +16,10 @@ body{
   width: 150px;
   height: 60px;
 }
+.swal2-cancel{
+
+  margin-right: 15px;
+}
 
 .form-signin {
   max-width: 480px;

@@ -508,6 +508,11 @@ class CandidatoController extends Controller
         echo $request->id."<pre>";
         echo $request->user."<pre>";
         echo $request->emp."<pre>";
+
+        
+
+
+
     }
 
 }

@@ -26,6 +26,11 @@ title{
       border-radius: 18px;
     
     }
+
+    .swal2-cancel{
+
+      margin-right: 15px;
+  }
   
     .btn{
       color: #fff;
