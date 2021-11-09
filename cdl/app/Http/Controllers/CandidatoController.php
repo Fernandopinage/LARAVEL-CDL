@@ -139,19 +139,19 @@ class CandidatoController extends Controller
 
                 }
                   
-                
-
             })->get();
 
             $id = base64_decode($id);
             $candidato = Candidato::find($id);
             
-           //$Empresa = Empresa::find($id);
+            $pretendente = Pretendente::all();
+
+            //ddd($pretendente);
            
                
         if (!empty($vagas)) {
 
-            return view('vagas_candidato', compact('vagas','candidato'));
+            return view('vagas_candidato', compact('vagas','candidato','pretendente'));
         } else {
             return view('vagas_candidato');
         }
@@ -505,20 +505,16 @@ class CandidatoController extends Controller
     
     public function candidatarVaga(Request $request){
 
-
-        
-     
-
-        $vaga = $_GET['vaga'];
-        $candidato = $_GET['candidato'];
-        $empresa = $_GET['empresa'];
+        $vaga_id = $_GET['vaga'];
+        $candidato_id = $_GET['candidato'];
+        $empresa_id = $_GET['empresa'];
 
 
 
         $Pretendente = new Pretendente();
-        $Pretendente->ptd_id_candidato = $candidato;    // id candidado
-        $Pretendente->ptd_id_vaga = $vaga;           // id nuemro da vaga 
-        $Pretendente->ptd_id_empresa =  $empresa;            // id da empresa
+        $Pretendente->ptd_id_candidato = $candidato_id;    // id candidado
+        $Pretendente->ptd_id_vaga = $vaga_id;           // id nuemro da vaga 
+        $Pretendente->ptd_id_empresa =  $empresa_id;            // id da empresa
         $Pretendente->ptd_data =  date('Y/m/d');            // data da candidatura 
         
         try {
@@ -528,10 +524,12 @@ class CandidatoController extends Controller
         } catch (\Throwable $th) {
            
         }
-       
-       // ddd($request->emp);
+        
+        
+        return  json_encode($Pretendente);
 
-        return  json_encode('success');
+        
+
     }
 
 }
