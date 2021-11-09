@@ -36,7 +36,8 @@
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li><a class="dropdown-item" href="/editar/candidato/{{session('can_id')}}">Editar Candidato</a></li>
-              <li><a class="dropdown-item" href="/redefinir/password/candidato/{{session('can_id')}}">Redefinir Senha</a></li>
+              <li><a class="dropdown-item" href="/redefinir/password/candidato/{{session('can_id')}}">Redefinir
+                  Senha</a></li>
               <li>
                 <hr class="dropdown-divider">
               </li>
@@ -48,23 +49,27 @@
       </div>
       <ul class="nav justify-content-end">
         <button type="button" class="btn btn position-relative" style="background-color:#F8F9FA; margin-right:10px">
-          <img src="/icons/outline_notifications_black_24dp.png"> 
+          <img src="/icons/outline_notifications_black_24dp.png">
           <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
             99+
             <span class="visually-hidden">unread messages</span>
           </span>
         </button>
         <li class="nav-item">
-          <a class="nav-link active" target="_blank" aria-current="page" href="https://www.linkedin.com/company/cdlm/"><img src="/icons/1.png" width="25px"></a>
+          <a class="nav-link active" target="_blank" aria-current="page"
+            href="https://www.linkedin.com/company/cdlm/"><img src="/icons/1.png" width="25px"></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" target="_blank" aria-current="page" href="https://pt-br.facebook.com/cdlmanausoficial/"><img src="/icons/2.png" width="25px"></a>
+          <a class="nav-link active" target="_blank" aria-current="page"
+            href="https://pt-br.facebook.com/cdlmanausoficial/"><img src="/icons/2.png" width="25px"></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" target="_blank" href="https://www.instagram.com/cdlmanaus/?hl=en"><img src="/icons/4.png" width="25px"></a>
+          <a class="nav-link" target="_blank" href="https://www.instagram.com/cdlmanaus/?hl=en"><img src="/icons/4.png"
+              width="25px"></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" target="_blank" href="https://www.youtube.com/channel/UCyjD5GbQuRrztgyRxlVAZdQ"><img src="/icons/3.png" width="25px"></a>
+          <a class="nav-link" target="_blank" href="https://www.youtube.com/channel/UCyjD5GbQuRrztgyRxlVAZdQ"><img
+              src="/icons/3.png" width="25px"></a>
         </li>
 
       </ul>
@@ -259,11 +264,61 @@
   
   });
 </script>
+
+
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
   integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
 </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
   integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous">
 </script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.3.0/jquery.form.min.js"
+  integrity="sha384-qlmct0AOBiA2VPZkMY3+2WqkHtIQ9lSdAsAn5RUJD/3vA5MKDgSGcdmIv4ycVxyn" crossorigin="anonymous"></script>
+
+<script>
+  function FormVagas(vaga,candidato,empresa){
+
+    var vaga;
+    var candidato;
+    var empresa;
+
+      $.ajax({
+      url: '/vaga/candidato/',
+      type: 'GET',
+      data: { vaga: vaga,
+              candidato:candidato,
+              empresa:empresa
+            },
+      dataType: 'JSON',
+ 
+      success: function (data) {
+          //debugger;
+         //console.log(data);
+        
+        if(data){
+            Swal.fire({
+            position: 'center',
+            icon: 'success',
+            html: '<b>Você se candidatou para a vaga com sucesso!</b>',
+            showConfirmButton: false,
+            timer: 3500
+          })
+
+          document.getElementById('btn'+vaga).style.backgroundColor = "#6c757d";
+          document.getElementById('btn'+vaga).style.color = "#fff";
+          document.getElementById('btn'+vaga).classList.remove('btn-primary')
+          document.getElementById('btn'+vaga).classList.add('tn-secondary');
+        }
+          
+      }
+})
+
+
+
+  }
+</script>
+
+
 
 </html>

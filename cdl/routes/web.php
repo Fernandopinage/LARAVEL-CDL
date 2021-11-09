@@ -42,7 +42,7 @@ Route::get('/redefinir/password/candidato/{id}',[CandidatoController::class, 'up
 Route::get('/password/candidato/',[CandidatoController::class, 'updateSenha']);
 Route::get('/mail/password/candidato/{id}',[CandidatoController::class, 'modificarSenha']);
 Route::post('/modificar/senha/candidato', [CandidatoController::class, 'modificar']);
-Route::get('/vaga/candidato/{id}{user}{emp}',[CandidatoController::class, 'candidatarVaga']);
+Route::get('/vaga/candidato/',[CandidatoController::class, 'candidatarVaga']);
 
 //});
 

@@ -506,18 +506,32 @@ class CandidatoController extends Controller
     public function candidatarVaga(Request $request){
 
 
-        echo $request->id."<pre>";      //  vaga
-        echo $request->user."<pre>";    //  usuario
-        echo $request->emp."<pre>";     //  empresa
-
         
-        $Pretendente = new Pretendente();
-        $Pretendente->ptd_id_candidato = $request->user;    // id candidado
-        $Pretendente->ptd_id_vaga = $request->id;           // id nuemro da vaga 
-        $Pretendente->ptd_data =  $request->emp;            // id da empresa
-        $Pretendente->ptd_data =  date('d/m/Y');            // data da candidatura 
-        $Pretendente->save();
+     
 
+        $vaga = $_GET['vaga'];
+        $candidato = $_GET['candidato'];
+        $empresa = $_GET['empresa'];
+
+
+
+        $Pretendente = new Pretendente();
+        $Pretendente->ptd_id_candidato = $candidato;    // id candidado
+        $Pretendente->ptd_id_vaga = $vaga;           // id nuemro da vaga 
+        $Pretendente->ptd_id_empresa =  $empresa;            // id da empresa
+        $Pretendente->ptd_data =  date('Y/m/d');            // data da candidatura 
+        
+        try {
+            
+            $Pretendente->save();
+            
+        } catch (\Throwable $th) {
+           
+        }
+       
+       // ddd($request->emp);
+
+        return  json_encode('success');
     }
 
 }
