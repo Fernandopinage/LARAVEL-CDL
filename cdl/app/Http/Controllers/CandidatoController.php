@@ -521,6 +521,9 @@ class CandidatoController extends Controller
             
             $Pretendente->save();
             
+            
+
+            
         } catch (\Throwable $th) {
            
         }
