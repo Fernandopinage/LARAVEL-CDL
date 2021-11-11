@@ -11,7 +11,7 @@
     <title>Empregabilidade | CDL Manaus</title>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #004691">
     <div class="container-fluid">
       <a class="navbar-brand" href="/home/militar"><img id="logo" src="/img/cdl_logo.png"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
@@ -21,11 +21,11 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="/busca/militar">Buscar por Ex-Militares</a>
+            <a class="nav-link" href="/busca/militar"style="color:#fff;">Buscar por Ex-Militares</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">
+              aria-expanded="false"style="color:#fff;">
               Opções
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
