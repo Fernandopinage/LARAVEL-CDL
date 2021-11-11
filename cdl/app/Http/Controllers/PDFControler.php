@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Candidato;
-use Barryvdh\DomPDF\FACADE as PDF;
+use Barryvdh\DomPDF\Facade as PDF;
 
 
 class PDFControler extends Controller
@@ -14,7 +14,7 @@ class PDFControler extends Controller
 
         $dados = Candidato::find($id);
     
-        $pdf = PDF::loadView('pdf', compact('dados'));
+        $pdf = PDF::loadView('PDF', compact('dados'));
 
         return $pdf->setPaper("a4")->stream('file.pdf');
 
