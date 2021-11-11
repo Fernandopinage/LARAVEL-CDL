@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Empresa;
 use Illuminate\Http\Request;
 use App\Models\Restrito;
 use Illuminate\Support\Facades\Hash;
@@ -85,8 +86,12 @@ class AcessoController extends Controller
 
     public function listaEmpresa(){
 
-        return view('lista_empresa_restrito');
+        $empresa =  Empresa::all();
+
+        return view('lista_empresa_restrito',compact('empresa'));
     }
+
+
 
     public function Banner(Request $request){
 
