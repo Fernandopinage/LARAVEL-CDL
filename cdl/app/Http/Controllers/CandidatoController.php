@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Requests;
 use App\Mail\candidatoMail;
+use App\Mail\empresaVaga;
 use App\Models\Candidato;
 use App\Models\Empresa;
 use App\Models\Pretendente;
@@ -13,6 +14,7 @@ use Illuminate\Support\Facades\Mail;
 //use Vagas;
 use App\Models\Vagas;
 use Candidatos;
+use stdClass;
 
 class CandidatoController extends Controller
 {
@@ -521,9 +523,7 @@ class CandidatoController extends Controller
             
             $Pretendente->save();
             
-            
-
-            
+        
         } catch (\Throwable $th) {
            
         }
@@ -531,8 +531,10 @@ class CandidatoController extends Controller
         
         return  json_encode($Pretendente);
 
-        
 
     }
+
+
+  
 
 }
