@@ -50,6 +50,11 @@ class AcessoController extends Controller
         return view('home_restrito');
     }
 
+    public function viewBanner(){
+
+        return view('banner_restrito');
+    }
+
     public function store(){
         
         return view('add_restrito');
@@ -76,6 +81,11 @@ class AcessoController extends Controller
         
      
     
+    }
+
+    public function listaEmpresa(){
+
+        return view('lista_empresa_restrito');
     }
 
     public function Banner(Request $request){

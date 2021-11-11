@@ -139,6 +139,11 @@ Route::get('/restrito/area/acesso', [AcessoController::class, 'index']);   // te
 Route::post('/validar/restrito',[AcessoController::class, 'validarLogin']);
 Route::get('/add/restrito/',[AcessoController::class, 'store']);
 Route::POST('/insert/restrito',[AcessoController::class, 'insertRestrito']);
+
+Route::get('/restrito/lista/empresa',[AcessoController::class, 'listaEmpresa']);
+
+
 Route::get('/home/acesso', [AcessoController::class, 'home']);
+Route::get('/restrito/opt/banner', [AcessoController::class, 'viewBanner']);
 Route::get('/banner/alterar',[AcessoController::class, 'Banner']);
 
