@@ -118,15 +118,17 @@ class AcessoController extends Controller
             return redirect('/redefinir/restrito')->with('mensagem', 'Produto cadastrado com sucesso!');
         }else{
             
-            $id = $Restrito->res_id;
+            echo $id = $Restrito->res_id;
             
-            $email = $Restrito->res_email;
-            $nome = $Restrito->res_nome;
+           echo $email = $Restrito->res_email;
+           echo $nome = $Restrito->res_nome;
+
+
             // dd($empresa->emp_email);
             
-            Mail::to($request->email)->send(new restritoMail(Restrito::where('res_email', $request->email)->first()));
+           Mail::to($request->email)->send(new restritoMail(Restrito::where('res_email', $request->email)->first()));
             
-            return redirect('/redefinir/restrito')->with('sucesso', 'Produto cadastrado com sucesso!');
+           return redirect('/redefinir/restrito')->with('sucesso', 'Produto cadastrado com sucesso!');
         }
         /*
         */
@@ -136,9 +138,24 @@ class AcessoController extends Controller
     public function passwordRedefinir($id){
 
         //$id = base64_decode($id);
-
         $restrito = Restrito::find($id);
+     
 
-        return view('alterar_senha_candidato', compact('restrito'));
+        //ddd($restrito);
+        return view('alterar_senha_restrito', compact('restrito'));
+    }
+
+    public function modificar(Request $request){
+
+        if($request->confsenha == $request->newsenha){
+
+            $Restrito =  Restrito::find($request->id);
+            $Restrito->res_id  = $request->id;
+            $Restrito->res_senha  = md5($request->newsenha);
+            $Restrito->save();
+            return redirect('/redefinir/password/restrito/'.$request->id)->with('sucesso', 'Produto cadastrado com sucesso!');
+        }else{
+            return redirect('/redefinir/restrito')->with('mensagem', 'Produto cadastrado com sucesso!');
+        }
     }
 }

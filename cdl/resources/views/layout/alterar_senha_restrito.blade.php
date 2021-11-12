@@ -20,26 +20,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="/vagas/candidato" style="color:#fff;">Buscar Vagas</a>
-          </li>
-
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false" style="color:#fff;">
-              Opções
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="/editar/candidato/{{session('can_id')}}">Editar Candidato</a></li>
-              <li><a class="dropdown-item" href="/redefinir/password/candidato/{{session('can_id')}}">Redefinir Senha</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item" href="/">Sair</a></li>
-            </ul>
-          </li>
-        </ul>
+       
 
       </div>
       <ul class="nav justify-content-end">

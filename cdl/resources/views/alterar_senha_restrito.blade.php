@@ -4,7 +4,7 @@
 
 
 
-<form class="form-signin" method="POST" action="/modificar/senha/candidato">
+<form class="form-signin" method="POST" action="/modificar/senha/registro">
 
     <div class="text-center">
         <h2 class="form-signin-heading">ALTERAR SENHA</h2>
@@ -13,7 +13,7 @@
     </div>
     @csrf
     <div class="mb-3">
-        <input type="text" name="id" value="{{$restrito->can_id;}}">
+        <input type="hidden" name="id" value="{{$restrito->res_id;}}">
         <label for="formGroupExampleInput" class="form-label">*Nova senha</label>
         <input type="password" class="form-control form-control" name="newsenha" minlength="6" maxlength="12"
             placeholder="Digite sua nova senha" required />

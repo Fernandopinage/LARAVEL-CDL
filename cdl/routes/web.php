@@ -144,7 +144,7 @@ Route::get('/redefinir/restrito',[AcessoController::class, 'redefinirSenha']);
 Route::post('/redefinir/senha/restrito',[AcessoController::class, 'redefinirPassword']);
 Route::get('/redefinir/password/restrito/{id}',[AcessoController::class, 'passwordRedefinir']);
 Route::get('/restrito/lista/empresa',[AcessoController::class, 'listaEmpresa']);
-
+Route::post('/modificar/senha/registro',[AcessoController::class, 'modificar']);
 
 Route::get('/home/acesso', [AcessoController::class, 'home']);
 Route::get('/restrito/opt/banner', [AcessoController::class, 'viewBanner']);
