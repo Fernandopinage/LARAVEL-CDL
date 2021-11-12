@@ -13,7 +13,7 @@ class Pretendentes extends Migration
      */
     public function up()
     {
-        Schema::create('TBL_PRETENDENTES', function (Blueprint $table) {
+        Schema::create('tbl_pretendentes', function (Blueprint $table) {
             $table->increments('ptd_id');          //  id auto incremento primary key
             $table->string('ptd_id_candidato')->nullable();  
             $table->string('ptd_id_vaga')->nullable();   

@@ -10,7 +10,7 @@ class Pretendente extends Model
     use HasFactory;
 
             // definindo a tabela 
-            protected $table = 'TBL_PRETENDENTES';
+            protected $table = 'tbl_pretendentes';
 
             //  definindo chave primaria
             protected $primaryKey = 'ptd_id';
