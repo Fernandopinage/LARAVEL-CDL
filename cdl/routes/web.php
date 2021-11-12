@@ -66,6 +66,9 @@ Route::post('/modificar/senha/empresa', [EmpresaController::class, 'modificarSen
 Route::POST('/update/senha/empresa', [EmpresaController::class, 'updateSenha']);   // Update Senha 
 Route::get('/filtra/candidato/empresa', [EmpresaController::class, 'filtroEmpresa']); // chamando tela de filtro candidato
 Route::get('/buscar/candidato/empresa', [EmpresaController::class, 'filtrarCandidato']); // filtrando candidato 
+
+Route::get('/buscar/ideial/empresa/{id}', [EmpresaController::class, 'candidatoFiltro']); 
+
 Route::get('/anuncio/empresa', [EmpresaController::class, 'anuciarVagas']); // chamndo tela de anucio
 Route::post('/anucie/vaga/empresa', [VagasController::class, 'anucieVagas']); // anucio de vaga
 Route::get('/logout/empresa/{id}', [EmpresaController::class, 'logout']);

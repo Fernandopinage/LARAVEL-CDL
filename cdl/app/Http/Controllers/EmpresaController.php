@@ -462,4 +462,23 @@ class EmpresaController extends Controller
         $request->session()->pull('empresa');
         return redirect('login/empresa');
     }
+
+    public function candidatoFiltro($id){
+
+        $id = base64_decode($id);
+
+    
+        $dados = Candidato::where('can_id', '=', $id)
+        ->where('can_exmilitar', '=', 'Sim')
+        ->get();
+          
+
+       // ddd($dados);
+
+        return view('buscar_filtro_candidato',compact('dados'));
+        
+
+
+        
+    }
 }

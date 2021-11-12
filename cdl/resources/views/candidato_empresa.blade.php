@@ -424,7 +424,7 @@
 @if(!empty($candidato))
 <div class="container" id="canditados" style="margin-top: 50px; margin-bottom:50px">
     @foreach ($candidato as $candidato)
-
+  
     <div class=" d-inline-block" style="padding: 8px;" data-bs-toggle="modal" data-bs-target="#exampleModal">
         <div class="form-row" style="border: 0px;">
             <div class="form-group col-md-4">
@@ -465,11 +465,12 @@
                         <span><b style="color: #22427c; margin-right:0px">Curso UTV:</b></span><span>{{$candidato->can_utv_titlulo[0]}}</span>
                         @endif
                     </div>
-                    <input type="submit" class="btn btn-primary" value="Seu candidato ideal" style="color:#fff;">
+                    <a  href="/buscar/ideial/empresa/{{base64_encode($candidato->can_id)}}" target="_blank" class="btn btn-primary" style="color:#fff;">Seu candidato ideal</a>
                 </div>
             </div>
         </div>
     </div>
+   
     @endforeach
 
 </div>
