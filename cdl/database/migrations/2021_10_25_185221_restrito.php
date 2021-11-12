@@ -19,7 +19,7 @@ class Restrito extends Migration
 
             $table->increments('res_id');      // id auto increment
             $table->string('res_nome')->nullable();         
-            $table->string('res_email')->nullable();  
+            $table->string('res_email')->nullable()->unique();  
             $table->string('res_senha')->nullable();            
             $table->string('res_perfil')->nullable();     
             $table->timestamps();
