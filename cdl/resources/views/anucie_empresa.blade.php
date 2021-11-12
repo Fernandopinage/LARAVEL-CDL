@@ -35,7 +35,7 @@
                     <label class="form-check-label" for="flexCheckIndeterminate">Cargo/Função
                         <span><strong>*</strong></span></label>
 
-                    <input type="text" name="cargo" id="cargo" class="form-control form-control-sm" placeholder="">
+                    <input type="text" name="cargo" id="cargo" class="form-control form-control-sm" placeholder="" required>
                 </div>
                 <div class="col-md-3">
                     <label class="form-check-label" for="flexCheckIndeterminate">Tipo de Vaga

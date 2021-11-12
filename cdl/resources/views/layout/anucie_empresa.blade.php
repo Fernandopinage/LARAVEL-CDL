@@ -196,7 +196,7 @@
     if(document.getElementById('formacao').value === 'Ensino_Médio_Completo'){
       
       $('#curso_div').hide();
-      $('#termino_div').show();
+      $('#termino_div').hide();
       $label = document.getElementById('termino_div_label');
       $label.innerHTML = "Ano de conclusão"
       $('#semestre_div').hide();
@@ -218,7 +218,7 @@
     if(document.getElementById('formacao').value  === 'Ensino_Técnico_Completo'){
   
       $('#curso_div').show();
-      $('#termino_div').show();
+      $('#termino_div').hide();
       $label = document.getElementById('termino_div_label');
       $label.innerHTML = "Ano de conclusão"
       $('#semestre_div').hide();
@@ -231,7 +231,7 @@
   
   
       $('#curso_div').show();
-      $('#termino_div').hide();
+      $('#termino_div').show();
       $('#semestre_div').show();
       $('#periodo_div').hide();
       $('#institucao_div').show();
@@ -242,7 +242,7 @@
   
         $('#periodo_div').hide();
         $('#curso_div').show();
-        $('#termino_div').show();
+        $('#termino_div').hide();
         $label = document.getElementById('termino_div_label');
         $label.innerHTML = "Ano de conclusão"
         $('#semestre_div').hide();
@@ -255,7 +255,7 @@
     if(document.getElementById('formacao').value  === 'Superior_Cursando'){
   
     $('#curso_div').show();
-    $('#termino_div').hide();
+    $('#termino_div').show();
     $('#semestre_div').hide();
     $('#periodo_div').show();
     $('#institucao_div').show();
@@ -266,7 +266,7 @@
     if(document.getElementById('formacao').value  === 'Pós-Graduação_Completo'){
   
     $('#curso_div').show();
-    $('#termino_div').show();
+    $('#termino_div').hide();
     $('#semestre_div').hide();
     $('#periodo_div').hide();
     $label = document.getElementById('termino_div_label');
@@ -278,7 +278,7 @@
     if(document.getElementById('formacao').value  === 'Pós-Graduação_Cursando'){
   
       $('#curso_div').show();
-      $('#termino_div').hide();
+      $('#termino_div').show();
       $('#semestre_div').hide();
       $('#periodo_div').show();
       $('#institucao_div').show();
