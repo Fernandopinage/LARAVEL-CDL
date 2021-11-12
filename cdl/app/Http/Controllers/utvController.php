@@ -128,7 +128,8 @@ class utvController extends Controller
 
     public function redefinirSenha(Request $request)
     {
-
+            
+        
         $curso = UTV::where('utv_email', $request->email)->first();  // pegando os dados da empresa EMAIL NOME
 
         if (!empty($curso)) {
@@ -145,6 +146,8 @@ class utvController extends Controller
 
             return redirect('/redefinir/senha/utv')->with('mensagem', 'Produto cadastrado com sucesso!');
         }
+        
+
     }
 
 
