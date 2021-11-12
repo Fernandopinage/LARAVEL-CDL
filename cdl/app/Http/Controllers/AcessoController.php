@@ -126,7 +126,7 @@ class AcessoController extends Controller
             
             Mail::to($request->email)->send(new restritoMail(Restrito::where('res_email', $request->email)->first()));
             
-           // return redirect('/redefinir/restrito')->with('sucesso', 'Produto cadastrado com sucesso!');
+            return redirect('/redefinir/restrito')->with('sucesso', 'Produto cadastrado com sucesso!');
         }
         /*
         */
@@ -135,6 +135,10 @@ class AcessoController extends Controller
 
     public function passwordRedefinir($id){
 
-        echo $id;
+        //$id = base64_decode($id);
+
+        $restrito = Restrito::find($id);
+
+        return view('alterar_senha_candidato', compact('restrito'));
     }
 }
