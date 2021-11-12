@@ -109,11 +109,10 @@ class AcessoController extends Controller
 
     public function redefinirPassword(Request $request){
 
-    
 
 
         $Restrito = Restrito::where('res_email', $request->email)->first();  // pegando os dados da empresa EMAIL NOME
-
+        
         //ddd($Restrito);
         if(empty($Restrito)){
             return redirect('/redefinir/restrito')->with('mensagem', 'Produto cadastrado com sucesso!');
@@ -126,9 +125,11 @@ class AcessoController extends Controller
             // dd($empresa->emp_email);
             
             Mail::to($request->email)->send(new restritoMail(Restrito::where('res_email', $request->email)->first()));
-
-            return redirect('/redefinir/restrito')->with('sucesso', 'Produto cadastrado com sucesso!');
+            
+           // return redirect('/redefinir/restrito')->with('sucesso', 'Produto cadastrado com sucesso!');
         }
+        /*
+        */
 
     }
 

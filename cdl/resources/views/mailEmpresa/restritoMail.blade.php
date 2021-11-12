@@ -8,7 +8,7 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <title>Document</title>
+    <title>Redefinir</title>
 </head>
 
 <body>
@@ -22,10 +22,10 @@
         </nav>
     </div>
     <div class="body">
-        <p class="text-start"><span>Olá</span><span>,{{$inputs->res_nome}}.<span></p>
+        <p class="text-start"><span>Ola</span><span>,{{$inputs->res_nome}}.<span></p>
         <p class="text-start"><span>Recuperar senha</span></p>
         <p>Não lembra sua senha?</p>
-        <p>Por Favor, <a href="https://cdl.agenciaprogride.com.br/redefinir/password/restrito{{$inputs->res_id}}">Clique aqui</a> é cadastre uma nova senha. </p>
+        <p>Por Favor, <a href="https://cdl.agenciaprogride.com.br/redefinir/password/restrito/{{$inputs->res_id}}">Clique aqui</a> é cadastre uma nova senha. </p>
     </div>
 </body>
 <footer>
