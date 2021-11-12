@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\restritoMail;
 use App\Models\Empresa;
 use Illuminate\Http\Request;
 use App\Models\Restrito;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
 
 class AcessoController extends Controller
 {
@@ -97,5 +99,41 @@ class AcessoController extends Controller
 
         ddd($request);
 
+    }
+
+    public function redefinirSenha(){
+
+        return view('redefinir_retrito');
+
+    }
+
+    public function redefinirPassword(Request $request){
+
+    
+
+
+        $Restrito = Restrito::where('res_email', $request->email)->first();  // pegando os dados da empresa EMAIL NOME
+
+        //ddd($Restrito);
+        if(empty($Restrito)){
+            return redirect('/redefinir/restrito')->with('mensagem', 'Produto cadastrado com sucesso!');
+        }else{
+            
+            $id = $Restrito->res_id;
+            
+            $email = $Restrito->res_email;
+            $nome = $Restrito->res_nome;
+            // dd($empresa->emp_email);
+            
+            Mail::to($request->email)->send(new restritoMail(Restrito::where('res_email', $request->email)->first()));
+
+            return redirect('/redefinir/restrito')->with('sucesso', 'Produto cadastrado com sucesso!');
+        }
+
+    }
+
+    public function passwordRedefinir($id){
+
+        echo $id;
     }
 }

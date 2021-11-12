@@ -140,7 +140,9 @@ Route::get('/restrito/area/acesso', [AcessoController::class, 'index']);   // te
 Route::post('/validar/restrito',[AcessoController::class, 'validarLogin']);
 Route::get('/add/restrito/',[AcessoController::class, 'store']);
 Route::POST('/insert/restrito',[AcessoController::class, 'insertRestrito']);
-
+Route::get('/redefinir/restrito',[AcessoController::class, 'redefinirSenha']);
+Route::post('/redefinir/senha/restrito',[AcessoController::class, 'redefinirPassword']);
+Route::get('/redefinir/password/restrito/{id}',[AcessoController::class, 'passwordRedefinir']);
 Route::get('/restrito/lista/empresa',[AcessoController::class, 'listaEmpresa']);
 
 
