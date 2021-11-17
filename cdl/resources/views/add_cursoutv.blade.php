@@ -8,7 +8,7 @@
     <div class="form-signin">
 
         <div class="text">          
-            <h2 class="form-signin-heading">CURSOS</h2>
+            <h2 class="form-signin-heading">EVENTOS</h2>
             <hr>
         </div>
         

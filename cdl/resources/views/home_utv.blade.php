@@ -55,7 +55,7 @@
 <div class="container shadow-lg p-3 mb-5 bg-body rounded" id="curso">
     <div class="visualizar">
 
-        <h1>Veja os Cursos que a <b> UTV </b> tem para você!</h1>
+        <h1>Veja o que a <b>UTV</b> tem para você!</h1>
 
     </div>
 
@@ -106,8 +106,8 @@
                                 <tr>
                                     <td><b style="color:#006CDE;">{{$curso->utvcurso_hora}}</b></td>
                                     <td><b style="color:#006CDE;">{{$curso->utvcurso_dias}}</b></td>
-                                    <td><b style="color:#006CDE;">{{$curso->utvcurso_data_inicio}} as
-                                            {{$curso->utvcurso_data_final}}</b></td>
+                                    <td><b style="color:#006CDE;">{{date('d/m/Y', strtotime($curso->utvcurso_data_inicio))}} as
+                                            {{date('d/m/Y', strtotime($curso->utvcurso_data_final))}}</b></td>
                                     <td><b style="color:#006CDE;">{{$curso->utvcurso_valor_geral}}</b></td>
                                     <td><b style="color:#006CDE;">{{$curso->utvcurso_valor_estudante}}</b></td>
                                 </tr>

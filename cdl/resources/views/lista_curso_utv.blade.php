@@ -37,7 +37,7 @@
             </div>
             <div class="col-sm-9">
                 <div class="card" style="padding: 15px">
-                    <h5 class="card-title"><b style="color:#006CDE;">Curso: {{$cursos->utvcurso_titulo}}</b></h5>
+                    <h5 class="card-title"><b style="color:#006CDE;">Evento: {{$cursos->utvcurso_titulo}}</b></h5>
                     <h6 class="card-title">Sobre Curso:</h6>
                     <p class="card-text">{{$cursos->utvcurso_desc}}</p>
 
@@ -57,8 +57,8 @@
                                 <tr>
                                     <td><b style="color:#006CDE;">{{$cursos->utvcurso_hora}}</b></td>
                                     <td><b style="color:#006CDE;">{{$cursos->utvcurso_dias}}</b></td>
-                                    <td><b style="color:#006CDE;">{{$cursos->utvcurso_data_inicio}}</b></td>
-                                    <td><b style="color:#006CDE;">{{$cursos->utvcurso_data_final}}</b> </td>
+                                    <td><b style="color:#006CDE;">{{date('d/m/Y', strtotime($cursos->utvcurso_data_inicio))}}</b></td>
+                                    <td><b style="color:#006CDE;">{{date('d/m/Y', strtotime($cursos->utvcurso_data_final))}}<b> </td>
                                     <td><b style="color:#006CDE;">{{$cursos->utvcurso_valor_geral}}</b></td>
                                     <td><b style="color:#006CDE;">{{$cursos->utvcurso_valor_estudante}}</b></td>
                                 </tr>
