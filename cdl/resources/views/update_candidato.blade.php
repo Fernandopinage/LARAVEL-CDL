@@ -749,7 +749,7 @@ $candidato;
 
                     <div class="col-md-2" style="margin-top: 40px;" id="03">
                         <label class="form-check-label" for="inlineCheckbox1">Empresa atual? </label>
-                        <input class="form-check-input" type="checkbox" id="atual_empresa"   id="atual_empresa0" name="atual_empresa[]">
+                        <input class="form-check-input" type="checkbox" onclick="empresaAtual()" id="atual_empresa0" name="atual_empresa[]">
 
                     </div>
 
@@ -761,7 +761,7 @@ $candidato;
 
                     <div class="col-md-2" id="05">
                         <label class="form-check-label" for="flexCheckIndeterminate">Data de termino </label>
-                        <input type="month" class="form-control form-control-sm" placeholder=""
+                        <input type="month" class="form-control form-control-sm" placeholder=""  id="data_termino"
                             name="data_termino_empresa[]" value="{{$candidato->can_data_termino_empresa[$i]}}" >
                     </div>
                     <div class="col-md-2" id="06">
@@ -1107,6 +1107,19 @@ $candidato;
 
 
 @endsection
+
+
+<script>
+
+    function empresaAtual(){
+        if(document.getElementById('atual_empresa0').checked){
+            document.getElementById('data_termino').disabled = true;
+        }else{
+            document.getElementById('data_termino').disabled = false;
+        }   
+    }
+
+</script>
 
 
 <script>
