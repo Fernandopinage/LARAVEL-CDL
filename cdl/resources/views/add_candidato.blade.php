@@ -32,7 +32,7 @@
             <div class="row g-3">
 
                 <div class="col-md-6">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Primeiro Nome
+                    <label class="form-check-label" for="flexCheckIndeterminate">Nome
                         <span><strong>*</strong></span> </label>
                     <input type="text" class="form-control form-control-sm" name="nome" placeholder="" required>
                 </div>
@@ -607,11 +607,7 @@
                         <input type="text" class="form-control form-control-sm" placeholder="" name="salario_empresa[]"
                             onKeyPress="return(moeda(this,'.',',',event))">
                     </div>
-                    <div class="col-md-3" id="07">
-                        <label class="form-check-label" for="flexCheckIndeterminate">Software utilizados</label>
-                        <input type="text" class="form-control form-control-sm" placeholder=""
-                            name="software_empresa[]">
-                    </div>
+   
                 </div>
 
             </div>

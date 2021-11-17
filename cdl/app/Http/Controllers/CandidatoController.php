@@ -271,7 +271,7 @@ class CandidatoController extends Controller
                 $candidato->can_data_inicio_empresa  = $request->data_inicio_empresa;
                 $candidato->can_data_termino_empresa  = $request->data_termino_empresa;
                 $candidato->can_salario_empresa  = $request->salario_empresa;
-                $candidato->can_software_empresa  = $request->software_empresa;
+                //$candidato->can_software_empresa  = $request->software_empresa;
                 $candidato->can_tempoexperiencia  = $request->tempoexperiencia;
                 $candidato->can_termo = $request->termo;
                 $candidato->can_status = 'N';
@@ -389,7 +389,7 @@ class CandidatoController extends Controller
         $candidato->can_data_inicio_empresa  = $request->data_inicio_empresa;
         $candidato->can_data_termino_empresa  = $request->data_termino_empresa;
         $candidato->can_salario_empresa  = $request->salario_empresa;
-        $candidato->can_software_empresa  = $request->software_empresa;
+        //$candidato->can_software_empresa  = $request->software_empresa;
         $candidato->can_tempoexperiencia  = $request->tempoexperiencia;
         $candidato->can_termo = $request->termo;
         $candidato->can_status = $request->status;
