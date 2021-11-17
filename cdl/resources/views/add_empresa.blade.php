@@ -112,15 +112,15 @@
                         value="{{old('ramo')}}" required>
                 </div>
                 <div class="col-md-3">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Telefone</label>
+                    <label class="form-check-label" for="flexCheckIndeterminate">Telefone <span><strong>*</strong></span></label></label>
                     <input type="tel" class="form-control form-control-sm" name="telefone" placeholder="(99) 99999-9999"
-                        onkeypress="mask(this, mphone);" onblur="mask(this, mphone);" value="{{old('telefone')}}">
+                        onkeypress="mask(this, mphone);" onblur="mask(this, mphone);" value="{{old('telefone')}}" required>
                 </div>
                 <div class="col-md-3">
                     <label class="form-check-label" for="flexCheckIndeterminate">Telefone</label>
                     <input type="tel" class="form-control form-control-sm" name="telefone2"
                         placeholder="(99) 99999-9999" onkeypress="mask(this, mphone);" onblur="mask(this, mphone);"
-                        value="{{old('telefone2')}}">
+                        value="{{old('telefone2')}}" required>
                 </div>
             </div>
         </div>

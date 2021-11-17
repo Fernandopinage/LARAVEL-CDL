@@ -139,8 +139,8 @@ $empresa;
                         value="{{$empresa->emp_atividade}}" placeholder="" required>
                 </div>
                 <div class="col-md-3">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Telefone</label>
-                    <input type="tel" class="form-control form-control-sm" name="telefone"
+                    <label class="form-check-label" for="flexCheckIndeterminate">Telefone <span><strong>*</strong></span></label></label></label>
+                    <input type="tel" class="form-control form-control-sm" required name="telefone"
                         value="{{$empresa->emp_telefone}}" placeholder="(99) 99999-9999"
                         onkeypress="mask(this, mphone);" onblur="mask(this, mphone);" />
                 </div>
