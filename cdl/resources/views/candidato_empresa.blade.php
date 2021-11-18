@@ -155,32 +155,18 @@
                     <label class="form-check-label" for="flexCheckIndeterminate">Bairro </label>
                     <input type="text" class="form-control form-select-sm" name="bairro" id="bairro" placeholder="">
                 </div>
-                <div class="col-md-2">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Idioma</label>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="Inglês" id="idioma" name="idioma">
-                        <label class="form-check-label" for="flexCheckDefault">
-                            Inglês
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="Espanhol" id="idioma" name="idioma">
-                        <label class="form-check-label" for="flexCheckChecked">
-                            Espanhol
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="Francês" id="idioma" name="idioma">
-                        <label class="form-check-label" for="flexCheckChecked">
-                            Francês
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="Outros" id="idioma" name="idioma">
-                        <label class="form-check-label" for="flexCheckChecked">
-                            Outros
-                        </label>
-                    </div>
+                <div class="col-md-3">
+                    <label class="form-check-label" for="flexCheckIndeterminate">Escolha um idioma
+                    </label>
+                    <select class="form-select form-select-sm" name="idioma" id="idioma"
+                        aria-label="Default select example">
+                        <option selected></option>
+                        <option value="Inglês">Inglês</option>
+                        <option value="Francês">Francês</option>
+                        <option value="Espanhol">Espanhol</option>
+                        <option value="Outros">Outros</option>
+
+                    </select>
                 </div>
 
                 <div class="col-md-2" id="leitura_ingles">
@@ -391,13 +377,13 @@
                 <div class="col-md-2">
                     <label class="form-check-label" for="flexCheckIndeterminate">PCD</label>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="pcd" id="exampleRadios2" value="s">
+                        <input class="form-check-input" type="radio" name="pcd" id="exampleRadios2" value="sim">
                         <label class="form-check-label" for="exampleRadios2">
                             Sim
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="pcd" id="exampleRadios3" value="n">
+                        <input class="form-check-input" type="radio" name="pcd" id="exampleRadios3" value="não">
                         <label class="form-check-label" for="exampleRadios3">
                             Não
                         </label>

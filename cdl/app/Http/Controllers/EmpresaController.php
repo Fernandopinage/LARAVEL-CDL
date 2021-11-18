@@ -365,66 +365,21 @@ class EmpresaController extends Controller
     public function filtrarCandidato(Request $request)
     {
 
-           // ddd($request);
-  
-            $candidato = Candidato::where(function($query) use ($request){
+        $candidato = Candidato::where(function($query) use ($request){
 
-            if($request->area){
-                              
-                
-                $query->where('can_utv_area_atuacao','like','%'.$request->area.'%');
+            if(!empty($request->area)){
+                $query->whereJsonContains('can_tempoexperiencia', [$request->area]);
             }
+
             /*
-            if($request->experiencia){
-                $query->where('can_tempoexperiencia','like','%'.$request->experiencia.'%');
+            if(!empty($request->formacao)){
+                $query->where('can_formacao','like','%'. $request->formacao.'%');
             }
-            */
-            if($request->formacao){
-                $query->where('can_formacao', $request->formacao);
-            }
-            if($request->letivo){
-                $query->where('can_periodo','like', '%'.$request->letivo.'%');
-            }
-            /*
-            if($request->termino_medio){
-                $query->where('can_curso_ano_termino','like','%'.$request->termino_medio.'%');
-            }
-            */
-            if($request->curso){
-                $query->where('can_curso','like', '%'.$request->curso.'%');
-            }
-            if($request->semetre){
-                $query->where('can_semestre','like', '%'.$request->semetre.'%');
-            }
-            if($request->superior){
-                $query->where('curso_instituicao','like', '%'.$request->superior.'%');
-            }
-            /*
-            if($request->pos){
-                $query->where('can_periodo','like','%'.$request->pos.'%');
-            }
-            */
-            if($request->bairro){
-                $query->where('can_bairro','like', '%'.$request->bairro.'%');
-            }
-            if($request->idioma){
-                $query->where('can_idioma','like', '%'.$request->idioma.'%');
-            }
-            if($request->leitura){
-                $query->where('can_idioma_leitura','like', '%'.$request->leitura.'%');
-            }
-            if($request->escrita){
-                $query->where('can_idioma_escrita','like','%'.$request->escrita.'%');
-            }
-            if($request->pcd){
-                $query->where('can_pcd',$request->pcd);
-            }
-            
+           */
+
         })->get();
 
-        //ddd($candidato);
-
-        
+        ddd($candidato);
         
         if(!empty($candidato)){
 
