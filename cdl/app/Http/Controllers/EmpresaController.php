@@ -367,7 +367,7 @@ class EmpresaController extends Controller
 
         $candidato = Candidato::where(function($query) use ($request){
 
-            if(!empty($request->area)){
+            if($request->area){
                 $query->whereJsonContains('can_tempoexperiencia', [$request->area]);
             }
 
