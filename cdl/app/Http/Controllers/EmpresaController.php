@@ -379,7 +379,7 @@ class EmpresaController extends Controller
 
         })->get();
 
-        ddd($candidato);
+        //ddd($candidato);
         
         if(!empty($candidato)){
 
