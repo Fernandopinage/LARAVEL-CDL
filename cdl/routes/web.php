@@ -134,8 +134,6 @@ Route::get('/avaliar/candidato/utv/',[utvController::class, 'validarCandidato'])
 
 //}
 
-
-
 Route::get('/restrito/area/acesso', [AcessoController::class, 'index']);   // tela de acesso area administrativa
 Route::post('/validar/restrito',[AcessoController::class, 'validarLogin']);
 Route::get('/add/restrito/',[AcessoController::class, 'store']);
