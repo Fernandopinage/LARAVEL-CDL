@@ -25,27 +25,6 @@ class exmilitarController extends Controller
 
        
             
-            /* 
-            $dados = Candidato::where(function($query) use ($request){
-                
-                if($request->can_exmilitar){
-                    $query->where('can_exmilitar','!=','Não');
-                }
-                if($request->can_nome){
-                    $query->orWhere('can_nome','like','%'.$request->buscar.'%');
-                }
-                if($request->can_cpf){
-                    $query->orWhere('can_cpf','like', '%'.$request->buscar.'%');
-                }
-                if($request->can_matricula){
-                    $query->orWhere('can_matricula','like', '%'.$request->buscar.'%');
-                }
-                
-            })->get();
-            
-            ddd($dados);
-            */
-            
             $dados = Candidato::where('can_nome','like','%'.$request->buscar.'%')
             ->orWhere('can_sobrenome','like', '%'.$request->buscar.'%')
             ->orWhere('can_cpf','like', '%'.$request->buscar.'%')
