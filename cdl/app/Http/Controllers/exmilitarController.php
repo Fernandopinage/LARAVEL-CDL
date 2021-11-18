@@ -19,8 +19,11 @@ class exmilitarController extends Controller
     }
 
     public function filtroExmilitar(Request $request){
+        
 
         if(!empty($request)){
+
+       
             
             /* 
             $dados = Candidato::where(function($query) use ($request){
@@ -46,7 +49,7 @@ class exmilitarController extends Controller
             $dados = Candidato::where('can_nome','like','%'.$request->buscar.'%')
             ->orWhere('can_sobrenome','like', '%'.$request->buscar.'%')
             ->orWhere('can_cpf','like', '%'.$request->buscar.'%')
-            ->orWhere('can_matricula','like', '%'.$request->buscar.'%')
+            ->orWhere('can_unidademilitar','like', '%'.$request->buscar.'%')
             ->get();
             
             
