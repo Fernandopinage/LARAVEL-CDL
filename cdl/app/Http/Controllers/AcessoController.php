@@ -37,12 +37,12 @@ class AcessoController extends Controller
                     return redirect('/home/acesso');                                  // redirecinanmento se estiver tudo certo
                    
             } else {
-                return redirect('login/acesso');
+                return redirect('restrito/area/acesso');
                
             }
             
         } else {
-            return redirect('/login/acesso');
+            return redirect('restrito/area/acesso');
            
         }
         
