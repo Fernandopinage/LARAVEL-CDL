@@ -29,7 +29,7 @@
     </div>
 
 </form>
-
+<!-- REMOVER ISSO -->
 <div class="photo">
     <img src="/img/man2-candidato1.png">
 </div>
