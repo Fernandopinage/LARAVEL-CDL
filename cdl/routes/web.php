@@ -82,6 +82,10 @@ Route::get('/home/militar', [OmsController::class, 'home']);
 Route::get('/add/oms/', [OmsController::class, 'formularioOms']); // add OMS
 Route::get('/insert/oms/', [OmsController::class, 'store']);
 Route::get('/busca/militar', [exmilitarController::class, 'index']); // chamando tela busca 
+
+Route::get('/utv/militar/{id}', [exmilitarController::class, 'utvMilitar']);
+
+
 Route::get('busca/militar/filtro',[exmilitarController::class, 'filtroExmilitar']);
 Route::get('/militar/filtro/{id}', [exmilitarController::class, 'abaFiltro']);
 Route::get('/oms/redefinir', [OmsController::class, 'redefinir']); // tela de redefinir senha
@@ -125,15 +129,13 @@ Route::get('/redefinir/password/utv/{id}', function ($id) {
     return view('update_password_utv', ['id' => $id]);
     echo $id;
 });
+
 Route::get('/recuperar/senha/utv/', [utvController::class, 'recuperarSenha']);
 Route::get('/buscar/candidato/utv/', [utvController::class, 'buscarCandidato']);
 Route::get('/buscar/filtro/candidato/', [utvController::class, 'filtrarCandidato']);
 Route::get('/utv/filtro/{id}', [utvController::class, 'abaFiltro']);
 Route::get('/avaliar/candidato/utv/',[utvController::class, 'validarCandidato']);
-
-
 //}
-
 Route::get('/restrito/area/acesso', [AcessoController::class, 'index']);   // tela de acesso area administrativa
 Route::post('/validar/restrito',[AcessoController::class, 'validarLogin']);
 Route::get('/add/restrito/',[AcessoController::class, 'store']);

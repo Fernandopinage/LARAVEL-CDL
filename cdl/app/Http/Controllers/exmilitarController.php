@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Candidato;
 use Illuminate\Http\Request;
+use App\Models\UtvCursos;
 use Vagas;
 
 class exmilitarController extends Controller
@@ -44,6 +45,17 @@ class exmilitarController extends Controller
         }
 
         
+    }
+
+    
+    public function utvMilitar(Request $request){
+
+       $request = base64_decode($request->id);
+
+        $dados =  UtvCursos::find($request);
+       
+        return view('lista_utv_militar',compact('dados'));
+
     }
 
     public function abaFiltro($id){

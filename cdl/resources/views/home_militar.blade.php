@@ -182,9 +182,11 @@
     <h1>Veja os Cursos que a <b> UTV </b> tem para você!</h1>
 
 </div>
+
 <div class="container" id="curso">
     @foreach ($curso as $curso)
 
+    <a href="/utv/militar/{{base64_encode($curso->utvcurso_id)}}" style="text-decoration:none"> <!-- target="_blank" -->
     <div class="d-inline-block" style="margin-top: 20px;">
 
         <div class="row">
@@ -192,9 +194,9 @@
                 <div class="card">
                     <div class="card-body">
                         <h1>
-                            <span style="color: #157347; margin-right:132px"><a href="" target="_blank"><img
+                            <span style="color: #157347; margin-right:132px"><img
                                         src="/img/curso/{{$curso->utvcurso_folder}}" height="800px" width="800px"
-                                        class="img-thumbnail" alt="..."></a>
+                                        class="img-thumbnail" alt="...">
                             </span>
                             <span style="color: #696969;">
                             </span>
@@ -239,6 +241,7 @@
             </div>
         </div>
     </div>
+    </a>
 
     @endforeach
 </div>
