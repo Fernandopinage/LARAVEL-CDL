@@ -629,11 +629,7 @@
                     <input type="text" class="form-control form-control-sm" placeholder="" name="salario_empres[]"
                         value="{{$dados->can_salario_empresa[$i]}}" onKeyPress="return(moeda(this,'.',',',event))" disabled>
                 </div>
-                <div class="col-md-3" id="07">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Softwares utilizava</label>
-                    <input type="text" class="form-control form-control-sm" placeholder="" name="software_empresa[]"
-                        value="{{$dados->can_software_empresa[$i]}}" disabled>
-                </div>
+
                 
         </div>
         @endfor
