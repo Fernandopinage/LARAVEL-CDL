@@ -607,6 +607,10 @@
                         <input type="text" class="form-control form-control-sm" placeholder="" name="salario_empresa[]"
                             onKeyPress="return(moeda(this,'.',',',event))">
                     </div>
+                    <div class="mb-3">
+                        <label for="atividades" class="form-label">Atividades desenvolvidas</label>
+                        <textarea class="form-control" name="atividades[]" id="atividades" rows="3"></textarea>
+                      </div>
    
                 </div>
 
