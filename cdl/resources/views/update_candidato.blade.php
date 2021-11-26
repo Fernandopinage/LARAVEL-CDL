@@ -790,7 +790,7 @@ $candidato;
         </div>
 
         <div class="text">
-            <h2 class="form-signin-heading">Prefêrencias Profissionais
+            <h2 class="form-signin-heading">Preferências Profissionais
             </h2>
 
             <hr>
@@ -1229,7 +1229,7 @@ $candidato;
         if(cont05 <4){
 
         var div = document.createElement('div');
-        div.innerHTML = '<div class="row g-3" id="divPreferencia'+cont05+'"><div class="col-md-6" id="tempoexperiencia_div"><label class="form-check-label" for="flexCheckIndeterminate">Selecione Prefêrencias Profissionais</label> <select class="form-select form-select-sm" name="tempoexperiencia[]" id="tempoexperiencia" aria-label="Default select example" required> <option selected></option><option value="Financeiro">Financeiro</option><option value="Administração">Administração</option><option value="Vendas">Vendas</option><option value="RH">RH</option><option value="Técnologia da informação">Técnologia da informação</option><option value="Logística">Logística</option> <option value="Produção">Produção</option></select></div><div class="col-md-2" id="tempoexperiencia_div" style="margin-top:42px"><input type="button" class="btn btn-danger btn-sm" onclick="removeCamposPreferencia('+cont05+')" value="Remover Prefêrencias"> </div></div></div>';
+        div.innerHTML = '<div class="row g-3" id="divPreferencia'+cont05+'"><div class="col-md-6" id="tempoexperiencia_div"><label class="form-check-label" for="flexCheckIndeterminate">Selecione Preferências Profissionais</label> <select class="form-select form-select-sm" name="tempoexperiencia[]" id="tempoexperiencia" aria-label="Default select example" required> <option selected></option><option value="Financeiro">Financeiro</option><option value="Administração">Administração</option><option value="Vendas">Vendas</option><option value="RH">RH</option><option value="Técnologia da informação">Técnologia da informação</option><option value="Logística">Logística</option> <option value="Produção">Produção</option></select></div><div class="col-md-2" id="tempoexperiencia_div" style="margin-top:42px"><input type="button" class="btn btn-danger btn-sm" onclick="removeCamposPreferencia('+cont05+')" value="Remover Prefêrencias"> </div></div></div>';
                  document.getElementById('listaPreferencia').appendChild(div)
         cont05++;
        
