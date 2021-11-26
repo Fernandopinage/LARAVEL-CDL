@@ -6,9 +6,11 @@ use App\Http\Controllers\EmpresaController;
 use App\Http\Controllers\exmilitarController;
 use App\Http\Controllers\homeController;
 use App\Http\Controllers\OmsController;
+use App\Http\Controllers\Preferencia;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\indexController; // necessario instancia 
 use App\Http\Controllers\PDFControler;
+use App\Http\Controllers\PreferenciaController;
 use App\Http\Controllers\utvController;
 use App\Http\Controllers\VagasController;
 use App\Models\Empresa;
@@ -139,6 +141,10 @@ Route::get('/avaliar/candidato/utv/',[utvController::class, 'validarCandidato'])
 Route::get('/restrito/area/acesso', [AcessoController::class, 'index']);   // tela de acesso area administrativa
 Route::post('/validar/restrito',[AcessoController::class, 'validarLogin']);
 Route::get('/add/restrito/',[AcessoController::class, 'store']);
+
+Route::get('/add/preferencia/',[PreferenciaController::class, 'store']);
+
+
 Route::POST('/insert/restrito',[AcessoController::class, 'insertRestrito']);
 Route::get('/redefinir/restrito',[AcessoController::class, 'redefinirSenha']);
 Route::post('/redefinir/senha/restrito',[AcessoController::class, 'redefinirPassword']);
