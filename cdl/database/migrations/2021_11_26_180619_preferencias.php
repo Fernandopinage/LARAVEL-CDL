@@ -17,8 +17,8 @@ class Preferencias extends Migration
             $table->increments('pre_id');
             $table->string('pre_preferencia')->nullable();             // logo da empresa 
             $table->string('pre_descricao')->nullable();          // nome fantasia da empresa
-           
             $table->timestamps();
+            
         });
     }
 
