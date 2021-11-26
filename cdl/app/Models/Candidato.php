@@ -41,7 +41,7 @@ class Candidato extends Model
             'can_salario_empresa' => 'array',
             'can_software_empresa' => 'array',
             'can_tempoexperiencia' => 'array',
-            
+            'can_atividades' => 'array',
             
 
         ];

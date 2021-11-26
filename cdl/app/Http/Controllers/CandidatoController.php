@@ -190,7 +190,7 @@ class CandidatoController extends Controller
             
         ]);
         */
-
+        
         $existe = new Candidato();
         $existe =  Candidato::where('can_cpf', $request->cpf)->count();
 
@@ -275,13 +275,14 @@ class CandidatoController extends Controller
                 $candidato->can_tempoexperiencia  = $request->tempoexperiencia;
                 $candidato->can_termo = $request->termo;
                 $candidato->can_status = 'N';
+                $candidato->can_atividades =  $request->atividades;
                 $candidato->save();
 
                 //ddd($request);
                 return redirect('login/candidato')->with('mensagem', 'Registro cadastrado com sucesso!'); // redirecionar para tela de anuncio
             }
         } else {
-
+            
             return redirect('/add/candidato')->with('erro', 'erro');
         }
     }

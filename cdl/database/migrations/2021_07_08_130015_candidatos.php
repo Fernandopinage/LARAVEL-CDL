@@ -46,7 +46,7 @@ class Candidatos extends Migration
             $table->string('can_unidademilitar')->nullable(); 
             $table->string('can_matricula')->nullable(); 
             $table->string('can_pcd')->nullable(); 
-
+            $table->string('can_atividades')->nullable(); 
             $table->string('can_email')->nullable(); 
             $table->string('can_senha')->nullable(); 
             $table->string('can_telefone')->nullable(); 
