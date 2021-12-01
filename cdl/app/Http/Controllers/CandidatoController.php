@@ -401,12 +401,12 @@ class CandidatoController extends Controller
         if (!empty($request->status)) {
 
             $candidato->save();
-            return redirect('login/candidato')->with('excluido', 'excluido'); // redirecionar para tela de anuncio
+            return redirect('login/candidato')->with('update', 'Registro cadastrado com sucesso!'); // redirecionar para tela de anuncio
         } else {
             $candidato->can_status = 'N';
             $candidato->save();
             //ddd($request);
-            return redirect('/home/candidato/')->with('mensagem', 'Registro cadastrado com sucesso!'); // redirecionar para tela de anuncio
+            return redirect('/home/candidato/')->with('update', 'Registro cadastrado com sucesso!'); // redirecionar para tela de anuncio
         }
        
     }

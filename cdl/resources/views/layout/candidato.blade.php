@@ -180,5 +180,17 @@ Swal.fire({
 </script>
 @endif
 
+@if(session('update'))
+<script>
+Swal.fire({
+  position: 'center',
+  icon: 'success',
+  title: 'Registro atualizado com sucesso',
+  showConfirmButton: false,
+  timer: 2500
+})
+</script>
+@endif
+
 
 </html>
