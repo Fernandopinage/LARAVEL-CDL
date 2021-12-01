@@ -142,8 +142,8 @@ Route::get('/restrito/area/acesso', [AcessoController::class, 'index']);   // te
 Route::post('/validar/restrito',[AcessoController::class, 'validarLogin']);
 Route::get('/add/restrito/',[AcessoController::class, 'store']);
 
-Route::get('/add/preferencia/',[PreferenciaController::class, 'store']);
-
+Route::get('/add/preferencia/',[PreferenciaController::class, 'index']);
+Route::post('/insert/preferencia/',[PreferenciaController::class, 'insertPreferencias']);
 
 Route::POST('/insert/restrito',[AcessoController::class, 'insertRestrito']);
 Route::get('/redefinir/restrito',[AcessoController::class, 'redefinirSenha']);

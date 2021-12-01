@@ -114,8 +114,6 @@
   </nav>
     
 
- 
-
     <div class="container">
 
         @yield('add_preferencia')
@@ -186,15 +184,16 @@
 <!-- Mensagem de cadastro com sucesso -->
 
 
-@if(session('win'))
+@if(session('mensagem'))
 <script>
-  Swal.fire({
+Swal.fire({
   position: 'center',
   icon: 'success',
-  title: 'Registro cadastrado com sucesso!',
+  title: 'Preferencia Profissional cadastrado com sucesso',
   showConfirmButton: false,
-  timer: 1500
+  timer: 2500
 })
+
 </script>
 @endif
 
