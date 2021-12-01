@@ -147,16 +147,23 @@
                             ?>
 
                                 <div class="d-grid gap-2" style="margin-top: 10px">
-                                    <a class="btn btn-success" href="/militar/filtro/{{base64_encode($candidato->can_id)}}" target="_blank">Avaliado</a>
+                                   <!-- <a class="btn btn-success" href="/militar/filtro/{{base64_encode($candidato->can_id)}}" target="_blank">Avaliado</a> -->
+                                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#valiar{{base64_encode($candidato->can_id)}}">
+                                        Avaliado
+                                    </button>
                                 </div>
-                            
+                                    
                             <?php
 
                         }else{
 
                             ?>
                                 <div class="d-grid gap-2" style="margin-top: 10px">
-                                    <a class="btn btn-danger" href="/militar/filtro/{{base64_encode($candidato->can_id)}}" target="_blank">Pendente para avaliar</a>
+                                   <!-- <a class="btn btn-danger" href="/militar/filtro/{{base64_encode($candidato->can_id)}}" target="_blank">Pendente para avaliar</a> -->
+                                   <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#valiar{{$candidato->can_id}}">
+                                    Pendente para avaliar
+                                  </button>
+                                  
                                 </div>
                             
                             
@@ -168,6 +175,61 @@
 
 
                     </div>
+                    <div class="modal fade" id="valiar{{$candidato->can_id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-scrollable">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Avaliação do candidato</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+
+                                    <div class="text-center">
+                    
+                                        <span id="str01{{$candidato->can_id}}" style="padding-left: 3px;" onclick="star1({{$candidato->can_id}})"><img src="/img/star.png" width="50"></span>
+                                        <span id="str02{{$candidato->can_id}}" style="padding-left: 3px;" onclick="star2({{$candidato->can_id}})"><img src="/img/star.png" width="50"></span>
+                                        <span id="str03{{$candidato->can_id}}" style="padding-left: 3px;" onclick="star3({{$candidato->can_id}})"><img src="/img/star.png" width="50"></span>
+                                        <span id="str04{{$candidato->can_id}}" style="padding-left: 3px;" onclick="star4({{$candidato->can_id}})"><img src="/img/star.png" width="50"></span>
+                                        <span id="str05{{$candidato->can_id}}" style="padding-left: 3px;" onclick="star5({{$candidato->can_id}})"><img src="/img/star.png" width="50"></span>
+                                        
+                                    </div>
+                                    
+                                    <div class="text-center" style="margin-top: 20px">
+                                        {{$candidato->can_nome}} {{$candidato->can_sobrenome}}
+                                    </div>
+
+                    
+                                    <div class="form-check form-switch" style="display: none;">
+                                        <input class="form-check-input" type="checkbox" role="switch" id="str_01{{$candidato->can_id}}" name="valor1">
+                    
+                                    </div>
+                    
+                                    <div class="form-check form-switch" style="display: none;">
+                                        <input class="form-check-input" type="checkbox" role="switch" id="str_02{{$candidato->can_id}}" name="valor2">
+                    
+                                    </div>
+                    
+                                    <div class="form-check form-switch" style="display: none;">
+                                        <input class="form-check-input" type="checkbox" role="switch" id="str_03{{$candidato->can_id}}" name="valor3">
+                    
+                                    </div>
+                                    <div class="form-check form-switch" style="display: none;">
+                                        <input class="form-check-input" type="checkbox" role="switch" id="str_04{{$candidato->can_id}}" name="valor4">
+                    
+                                    </div>
+                                    <div class="form-check form-switch" style="display: none;">
+                                        <input class="form-check-input" type="checkbox" role="switch" id="str_05{{$candidato->can_id}}" name="valor5">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                             
+                              <button type="button" class="btn btn-primary">Avaliar</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                 </div>
             </div>
         </div>

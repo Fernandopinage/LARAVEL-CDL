@@ -221,5 +221,120 @@ swalWithBootstrapButtons.fire({
 
 </script>
 
+<script>
+  function star1(id){
+
+    
+    
+    if(document.getElementById('str_01'+id).checked == true){
+      document.getElementById('str_01'+id).checked = false
+      document.getElementById('str01'+id).innerHTML = '<img src="/img/star.png" width="50">';
+      
+    }else{
+      document.getElementById('str_01'+id).checked = true
+      document.getElementById('str01'+id).innerHTML = '<img src="/img/star_on.png" width="50">';
+
+      document.getElementById('str02'+id).innerHTML = '<img src="/img/star.png" width="50">';
+      document.getElementById('str03'+id).innerHTML = '<img src="/img/star.png" width="50">';
+      document.getElementById('str04'+id).innerHTML = '<img src="/img/star.png" width="50">';
+      document.getElementById('str05'+id).innerHTML = '<img src="/img/star.png" width="50">';
+      document.getElementById('str_02'+id).checked = false;
+      document.getElementById('str_03'+id).checked = false;
+      document.getElementById('str_04'+id).checked = false;
+      document.getElementById('str_05'+id).checked = false;
+
+
+    }
+  }
+
+  function star2(id){
+    
+    if(document.getElementById('str_02'+id).checked == true){
+      document.getElementById('str_02'+id).checked = false
+      document.getElementById('str01'+id).innerHTML = '<img src="/img/star.png" width="50">';
+      document.getElementById('str02'+id).innerHTML = '<img src="/img/star.png" width="50">';
+    }else{
+      document.getElementById('str_02'+id).checked = true
+      document.getElementById('str01'+id).innerHTML = '<img src="/img/star_on.png" width="50">';
+      document.getElementById('str02'+id).innerHTML = '<img src="/img/star_on.png" width="50">';
+      document.getElementById('str03'+id).innerHTML = '<img src="/img/star.png" width="50">';
+      document.getElementById('str04'+id).innerHTML = '<img src="/img/star.png" width="50">';
+      document.getElementById('str05'+id).innerHTML = '<img src="/img/star.png" width="50">';
+      document.getElementById('str_01'+id).checked = false;
+      document.getElementById('str_03'+id).checked = false;
+      document.getElementById('str_04'+id).checked = false;
+      document.getElementById('str_05'+id).checked = false;
+    }
+  }
+
+  function star3(id){
+    
+    if(document.getElementById('str_03'+id).checked == true){
+      document.getElementById('str_03'+id).checked = false
+      document.getElementById('str01'+id).innerHTML = '<img src="/img/star.png" width="50">';
+      document.getElementById('str02'+id).innerHTML = '<img src="/img/star.png" width="50">';
+      document.getElementById('str03'+id).innerHTML = '<img src="/img/star.png" width="50">';
+    }else{
+      document.getElementById('str_03'+id).checked = true
+      document.getElementById('str01'+id).innerHTML = '<img src="/img/star_on.png" width="50">';
+      document.getElementById('str02'+id).innerHTML = '<img src="/img/star_on.png" width="50">';
+      document.getElementById('str03'+id).innerHTML = '<img src="/img/star_on.png" width="50">';
+      document.getElementById('str04'+id).innerHTML = '<img src="/img/star.png" width="50">';
+      document.getElementById('str05'+id).innerHTML = '<img src="/img/star.png" width="50">';
+      document.getElementById('str_01'+id).checked = false;
+      document.getElementById('str_02'+id).checked = false;
+      document.getElementById('str_04'+id).checked = false;
+      document.getElementById('str_05'+id).checked = false;
+    }
+  }
+
+
+  function star4(id){
+    
+    if(document.getElementById('str_04'+id).checked == true){
+      document.getElementById('str_04'+id).checked = false
+      document.getElementById('str01'+id).innerHTML = '<img src="/img/star.png" width="50">';
+      document.getElementById('str02'+id).innerHTML = '<img src="/img/star.png" width="50">';
+      document.getElementById('str03'+id).innerHTML = '<img src="/img/star.png" width="50">';
+      document.getElementById('str04'+id).innerHTML = '<img src="/img/star.png" width="50">';
+    }else{
+      document.getElementById('str_04'+id).checked = true
+      document.getElementById('str01'+id).innerHTML = '<img src="/img/star_on.png" width="50">';
+      document.getElementById('str02'+id).innerHTML = '<img src="/img/star_on.png" width="50">';
+      document.getElementById('str03'+id).innerHTML = '<img src="/img/star_on.png" width="50">';
+      document.getElementById('str04'+id).innerHTML = '<img src="/img/star_on.png" width="50">';
+      document.getElementById('str05'+id).innerHTML = '<img src="/img/star.png" width="50">';
+      document.getElementById('str_01'+id).checked = false;
+      document.getElementById('str_02'+id).checked = false;
+      document.getElementById('str_03'+id).checked = false;
+      document.getElementById('str_05'+id).checked = false;
+    }
+  }
+
+  function star5(id){
+    
+    if(document.getElementById('str_05'+id).checked == true){
+      document.getElementById('str_05'+id).checked = false
+      document.getElementById('str01'+id).innerHTML = '<img src="/img/star.png" width="50">';
+      document.getElementById('str02'+id).innerHTML = '<img src="/img/star.png" width="50">';
+      document.getElementById('str03'+id).innerHTML = '<img src="/img/star.png" width="50">';
+      document.getElementById('str04'+id).innerHTML = '<img src="/img/star.png" width="50">';
+      document.getElementById('str05'+id).innerHTML = '<img src="/img/star.png" width="50">';
+    }else{
+      document.getElementById('str_05'+id).checked = true
+      document.getElementById('str01'+id).innerHTML = '<img src="/img/star_on.png" width="50">';
+      document.getElementById('str02'+id).innerHTML = '<img src="/img/star_on.png" width="50">';
+      document.getElementById('str03'+id).innerHTML = '<img src="/img/star_on.png" width="50">';
+      document.getElementById('str04'+id).innerHTML = '<img src="/img/star_on.png" width="50">';
+      document.getElementById('str05'+id).innerHTML = '<img src="/img/star_on.png" width="50">';
+      document.getElementById('str_01'+id).checked = false;
+      document.getElementById('str_02'+id).checked = false;
+      document.getElementById('str_03'+id).checked = false;
+      document.getElementById('str_04'+id).checked = false;
+    }
+  }
+
+
+</script>
 
 </html>
