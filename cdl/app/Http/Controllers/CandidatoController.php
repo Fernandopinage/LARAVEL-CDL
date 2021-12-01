@@ -7,6 +7,7 @@ use App\Mail\candidatoMail;
 use App\Mail\empresaVaga;
 use App\Models\Candidato;
 use App\Models\Empresa;
+use App\Models\Preferencia;
 use App\Models\Pretendente;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -54,7 +55,8 @@ class CandidatoController extends Controller
 
     public function formularioCandidato()
     {
-        return view('add_candidato');
+        $Preferencia =  Preferencia::all();
+        return view('add_candidato',compact('Preferencia'));
     }
 
     public function home()
@@ -291,8 +293,9 @@ class CandidatoController extends Controller
     {
         $id = base64_decode($id);
         $candidato = Candidato::find($id);
+        $Preferencia =  Preferencia::all();
         // ddd($candidato);
-        return view('update_candidato', compact('candidato'));
+        return view('update_candidato', compact('candidato','Preferencia'));
     }
 
     public function show($id)
@@ -319,7 +322,6 @@ class CandidatoController extends Controller
      */
     public function update(Request $request, $id)
     {
-
 
         $candidato = Candidato::find($id);
         $candidato->can_nome = $request->nome;

@@ -646,15 +646,11 @@
                         <label class="form-check-label" for="flexCheckIndeterminate">Selecione Preferências
                             Profissionais</label>
                         <select class="form-select form-select-sm" name="tempoexperiencia[]" id="tempoexperiencia"
-                            aria-label="Default select example" required>
+                            aria-label="Default select example">
                             <option selected></option>
-                            <option value="Financeiro">Financeiro</option>
-                            <option value="Administração">Administração</option>
-                            <option value="Vendas">Vendas</option>
-                            <option value="RH">RH</option>
-                            <option value="Técnologia da informação">Técnologia da informação</option>
-                            <option value="Logística">Logística</option>
-                            <option value="Produção">Produção</option>
+                            @foreach($Preferencia as $Preferencia)
+                            <option value="{{$Preferencia->pre_preferencia}}">{{$Preferencia->pre_preferencia}}</option>
+                            @endforeach
                         </select>
                     </div>
                     <div class="col-md-2" style="margin-top: 42px;">
@@ -1020,12 +1016,12 @@
     var cont05 =1;
     function addPreferencia(){
         if(cont05 <4){
-
+        var preferencia = document.getElementById('tempoexperiencia').value    
         var div = document.createElement('div');
-        div.innerHTML = '<div class="row g-3" id="divPreferencia'+cont05+'"><div class="col-md-6" id="tempoexperiencia_div"><label class="form-check-label" for="flexCheckIndeterminate">Selecione Preferências Profissionais</label> <select class="form-select form-select-sm" name="tempoexperiencia[]" id="tempoexperiencia" aria-label="Default select example" required> <option selected></option><option value="Financeiro">Financeiro</option><option value="Administração">Administração</option><option value="Vendas">Vendas</option><option value="RH">RH</option><option value="Técnologia da informação">Técnologia da informação</option><option value="Logística">Logística</option> <option value="Produção">Produção</option></select></div><div class="col-md-2" id="tempoexperiencia_div" style="margin-top:42px"><input type="button" class="btn btn-danger btn-sm" onclick="removeCamposPreferencia('+cont05+')" value="Remover Prefêrencias"> </div></div></div>';
+        div.innerHTML = '<div class="row g-3" id="divPreferencia'+cont05+'"><div class="col-md-6" id="tempoexperiencia_div"><label class="form-check-label" for="flexCheckIndeterminate">Selecione Preferências Profissionais</label> <select class="form-select form-select-sm" name="tempoexperiencia[]" id="tempoexperiencia" aria-label="Default select example" disabled> <option>'+preferencia+'<option></select></div><div class="col-md-2" id="tempoexperiencia_div" style="margin-top:42px"><input type="button" class="btn btn-danger btn-sm" onclick="removeCamposPreferencia('+cont05+')" value="Remover Prefêrencias"> </div></div></div>';
                  document.getElementById('listaPreferencia').appendChild(div)
         cont05++;
-       
+        var preferencia = document.getElementById('tempoexperiencia').value ='';
         }
     }
 

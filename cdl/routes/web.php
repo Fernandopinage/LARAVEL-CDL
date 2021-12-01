@@ -138,12 +138,14 @@ Route::get('/buscar/filtro/candidato/', [utvController::class, 'filtrarCandidato
 Route::get('/utv/filtro/{id}', [utvController::class, 'abaFiltro']);
 Route::get('/avaliar/candidato/utv/',[utvController::class, 'validarCandidato']);
 //}
+
+
+
+//Route::middleware(['oms'])->group(function () {
 Route::get('/restrito/area/acesso', [AcessoController::class, 'index']);   // tela de acesso area administrativa
 Route::post('/validar/restrito',[AcessoController::class, 'validarLogin']);
 Route::get('/add/restrito/',[AcessoController::class, 'store']);
 
-Route::get('/add/preferencia/',[PreferenciaController::class, 'index']);
-Route::post('/insert/preferencia/',[PreferenciaController::class, 'insertPreferencias']);
 
 Route::POST('/insert/restrito',[AcessoController::class, 'insertRestrito']);
 Route::get('/redefinir/restrito',[AcessoController::class, 'redefinirSenha']);
@@ -156,3 +158,6 @@ Route::get('/home/acesso', [AcessoController::class, 'home']);
 Route::get('/restrito/opt/banner', [AcessoController::class, 'viewBanner']);
 Route::get('/banner/alterar',[AcessoController::class, 'Banner']);
 
+Route::get('/add/preferencia/',[PreferenciaController::class, 'index']);
+Route::post('/insert/preferencia/',[PreferenciaController::class, 'insertPreferencias']);
+//}
