@@ -260,6 +260,15 @@ class OmsController extends Controller
     public function avaliarCandidato(Request $request){
 
 
+            //ddd($request);
+
+            $candidato = Candidato::find($request->id);
+            $candidato->can_nota = $request->valor;
+            $candidato->save();
+
+        return redirect('/home/militar');
+
+        /*
           $candidato =  Candidato::find($request->id);
           $candidato->can_nota = $request->avalicao;
           $candidato->save();
@@ -267,6 +276,6 @@ class OmsController extends Controller
           $id = base64_encode($request->id);
         
           return redirect('/militar/filtro/'.$id)->with('avaliacao', 'Email ou Senha incorretos!');
-
+        */
     }
 }

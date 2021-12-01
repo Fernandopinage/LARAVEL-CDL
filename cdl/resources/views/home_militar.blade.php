@@ -148,7 +148,7 @@
 
                                 <div class="d-grid gap-2" style="margin-top: 10px">
                                    <!-- <a class="btn btn-success" href="/militar/filtro/{{base64_encode($candidato->can_id)}}" target="_blank">Avaliado</a> -->
-                                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#valiar{{base64_encode($candidato->can_id)}}">
+                                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#valiar{{$candidato->can_id}}">
                                         Avaliado
                                     </button>
                                 </div>
@@ -182,10 +182,13 @@
                               <h5 class="modal-title" id="exampleModalLabel">Avaliação do candidato</h5>
                               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
+                        <form action="/avaliar/candidato/oms/" method="get">
                             <div class="modal-body">
                                 <div class="row">
 
                                     <div class="text-center">
+
+                                        <input type="hidden" name="id" value="{{$candidato->can_id}}" >
                     
                                         <span id="str01{{$candidato->can_id}}" style="padding-left: 3px;" onclick="star1({{$candidato->can_id}})"><img src="/img/star.png" width="50"></span>
                                         <span id="str02{{$candidato->can_id}}" style="padding-left: 3px;" onclick="star2({{$candidato->can_id}})"><img src="/img/star.png" width="50"></span>
@@ -201,32 +204,33 @@
 
                     
                                     <div class="form-check form-switch" style="display: none;">
-                                        <input class="form-check-input" type="checkbox" role="switch" id="str_01{{$candidato->can_id}}" name="valor1">
+                                        <input class="form-check-input" type="checkbox" role="switch" id="str_01{{$candidato->can_id}}" value="1" name="valor">
                     
                                     </div>
                     
                                     <div class="form-check form-switch" style="display: none;">
-                                        <input class="form-check-input" type="checkbox" role="switch" id="str_02{{$candidato->can_id}}" name="valor2">
+                                        <input class="form-check-input" type="checkbox" role="switch" id="str_02{{$candidato->can_id}}" value="2" name="valor">
                     
                                     </div>
                     
                                     <div class="form-check form-switch" style="display: none;">
-                                        <input class="form-check-input" type="checkbox" role="switch" id="str_03{{$candidato->can_id}}" name="valor3">
+                                        <input class="form-check-input" type="checkbox" role="switch" id="str_03{{$candidato->can_id}}" value="3" name="valor">
                     
                                     </div>
                                     <div class="form-check form-switch" style="display: none;">
-                                        <input class="form-check-input" type="checkbox" role="switch" id="str_04{{$candidato->can_id}}" name="valor4">
+                                        <input class="form-check-input" type="checkbox" role="switch" id="str_04{{$candidato->can_id}}" value="4" name="valor">
                     
                                     </div>
                                     <div class="form-check form-switch" style="display: none;">
-                                        <input class="form-check-input" type="checkbox" role="switch" id="str_05{{$candidato->can_id}}" name="valor5">
+                                        <input class="form-check-input" type="checkbox" role="switch" id="str_05{{$candidato->can_id}}" value="5" name="valor">
                                     </div>
                                 </div>
                             </div>
                             <div class="modal-footer">
                              
-                              <button type="button" class="btn btn-primary">Avaliar</button>
+                              <button type="submit" class="btn btn-primary">Avaliar</button>
                             </div>
+                        </form>
                           </div>
                         </div>
                       </div>
