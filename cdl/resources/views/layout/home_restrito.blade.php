@@ -81,6 +81,7 @@
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li><a class="dropdown-item" href="/add/restrito/">Novo Administrador</a></li>
+                <li><a class="dropdown-item" href="/add/preferencia/">Prefêrencia Profissional</a></li>
                <!-- <li><a class="dropdown-item" href="/redefinir/password/candidato/{{session('can_id')}}">Redefinir Senha</a></li> -->
                 <li>
                   <hr class="dropdown-divider">
