@@ -819,7 +819,7 @@ $candidato;
                     <div class="col-md-6" id="tempoexperiencia_div">
                         <label class="form-check-label" for="flexCheckIndeterminate">Selecione Preferências
                             Profissionais</label>
-                        <select class="form-select form-select-sm" name="tempoexperiencia[]" id="tempoexperiencia"
+                        <select class="form-select form-select-sm" id="tempoexperiencia"
                             aria-label="Default select example">
                             <option selected></option>
                             @foreach($Preferencia as $Preferencia)
@@ -835,15 +835,13 @@ $candidato;
                 </div>
 
                 @for($i = 0; $i <$tamanho5; $i++)
-                 <div class="row g-3" id="divPreferencia<?php echo $i; ?>">
-                    <div class="col-md-6" id="">
+                 <div class="row g-3">
+                    <div class="col-md-6">
                         <label class="form-check-label" for="flexCheckIndeterminate">Selecione Prefêrencias
                             Profissionais</label>
-                        <select class="form-select form-select-sm" name="tempoexperiencia[]" id="tempoexperiencia"
-                            aria-label="Default select example" disabled>
-                            <option selected></option>
-                            <option {{$candidato->can_tempoexperiencia[$i]}}
-                                value="Financeiro">{{$candidato->can_tempoexperiencia[$i]}}</option>
+                        <select class="form-select form-select-sm"  name="tempoexperiencia[]"  id="tempoexperiencia"
+                            aria-label="Default select example">
+                            <option value="{{$candidato->can_tempoexperiencia[$i]}}" selected>{{$candidato->can_tempoexperiencia[$i]}}</option>
                         </select>
                     </div>
                     <div class="col-md-2" style="margin-top: 42px;">
@@ -1228,7 +1226,7 @@ $candidato;
         if(cont05 <4){
         var tempoexperiencia = document.getElementById('tempoexperiencia').value
         var div = document.createElement('div');
-        div.innerHTML = '<div class="row g-3" id="divPreferencia'+cont05+'"><div class="col-md-6" id="tempoexperiencia_div"><label class="form-check-label" for="flexCheckIndeterminate">Selecione Preferências Profissionais</label> <select class="form-select form-select-sm" name="tempoexperiencia[]" id="tempoexperiencia" aria-label="Default select example" disabled> <option>'+tempoexperiencia+'</option></select></div><div class="col-md-2" id="tempoexperiencia_div" style="margin-top:42px"><input type="button" class="btn btn-danger btn-sm" onclick="removeCamposPreferencia('+cont05+')" value="Remover Prefêrencias"> </div></div></div>';
+        div.innerHTML = '<div class="row g-3" id="divPreferencia'+cont05+'"><div class="col-md-6" id="tempoexperiencia_div"><label class="form-check-label" for="flexCheckIndeterminate">Selecione Preferências Profissionais</label> <select class="form-select form-select-sm" name="tempoexperiencia[]" id="tempoexperiencia" aria-label="Default select example"> <option>'+tempoexperiencia+'</option></select></div><div class="col-md-2" id="tempoexperiencia_div" style="margin-top:42px"><input type="button" class="btn btn-danger btn-sm" onclick="removeCamposPreferencia('+cont05+')" value="Remover Prefêrencias"> </div></div></div>';
                  document.getElementById('listaPreferencia').appendChild(div)
         cont05++;
         var tempoexperiencia = document.getElementById('tempoexperiencia').value ='';
