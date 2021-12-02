@@ -30,9 +30,10 @@ class exmilitarController extends Controller
             ->orWhere('can_sobrenome','like', '%'.$request->buscar.'%')
             ->orWhere('can_cpf','like', '%'.$request->buscar.'%')
             ->orWhere('can_unidademilitar','like', '%'.$request->buscar.'%')
+            ->orWhere('can_email','like', '%'.$request->buscar.'%')
             ->get();
             
-            
+            //ddd($dados);
             if(!empty($dados)){
                 
                 return view('exmilitar',compact('dados'));
