@@ -150,7 +150,7 @@ class CandidatoController extends Controller
             
             $pretendente = Pretendente::all();
             
-            //ddd($pretendente);
+            //ddd($vagas);
            // criar um hidden  usando js para alterar o campos 
                
         if (!empty($vagas)) {
