@@ -194,8 +194,15 @@
 
 <script>
 
-  function file01(){
-    alert('ok')
+  function checkPhoto(){
+
+    var alterar = document.getElementById('file01').clientWidth;
+    var largura = document.getElementById('file01').clientHeight;
+
+    console.log(alterar+'x'+largura)
+    //if(file01.files[0]['size'] == ){
+
+    //}
   }
   
 </script>

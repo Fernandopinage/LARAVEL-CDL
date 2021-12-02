@@ -15,7 +15,7 @@
             <div class="col-md-4" id="selecionarFoto">
                 <label class="form-check-label" for="image">BANNER HOME</label>
                 <!--<input class="form-control form-control-sm" type="file" name="foto" id="formFile"> -->
-                <input type="file" name="foto_principal" id="file01" onchange="file01(this)" class="form-control-file">
+                <input type="file" name="foto_principal" id="file01" onchange="checkPhoto(this)" class="form-control-file">
             </div>
         </div>
         <div class="row g-3">
