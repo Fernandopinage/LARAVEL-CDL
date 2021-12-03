@@ -609,7 +609,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="atividades" class="form-label">Atividades desenvolvidas</label>
-                        <textarea class="form-control" name="atividades[]" id="atividades" rows="3"></textarea>
+                        <textarea class="form-control" name="atividades" id="atividades" rows="3"></textarea>
                     </div>
    
                 </div>

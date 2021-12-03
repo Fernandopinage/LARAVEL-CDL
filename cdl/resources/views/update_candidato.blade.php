@@ -770,6 +770,10 @@ $candidato;
                             value="{{$candidato->can_salario_empresa[$i]}}"
                             onKeyPress="return(moeda(this,'.',',',event))">
                     </div>
+                    <div class="mb-3">
+                        <label for="atividades" class="form-label">Atividades desenvolvidas</label>
+                        <textarea class="form-control" name="atividades" id="atividades" value="{{$candidato->can_atividades[$i]}}" rows="3"></textarea>
+                    </div>
 
             </div>
             @endfor
