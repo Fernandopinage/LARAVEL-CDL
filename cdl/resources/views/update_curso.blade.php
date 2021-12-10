@@ -1,4 +1,4 @@
-@extends('layout.editar_curso')
+@extends('layout.update_curso')
 @section('edit_curso')
 
 <form method="POST" action="" enctype="multipart/form-data">
