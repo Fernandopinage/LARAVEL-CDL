@@ -8,21 +8,22 @@
 
 </div>
 
-<div class="container shadow-lg p-3 mb-5 bg-body rounded" id="curso">
 
-    @php
+@php
     $tamanho = count($cursos);
-
+    
     @endphp
 
-  
-
-    @foreach($cursos as $cursos)
 
 
-    <div class=" d-inline-block" style="margin-top: 18px;" data-bs-toggle="modal"
-        data-bs-target="#edit{{$cursos->utvcurso_id}}">
+@foreach($cursos as $cursos)
 
+
+<div class="container shadow-lg p-3 mb-5 bg-body rounded" id="curso">
+    <div class=" d-inline-block" style="margin-top: 18px;">
+        <div class="text-end" style="margin-bottom: 20px">
+            <a href="/editar/cursos/utv/{{$cursos->utvcurso_id}}"><img src="/icons/botao-editar.png" width="22"></a>
+        </div>
         <div class="row">
             <div class="col-sm-3">
                 <div class="card">
@@ -73,9 +74,9 @@
             </div>
         </div>
     </div>
+</div>
 
 
     @endforeach
-</div>
 
 @endsection

@@ -223,6 +223,15 @@ class utvController extends Controller
         return view('lista_curso_utv', compact('cursos'));
     }
 
+    public function editCurso(Request $request){
+
+        
+        $curso = UTVCURSOS::find($request->id);
+        
+        return view('editar_curso', compact('curso'));
+
+    }
+
     public function validarLogin(Request $request)
     {
 

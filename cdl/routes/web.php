@@ -126,6 +126,7 @@ Route::get('/alterar/senha/utv/', [utvController::class, 'updateSenha']);
 Route::get('/redefinir/senha/utv', [utvController::class, 'redefinirUtvCurso']);
 Route::get('/recuperar/senha/', [utvController::class, 'redefinirSenha']);
 Route::get('/lista/cursos/utv',[utvController::class, 'ListarCursos']);
+Route::get('/editar/cursos/utv/{id}',[utvController::class, 'editCurso']);
 
 Route::get('/redefinir/password/utv/{id}', function ($id) {
     return view('update_password_utv', ['id' => $id]);
