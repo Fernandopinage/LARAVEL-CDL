@@ -361,7 +361,7 @@
                     <input type="text" class="form-control form-control-sm" name="curso_extra[]" placeholder="">
                 </div>
                 <div class="col-md-2">
-                    <label class="form-check-label" for="flexCheckIndeterminate" id="utv_carga_label">Carga
+                    <label class="form-check-label" for="flexCheckIndeterminate">Carga
                         horária</label>
                     <input type="text" class="form-control form-control-sm" id="curso_carga[]" name="curso_carga[]"
                         placeholder="">
@@ -1038,13 +1038,19 @@
         
         if(document.getElementById('utv_titlulo').value != ''){
            document.getElementById('utv_carga_label').innerHTML= "Carga horária <span><strong>*</strong></span>";
+           document.getElementById('utv_carga').required = true
            document.getElementById('utv_data_label').innerHTML= "Data de Emissão <span><strong>*</strong></span>";
+           document.getElementById('utv_data').required = true
            document.getElementById('utv_area_atuacao_label').innerHTML= "Área de Atuação <span><strong>*</strong></span>";
+           document.getElementById('utv_area_atuacao').required = true
 
         }else{
             document.getElementById('utv_carga_label').innerHTML= "Carga horária";
+            document.getElementById('utv_carga').required = false
             document.getElementById('utv_data_label').innerHTML= "Data de Emissão";
-           document.getElementById('utv_area_atuacao_label').innerHTML= "Área de Atuação";
+            document.getElementById('utv_data').required = false
+            document.getElementById('utv_area_atuacao_label').innerHTML= "Área de Atuação";
+            document.getElementById('utv_area_atuacao').required = false
         }
     }
 
