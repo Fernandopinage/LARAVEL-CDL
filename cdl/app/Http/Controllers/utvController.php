@@ -268,9 +268,9 @@ class utvController extends Controller
         try {
            
             $UTV->save();
-            return redirect('/editar/cursos/utv/'.$request->id);
+            return redirect('/editar/cursos/utv/'.$request->id)->with('add_cursos', 'Produto cadastrado com sucesso!');
         } catch (\Throwable $th) {
-            return redirect('/editar/cursos/utv/'.$request->id);
+            return redirect('/editar/cursos/utv/'.$request->id)->with('empresa_cadastro_erro', 'Produto cadastrado com sucesso!');
         }
 
     }

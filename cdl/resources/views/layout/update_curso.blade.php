@@ -148,14 +148,12 @@
     Swal.fire({
     position: 'center',
     icon: 'success',
-    title: 'Curso cadastrado com sucesso!',
+    title: 'Curso atualizado com sucesso!',
     showConfirmButton: false,
     timer: 1500
   })
   </script>
   @endif
-
-
 
 
   @if(session('empresa_cadastro_erro'))
@@ -163,22 +161,9 @@
   Swal.fire({
     position: 'center',
     icon: 'error',
-    title: 'O campo senha e campo Confirmar Senha estão diferentes',
+    title: 'Erro ao atualizar curso',
     showConfirmButton: false,
     timer: 1500
-  })
-  </script>
-  @endif
-
-  @if(session('duplicado'))
-  <script>
-  Swal.fire({
-    position: 'center',
-    icon: 'error',
-    title: 'Erro',
-    text: 'CNPJ ou E-MAIL já cadastrado',
-    showConfirmButton: false,
-    timer: 3500
   })
   </script>
   @endif
