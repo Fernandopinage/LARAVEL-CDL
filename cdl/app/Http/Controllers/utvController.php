@@ -228,9 +228,54 @@ class utvController extends Controller
         
         $curso = UTVCURSOS::find($request->id);
         
-        return view('editar_curso', compact('curso'));
+        return view('update_curso', compact('curso'));
 
     }
+
+
+    public function updateCurso(Request $request){
+
+
+       // ddd($request);
+
+        $UTV =  UTVCURSOS::find($request->id);
+        if($request->hasFile('logo') && $request->file('logo')->isValid()){
+               
+            $requestFoto = $request->logo;          // pegando a imagem 
+
+            $extension = $requestFoto->extension(); // criando pegando extensão do aquivo
+
+            $imagemName = md5($requestFoto->getClientOriginalName().strtotime("now")); // alterando nome do arquivo
+            
+
+            $request->logo->move(public_path('img/curso'),$imagemName.".".$extension); // criando pasta dentro do publick img
+
+            $UTV->utvcurso_folder = $imagemName.".".$extension;
+
+
+        }
+        
+        $UTV->utvcurso_titulo = $request->curso;
+        $UTV->utvcurso_desc = $request->detalhe;
+        $UTV->utvcurso_hora = $request->horario;
+        $UTV->utvcurso_dias = $request->dias;
+        $UTV->utvcurso_data_inicio = $request->datainicio;
+        $UTV->utvcurso_data_final = $request->datafim;
+        $UTV->utvcurso_valor_geral = $request->investimento;
+        $UTV->utvcurso_valor_estudante = $request->estudantes;
+        $UTV->utvcurso_informacoes = $request->informacoes;
+
+        try {
+           
+            $UTV->save();
+            return redirect('/editar/cursos/utv/'.$request->id);
+        } catch (\Throwable $th) {
+            return redirect('/editar/cursos/utv/'.$request->id);
+        }
+
+    }
+
+
 
     public function validarLogin(Request $request)
     {

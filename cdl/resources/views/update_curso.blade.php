@@ -1,7 +1,7 @@
 @extends('layout.update_curso')
 @section('edit_curso')
 
-<form method="POST" action="" enctype="multipart/form-data">
+<form method="POST" action="/update/cursos/utv/{{$curso->utvcurso_id}}" enctype="multipart/form-data">
 
     @csrf
 
@@ -14,7 +14,7 @@
         
         
         <div class="pessoais">
-
+            <input class="form-control form-control-sm" name="id" type="hidden" id="id" value="{{$curso->utvcurso_id}}">
             <div class="col-md-6">
                 <img id="perfil" src="/img/curso/{{$curso->utvcurso_folder}}" alt="profile Pic">
             </div>
