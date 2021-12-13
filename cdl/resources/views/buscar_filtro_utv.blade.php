@@ -619,7 +619,7 @@
                 </div>
 
                 <div class="col-md-2" id="05">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Data de termino </label>
+                    <label class="form-check-label" for="flexCheckIndeterminate">Data de Término </label>
                     <input type="month" class="form-control form-control-sm" placeholder=""
                         name="data_termino_empresa[]" value="{{$dados->can_data_termino_empresa[$i]}}" disabled>
                 </div>
