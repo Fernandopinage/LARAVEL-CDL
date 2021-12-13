@@ -804,26 +804,11 @@ $candidato;
 
 
             <div class="row g-3 shadow p-3 mb-5 bg-body rounded" id="00" style="margin: 10px">
-
-                @php
-                $tamanho5 = count($candidato->can_tempoexperiencia);
-
-                if(!empty($candidato->can_tempoexperiencia)){
-
-                $tamanho5 = count($candidato->can_tempoexperiencia);
-                }else{
-                $tamanho5 = 1;
-                }
-
-
-                @endphp
-
-
                 <div class="row g-3">
                     <div class="col-md-6" id="tempoexperiencia_div">
                         <label class="form-check-label" for="flexCheckIndeterminate">Selecione Preferências
                             Profissionais</label>
-                        <select class="form-select form-select-sm" id="tempoexperiencia"
+                        <select class="form-select form-select-sm"id="tempoexperiencia"
                             aria-label="Default select example">
                             <option selected></option>
                             @foreach($Preferencia as $Preferencia)
@@ -832,41 +817,21 @@ $candidato;
                         </select>
                     </div>
                     <div class="col-md-2" style="margin-top: 42px;">
+
                         <input type="button" class="btn btn-success btn-sm" onclick="addPreferencia()"
                             value="Adicionar Prefêrencias">
 
                     </div>
                 </div>
 
-                @for($i = 0; $i <$tamanho5; $i++)
-                 <div class="row g-3">
-                    <div class="col-md-6">
-                        <label class="form-check-label" for="flexCheckIndeterminate">Selecione Prefêrencias
-                            Profissionais</label>
-                        <select class="form-select form-select-sm"  name="tempoexperiencia[]"  id="tempoexperiencia"
-                            aria-label="Default select example">
-                            <option value="{{$candidato->can_tempoexperiencia[$i]}}" selected>{{$candidato->can_tempoexperiencia[$i]}}</option>
-                        </select>
-                    </div>
-                    <div class="col-md-2" style="margin-top: 42px;">
+                <!-- div responsavel por adicionar outros campo -->
+                <div id="listaPreferencia" style="padding-top: 20px"> </div>
+                <!-- ****************************************** -->
 
-                        <input type="button" class="btn btn-danger btn-sm"
-                            onclick="removeCamposPreferencia(<?php echo $i;?>)" value="Remover Prefêrencias">
-
-                    </div>
             </div>
-            @endfor
-            <!-- div responsavel por adicionar outros campo -->
-            <div id="listaPreferencia" style="padding-top: 20px"> </div>
-            <!-- ****************************************** -->
-
         </div>
+   
     </div>
-    </div>
-
-
-
-
 
 
     <div class="row g-3 shadow p-3 mb-5 bg-body rounded" id="00" style="margin: 10px">

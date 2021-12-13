@@ -56,6 +56,8 @@ class CandidatoController extends Controller
     public function formularioCandidato()
     {
         $Preferencia =  Preferencia::all();
+       
+        // ddd($Preferencia);
         return view('add_candidato',compact('Preferencia'));
     }
 
@@ -294,7 +296,7 @@ class CandidatoController extends Controller
         $id = base64_decode($id);
         $candidato = Candidato::find($id);
         $Preferencia =  Preferencia::all();
-        // ddd($candidato);
+        //ddd($Preferencia);
         return view('update_candidato', compact('candidato','Preferencia'));
     }
 
