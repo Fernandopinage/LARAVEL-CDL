@@ -747,9 +747,11 @@ $candidato;
                             value="{{$candidato->can_cargo_empresa[$i]}}">
                     </div>
 
+                            
+
                     <div class="col-md-2" style="margin-top: 40px;" id="03">
                         <label class="form-check-label" for="inlineCheckbox1">Empresa atual? </label>
-                        <input class="form-check-input" type="checkbox" onclick="empresaAtual()" id="atual_empresa0" name="atual_empresa[]">
+                        <input class="form-check-input" type="checkbox" onclick="empresaAtual()" id="atual_empresa0" name="atual_empresa[]" {{$candidato->can_atual_empresa == 'on' ? 'checked' :''}}>
 
                     </div>
 
@@ -762,7 +764,7 @@ $candidato;
                     <div class="col-md-2" id="05">
                         <label class="form-check-label" for="flexCheckIndeterminate">Data de termino </label>
                         <input type="month" class="form-control form-control-sm" placeholder=""  id="data_termino"
-                            name="data_termino_empresa[]" value="{{$candidato->can_data_termino_empresa[$i]}}" >
+                            name="data_termino_empresa[]"  value="{{isset($candidato->can_data_termino_empresa[$i]) != null ? $candidato->can_data_termino_empresa[$i] : 'disabled' }}" >
                     </div>
                     <div class="col-md-2" id="06">
                         <label class="form-check-label" for="flexCheckIndeterminate">Salário</label>
@@ -772,10 +774,10 @@ $candidato;
                     </div>
                     <div class="mb-3">
                         <label for="atividades" class="form-label">Atividades desenvolvidas</label>
-                        <textarea class="form-control" name="atividades" id="atividades" value="{{$candidato->can_atividades[$i]}}" rows="3"></textarea>
+                        <textarea class="form-control" name="atividades" id="atividades" value="{{$candidato->can_atividades[$i]}}" rows="3">{{$candidato->can_atividades[$i]}}</textarea>
                     </div>
 
-            </div>
+                </div>
             @endfor
 
             <!-- div responsavel por adicionar outros campo -->
@@ -810,9 +812,9 @@ $candidato;
                             Profissionais</label>
                         <select class="form-select form-select-sm"id="tempoexperiencia"
                             aria-label="Default select example">
-                            <option selected></option>
+                      
                             @foreach($Preferencia as $Preferencia)
-                            <option value="{{$Preferencia->pre_preferencia}}">{{$Preferencia->pre_preferencia}}</option>
+                            <option value="{{$Preferencia->pre_preferencia}}" {{$Preferencia->pre_preferencia == 'DESENVOLVEDOR DE SOFTWARE' ? 'selected' :'' }} >{{$Preferencia->pre_preferencia}}</option>
                             @endforeach
                         </select>
                     </div>
