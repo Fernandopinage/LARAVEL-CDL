@@ -272,7 +272,7 @@
             </div>
             <div class="col-sm-9">
                 <div class="card" style="padding: 15px">
-                    <h5 class="card-title"><b style="color:#006CDE;">Curso: {{$curso->utvcurso_titulo}}</b></h5>
+                    <h5 class="card-title"><b style="color:#006CDE;">{{$curso->utvcurso_tipo}}: {{$curso->utvcurso_titulo}}</b></h5>
                     <h6 class="card-title">Sobre Curso:</h6>
                     <p class="card-text">{{$curso->utvcurso_desc}}</p>
 
