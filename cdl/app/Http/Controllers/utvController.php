@@ -255,7 +255,7 @@ class utvController extends Controller
 
 
         }
-        
+        $UTV->utvcurso_tipo = $request->tipo;
         $UTV->utvcurso_titulo = $request->curso;
         $UTV->utvcurso_desc = $request->detalhe;
         $UTV->utvcurso_hora = $request->horario;
