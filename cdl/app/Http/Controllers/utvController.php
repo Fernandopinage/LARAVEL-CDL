@@ -29,7 +29,7 @@ class utvController extends Controller
     public function home()
     {
         $curso = DB::table('tbl_utvcurso')->get();
-        
+       
         return view('home_utv', compact('curso'));
     }
 
@@ -84,7 +84,7 @@ class utvController extends Controller
 
     public function addCurso(Request $request)
     {
-
+       
         $UTV = new UTVCURSOS();
         //$UTV->utvcurso_folder  = $request->logo;
 
@@ -105,6 +105,7 @@ class utvController extends Controller
         }
         
         $UTV->utvcurso_titulo = $request->curso;
+        $UTV->utvcurso_tipo = $request->tipo;
         $UTV->utvcurso_desc = $request->detalhe;
         $UTV->utvcurso_hora = $request->horario;
         $UTV->utvcurso_dias = $request->dias;

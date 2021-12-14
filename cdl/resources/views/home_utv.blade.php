@@ -48,12 +48,7 @@
     </div>
 </div>
 
-
-
-
-
-<div class="container shadow-lg p-3 mb-5 bg-body rounded" id="curso">
-    <div class="visualizar">
+    <div class="visualizar" style="margin:20px 0px 20px 0px">
 
         <h1>Veja o que a <b>UTV</b> tem para você!</h1>
 
@@ -66,7 +61,7 @@
 
     @foreach($curso as $curso)
 
-
+    <div class="container shadow-lg p-3 mb-5 bg-body rounded" id="curso">
 
     <div class="d-inline-block" style="margin-top: 20px;">
 
@@ -87,7 +82,7 @@
             </div>
             <div class="col-sm-9">
                 <div class="card" style="padding: 15px">
-                    <h5 class="card-title"><b style="color:#006CDE;">Curso: {{$curso->utvcurso_titulo}}</b></h5>
+                    <h5 class="card-title"><b style="color:#006CDE;">{{$curso->utvcurso_tipo}}: {{$curso->utvcurso_titulo}}</b></h5>
                     <h6 class="card-title">Sobre Curso:</h6>
                     <p class="card-text">{{$curso->utvcurso_desc}}</p>
 
@@ -122,6 +117,7 @@
             </div>
         </div>
     </div>
+</div>
     @endforeach
 </div>
 

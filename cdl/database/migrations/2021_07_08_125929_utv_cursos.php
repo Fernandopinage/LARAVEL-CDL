@@ -19,6 +19,7 @@ class UtvCursos extends Migration
             
             $table->increments('utvcurso_id');              //  id auto incremento
             $table->string('utvcurso_folder',250)->nullable();                     //  folder do curso
+            $table->string('utvcurso_tipo',250)->nullable();                     //  folder do curso
             $table->string('utvcurso_titulo',100)->nullable();                   // titulo do curso 
             $table->longText('utvcurso_desc')->nullable();                     // descrição do curso 
             $table->string('utvcurso_hora',250)->nullable();                 // carga hora 

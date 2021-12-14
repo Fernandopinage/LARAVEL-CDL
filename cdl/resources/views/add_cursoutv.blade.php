@@ -19,13 +19,21 @@
                 <img id="perfil" src="" alt="profile Pic">
             </div>
             <div class="row g-3">
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <label class="form-check-label" for="flexCheckIndeterminate">Imagem do Curso  <span><strong>*</strong></span></label>
                     <input class="form-control form-control-sm" name="logo" type="file" id="formFile" value="{{old('logo')}}">
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <label class="form-check-label" for="flexCheckIndeterminate">Nome do Curso  <span><strong>*</strong></span></label>
                     <input type="text" name="curso" class="form-control form-control-sm"  value="{{old('curso')}}" required>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-check-label" for="flexCheckIndeterminate">Tipo Curso <span><strong>*</strong></span></label>
+                    <select class="form-select form-select-sm" name="tipo" value="{{old('tipo')}}" aria-label="Default select example">
+                        <option value="Curso">Curso</option>
+                        <option value="Palestra">Palestra</option>
+                        <option value="Workshop">Workshop</option>
+                      </select>
                 </div>
                 <div class="col-md-4">
                     <label class="form-check-label" for="flexCheckIndeterminate">Sobre o Curso <span><strong>*</strong></span></label>
