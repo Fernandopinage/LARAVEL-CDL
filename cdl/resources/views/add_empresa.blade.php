@@ -242,183 +242,70 @@
                 justify-content: center;
             }
         </style>
-
+        
         <div class="texto">
-            <p style="text-align: center;margin-top:10px"><b style="font-size: 20px">SISTEMA DE EMPREGABILIDADE CDL MANAUS</b></p>
-            <p style="text-align: center"><b style="font-size: 18px">Termo de Política para Uso do Sistema</b></p>
-            <p><b>1. SERVIÇO</b></p>
-            <p style="margin-left: 30px">1.1 <b>Objetivo do Serviço:</b>facilitar pessoas interessadas em buscar
-                colocação ou recolocação no
-                mercado de trabalho e empresas interessadas em contratar colaboradores ou ofertar vagas de
-                emprego.</p>
-            <p><b>2. POLÍTICA DE PRIVACIDADE</b></p>
-            <p style="margin-left: 30px">2.1 A presente política de privacidade rege o tratamento dos dados das pessoas,
-                imputados durante
-                o acesso e uso dos serviços que o site CDL Manaus oferece aos seus Usuários. Todas as
-                informações pessoais relativas a membros, clientes, empresas e visitantes, coletadas por meio do
-                Sistema de Empregabilidade CDL Manaus, são em conformidade com a Lei de Proteção de Dados
-                Pessoais (Lei nº 13.709/18), garantindo que qualquer informação fornecida pelos usuários é
-                tratada com diligência e confidencialidade.</p>
-            <p style="margin-left: 30px">2.2 A nossa Política de Privacidade contém informações claras sobre a coleta,
-                uso, armazenamento e
-                proteção de dados dos usuários do serviço. Esta Política se aplica a todos os serviços e aplicações
-                disponibilizados pelo site CDL Manaus, podendo haver termos específicos para determinados
-                serviços, o que será informado oportunamente ao Usuário.
-            </p>
-            <p><b>3. DEFINIÇÕES</b></p>
-            <p style="margin-left: 30px">3.1 CANDIDATO: pessoa interessada em cadastrar-se no Sistema com o propósito de
-                pesquisar
-                oportunidade de emprego;</p>
-            <p style="margin-left: 30px">3.2 EMPRESA: entidade interessada em pesquisar, selecionar candidatos, ou
-                publicar disponibilidade
-                de vagas de emprego;</p>
-            <p style="margin-left: 30px">3.3 MILITARES: organização governamental interessada em cadastrar-se no Sistema
-                com o propósito
-                de proporcionar aos seus integrantes e ex-integrantes a oportunidade de integração ao mercado
-                do trabalho.</p>
-            <p style="margin-left: 30px">3.4 CDL MANAUS: mantenedora do Sistema Empregabilidade;</p>
-            <p style="margin-left: 30px">3.5 UTV: unidade de treinamento e capacitação da CDL Manaus.</p>
-            <p><b>4. OBJETIVO GERAL DA POLÍTICA DE PRIVACIDADE</b></p>
-            <p style="margin-left: 30px">4.1. Facilitar o contato entre candidatos que buscam oportunidades de trabalho
-                e empresas que
-                desejam selecionar profissionais qualificados;</p>
-            <p style="margin-left: 30px">4.2. Servir de ponto de encontro para o sucesso, no qual as empresas encontram
-                os talentos para as
-                suas vagas, e os candidatos acham as melhores empresas e oportunidades para alcançar o êxito
-                profissional.
-            </p>
-            <p><b>5. OBJETIVOS ESPECIFICOS DA POLÍTICA DE PRIVACIDADE</b></p>
-            <p style="margin-left: 30px">5.1. Utilização do SISTEMA para cadastramento de currículo do CANDIDADO, sendo
-                de sua inteira
-                responsabilidade a veracidade e todas informações inseridas no CADASTRO, não tendo a CDL
-                Manaus qualquer reponsabilidade no conteúdo cadastrado;</p>
-            <p style="margin-left: 30px">5.2. Disponibilizar currículos de pessoas habilitadas ou não pela Universidade
-                de Tecnologia do Varejo
-                (UTV), facilitando o acesso ao emprego;</p>
-            <p style="margin-left: 30px">5.3. Captar clientes potenciais com os cursos da UTV / CDL Manaus.
-            </p>
-            <p><b>6. POLÍTICA DE PRIVACIDADE</b></p>
-            <p style="margin-left: 30px">6.1.<b> O que fazemos com as suas informações?</b></p>
-            <p style="margin-left: 45px"><span style="margin-right: 20px; color:#000;font-size:20px;"><b>a</b></span>.
-                Quando
-                você realiza seu cadastro em nossa plataforma, coletamos as informações pessoais
-                que você nos fornece, tais como seu nome, CPF, RG, e-mail, número de telefone e/ou telefone
-                celular, morada, data de nascimento, grau de escolaridade, cursos de aprimoramento,
-                informações profissionais e últimas experiências relacionadas a emprego.</p>
-
-            <p style="margin-left: 45px"><span style="margin-right: 20px; color:#000;font-size:20px;"><b>b</b></span>.
-                De posse
-                dessas informações, partes delas serão distribuídas em nossa página para facilitar a
-                ligação entre você e uma empresa e vice-versa, através de um algoritmo criado
-                especificamente para essa função. Sendo assim, uma empresa ou uma instituição, seja ela
-                pública ou privada terá acesso a seus dados.</p>
-            <p style="margin-left: 45px"><span style="margin-right: 20px; color:#000;font-size:20px;"><b>c</b></span>. A
-                CDL
-                Manaus se compromete a não usar seus dados para outros fins que não sejam única e
-                exclusivamente para intermediar contatos de trabalho entre você e uma empresa e/ou
-                instituição. No entanto a CDL não tem responsabilidade por qualquer vínculo empregatício
-                ou acordo firmado entre as partes.</p>
-
-            <p style="margin-left: 45px"><span style="margin-right: 20px; color:#000;font-size:20px;"><b>d</b></span>. É
-                vedado
-                o acesso total de empresas não cadastradas aos seus dados.</p>
-            <p style="margin-left: 45px"><span style="margin-right: 20px; color:#000;font-size:20px;"><b>e</b></span>.
-                Se faz
-                necessário ressaltar, que ao aceitar nossa política de privacidade, você nos autoriza a
-                informá-lo sobre nossos serviços, produtos e outras atualizações por e-mail, sms ou outro
-                meio eletrônico.
-            </p>
-            <p style="margin-left: 45px"><span style="margin-right: 20px; color:#000;font-size:20px;"><b>f</b></span>.
-                Todas as
-                informações pessoais relativas a membros, assinantes, clientes ou visitantes que
-                usem o portal de empregabilidade serão tratadas em concordância com a Lei da Proteção de
-                Dados Pessoais (Lei nº 13.709/18).</p>
-            <p style="margin-left: 45px"><span style="margin-right: 20px; color:#000;font-size:20px;"><b>g</b></span>. O
-                uso do
-                sistema de empregabilidade CDL MANAUS pressupõe a aceitação deste acordo de
-                privacidade. A CDL MANAUS reserva-se ao direito de alterar este acordo sem aviso prévio.
-                Deste modo, recomendamos que consulte a nossa política de privacidade com regularidade
-                de forma a estar sempre atualizado.</p>
-
-            <p><b>6.2. Os anúncios de oferta de vagas e programação de treinamento e capacitação da CDL Manaus.
-                </b></p>
-            <p style="margin-left: 45px"><span style="margin-right: 20px; color:#000;font-size:20px;"><b>a</b></span>. A
-                política de anúncios do sistema de Empregabilidade CDL Manaus, restringe sua publicidade
-                de anúncios ao tempo da sua visita e as páginas que visitou dentro do nosso website. </p>
-            <p><b>6.3. Cookies</b></p>
-            <p style="margin-left: 45px"><span style="margin-right: 20px; color:#000;font-size:20px;"><b>a</b></span>. A
-                CDL
-                MANAUS, não utiliza cookies muito menos armazena dados de clientes para
-                comercializar ou exibir anúncios. </p>
-            <p style="margin-left: 45px"><span style="margin-right: 20px; color:#000;font-size:20px;"><b>b</b></span>.
-                Os
-                cookies rastreáveis são ou pode ser partes referentes as ligações de uso dos sites das redes
-                sociais. (Facebook, Instagram, Youtube e outros)</p>
-
-            <p><b>6.4. Ligações a sites de terceiros</b></p>
-
-            <p style="margin-left: 45px"><span style="margin-right: 20px; color:#000;font-size:20px;"><b>a</b></span>. O
-                CDL
-                MANAUS possui ligações para outros sites, os quais, ao nosso ver, podem conter
-                informações / ferramentas úteis para os nossos visitantes. A nossa política de privacidade não
-                é aplicada a sites de terceiros, pelo que, caso visite outro site a partir do nosso deverá ler a
-                política de privacidade do mesmo. </p>
-            <p style="margin-left: 45px"><span style="margin-right: 20px; color:#000;font-size:20px;"><b>b</b></span>. A
-                CDL
-                MANAUS não se responsabiliza pela política de privacidade ou conteúdo presente nos
-                sites de terceiros.</p>
-
-            <p><b>7. DO CONSENTIMENTO DE USO DE SUAS INFORMAÇÕES</b></p>
-            <p style="margin-left: 30px">7.1 Quando você nos fornece as suas informações pessoais para completar seu
-                cadastro,
-                automaticamente está concordando com a nossa coleta e uso de informações pessoais apenas
-                para esses fins específicos.
-            </p>
-            <p style="margin-left: 30px">7.2 <b>Como posso retirar os meus dados da lista de marketing?</b> </p>
-            <p style="margin-left: 45px"><span style="margin-right: 20px; color:#000;font-size:20px;"><b>a</b></span>.
-                Podemos
-                divulgar suas informações pessoais se formos obrigados por lei a fazê-lo (para
-                autoridades competentes) ou se você violar nossos Termos de Serviço. </p>
-
-            <p><b>8. DA SEGURANÇA DE SEUS DADOS</b></p>
-            <p style="margin-left: 30px">8.1 <b>Links Internos e Links Externos</b><br>Quando você nos fornece as suas
-                informações pessoais para completar seu cadastro,
-                automaticamente está concordando com a nossa coleta e uso de informações pessoais apenas
-                para esses fins específicos.
-            </p>
-            <p><b>9. DA IDADE DE CONSENTIMENTO</b></p>
-            <p style="margin-left: 30px">9.1. Ao usar esse site e cadastrar suas informações, você confirma que é maior
-                de idade ou que
-                realizou seu cadastro sob a orientação de uma pessoa responsável maior idade, e que se localizava
-                em seu estado ou província de residência e que nos deu seu consentimento para armazenar seus
-                dados pessoais.
-            </p>
-
-            <p><b>10. DAS ALTERAÇÕES NA POLÍTICA DE PRIVACIDADE </b></p>
-            <p style="margin-left: 30px">10.1. Reservamos o direito de modificar essa política de privacidade a qualquer
-                momento. Portanto,
-                por favor, leia-a com frequência. As alterações e esclarecimentos surtem efeito imediatamente
-                após serem publicadas no site. Caso façamos alterações na política de privacidade, iremos notificálo
-                sobre a atualização. Assim, você saberá quais informações coletamos, como as usamos, e sob
-                que circunstâncias, caso aplicável, as utilizaremos e/ou divulgaremos.
-
-            </p>
-            <p style="margin-left: 30px">10.2. Caso ocorra a fusão de nosso site com outra ferramenta da empresa, suas
-                informações podem ser
-                transferidas para os novos bancos de dados para que possamos continuar acessando e ofertando
-                nossos serviços e produtos para você.
-
-            </p>
-
-            <p><b>11. PERGUNTAS E INFORMAÇÕES DE CONTATO </b></p>
-            <p style="margin-left: 30px">11.1. Se você gostaria de acessar, corrigir, alterar ou excluir quaisquer
-                informações pessoais que temos
-                sobre você, registre uma queixa, ou simplesmente peça mais informações de contato conosco
-                através do e-mail suporte@cdlmanaus.org.br ou por telefone: (92) 3627-2894.
-
-            </p>
-
-
+            <p style="text-align: center;margin-top:10px"><b style="font-size: 20px">TERMO DE USO E POLÍTICA DE PRIVACIDADE DO SITE CDL EMPREGABILIDADE</b></p>
+            <p><b>1.    Quem somos</b></p>
+            <p style="margin-left: 30px">O site CDL Empregabilidade é uma plataforma de recrutamento, mantido pela <b>CÂMARA DE DIRIGENTES LOJISTAS DE MANAUS - CDL MANAUS</b>, desenvolvido para otimizar o processo seletivo de talentos, impulsionando em larga escala os índices de empregabilidade. </p>
+            <p style="margin-left: 30px"><b>A CÂMARA DE DIRIGENTES LOJISTAS DE MANAUS - CDL MANAUS</b> é uma entidade voltada para o desenvolvimento da atividade mercantil, através da prestação de serviços. Sendo o associado seu objetivo e razão de suas ações, tendo o compromisso de buscar constantemente a melhoria da qualidade dos serviços prestados, com organização e tecnologia.</p>
+            <p><b>2.	Usuários </b></p>
+            <p style="margin-left: 30px">O presente <b>TERMO DE USO E POLÍTICA DE PRIVACIDADE</b> tem por finalidade demonstrar o compromisso da <b>CÂMARA DE DIRIGENTES LOJISTAS DE MANAUS - CDL MANAUS</b> em relação a proteção de dados pessoais e/ou sensíveis dos <b>USUÁRIOS</b> do site CDL Empregabilidade, a seguir especificados:</p>
+            <p style="margin-left: 30px"><b>a)	CANDIDATO: USUÁRIO</b> interessado em cadastrar-se no site CDL Empregabilidade com o propósito de pesquisar e concorrer a oportunidades de emprego;</p>
+            <p style="margin-left: 30px"><b>b)	EMPRESA: USUÁRIO</b> Interessado em pesquisar, selecionar candidatos ou publicar oportunidades de emprego;</p>
+            <p style="margin-left: 30px"><b>c)	FORÇAS ARMADAS:</b> Organizações Governamentais interessadas em cadastrar no site CDL Empregabilidade seus ex-integrantes com o propósito de fomentar a integração ao mercado de trabalho privado.</p>
+            <p><b>3.	Hipóteses de tratamento aplicáveis aos dados pessoais e sensíveis</b></p>
+            <p style="margin-left: 30px">Em conformidade com a Lei Geral de Proteção de Dados, Lei Federal nº 13.709/2018, a presente operação realizada com os dados pessoais e/ou sensíveis dos titulares de dados, terá como referência, mas não se limitando, o legítimo interesse da <b>CÂMARA DE DIRIGENTES LOJISTAS DE MANAUS - CDL MANAUS</b>, de seus clientes/associados ou parceiros; o cumprimento de obrigação legal ou regulatória e o fornecimento de consentimento pelo titular de dados.</p>
+            <p><b>4.	Consentimento </b></p>
+            <p style="margin-left: 30px">Ao enviar informações pessoais e/ou efetivar cadastro, por intermédio do site CDL Empregabilidade, os titulares de dados, especificados no “item 2, alínea a, b e c”, do <b>TERMO DE USO E POLÍTICA DE PRIVACIDADE</b> do site CDL Empregabilidade, autorizam a <b>CÂMARA DE DIRIGENTES LOJISTAS DE MANAUS - CDL MANAUS</b>, mediante livre consentimento, a proceder com o tratamento dos seus dados pessoais e/ou sensíveis, especialmente no que se refere a coleta, produção, recepção, classificação, utilização, acesso, reprodução, transmissão, distribuição, processamento, arquivamento, armazenamento, eliminação, avaliação ou controle da informação, modificação, comunicação, transferência, difusão ou extração de tais dados. Declarando ainda, estar ciente da utilização dos seus dados pessoais e/ou sensíveis para realização de eventual processo de recrutamento e seleção.</p>
+            <p style="margin-left: 30px"><b>4.1 </b>Os <b>USUÁRIOS</b> especificados no “item 2, alínea a, b e c”, do <b>TERMO DE USO E POLÍTICA DE PRIVACIDADE</b> do site CDL Empregabilidade, autorizam o compartilhamento das informações imputadas no site CDL Empregabilidade com o todos os integrantes do site CDL Empregabilidade, para a finalidade de recrutamento e seleção.</p>
+            <p style="margin-left: 30px"><b>4.2 </b>Ao enviar informações pessoais e/ou sensíveis, por meio do site CDL Empregabilidade, os titulares de dados, especificados no “item 2, alínea a, b e c” do <b>TERMO DE USO E POLÍTICA DE PRIVACIDADE</b> do site CDL Empregabilidade, confirmam que são maiores de idade ou que realizam o cadastro sob a orientação de uma pessoa responsável maior idade, e que se localizava em seu estado ou província de residência.</p>
+            <p style="margin-left: 30px"><b>4.3 </b>Caso o <b>USUÁRIO</b> não possua domicílio no Brasil, este se submete à legislação brasileira, concordando, portanto, que em havendo litígio a ser solucionado, a ação deverá ser proposta no Foro da Comarca de Manaus - Amazonas.</p>
+            <p><b>5.	Direito de revogação de Consentimento </b></p>
+            <p style="margin-left: 30px">Os <b>USUÁRIOS</b> do site CDL Empregabilidade, poderão revogar o seu Consentimento em relação aos Dados Pessoais e/ou Sensíveis fornecidos, gratuitamente, por meio de pedido de revogação de consentimento a ser realizado presencialmente pelo titular de dados, exclusivamente na <b>CÂMARA DE DIRIGENTES LOJISTAS DE MANAUS - CDL Manaus</b>, na Avenida Djalma Batista, Parque 10 de Novembro, Condomínio Amazonas Flat Service, nº. 3000, Loja A - Torre Sul - CEP: 69055-038.</p>
+            <p><b>6.	Arquivamento</b></p>
+            <p style="margin-left: 30px">O site CDL Empregabilidade manterá a guarda dos Dados Pessoais e/ou Sensíveis tratados, pelo período adequado e necessário, em conformidade com a legislação aplicável e com as suas políticas internas.</p>
+            <p><b>7.	Segurança</b></p>
+            <p style="margin-left: 30px">O site CDL Empregabilidade possui programa abrangente de segurança e governança de dados pessoais e/ou sensíveis, onde por meio de medidas técnicas e administrativas, protege as informações compartilhadas pelos <b>USUÁRIOS</b>, presando sempre pelas obrigações e finalidades compatíveis com as que justificaram o compartilhamento. </p>
+            <p><b>8.	Compartilhamento</b></p>
+            <p style="margin-left: 30px">Os dados pessoais e/ou sensíveis e os registros de atividade dos <b>USUÁRIOS</b> do site CDL Empregabilidade poderão ser compartilhados:  </p>
+            <p style="margin-left: 60px"><b>a)</b>	Internamente entre os departamentos competentes da <b>CÂMARA DE DIRIGENTES LOJISTAS DE MANAUS - CDL MANAUS;</b>  </p>
+            <p style="margin-left: 60px"><b>b)</b>	Com terceiros, para finalidade de Recrutamento e Seleção e/ou para desenvolvimento físico e técnico do site CDL Empregabilidade; </p>
+            <p style="margin-left: 60px"><b>c)</b>	Com autoridades judiciais, administrativas ou governamentais competentes, sempre que houver determinação legal, requerimento, requisição ou ordem judicial para tanto.</p>
+            <p style="margin-left: 30px"><b>Parágrafo primeiro:</b> O banco de dados do site CDL Empregabilidade, não abrange informações de quaisquer outras soluções e ferramentas ofertadas pela <b>CÂMARA DE DIRIGENTES LOJISTAS DE MANAUS - CDL MANAUS.</b></p>
+            <p style="margin-left: 30px"><b>Parágrafo segundo:</b> Tendo o <b>USUÁRIO</b> dúvida no tocante ao compartilhamento dos dados pessoais e/ou sensíveis, poderá entrar em contato com o atendimento disponibilizado neste <b>TERMO DE USO E POLÍTICA DE PRIVACIDADE</b> de Dados.</p>
+            <p><b>9.	Transferência Internacional </b></p>
+            <p style="margin-left: 30px">O site CDL Empregabilidade poderá realizar a transferência internacional dos dados pessoais e/ou sensíveis atendendo às exigências legais sobre a proteção de dados pessoais, em especial aquelas previstas no Capítulo 5 da a Lei 13.709/18 (LGPD).</p>
+            <p><b>10.	 Responsabilidade </b></p>
+            <p style="margin-left: 30px">Em caso de incidentes que envolvam dados pessoais e/ou sensíveis causados em razão de conduta única e exclusiva dos <b>USUÁRIOS</b>, especificados no “item 2, alíneas a, b e c” deste termo, estes ficaram responsáveis por adimplir com quaisquer reclamações, perdas e danos, despesas processuais judiciais, administrativas e arbitrais, em qualquer instância ou tribunal, que venham a ser ajuizadas em face da <b>CÂMARA DE DIRIGENTES LOJISTAS DE MANAUS - CDL MANAUS</b>, multas, inclusive, mas não se limitando àquelas aplicadas pela Autoridade Nacional de Proteção de Dados, além de qualquer outra situação que exija o pagamento de valores pecuniários. </p>
+            <p style="margin-left: 30px"><b>10.1.</b>	Será de única e exclusiva responsabilidade dos <b>USUÁRIOS</b>, especificados no “item 2, alíneas a, b e c” deste termo, a reparação por qualquer dano que estes, ou qualquer outra pessoa física envolvida em seu nome no âmbito deste termo, venha a causar à terceiros, ao passo que os <b>USUÁRIOS</b> declaram, desde já, que isentam expressamente a <b>CÂMARA DE DIRIGENTES LOJISTAS DE MANAUS - CDL MANAUS</b> de qualquer responsabilidade no que tange a eventuais danos de qualquer natureza, nas condições previstas neste item.</p>
+            <p style="margin-left: 30px"><b>10.2.</b>	Os <b>USUÁRIOS</b> especificados no “item 2, alíneas a, b e c” deste termo, declaram-se cientes que em caso de violação de qualquer uma das proteções físicas, técnicas ou administrativas da <b>CÂMARA DE DIRIGENTES LOJISTAS DE MANAUS - CDL MANAUS</b>, não há como garantir que as informações compartilhadas no site CDL Empregabilidade, não serão acessadas, divulgadas, alteradas ou destruídas.</p>
+            <p style="margin-left: 30px"><b>10.3.</b>	Consentem os <b>USUÁRIOS</b> especificados no “item 2, alíneas a, b e c” deste termo, que são responsáveis pela exatidão, veracidade e atualização dos dados pessoais e/ou sensíveis informados, nesse sentido, qualquer inconsistência em decorrência do fornecimento de informações no site CDL Empregabilidade, pode implicar em sacão prevista no artigo 299 do Código Penal Brasileiro. Em igual teor, os USUÁRIOS isentam a<b> CÂMARA DE DIRIGENTES LOJISTAS DE MANAUS - CDL MANAUS</b> de qualquer responsabilidade no tocante a veracidade das informações prestadas ao site CDL Empregabilidade por intermédio de seus <b>USUÁRIOS.</b></p>
+            <p style="margin-left: 30px"><b>10.4.</b>   Os <b>USUÁRIOS</b> se responsabilizam pelo resguardo de seus usuários e senhas, recebidos em caráter exclusivo, individual e intransferível, não devendo repassar o referido acesso a terceiros, em hipótese alguma.</p>
+            <p><b>11.	Tratamento de Dados Pessoais e/ou Sensíveis</b></p>
+            <p style="margin-left: 60px">Os dados imputados durante o acesso e utilização do site CDL Empregabilidade, seguirão as disposições constantes neste termo, bem como estarão em conformidade com a Lei Geral de Proteção de Dados (Lei Federal n. 13.709/2018) e demais normas que versem sobre a privacidade e proteção de dados.</p>
+            <p style="margin-left: 30px"><b>11.1.	O que fazemos com as suas informações?</b></p>
+            <p style="margin-left: 60px"><b>a)</b>	Quando o <b>USUÁRIO</b> realiza cadastro no site CDL Empregabilidade, coletamos informações pessoais e/ou sensíveis que você nos fornece, tais como, não se limitando: nome, CPF, RG, endereço eletrônico, número de telefone e/ou telefone celular, endereço residencial, data de nascimento, grau de escolaridade, cursos de aprimoramento, informações profissionais e últimas experiências relacionadas a emprego;</p>
+            <p style="margin-left: 60px"><b>b)</b>  De posse desses dados, serão distribuídas no site CDL Empregabilidade, para facilitar a conexão entre os <b>USUÁRIOS</b>, por meio de algoritmo criado especificamente para essa função. Sendo assim, uma empresa ou uma instituição, seja ela pública ou privada terá acesso aos dados;</p>
+            <p style="margin-left: 60px"><b>c)</b>  É vedado o acesso total de <b>USUÁRIOS</b> não cadastradas aos dados do site CDL Empregabilidade;  </p>
+            <p style="margin-left: 60px"><b>d)</b>  Se faz necessário ressaltar, que ao aceitar o presente <b>TERMO DE USO E POLÍTICA DE PRIVACIDADE</b>, mediante o presente consentimento tácito, os USUÁRIOS concordam tacitamente em receber, da <b>CÂMARA DE DIRIGENTES LOJISTAS DE MANAUS - CDL MANAUS</b> e de seus Provedores de Assinatura, e-mails, mensagens de texto, notificações em aplicativos, notificações por push ou outras comunicações eletrônicas. Também aceita receber mensagens, ofertas, pesquisas e outros materiais promocionais eletrônicos. Em igual teor, declara estar ciente, que para tal finalidade, será necessário o tratamento dos seus dados pessoais e/ou sensíveis, especialmente no que se refere a coleta, produção, recepção, classificação, utilização, acesso, reprodução, transmissão, distribuição, processamento, arquivamento, armazenamento, eliminação, avaliação ou controle da informação, modificação, comunicação, transferência, difusão ou extração de tais dados;  </p>
+            <p style="margin-left: 60px"><b>e)</b>  Todas as informações pessoais e/ou sensíveis relativos aos <b>USUÁRIOS</b> ou visitantes que usem o site CDL Empregabilidade serão tratados em concordância com a Lei da Proteção de Dados Pessoais (Lei nº 13.709/18).  </p>
+            <p><b>11.2.	Os anúncios de oferta de vagas e programação de treinamento e capacitação da Universidade de Tecnologia do Varejo - UTV?</b></p>
+            <p style="margin-left: 60px">A política de anúncios do site CDL Empregabilidade, restringe sua publicidade de anúncios ao tempo da visita e as páginas que acessaram os <b>USUÁRIOS</b> dentro do site.  </p>
+            <p><b>11.3.	O site CDL Empregabilidade realiza a coleta de cookies?</b></p>
+            <p style="margin-left: 60px">O site CDL Empregabilidade, não utiliza cookies e não armazena dados de clientes para comercializar ou exibir anúncios.</p>
+            <p><b>11.4.	Ligações a sites de terceiros?</b></p>
+            <p style="margin-left: 60px">Quando o <b>USUÁRIO</b> clicar em links no site CDL Empregabilidade, poderá ser direcionado para fora da Home do site CDL Empregabilidade. Uma vez que o <b>USUÁRIO</b> sair do site CDL Empregabilidade ou for redirecionado para um aplicativo ou site de terceiros, não estará mais regido pelo presente <b>TERMO DE USO E POLÍTICA DE PRIVACIDADE.</b> As práticas de privacidade aplicadas por outros sites são de responsabilidade exclusiva de seus desenvolvedores, recomendamos a leitura das referidas políticas de privacidade.</p>
+            <p><b>12.	 Disposições Gerais</b></p>
+            <p style="margin-left: 60px">Em virtude do presente <b>TERMO DE USO E POLÍTICA DE PRIVACIDADE</b>, as partes concordam com as obrigações a seguir especificadas:  </p>
+            <p style="margin-left: 60px"><b>a)</b>	Nenhuma das partes tem o direito de obrigar ou agir em nome da outra, não podendo, pois, vinculá-la a termos, contratos ou acordos com terceiros;  </p>
+            <p style="margin-left: 60px"><b>b)</b>	A <b>CÂMARA DE DIRIGENTES LOJISTAS DE MANAUS - CDL MANAUS</b> reserva a si o direito de alterar o <b>TERMO DE USO E POLÍTICA DE PRIVACIDADE</b> a qualquer momento, independente de prévia notificação, conforme a finalidade ou a necessidade, como para adequação com sua política interna, disposição legal ou norma que tenha força jurídica equivalente, cabendo ao <b>USUÁRIO</b> verificar a versão atualizada sempre que acessar o site CDL Empregabilidade;</p>
+            <p style="margin-left: 60px"><b>c)</b>  As partes reconhecem e declaram que este contrato não estabelece qualquer vínculo de natureza empregatícia, associativa ou societária entra elas, cabendo individualmente a cada uma das partes cumprir individualmente com todas as obrigações, contribuições e benefícios da previdência social e outros decorrentes da legislação trabalhista, previdenciária, social ou qualquer outro relacionada à relação de emprego ou de trabalho, isentando-se as partes mutualmente, de toda e qualquer responsabilidade nesse sentido;</p>
+            <p style="margin-left: 60px"><b>d)</b>  Caso alguma disposição deste <b>TERMO DE USO E POLÍTICA DE PRIVACIDADE</b> seja considerada inaplicável pela Autoridade Nacional de Proteção de Dados ou qualquer outra autoridade competente, inclusive judicial, as demais condições permanecerão em pleno vigor e efeito;</p>
+            <p style="margin-left: 60px"><b>e)</b>  As partes, serão responsáveis por todos os atos praticados por seus empregados, prepostos ou procuradores, quando da execução do site CDL Empregabilidade, respondendo perante a terceiros pelos danos causados;</p>
+            <p style="margin-left: 60px"><b>f)</b>  As partes responderão, individualmente, pelas obrigações assumidas perante terceiros.</p>
+            <p><b>13.	  Central de Atendimento</b></p>
+            <p style="margin-left: 60px">Permanecemos à disposição para dirimir eventuais dúvidas decorrentes das disposições constantes neste <b>TERMO DE POLÍTICA DE PRIVACIDADE</b>, o USUÁRIO poderá entrar em contato por meio do endereço eletrônico  <a href = "mailto:cdlempregabilidade@cdlmanaus.org.br" style="color: blue">cdlempregabilidade@cdlmanaus.org.br</a> ou por intermédio do telefone (92) 36272855. </p>
+            
         </div>
 
         <div class="form-check" style="margin-top: 80px">
