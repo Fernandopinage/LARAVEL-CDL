@@ -398,16 +398,15 @@ class CandidatoController extends Controller
         $candidato->can_tempoexperiencia  = $request->tempoexperiencia;
         $candidato->can_termo = $request->termo;
         $candidato->can_status = $request->status;
-      
+        $candidato->can_atividades =  $request->atividades;
         
         if (!empty($request->status)) {
 
-            $candidato->save();
-            return redirect('login/candidato')->with('update', 'Registro cadastrado com sucesso!'); // redirecionar para tela de anuncio
+           $candidato->save();
+           return redirect('login/candidato')->with('update', 'Registro cadastrado com sucesso!'); // redirecionar para tela de anuncio
         } else {
             $candidato->can_status = 'N';
             $candidato->save();
-            //ddd($request);
             return redirect('/home/candidato/')->with('update', 'Registro cadastrado com sucesso!'); // redirecionar para tela de anuncio
         }
        

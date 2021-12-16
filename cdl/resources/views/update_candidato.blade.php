@@ -781,8 +781,8 @@ $candidato;
                     <div class="mb-3">
                         <label for="atividades" class="form-label">Atividades desenvolvidas</label>
                         <textarea class="form-control" name="atividades" id="atividades"
-                            value="{{$candidato->can_atividades[$i]}}"
-                            rows="3">{{$candidato->can_atividades[$i]}}</textarea>
+                            value="{{isset($candidato->can_atividades[$i]) != null  ? $candidato->can_atividades[$i] :''}}"
+                            rows="3">{{isset($candidato->can_atividades[$i]) != null  ? $candidato->can_atividades[$i] :''}}</textarea>
                     </div>
 
             </div>
