@@ -9,6 +9,8 @@
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link href="/css/home.css" rel="stylesheet">
     <link rel="icon" href="/img/title.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
     <title>Empregabilidade | CDL Manaus</title>
 </head>
 
@@ -92,13 +94,6 @@
         </div>
 
     </nav>
-
-    <!--
-      <div id="menu">
-
-      </div>
-    -->
-
 
     <div class="container-fluid">
         <div class="banner-principal">
