@@ -6,6 +6,8 @@ use App\Models\Empresa;
 use Illuminate\Http\Request;
 use App\Models\Vagas;
 use App\Models\Candidato;
+use Illuminate\Support\Facades\DB;
+use UtvCursos;
 
 class homeController extends Controller
 {
@@ -66,9 +68,13 @@ class homeController extends Controller
     }
 
    
-    public function create()
+    public function cursos()
     {
-        //
+
+        $curso = DB::table('tbl_utvcurso')->get();
+     
+
+        return view('select_cursos',compact('curso'));
     }
 
     /**

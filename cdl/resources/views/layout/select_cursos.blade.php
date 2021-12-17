@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <link href="/css/home.css" rel="stylesheet">
+    <link href="/css/cursos.css" rel="stylesheet">
     <link rel="icon" href="/img/title.png">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
     rel="stylesheet">
@@ -96,63 +96,15 @@
     </nav>
 
     <div class="container-fluid">
-        <div class="banner-principal">
+     
             <div class="container">
                 @yield('conteudo')
             </div>
-        </div>
+        
     </div>
-    <div class="container" id="container" style="">
-        <div class="row gx-6">
-            <div class="col-lg-4">
-                <div class="card" style="width: 25rem;  margin-right: 50px;">
-                    <img class="card-img-top" src="/img/index-1.jpg" alt="Imagem de capa do card">
-                    <div class="card-body" style="text-align: center">
-                        <h5 class="card-title">ÚLTIMOS PROFISSIONAIS CADASTRADOS</h5>
-                        <hr>
-                        <p class="card-text" style="text-align: justify">Aqui você encontra o candidato que precisa onde
-                            sua empresa estiver, no perfil que você desejar.</p>
 
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <a href="/login/candidato" class="btn btn-outline-primary btn-lg btn-block">BUSCAR CANDIDATO</a>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="card" style="width: 25rem;">
-                    <img class="card-img-top" src="/img/index-2.jpg" alt="Imagem de capa do card">
-                    <div class="card-body">
-                        <h5 class="card-title">OPORTUNIDADES RECENTES EM DESTAQUE</h5>
-                        <hr>
-                        <p class="card-text">A ferramenta ligada a grandes
-                            empresas. Cadastra-se. É GRÁTIS!</p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <a href="/login/empresa" class="btn btn-outline-primary btn-lg btn-block">BUSCAR OPORTUNIDADE</a>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="card" style="width: 25rem;">
-                    <img class="card-img-top" src="/img/index-3.jpg" alt="Imagem de capa do card">
-                    <div class="card-body">
-                        <h5 class="card-title">PROGRAMAS DE CAPACITAÇÃO DISPONÍVEIS</h5>
-                        <hr>
-                        <p class="card-text">Venha conhecer a forma mais rápida, pratica e segura de ampliar seus
-                            horizontes.</p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <a href="/cursos" class="btn btn-outline-primary btn-lg btn-block">SAIBA MAIS</a>
-                    </ul>
-                </div>
-            </div>
-        </div>
 
-    </div>
-    
-    </div>
-    <hr>
+
     <footer style="margin-top: 150px; " >
         <nav class="navbar bottom navbar-expand-sm navbar bg" style="background-color: #d0d0d056; margin-bottom:0px">
         
