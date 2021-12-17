@@ -95,13 +95,13 @@
 
     </nav>
 
-    <div class="container-fluid">
+
         <div class="banner-principal">
             <div class="container">
                 @yield('conteudo')
             </div>
         </div>
-    </div>
+
     <div class="container" id="container" style="">
         <div class="row gx-6">
             <div class="col-lg-4">
@@ -143,7 +143,7 @@
                             horizontes.</p>
                     </div>
                     <ul class="list-group list-group-flush">
-                        <a href="/cursos" class="btn btn-outline-primary btn-lg btn-block">SAIBA MAIS</a>
+                        <a href="#" class="btn btn-outline-primary btn-lg btn-block">SAIBA MAIS</a>
                     </ul>
                 </div>
             </div>
