@@ -2,10 +2,10 @@
 
 @section('add_preferencia')
 
-<form class="form-signin" action="/insert/preferencia/" method="POST">
+<form class="form-signin" action="/insert/preferencia/" method="get">
+    @csrf
     <h2 class="form-signin-heading">Preferencias Profissionais</h2>
     <hr>
-    @csrf
     <div class="row g-4">
 
         <div class="col-md-6">

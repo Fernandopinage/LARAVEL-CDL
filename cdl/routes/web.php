@@ -161,5 +161,5 @@ Route::get('/restrito/opt/banner', [AcessoController::class, 'viewBanner']);
 Route::get('/banner/alterar',[AcessoController::class, 'Banner']);
 
 Route::get('/add/preferencia/',[PreferenciaController::class, 'index']);
-Route::post('/insert/preferencia/',[PreferenciaController::class, 'insertPreferencias']);
+Route::get('/insert/preferencia/',[PreferenciaController::class, 'insertPreferencias']);
 //}
