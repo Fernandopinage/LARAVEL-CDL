@@ -188,12 +188,7 @@ class CandidatoController extends Controller
      */
     public function store(Request $request)
     {
-        /*
-        $request->validate([
-            'email' => 'unique:tbl_candidatos,can_email',
-            
-        ]);
-        */
+
         
         $existe = new Candidato();
         $existe =  Candidato::where('can_cpf', $request->cpf)->count();

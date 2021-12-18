@@ -115,15 +115,15 @@ class utvController extends Controller
         $UTV->utvcurso_valor_estudante = $request->estudantes;
         $UTV->utvcurso_informacoes = $request->informacoes;
 
+        $UTV->save();
+
+        return redirect('/cursos/utv/')->with('add_cursos', 'Produto cadastrado com sucesso!');
 
         try {
 
-            $UTV->save();
-
-            return redirect('/cursos/utv/')->with('add_cursos', 'Produto cadastrado com sucesso!');
         } catch (PDOException $e) {
 
-            echo $e->getMessage();
+           //echo $e->getMessage();
         }
     }
 

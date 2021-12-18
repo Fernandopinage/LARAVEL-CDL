@@ -782,7 +782,7 @@ $candidato;
                         <label for="atividades" class="form-label">Atividades desenvolvidas</label>
                         <textarea class="form-control" name="atividades" id="atividades"
                             value="{{isset($candidato->can_atividades[$i]) != null  ? $candidato->can_atividades[$i] :''}}"
-                            rows="3">{{isset($candidato->can_atividades[$i]) != null  ? $candidato->can_atividades[$i] :''}}</textarea>
+                            rows="3">{{isset($candidato->can_atividades[$i]) != null  ? $candidato->can_atividades :''}}</textarea>
                     </div>
 
             </div>
@@ -822,8 +822,7 @@ $candidato;
                             aria-label="Default select example">
 
                             @foreach($Preferencia as $Preferencia)
-                            <option value="{{$Preferencia->pre_preferencia}}" {{$Preferencia->pre_preferencia ==
-                                'DESENVOLVEDOR DE SOFTWARE' ? 'selected' :'' }} >{{$Preferencia->pre_preferencia}}
+                            <option value="{{$Preferencia->pre_preferencia}}">{{$Preferencia->pre_preferencia}}
                             </option>
                             @endforeach
                         </select>
@@ -831,13 +830,40 @@ $candidato;
                     <div class="col-md-2" style="margin-top: 42px;">
 
                         <input type="button" class="btn btn-success btn-sm" onclick="addPreferencia()"
-                            value="Adicionar Prefêrencias">
+                            value="Novas Prefêrencias">
 
                     </div>
                 </div>
 
                 <!-- div responsavel por adicionar outros campo -->
-                <div id="listaPreferencia" style="padding-top: 20px"> </div>
+                <div id="listaPreferencia" style="padding-top: 20px">
+                </div>
+                @php
+
+
+                $t = count($candidato->can_tempoexperiencia);
+
+
+                @endphp
+
+                <div class="row g-3">
+                    <div class="col-md-6" id="tempoexperiencia_div">
+                        <label class="form-check-label" for="flexCheckIndeterminate" style="margin-bottom: 5px">Sua
+                            Preferências
+                            Profissionais
+                        </label>
+
+                        <select class="form-select" multiple aria-label="multiple select example" disabled>
+                            @for($i = 0; $i < $t; $i++) <option value="{{$candidato->can_tempoexperiencia[$i]}}">
+                                {{$candidato->can_tempoexperiencia[$i]}}</option>
+
+                                @endfor
+                        </select>
+                    </div>
+                </div>
+
+
+
                 <!-- ****************************************** -->
 
             </div>
@@ -861,7 +887,8 @@ $candidato;
             <p><b>1. Quem somos</b></p>
             <p style="margin-left: 30px">O site CDL Empregabilidade é uma plataforma de recrutamento, mantido pela
                 <b>CÂMARA DE DIRIGENTES LOJISTAS DE MANAUS - CDL MANAUS</b>, desenvolvido para otimizar o processo
-                seletivo de talentos, impulsionando em larga escala os índices de empregabilidade. </p>
+                seletivo de talentos, impulsionando em larga escala os índices de empregabilidade.
+            </p>
             <p style="margin-left: 30px"><b>A CÂMARA DE DIRIGENTES LOJISTAS DE MANAUS - CDL MANAUS</b> é uma entidade
                 voltada para o desenvolvimento da atividade mercantil, através da prestação de serviços. Sendo o
                 associado seu objetivo e razão de suas ações, tendo o compromisso de buscar constantemente a melhoria da
@@ -897,7 +924,8 @@ $candidato;
             <p style="margin-left: 30px"><b>4.1 </b>Os <b>USUÁRIOS</b> especificados no “item 2, alínea a, b e c”, do
                 <b>TERMO DE USO E POLÍTICA DE PRIVACIDADE</b> do site CDL Empregabilidade, autorizam o compartilhamento
                 das informações imputadas no site CDL Empregabilidade com o todos os integrantes do site CDL
-                Empregabilidade, para a finalidade de recrutamento e seleção.</p>
+                Empregabilidade, para a finalidade de recrutamento e seleção.
+            </p>
             <p style="margin-left: 30px"><b>4.2 </b>Ao enviar informações pessoais e/ou sensíveis, por meio do site CDL
                 Empregabilidade, os titulares de dados, especificados no “item 2, alínea a, b e c” do <b>TERMO DE USO E
                     POLÍTICA DE PRIVACIDADE</b> do site CDL Empregabilidade, confirmam que são maiores de idade ou que
@@ -911,7 +939,8 @@ $candidato;
                 Consentimento em relação aos Dados Pessoais e/ou Sensíveis fornecidos, gratuitamente, por meio de pedido
                 de revogação de consentimento a ser realizado presencialmente pelo titular de dados, exclusivamente na
                 <b>CÂMARA DE DIRIGENTES LOJISTAS DE MANAUS - CDL Manaus</b>, na Avenida Djalma Batista, Parque 10 de
-                Novembro, Condomínio Amazonas Flat Service, nº. 3000, Loja A - Torre Sul - CEP: 69055-038.</p>
+                Novembro, Condomínio Amazonas Flat Service, nº. 3000, Loja A - Torre Sul - CEP: 69055-038.
+            </p>
             <p><b>6. Arquivamento</b></p>
             <p style="margin-left: 30px">O site CDL Empregabilidade manterá a guarda dos Dados Pessoais e/ou Sensíveis
                 tratados, pelo período adequado e necessário, em conformidade com a legislação aplicável e com as suas
@@ -923,7 +952,8 @@ $candidato;
                 compatíveis com as que justificaram o compartilhamento. </p>
             <p><b>8. Compartilhamento</b></p>
             <p style="margin-left: 30px">Os dados pessoais e/ou sensíveis e os registros de atividade dos
-                <b>USUÁRIOS</b> do site CDL Empregabilidade poderão ser compartilhados: </p>
+                <b>USUÁRIOS</b> do site CDL Empregabilidade poderão ser compartilhados:
+            </p>
             <p style="margin-left: 60px"><b>a)</b> Internamente entre os departamentos competentes da <b>CÂMARA DE
                     DIRIGENTES LOJISTAS DE MANAUS - CDL MANAUS;</b> </p>
             <p style="margin-left: 60px"><b>b)</b> Com terceiros, para finalidade de Recrutamento e Seleção e/ou para
@@ -999,7 +1029,8 @@ $candidato;
                 modificação, comunicação, transferência, difusão ou extração de tais dados; </p>
             <p style="margin-left: 60px"><b>e)</b> Todas as informações pessoais e/ou sensíveis relativos aos
                 <b>USUÁRIOS</b> ou visitantes que usem o site CDL Empregabilidade serão tratados em concordância com a
-                Lei da Proteção de Dados Pessoais (Lei nº 13.709/18). </p>
+                Lei da Proteção de Dados Pessoais (Lei nº 13.709/18).
+            </p>
             <p><b>11.2. Os anúncios de oferta de vagas e programação de treinamento e capacitação da Universidade de
                     Tecnologia do Varejo - UTV?</b></p>
             <p style="margin-left: 60px">A política de anúncios do site CDL Empregabilidade, restringe sua publicidade
@@ -1023,7 +1054,8 @@ $candidato;
                 a si o direito de alterar o <b>TERMO DE USO E POLÍTICA DE PRIVACIDADE</b> a qualquer momento,
                 independente de prévia notificação, conforme a finalidade ou a necessidade, como para adequação com sua
                 política interna, disposição legal ou norma que tenha força jurídica equivalente, cabendo ao
-                <b>USUÁRIO</b> verificar a versão atualizada sempre que acessar o site CDL Empregabilidade;</p>
+                <b>USUÁRIO</b> verificar a versão atualizada sempre que acessar o site CDL Empregabilidade;
+            </p>
             <p style="margin-left: 60px"><b>c)</b> As partes reconhecem e declaram que este contrato não estabelece
                 qualquer vínculo de natureza empregatícia, associativa ou societária entra elas, cabendo individualmente
                 a cada uma das partes cumprir individualmente com todas as obrigações, contribuições e benefícios da
@@ -1196,7 +1228,7 @@ $candidato;
         if(cont05 <4){
         var tempoexperiencia = document.getElementById('tempoexperiencia').value
         var div = document.createElement('div');
-        div.innerHTML = '<div class="row g-3" id="divPreferencia'+cont05+'"><div class="col-md-6" id="tempoexperiencia_div"><label class="form-check-label" for="flexCheckIndeterminate">Selecione Preferências Profissionais</label> <select class="form-select form-select-sm" name="tempoexperiencia[]" id="tempoexperiencia" aria-label="Default select example"> <option>'+tempoexperiencia+'</option></select></div><div class="col-md-2" id="tempoexperiencia_div" style="margin-top:42px"><input type="button" class="btn btn-danger btn-sm" onclick="removeCamposPreferencia('+cont05+')" value="Remover Prefêrencias"> </div></div></div>';
+        div.innerHTML = '<div class="row g-3" id="divPreferencia'+cont05+'" style="margin-bottom:10px"><div class="col-md-6" id="tempoexperiencia_div"><label class="form-check-label" for="flexCheckIndeterminate"></label> <select class="form-select form-select-sm" name="tempoexperiencia[]" id="tempoexperiencia" aria-label="Default select example"> <option>'+tempoexperiencia+'</option></select></div><div class="col-md-2" id="tempoexperiencia_div" style=""><input type="button" class="btn btn-danger btn-sm" onclick="removeCamposPreferencia('+cont05+')" value="Remover Prefêrencias"> </div></div></div>';
                  document.getElementById('listaPreferencia').appendChild(div)
         cont05++;
         var tempoexperiencia = document.getElementById('tempoexperiencia').value ='';

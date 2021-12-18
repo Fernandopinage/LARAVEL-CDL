@@ -428,7 +428,7 @@ class EmpresaController extends Controller
         ->get();
           
 
-       // ddd($dados);
+        //ddd($dados);
 
         return view('buscar_filtro_candidato',compact('dados'));
         
