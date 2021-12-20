@@ -15,6 +15,10 @@
 
 
 <body>
+  
+ @php
+
+ @endphp
 
   <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #004691">
     <div class="container-fluid">
