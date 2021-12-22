@@ -155,9 +155,9 @@ class CandidatoController extends Controller
             $id = base64_decode($id);
             $candidato = Candidato::find($id);
             
-            $pretendente = Pretendente::all();
+            $pretendente = Pretendente::get();
             
-            //ddd($pretendente);
+           //ddd($pretendente);
            // criar um hidden  usando js para alterar o campos 
                
         if (!empty($vagas)) {
