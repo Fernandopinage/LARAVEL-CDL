@@ -154,6 +154,7 @@
 
 @if(!empty($vagas))
 
+
 @foreach($vagas as $vagas)
 
 
@@ -202,17 +203,15 @@
                         <p class="card-text" style="text-align: justify ">{{$vagas->vag_descricao}}</p>
 
                     </div>
-
-                
-
+                    
                     <div class="text-end">
-                        
 
                         <button class="btn btn-primary btn" id="btn{{$vagas->vag_id}}"
-                            onclick="FormVagas({{$vagas->vag_id}},{{$candidato->can_id}},{{($vagas->vag_id_empresa)}})" >Candidate-se
-                            para esta vaga</button>
-                    </div>
+                            onclick="FormVagas({{$vagas->vag_id}},{{$candidato->can_id}},{{($vagas->vag_id_empresa)}})" onclick="forr({{$vagas->vag_id}},{{$candidato->can_id}},{{($vagas->vag_id_empresa))"> Candidate-se
+                            para esta vaga
+                        </button>
 
+                    </div>
 
 
             </form>

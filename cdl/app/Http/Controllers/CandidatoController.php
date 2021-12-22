@@ -157,7 +157,7 @@ class CandidatoController extends Controller
             
             $pretendente = Pretendente::all();
             
-            //ddd($vagas);
+            //ddd($pretendente);
            // criar um hidden  usando js para alterar o campos 
                
         if (!empty($vagas)) {
@@ -168,7 +168,6 @@ class CandidatoController extends Controller
         }
         
     }
-
 
     public function selectCandidato(Request $Request)
     {
@@ -531,7 +530,7 @@ class CandidatoController extends Controller
             
         
         } catch (\Throwable $th) {
-           echo $th;
+           //echo $th;
         }
         
         
