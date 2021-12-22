@@ -3,8 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Requests;
+use App\Jobs\candidatoVagaMail as JobsCandidatoVagaMail;
+use App\Jobs\empresaVagaMail as JobsEmpresaVagaMail;
 use App\Mail\candidatoMail;
+use App\Mail\candidatoVagaMail;
 use App\Mail\empresaVaga;
+use App\Mail\empresaVagaMail;
 use App\Models\Candidato;
 use App\Models\Empresa;
 use App\Models\Preferencia;
@@ -15,6 +19,7 @@ use Illuminate\Support\Facades\Mail;
 //use Vagas;
 use App\Models\Vagas;
 use Candidatos;
+use Empresas;
 use stdClass;
 
 class CandidatoController extends Controller
@@ -522,16 +527,41 @@ class CandidatoController extends Controller
         
         try {
             
-            $Pretendente->save();
+            $Pretendente->save(); // grava no banco os dados
             
         
         } catch (\Throwable $th) {
-           
+           echo $th;
         }
         
         
         return  json_encode($Pretendente);
 
+
+    }
+
+
+    public function candidatarVagaEmail(Request $request){
+
+
+        $id_vaga = $request->vag_id;
+        $id_candidato = $request->can_id;
+        $id_empresa = $request->vag_id_empresa;
+
+
+        $candidato = Candidato::find($id_candidato);
+        $empresa = Empresa::find($id_empresa);
+        $vaga = Vagas::find($id_vaga);
+
+        
+        //Mail::to($candidato->can_email)->send(new candidatoVagaMail($pretendente = Pretendente::where('ptd_id_candidato',  $id_candidato)->where('ptd_id_vaga',  $id_vaga)->where('ptd_id_empresa', $id_empresa)->first()));
+       // Mail::to($empresa->emp_email)->send(new empresaVagaMail($pretendente = Pretendente::where('ptd_id_candidato',  $id_candidato)->where('ptd_id_vaga',  $id_vaga)->where('ptd_id_empresa', $id_empresa)->first()));
+
+        JobsCandidatoVagaMail::dispatch($candidato,$empresa,$vaga)->delay(now()->addSeconds('15'));
+        JobsEmpresaVagaMail::dispatch($candidato,$empresa,$vaga)->delay(now()->addSeconds('15'));
+
+        return view('vagas_candidato');
+        
 
     }
 

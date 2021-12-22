@@ -302,6 +302,7 @@
           document.getElementById('btn'+vaga).style.color = "#fff";
           document.getElementById('btn'+vaga).classList.remove('btn-primary')
           document.getElementById('btn'+vaga).classList.add('tn-secondary');
+          document.getElementById('btn'+vaga).classList.removeAttr('href')
         }
           
       }

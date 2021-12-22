@@ -162,7 +162,7 @@
     <div class="row">
 
         <div class="col-sm-12">
-            <form>
+            <form action="/vaga/candidato/{{$vagas->vag_id}}{{$candidato->can_id}}{{($vagas->vag_id_empresa)}}" method="GET">
                 <div class="card" style="padding: 15px">
                     <p class="card-title"><b
                             style="font-size:36px;color:#006CDE;margin-bottom:10px">{{$vagas->vag_cargo}} -
@@ -206,9 +206,11 @@
                 
 
                     <div class="text-end">
-                        <a class="btn btn-primary btn" id="btn{{$vagas->vag_id}}"
-                            onclick="FormVagas({{$vagas->vag_id}},{{$candidato->can_id}},{{($vagas->vag_id_empresa)}})">Candidate-se
-                            para esta vaga</a>
+                        
+
+                        <button class="btn btn-primary btn" id="btn{{$vagas->vag_id}}"
+                            onclick="FormVagas({{$vagas->vag_id}},{{$candidato->can_id}},{{($vagas->vag_id_empresa)}})" >Candidate-se
+                            para esta vaga</button>
                     </div>
 
 

@@ -47,6 +47,8 @@ Route::get('/mail/password/candidato/{id}',[CandidatoController::class, 'modific
 Route::post('/modificar/senha/candidato', [CandidatoController::class, 'modificar']);
 Route::get('/vaga/candidato/',[CandidatoController::class, 'candidatarVaga']);
 
+Route::get("/vaga/candidato/{vag_id}{can_id}{vag_id_empresa}",[CandidatoController::class, 'candidatarVagaEmail']);
+
 //});
 
 //Route::middleware(['empresaGrupo'])->group(function () {
