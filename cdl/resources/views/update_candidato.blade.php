@@ -959,7 +959,7 @@ $candidato;
             <input type="submit" class="btn btn-primary" value="Salvar Registros">
         </div>
 
-    -->
+    -->  
 
         <span> Campos Obrigatórios <strong>*</strong></span>
         <div class="text-end">
