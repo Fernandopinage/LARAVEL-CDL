@@ -664,11 +664,6 @@
     <div class="row g-3 shadow p-3 mb-5 bg-body rounded" id="00" style="margin-top: 30px">
 
 
-
-
-
-
-
         @for($i = 0; $i <$tamanho5; $i++) <div class="row g-3" id="divPreferencia<?php echo $i; ?>">
             <div class="col-md-6" id="">
                 <label class="form-check-label" for="flexCheckIndeterminate">Selecione Prefêrencias

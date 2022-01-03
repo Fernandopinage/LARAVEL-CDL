@@ -838,13 +838,14 @@ $candidato;
                 <!-- div responsavel por adicionar outros campo -->
                 <div id="listaPreferencia" style="padding-top: 20px">
                 </div>
+
+                @if(!empty($candidato->can_tempoexperiencia))
+                    
                 @php
-
-
-                $t = count($candidato->can_tempoexperiencia);
-
-
+                    $t = count($candidato->can_tempoexperiencia)
                 @endphp
+                    
+                
 
                 <div class="row g-3">
                     <div class="col-md-6" id="tempoexperiencia_div">
@@ -861,7 +862,7 @@ $candidato;
                         </select>
                     </div>
                 </div>
-
+                @endif
 
 
                 <!-- ****************************************** -->
