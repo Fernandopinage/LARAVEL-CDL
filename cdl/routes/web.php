@@ -140,6 +140,7 @@ Route::get('/buscar/candidato/utv/', [utvController::class, 'buscarCandidato']);
 Route::get('/buscar/filtro/candidato/', [utvController::class, 'filtrarCandidato']);
 Route::get('/utv/filtro/{id}', [utvController::class, 'abaFiltro']);
 Route::get('/avaliar/candidato/utv/',[utvController::class, 'validarCandidato']);
+Route::get('/saiba/mais',[utvController::class, 'listaTodosCursos']);
 //}
 
 

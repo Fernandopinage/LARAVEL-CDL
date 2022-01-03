@@ -143,7 +143,7 @@
                             horizontes.</p>
                     </div>
                     <ul class="list-group list-group-flush">
-                        <a href="#" class="btn btn-outline-primary btn-lg btn-block">SAIBA MAIS</a>
+                        <a href="/saiba/mais" class="btn btn-outline-primary btn-lg btn-block">SAIBA MAIS</a>
                     </ul>
                 </div>
             </div>

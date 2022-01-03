@@ -433,6 +433,18 @@ class utvController extends Controller
         
     }
 
+    public function listaTodosCursos(){
+     
+
+        $curso = DB::table('tbl_utvcurso')->get();
+        
+        //ddd($cursos);
+
+        return view('select_cursos', compact('curso'));
+        
+
+    }
+
     public function destroy($id)
     {
         return redirect('login/utv');
