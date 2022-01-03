@@ -435,7 +435,7 @@ class utvController extends Controller
 
     public function listaTodosCursos(){
      
-
+ 
         $curso = DB::table('tbl_utvcurso')->get();
         
         //ddd($cursos);

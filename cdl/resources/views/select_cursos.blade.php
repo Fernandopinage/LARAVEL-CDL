@@ -148,7 +148,7 @@ $tamanho = count($curso);
                 <p>Segunda-feira a Quinta-feira | de 08h às 18h
                 </p><p>   Sexta-feira | de 08h às 17h</p>
             </div>
-            <div class="col-4 text-start">
+            <div class="col-4 text-start"> 
                 <p>Central de Atendimento 
                 </p><p><span class="material-icons">
                     local_phone
