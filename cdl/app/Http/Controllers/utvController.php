@@ -346,6 +346,8 @@ class utvController extends Controller
         $id = base64_decode($id);
 
         $utv = UTV::find($id);
+
+    
         return view('update_utv', compact('utv'));
     }
 
@@ -379,6 +381,7 @@ class utvController extends Controller
     public function update(Request $request, $id)
     {
 
+        $id = base64_decode($id);       
         $UTV = UTV::find($id);
         $UTV->utv_unidade = $request->unidade;
         $UTV->utv_email = $request->email;
@@ -404,6 +407,8 @@ class utvController extends Controller
 
             echo $e->getMessage();
         }
+
+        
     }
 
     public function abaFiltro($id){
