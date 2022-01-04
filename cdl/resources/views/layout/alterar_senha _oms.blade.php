@@ -47,7 +47,7 @@
               <li>
                 <hr class="dropdown-divider">
               </li>
-              <li><a class="dropdown-item" href="/sair/oms/{{session('can_id')}}">Sair</a></li>
+              <li><a class="dropdown-item" href="/sair/oms/{{session('oms_id')}}">Sair</a></li>
             </ul>
           </li>
         </ul>
