@@ -73,7 +73,7 @@ Route::get('/buscar/candidato/empresa', [EmpresaController::class, 'filtrarCandi
 Route::get('/buscar/ideial/empresa/{id}', [EmpresaController::class, 'candidatoFiltro'])->middleware(['empresa']); 
 Route::get('/anuncio/empresa', [EmpresaController::class, 'anuciarVagas'])->middleware(['empresa']); // chamndo tela de anucio
 Route::post('/anucie/vaga/empresa', [VagasController::class, 'anucieVagas'])->middleware(['empresa']); // anucio de vaga
-Route::get('/sair{id}', [EmpresaController::class, 'deslog'])->middleware(['empresa']);
+Route::get('/sair/{id}', [EmpresaController::class, 'deslog'])->middleware(['empresa']);
 //});
 
 
@@ -138,6 +138,7 @@ Route::get('/buscar/filtro/candidato/', [utvController::class, 'filtrarCandidato
 Route::get('/utv/filtro/{id}', [utvController::class, 'abaFiltro'])->middleware(['utv']);
 Route::get('/avaliar/candidato/utv/',[utvController::class, 'validarCandidato'])->middleware(['utv']);
 Route::get('/saiba/mais',[utvController::class, 'listaTodosCursos']);
+Route::get('/sair/{id}', [utvController::class, 'deslog'])->middleware(['utv']);
 //}
 
 

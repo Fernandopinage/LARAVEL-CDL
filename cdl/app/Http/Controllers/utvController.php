@@ -445,8 +445,8 @@ class utvController extends Controller
 
     }
 
-    public function destroy($id)
-    {
-        return redirect('login/utv');
+    public function deslog(Request $request){
+        $request->session()->flush();
+        return redirect('/login/utv');
     }
 }
