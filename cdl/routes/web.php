@@ -52,28 +52,28 @@ Route::get("/vaga/candidato/{vag_id}{can_id}{vag_id_empresa}",[CandidatoControll
 
 //Route::middleware(['empresaGrupo'])->group(function () {
 Route::get('login/empresa', [EmpresaController::class, 'index'])->name('login/empresa'); // chamando tela de login da empresa
-Route::get('/vagas/disponivel/{id}', [EmpresaController::class, 'vagasDisponiveis']);
-Route::get('home/empresa', [EmpresaController::class, 'home']);   //  redirecinando para tela home   
-Route::post('/validar/empresa', [EmpresaController::class, 'validarLogin']); // tela de login da empresa 
+Route::get('/vagas/disponivel/{id}', [EmpresaController::class, 'vagasDisponiveis'])->middleware(['empresa']);
+Route::get('home/empresa', [EmpresaController::class, 'home'])->middleware(['empresa']);   //  redirecinando para tela home   
+Route::post('/validar/empresa', [EmpresaController::class, 'validarLogin'])->middleware(['empresa']); // tela de login da empresa 
 Route::get('add/empresa', [EmpresaController::class, 'formularioEmpresa']); // tela de formulario cadastro de empresa
 Route::post('/insert/empresa', [EmpresaController::class, 'store']); // submetendo formulario de empresa cadastro
-Route::get('/edita/empresa/{id}', [EmpresaController::class, 'editaEmpresa']);  //tela de update de empresa
-Route::post('/update/empresa/{id}', [EmpresaController::class, 'update']);
+Route::get('/edita/empresa/{id}', [EmpresaController::class, 'editaEmpresa'])->middleware(['empresa']);  //tela de update de empresa
+Route::post('/update/empresa/{id}', [EmpresaController::class, 'update'])->middleware(['empresa']);
 Route::get('/redefinir/empresa', [EmpresaController::class, 'redefinirSenha']); // chamando tela de redefinir senha
 Route::get('/redefinir/password/{id}', function ($id) {
     return view('redefinir_password', ['id' => $id]);
-});
+})->middleware(['empresa']);
 Route::post('/recuperar/senha/', [EmpresaController::class, 'recuperarSenha']);
 Route::post('/redefinir/senha/empresa', [EmpresaController::class, 'redefinir']);
-Route::get('/alterar/senha/empresa', [EmpresaController::class, 'alterarSenha']); // redefinir senha da empresa
-Route::post('/modificar/senha/empresa', [EmpresaController::class, 'modificarSenha']); // alterando senha da empresa
+Route::get('/alterar/senha/empresa', [EmpresaController::class, 'alterarSenha'])->middleware(['empresa']); // redefinir senha da empresa
+Route::post('/modificar/senha/empresa', [EmpresaController::class, 'modificarSenha'])->middleware(['empresa']); // alterando senha da empresa
 Route::POST('/update/senha/empresa', [EmpresaController::class, 'updateSenha']);   // Update Senha 
-Route::get('/filtra/candidato/empresa', [EmpresaController::class, 'filtroEmpresa']); // chamando tela de filtro candidato
-Route::get('/buscar/candidato/empresa', [EmpresaController::class, 'filtrarCandidato']); // filtrando candidato 
-Route::get('/buscar/ideial/empresa/{id}', [EmpresaController::class, 'candidatoFiltro']); 
-Route::get('/anuncio/empresa', [EmpresaController::class, 'anuciarVagas']); // chamndo tela de anucio
-Route::post('/anucie/vaga/empresa', [VagasController::class, 'anucieVagas']); // anucio de vaga
-Route::get('/logout/empresa/{id}', [EmpresaController::class, 'logout']);
+Route::get('/filtra/candidato/empresa', [EmpresaController::class, 'filtroEmpresa'])->middleware(['empresa']); // chamando tela de filtro candidato
+Route::get('/buscar/candidato/empresa', [EmpresaController::class, 'filtrarCandidato'])->middleware(['empresa']); // filtrando candidato 
+Route::get('/buscar/ideial/empresa/{id}', [EmpresaController::class, 'candidatoFiltro'])->middleware(['empresa']); 
+Route::get('/anuncio/empresa', [EmpresaController::class, 'anuciarVagas'])->middleware(['empresa']); // chamndo tela de anucio
+Route::post('/anucie/vaga/empresa', [VagasController::class, 'anucieVagas'])->middleware(['empresa']); // anucio de vaga
+Route::get('/logout/empresa/{id}', [EmpresaController::class, 'logout'])->middleware(['empresa']);
 //});
 
 
@@ -82,29 +82,26 @@ Route::get('/restrito/login/militar', [OmsController::class, 'loginRestrito']); 
 Route::POST('/restrito/validar/militar', [OmsController::class, 'validarRestritoOms']); // chamando tela de index login OMS
 Route::get('/login/militar', [OmsController::class, 'login']); // chamando tela de index login OMS
 Route::post('/validar/oms', [OmsController::class, 'validarOms']); // validando login
-Route::get('/home/militar', [OmsController::class, 'home']);
+Route::get('/home/militar', [OmsController::class, 'home'])->middleware(['oms']);
 Route::get('/add/oms/', [OmsController::class, 'formularioOms']); // add OMS
 Route::get('/insert/oms/', [OmsController::class, 'store']);
-Route::get('/busca/militar', [exmilitarController::class, 'index']); // chamando tela busca 
-
-Route::get('/utv/militar/{id}', [exmilitarController::class, 'utvMilitar']);
-
-
-Route::get('busca/militar/filtro',[exmilitarController::class, 'filtroExmilitar']);
-Route::get('/militar/filtro/{id}', [exmilitarController::class, 'abaFiltro']);
+Route::get('/busca/militar', [exmilitarController::class, 'index'])->middleware(['oms']); // chamando tela busca 
+Route::get('/utv/militar/{id}', [exmilitarController::class, 'utvMilitar'])->middleware(['oms']);
+Route::get('busca/militar/filtro',[exmilitarController::class, 'filtroExmilitar'])->middleware(['oms']);
+Route::get('/militar/filtro/{id}', [exmilitarController::class, 'abaFiltro'])->middleware(['oms']);
 Route::get('/oms/redefinir', [OmsController::class, 'redefinir']); // tela de redefinir senha
 Route::post('/redefinir/senha/oms', [OmsController::class, 'redefinirSenha']); // chamndo a logica para redefinir
 Route::get('/redefinir/password/oms/{id}', function ($id) {
     return view('redefinir_password_oms', ['id' => $id]);
 });
 Route::post('/recuperar/senha/oms', [OmsController::class, 'alterarSenha']);
-Route::get('/edita/oms/{id}', [OmsController::class, 'editaEmpresa']);  //tela de update de empresa
-Route::post('/update/oms/{id}', [OmsController::class, 'Update']);
-Route::get('/alterar/senha/oms', [OmsController::class, 'alterarPassword']);
-Route::post('/modificar/senha/oms', [OmsController::class, 'modificarSenha']);
-Route::get('/delete/conta/oms/{id}', [OmsController::class, 'deleteConta']);
-Route::get('/gerar/pdf/{id}', [PDFControler::class , 'gerarPDF']);
-Route::get('/avaliar/candidato/oms/',[OmsController::class, 'avaliarCandidato']);
+Route::get('/edita/oms/{id}', [OmsController::class, 'editaEmpresa'])->middleware(['oms']);  //tela de update de empresa
+Route::post('/update/oms/{id}', [OmsController::class, 'Update'])->middleware(['oms']);
+Route::get('/alterar/senha/oms', [OmsController::class, 'alterarPassword'])->middleware(['oms']);
+Route::post('/modificar/senha/oms', [OmsController::class, 'modificarSenha'])->middleware(['oms']);
+Route::get('/delete/conta/oms/{id}', [OmsController::class, 'deleteConta'])->middleware(['oms']);
+Route::get('/gerar/pdf/{id}', [PDFControler::class , 'gerarPDF'])->middleware(['oms']);
+Route::get('/avaliar/candidato/oms/',[OmsController::class, 'avaliarCandidato'])->middleware(['oms']);
 //});
 
 
@@ -116,30 +113,29 @@ Route::post('/restrito/validar/utv', [utvController::class, 'validarRestritoLogi
 Route::get('login/utv', [utvController::class, 'index']);  // tela de acesso a utv
 Route::post('/validar/utv', [utvController::class, 'validarLogin']);
 Route::get('/edita/utv/{id}', [utvController::class, 'editaUtv']);
-Route::get('/home/utv', [utvController::class, 'home']);
+Route::get('/home/utv', [utvController::class, 'home'])->middleware(['utv']);
 Route::get('/atualizar/cursos/utv/', [utvController::class, 'atualizarCurso']); // atualizando cursos
 Route::POST('/update/utv/{id}', [utvController::class, 'update']);
 Route::get('add/utv', [utvController::class, 'formularioUtv']);
 Route::POST('/insert/utv', [utvController::class, 'insertUTV']);
-Route::post('/insert/cursoutv', [utvController::class, 'addCurso']);
-Route::get('/cursos/utv/', [utvController::class, 'cursosAdd']);
-Route::get('/alterar/senha/', [utvController::class, 'atualizarSenha']);
-Route::get('/alterar/senha/utv/', [utvController::class, 'updateSenha']);
+Route::post('/insert/cursoutv', [utvController::class, 'addCurso'])->middleware(['utv']);
+Route::get('/cursos/utv/', [utvController::class, 'cursosAdd'])->middleware(['utv']);
+Route::get('/alterar/senha/', [utvController::class, 'atualizarSenha'])->middleware(['utv']);
+Route::get('/alterar/senha/utv/', [utvController::class, 'updateSenha'])->middleware(['utv']);
 Route::get('/redefinir/senha/utv', [utvController::class, 'redefinirUtvCurso']);
 Route::get('/recuperar/senha/', [utvController::class, 'redefinirSenha']);
-Route::get('/lista/cursos/utv',[utvController::class, 'ListarCursos']);
-Route::get('/editar/cursos/utv/{id}',[utvController::class, 'editCurso']);
-Route::POST('/update/cursos/utv/{id}',[utvController::class, 'updateCurso']);
+Route::get('/lista/cursos/utv',[utvController::class, 'ListarCursos'])->middleware(['utv']);
+Route::get('/editar/cursos/utv/{id}',[utvController::class, 'editCurso'])->middleware(['utv']);
+Route::POST('/update/cursos/utv/{id}',[utvController::class, 'updateCurso'])->middleware(['utv']);
 Route::get('/redefinir/password/utv/{id}', function ($id) {
     return view('update_password_utv', ['id' => $id]);
     echo $id;
 });
-
 Route::get('/recuperar/senha/utv/', [utvController::class, 'recuperarSenha']);
-Route::get('/buscar/candidato/utv/', [utvController::class, 'buscarCandidato']);
-Route::get('/buscar/filtro/candidato/', [utvController::class, 'filtrarCandidato']);
-Route::get('/utv/filtro/{id}', [utvController::class, 'abaFiltro']);
-Route::get('/avaliar/candidato/utv/',[utvController::class, 'validarCandidato']);
+Route::get('/buscar/candidato/utv/', [utvController::class, 'buscarCandidato'])->middleware(['utv']);
+Route::get('/buscar/filtro/candidato/', [utvController::class, 'filtrarCandidato'])->middleware(['utv']);
+Route::get('/utv/filtro/{id}', [utvController::class, 'abaFiltro'])->middleware(['utv']);
+Route::get('/avaliar/candidato/utv/',[utvController::class, 'validarCandidato'])->middleware(['utv']);
 Route::get('/saiba/mais',[utvController::class, 'listaTodosCursos']);
 //}
 
@@ -149,8 +145,6 @@ Route::get('/saiba/mais',[utvController::class, 'listaTodosCursos']);
 Route::get('/restrito/area/acesso', [AcessoController::class, 'index']);   // tela de acesso area administrativa
 Route::post('/validar/restrito',[AcessoController::class, 'validarLogin']);
 Route::get('/add/restrito/',[AcessoController::class, 'store']);
-
-
 Route::POST('/insert/restrito',[AcessoController::class, 'insertRestrito']);
 Route::get('/redefinir/restrito',[AcessoController::class, 'redefinirSenha']);
 Route::post('/redefinir/senha/restrito',[AcessoController::class, 'redefinirPassword']);
@@ -161,7 +155,6 @@ Route::post('/modificar/senha/registro',[AcessoController::class, 'modificar']);
 Route::get('/home/acesso', [AcessoController::class, 'home']);
 Route::get('/restrito/opt/banner', [AcessoController::class, 'viewBanner']);
 Route::get('/banner/alterar',[AcessoController::class, 'Banner']);
-
 Route::get('/add/preferencia/',[PreferenciaController::class, 'index']);
 Route::get('/insert/preferencia/',[PreferenciaController::class, 'insertPreferencias']);
 //}
