@@ -566,10 +566,7 @@ class CandidatoController extends Controller
     }
 
     public function deslog(Request $request){
-
-        
        $request->session()->flush();
-
        return redirect('login/candidato');
     }
 
