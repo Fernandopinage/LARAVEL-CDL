@@ -31,22 +31,22 @@ Route::get('/cursos',[homeController::class, 'cursos']);
 //Route::middleware(['candidado'])->group(function () {
 Route::get('login/candidato', [CandidatoController::class, 'index']); // chamando tela de candidatos
 Route::POST('/validar/candidato',[CandidatoController::class, 'validarCandidato']);
-Route::get('/home/candidato',[CandidatoController::class, 'home']);
-Route::get('/vagas/candidato',[CandidatoController::class, 'vagas']);
-Route::get('/lista/vaga/candidato/{id}',[CandidatoController::class, 'listarVagas']);
-Route::get('busca/candidato', [CandidatoController::class, 'selectCandidato']); // chamando tela  busca candidato 
+Route::get('/home/candidato',[CandidatoController::class, 'home'])->middleware(['candidato']);
+Route::get('/vagas/candidato',[CandidatoController::class, 'vagas'])->middleware(['candidato']);
+Route::get('/lista/vaga/candidato/{id}',[CandidatoController::class, 'listarVagas'])->middleware(['candidato']);
+Route::get('busca/candidato', [CandidatoController::class, 'selectCandidato'])->middleware(['candidato']); // chamando tela  busca candidato 
 Route::get('/add/candidato', [CandidatoController::class, 'formularioCandidato']); // chamando tela de formulario do candidato
 Route::post('/insert/candidato', [CandidatoController::class, 'store']);
-Route::get('/editar/candidato/{id}',[CandidatoController::class, 'editarCandidato']);
-Route::post('/update/candidato/{id}',[CandidatoController::class, 'update']);
-Route::get('/redefinir/candidato/',[CandidatoController::class, 'redefinirCandidato']);
+Route::get('/editar/candidato/{id}',[CandidatoController::class, 'editarCandidato'])->middleware(['candidato']);
+Route::post('/update/candidato/{id}',[CandidatoController::class, 'update'])->middleware(['candidato']);
+Route::get('/redefinir/candidato/',[CandidatoController::class, 'redefinirCandidato'])->middleware(['candidato']);
 Route::GET('/redefinir/senha/candidato/',[CandidatoController::class, 'redefinir']);
 Route::get('/redefinir/password/candidato/{id}',[CandidatoController::class, 'updateSenha']);
 Route::get('/password/candidato/',[CandidatoController::class, 'updateSenha']);
-Route::get('/mail/password/candidato/{id}',[CandidatoController::class, 'modificarSenha']);
-Route::post('/modificar/senha/candidato', [CandidatoController::class, 'modificar']);
-Route::get('/vaga/candidato/',[CandidatoController::class, 'candidatarVaga']);
-Route::get("/vaga/candidato/{vag_id}{can_id}{vag_id_empresa}",[CandidatoController::class, 'candidatarVagaEmail']);
+Route::get('/mail/password/candidato/{id}',[CandidatoController::class, 'modificarSenha'])->middleware(['candidato']);
+Route::post('/modificar/senha/candidato', [CandidatoController::class, 'modificar'])->middleware(['candidato']);
+Route::get('/vaga/candidato/',[CandidatoController::class, 'candidatarVaga'])->middleware(['candidato']);
+Route::get("/vaga/candidato/{vag_id}{can_id}{vag_id_empresa}",[CandidatoController::class, 'candidatarVagaEmail'])->middleware(['candidato']);
 
 //});
 
