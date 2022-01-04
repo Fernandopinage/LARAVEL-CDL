@@ -76,9 +76,6 @@ class OmsController extends Controller
 
     }
 
- 
-
-
 
     public function exMilitar(){
 
@@ -278,4 +275,10 @@ class OmsController extends Controller
           return redirect('/militar/filtro/'.$id)->with('avaliacao', 'Email ou Senha incorretos!');
         */
     }
+
+    public function deslog(Request $request){
+        $request->session()->flush();
+        return redirect('/login/militar');
+    }
+
 }

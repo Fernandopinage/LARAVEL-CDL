@@ -102,6 +102,7 @@ Route::post('/modificar/senha/oms', [OmsController::class, 'modificarSenha'])->m
 Route::get('/delete/conta/oms/{id}', [OmsController::class, 'deleteConta'])->middleware(['oms']);
 Route::get('/gerar/pdf/{id}', [PDFControler::class , 'gerarPDF'])->middleware(['oms']);
 Route::get('/avaliar/candidato/oms/',[OmsController::class, 'avaliarCandidato'])->middleware(['oms']);
+Route::get('/sair{id}', [OmsController::class, 'deslog'])->middleware(['oms']);
 //});
 
 
