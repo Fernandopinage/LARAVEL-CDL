@@ -73,7 +73,7 @@ Route::get('/buscar/candidato/empresa', [EmpresaController::class, 'filtrarCandi
 Route::get('/buscar/ideial/empresa/{id}', [EmpresaController::class, 'candidatoFiltro'])->middleware(['empresa']); 
 Route::get('/anuncio/empresa', [EmpresaController::class, 'anuciarVagas'])->middleware(['empresa']); // chamndo tela de anucio
 Route::post('/anucie/vaga/empresa', [VagasController::class, 'anucieVagas'])->middleware(['empresa']); // anucio de vaga
-Route::get('/sair/{id}', [EmpresaController::class, 'deslog'])->middleware(['empresa']);
+Route::get('/sair/empresa/{id}', [EmpresaController::class, 'deslog'])->middleware(['empresa']);
 //});
 
 
@@ -102,7 +102,7 @@ Route::post('/modificar/senha/oms', [OmsController::class, 'modificarSenha'])->m
 Route::get('/delete/conta/oms/{id}', [OmsController::class, 'deleteConta'])->middleware(['oms']);
 Route::get('/gerar/pdf/{id}', [PDFControler::class , 'gerarPDF'])->middleware(['oms']);
 Route::get('/avaliar/candidato/oms/',[OmsController::class, 'avaliarCandidato'])->middleware(['oms']);
-Route::get('/sair/{id}', [OmsController::class, 'deslog'])->middleware(['oms']);
+Route::get('/sair/oms/{id}', [OmsController::class, 'deslog'])->middleware(['oms']);
 //});
 
 
@@ -138,7 +138,7 @@ Route::get('/buscar/filtro/candidato/', [utvController::class, 'filtrarCandidato
 Route::get('/utv/filtro/{id}', [utvController::class, 'abaFiltro'])->middleware(['utv']);
 Route::get('/avaliar/candidato/utv/',[utvController::class, 'validarCandidato'])->middleware(['utv']);
 Route::get('/saiba/mais',[utvController::class, 'listaTodosCursos']);
-Route::get('/sair/{id}', [utvController::class, 'deslog'])->middleware(['utv']);
+Route::get('/sair/utv/{id}', [utvController::class, 'deslog'])->middleware(['utv']);
 //}
 
 

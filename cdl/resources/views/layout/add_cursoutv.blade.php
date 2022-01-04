@@ -51,7 +51,7 @@
                       <li><a class="dropdown-item" href="/edita/utv/{{session('utv_id')}}">Editar UTV</a></li>
                       <li><a class="dropdown-item" href="/alterar/senha/">Redefinir Senha</a></li>
                       <hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="/sair/{{session('utv_id')}}">Sair</a></li>
+                      <li><a class="dropdown-item" href="/sair/utv/{{session('utv_id')}}">Sair</a></li>
                      <!-- <li><hr class="dropdown-divider"></li> -->
                       
                     </ul>
