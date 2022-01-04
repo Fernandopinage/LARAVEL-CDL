@@ -20,6 +20,7 @@ use Illuminate\Support\Facades\Mail;
 use App\Models\Vagas;
 use Candidatos;
 use Empresas;
+use Illuminate\Contracts\Session\Session;
 use stdClass;
 
 class CandidatoController extends Controller
@@ -562,6 +563,14 @@ class CandidatoController extends Controller
         return view('vagas_candidato');
         
 
+    }
+
+    public function deslog(Request $request){
+
+        
+       $request->session()->flush();
+
+       return redirect('login/candidato');
     }
 
 
