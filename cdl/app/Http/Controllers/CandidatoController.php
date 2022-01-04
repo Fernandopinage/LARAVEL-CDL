@@ -49,6 +49,7 @@ class CandidatoController extends Controller
                 $request->session()->put('can_id', $id);
                 $request->session()->put('candidato', $request->email);
            
+
                return redirect('home/candidato');                                  // redirecinanmento se estiver tudo certo
 
             } else {
@@ -69,8 +70,41 @@ class CandidatoController extends Controller
 
     public function home()
     {
+        $id = session('can_id');
+        $id = base64_decode($id);
 
-        return view('home_candidato');
+        $candidato =  Candidato::where('can_id', $id)->get();
+        
+        foreach($candidato as $candidato => $obj){
+           $vagas =  $obj['can_tempoexperiencia'];
+        }
+
+        if(!empty($vagas)){
+
+            $vagas = Vagas::where(function($query) use ($vagas){
+
+                if(!empty($vagas[0])){
+                    $query->where('vag_cargo','like','%'.$vagas[0].'%');
+                }
+
+                if(!empty($vagas[1])){
+                    $query->orWhere('vag_cargo','like','%'.$vagas[1].'%');
+                }
+
+                if(!empty($vagas[2])){
+                    $query->orWhere('vag_cargo','like','%'.$vagas[2].'%');
+                }
+
+            })->inRandomOrder()->get();
+        }else{
+
+            $vagas = Vagas::inRandomOrder()->get();
+            
+
+        }
+
+
+        return view('home_candidato',compact('vagas'));
     }
 
     public function vagas()

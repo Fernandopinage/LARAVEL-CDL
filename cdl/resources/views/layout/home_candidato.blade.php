@@ -72,7 +72,7 @@
 
 
     <footer >
-      <nav class="navbar fixed-bottom navbar-expand-sm navbar bg" style="background-color: #d0d0d056; margin-bottom:0px">
+      <nav class="navbar bottom navbar-expand-sm navbar bg" style="background-color: #d0d0d0fa; margin-bottom:0px">
       
         <div class="container" id="container" style="color:#black; font-size:14px;">
             <div class="row">
