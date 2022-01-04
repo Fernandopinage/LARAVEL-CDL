@@ -139,8 +139,8 @@
 
                 <hr>
                 <div class="text-end">
-                    <a href="" class="btn btn-secondary">Limpar Filtro</a>
-                    <a href="" class="btn btn-success">Salvar Filtro</a>
+                 <!--   <a href="" class="btn btn-secondary">Limpar Filtro</a>
+                    <a href="" class="btn btn-success">Salvar Filtro</a> -->
                     <input type="submit" class="btn btn-primary" value="Buscar Vagas">
                     <!-- onclick="alert('Ainda não possui candidatos cadastrados')"-->
                 </div>

@@ -39,8 +39,8 @@
                       Cursos
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="/cursos/utv/">Cadastro de Cursos</a></li>
-                      <li><a class="dropdown-item" href="/lista/cursos/utv">Todos os Cursos</a></li>
+                      <li><a class="dropdown-item" href="/cursos/utv/">Cadastro de Eventos</a></li>
+                      <li><a class="dropdown-item" href="/lista/cursos/utv">Todos os Eventos</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">

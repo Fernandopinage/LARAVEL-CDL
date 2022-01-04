@@ -103,8 +103,13 @@ class CandidatoController extends Controller
 
         }
 
+        
+        $candidato = Candidato::find($id);
+        
+        $pretendente = Pretendente::get();
 
-        return view('home_candidato',compact('vagas'));
+
+        return view('home_candidato',compact('vagas','candidato','pretendente'));
     }
 
     public function vagas()
@@ -547,11 +552,11 @@ class CandidatoController extends Controller
     
     public function candidatarVaga(Request $request){
 
-        $vaga_id = $_GET['vaga'];
-        $candidato_id = $_GET['candidato'];
-        $empresa_id = $_GET['empresa'];
+        echo $vaga_id = $_GET['vaga'];
+        echo $candidato_id = $_GET['candidato'];
+        echo $empresa_id = $_GET['empresa'];
 
-
+        
 
         $Pretendente = new Pretendente();
         $Pretendente->ptd_id_candidato = $candidato_id;    // id candidado
@@ -570,7 +575,7 @@ class CandidatoController extends Controller
         
         
         return  json_encode($Pretendente);
-
+        
 
     }
 

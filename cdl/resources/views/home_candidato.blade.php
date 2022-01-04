@@ -13,7 +13,7 @@
     <div class="row">
 
         <div class="col-sm-12">
-            <form action="" method="GET">
+            <form action="/vaga/candidato/{{$vagas->vag_id}}{{$candidato->can_id}}{{($vagas->vag_id_empresa)}}" method="GET">
                 <div class="card" style="padding: 15px">
                     <p class="card-title"><b
                             style="font-size:36px;color:#006CDE;margin-bottom:10px">{{$vagas->vag_cargo}} -
@@ -56,7 +56,8 @@
                     
                     <div class="text-end">
 
-                        <button class="btn btn-primary btn">Candidate-se
+                        <button class="btn btn-primary btn" id="btn{{$vagas->vag_id}}"
+                            onclick="FormVagas({{$vagas->vag_id}},{{$candidato->can_id}},{{($vagas->vag_id_empresa)}})"  >Candidate-se
                             para esta vaga
                         </button>
 
@@ -76,3 +77,42 @@
 
 
 @endsection
+
+<script>
+    function Pretendente(id,user){
+  
+ 
+
+const swalWithBootstrapButtons = Swal.mixin({
+  customClass: {
+    confirmButton: 'btn btn-success',
+    cancelButton: 'btn btn-danger'
+  },
+  buttonsStyling: false
+})
+
+swalWithBootstrapButtons.fire({
+ title: 'Deseja-se candidatar a vaga?',
+ // text: "Deseja-se candidatar a vaga?",
+  icon: 'info',
+  showCancelButton: true,
+  confirmButtonText: 'Sim',
+
+  cancelButtonText: 'Não',
+  reverseButtons: true
+}).then((result) => {
+  if (result.isConfirmed) {
+
+         location.href="/vaga/candidato/"+id,user);
+    
+  } else if (
+    /* Read more about handling dismissals below */
+    result.dismiss === Swal.DismissReason.cancel
+  ) {
+    
+  }
+})
+    }
+
+
+</script>
