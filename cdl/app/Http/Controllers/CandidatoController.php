@@ -48,8 +48,8 @@ class CandidatoController extends Controller
 
                 $request->session()->put('can_id', $id);
                 $request->session()->put('candidato', $request->email);
-
-                return redirect('home/candidato');                                  // redirecinanmento se estiver tudo certo
+           
+               return redirect('home/candidato');                                  // redirecinanmento se estiver tudo certo
 
             } else {
                 return redirect('login/candidato');
@@ -566,8 +566,9 @@ class CandidatoController extends Controller
     }
 
     public function deslog(Request $request){
-       $request->session()->flush();
-       return redirect('login/candidato');
+      // $request->session()->flush();
+      // return redirect('login/candidato');
+      echo "aqui";
     }
 
 

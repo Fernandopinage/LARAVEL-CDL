@@ -47,7 +47,7 @@ Route::get('/mail/password/candidato/{id}',[CandidatoController::class, 'modific
 Route::post('/modificar/senha/candidato', [CandidatoController::class, 'modificar'])->middleware(['candidato']);
 Route::get('/vaga/candidato/',[CandidatoController::class, 'candidatarVaga'])->middleware(['candidato']);
 Route::get("/vaga/candidato/{vag_id}{can_id}{vag_id_empresa}",[CandidatoController::class, 'candidatarVagaEmail'])->middleware(['candidato']);
-Route::get("/sair/{id}",[CandidatoController::class,'deslog'])->middleware(['candidato']);
+Route::get("/sair/candidato/{id}",[CandidatoController::class,'deslog'])->middleware(['candidato']);
 //});
 
 //Route::middleware(['empresaGrupo'])->group(function () {
