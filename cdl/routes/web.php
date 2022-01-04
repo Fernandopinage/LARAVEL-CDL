@@ -54,7 +54,7 @@ Route::get("/sair/{id}",[CandidatoController::class,'deslog'])->middleware(['can
 Route::get('login/empresa', [EmpresaController::class, 'index'])->name('login/empresa'); // chamando tela de login da empresa
 Route::get('/vagas/disponivel/{id}', [EmpresaController::class, 'vagasDisponiveis'])->middleware(['empresa']);
 Route::get('home/empresa', [EmpresaController::class, 'home'])->middleware(['empresa']);   //  redirecinando para tela home   
-Route::post('/validar/empresa', [EmpresaController::class, 'validarLogin'])->middleware(['empresa']); // tela de login da empresa 
+Route::post('/validar/empresa', [EmpresaController::class, 'validarLogin']); // tela de login da empresa 
 Route::get('add/empresa', [EmpresaController::class, 'formularioEmpresa']); // tela de formulario cadastro de empresa
 Route::post('/insert/empresa', [EmpresaController::class, 'store']); // submetendo formulario de empresa cadastro
 Route::get('/edita/empresa/{id}', [EmpresaController::class, 'editaEmpresa'])->middleware(['empresa']);  //tela de update de empresa
@@ -73,7 +73,7 @@ Route::get('/buscar/candidato/empresa', [EmpresaController::class, 'filtrarCandi
 Route::get('/buscar/ideial/empresa/{id}', [EmpresaController::class, 'candidatoFiltro'])->middleware(['empresa']); 
 Route::get('/anuncio/empresa', [EmpresaController::class, 'anuciarVagas'])->middleware(['empresa']); // chamndo tela de anucio
 Route::post('/anucie/vaga/empresa', [VagasController::class, 'anucieVagas'])->middleware(['empresa']); // anucio de vaga
-Route::get('/logout/empresa/{id}', [EmpresaController::class, 'logout'])->middleware(['empresa']);
+Route::get('/sair{id}', [EmpresaController::class, 'deslog'])->middleware(['empresa']);
 //});
 
 

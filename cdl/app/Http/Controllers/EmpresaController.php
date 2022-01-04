@@ -411,13 +411,6 @@ class EmpresaController extends Controller
         }
     }
 
-    public function logout(Request $request)
-    {
-
-        $request->session()->pull('empresa');
-        return redirect('login/empresa');
-    }
-
     public function candidatoFiltro($id){
 
         $id = base64_decode($id);
@@ -436,4 +429,8 @@ class EmpresaController extends Controller
 
         
     }
+    public function deslog(Request $request){
+        $request->session()->flush();
+        return redirect('/login/empresa');
+     }
 }

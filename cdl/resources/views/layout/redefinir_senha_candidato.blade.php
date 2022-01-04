@@ -37,7 +37,7 @@
               <li>
                 <hr class="dropdown-divider">
               </li>
-              <li><a class="dropdown-item" href="/">Sair</a></li>
+              <li><a class="dropdown-item" href="/sair/{{session('empresa_id')}}">Sair</a></li>
             </ul>
           </li>
         </ul>
