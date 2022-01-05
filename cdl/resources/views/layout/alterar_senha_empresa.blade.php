@@ -137,12 +137,12 @@
 
 
 <!-- Mensagem de cadastro com sucesso -->
-@if(session('mensagem'))
+@if(session('alterar'))
 <script>
   Swal.fire({
   position: 'center',
   icon: 'success',
-  title: 'Registro cadastrado com sucesso!',
+  title: 'Senha alterada com sucesso!',
   showConfirmButton: false,
   timer: 1500
 })

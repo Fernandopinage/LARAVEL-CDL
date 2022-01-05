@@ -187,19 +187,19 @@ class utvController extends Controller
     public function updateSenha(Request $request)
     {
 
-
-
-        $UTV = UTV::Where('utv_id', $request->id)->first();
+        $id = base64_decode($request->id); // foi decodificado quando o uruario precisa alterar senha        
+        $UTV = UTV::Where('utv_id', $id)->first();
+        
         if (!empty($UTV)) {
 
             if ($request->newsenha === $request->confsenha) {
-
-
-                $UTV = UTV::find($request->id);
-                $UTV->utv_senha = Hash::make($request->confsenha);
+                            
+                $UTV = UTV::find($id);
+                $UTV->utv_senha = Hash::make($request->newsenha);
                 $UTV->save();
 
-                return redirect('/login/utv')->with('alterar', 'Sua senha foi alterado com sucesso!');
+                return redirect('/alterar/senha/')->with('alterar', 'Sua senha foi alterado com sucesso!');
+                
             } else {
                 return redirect('/alterar/senha/')->with('erro', 'Sua senha foi alterado com sucesso!');
             }
@@ -207,6 +207,7 @@ class utvController extends Controller
 
             return redirect('/alterar/senha/')->with('erro', 'Sua senha foi alterado com sucesso!');
         }
+        
     }
 
     public function redefinirUtvCurso()
