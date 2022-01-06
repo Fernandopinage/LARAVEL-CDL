@@ -101,7 +101,7 @@
         @yield('login')
     </div>
     <footer style="margin-top: 150px;" >
-      <nav class="navbar bottom navbar-expand-sm navbar bg" style="background-color: #fff; margin-bottom:0px">
+      <nav class="navbar bottom navbar-expand-sm navbar bg" style="background-color: #ffffffb8; margin-bottom:0px">
       
         <div class="container" id="container" style="color:#black; font-size:14px;">
             <div class="row">

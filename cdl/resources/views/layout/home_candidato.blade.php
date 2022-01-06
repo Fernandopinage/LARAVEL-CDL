@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-        <link href="/css/redefinir_empresa.css" rel="stylesheet">
+        <link href="/css/home_candidato.css" rel="stylesheet">
     <link rel="icon" href="/img/title.png">
     <title>Empregabilidade | CDL Manaus</title>
 </head>

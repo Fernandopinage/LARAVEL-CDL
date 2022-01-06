@@ -4,7 +4,12 @@
     font-family: 'Fira Sans Condensed', Arial, Helvetica, sans-serif;
 }
 
-
+body{
+ 
+  background: url('/img/group-of-people-working-out-business-plan-in-an-office (3)_.jpg');
+  background-size: cover; 
+  background-attachment: fixed, scroll;
+}
 
 title{
   background: url('/img/title.png');
@@ -29,7 +34,7 @@ title{
       margin:  auto;
       margin-top: 50px;
       margin-left: 10px;
-      background-color: #242966;
+      background-color: #004691c2;
       box-shadow: 4px 4px 8px rgba(0,0,0,0.15);
       border-radius: 18px;
     

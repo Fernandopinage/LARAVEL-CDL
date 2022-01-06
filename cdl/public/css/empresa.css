@@ -11,7 +11,7 @@ title{
 
 body{
  
-  background: url('/img/Login_empresa.jpg');
+  background: url('/img/empresa.jpg');
   background-size: cover; 
   background-attachment: fixed, scroll;
 }
@@ -61,7 +61,7 @@ body{
       margin-top: 50px;
       margin-left: 60px;
       margin-right: 60px;
-      background-color: #fff;
+      background-color: #0046919c;
       box-shadow: 4px 4px 8px rgba(0,0,0,0.15);
       border-radius: 18px;
     
@@ -74,7 +74,7 @@ body{
     
   
    #link1{
-        color: #242966;
+        color: #fff;
     }
   
     a:link{
@@ -86,16 +86,16 @@ body{
       color: black;
     }
     hr{
-      color: #242966;
+      color: #fff;
     }
     h2{
-      color: #242966;
+      color: #fff;
     }
     .nav-link{
-        color: #242966;
+        color: #fff;
     }
     .nav-link:hover{
-      color: #242966;
+      color: #fff;
     }
   
     .photo{

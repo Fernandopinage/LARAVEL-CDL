@@ -15,7 +15,7 @@
 
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #004691">
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #0E5836">
     <div class="container-fluid">
         <a class="navbar-brand" href="/"><img id="logo" src="/img/cdl_logo.png"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
@@ -104,7 +104,7 @@
 
   </div>
   <footer style="margin-top: 150px;" >
-    <nav class="navbar bottom navbar-expand-sm navbar bg" style="background-color: #8f8d5d7e; margin-bottom:0px">
+    <nav class="navbar bottom navbar-expand-sm navbar bg" style="background-color: #0e5836; margin-bottom:0px">
     
       <div class="container" id="container" style="color:#fff; font-size:14px;">
           <div class="row">

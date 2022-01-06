@@ -5,7 +5,7 @@
 <form class="form-signin " action="empresa" method="POST">
 
 
-    <div class="text">          
+    <div class="text mt-2">          
         <h2 class="form-signin-heading">MINHAS VAGAS</h2>
         <hr>
     </div>
@@ -15,11 +15,11 @@
         
     @foreach($vagas as $vagas)
 
-    <div class=" d-inline-block" style="padding: 8px;">
+    <div class=" d-inline-block">
 
-        <div   {{$vagas->vag_id}}style="border: 0px; ">
+        <div   {{$vagas->vag_id}}style="border: 0px;">
             <div class="form-group col-md-4">
-                <div class="row g-3 shadow p-4 mb-5 bg-body rounded" style="width: 25rem; margin:20px;">
+                <div class="row g-3 shadow p-4 mb-2 bg-body rounded" style="width: 24rem; margin:10px;">
                     <div class="card-body">
                         <p class="card-title text-left">
                             <span style="color: #284D92">{{$vagas->vag_cargo}}</span>

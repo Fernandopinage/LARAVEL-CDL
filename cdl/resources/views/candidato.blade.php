@@ -16,7 +16,7 @@
     <input type="password" class="form-control form-control" name="password" placeholder="Senha" required="" />
     </div>
     <div class="d-grid gap-2">
-    <input type="submit" class="btn btn-lg" name="loginentrar" value="Entrar">
+    <input type="submit" class="btn-primary btn-lg" name="loginentrar" value="Entrar">
     </div>
     <div class="row g-3">
         <div class="col">
@@ -30,7 +30,9 @@
 
 </form>
 <!-- REMOVER ISSO -->
+<!--
 <div class="photo">
     <img src="/img/man2-candidato1.png">
 </div>
+-->
 @endsection
