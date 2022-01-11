@@ -418,7 +418,7 @@ class utvController extends Controller
 
     
         $dados = Candidato::where('can_id', '=', $id)
-        ->where('can_exmilitar', '=', 'Sim')
+        //->where('can_exmilitar', '=', 'Sim')
         ->get();
           
 
