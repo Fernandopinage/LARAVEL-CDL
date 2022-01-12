@@ -21,9 +21,10 @@
 
 <div class="container-fluid" style="">
     @if(!empty($candidato))
+    
     <div class="container" id="canditados" style="margin-top: 50px; margin-bottom:50px">
         @foreach ($candidato as $candidato)
-
+        @if(!empty($candidato->can_utv_titlulo[0]))
         <div class=" d-inline-block" style="padding: 8px;">
 
             <div class="form-row" style="border: 0px;">
@@ -68,7 +69,7 @@
                            
                             <?php 
                             
-                            if(!empty($candidato->can_utv_titlulo[0])){
+                           
 
                                 if($candidato->can_validacao == "Sim"){
                                     ?>
@@ -77,7 +78,7 @@
                                 </div>
                                 
                                 <?php
-                            }else{
+                                }else{
                                 ?>
                                 
                                 <div class="d-grid gap-2" style="margin-top: 10px; color:#FFF;">
@@ -86,17 +87,7 @@
                                 
                                 <?php 
                                 }
-                            }else{
-
-                                ?>
-                                    <div class="d-grid gap-2" style="margin-top: 10px; color:#FFF;">
-                                        <a class="btn btn-warning">Não possui curso UTV para avaliar</a>
-                                    </div>
-                                
-                                <?php
-
-                                
-                            }
+                            
                             
                             ?>
 
@@ -105,7 +96,7 @@
                 </div>
             </div>
         </div>
-
+        @endif
         @endforeach
     </div>
     @endif
