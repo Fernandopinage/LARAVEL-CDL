@@ -365,7 +365,7 @@ class utvController extends Controller
             $candidato = Candidato::where('can_utv_titlulo',$request->buscar.'%')
             ->orWhere('can_nome','like',$request->buscar.'%')
             ->orWhere('can_cpf','like', $request->buscar.'%')
-            ->get();
+            ->orderByDesc('can_validacao')->get();
         
             if(!empty($candidato)){
 
