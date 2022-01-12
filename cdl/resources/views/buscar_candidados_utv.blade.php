@@ -50,28 +50,30 @@
                             </h1>
                             <hr>
                             <br>
-                            <span><b style="color: #22427c; margin-right:0px">Nome:</b></span><span
-                                style="color: #535151"> {{$candidato->can_nome}}</span>
+                            <span><b style="color: #22427c; margin-right:0px;">Nome:</b></span><span
+                                style="color: #535151; font-size: 15px"> {{$candidato->can_nome}}</span>
                             <br>
                             <span><b style="color: #22427c; margin-right:0px">E-mail:</b></span><span
-                            style="color: #535151"> {{$candidato->can_email}}</span>
+                            style="color: #535151; font-size: 15px"> {{$candidato->can_email}}</span>
 
                             <br>
                             <span><b style="color: #22427c; margin-right:0px">Celular:</b></span><span
-                            style="color: #535151"> {{$candidato->can_celular}}</span>
+                            style="color: #535151; font-size: 15px"> {{$candidato->can_celular}}</span>
                             <br>
                             <span><b style="color: #22427c; margin-right:0px">CPF:</b></span>
                             <span
-                            style="color: #535151"> {{$candidato->can_cpf}}</span>
+                            style="color: #535151; font-size: 15px"> {{$candidato->can_cpf}}</span>
 
                             <br>
                            
                             <?php 
                             
-                            if($candidato->can_validacao == "Sim"){
-                                ?>
+                            if(!empty($candidato->can_utv_titlulo[0])){
+
+                                if($candidato->can_validacao == "Sim"){
+                                    ?>
                                 <div class="d-grid gap-2" style="margin-top: 10px; color:#FFF;">
-                                <a class="btn btn-success" href="/utv/filtro/{{base64_encode($candidato->can_id)}}" target="_blank">Avaliado</a>
+                                    <a class="btn btn-success" href="/utv/filtro/{{base64_encode($candidato->can_id)}}" target="_blank">Avaliado</a>
                                 </div>
                                 
                                 <?php
@@ -83,6 +85,17 @@
                                 </div>
                                 
                                 <?php 
+                                }
+                            }else{
+
+                                ?>
+                                    <div class="d-grid gap-2" style="margin-top: 10px; color:#FFF;">
+                                        <a class="btn btn-warning">Não possui curso UTV para avaliar</a>
+                                    </div>
+                                
+                                <?php
+
+                                
                             }
                             
                             ?>

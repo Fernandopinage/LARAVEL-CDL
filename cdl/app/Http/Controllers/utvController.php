@@ -369,7 +369,7 @@ class utvController extends Controller
         
             if(!empty($candidato)){
 
-                
+                //ddd($candidato);
                 return view('buscar_candidados_utv',compact('candidato'));
                 
             }
