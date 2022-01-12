@@ -140,6 +140,11 @@
                         </select>
                     </div>
 
+                    <div class="text-end">
+                        <input type="submit" class="btn btn-primary" value="Salvar Avaliação">
+                    </div>
+
+
 
                 </div>
             </div>
@@ -262,6 +267,7 @@
             -->
             </div>
 
+
             <div class="text">
                 <h2 class="form-signin-heading" style="color:#284D92;">Formação Acadêmica</h2>
                 <hr>
@@ -361,6 +367,8 @@
                     </div>
                 </div>
 
+                @if (!empty($dados->can_curso_extra[0]))
+
 
                 <div style="padding-top: 50px">
 
@@ -370,20 +378,15 @@
 
                 </div>
 
+
+
                 @php
 
-                if(!empty($dados->can_curso_extra)){
-
                 $tamanho = count($dados->can_curso_extra);
-                }else{
-                $tamnho = 1;
-                }
-
                 @endphp
 
 
-                @for($i = 0; $i <$tamanho; $i++) <div class="row g-3 shadow p-4 mb-5 bg-body rounded"
-                    id="div<?php echo $i;?>" style="margin:0px 20px 0px 20px; padding:20px;">
+                @for($i = 0; $i <$tamanho; $i++) <div class="row g-3" id="div<?php echo $i;?>" style="">
 
                     <div class="col-md-4">
                         <label class="form-check-label" for="flexCheckIndeterminate">Cursos extracurriculares</label>
@@ -407,10 +410,17 @@
 
             @endfor
 
-            <!-- div responsavel por adicionar outros campo -->
-            <div id="lista" style="padding: 30px 0px 30px 0px"> </div>
-            <!-- ****************************************** -->
-            <div style="padding-top: 50px">
+
+            @endif
+
+
+            @if (!empty($dados->can_utv_titlulo[0]))
+
+            @php
+            $tamanho2 = count($dados->can_utv_titlulo);
+            @endphp
+
+            <div style="margin-top:10px">
 
                 <h4 style="color: #284D92;">Curso UTV
                 </h4>
@@ -418,21 +428,8 @@
 
             </div>
 
-            @php
 
-
-
-            if(!empty($dados->can_utv_titlulo)){
-
-            $tamanho2 = count($dados->can_utv_titlulo);
-            }else{
-            $tamanho2 = 1;
-            }
-
-            @endphp
-
-            @for($i = 0; $i <$tamanho2; $i++) <div class="row g-3 shadow p-4 mb-5 bg-body rounded"
-                id="divUTv<?php echo $i; ?>" style="margin:0px 20px 0px 20px; padding:20px;">
+            @for($i = 0; $i <$tamanho2; $i++) <div class="row g-3 " id="divUTv<?php echo $i; ?>" style="">
 
                 <div class="col-md-4">
                     <label class="form-check-label" for="flexCheckIndeterminate">Título do curso</label>
@@ -452,8 +449,12 @@
 
         </div>
         @endfor
+        @endif
 
-        <div class="text">
+        @if (!empty($dados->can_idioma[0]))
+
+
+        <div class="text" style="margin-top:50px">
             <h2 class="form-signin-heading" style="color:#284D92;">Idiomas
             </h2>
 
@@ -476,8 +477,7 @@
             @endphp
 
             @for($i = 0; $i <$tamanho3; $i++) <div class="endereco">
-                <div class="row g-3 shadow p-3 mb-5 bg-body rounded" id="divIdioma<?php echo $i;?>"
-                    style="margin: 20px">
+                <div class="row g-3" id="divIdioma<?php echo $i;?>" style="">
                     <div class="text-end">
 
                     </div>
@@ -564,11 +564,13 @@
         <div id="listaIdioma" style="padding: 30px 0px 30px 0px"> </div>
         <!-- ****************************************** -->
 </div>
+@endif
 </div>
 </div>
 
 <!------- -->
 
+@if (!empty($dados->can_cargo_empresa[0]))
 <div class="row g-3 shadow p-3 mb-5 bg-body rounded" style="margin-bottom: 50px">
     <div class="text-end">
         <!--
@@ -603,8 +605,7 @@
 
                 @endphp
 
-                @for($i = 0; $i <$tamanho4; $i++) <div class="row g-3 shadow p-3 mb-5 bg-body rounded"
-                    id="divExperiencia<?php echo $i;?>" style="margin: 10px">
+                @for($i = 0; $i <$tamanho4; $i++) <div class="row g-3" id="divExperiencia<?php echo $i;?>" style="">
 
                     <div class="col-md-6" id="01">
                         <label class="form-check-label" for="flexCheckIndeterminate">Nome da empresa </label>
@@ -644,40 +645,13 @@
 
         </div>
     </div>
-    
-        @if(!empty($dados->can_tempoexperiencia))
-        @php
-        $tamanho5 = count($dados->can_tempoexperiencia);
-        @endphp
-    <div class="text">
-        <h2 class="form-signin-heading" style="color:#284D92;">Prefêrencias Profissionais
-        </h2>
 
-        <hr>
-    </div>
-    <div class="row g-3 shadow p-3 mb-5 bg-body rounded" id="00" style="margin-top: 30px">
-
-
-        @for($i = 0; $i <$tamanho5; $i++) <div class="row g-3" id="divPreferencia<?php echo $i; ?>">
-            <div class="col-md-6" id="">
-                <label class="form-check-label" for="flexCheckIndeterminate">Selecione Prefêrencias
-                    Profissionais</label>
-                <input type="text" class="form-control form-control-sm" placeholder="" name="software_empresa[]"
-                    value="{{$dados->can_tempoexperiencia[$i]}}" disabled>
-            </div>
-
-    </div>
-    @endfor
-    @endif
 
 </div>
+
+</div>
+@endif
 @endforeach
-
-
-
-<div class="text-end">
-    <input type="submit" class="btn btn-primary" value="Salvar Registros">
-</div>
 </form>
 </div>
 

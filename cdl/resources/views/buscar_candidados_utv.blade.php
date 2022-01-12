@@ -19,7 +19,7 @@
 
 
 
-<div class="container">
+<div class="container-fluid" style="">
     @if(!empty($candidato))
     <div class="container" id="canditados" style="margin-top: 50px; margin-bottom:50px">
         @foreach ($candidato as $candidato)
@@ -28,7 +28,7 @@
 
             <div class="form-row" style="border: 0px;">
                 <div class="form-group col-md-4">
-                    <div class="card" style="width: 20rem;">
+                    <div class="card" style="width: 18rem;">
                         <div class="card-body">
 
                             <span style="color: #284D92"></span>
