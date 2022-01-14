@@ -8,8 +8,11 @@ title{
   width: 10px;
 }
 body{
-    background-color: #fff;
-  }
+ 
+  background: url('/img/login_utv.png');
+  background-size: cover; 
+  background-attachment: fixed, scroll;
+}
   #logo{
       
       width: 150px;
@@ -32,7 +35,7 @@ body{
         margin:  auto;
         margin-top: 50px;
         margin-left: 10px;
-        background-color: #02693c;
+        background-color: #004691f8;
         box-shadow: 4px 4px 8px rgba(0,0,0,0.15);
         border-radius: 18px;
       
@@ -40,13 +43,13 @@ body{
     
       .btn{
         color: #fff;
-        background-color: #092c6e;
+        background-color: #5A8EEE;
       }
       .btn:hover{
     
         color: #f0ede9;
-        background-color: #FDB62A;
-        border-color: #FDB62A;
+        background-color: #0F4AB8;
+        border-color: #0F4AB8;
       }
     
       a:hover {
