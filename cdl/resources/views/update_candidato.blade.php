@@ -504,7 +504,7 @@ $candidato;
 
 
 
-        if(!empty($candidato->can_utv_titlulo)){
+        if(!empty($candidato->can_utv_titlulo) or $candidato->can_utv_titlulo != ''){
 
         $tamanho2 = count($candidato->can_utv_titlulo);
         }else{
