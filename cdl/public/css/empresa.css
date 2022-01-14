@@ -23,6 +23,8 @@ body{
     
   }
 
+  
+
   #perfil{
 
     width: 200px;
@@ -59,7 +61,7 @@ body{
       padding: 35px 35px 45px 35px;
       margin:  auto;
       margin-top: 50px;
-      margin-left: 60px;
+      margin-left: 80px;
       margin-right: 60px;
       background-color: #0046919c;
       box-shadow: 4px 4px 8px rgba(0,0,0,0.15);
