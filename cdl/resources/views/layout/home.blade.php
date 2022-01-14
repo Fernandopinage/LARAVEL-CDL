@@ -97,7 +97,7 @@
     </nav>
 
 
-    <div class="banner-principal" class="justi">
+    <div class="banner-principal" class="justi" style="margin-bottom: 50px">
         <div class="container">
             @yield('conteudo')
         </div>
