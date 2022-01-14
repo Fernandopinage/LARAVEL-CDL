@@ -66,7 +66,7 @@
 
   </nav>
   
-    <div class="container">
+    <div class="container-fluid">
 
         @yield('vagas_disponiel')
         
