@@ -162,12 +162,12 @@
                     <input type="text" class="form-control form-control-sm" placeholder="" name="email" required>
                 </div>
                 <div class="col-md-2">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Senha
+                    <label class="form-check-label" for="">Senha
                         <span><strong>*</strong></span></label>
                     <input type="password" class="form-control form-control-sm" minlength="6" maxlength="12" name="senha" required >
                 </div>
                 <div class="col-md-2">
-                    <label class="form-check-label" for="flexCheckIndeterminate">Confirmar Senha
+                    <label class="form-check-label" for="">Confirmar Senha
                         <span><strong>*</strong></span> </label>
                     <input type="password" class="form-control form-control-sm" minlength="6" maxlength="12" name="confirma" required>
                 </div>
