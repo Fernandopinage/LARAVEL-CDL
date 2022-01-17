@@ -8,7 +8,7 @@
 @foreach($vagas as $vagas)
 
 
-<div class="row g-3 shadow p-3 mb-5 bg-body rounded" style="margin-top:10px">
+<div class="row g-3 shadow p-3 mb-5 bg-body rounded" style="margin-top:10px;">
 
     <div class="row">
 
