@@ -71,13 +71,13 @@
                 <div class="col-md-2">
                     <label class="form-check-label" for="flexCheckIndeterminate">Senha
                         <span><strong>*</strong></span></label>
-                    <input type="password" class="form-control form-control-sm" name="senha" id="senha" placeholder=""
+                    <input type="password" class="form-control form-control-sm" minlength="6" name="senha" id="senha" placeholder=""
                         value="{{old('senha')}}" required>
                 </div>
                 <div class="col-md-2">
                     <label class="form-check-label" for="flexCheckIndeterminate">Confirmar Senha
                         <span><strong>*</strong></span></label>
-                    <input type="password" class="form-control form-control-sm" name="confirmar" id="confirmar"
+                    <input type="password" class="form-control form-control-sm" minlength="6" name="confirmar" id="confirmar"
                         placeholder="" value="{{old('confirmar')}}" required>
                 </div>
                 <div class="col-md-4">

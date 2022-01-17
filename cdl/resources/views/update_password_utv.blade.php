@@ -15,11 +15,11 @@
     <div class="mb-3">
         <input type="hidden" name="id" value="{{$id}}" >
         <label for="formGroupExampleInput" class="form-label">Nova senha <span style="color: red"><strong>*</strong></span></label>
-        <input type="password" class="form-control form-control" name="newsenha" placeholder="Digite sua nova senha" />
+        <input type="password" class="form-control form-control" minlength="6" name="newsenha" placeholder="Digite sua nova senha" />
     </div>
     <div class="mb-3">
         <label for="formGroupExampleInput" class="form-label">Confirmar nova senha<span style="color: red"><strong>*</strong></span></label>
-        <input type="password" class="form-control form-control" name="confsenha" placeholder="Digite confirme sua senha"  />
+        <input type="password" class="form-control form-control" minlength="6" name="confsenha" placeholder="Digite confirme sua senha"  />
     </div>
     <div class="d-grid gap-2">
         <input type="submit" class="btn-primary btn-lg" name="alterarsenha" value="Alterar Senha">
