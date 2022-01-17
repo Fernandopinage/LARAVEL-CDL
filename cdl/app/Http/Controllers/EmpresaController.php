@@ -63,6 +63,7 @@ class EmpresaController extends Controller
        
         $vagas = Vagas::select('*')
         ->orWhere('vag_id_empresa',$id)
+        ->whereDate('vag_data_final', '>=', date('Y-m-d'))
         ->get();
        // ddd($vagas);
         if(!empty($vagas)){

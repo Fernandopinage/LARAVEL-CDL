@@ -42,7 +42,10 @@
                         <div style="margin-top: 20px">
                             <p style="font-size: 41px; color:#0362c7;">Requisitos</p>
                             <br>
-                            <p><b>Escolaridade mínima: </b>{{$vagas->vag_formacao}} {{$vagas->vag_periodo}}</p>
+                            @php
+                                $dados = str_replace("_"," ",$vagas->vag_formacao)
+                            @endphp
+                            <p><b>Escolaridade mínima: </b>{{$dados}}</p>
                         </div>
                         @if($vagas->vag_idioma_necessario != null)
                         <p> <b> - Idioma:</b> {{$vagas->vag_idioma}}</p>

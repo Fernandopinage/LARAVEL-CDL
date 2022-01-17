@@ -95,11 +95,11 @@ class CandidatoController extends Controller
                     $query->orWhere('vag_cargo','like','%'.$vagas[2].'%');
                 }
 
-            })->inRandomOrder()->get();
+            })->inRandomOrder()->whereDate('vag_data_final', '>=', date('Y-m-d'))->get();
         }else{
 
-           $vagas = Vagas::inRandomOrder()->get();
-           //$vagas = '';
+           //$vagas = Vagas::inRandomOrder()->whereDate('vag_data_final', '>=', date('Y-m-d'))->get();
+           $vagas = '';
 
         }
 
