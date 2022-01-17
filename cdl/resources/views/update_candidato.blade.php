@@ -830,7 +830,7 @@ $candidato;
                     <div class="col-md-2" style="margin-top: 42px;">
 
                         <input type="button" class="btn btn-success btn-sm" onclick="addPreferencia()"
-                            value="Novas Prefêrencias">
+                            value="Adicionar">
 
                     </div>
                 </div>
@@ -1095,7 +1095,7 @@ $candidato;
         if(cont05 <4){
         var tempoexperiencia = document.getElementById('tempoexperiencia').value
         var div = document.createElement('div');
-        div.innerHTML = '<div class="row g-3" id="divPreferencia'+cont05+'" style="margin-bottom:10px"><div class="col-md-6" id="tempoexperiencia_div"><label class="form-check-label" for="flexCheckIndeterminate"></label> <select class="form-select form-select-sm" name="tempoexperiencia[]" id="tempoexperiencia" aria-label="Default select example"> <option>'+tempoexperiencia+'</option></select></div><div class="col-md-2" id="tempoexperiencia_div" style=""><input type="button" class="btn btn-danger btn-sm" onclick="removeCamposPreferencia('+cont05+')" value="Remover Prefêrencias"> </div></div></div>';
+        div.innerHTML = '<div class="row g-3" id="divPreferencia'+cont05+'" style="margin-bottom:10px"><div class="col-md-6" id="tempoexperiencia_div"><label class="form-check-label" for="flexCheckIndeterminate"></label> <select class="form-select form-select-sm" name="tempoexperiencia[]" id="tempoexperiencia" aria-label="Default select example"> <option>'+tempoexperiencia+'</option></select></div><div class="col-md-2" id="tempoexperiencia_div" style=""><input type="button" class="btn btn-danger btn-sm" onclick="removeCamposPreferencia('+cont05+')" value="Remover "> </div></div></div>';
                  document.getElementById('listaPreferencia').appendChild(div)
         cont05++;
         var tempoexperiencia = document.getElementById('tempoexperiencia').value ='';

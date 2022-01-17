@@ -98,8 +98,8 @@ class CandidatoController extends Controller
             })->inRandomOrder()->get();
         }else{
 
-            //$vagas = Vagas::inRandomOrder()->get();
-            $vagas = '';
+            $vagas = Vagas::inRandomOrder()->get();
+            //$vagas = '';
 
         }
 
