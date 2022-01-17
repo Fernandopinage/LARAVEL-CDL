@@ -164,12 +164,12 @@
                 <div class="col-md-2">
                     <label class="form-check-label" for="flexCheckIndeterminate">Senha
                         <span><strong>*</strong></span></label>
-                    <input type="password" class="form-control form-control-sm" minlength="6" placeholder="" name="senha" required>
+                    <input type="password" class="form-control form-control-sm" minlength="6" maxlength="12" placeholder="" name="senha" value="{{old('senha')}}" required>
                 </div>
                 <div class="col-md-2">
                     <label class="form-check-label" for="flexCheckIndeterminate">Confirmar Senha
                         <span><strong>*</strong></span> </label>
-                    <input type="password" class="form-control form-control-sm" placeholder="" minlength="6" name="confirma" required>
+                    <input type="password" class="form-control form-control-sm" placeholder="" minlength="6" maxlength="12" name="confirma" value="{{old('confirma')}}" required>
                 </div>
                 <div class="col-md-2">
                     <label class="form-check-label" for="flexCheckIndeterminate">Telefone</label>
