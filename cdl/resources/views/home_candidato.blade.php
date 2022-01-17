@@ -73,6 +73,12 @@
 
 @endforeach
 
+@elseif(empty($vagas))
+
+<div style="height: 550px;">
+
+</div>
+
 @endif
 
 

@@ -73,7 +73,7 @@
 </body>
 
 <footer>
-  <nav class="navbar fixed-bottom" style="background-color: #d0d0d056;">
+  <nav class="navbar bottom" style="background-color: #d0d0d056;">
 
     <div class="container" id="container" style="color:#black; font-size:14px;">
       <div class="row">
