@@ -75,11 +75,11 @@
 
 
 @endforeach
-
-@elseif(empty($vagas))
+@endif
+@if(count($vagas) === 0)
 
 <div style="height: 550px;">
-
+    
 </div>
 
 @endif
