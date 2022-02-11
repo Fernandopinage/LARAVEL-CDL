@@ -101,7 +101,7 @@
         @yield('login')
     </div>
     <footer>
-      <nav class="navbar fixed-bottom navbar-expand-sm navbar bg" style="background-color: #ffffffb8; margin-bottom:0px">
+      <nav class="navbar bottom navbar-expand-sm navbar bg" style="background-color: #ffffffb8; margin-bottom:0px">
       
         <div class="container" id="container" style="color:#black; font-size:14px;">
             <div class="row">
@@ -142,7 +142,7 @@
         </div>
       </nav>
       <!--
-      <nav class="navbar fixed-bottom navbar-expand-sm navbar bg" style="background-color: #284D92">
+      <nav class="navbar bottom navbar-expand-sm navbar bg" style="background-color: #284D92">
          <div class="container" style="margin-top: 8px">
               <div class="col-6 input-group-sm">
                   <p class="text-start" style="color:#fff">Progride® é uma marca registrada ©
