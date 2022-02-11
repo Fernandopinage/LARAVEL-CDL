@@ -104,7 +104,7 @@
 
   </div>
   <footer>
-    <nav class="navbar bottom navbar-expand-sm navbar bg" style="background-color: #0e5836; margin-bottom:0px">
+    <nav class="navbar bottom navbar-expand-sm navbar bg" style="background-color: #0e5836; margin-top: 10%">
     
       <div class="container" id="container" style="color:#fff; font-size:14px;">
           <div class="row">
