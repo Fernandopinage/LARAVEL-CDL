@@ -98,13 +98,14 @@
 
 
     <div class="banner-principal" class="justi" style="margin-bottom: 50px">
+        <img src="/img/Home Site.png" alt="" width="100%" height="100%">
         <div class="container">
             @yield('conteudo')
         </div>
     </div>
  
     <div class="container">
-        <div class="row">
+        <div class="row" style="margin-left: auto;margin-right: auto;">
             <div class="col-lg-4">
                 <div class="card" style="width: 25rem;  margin-right: 50px;">
                     <img class="card-img-top" src="/img/index-1.jpg" alt="Imagem de capa do card">
