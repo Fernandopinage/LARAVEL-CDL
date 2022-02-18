@@ -7,42 +7,58 @@
 
     <div class="row g-3 shadow p-4 mb-5 bg-body rounded" style="margin-top: 80px">
         <div class="text-center">
-            <h2>BANNER PRINCIPAL</h2>
+            <h2>PAGINA PRINCIPAL</h2>
         </div>
         <div class="row  g-3">
-            <h5>Carrocel</h5>
+            <h5>CARROSSEL BANNER</h5>
             <hr>
             <div class="col-md-4" id="selecionarFoto">
-                <label class="form-check-label" for="image">BANNER HOME</label>
+                <label class="form-check-label" for="image">PRIMEIRA IMAGEM</label>
                 <!--<input class="form-control form-control-sm" type="file" name="foto" id="formFile"> -->
                 <input type="file" name="foto_principal" id="file01" onchange="checkPhoto(this)" class="form-control-file">
             </div>
         </div>
+
         <div class="row g-3">
-            <h5>Caixa de Imagem 01</h5>
-            <hr>
             <div class="col-md-4" id="selecionarFoto">
-                <label class="form-check-label" for="image">ÚLTIMOS PROFISSIONAIS CADASTRADOS</label>
+                <label class="form-check-label" for="image">SEGUNDA IMAGEM</label>
                 <!--<input class="form-control form-control-sm" type="file" name="foto" id="formFile"> -->
                 <input type="file" name="slide01_principal" id="formFile" class="form-control-file">
             </div>
         </div>
 
         <div class="row g-3">
-            <h5>Caixa de Imagem 02</h5>
-            <hr>
             <div class="col-md-4" id="selecionarFoto">
-                <label class="form-check-label" for="image">OPORTUNIDADES RECENTES EM DESTAQUE</label>
+                <label class="form-check-label" for="image">TERCEIRA IMAGEM</label>
                 <!--<input class="form-control form-control-sm" type="file" name="foto" id="formFile"> -->
                 <input type="file" name="slide02_principal" id="formFile" class="form-control-file">
             </div>
         </div>
 
+        
         <div class="row g-3">
-            <h5>Caixa de Imagem 03</h5>
             <hr>
-            <div class="col-md-4" id="selecionarFoto">
-                <label class="form-check-label" for="image">PROGRAMAS DE CAPACITAÇÃO DISPONÍVEIS</label>
+            <h5>SLIDE IMAGNES</h5>
+            <div class="col-md-2" id="selecionarFoto">
+                <label class="form-check-label" for="image">SLIDE 01</label>
+                <!--<input class="form-control form-control-sm" type="file" name="foto" id="formFile"> -->
+                <input type="file" name="slide03_principal" id="formFile" class="form-control-file">
+            </div>
+         </div>
+
+         <div class="row g-3">
+
+            <div class="col-md-2" id="selecionarFoto">
+                <label class="form-check-label" for="image">SLIDE 02</label>
+                <!--<input class="form-control form-control-sm" type="file" name="foto" id="formFile"> -->
+                <input type="file" name="slide03_principal" id="formFile" class="form-control-file">
+            </div>
+         </div>
+
+         <div class="row g-3">
+
+            <div class="col-md-2" id="selecionarFoto">
+                <label class="form-check-label" for="image">SLIDE 03</label>
                 <!--<input class="form-control form-control-sm" type="file" name="foto" id="formFile"> -->
                 <input type="file" name="slide03_principal" id="formFile" class="form-control-file">
             </div>
