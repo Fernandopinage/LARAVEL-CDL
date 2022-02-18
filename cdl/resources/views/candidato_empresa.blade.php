@@ -30,7 +30,7 @@
                             <option selected></option>
                             <option value="Sem Experiência">Sem Experiência</option>
                             <option value="Com Experiência">Com Experiência</option>
-                            <option value="Primeiro Emprego">Primeiro Emprego</option>
+                            <option value="Sim">Primeiro Emprego</option>
                         </select>
                     </div>
                 </div>

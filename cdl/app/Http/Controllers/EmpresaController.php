@@ -372,11 +372,49 @@ class EmpresaController extends Controller
                 $query->where('can_tempoexperiencia', 'like','%'.$request->area.'%');
             }
 
-            /*
-            if(!empty($request->formacao)){
-                $query->where('can_formacao','like','%'. $request->formacao.'%');
+            if(!empty($request->experiencia)){
+                $query->orWhere('can_area_profissional','like','%'.$request->experiencia.'%');
             }
-           */
+            
+           
+            if(!empty($request->militar)){
+                $query->orWhere('can_exmilitar','like','%'.$request->militar.'%');
+            }
+
+            if(!empty($request->aluno)){
+                $query->orWhere('can_curso_ano_termino');
+            }
+
+            if(!empty($request->formacao)){
+               
+                $query->orWhere('can_formacao','like','%'.$request->formacao.'%');
+            }
+
+            if(!empty($request->curso)){
+               
+                $query->orWhere('can_curso','like','%'.$request->curso.'%');
+            }
+
+            
+            if(!empty($request->semetre)){
+               
+                $query->orWhere('can_periodo','like','%'.$request->semetre.'%');
+            }
+
+            if(!empty($request->periodo_curso)){
+               
+                $query->orWhere('can_periodo','like','%'.$request->periodo_curso.'%');
+            }
+
+
+            if(!empty($request->idioma)){
+                $query->orWhere('can_idioma','like','%'.$request->idioma.'%');
+            }
+
+            if(!empty($request->pcd)){
+                $query->orWhere('can_pcd','like','%'.$request->pcd.'%');
+            }
+            
 
         })->get();
 
