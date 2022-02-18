@@ -28,20 +28,20 @@
                         <select class="form-select form-select-sm" name="experiencia" id="experiencia"
                             aria-label="Default select example">
                             <option selected></option>
-                            <option value="Sem Experiência">Sem Experiência</option>
-                            <option value="Com Experiência">Com Experiência</option>
-                            <option value="Sim">Primeiro Emprego</option>
+                            <option value="sim">Sem Experiência</option>
+                            <option value="não">Com Experiência</option>
+                            <option value="sim">Primeiro Emprego</option>
                         </select>
                     </div>
                 </div>
                 <div class="col-md-2" style="margin-top: 25px">
                     <div class="form-check form-check">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                        <label class="form-check-label" for="inlineCheckbox1" name="militar" value="Sim"
+                        <input class="form-check-input" type="checkbox"  name="militar" value="Sim" id="militar" value="option1">
+                        <label class="form-check-label" for="inlineCheckbox1"
                             id="militar">Ex-Militar</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" name="aluno" id="aluno">
+                        <input class="form-check-input" type="checkbox" name="aluno" id="aluno" value="Sim">
                         <label class="form-check-label" for="inlineCheckbox2">Ex-Aluno UTV</label>
                     </div>
                 </div>
