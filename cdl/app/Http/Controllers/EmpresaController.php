@@ -445,20 +445,19 @@ class EmpresaController extends Controller
     }
 
     public function candidatoFiltro($id){
-
+        
         $id = base64_decode($id);
 
-    
         $dados = Candidato::where('can_id', '=', $id)
-        ->where('can_exmilitar', '=', 'Sim')
+        ->where('can_exmilitar', '=', 'sim')
+        ->orwhere('can_exmilitar', '!=', null)
         ->get();
-          
-
-        //ddd($dados);
-
-        return view('buscar_filtro_candidato',compact('dados'));
         
-
+        //ddd($dados);
+        
+           return view('buscar_filtro_candidato',compact('dados'));
+        
+        
 
         
     }
