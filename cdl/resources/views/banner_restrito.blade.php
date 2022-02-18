@@ -10,7 +10,7 @@
             <h2>BANNER PRINCIPAL</h2>
         </div>
         <div class="row  g-3">
-            <h5>Tela principal</h5>
+            <h5>Carrocel</h5>
             <hr>
             <div class="col-md-4" id="selecionarFoto">
                 <label class="form-check-label" for="image">BANNER HOME</label>

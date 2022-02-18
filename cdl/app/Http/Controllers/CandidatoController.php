@@ -467,7 +467,6 @@ class CandidatoController extends Controller
     public function redefinirCandidato()
     {
 
-
         return view('redefinir_usuario');
     }
 

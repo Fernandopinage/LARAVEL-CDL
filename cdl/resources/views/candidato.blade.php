@@ -20,7 +20,7 @@
     </div>
     <div class="row g-3">
         <div class="col">
-            <a class="nav-link" href="/redefinir/candidato">Esqueci minha senha</a>
+            <a class="nav-link" href="/redefinir/candidato/">Esqueci minha senha</a>
         </div>
         <div class="col">
             <a class="nav-link" href="/add/candidato/">Criar uma conta</a>

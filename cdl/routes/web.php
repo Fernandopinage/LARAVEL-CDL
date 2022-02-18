@@ -39,7 +39,7 @@ Route::get('/add/candidato', [CandidatoController::class, 'formularioCandidato']
 Route::post('/insert/candidato', [CandidatoController::class, 'store']);
 Route::get('/editar/candidato/{id}',[CandidatoController::class, 'editarCandidato'])->middleware(['candidato']);
 Route::post('/update/candidato/{id}',[CandidatoController::class, 'update'])->middleware(['candidato']);
-Route::get('/redefinir/candidato/',[CandidatoController::class, 'redefinirCandidato'])->middleware(['candidato']);
+Route::get('/redefinir/candidato/',[CandidatoController::class, 'redefinirCandidato']);
 Route::GET('/redefinir/senha/candidato/',[CandidatoController::class, 'redefinir']);
 Route::get('/redefinir/password/candidato/{id}',[CandidatoController::class, 'updateSenha']);
 Route::get('/password/candidato/',[CandidatoController::class, 'updateSenha']);
